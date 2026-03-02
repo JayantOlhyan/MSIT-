@@ -130,25 +130,40 @@ const App = () => {
 
     const megaMenuData = {
         about: [
-            "University Profile", "Vision & Mission", "History & Legacy",
-            "Leadership Team", "Campus & Facilities", "Accreditations"
+            { name: "About MSIT", url: "https://www.msit.in/about" },
+            { name: "Vision & Mission", url: "https://www.msit.in/visionmission" },
+            { name: "History & Legacy", url: "https://www.msit.in/history" },
+            { name: "Leadership Team", url: "https://www.msit.in/administration" },
+            { name: "Campus & Facilities", url: "https://www.msit.in/facilities" },
+            { name: "Surajmal Memorial Education Society", url: "http://surajmalmemorialeducationsociety.org/" }
         ],
         admission: [
-            "Undergraduate Admission", "Graduate Admission", "How to Apply",
-            "Financial Aid & Scholarships", "Tuition & Fees", "Visit Campus", "Virtual Tour"
+            { name: "Info Brochure", url: "https://www.msit.in/brochure" },
+            { name: "Online Fee Payment", url: "https://www.msit.in/online_fee" },
+            { name: "Scholarships", url: "https://www.msit.in/media/navigations/scholarships.pdf" },
+            { name: "Mandatory Disclosures", url: "https://drive.google.com/drive/folders/1iCJGAK-_Y8yyAFabZyUJRj2l2kyGEHgy" }
         ],
         academics: [
-            "Programs & Departments", "Computer Science (CSE)", "Information Technology (IT)",
-            "Electronics & Communication (ECE)", "Electrical Engineering (EEE)",
-            "Faculty Directory", "Academic Calendar", "Research & Innovation"
+            { name: "Computer Science (CSE)", url: "https://www.msit.in/cse" },
+            { name: "Information Technology (IT)", url: "https://www.msit.in/it" },
+            { name: "Electronics & Comm. (ECE)", url: "https://www.msit.in/ece" },
+            { name: "Electrical Engineering (EEE)", url: "https://www.msit.in/eee" },
+            { name: "Applied Sciences", url: "https://www.msit.in/ap" },
+            { name: "Academic Calendar", url: "https://www.msit.in/academic-calendar" },
+            { name: "Time Table & Syllabus", url: "https://www.msit.in/timetable" },
+            { name: "Research & Innovation", url: "https://www.msit.in/Research" }
         ],
         life: [
-            "Student Life & Culture", "Housing & Dining", "Clubs & Organizations",
-            "Athletics & Sports", "Events & Festivals", "Student Services", "Campus Safety"
+            { name: "Student Societies", url: "https://www.msit.in/society" },
+            { name: "Events & Festivals", url: "https://www.msit.in/events" },
+            { name: "Anti-Ragging", url: "https://www.msit.in/antiragging" },
+            { name: "Internal Complaint Committee", url: "https://www.msit.in/posh" },
+            { name: "Disaster Management", url: "https://www.msit.in/disaster" },
+            { name: "Discipline Committee", url: "https://www.msit.in/discipline" }
         ],
         placements: [
-            "Career Services", "Placement Statistics", "Top Recruiters",
-            "Success Stories", "Internship Programs", "Alumni Network"
+            { name: "Careers & Placements", url: "https://www.msit.in/placements" },
+            { name: "Internship Cell", url: "https://www.msit.in/internship-cell" }
         ]
     };
 
@@ -160,10 +175,10 @@ const App = () => {
           ========================================= */}
             <div className="bg-slate-900 text-slate-300 text-xs py-2 px-6 flex justify-between items-center z-50 relative">
                 <div className="flex space-x-6 overflow-x-auto whitespace-nowrap hide-scrollbar">
-                    <a href="#" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium">Current Students</a>
-                    <a href="#" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Faculty & Staff</a>
-                    <a href="#" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Alumni</a>
-                    <a href="#" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden md:block">Parents</a>
+                    <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium">Current Students</a>
+                    <a href="https://www.msit.in/administration" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Faculty & Staff</a>
+                    <a href="https://gmail.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Campus Mail</a>
+                    <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden md:block">Grievances</a>
                 </div>
                 <div className="flex space-x-3 shrink-0">
                     <button className="px-4 py-1.5 border border-slate-600 rounded text-white hover:bg-slate-800 transition-colors hidden sm:block">Visit Campus</button>
@@ -181,15 +196,15 @@ const App = () => {
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
                     {/* Logo Area */}
-                    <div className="flex-shrink-0 flex items-center gap-4 cursor-pointer">
-                        {/* Abstract Logo icon */}
-                        <div className="w-12 h-12 rounded bg-slate-900 flex items-center justify-center border border-slate-800 shadow-sm relative overflow-hidden group">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-700"></div>
-                            <span className="text-white text-2xl font-bold tracking-tighter relative z-10 transition-transform group-hover:scale-105">M</span>
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="font-bold text-2xl tracking-tight text-slate-900 leading-none">MSIT</span>
-                            <span className="font-medium text-xs tracking-wider text-slate-500 hidden sm:block mt-1">Maharaja Surajmal Institute of Technology</span>
+                    <div className="flex-shrink-0 flex items-center gap-3 desktop-logo-resize cursor-pointer mr-4">
+                        <img src="/msit-logo.png" alt="MSIT Logo" className="h-12 md:h-16 lg:h-20 w-auto object-contain" />
+                        <div className="flex flex-col justify-center">
+                            <span className="font-bold text-lg md:text-2xl lg:text-[28px] text-[#1e4a9b] tracking-tight leading-none mb-1">
+                                Maharaja Surajmal Institute of Technology
+                            </span>
+                            <span className="text-[8px] md:text-[10px] lg:text-[11px] font-medium text-[#f05023] leading-tight max-w-lg lg:max-w-3xl">
+                                Affiliated to GGSIPU | NAAC Accredited 'A' Grade | NBA (CSE, IT, ECE,EEE) | Approved by AICTE | ISO 9001:2015 Certified
+                            </span>
                         </div>
                     </div>
 
@@ -213,17 +228,17 @@ const App = () => {
                                     <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white shadow-2xl rounded-2xl border border-slate-100 p-8 w-[500px] transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
                                         <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                                             {megaMenuData[key]?.map((link, i) => (
-                                                <a key={i} href="#" className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
-                                                    {link}
+                                                <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
+                                                    {link.name}
                                                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all" />
                                                 </a>
                                             ))}
                                         </div>
                                         <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
                                             <div className="text-sm font-semibold text-slate-900">Explore all in {item}</div>
-                                            <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center hover:bg-slate-100 cursor-pointer">
+                                            <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center hover:bg-slate-100 cursor-pointer">
                                                 <ArrowRight className="w-4 h-4 text-slate-900" />
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -262,12 +277,16 @@ const App = () => {
                     </div>
 
                     <div className="p-6 flex flex-col space-y-2">
-                        {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements', 'Contact'].map((item, idx) => (
-                            <div key={idx} className="border-b border-slate-50">
-                                <button className="w-full text-left py-4 text-xl font-medium text-slate-800 flex justify-between items-center group">
-                                    {item}
-                                    <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-slate-900" />
-                                </button>
+                        {Object.entries(megaMenuData).map(([key, items], idx) => (
+                            <div key={idx} className="border-b border-slate-50 py-2">
+                                <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3 mt-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                                <div className="space-y-1">
+                                    {items.map((link, i) => (
+                                        <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
+                                            {link.name}
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                         ))}
 
@@ -884,12 +903,12 @@ const App = () => {
                         <div>
                             <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6">Quick Links</h4>
                             <ul className="space-y-4 font-light text-sm">
-                                <li><a href="#" className="hover:text-white transition-colors">About MSIT</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Admissions 2026</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Academic Programs</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Campus Life</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Placement Records</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+                                <li><a href="https://www.msit.in/about" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">About MSIT</a></li>
+                                <li><a href="https://www.msit.in/online_fee" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Admissions 2026</a></li>
+                                <li><a href="https://www.msit.in/cse" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Academic Programs</a></li>
+                                <li><a href="https://www.msit.in/society" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Campus Life</a></li>
+                                <li><a href="https://www.msit.in/placements" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Placement Records</a></li>
+                                <li><a href="https://www.msit.in/contact" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contact Us</a></li>
                             </ul>
                         </div>
 
@@ -897,12 +916,12 @@ const App = () => {
                         <div>
                             <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6">Resources</h4>
                             <ul className="space-y-4 font-light text-sm">
-                                <li><a href="#" className="hover:text-white transition-colors">Student Portal</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Faculty Portal</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Library & E-Resources</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">GGSIPU Affiliation</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">NAAC & NBA Stats</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">NIRF Rankings</a></li>
+                                <li><a href="https://www.msit.in/timetable" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
+                                <li><a href="https://www.msit.in/administration" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Faculty Portal</a></li>
+                                <li><a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Library & E-Resources</a></li>
+                                <li><a href="http://www.ipu.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GGSIPU Affiliation</a></li>
+                                <li><a href="https://www.msit.in/iqac" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">NAAC & NBA Stats</a></li>
+                                <li><a href="https://www.msit.in/nirf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">NIRF Rankings</a></li>
                             </ul>
                         </div>
 
@@ -926,10 +945,10 @@ const App = () => {
                     <div className="pt-8 border-t border-slate-900 text-xs font-light flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
                         <div>&copy; {new Date().getFullYear()} Maharaja Surajmal Institute of Technology. All rights reserved.</div>
                         <div className="flex gap-6">
-                            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
-                            <a href="#" className="hover:text-white transition-colors">Accessibility</a>
-                            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+                            <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Use</a>
+                            <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Accessibility</a>
+                            <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sitemap</a>
                         </div>
                         <div className="flex items-center">Made with <Heart className="w-3 h-3 mx-1 text-red-500" /> in Delhi</div>
                     </div>
