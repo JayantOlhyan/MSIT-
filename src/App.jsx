@@ -832,13 +832,26 @@ const App = () => {
 
             {/* Lightbox Modal (for Tour/Images) */}
             {lightboxOpen && (
-                <div className="fixed inset-0 bg-slate-900/95 z-[100] flex flex-col items-center justify-center p-4" onClick={() => setLightboxOpen(false)}>
-                    <button className="absolute top-6 right-6 p-2 text-white/50 hover:text-white rounded-full transition-colors">
+                <div className="fixed inset-0 bg-slate-900/95 z-[100] flex flex-col items-center justify-center p-4 lg:p-12 animate-fade-in" onClick={() => setLightboxOpen(false)}>
+                    <button className="absolute top-6 right-6 p-2 text-white/50 hover:text-white rounded-full transition-colors z-50 bg-black/50">
                         <X className="w-8 h-8" />
                     </button>
-                    <div className="w-full max-w-5xl aspect-video bg-slate-800 rounded-lg border border-slate-700 shadow-2xl flex items-center justify-center flex-col" onClick={(e) => e.stopPropagation()}>
-                        <Play className="w-16 h-16 text-white/20 mb-4" />
-                        <div className="text-white text-xl font-light tracking-widest">{lightboxImage} Viewer Placeholder</div>
+                    <div className="w-full max-w-6xl aspect-video bg-black rounded-xl border border-slate-700 shadow-2xl flex items-center justify-center flex-col overflow-hidden relative animate-slide-up" onClick={(e) => e.stopPropagation()}>
+                        {lightboxImage === 'Virtual Tour Launch' ? (
+                            <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1&mute=0"
+                                title="MSIT Virtual Tour"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        ) : (
+                            <>
+                                <Play className="w-16 h-16 text-white/20 mb-4" />
+                                <div className="text-white text-xl font-light tracking-widest">{lightboxImage} Viewer Placeholder</div>
+                            </>
+                        )}
                     </div>
                 </div>
             )}
