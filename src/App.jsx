@@ -334,13 +334,17 @@ const App = () => {
           SECTION 3: HERO SECTION 
           ========================================= */}
             <section ref={heroRef} className="relative w-full h-screen min-h-[700px] flex items-center bg-slate-900 overflow-hidden">
-                {/* Sleek abstract gradient background representing premium modern tech feel */}
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950"></div>
-                    <div className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-indigo-500/10 rounded-full blur-[120px] mix-blend-screen mix-blend-overlay opacity-50"></div>
-                    <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-slate-400/10 rounded-full blur-[100px] mix-blend-screen opacity-30"></div>
-                    {/* Grid pattern overlay */}
-                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgMGg0MHYxSDB6bTAgMHY0MGgxVjB6IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIi8+Cjwvc3ZnPg==')] opacity-50"></div>
+                {/* Interactive Campus Background Image */}
+                <div className="absolute inset-0 z-0 group overflow-hidden">
+                    <div
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[20s] ease-out hover:scale-110"
+                        style={{ backgroundImage: "url('/campus-hero.jpg')" }}
+                    ></div>
+                    {/* Premium dark gradient overlays for maximum text readability and aesthetic */}
+                    <div className="absolute inset-0 bg-slate-950/60 mix-blend-multiply"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-slate-900/40"></div>
+                    {/* Grid pattern overlay for tech aesthetic */}
+                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgMGg0MHYxSDB6bTAgMHY0MGgxVjB6IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIi8+Cjwvc3ZnPg==')] opacity-30"></div>
                 </div>
 
                 <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20 flex flex-col items-center sm:items-start text-center sm:text-left transition-all duration-1000 transform">
@@ -842,10 +846,19 @@ const App = () => {
             {/* =========================================
           SECTION 16: CALL-TO-ACTION / LEAD
           ========================================= */}
-            <section className="py-24 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
-                <div className="max-w-4xl mx-auto px-6 text-center">
+            <section className="py-24 relative overflow-hidden group">
+                {/* Parallax Background */}
+                <div
+                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[15s] ease-out group-hover:scale-110"
+                    style={{ backgroundImage: "url('/campus-hero.jpg')" }}
+                ></div>
+                {/* Brand-colored dark overlay */}
+                <div className="absolute inset-0 z-0 bg-indigo-950/80 mix-blend-multiply"></div>
+                <div className="absolute inset-0 z-0 bg-gradient-to-t from-slate-950/90 to-transparent"></div>
+
+                <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
                     <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">Ready to Start Your Journey?</h2>
-                    <p className="text-xl text-blue-100 font-light mb-12">Subscribe to our admissions newsletter for deadline updates, campus news, and exclusive insights into life at MSIT.</p>
+                    <p className="text-xl text-indigo-100 font-light mb-12">Subscribe to our admissions newsletter for deadline updates, campus news, and exclusive insights into life at MSIT.</p>
 
                     <form className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto" onSubmit={(e) => e.preventDefault()}>
                         <div className="relative flex-grow">
@@ -857,11 +870,11 @@ const App = () => {
                                 required
                             />
                         </div>
-                        <button className="px-8 py-4 bg-white text-blue-900 font-bold rounded-xl shadow-lg hover:bg-blue-50 transition-colors whitespace-nowrap">
+                        <button className="px-8 py-4 bg-white text-indigo-950 font-bold rounded-xl shadow-lg hover:bg-indigo-50 transition-colors whitespace-nowrap">
                             Subscribe Now
                         </button>
                     </form>
-                    <p className="text-sm text-blue-200/70 mt-6 font-light">We respect your inbox. Unsubscribe securely at any time.</p>
+                    <p className="text-sm text-indigo-200/70 mt-6 font-light">We respect your inbox. Unsubscribe securely at any time.</p>
                 </div>
             </section>
 
