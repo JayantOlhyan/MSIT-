@@ -40,11 +40,11 @@ const Footer = () => {
                         <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6">Quick Links</h4>
                         <ul className="space-y-4 font-light text-sm">
                             <li><Link to="/about" className="hover:text-white transition-colors">About MSIT</Link></li>
-                            <li><a href="https://www.msit.in/online_fee" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Admissions 2026</a></li>
+                            <li><Link to="/online-fee" className="hover:text-white transition-colors">Admissions 2026</Link></li>
                             <li><Link to="/cse" className="hover:text-white transition-colors">Academic Programs</Link></li>
-                            <li><a href="https://www.msit.in/society" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Campus Life</a></li>
-                            <li><a href="https://www.msit.in/placements" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Placement Records</a></li>
-                            <li><a href="https://www.msit.in/contact" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contact Us</a></li>
+                            <li><Link to="/society" className="hover:text-white transition-colors">Campus Life</Link></li>
+                            <li><Link to="/placements" className="hover:text-white transition-colors">Placement Records</Link></li>
+                            <li><Link to="/brochure" className="hover:text-white transition-colors">Download Brochure</Link></li>
                         </ul>
                     </div>
 
@@ -52,10 +52,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6">Resources</h4>
                         <ul className="space-y-4 font-light text-sm">
-                            <li><a href="https://www.msit.in/timetable" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
-                            <li><a href="https://www.msit.in/administration" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Faculty Portal</a></li>
-                            <li><a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Library & E-Resources</a></li>
-                            <li><a href="http://www.ipu.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GGSIPU Affiliation</a></li>
+                            <li><Link to="/student-portal" className="hover:text-white transition-colors">Student Portal</Link></li>
+                            <li><Link to="/administration" className="hover:text-white transition-colors">Faculty Portal</Link></li>
+                            <li><Link to="/academic-calendar" className="hover:text-white transition-colors">Academic Calendar</Link></li>
+                            <li><Link to="/mandatory-disclosures" className="hover:text-white transition-colors">Mandatory Disclosures</Link></li>
                             <li><a href="https://www.msit.in/iqac" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">NAAC & NBA Stats</a></li>
                             <li><a href="https://www.msit.in/nirf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">NIRF Rankings</a></li>
                         </ul>

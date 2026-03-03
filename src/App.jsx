@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import CSEDepartment from './pages/CSEDepartment';
+import DynamicPage from './pages/DynamicPage';
 
 const App = () => {
     return (
@@ -13,7 +14,7 @@ const App = () => {
                     <Route index element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/cse" element={<CSEDepartment />} />
-                    {/* Additional pages will be registered here as they are built */}
+                    <Route path="/:slug" element={<DynamicPage />} />
                 </Route>
             </Routes>
         </Router>

@@ -21,39 +21,39 @@ const Header = () => {
     const megaMenuData = {
         about: [
             { name: "About MSIT", url: "/about" },
-            { name: "Vision & Mission", url: "https://www.msit.in/visionmission", external: true },
-            { name: "History & Legacy", url: "https://www.msit.in/history", external: true },
-            { name: "Leadership Team", url: "https://www.msit.in/administration", external: true },
-            { name: "Campus & Facilities", url: "https://www.msit.in/facilities", external: true },
-            { name: "Surajmal Memorial Education Society", url: "http://surajmalmemorialeducationsociety.org/", external: true }
+            { name: "Vision & Mission", url: "/vision-mission" },
+            { name: "History & Legacy", url: "/history" },
+            { name: "Leadership Team", url: "/administration" },
+            { name: "Campus & Facilities", url: "/facilities" },
+            { name: "Surajmal Memorial Education Society", url: "/smes" }
         ],
         admission: [
-            { name: "Info Brochure", url: "https://www.msit.in/brochure", external: true },
-            { name: "Online Fee Payment", url: "https://www.msit.in/online_fee", external: true },
-            { name: "Scholarships", url: "https://www.msit.in/media/navigations/scholarships.pdf", external: true },
-            { name: "Mandatory Disclosures", url: "https://drive.google.com/drive/folders/1iCJGAK-_Y8yyAFabZyUJRj2l2kyGEHgy", external: true }
+            { name: "Info Brochure", url: "/brochure" },
+            { name: "Online Fee Payment", url: "/online-fee" },
+            { name: "Scholarships", url: "/scholarships" },
+            { name: "Mandatory Disclosures", url: "/mandatory-disclosures" }
         ],
         academics: [
             { name: "Computer Science (CSE)", url: "/cse" },
-            { name: "Information Technology (IT)", url: "https://www.msit.in/it", external: true },
-            { name: "Electronics & Comm. (ECE)", url: "https://www.msit.in/ece", external: true },
-            { name: "Electrical Engineering (EEE)", url: "https://www.msit.in/eee", external: true },
-            { name: "Applied Sciences", url: "https://www.msit.in/ap", external: true },
-            { name: "Academic Calendar", url: "https://www.msit.in/academic-calendar", external: true },
-            { name: "Time Table & Syllabus", url: "https://www.msit.in/timetable", external: true },
-            { name: "Research & Innovation", url: "https://www.msit.in/Research", external: true }
+            { name: "Information Technology (IT)", url: "/it" },
+            { name: "Electronics & Comm. (ECE)", url: "/ece" },
+            { name: "Electrical Engineering (EEE)", url: "/eee" },
+            { name: "Applied Sciences", url: "/ap" },
+            { name: "Academic Calendar", url: "/academic-calendar" },
+            { name: "Time Table & Syllabus", url: "/timetable" },
+            { name: "Research & Innovation", url: "/research" }
         ],
         life: [
-            { name: "Student Societies", url: "https://www.msit.in/society", external: true },
-            { name: "Events & Festivals", url: "https://www.msit.in/events", external: true },
-            { name: "Anti-Ragging", url: "https://www.msit.in/antiragging", external: true },
-            { name: "Internal Complaint Committee", url: "https://www.msit.in/posh", external: true },
-            { name: "Disaster Management", url: "https://www.msit.in/disaster", external: true },
-            { name: "Discipline Committee", url: "https://www.msit.in/discipline", external: true }
+            { name: "Student Societies", url: "/society" },
+            { name: "Events & Festivals", url: "/events" },
+            { name: "Anti-Ragging", url: "/antiragging" },
+            { name: "Internal Complaint Committee", url: "/posh" },
+            { name: "Disaster Management", url: "/disaster" },
+            { name: "Discipline Committee", url: "/discipline" }
         ],
         placements: [
-            { name: "Careers & Placements", url: "https://www.msit.in/placements", external: true },
-            { name: "Internship Cell", url: "https://www.msit.in/internship-cell", external: true }
+            { name: "Careers & Placements", url: "/placements" },
+            { name: "Internship Cell", url: "/internship-cell" }
         ]
     };
 
@@ -64,14 +64,14 @@ const Header = () => {
               ========================================= */}
             <div className="bg-slate-900 text-slate-300 text-xs py-2 px-6 flex justify-between items-center z-50 relative">
                 <div className="flex space-x-6 overflow-x-auto whitespace-nowrap hide-scrollbar">
-                    <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium">Current Students</a>
-                    <a href="https://www.msit.in/administration" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Faculty & Staff</a>
-                    <a href="https://gmail.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Campus Mail</a>
-                    <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden md:block">Grievances</a>
+                    <Link to="/student-portal" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium">Current Students</Link>
+                    <Link to="/administration" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Faculty & Staff</Link>
+                    <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Campus Mail</a>
+                    <Link to="/posh" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden md:block">Grievances</Link>
                 </div>
                 <div className="flex space-x-3 shrink-0">
-                    <button className="px-4 py-1.5 border border-slate-600 rounded text-white hover:bg-slate-800 transition-colors hidden sm:block">Visit Campus</button>
-                    <button className="px-4 py-1.5 bg-white text-slate-900 rounded font-semibold hover:bg-slate-100 transition-colors">Apply Now</button>
+                    <Link to="/facilities" className="px-4 py-1.5 border border-slate-600 rounded text-white hover:bg-slate-800 transition-colors hidden sm:block">Visit Campus</Link>
+                    <Link to="/brochure" className="px-4 py-1.5 bg-white text-slate-900 rounded font-semibold hover:bg-slate-100 transition-colors">Apply Now</Link>
                 </div>
             </div>
 
@@ -117,17 +117,10 @@ const Header = () => {
                                     <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white shadow-2xl rounded-2xl border border-slate-100 p-8 w-[500px] transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
                                         <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                                             {megaMenuData[key]?.map((link, i) => (
-                                                link.external ? (
-                                                    <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
-                                                        {link.name}
-                                                        <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all" />
-                                                    </a>
-                                                ) : (
-                                                    <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
-                                                        {link.name}
-                                                        <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all" />
-                                                    </Link>
-                                                )
+                                                <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
+                                                    {link.name}
+                                                    <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all" />
+                                                </Link>
                                             ))}
                                         </div>
                                         <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
@@ -178,15 +171,9 @@ const Header = () => {
                                 <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3 mt-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                                 <div className="space-y-1">
                                     {items.map((link, i) => (
-                                        link.external ? (
-                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
-                                                {link.name}
-                                            </a>
-                                        ) : (
-                                            <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
-                                                {link.name}
-                                            </Link>
-                                        )
+                                        <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
+                                            {link.name}
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
