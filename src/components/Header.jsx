@@ -82,35 +82,35 @@ const Header = () => {
                 className={`sticky top-0 z-40 transition-all duration-300 w-full ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-3' : 'bg-white/95 backdrop-blur-sm py-5'
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                <div className="max-w-[1536px] mx-auto px-4 lg:px-8 xl:px-12 flex justify-between items-center">
 
                     {/* Logo Area */}
-                    <Link to="/" className="flex-shrink-0 flex items-center gap-3 desktop-logo-resize cursor-pointer mr-4">
-                        <img src="/msit-logo.png" alt="MSIT Logo" className="h-12 md:h-16 lg:h-20 w-auto object-contain" />
+                    <Link to="/" className="flex-shrink-0 flex items-center gap-3 desktop-logo-resize cursor-pointer mr-2 lg:mr-8 xl:mr-12">
+                        <img src="/msit-logo.png" alt="MSIT Logo" className="h-10 md:h-12 lg:h-16 w-auto object-contain shrink-0" />
                         <div className="flex flex-col justify-center">
-                            <span className="font-bold text-lg md:text-2xl lg:text-[28px] text-[#1e4a9b] tracking-tight leading-none mb-1">
+                            <span className="font-bold text-base md:text-xl lg:text-[22px] xl:text-[26px] text-[#1e4a9b] tracking-tight leading-none mb-1 whitespace-nowrap">
                                 Maharaja Surajmal Institute of Technology
                             </span>
-                            <span className="text-[8px] md:text-[10px] lg:text-[11px] font-medium text-[#f05023] leading-tight max-w-lg lg:max-w-3xl">
-                                Affiliated to GGSIPU | NAAC Accredited 'A' Grade | NBA (CSE, IT, ECE,EEE) | Approved by AICTE | ISO 9001:2015 Certified
+                            <span className="hidden md:block text-[8px] md:text-[9px] xl:text-[10px] font-medium text-[#f05023] leading-tight max-w-lg lg:max-w-2xl whitespace-nowrap">
+                                Affiliated to GGSIPU | NAAC Accredited 'A' Grade | NBA (CSE, IT, ECE, EEE)
                             </span>
                         </div>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center space-x-1">
+                    <nav className="hidden lg:flex items-center space-x-1 flex-grow justify-end ms-4 xl:ms-8 text-[12px] xl:text-[14px]">
                         {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements'].map((item, idx) => {
                             const key = item.split(' ')[0].toLowerCase();
                             return (
                                 <div
                                     key={idx}
-                                    className="relative group px-4 py-2"
+                                    className="relative group px-1.5 xl:px-3 py-2 shrink-0"
                                     onMouseEnter={() => setActiveDropdown(key)}
                                     onMouseLeave={() => setActiveDropdown(null)}
                                 >
-                                    <button className="flex items-center gap-1.5 text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors">
+                                    <button className="flex items-center gap-1.5 font-medium text-slate-700 group-hover:text-slate-900 transition-colors whitespace-nowrap">
                                         {item}
-                                        <ChevronDown className="w-3 h-3 text-slate-400 group-hover:text-slate-900 group-hover:-rotate-180 transition-all duration-300" />
+                                        <ChevronDown className="w-3 h-3 text-slate-400 group-hover:text-slate-900 group-hover:-rotate-180 transition-all duration-300 shrink-0" />
                                     </button>
 
                                     {/* Mega Menu Dropdown */}
@@ -119,13 +119,13 @@ const Header = () => {
                                             {megaMenuData[key]?.map((link, i) => (
                                                 <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
                                                     {link.name}
-                                                    <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all" />
+                                                    <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
                                                 </Link>
                                             ))}
                                         </div>
                                         <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
                                             <div className="text-sm font-semibold text-slate-900">Explore all in {item}</div>
-                                            <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center hover:bg-slate-100 cursor-pointer">
+                                            <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center hover:bg-slate-100 cursor-pointer shrink-0">
                                                 <ArrowRight className="w-4 h-4 text-slate-900" />
                                             </a>
                                         </div>
@@ -134,12 +134,12 @@ const Header = () => {
                             );
                         })}
 
-                        <a href="#" className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Contact</a>
+                        <a href="#" className="px-1.5 xl:px-3 py-2 font-medium text-slate-700 hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">Contact</a>
 
-                        <div className="w-px h-5 bg-slate-200 mx-2"></div>
+                        <div className="w-px h-5 bg-slate-200 mx-1 xl:mx-2 shrink-0"></div>
 
-                        <button onClick={toggleSearch} className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all" aria-label="Search">
-                            <Search className="w-5 h-5" />
+                        <button onClick={toggleSearch} className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all shrink-0" aria-label="Search">
+                            <Search className="w-4 h-4 xl:w-5 xl:h-5" />
                         </button>
                     </nav>
 
