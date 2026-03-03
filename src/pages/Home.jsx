@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-    Check, Award, ArrowRight, Play, X, Mail,
+    Check, Award, ArrowRight, Play, X, Mail, Globe,
     Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink
 } from 'lucide-react';
 
@@ -14,12 +14,20 @@ const Home = () => {
     const [heroVisible, setHeroVisible] = useState(false);
 
     useEffect(() => {
+        const currentHeroRef = heroRef.current;
         const observer = new IntersectionObserver(
             ([entry]) => setHeroVisible(entry.isIntersecting),
             { threshold: 0.1 }
         );
-        if (heroRef.current) observer.observe(heroRef.current);
-        return () => observer.disconnect();
+        if (currentHeroRef) {
+            observer.observe(currentHeroRef);
+        }
+        return () => {
+            if (currentHeroRef) {
+                observer.unobserve(currentHeroRef);
+            }
+            observer.disconnect();
+        };
     }, []);
 
     const testimonials = [
