@@ -85,20 +85,20 @@ const Header = () => {
                 <div className="max-w-[1536px] mx-auto px-4 lg:px-8 xl:px-12 flex justify-between items-center">
 
                     {/* Logo Area */}
-                    <Link to="/" className="flex-shrink-0 flex items-center gap-3 desktop-logo-resize cursor-pointer mr-2 lg:mr-8 xl:mr-12">
-                        <img src="/msit-logo.png" alt="MSIT Logo" className="h-10 md:h-12 lg:h-16 w-auto object-contain shrink-0" />
-                        <div className="flex flex-col justify-center">
-                            <span className="font-bold text-base md:text-xl lg:text-[22px] xl:text-[26px] text-[#1e4a9b] tracking-tight leading-none mb-1 whitespace-nowrap">
+                    <Link to="/" className="flex-shrink-0 flex items-center gap-2 xl:gap-3 cursor-pointer select-none me-auto pr-4 lg:pr-8 max-w-[50%] md:max-w-none">
+                        <img src="/msit-logo.png" alt="MSIT Logo" className="h-10 md:h-12 lg:h-16 xl:h-[72px] w-auto object-contain shrink-0 drop-shadow-sm" />
+                        <div className="flex flex-col justify-center transform lg:-translate-y-0.5 font-sans">
+                            <span className="font-bold text-[13px] md:text-xl lg:text-[22px] xl:text-[25px] text-[#1e4a9b] tracking-tight leading-none mb-0.5 md:mb-1 whitespace-nowrap">
                                 Maharaja Surajmal Institute of Technology
                             </span>
-                            <span className="hidden md:block text-[8px] md:text-[9px] xl:text-[10px] font-medium text-[#f05023] leading-tight max-w-lg lg:max-w-2xl whitespace-nowrap">
+                            <span className="hidden md:block text-[8px] lg:text-[9.5px] xl:text-[10px] font-semibold tracking-wide text-[#f05023] leading-tight whitespace-nowrap">
                                 Affiliated to GGSIPU | NAAC Accredited 'A' Grade | NBA (CSE, IT, ECE, EEE)
                             </span>
                         </div>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center space-x-1 flex-grow justify-end ms-4 xl:ms-8 text-[12px] xl:text-[14px]">
+                    <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 shrink-0 text-[13px] xl:text-[14px]">
                         {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements'].map((item, idx) => {
                             const key = item.split(' ')[0].toLowerCase();
                             return (
