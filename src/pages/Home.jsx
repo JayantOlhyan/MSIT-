@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import {
     Check, Award, ArrowRight, Play, X, Mail, Globe,
     Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink
@@ -244,7 +245,12 @@ const Home = () => {
                             <div key={i} className="flex flex-col items-center text-center group">
                                 <div className="transform group-hover:-translate-y-2 transition-transform duration-300">{stat.icon}</div>
                                 <div className="text-5xl md:text-6xl font-light tracking-tighter text-slate-900 mb-3">{stat.value}</div>
-                                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">{stat.label}</div>
+                                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-3">{stat.label}</div>
+                                {stat.label === "PLACEMENT RATE" && (
+                                    <Link to="/placements" className="mt-2 text-xs font-semibold text-blue-600 border border-blue-600/30 px-4 py-1.5 rounded-full hover:bg-blue-50 transition-colors flex items-center group-hover:bg-blue-600 group-hover:text-white">
+                                        View Records <ArrowRight className="w-3 h-3 ml-1" />
+                                    </Link>
+                                )}
                             </div>
                         ))}
                     </div>
