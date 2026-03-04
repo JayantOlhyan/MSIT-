@@ -6,6 +6,7 @@ import About from './pages/About';
 import CSEDepartment from './pages/CSEDepartment';
 import Placements from './pages/Placements';
 import SearchPage from './pages/SearchPage';
+import AcademicCalendar from './pages/AcademicCalendar';
 import AdminDashboard from './pages/AdminDashboard';
 import DynamicPage from './pages/DynamicPage';
 
@@ -19,6 +20,7 @@ const App = () => {
                     <Route path="/cse" element={<CSEDepartment />} />
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="/placements" element={<Placements />} />
+                    <Route path="/academic-calendar" element={<AcademicCalendar />} />
                     <Route path="/admin" element={<AdminDashboard />} />
                     <Route path="/:slug" element={<DynamicPage />} />
                 </Route>
