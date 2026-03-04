@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Trash2, Plus, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Trash2, Plus, AlertCircle, CheckCircle2, Lock } from 'lucide-react';
 
 const AdminDashboard = () => {
+    // Authentication State
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [adminId, setAdminId] = useState('');
+    const [password, setPassword] = useState('');
+    const [loginError, setLoginError] = useState('');
+
+    // Dashboard State
     const [events, setEvents] = useState([]);
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
@@ -17,6 +24,7 @@ const AdminDashboard = () => {
     ];
 
     useEffect(() => {
+        // Load events from storage or use defaults
         const storedEvents = localStorage.getItem('msit_events');
         if (storedEvents) {
             setEvents(JSON.parse(storedEvents));
@@ -24,7 +32,30 @@ const AdminDashboard = () => {
             setEvents(defaultEvents);
             localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
         }
+
+        // Remember login status in session
+        if (sessionStorage.getItem('msit_admin_auth') === 'true') {
+            setIsLoggedIn(true);
+        }
     }, []);
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        if (adminId === 'msit admin' && password === 'admin982') {
+            setIsLoggedIn(true);
+            setLoginError('');
+            sessionStorage.setItem('msit_admin_auth', 'true');
+        } else {
+            setLoginError('Invalid Admin ID or Password.');
+        }
+    };
+
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+        sessionStorage.removeItem('msit_admin_auth');
+        setAdminId('');
+        setPassword('');
+    };
 
     const saveEvents = (newEvents) => {
         setEvents(newEvents);
@@ -65,13 +96,85 @@ const AdminDashboard = () => {
         setTimeout(() => setStatus(null), 3000);
     };
 
+    // -------------------------------------------------------------
+    // LOGIN RENDERER
+    // -------------------------------------------------------------
+    if (!isLoggedIn) {
+        return (
+            <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-md w-full animate-fade-in relative">
+                    <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
+                    <div className="p-8">
+                        <div className="flex justify-center mb-6">
+                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                <Lock className="w-8 h-8 text-blue-600" />
+                            </div>
+                        </div>
+                        <h2 className="text-2xl font-bold text-center text-slate-900 mb-2">Admin Access</h2>
+                        <p className="text-center text-slate-500 mb-8 text-sm">Sign in to manage MSIT website content</p>
+
+                        {loginError && (
+                            <div className="mb-6 p-3 bg-red-50 text-red-600 text-sm font-medium rounded-lg text-center border border-red-100">
+                                {loginError}
+                            </div>
+                        )}
+
+                        <form onSubmit={handleLogin} className="space-y-5">
+                            <div>
+                                <label className="text-sm font-semibold text-slate-700 block mb-1.5">Admin ID</label>
+                                <input
+                                    type="text"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+                                    placeholder="Enter Admin ID"
+                                    value={adminId}
+                                    onChange={(e) => setAdminId(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <label className="text-sm font-semibold text-slate-700 block mb-1.5">Password</label>
+                                <input
+                                    type="password"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+                                    placeholder="••••••••"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>
+                            <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2">
+                                Login to Dashboard
+                            </button>
+                        </form>
+                    </div>
+                    <div className="bg-slate-50 p-4 text-center text-xs text-slate-500 border-t border-slate-100">
+                        Maharaja Surajmal Institute of Technology - Secure Admin Portal
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // -------------------------------------------------------------
+    // DASHBOARD RENDERER
+    // -------------------------------------------------------------
     return (
         <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto space-y-8">
 
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-                    <h1 className="text-3xl font-bold text-slate-900 mb-2">Website Content Manager</h1>
-                    <p className="text-slate-500 mb-8 border-b border-slate-100 pb-8">Add or remove news, events, and stories directly from the homepage without changing code.</p>
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 pb-8 mb-8">
+                        <div>
+                            <h1 className="text-3xl font-bold text-slate-900 mb-2">Website Content Manager</h1>
+                            <p className="text-slate-500">Add or remove news, events, and stories directly from the homepage.</p>
+                        </div>
+                        <button
+                            onClick={handleLogout}
+                            className="mt-4 sm:mt-0 px-4 py-2 text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors flex items-center"
+                        >
+                            <Lock className="w-4 h-4 mr-2" /> Lock / Logout
+                        </button>
+                    </div>
 
                     {status && (
                         <div className={`mb-6 p-4 rounded-lg flex items-center ${status.type === 'success' ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
@@ -181,4 +284,4 @@ const AdminDashboard = () => {
     );
 };
 
-export default AdminDashboard
+export default AdminDashboard;
