@@ -170,7 +170,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-6 flex items-center">
                     <div className="bg-slate-900 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded mr-4 shrink-0">Alert</div>
                     <div className="text-sm font-medium text-slate-600 truncate flex-grow">
-                        Admission for B.Tech lateral entry programs is now open. <a href="#" className="text-slate-900 underline underline-offset-2 ml-2 hover:text-slate-600 transition-colors">Apply before May 15.</a>
+                        Admission for B.Tech lateral entry programs is now open. <a href="http://www.ipu.ac.in/" target="_blank" rel="noopener noreferrer" className="text-slate-900 underline underline-offset-2 ml-2 hover:text-slate-600 transition-colors">View Details</a>
                     </div>
                 </div>
             </div>
