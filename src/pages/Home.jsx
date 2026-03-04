@@ -313,7 +313,7 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {departments.map((dept, i) => (
-                            <div key={i} className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-2xl transition-all duration-300 group cursor-pointer relative overflow-hidden">
+                            <Link to={`/${dept.code.toLowerCase()}`} key={i} className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-2xl transition-all duration-300 group cursor-pointer relative overflow-hidden block">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-10 transition-transform group-hover:scale-150 duration-500"></div>
                                 <div className="flex justify-between items-start mb-6">
                                     <div className="text-5xl bg-slate-100 w-20 h-20 rounded-xl flex items-center justify-center group-hover:bg-blue-50 transition-colors">
@@ -334,7 +334,7 @@ const Home = () => {
                                         Explore Dept <ArrowRight className="w-4 h-4 ml-1" />
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
