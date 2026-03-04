@@ -55,6 +55,7 @@ const Footer = () => {
                             <li><Link to="/student-portal" className="hover:text-white transition-colors">Student Portal</Link></li>
                             <li><Link to="/administration" className="hover:text-white transition-colors">Faculty Portal</Link></li>
                             <li><Link to="/academic-calendar" className="hover:text-white transition-colors">Academic Calendar</Link></li>
+                            <li><Link to="/syllabus" className="hover:text-white transition-colors">Course Syllabus</Link></li>
                             <li><Link to="/mandatory-disclosures" className="hover:text-white transition-colors">Mandatory Disclosures</Link></li>
                             <li><a href="https://www.msit.in/iqac" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">NAAC & NBA Stats</a></li>
                             <li><a href="https://www.msit.in/nirf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">NIRF Rankings</a></li>
