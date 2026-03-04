@@ -72,9 +72,9 @@ const Footer = () => {
                             <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Instagram className="w-4 h-4" /></a>
                         </div>
                         <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-4">Brochure</h4>
-                        <button className="text-sm font-medium text-white px-5 py-2.5 rounded border border-slate-700 hover:bg-slate-800 transition-colors bg-slate-900 inline-flex items-center">
+                        <Link to="/brochure" className="text-sm font-medium text-white px-5 py-2.5 rounded border border-slate-700 hover:bg-slate-800 transition-colors bg-slate-900 inline-flex items-center">
                             Download Prospectus
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
