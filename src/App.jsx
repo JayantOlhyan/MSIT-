@@ -8,6 +8,7 @@ import Placements from './pages/Placements';
 import SearchPage from './pages/SearchPage';
 import AcademicCalendar from './pages/AcademicCalendar';
 import Syllabus from './pages/Syllabus';
+import TimeTable from './pages/TimeTable';
 import Brochure from './pages/Brochure';
 import AdminDashboard from './pages/AdminDashboard';
 import DynamicPage from './pages/DynamicPage';
@@ -24,6 +25,7 @@ const App = () => {
                     <Route path="/placements" element={<Placements />} />
                     <Route path="/academic-calendar" element={<AcademicCalendar />} />
                     <Route path="/syllabus" element={<Syllabus />} />
+                    <Route path="/timetable" element={<TimeTable />} />
                     <Route path="/brochure" element={<Brochure />} />
                     <Route path="/admin" element={<AdminDashboard />} />
                     <Route path="/:slug" element={<DynamicPage />} />
