@@ -115,6 +115,27 @@ const Home = () => {
         }
     ];
 
+    const [events, setEvents] = useState([]);
+
+    useEffect(() => {
+        const storedEvents = localStorage.getItem('msit_events');
+        if (storedEvents) {
+            setEvents(JSON.parse(storedEvents));
+        } else {
+            const defaultEvents = [
+                { id: 1, label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
+                { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
+                { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
+            ];
+            setEvents(defaultEvents);
+            localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
+        }
+    }, []);
+
+    const filteredEvents = activeNewsTab === 'all'
+        ? events
+        : events.filter(e => e.label.toLowerCase() === activeNewsTab || (activeNewsTab === 'stories' && e.label === 'STORY'));
+
     return (
         <main>
             {/* HERO SECTION */}
@@ -196,12 +217,8 @@ const Home = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            { label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", color: "border-blue-600" },
-                            { label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", color: "border-emerald-500" },
-                            { label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", color: "border-purple-500" }
-                        ].map((item, i) => (
-                            <div key={i} className={`bg-white rounded-xl shadow-sm hover:shadow-xl border-l-4 ${item.color} p-8 flex flex-col justify-between group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
+                        {filteredEvents.map((item, i) => (
+                            <a href={item.link} key={item.id || i} className={`bg-white rounded-xl shadow-sm hover:shadow-xl border-l-4 ${item.color} p-8 flex flex-col justify-between group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
                                 <div>
                                     <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-4">{item.label}</span>
                                     <h3 className="text-xl font-semibold text-slate-900 leading-snug mb-6 group-hover:text-blue-700 transition-colors">{item.title}</h3>
@@ -212,7 +229,7 @@ const Home = () => {
                                         <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600" />
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>
