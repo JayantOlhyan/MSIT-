@@ -32,11 +32,6 @@ const AdminDashboard = () => {
             setEvents(defaultEvents);
             localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
         }
-
-        // Remember login status in session
-        if (sessionStorage.getItem('msit_admin_auth') === 'true') {
-            setIsLoggedIn(true);
-        }
     }, []);
 
     const handleLogin = (e) => {
@@ -44,7 +39,6 @@ const AdminDashboard = () => {
         if (adminId === 'msit admin' && password === 'admin982') {
             setIsLoggedIn(true);
             setLoginError('');
-            sessionStorage.setItem('msit_admin_auth', 'true');
         } else {
             setLoginError('Invalid Admin ID or Password.');
         }
