@@ -85,6 +85,7 @@ const Footer = () => {
                         <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Use</a>
                         <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Accessibility</a>
                         <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sitemap</a>
+                        <Link to="/admin" className="hover:text-white transition-colors font-medium">Admin Portal</Link>
                     </div>
                     <div className="flex items-center">Made with <Heart className="w-3 h-3 mx-1 text-red-500" /> in Delhi</div>
                 </div>
