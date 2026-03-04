@@ -6,11 +6,10 @@ export const pagesData = {
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
-            <p className="mb-6">At Maharaja Surajmal Institute of Technology, our foundational philosophy is built upon the dual pillars of visionary foresight and missionary zeal. We aim to propel our students to the forefront of global technological innovation.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our Vision</h3>
-            <p className="mb-6">To become a globally recognized center of excellence in engineering education and research, producing ethical, competent, and socially responsible technocrats empowered to solve real-world challenges.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our Mission</h3>
-            <p className="mb-6">We are committed to delivering world-class curriculum through modern pedagogical techniques, fostering an ecosystem of disruptive innovation, and instilling profound ethical frameworks in every engineering graduate that walks our halls.</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">VISION</h3>
+            <p className="mb-6">To become one of the most admired centers of academic excellence in the field of Engineering & Technology for all-round professional development of students to enable them to meet the growing technological needs of the country.</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">MISSION</h3>
+            <p className="mb-6">Developing new paradigm in imparting education in the fields of Engineering and Technology and to imbibe national values leading to student's empowerment, with a view to prepare them to meet the national and global challenges.</p>
         `,
         stats: [
             { label: "Global Alumni", value: "15,000+" },
@@ -24,31 +23,65 @@ export const pagesData = {
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
-            <p className="mb-6">Established in 2001, MSIT has grown from a humble institution into a powerhouse of engineering education in New Delhi. Named after the legendary Maharaja Surajmal, the institute carries forward a legacy of courage, wisdom, and profound intellectual pursuit.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">The Early Years</h3>
-            <p className="mb-6">Operating initially from a four-storey building, MSIT rapidly expanded its footprint, moving to a sprawling seven-storey complex to accommodate the surging demand for its premier technological programs. Today, it stands as a testament to the vision of its founders.</p>
+            <p className="mb-6">Surajmal Memorial Education Society was founded in 1972 at Janakpuri to emulate the great qualities of Maharaja Surajmal with an aim to impart quality education in rural as well as urban areas. Academic Programmes were started in various technical streams in 1982.</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Foundation of MSIT</h3>
+            <p className="mb-6">Maharaja Surajmal Institute of Technology was established in 2001 with the approval of AICTE and is affiliated with Guru Gobind Singh Indraprastha University in Delhi for Providing B.Tech Degrees since 2000-01.</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Maharaja Surajmal (1707-1763)</h3>
+            <p className="mb-6">Named after the visionary Maharaja Surajmal, who believed that humanity is the only religion of man, MSIT reflects a fusion of our heritage and contemporary insights. He dedicated his life to fighting social injustice and forging national integration.</p>
         `,
         stats: [
             { label: "Founded In", value: "2001" },
             { label: "Campus Size", value: "8 Acres" }
         ],
-        bulletPoints: ["NAAC 'A' Grade Journey", "NBA Accreditations", "ISO 9001:2015 Certification"]
+        bulletPoints: ["Society Founded 1972", "Affiliated to GGSIPU", "AICTE Approved"]
     },
     "administration": {
-        title: "Leadership Team",
+        title: "Administration",
         subtitle: "Guided by visionaries.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
-            <p className="mb-6">The leadership at MSIT comprises distinguished academicians, industry veterans, and administrative experts dedicated to maintaining the highest standards of institutional governance.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Board of Governance</h3>
-            <p className="mb-6">Our governing body ensures transparent, progressive, and student-centric policies that align with global educational standards and the requirements of the modern tech industry.</p>
+            <p className="mb-6">The leadership at MSIT is helmed by distinguished academicians and administrative experts dedicated to maintaining the highest standards of institutional governance. Under the leadership of our Director, Prof. (Dr.) Avanish Kumar Srivastava, the institute continuously strives for excellence.</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Director's Office</h3>
+            <p className="mb-6">Prof. (Dr.) Avanish Kumar Srivastava leads MSIT with a focus on robust academic standards and dynamic professional development. Together with the administrative staff, they ensure a transparent, progressive, and student-centric campus environment.</p>
         `,
         stats: [
-            { label: "Board Members", value: "15" },
-            { label: "Combined Exp.", value: "300+ Yrs" }
+            { label: "Leadership", value: "Director & Staff" },
+            { label: "Focus", value: "Student-Centric" }
         ],
-        bulletPoints: ["Director's Desk", "Administrative Officers", "Academic Council"]
+        bulletPoints: ["Director: Prof. Dr. A. K. Srivastava", "Administrative Stability", "Academic Excellence"]
+    },
+    "govern": {
+        title: "Governing Body",
+        subtitle: "The visionary leadership driving MSIT.",
+        category: "About MSIT",
+        heroImage: "/campus-hero.jpg",
+        content: `
+            <p className="mb-6">The Governing Body of Maharaja Surajmal Institute of Technology consists of an esteemed assembly of educationists, industry representatives, and society nominees who steer the strategic direction of the institute.</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Leadership Structure</h3>
+            <p className="mb-6">Chaired by Sh. Kaptan Singh, the board includes representatives like Smt. Esha Jakhar, industry veterans like Sh. Raj Singh Gahlot, and academic professionals such as Prof. R.S Nirjar. Their combined experience ensures that MSIT maintains its rigorous educational frameworks.</p>
+        `,
+        stats: [
+            { label: "Chairman", value: "Sh. Kaptan Singh" },
+            { label: "Advisors", value: "Multiple IIT/JMI Reps" }
+        ],
+        bulletPoints: ["Society Nominees", "Educationists & Industry Reps", "Teacher's Representatives"]
+    },
+    "fromdesk": {
+        title: "From The Desk",
+        subtitle: "Messages from our honorable leadership.",
+        category: "About MSIT",
+        heroImage: "/campus-hero.jpg",
+        content: `
+            <p className="mb-6"><strong>Message from the President:</strong> The foundation of socio-economic development of a country is the education of its youth. MSIT was established by Surajmal Memorial Education Society with the aim of creating centers of excellence without profit motives, strictly following AICTE standards.</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">A Commitment to Quality</h3>
+            <p className="mb-6"><strong>Message from the Secretary:</strong> In times of arduous competition, we move forward with a vision of holistic development. We continuously upgrade our infrastructure, providing well-equipped Labs, an Enterprise Library, and excellent hostels to foster both professional and personal growth.</p>
+        `,
+        stats: [
+            { label: "Work Culture", value: "Non-Profit" },
+            { label: "Objective", value: "Holistic Development" }
+        ],
+        bulletPoints: ["Sh. Kaptan Singh (President)", "Sh. Ajit Singh (Secretary)", "100% Placement Focus"]
     },
     "facilities": {
         title: "Campus & Facilities",
@@ -56,15 +89,17 @@ export const pagesData = {
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
-            <p className="mb-6">MSIT operates on a beautiful 8-acre eco-friendly campus in Janakpuri, New Delhi. Our infrastructure is meticulously designed to provide an optimal environment for both rigorous academic study and vibrant extracurricular life.</p>
+            <p className="mb-6">MSIT operates on a beautiful 8-acre eco-friendly campus in Janakpuri, New Delhi. Originally in a four-storey building (6279 sq.m), it was shifted to a more spacious seven-storey building with a built-up area of 17,837 sq.m, acquiring impressive infrastructure and resources for high-quality engineering education.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">State-of-the-Art Resources</h3>
-            <p className="mb-6">From high-performance computing labs and advanced electronics workshops to a fully digitized library and expansive sports complexes, every square foot of MSIT is optimized for student success.</p>
+            <p className="mb-6">The infrastructure consists of well-lit lecture halls, fully furnished labs, seminar halls, staff rooms, and a large playground. It includes six modern air-conditioned networked computer labs, an Enterprise Central Library, and high-speed radio-link internet access.</p>
+            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Hostel & Living</h3>
+            <p className="mb-6">The Maharaja Mahendra Pratap Hostel provides accommodation to around 200 boys and 100 girls in a spacious and elegant four-storey building with hygienic and nutritious food. A well-organized canteen with a 60-70 seating capacity is available on campus.</p>
         `,
         stats: [
             { label: "Built-up Area", value: "17,837 sqm" },
-            { label: "Digital Library", value: "100k+ Vols" }
+            { label: "Campus Size", value: "8 Acres" }
         ],
-        bulletPoints: ["Auditorium & Seminar Halls", "Cafeteria & Common Rooms", "Advanced Computing Hubs"]
+        bulletPoints: ["Central Library", "Maharaja Mahendra Pratap Hostel", "Advanced Computing Hubs", "Sports & Medical"]
     },
     "smes": {
         title: "Surajmal Memorial Education Society",
