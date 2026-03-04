@@ -43,7 +43,7 @@ const Footer = () => {
                             <li><Link to="/online-fee" className="hover:text-white transition-colors">Admissions 2026</Link></li>
                             <li><Link to="/cse" className="hover:text-white transition-colors">Academic Programs</Link></li>
                             <li><Link to="/society" className="hover:text-white transition-colors">Campus Life</Link></li>
-                            <li><Link to="/placements" className="hover:text-white transition-colors">Placement Records</Link></li>
+                            <li><a href="https://www.msit.in/placements" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Placement Records</a></li>
                             <li><Link to="/brochure" className="hover:text-white transition-colors">Download Brochure</Link></li>
                         </ul>
                     </div>
