@@ -54,6 +54,18 @@ const Header = () => {
         placements: [
             { name: "Careers & Placements", url: "/placements" },
             { name: "Internship Cell", url: "/internship-cell" }
+        ],
+        student: [
+            { name: "Student Login Portal", url: "https://msit.techtron.net/", external: true },
+            { name: "MSIT Central", url: "https://central.msit.in/", external: true },
+            { name: "Moodle (LMS)", url: "http://moodle.msit.in/", external: true },
+            { name: "Library Portal", url: "http://library.msit.in/", external: true },
+            { name: "Placement Portal", url: "https://placement.msit.in/", external: true },
+            { name: "NISP (Startup & Innovation)", url: "http://nisp.msit.in/", external: true },
+            { name: "NPTEL Videos", url: "http://nptel.ac.in/", external: true },
+            { name: "Grievance Portal", url: "http://grievance.msit.in", external: true },
+            { name: "Higher Studies Form", url: "https://docs.google.com/forms/d/e/1FAIpQLSfQa8YcM9Pq4kN10V8TJ_KDw8cdGphCi6b6QNw66bWfm7RkvQ/viewform?usp=sf_link", external: true },
+            { name: "Attendance Rules", url: "/attendance" }
         ]
     };
 
@@ -64,10 +76,10 @@ const Header = () => {
               ========================================= */}
             <div className="bg-slate-900 text-slate-300 text-xs py-2 px-6 flex justify-between items-center z-50 relative">
                 <div className="flex space-x-6 overflow-x-auto whitespace-nowrap hide-scrollbar">
-                    <Link to="/student-portal" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium">Current Students</Link>
+                    <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium">Current Students</a>
                     <Link to="/administration" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Faculty & Staff</Link>
                     <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Campus Mail</a>
-                    <Link to="/posh" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden md:block">Grievances</Link>
+                    <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden md:block">Grievances</a>
                 </div>
                 <div className="flex space-x-3 shrink-0">
                     <Link to="/facilities" className="px-4 py-1.5 border border-slate-600 rounded text-white hover:bg-slate-800 transition-colors hidden sm:block">Visit Campus</Link>
@@ -99,7 +111,7 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 shrink-0 text-[13px] xl:text-[14px]">
-                        {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements'].map((item, idx) => {
+                        {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements', 'Student Portal'].map((item, idx) => {
                             const key = item.split(' ')[0].toLowerCase();
                             return (
                                 <div
@@ -117,10 +129,17 @@ const Header = () => {
                                     <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white shadow-2xl rounded-2xl border border-slate-100 p-8 w-[500px] transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
                                         <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                                             {megaMenuData[key]?.map((link, i) => (
-                                                <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
-                                                    {link.name}
-                                                    <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
-                                                </Link>
+                                                link.external ? (
+                                                    <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
+                                                        {link.name}
+                                                        <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                    </a>
+                                                ) : (
+                                                    <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
+                                                        {link.name}
+                                                        <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                    </Link>
+                                                )
                                             ))}
                                         </div>
                                         <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
@@ -171,9 +190,15 @@ const Header = () => {
                                 <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3 mt-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                                 <div className="space-y-1">
                                     {items.map((link, i) => (
-                                        <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
-                                            {link.name}
-                                        </Link>
+                                        link.external ? (
+                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
+                                                {link.name}
+                                            </a>
+                                        ) : (
+                                            <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
+                                                {link.name}
+                                            </Link>
+                                        )
                                     ))}
                                 </div>
                             </div>

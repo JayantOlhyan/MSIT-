@@ -42,8 +42,9 @@ const Footer = () => {
                             <li><Link to="/about" className="hover:text-white transition-colors">About MSIT</Link></li>
                             <li><Link to="/online-fee" className="hover:text-white transition-colors">Admissions 2026</Link></li>
                             <li><Link to="/cse" className="hover:text-white transition-colors">Academic Programs</Link></li>
-                            <li><Link to="/society" className="hover:text-white transition-colors">Campus Life</Link></li>
+                            <li><Link to="/society" className="hover:text-white transition-colors">Campus Life & Societies</Link></li>
                             <li><a href="https://www.msit.in/placements" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Placement Records</a></li>
+                            <li><a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Grievance Portal</a></li>
                             <li><Link to="/brochure" className="hover:text-white transition-colors">Download Brochure</Link></li>
                         </ul>
                     </div>
@@ -52,7 +53,9 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6">Resources</h4>
                         <ul className="space-y-4 font-light text-sm">
-                            <li><Link to="/student-portal" className="hover:text-white transition-colors">Student Portal</Link></li>
+                            <li><a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
+                            <li><a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Library Portal</a></li>
+                            <li><a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Campus Mail</a></li>
                             <li><Link to="/administration" className="hover:text-white transition-colors">Faculty Portal</Link></li>
                             <li><Link to="/academic-calendar" className="hover:text-white transition-colors">Academic Calendar</Link></li>
                             <li><Link to="/syllabus" className="hover:text-white transition-colors">Course Syllabus</Link></li>
