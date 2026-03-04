@@ -195,23 +195,38 @@ const Header = () => {
                             <X className="w-6 h-6" />
                         </button>
 
-                        <div className="flex items-center border-b-2 border-slate-900 pb-4 mt-4">
-                            <Search className="w-8 h-8 text-slate-900 mr-4" />
+                        <form onSubmit={(e) => {
+                            e.preventDefault();
+                            const query = e.target.searchQuery.value;
+                            if (query) {
+                                window.location.href = `/search?q=${encodeURIComponent(query)}`;
+                                toggleSearch();
+                            }
+                        }} className="flex items-center border-b-2 border-slate-900 pb-4 mt-4">
+                            <button type="submit">
+                                <Search className="w-8 h-8 text-slate-900 mr-4" />
+                            </button>
                             <input
                                 type="search"
+                                name="searchQuery"
                                 placeholder="What are you looking for?"
                                 className="w-full text-2xl md:text-3xl font-light focus:ring-0 focus:outline-none border-none text-slate-900 placeholder-slate-300 bg-transparent"
                                 autoFocus
                             />
-                        </div>
+                        </form>
 
                         <div className="mt-8">
                             <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Quick Links</h4>
                             <div className="flex flex-wrap gap-2">
                                 {['Admissions 2026', 'Faculty Directory', 'Academic Calendar', 'Placements', 'Campus Map'].map(term => (
-                                    <span key={term} className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm rounded-full cursor-pointer transition-colors">
+                                    <Link
+                                        key={term}
+                                        to={`/search?q=${encodeURIComponent(term)}`}
+                                        onClick={toggleSearch}
+                                        className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm rounded-full cursor-pointer transition-colors"
+                                    >
                                         {term}
-                                    </span>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
