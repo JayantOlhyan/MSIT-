@@ -1,10 +1,28 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Heart } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Heart, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-slate-950 pt-24 pb-12 border-t border-slate-900 text-slate-400">
+        <footer className="bg-slate-950 pt-0 pb-12 border-t border-slate-900 text-slate-400">
+            {/* Feedback Banner */}
+            <div className="bg-gradient-to-r from-blue-900/40 to-indigo-900/40 border-b border-slate-800 py-6 mb-16">
+                <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                        <MessageSquare className="w-5 h-5 text-blue-400" />
+                        <span className="text-slate-300 font-medium tracking-wide">Found something wrong or missing? Help us improve this website!</span>
+                    </div>
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdy7gs1NPTGYN_ryfaL9HLq1lqdnQWIKEQZQTCaLg5jltxP7A/viewform?usp=publish-editor"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg shadow-md transition-colors whitespace-nowrap"
+                    >
+                        Give Feedback 📝
+                    </a>
+                </div>
+            </div>
+
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-20">
 
