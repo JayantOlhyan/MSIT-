@@ -91,7 +91,7 @@ const Header = () => {
               SECTION 2: MAIN HEADER / NAVIGATION
               ========================================= */}
             <header
-                className={`sticky top-0 z-40 transition-all duration-300 w-full ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-3' : 'bg-white/95 backdrop-blur-sm py-5'
+                className={`sticky top-0 z-[60] transition-all duration-300 w-full ${isScrolled || isMenuOpen ? 'bg-white shadow-lg py-3' : 'bg-white/95 backdrop-blur-sm py-5'
                     }`}
             >
                 <div className="w-full max-w-[1536px] mx-auto px-4 lg:px-6 xl:px-8 flex justify-between items-center">
@@ -166,54 +166,51 @@ const Header = () => {
                     </nav>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="xl:hidden flex items-center gap-3 shrink-0">
+                    <div className="xl:hidden flex items-center gap-2 sm:gap-3 shrink-0">
                         <button onClick={toggleSearch} className="p-2 text-slate-600 hover:text-slate-900">
                             <Search className="w-5 h-5 sm:w-6 sm:h-6" />
                         </button>
-                        <button onClick={() => setIsMenuOpen(true)} className="p-2 text-slate-900 focus:outline-none">
-                            <Menu className="w-6 h-6 sm:w-7 sm:h-7" />
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="w-10 h-10 relative focus:outline-none flex justify-center items-center group cursor-pointer"
+                            aria-label="Toggle Menu"
+                        >
+                            <span className={`block w-6 h-[2px] bg-slate-900 rounded-full absolute transition-all duration-300 ease-in-out ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
+                            <span className={`block w-6 h-[2px] bg-slate-900 rounded-full absolute transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
+                            <span className={`block w-6 h-[2px] bg-slate-900 rounded-full absolute transition-all duration-300 ease-in-out ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
                         </button>
                     </div>
                 </div>
             </header>
 
-            {/* Mobile Nav Overlay */}
-            {isMenuOpen && (
-                <div className="fixed inset-0 z-50 bg-white overflow-y-auto animate-fade-in block xl:hidden">
-                    <div className="p-4 sm:p-6 flex justify-between items-center border-b border-slate-100 bg-white sticky top-0">
-                        <span className="font-bold text-2xl tracking-tight text-slate-900">MSIT Navigation</span>
-                        <button onClick={() => setIsMenuOpen(false)} className="p-2 rounded-full bg-slate-100 text-slate-900">
-                            <X className="w-6 h-6" />
-                        </button>
-                    </div>
-
-                    <div className="p-6 flex flex-col space-y-2">
-                        {Object.entries(megaMenuData).map(([key, items], idx) => (
-                            <div key={idx} className="border-b border-slate-50 py-2">
-                                <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3 mt-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                                <div className="space-y-1">
-                                    {items.map((link, i) => (
-                                        link.external ? (
-                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
-                                                {link.name}
-                                            </a>
-                                        ) : (
-                                            <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
-                                                {link.name}
-                                            </Link>
-                                        )
-                                    ))}
-                                </div>
+            {/* Mobile Nav Overlay (Smooth Sliding Drawer) */}
+            <div className={`fixed inset-x-0 top-0 z-50 bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] h-[100dvh] pt-24 pb-8 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+                <div className="p-4 sm:p-6 flex flex-col space-y-2 mt-4">
+                    {Object.entries(megaMenuData).map(([key, items], idx) => (
+                        <div key={idx} className="border-b border-slate-50 py-2">
+                            <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3 mt-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                            <div className="space-y-1">
+                                {items.map((link, i) => (
+                                    link.external ? (
+                                        <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
+                                            {link.name}
+                                        </a>
+                                    ) : (
+                                        <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
+                                            {link.name}
+                                        </Link>
+                                    )
+                                ))}
                             </div>
-                        ))}
-
-                        <div className="pt-8 space-y-4 pb-12">
-                            <button className="w-full py-4 text-center rounded-lg bg-slate-900 text-white font-medium text-lg shadow-md">Apply Now</button>
-                            <button className="w-full py-4 text-center rounded-lg border-2 border-slate-200 text-slate-700 font-medium text-lg">Visit Campus</button>
                         </div>
+                    ))}
+
+                    <div className="pt-8 space-y-4 pb-12">
+                        <button className="w-full py-4 text-center rounded-lg bg-slate-900 text-white font-medium text-lg shadow-md">Apply Now</button>
+                        <button className="w-full py-4 text-center rounded-lg border-2 border-slate-200 text-slate-700 font-medium text-lg">Visit Campus</button>
                     </div>
                 </div>
-            )}
+            </div>
 
             {/* Search Modal */}
             {searchOpen && (
