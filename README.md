@@ -37,7 +37,7 @@ The MSIT Website project is a comprehensive overhaul of the official [Maharaja S
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework for rapid and precise styling.
 - **Icons**: [Lucide React](https://lucide.dev/) - Beautiful, consistent, and customizable vector icons.
 - **Routing**: [React Router v6](https://reactrouter.com/) - Declarative routing for React applications.
-- **Deployment**: [GitHub Pages](https://pages.github.com/) via `gh-pages` npm package.
+- **Deployment**: [Netlify](https://www.netlify.com/) - High-performance edge network for SPA delivery.
 
 ## 📁 Project Structure
 
@@ -84,12 +84,14 @@ To run this project locally, follow these steps:
 
 ## 📦 Deployment
 
-This project is configured to automatically deploy to GitHub pages. To deploy a new build:
+This project is fully configured for seamless deployment to **Netlify** or **Vercel**. 
 
-\`\`\`bash
-npm run deploy
-\`\`\`
-*(This will run `vite build` and push the `dist` folder to the `gh-pages` branch).*
+Because this application uses \`react-router-dom\` for client-side routing, a \`public/_redirects\` file with the rule \`/* /index.html 200\` is already included to ensure deep linking works safely on Netlify without 404 errors.
+
+**To deploy automatically:**
+1. Push this repository to GitHub.
+2. Link the repository directly to Netlify.
+3. Use the default build command (\`npm run build\`) and publish directory (\`dist\`).
 
 ## 🤝 Contributing
 

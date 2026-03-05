@@ -87,10 +87,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6">Connect</h4>
                         <div className="flex gap-4 mb-8">
-                            <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Facebook className="w-4 h-4" /></a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Twitter className="w-4 h-4" /></a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Linkedin className="w-4 h-4" /></a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Instagram className="w-4 h-4" /></a>
+                            <a href="https://www.facebook.com/msitnewdelhi/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Facebook className="w-4 h-4" /></a>
+                            <a href="https://x.com/msitnewdelhi?lang=en" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Twitter className="w-4 h-4" /></a>
+                            <a href="https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Linkedin className="w-4 h-4" /></a>
+                            <a href="https://www.instagram.com/msitnewdelhi/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all"><Instagram className="w-4 h-4" /></a>
                         </div>
                         <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-4">Brochure</h4>
                         <Link to="/brochure" className="text-sm font-medium text-white px-5 py-2.5 rounded border border-slate-700 hover:bg-slate-800 transition-colors bg-slate-900 inline-flex items-center">
