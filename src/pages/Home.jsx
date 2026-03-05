@@ -345,21 +345,21 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h2 className="text-4xl font-light text-slate-900 tracking-tight mb-16">Alumni Shaping the World</h2>
 
-                    <div className="relative max-w-4xl mx-auto">
-                        <div className="text-6xl text-slate-200 absolute -top-8 -left-8 font-serif">"</div>
-                        <div className="min-h-[200px] flex items-center justify-center">
+                    <div className="relative max-w-4xl mx-auto px-4 md:px-0">
+                        <div className="text-6xl text-slate-100 absolute -top-10 -left-2 md:-top-8 md:-left-8 font-serif z-0">"</div>
+                        <div className="min-h-[350px] md:min-h-[250px] lg:min-h-[200px] flex items-center justify-center relative z-10">
                             {testimonials.map((t, i) => (
                                 <div
                                     key={i}
-                                    className={`absolute inset-0 transition-all duration-700 flex flex-col items-center justify-center
-                                    ${i === currentTestimonial ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12 pointer-events-none'}`}
+                                    className={`absolute inset-0 transition-all duration-700 flex flex-col items-center justify-center px-2 sm:px-4
+                                    ${i === currentTestimonial ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-12 pointer-events-none -z-10'}`}
                                 >
-                                    <p className="text-2xl md:text-3xl font-light text-slate-800 leading-relaxed mb-8">
+                                    <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800 leading-relaxed mb-6 md:mb-8">
                                         {t.quote}
                                     </p>
-                                    <div className="font-semibold text-lg text-slate-900">{t.name} <span className="font-light text-slate-500">'{t.year}</span></div>
-                                    <div className="text-blue-600 font-medium">{t.major}</div>
-                                    <div className="text-sm uppercase tracking-widest text-slate-400 mt-2 font-bold">{t.company}</div>
+                                    <div className="font-semibold text-base md:text-lg text-slate-900">{t.name} <span className="font-light text-slate-500">'{t.year}</span></div>
+                                    <div className="text-blue-600 font-medium text-sm md:text-base">{t.major}</div>
+                                    <div className="text-xs md:text-sm uppercase tracking-widest text-slate-400 mt-2 font-bold">{t.company}</div>
                                 </div>
                             ))}
                         </div>

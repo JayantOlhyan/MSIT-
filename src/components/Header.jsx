@@ -227,15 +227,15 @@ const Header = () => {
                                 window.location.href = `/search?q=${encodeURIComponent(query)}`;
                                 toggleSearch();
                             }
-                        }} className="flex items-center border-b-2 border-slate-900 pb-4 mt-4">
-                            <button type="submit">
-                                <Search className="w-8 h-8 text-slate-900 mr-4" />
+                        }} className="flex items-center border-b-2 border-slate-900 pb-3 md:pb-4 mt-6 md:mt-4">
+                            <button type="submit" className="shrink-0">
+                                <Search className="w-6 h-6 md:w-8 md:h-8 text-slate-900 mr-3 md:mr-4" />
                             </button>
                             <input
                                 type="search"
                                 name="searchQuery"
                                 placeholder="What are you looking for?"
-                                className="w-full text-2xl md:text-3xl font-light focus:ring-0 focus:outline-none border-none text-slate-900 placeholder-slate-300 bg-transparent"
+                                className="w-full text-lg sm:text-2xl md:text-3xl font-light focus:ring-0 focus:outline-none border-none text-slate-900 placeholder-slate-300 bg-transparent px-0"
                                 autoFocus
                             />
                         </form>
