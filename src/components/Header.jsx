@@ -97,16 +97,16 @@ const Header = () => {
                 <div className="w-full max-w-[1536px] mx-auto px-4 lg:px-6 xl:px-8 flex justify-between items-center">
 
                     {/* Logo Area */}
-                    <Link to="/" className="flex-shrink flex items-center gap-2 xl:gap-3 cursor-pointer select-none mr-auto pr-2">
+                    <Link to="/" className="flex-1 min-w-0 flex items-center gap-2 xl:gap-3 cursor-pointer select-none mr-auto pr-4">
                         <img src="/msit-logo.png" alt="MSIT Logo" className="h-10 md:h-12 lg:h-14 xl:h-[60px] w-auto object-contain shrink-0 drop-shadow-sm" />
-                        <div className="flex flex-col justify-center transform lg:-translate-y-0.5 font-sans">
-                            <span className="font-bold text-[13px] md:text-[18px] lg:text-[20px] xl:text-[23px] text-[#1e4a9b] tracking-tight leading-tight mb-0.5 md:mb-1 whitespace-nowrap hidden sm:block">
+                        <div className="flex flex-col justify-center transform lg:-translate-y-0.5 font-sans min-w-0">
+                            <span className="font-bold text-[13px] md:text-[18px] lg:text-[20px] xl:text-[23px] text-[#1e4a9b] tracking-tight leading-tight mb-0.5 md:mb-1 truncate sm:whitespace-normal hidden sm:block">
                                 Maharaja Surajmal Institute of Technology
                             </span>
-                            <span className="font-bold text-[14px] text-[#1e4a9b] tracking-tight leading-tight mb-0.5 sm:hidden">
+                            <span className="font-bold text-[14px] text-[#1e4a9b] tracking-tight leading-tight mb-0.5 sm:hidden truncate">
                                 MSIT
                             </span>
-                            <span className="hidden md:block text-[8px] lg:text-[9px] xl:text-[10px] font-semibold tracking-wide text-[#f05023] leading-tight whitespace-nowrap">
+                            <span className="hidden md:block text-[8px] lg:text-[9px] xl:text-[10px] font-semibold tracking-wide text-[#f05023] leading-tight truncate">
                                 Affiliated to GGSIPU | NAAC Accredited 'A' Grade | NBA (CSE, IT, ECE, EEE)
                             </span>
                         </div>
