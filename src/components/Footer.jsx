@@ -40,7 +40,14 @@ const Footer = () => {
                         <div className="space-y-4 text-sm font-light">
                             <div className="flex items-start">
                                 <MapPin className="w-5 h-5 mr-3 text-slate-600 shrink-0 mt-0.5" />
-                                <span>C-4, Janakpuri<br />New Delhi - 110058, India</span>
+                                <a 
+                                    href="https://www.google.com/maps/dir/?api=1&destination=Maharaja+Surajmal+Institute+of+Technology+Janakpuri+New+Delhi" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="hover:text-white transition-colors"
+                                >
+                                    C-4, Janakpuri<br />New Delhi - 110058, India
+                                </a>
                             </div>
                             <div className="flex items-center">
                                 <Phone className="w-5 h-5 mr-3 text-slate-600" />
