@@ -98,7 +98,7 @@ const Header = () => {
 
                     {/* Logo Area */}
                     <Link to="/" className="flex-1 min-w-0 flex items-center gap-2 xl:gap-3 cursor-pointer select-none mr-auto pr-4">
-                        <img src="/msit-logo.png" alt="MSIT Logo" className="h-10 md:h-12 lg:h-14 xl:h-[60px] w-auto object-contain shrink-0 drop-shadow-sm" />
+                        <img src="/msit-logo.png" alt="Maharaja Surajmal Institute of Technology Logo" className="h-10 md:h-12 lg:h-14 xl:h-[60px] w-auto object-contain shrink-0 drop-shadow-sm" loading="eager" />
                         <div className="flex flex-col justify-center transform lg:-translate-y-0.5 font-sans min-w-0">
                             <span className="font-bold text-[13px] md:text-[18px] lg:text-[20px] xl:text-[23px] text-[#1e4a9b] tracking-tight leading-tight mb-0.5 md:mb-1 truncate sm:whitespace-normal hidden sm:block">
                                 Maharaja Surajmal Institute of Technology
@@ -147,16 +147,16 @@ const Header = () => {
                                         </div>
                                         <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
                                             <div className="text-sm font-semibold text-slate-900">Explore all in {item}</div>
-                                            <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center hover:bg-slate-100 cursor-pointer shrink-0">
+                                            <Link to="/about" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center hover:bg-slate-100 cursor-pointer shrink-0">
                                                 <ArrowRight className="w-4 h-4 text-slate-900" />
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
                             );
                         })}
 
-                        <a href="#" className="px-1.5 xl:px-3 py-2 font-medium text-slate-700 hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">Contact</a>
+                        <Link to="/contact" className="px-1.5 xl:px-3 py-2 font-medium text-slate-700 hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">Contact</Link>
 
                         <div className="w-px h-5 bg-slate-200 mx-1 xl:mx-2 shrink-0"></div>
 

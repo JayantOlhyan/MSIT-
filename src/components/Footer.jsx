@@ -44,11 +44,11 @@ const Footer = () => {
                             </div>
                             <div className="flex items-center">
                                 <Phone className="w-5 h-5 mr-3 text-slate-600" />
-                                <span>011-65215941</span>
+                                <a href="tel:+911165215941" className="hover:text-white transition-colors">011-65215941</a>
                             </div>
                             <div className="flex items-center">
                                 <Mail className="w-5 h-5 mr-3 text-slate-600" />
-                                <span>info@msit.in</span>
+                                <a href="mailto:info@msit.in" className="hover:text-white transition-colors">info@msit.in</a>
                             </div>
                         </div>
                     </div>
@@ -102,11 +102,11 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-slate-900 text-xs font-light flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500">
                     <div>&copy; {new Date().getFullYear()} Maharaja Surajmal Institute of Technology. All rights reserved.</div>
-                    <div className="flex gap-6">
-                        <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Use</a>
-                        <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Accessibility</a>
-                        <a href="https://www.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sitemap</a>
+                    <div className="flex gap-4 sm:gap-6 flex-wrap justify-center md:justify-start">
+                        <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+                        <Link to="/accessibility" className="hover:text-white transition-colors">Accessibility</Link>
+                        <Link to="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
                         <Link to="/admin" className="hover:text-white transition-colors font-medium">Admin Portal</Link>
                     </div>
                     <div className="flex items-center">Made with <Heart className="w-3 h-3 mx-1 text-red-500" /> in Delhi</div>
