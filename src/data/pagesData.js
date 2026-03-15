@@ -301,19 +301,93 @@ export const pagesData = {
     // ---------------- LIFE AT MSIT SECTION ----------------
     "society": {
         title: "Student Societies",
-        subtitle: "Vibrant technical and cultural communities.",
+        subtitle: "The vibrant heartbeat of MSIT — Tech, Culture, and Social Innovation.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
         content: `
-            <p className="mb-6">Education extends far beyond the classroom. MSIT boasts over 20 active technical and cultural societies, ranging from robotics and coding clubs to drama, dance, and literary societies.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Find Your Tribe</h3>
-            <p className="mb-6">Whether you want to build autonomous rovers, organize massive hackathons, or perform on stage, our student chapters (IEEE, CSI, Enactus, etc.) provide the platform to develop leadership and teamwork skills.</p>
+            <div className="space-y-16">
+                <!-- Overview -->
+                <section>
+                    <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Education at MSIT extends far beyond lecture halls. Our student-led societies provide a dynamic platform for innovation, leadership, and cultural expression. Whether you're a coder, a debater, a dancer, or a social worker, there's a community waiting for you.
+                    </p>
+                </section>
+
+                <!-- Technical Societies -->
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-8">Technical & Innovation Hubs</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">IEEE MSIT</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">A premier technical community focused on engineering excellence, professional networking, and high-impact workshops.</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">GDSC (Google Developer Student Clubs)</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">The hub for Google technologies, mobile app dev, and cloud computing. Solving real-world problems through code.</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">E-yantra (Robotics)</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">For the hardware enthusiasts. Building autonomous rovers, drones, and competing in national robotics challenges.</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">NISP & Startup Cell</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">Fostering an ecosystem for student-led startups, innovation policy, and entrepreneurial mentorship.</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">Geek Room</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">A collaborative community for modern web development, open-source contribution, and tech trends.</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">TechSoc</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">MSIT's amateur technical society serving as an umbrella for various engineering projects and technical efforts.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cultural Societies -->
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-l-4 border-purple-600 pl-4 mb-8">Cultural & Creative Arts</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">Mutants (Cultural Society)</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">The main cultural hub featuring <strong>Octave</strong> (Music), <strong>Aarambh</strong> (Dramatics), <strong>Unity</strong> (Street Dance), and <strong>Astitva</strong> (Dance).</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">Cerebrate (Debating)</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">The official debating society. Mastering the art of persuasion, logical reasoning, and intellectual discourse.</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">Veda (Quiz Society)</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">For the sharpest minds. Organizing competitive quizzes across general knowledge, tech, and literature.</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">Broadcast Society</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">The media wing of MSIT. Handling photography, filmmaking, content creation, and institutional media.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Social & Academic -->
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-8">Social Responsibility & Academic Knowledge</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">NSS & Prakriti</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">Dedicated to community service and environmental sustainability. Organizing blood donation camps and eco-drives.</p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                            <h4 className="font-bold text-slate-900 mb-2">SPARK</h4>
+                            <p className="text-sm text-slate-600 leading-relaxed">The Society for Promotion of Academic and Research Knowledge. Bridging the gap between syllabus and industry research.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         `,
         stats: [
-            { label: "Active Societies", value: "20+" },
-            { label: "Student Led", value: "100%" }
+            { label: "Active Societies", value: "22" },
+            { label: "Flagship Events", value: "10+" }
         ],
-        bulletPoints: ["Tech Society (CSI, IEEE)", "Cultural Society", "Enactus MSIT"]
+        bulletPoints: ["Technical Hubs (IEEE, GDSC)", "Cultural Sub-wings", "Innovation & Startup Cell", "Environmental Initiatives"]
     },
     "events": {
         title: "Events & Festivals",
