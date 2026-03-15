@@ -29,7 +29,7 @@ const About = () => {
                             {/* Abstract Image Grid */}
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="h-64 rounded-2xl bg-slate-200 overflow-hidden transform translate-y-8">
-                                    <img src="/campus-hero.jpg" alt="Campus" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                    <img src="/campus-hero.jpg" alt="Maharaja Surajmal Institute of Technology (MSIT) Campus Building" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" />
                                 </div>
                                 <div className="h-48 rounded-2xl bg-slate-200 overflow-hidden">
                                     <div className="w-full h-full bg-slate-800 flex items-center justify-center text-slate-600">
