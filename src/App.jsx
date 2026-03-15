@@ -13,6 +13,8 @@ import Brochure from './pages/Brochure';
 import AdminDashboard from './pages/AdminDashboard';
 import DynamicPage from './pages/DynamicPage';
 
+import NotFound from './pages/NotFound';
+
 const App = () => {
     return (
         <Router basename={import.meta.env.BASE_URL}>
@@ -29,6 +31,7 @@ const App = () => {
                     <Route path="/brochure" element={<Brochure />} />
                     <Route path="/admin" element={<AdminDashboard />} />
                     <Route path="/:slug" element={<DynamicPage />} />
+                    <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>
         </Router>
