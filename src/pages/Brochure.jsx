@@ -1,6 +1,6 @@
-import React from 'react';
-import { BookMarked, Download, CalendarDays } from 'lucide-react';
+import { BookMarked, Download, CalendarDays, ChevronRight } from 'lucide-react';
 import SEO from '../components/SEO';
+import { Link } from 'react-router-dom';
 
 const Brochure = () => {
     const brochures = [
@@ -19,6 +19,14 @@ const Brochure = () => {
                 canonicalPath="/brochure"
             />
             <div className="max-w-4xl mx-auto px-6">
+                {/* Breadcrumbs */}
+                <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
+                    <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
+                    <ChevronRight className="w-4 h-4 mx-2" />
+                    <span className="text-slate-500">MSIT</span>
+                    <ChevronRight className="w-4 h-4 mx-2" />
+                    <span className="text-blue-400">Brochure</span>
+                </div>
 
                 {/* Header */}
                 <div className="text-center mb-16 bg-white border border-slate-200 p-12 rounded-3xl relative overflow-hidden shadow-sm">
