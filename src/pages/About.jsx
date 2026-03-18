@@ -7,7 +7,7 @@ const About = () => {
         <main className="min-h-screen bg-slate-50">
             <SEO 
                 title="About Us" 
-                description="Learn about the legacy of Maharaja Surajmal Institute of Technology (MSIT), its origin, infrastructure, and world-class teaching methodology." 
+                description="Discover the legacy of Maharaja Surajmal Institute of Technology. Learn about our mission to provide excellence in engineering and technology since 2001." 
                 canonicalPath="/about"
             />
             {/* HER0 - PAGE TITLE */}
@@ -19,10 +19,10 @@ const About = () => {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
                     <span className="text-blue-400 font-bold tracking-widest text-sm uppercase mb-4 block animate-fade-in">Discover MSIT</span>
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-tight mb-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                        About the <span className="font-semibold">Institute.</span>
+                        About <span className="font-semibold text-blue-400">MSIT New Delhi.</span>
                     </h1>
                     <p className="text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                        A legacy of excellence, driven by the vision to shape tomorrow's engineers and innovators.
+                        A legacy of excellence at Maharaja Surajmal Institute of Technology, driven by the vision to shape tomorrow's engineers and innovators.
                     </p>
                 </div>
             </section>
