@@ -1,6 +1,6 @@
-import React from 'react';
-import { Clock, BookOpen, Layers } from 'lucide-react';
+import { Clock, BookOpen, Layers, ChevronRight } from 'lucide-react';
 import SEO from '../components/SEO';
+import { Link } from 'react-router-dom';
 
 const TimeTable = () => {
     return (
@@ -11,6 +11,14 @@ const TimeTable = () => {
                 canonicalPath="/timetable"
             />
             <div className="max-w-6xl mx-auto px-6">
+                {/* Breadcrumbs */}
+                <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
+                    <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
+                    <ChevronRight className="w-4 h-4 mx-2" />
+                    <span className="text-slate-500">Academics</span>
+                    <ChevronRight className="w-4 h-4 mx-2" />
+                    <span className="text-blue-400">Time Table</span>
+                </div>
 
                 {/* Header Section */}
                 <div className="text-center mb-16 animate-fade-in shadow-sm bg-white border border-slate-200 p-12 rounded-3xl relative overflow-hidden">
