@@ -28,12 +28,12 @@ const Footer = () => {
 
                     {/* Col 1 */}
                     <div className="lg:col-span-2 pr-4">
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-10 h-10 rounded bg-white flex items-center justify-center">
+                        <Link to="/" className="flex items-center gap-3 mb-8 group" aria-label="MSIT New Delhi Home">
+                            <div className="w-10 h-10 rounded bg-white flex items-center justify-center group-hover:bg-blue-50 transition-colors shadow-lg">
                                 <span className="text-slate-950 text-xl font-bold tracking-tighter">M</span>
                             </div>
-                            <span className="font-bold text-2xl tracking-tight text-white">MSIT</span>
-                        </div>
+                            <span className="font-bold text-2xl tracking-tight text-white group-hover:text-blue-400 transition-colors">MSIT</span>
+                        </Link>
                         <p className="text-slate-400 font-light leading-relaxed mb-8 max-w-sm">
                             Shaping tomorrow's engineers and innovators through exceptional academic rigor and profound industry immersion.
                         </p>
@@ -68,9 +68,15 @@ const Footer = () => {
                             <li><Link to="/online-fee" className="hover:text-white transition-colors">Admissions 2026</Link></li>
                             <li><Link to="/cse" className="hover:text-white transition-colors">Academic Programs</Link></li>
                             <li><Link to="/society" className="hover:text-white transition-colors">Campus Life & Societies</Link></li>
-                            <li><a href="https://www.msit.in/placements" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Placement Records</a></li>
-                            <li><a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Grievance Portal</a></li>
                             <li><Link to="/brochure" className="hover:text-white transition-colors">Download Brochure</Link></li>
+                            <li className="pt-4 border-t border-slate-900">
+                                <h5 className="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-4">Official Portals</h5>
+                                <div className="space-y-3">
+                                    <a href="http://www.ipu.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">GGSIP University <ExternalLink className="w-3 h-3 text-slate-700" /></a>
+                                    <a href="https://www.aicte-india.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">AICTE Regulator <ExternalLink className="w-3 h-3 text-slate-700" /></a>
+                                    <a href="https://www.ugc.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">UGC Content <ExternalLink className="w-3 h-3 text-slate-700" /></a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
 
