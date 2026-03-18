@@ -1,9 +1,15 @@
 import React from 'react';
 import { Clock, BookOpen, Layers } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const TimeTable = () => {
     return (
         <main className="min-h-screen bg-slate-50 py-16">
+            <SEO 
+                title="Time Table" 
+                description="Check the daily class and laboratory schedules for all engineering branches at Maharaja Surajmal Institute of Technology." 
+                canonicalPath="/timetable"
+            />
             <div className="max-w-6xl mx-auto px-6">
 
                 {/* Header Section */}

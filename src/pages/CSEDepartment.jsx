@@ -1,9 +1,15 @@
 import React from 'react';
 import { Code, Server, Shield, Database, Monitor, Cpu, Terminal, ArrowRight, BookOpen, Target, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const CSEDepartment = () => {
     return (
         <main className="min-h-screen bg-slate-50">
+            <SEO 
+                title="Computer Science & Engineering" 
+                description="Explore the Computer Science & Engineering (CSE) department at MSIT, featuring NBA accredited programs and state-of-the-art laboratories." 
+                canonicalPath="/cse"
+            />
             {/* HER0 - PAGE TITLE */}
             <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-900 border-b border-slate-800">
                 <div className="absolute inset-0 z-0">
@@ -18,7 +24,7 @@ const CSEDepartment = () => {
                         Computer Science & <span className="font-semibold text-blue-400">Engineering.</span>
                     </h1>
                     <p className="text-xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                        Established in 2001 to impart world-class education and prepare future software engineers for the rapidly evolving technological landscape.
+                        The Department of Computer Science & Engineering at Maharaja Surajmal Institute of Technology (MSIT) was established in 2001 to impart world-class education and prepare future software engineers for the rapidly evolving technological landscape.
                     </p>
                 </div>
             </section>

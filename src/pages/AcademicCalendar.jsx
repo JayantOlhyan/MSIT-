@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, Download, Clock } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const AcademicCalendar = () => {
     const calendars = [
@@ -14,6 +15,11 @@ const AcademicCalendar = () => {
 
     return (
         <main className="min-h-screen bg-slate-50 py-16">
+            <SEO 
+                title="Academic Calendar" 
+                description="View the official MSIT academic calendar for 2024-2026, including semester schedules, examination dates, and holidays." 
+                canonicalPath="/academic-calendar"
+            />
             <div className="max-w-4xl mx-auto px-6">
 
                 {/* Header */}

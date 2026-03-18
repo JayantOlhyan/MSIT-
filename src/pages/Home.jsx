@@ -4,9 +4,11 @@ import {
     Check, Award, ArrowRight, Play, X, Mail, Globe,
     Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Home = () => {
     const [activeNewsTab, setActiveNewsTab] = useState('all');
+    // ... rest of state
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxImage, setLightboxImage] = useState('');
@@ -139,6 +141,10 @@ const Home = () => {
 
     return (
         <main>
+            <SEO 
+                title="Home" 
+                description="Maharaja Surajmal Institute of Technology (MSIT) is a premier engineering college in Delhi, NAAC 'A' Grade and NBA accredited, offering world-class B.Tech programs." 
+            />
             {/* HERO SECTION */}
             <section ref={heroRef} className="relative w-full h-[90vh] min-h-[700px] flex items-center bg-slate-900 overflow-hidden">
                 {/* Interactive Campus Background Image */}
@@ -173,7 +179,7 @@ const Home = () => {
                     <div className={`w-32 h-1 bg-white mt-10 mb-8 rounded-full opacity-0 animate-[slideUp_1s_ease-out_0.6s_forwards]`}></div>
 
                     <p className={`text-xl sm:text-2xl font-light text-slate-300 max-w-3xl leading-relaxed mb-12 opacity-0 animate-[slideUp_1s_ease-out_0.8s_forwards]`}>
-                        Preparing tomorrow's engineers and innovators through uncompromising academic excellence, active industry collaboration, and transformative learning experiences.
+                        At Maharaja Surajmal Institute of Technology (MSIT), we are preparing tomorrow's engineers and innovators through uncompromising academic excellence, active industry collaboration, and transformative learning experiences.
                     </p>
 
                     <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto opacity-0 animate-[slideUp_1s_ease-out_1s_forwards]`}>

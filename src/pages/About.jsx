@@ -1,9 +1,15 @@
 import React from 'react';
 import { BookOpen, Target, Globe, Award, Shield, Cpu, Users } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const About = () => {
     return (
         <main className="min-h-screen bg-slate-50">
+            <SEO 
+                title="About Us" 
+                description="Learn about the legacy of Maharaja Surajmal Institute of Technology (MSIT), its origin, infrastructure, and world-class teaching methodology." 
+                canonicalPath="/about"
+            />
             {/* HER0 - PAGE TITLE */}
             <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-900 border-b border-slate-800">
                 <div className="absolute inset-0 z-0">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Trash2, Plus, AlertCircle, CheckCircle2, Lock } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const AdminDashboard = () => {
     // Authentication State
@@ -154,6 +155,7 @@ const AdminDashboard = () => {
     // -------------------------------------------------------------
     return (
         <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
+            <SEO title="Admin Dashboard" description="Secure administrative portal for MSIT website content management." canonicalPath="/admin" />
             <div className="max-w-4xl mx-auto space-y-8">
 
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">

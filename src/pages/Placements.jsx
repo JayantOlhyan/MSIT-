@@ -1,8 +1,11 @@
 import React from 'react';
 import { Download, FileText, TrendingUp, Building2, Users } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Placements = () => {
+    // ... rest of component
     const placementRecords = [
+    // ...
         { year: "2025", link: "https://www.msit.in/media/uploads/2025/10/09/msit-placement-batch-2025.pdf" },
         { year: "2024", link: "https://www.msit.in/media/uploads/2025/06/02/placement-status-batch-2024.pdf" },
         { year: "2023", link: "https://www.msit.in/media/2024/04/09/batch-2023-placement-status-final.pdf" },
@@ -23,6 +26,11 @@ const Placements = () => {
 
     return (
         <main className="min-h-screen bg-slate-50">
+            <SEO 
+                title="Placements & Careers" 
+                description="Discover the stellar placement records of MSIT. With a 95%+ placement rate and top recruiters like Google, Amazon, and Microsoft, MSIT launches global engineering careers." 
+                canonicalPath="/placements"
+            />
             {/* Extended Hero Header */}
             <div className="bg-slate-900 py-24 text-center text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-slate-900/50 mix-blend-multiply"></div>
@@ -30,7 +38,7 @@ const Placements = () => {
                     <span className="text-emerald-400 font-bold tracking-widest text-sm uppercase mb-4 block">Careers & Placements</span>
                     <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Launching Global Careers</h1>
                     <p className="text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
-                        MSIT has a legacy of producing industry-ready engineers. Explore our decade-long track record of stellar placements across top tech titans.
+                        Maharaja Surajmal Institute of Technology (MSIT) has a legacy of producing industry-ready engineers. Explore our decade-long track record of stellar placements across top tech titans.
                     </p>
                 </div>
             </div>

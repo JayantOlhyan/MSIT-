@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Download, FileText, LayoutTemplate, Layers } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Syllabus = () => {
     const syllabi = [
@@ -40,6 +41,11 @@ const Syllabus = () => {
 
     return (
         <main className="min-h-screen bg-slate-50 py-16">
+            <SEO 
+                title="Curriculum & Syllabus" 
+                description="Download the complete B.Tech syllabus and curriculum schemes for CSE, IT, ECE, and EEE departments at MSIT New Delhi." 
+                canonicalPath="/syllabus"
+            />
             <div className="max-w-6xl mx-auto px-6">
 
                 {/* Header */}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Search } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const SearchPage = () => {
     const location = useLocation();
@@ -16,6 +17,11 @@ const SearchPage = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 py-16">
+            <SEO 
+                title={query ? `Search Results for "${query}"` : "Search"} 
+                description="Search for MSIT academic resources, news, and faculty information." 
+                canonicalPath="/search"
+            />
             <div className="max-w-5xl mx-auto px-4">
                 <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-8 md:p-12 mb-8">
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 flex items-center">

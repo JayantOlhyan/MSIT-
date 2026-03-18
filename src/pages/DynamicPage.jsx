@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ChevronRight, ArrowRight, LayoutDashboard } from 'lucide-react';
 import { pagesData } from '../data/pagesData';
+import SEO from '../components/SEO';
 
 const DynamicPage = () => {
     const { slug } = useParams();
@@ -22,6 +23,11 @@ const DynamicPage = () => {
 
     return (
         <main className="min-h-screen bg-slate-50">
+            <SEO 
+                title={pageData.title} 
+                description={pageData.subtitle} 
+                canonicalPath={`/${slug}`} 
+            />
             {/* HER0 - PAGE TITLE */}
             <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-900 border-b border-slate-800">
                 <div className="absolute inset-0 z-0">
