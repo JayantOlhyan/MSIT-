@@ -1,6 +1,7 @@
 import React from 'react';
-import { BookOpen, Download, FileText, LayoutTemplate, Layers } from 'lucide-react';
+import { BookOpen, Download, FileText, LayoutTemplate, Layers, ExternalLink, ChevronRight } from 'lucide-react';
 import SEO from '../components/SEO';
+import { Link } from 'react-router-dom';
 
 const Syllabus = () => {
     const syllabi = [
@@ -46,10 +47,18 @@ const Syllabus = () => {
                 description="Access official B.Tech syllabi for all departments at Maharaja Surajmal Institute of Technology. Download current course structures and curriculum guidelines." 
                 canonicalPath="/syllabus"
             />
-            <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-6">
+                {/* Breadcrumbs */}
+                <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
+                    <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
+                    <ChevronRight className="w-4 h-4 mx-2" />
+                    <span className="text-slate-500">Academics</span>
+                    <ChevronRight className="w-4 h-4 mx-2" />
+                    <span className="text-blue-400">Syllabus</span>
+                </div>
 
                 {/* Header */}
-                <div className="mb-16">
+                <div className="text-center mb-16 animate-fade-in">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider mb-6">
                         <BookOpen className="w-4 h-4" /> Academic Resources
                     </div>
