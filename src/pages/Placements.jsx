@@ -27,8 +27,8 @@ const Placements = () => {
     return (
         <main className="min-h-screen bg-slate-50">
             <SEO 
-                title="Placements & Careers" 
-                description="Discover the stellar placement records of MSIT. With a 95%+ placement rate and top recruiters like Google, Amazon, and Microsoft, MSIT launches global engineering careers." 
+                title="Placements" 
+                description="MSIT boasts exceptional placement records with students placed at MAANG and top tech firms. Explore our 95% placement rate and top recruiter statistics." 
                 canonicalPath="/placements"
             />
             {/* Extended Hero Header */}
