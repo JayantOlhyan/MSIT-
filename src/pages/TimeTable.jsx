@@ -7,7 +7,7 @@ const TimeTable = () => {
         <main className="min-h-screen bg-slate-50 py-16">
             <SEO 
                 title="Time Table" 
-                description="Check the daily class and laboratory schedules for all engineering branches at Maharaja Surajmal Institute of Technology." 
+                description="View and download current semester class schedules and lab timetables for all departments at Maharaja Surajmal Institute of Technology. Stay organized." 
                 canonicalPath="/timetable"
             />
             <div className="max-w-6xl mx-auto px-6">
@@ -21,7 +21,7 @@ const TimeTable = () => {
                     <span className="text-blue-600 font-bold tracking-widest text-sm uppercase mb-3 block">Daily Schedules</span>
                     <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Time Table</h1>
                     <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
-                        View and download the latest department-wise class and laboratory schedules for the current academic semester.
+                        View and download the latest department-wise class and laboratory schedules for the current academic semester at Maharaja Surajmal Institute of Technology.
                     </p>
                 </div>
 
