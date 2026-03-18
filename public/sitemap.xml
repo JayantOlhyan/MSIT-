@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.msit.in/</loc>
+    <loc>https://msit-website.netlify.app/</loc>
     <lastmod>2026-03-15</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.msit.in/about</loc>
+    <loc>https://msit-website.netlify.app/about</loc>
     <lastmod>2026-03-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.msit.in/cse</loc>
+    <loc>https://msit-website.netlify.app/cse</loc>
     <lastmod>2026-03-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.msit.in/placements</loc>
+    <loc>https://msit-website.netlify.app/placements</loc>
     <lastmod>2026-03-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.msit.in/academic-calendar</loc>
+    <loc>https://msit-website.netlify.app/academic-calendar</loc>
     <lastmod>2026-03-15</lastmod>
     <priority>0.7</priority>
   </url>

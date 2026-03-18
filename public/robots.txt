@@ -1,4 +1,1 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.msit.in/sitemap.xml
+Sitemap: https://msit-website.netlify.app/sitemap.xml
