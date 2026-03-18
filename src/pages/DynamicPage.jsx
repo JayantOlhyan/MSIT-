@@ -25,7 +25,7 @@ const DynamicPage = () => {
         <main className="min-h-screen bg-slate-50">
             <SEO 
                 title={pageData.title} 
-                description={pageData.subtitle} 
+                description={pageData.seo_description || pageData.subtitle} 
                 canonicalPath={`/${slug}`} 
             />
             {/* HER0 - PAGE TITLE */}
