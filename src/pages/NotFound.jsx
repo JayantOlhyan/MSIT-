@@ -1,52 +1,78 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search } from 'lucide-react';
+import { Home, ArrowLeft, Search, GraduationCap, Briefcase, BookOpen } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const NotFound = () => {
     return (
-        <div className="min-h-[80vh] flex items-center justify-center px-6 py-24">
-            <div className="max-w-xl w-full text-center">
-                <div className="mb-8">
-                    <span className="text-9xl font-black text-slate-100 select-none">404</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 -mt-16 md:-mt-20">Page Not Found</h1>
+        <div className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-gradient-to-b from-white to-slate-50">
+            <SEO title="404 - Page Not Found" description="The page you are looking for does not exist on MSIT website." />
+            <div className="max-w-3xl w-full text-center">
+                {/* Visual Header */}
+                <div className="relative mb-12">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none select-none">
+                        <span className="text-[15rem] md:text-[20rem] font-black">404</span>
+                    </div>
+                    <div className="relative z-10">
+                        <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-3xl bg-slate-900 shadow-2xl shadow-slate-900/20 mb-8 transform hover:rotate-12 transition-transform duration-500">
+                            <Search className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                        </div>
+                        <h1 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tight">
+                            Lost in <span className="text-slate-500 font-medium italic">space?</span>
+                        </h1>
+                        <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-lg mx-auto leading-relaxed">
+                            The page you're looking for seems to have vanished. Don't worry, we'll help you find your way back to campus.
+                        </p>
+                    </div>
                 </div>
                 
-                <p className="text-lg text-slate-600 mb-12 leading-relaxed">
-                    Oops! It seems the page you are looking for has been moved, deleted, or doesn't exist. Let's get you back on track.
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
                     <Link 
                         to="/" 
-                        className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-xl font-semibold shadow-lg hover:bg-slate-800 transition-all flex items-center justify-center gap-2"
+                        className="group w-full sm:w-auto px-10 py-4 md:py-5 bg-slate-900 text-white rounded-2xl font-bold shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-slate-900/20 hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
                     >
-                        <Home className="w-5 h-5" />
+                        <Home className="w-5 h-5 group-hover:scale-110 transition-transform" />
                         Back to Home
                     </Link>
                     <button 
                         onClick={() => window.history.back()}
-                        className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border-2 border-slate-100 rounded-xl font-semibold hover:border-slate-200 transition-all flex items-center justify-center gap-2"
+                        className="w-full sm:w-auto px-10 py-4 md:py-5 bg-white text-slate-900 border-2 border-slate-100 rounded-2xl font-bold hover:border-slate-200 hover:bg-slate-50 transition-all flex items-center justify-center gap-3"
                     >
                         <ArrowLeft className="w-5 h-5" />
                         Go Back
                     </button>
                 </div>
 
-                <div className="mt-16 pt-12 border-t border-slate-100">
-                    <p className="text-slate-500 text-sm mb-6 uppercase tracking-widest font-bold">Try searching instead</p>
-                    <form 
-                        action="/search" 
-                        method="GET"
-                        className="relative max-w-md mx-auto"
-                    >
-                        <input
-                            type="search"
-                            name="q"
-                            placeholder="Type to search..."
-                            className="w-full pl-12 pr-6 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-slate-900/5 transition-all text-slate-900 placeholder:text-slate-400"
-                        />
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                    </form>
+                {/* Quick Navigation Guide */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                    <Link to="/about" className="p-6 bg-white rounded-3xl border border-slate-100 hover:border-slate-900/10 hover:shadow-xl hover:shadow-slate-900/5 transition-all group">
+                        <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-slate-900 transition-colors">
+                            <BookOpen className="w-6 h-6 text-blue-600 group-hover:text-white" />
+                        </div>
+                        <h3 className="font-bold text-slate-900 mb-1 font-inter">About MSIT</h3>
+                        <p className="text-sm text-slate-500">Learn about our history and values.</p>
+                    </Link>
+                    <Link to="/admissions" className="p-6 bg-white rounded-3xl border border-slate-100 hover:border-slate-900/10 hover:shadow-xl hover:shadow-slate-900/5 transition-all group">
+                        <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center mb-4 group-hover:bg-slate-900 transition-colors">
+                            <GraduationCap className="w-6 h-6 text-emerald-600 group-hover:text-white" />
+                        </div>
+                        <h3 className="font-bold text-slate-900 mb-1 font-inter">Admissions</h3>
+                        <p className="text-sm text-slate-500">Join MSIT's vibrant community.</p>
+                    </Link>
+                    <Link to="/placements" className="p-6 bg-white rounded-3xl border border-slate-100 hover:border-slate-900/10 hover:shadow-xl hover:shadow-slate-900/5 transition-all group">
+                        <div className="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center mb-4 group-hover:bg-slate-900 transition-colors">
+                            <Briefcase className="w-6 h-6 text-purple-600 group-hover:text-white" />
+                        </div>
+                        <h3 className="font-bold text-slate-900 mb-1 font-inter">Careers</h3>
+                        <p className="text-sm text-slate-500">Placement cell and opportunities.</p>
+                    </Link>
+                </div>
+
+                <div className="mt-20 opacity-50">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                        Error Code: 404_PAGE_NOT_FOUND
+                    </p>
                 </div>
             </div>
         </div>

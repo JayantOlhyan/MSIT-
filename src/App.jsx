@@ -14,6 +14,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import DynamicPage from './pages/DynamicPage';
 
 import NotFound from './pages/NotFound';
+import ServerError from './pages/ServerError';
 
 const App = () => {
     return (
@@ -30,6 +31,7 @@ const App = () => {
                     <Route path="/timetable" element={<TimeTable />} />
                     <Route path="/brochure" element={<Brochure />} />
                     <Route path="/admin" element={<AdminDashboard />} />
+                    <Route path="/500" element={<ServerError />} />
                     <Route path="/:slug" element={<DynamicPage />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
