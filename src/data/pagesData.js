@@ -2,7 +2,8 @@ export const pagesData = {
     // ---------------- ABOUT SECTION ----------------
     "vision-mission": {
         title: "Vision & Mission",
-        subtitle: "Shaping the future of technology and society.",
+        subtitle: "Shaping the future of technology and society at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Discover the vision and mission of Maharaja Surajmal Institute of Technology. Learn how we shape the future of engineering with excellence and ethical values.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -19,7 +20,8 @@ export const pagesData = {
     },
     "history": {
         title: "History & Legacy",
-        subtitle: "Over two decades of academic excellence.",
+        subtitle: "Over two decades of academic excellence at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Explore the legacy of Maharaja Surajmal Institute of Technology since 2001. Learn about our foundation under the Surajmal Memorial Education Society in Delhi.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -37,7 +39,8 @@ export const pagesData = {
     },
     "administration": {
         title: "Administration",
-        subtitle: "Guided by visionaries.",
+        subtitle: "Guided by visionaries at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Meet the leadership team at Maharaja Surajmal Institute of Technology. Learn about our administrative structure and commitment to high academic standards.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -53,7 +56,8 @@ export const pagesData = {
     },
     "govern": {
         title: "Governing Body",
-        subtitle: "The visionary leadership driving MSIT.",
+        subtitle: "The visionary leadership driving Maharaja Surajmal Institute of Technology.",
+        seo_description: "Discover the esteemed assembly of educationists and industry experts governing Maharaja Surajmal Institute of Technology to ensure strategic excellence.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -69,7 +73,8 @@ export const pagesData = {
     },
     "fromdesk": {
         title: "From The Desk",
-        subtitle: "Messages from our honorable leadership.",
+        subtitle: "Messages from the honorable leadership of Maharaja Surajmal Institute of Technology.",
+        seo_description: "Read messages from the leadership of Maharaja Surajmal Institute of Technology. Learn about our commitment to quality technical education and student success.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -85,7 +90,8 @@ export const pagesData = {
     },
     "facilities": {
         title: "Campus & Facilities",
-        subtitle: "A modern ecosystem for focused learning.",
+        subtitle: "A modern ecosystem for focused learning at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Explore the 8-acre eco-friendly campus of Maharaja Surajmal Institute of Technology. Discover our advanced labs, library, and modern hostel facilities in Delhi.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -103,7 +109,8 @@ export const pagesData = {
     },
     "smes": {
         title: "Surajmal Memorial Education Society",
-        subtitle: "The foundation of our institution.",
+        subtitle: "The foundation of Maharaja Surajmal Institute of Technology.",
+        seo_description: "Learn about the Surajmal Memorial Education Society (SMES), the philanthropic force behind Maharaja Surajmal Institute of Technology and its quality mission.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -121,7 +128,8 @@ export const pagesData = {
     // ---------------- ADMISSION SECTION ----------------
     "brochure": {
         title: "Information Brochure",
-        subtitle: "Everything you need to know about joining MSIT.",
+        subtitle: "Everything you need to know about joining Maharaja Surajmal Institute of Technology.",
+        seo_description: "Download the official info brochure of Maharaja Surajmal Institute of Technology. Get details on courses, placements, faculty, and vibrant campus life at MSIT.",
         category: "Admissions",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -137,7 +145,8 @@ export const pagesData = {
     },
     "online-fee": {
         title: "Online Fee Payment",
-        subtitle: "Secure, instant, and transparent fee portal.",
+        subtitle: "Secure, instant, and transparent fee portal for Maharaja Surajmal Institute of Technology.",
+        seo_description: "Easily pay academic fees online at Maharaja Surajmal Institute of Technology. Our secure portal supports UPI, Net Banking, and Cards for tuition and hostel fees.",
         category: "Admissions",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -153,7 +162,8 @@ export const pagesData = {
     },
     "scholarships": {
         title: "Scholarships & Financial Aid",
-        subtitle: "Merit recognized. Potential supported.",
+        subtitle: "Merit recognized and potential supported at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Explore scholarship opportunities at Maharaja Surajmal Institute of Technology. We offer merit-based and financial aid schemes to support deserving students.",
         category: "Admissions",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -169,7 +179,8 @@ export const pagesData = {
     },
     "mandatory-disclosures": {
         title: "Mandatory Disclosures",
-        subtitle: "Commitment to absolute transparency.",
+        subtitle: "Commitment to absolute transparency at Maharaja Surajmal Institute of Technology.",
+        seo_description: "View the official mandatory disclosures of Maharaja Surajmal Institute of Technology. Access AICTE approval, NBA accreditation, and audit reports for MSIT.",
         category: "Admissions",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -187,7 +198,8 @@ export const pagesData = {
     // ---------------- ACADEMICS SECTION (IT, ECE, EEE, Applied) ----------------
     "it": {
         title: "Information Technology (IT)",
-        subtitle: "Engineering the digital backbone of tomorrow.",
+        subtitle: "Engineering the digital backbone of tomorrow at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Discover the Information Technology (IT) department at Maharaja Surajmal Institute of Technology. Learn about our focus on cloud computing and data analytics.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -203,7 +215,8 @@ export const pagesData = {
     },
     "ece": {
         title: "Electronics & Communication (ECE)",
-        subtitle: "Pioneering hardware and communication systems.",
+        subtitle: "Pioneering hardware and communication at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Join the B.Tech ECE program at Maharaja Surajmal Institute of Technology. Explore our advanced labs for VLSI design, IoT, and satellite communication systems.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -219,7 +232,8 @@ export const pagesData = {
     },
     "eee": {
         title: "Electrical & Electronics (EEE)",
-        subtitle: "Powering a sustainable technological future.",
+        subtitle: "Powering a sustainable technological future at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Explore the Electrical & Electronics (EEE) branch at Maharaja Surajmal Institute of Technology. Focus on renewable energy, robotics, and automation excellence.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -235,7 +249,8 @@ export const pagesData = {
     },
     "ap": {
         title: "Applied Sciences",
-        subtitle: "The mathematical and scientific bedrock of engineering.",
+        subtitle: "The mathematical and scientific bedrock at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Learn about the Applied Sciences department at Maharaja Surajmal Institute of Technology. We provide the foundational physics and math for B.Tech students.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -251,7 +266,8 @@ export const pagesData = {
     },
     "academic-calendar": {
         title: "Academic Calendar",
-        subtitle: "Plan your semester with precision.",
+        subtitle: "Plan your semester with precision at Maharaja Surajmal Institute of Technology.",
+        seo_description: "View the official academic calendar for Maharaja Surajmal Institute of Technology. Stay updated on semester dates, exams, and holidays for the 2026-27 session.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -267,7 +283,8 @@ export const pagesData = {
     },
     "timetable": {
         title: "Time Table & Syllabus",
-        subtitle: "Curriculum structure and daily schedules.",
+        subtitle: "Curriculum structure and daily schedules for Maharaja Surajmal Institute of Technology.",
+        seo_description: "Access the latest class timetables and B.Tech syllabus at Maharaja Surajmal Institute of Technology. Get detailed course structure and laboratory schedules.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -283,7 +300,8 @@ export const pagesData = {
     },
     "research": {
         title: "Research & Innovation",
-        subtitle: "Pushing the boundaries of human knowledge.",
+        subtitle: "Pushing the boundaries of knowledge at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Explore research and innovation at Maharaja Surajmal Institute of Technology. Learn about our student publications, patents, and cutting-edge labs in AI.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -301,7 +319,8 @@ export const pagesData = {
     // ---------------- LIFE AT MSIT SECTION ----------------
     "society": {
         title: "Student Societies",
-        subtitle: "The vibrant heartbeat of MSIT — Tech, Culture, and Social Innovation.",
+        subtitle: "Technical, Cultural, and Social Innovation at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Explore the vibrant student societies of Maharaja Surajmal Institute of Technology. Join IEEE, GDSC, Mutants, and more for a holistic campus experience.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -392,7 +411,8 @@ export const pagesData = {
     },
     "events": {
         title: "Events & Festivals",
-        subtitle: "The pulse of the campus.",
+        subtitle: "The pulse of the campus at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Experience the energy of Maharaja Surajmal Institute of Technology's annual fests. Learn about Avensis and Genesis, our flagship tech and cultural celebrations.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -408,7 +428,8 @@ export const pagesData = {
     },
     "antiragging": {
         title: "Anti-Ragging Committee",
-        subtitle: "Zero tolerance. Absolute safety.",
+        subtitle: "Zero tolerance and absolute safety at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Maharaja Surajmal Institute of Technology ensures a safe, ragging-free campus. Our dedicated committee and squads maintain strict zero-tolerance policies.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -424,7 +445,8 @@ export const pagesData = {
     },
     "posh": {
         title: "Internal Complaint Committee (POSH)",
-        subtitle: "A secure environment for all.",
+        subtitle: "A secure environment for all at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Maharaja Surajmal Institute of Technology's ICC (POSH) cell ensures a safe academic atmosphere for all. Access support and gender equity guidelines online.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -440,7 +462,8 @@ export const pagesData = {
     },
     "disaster": {
         title: "Disaster Management",
-        subtitle: "Preparedness saves lives.",
+        subtitle: "Preparedness saves lives at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Learn about disaster preparedness at Maharaja Surajmal Institute of Technology. We conduct regular safety drills and maintain high-standard emergency protocols.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -456,7 +479,8 @@ export const pagesData = {
     },
     "discipline": {
         title: "Discipline Committee",
-        subtitle: "Fostering professionalism and integrity.",
+        subtitle: "Fostering professionalism and integrity at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Understanding the code of conduct at Maharaja Surajmal Institute of Technology. Our discipline committee ensures a professional and focused learning environment.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -474,7 +498,8 @@ export const pagesData = {
     // ---------------- PLACEMENTS SECTION ----------------
     "placements": {
         title: "Careers & Placements",
-        subtitle: "Launching careers at top global tech firms.",
+        subtitle: "Launching careers at top global tech firms from Maharaja Surajmal Institute of Technology.",
+        seo_description: "Experience record-breaking placements at Maharaja Surajmal Institute of Technology. Our graduates secure top roles at Google, Microsoft, Amazon, and MAANG.",
         category: "Placements",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -490,7 +515,8 @@ export const pagesData = {
     },
     "internship-cell": {
         title: "Internship Cell",
-        subtitle: "Bridging the gap between academia and industry.",
+        subtitle: "Bridging academia and industry at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Get industrial exposure through the Internship Cell at Maharaja Surajmal Institute of Technology. Gain real-world experience and Pre-Placement Offers (PPOs).",
         category: "Placements",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -508,7 +534,8 @@ export const pagesData = {
     // Quick Links Additions
     "student-portal": {
         title: "Student Portal (ERP)",
-        subtitle: "Your digital campus.",
+        subtitle: "Your digital campus at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Access the MSIT ERP portal. Stay connected with your campus at Maharaja Surajmal Institute of Technology for attendance, marks, and official notices.",
         category: "Quick Links",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -519,7 +546,8 @@ export const pagesData = {
     },
     "alumni-network": {
         title: "Alumni Network",
-        subtitle: "A global community of innovators.",
+        subtitle: "A global community of innovators from Maharaja Surajmal Institute of Technology.",
+        seo_description: "Connect with the global alumni network of Maharaja Surajmal Institute of Technology. Network with 15,000+ professionals and leaders across the world.",
         category: "Quick Links",
         heroImage: "/campus-hero.jpg",
         content: `
@@ -530,7 +558,8 @@ export const pagesData = {
     },
     "society-ieee": {
         title: "IEEE MSIT",
-        subtitle: "Advancing technology for humanity since 2009.",
+        subtitle: "Advancing technology for humanity at Maharaja Surajmal Institute of Technology.",
+        seo_description: "Learn about IEEE MSIT, the premier technical society of Maharaja Surajmal Institute of Technology. Explore workshops, hackathons, and global tech recognition.",
         category: "Student Societies",
         heroImage: "/campus-hero.jpg",
         content: `
