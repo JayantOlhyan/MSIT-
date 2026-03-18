@@ -10,7 +10,10 @@ const ServerError = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-gradient-to-b from-white to-red-50/30">
-            <SEO title="500 - Server Error" description="Something went wrong on our end. We're working to fix it." />
+            <SEO 
+                title="500 Server Error" 
+                description="The Maharaja Surajmal Institute of Technology server encountered an internal error. We are working to resolve it. Contact support if the issue persists." 
+            />
             <div className="max-w-3xl w-full text-center">
                 {/* Visual Header */}
                 <div className="relative mb-12">
@@ -25,7 +28,7 @@ const ServerError = () => {
                             Something went <span className="text-red-500 font-medium italic">wrong.</span>
                         </h1>
                         <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-lg mx-auto leading-relaxed">
-                            Our servers are having a bit of a moment. We're already on it, but feel free to try again or reach out to us.
+                            Our servers at Maharaja Surajmal Institute of Technology are having a bit of a moment. We're already on it, but feel free to try again or reach out to us.
                         </p>
                     </div>
                 </div>
