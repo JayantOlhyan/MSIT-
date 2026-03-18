@@ -19,14 +19,14 @@ const SearchPage = () => {
         <div className="min-h-screen bg-slate-50 py-16">
             <SEO 
                 title={query ? `Search Results for "${query}"` : "Search"} 
-                description="Search for MSIT academic resources, news, and faculty information." 
+                description="Search for courses, departments, faculty, and academic resources at Maharaja Surajmal Institute of Technology. Find the information you need quickly today." 
                 canonicalPath="/search"
             />
             <div className="max-w-5xl mx-auto px-4">
                 <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-8 md:p-12 mb-8">
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 flex items-center">
                         <Search className="w-8 h-8 mr-4 text-blue-600" />
-                        Search Results
+                        Search Results – <span className="text-blue-600 ml-2">MSIT.</span>
                     </h1>
 
                     {query ? (
@@ -70,7 +70,7 @@ const SearchPage = () => {
                                 <Search className="w-8 h-8 text-slate-400" />
                             </div>
                             <h2 className="text-2xl font-bold text-slate-900 mb-2">No Search Query</h2>
-                            <p className="text-slate-500">Please enter a search term in the header search bar to find what you're looking for.</p>
+                            <p className="text-slate-500">Please enter a search term in the header search bar to find what you're looking for at Maharaja Surajmal Institute of Technology.</p>
                         </div>
                     )}
                 </div>
