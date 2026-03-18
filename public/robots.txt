@@ -1,1 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
 Sitemap: https://msit-website.netlify.app/sitemap.xml

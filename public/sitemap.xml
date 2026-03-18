@@ -2,27 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://msit-website.netlify.app/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://msit-website.netlify.app/about</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://msit-website.netlify.app/cse</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://msit-website.netlify.app/placements</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://msit-website.netlify.app/academic-calendar</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msit-website.netlify.app/syllabus</loc>
+    <lastmod>2026-03-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msit-website.netlify.app/timetable</loc>
+    <lastmod>2026-03-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msit-website.netlify.app/brochure</loc>
+    <lastmod>2026-03-18</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
