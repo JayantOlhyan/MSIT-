@@ -17,7 +17,7 @@ const AcademicCalendar = () => {
         <main className="min-h-screen bg-slate-50 py-16">
             <SEO 
                 title="Academic Calendar" 
-                description="View the official MSIT academic calendar for 2024-2026, including semester schedules, examination dates, and holidays." 
+                description="Stay updated with the MSIT academic calendar. Find critical dates for semester starts, examinations, and holidays at Maharaja Surajmal Institute of Technology." 
                 canonicalPath="/academic-calendar"
             />
             <div className="max-w-4xl mx-auto px-6">
