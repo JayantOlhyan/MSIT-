@@ -6,7 +6,10 @@ import SEO from '../components/SEO';
 const NotFound = () => {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-gradient-to-b from-white to-slate-50">
-            <SEO title="404 - Page Not Found" description="The page you are looking for does not exist on MSIT website." />
+            <SEO 
+                title="404 Not Found" 
+                description="The page you are looking for at Maharaja Surajmal Institute of Technology could not be found. Please return to our homepage or use the search bar to find info." 
+            />
             <div className="max-w-3xl w-full text-center">
                 {/* Visual Header */}
                 <div className="relative mb-12">
@@ -21,7 +24,7 @@ const NotFound = () => {
                             Lost in <span className="text-slate-500 font-medium italic">space?</span>
                         </h1>
                         <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-lg mx-auto leading-relaxed">
-                            The page you're looking for seems to have vanished. Don't worry, we'll help you find your way back to campus.
+                            The page you're looking for at Maharaja Surajmal Institute of Technology seems to have vanished. Don't worry, we'll help you find your way back to campus.
                         </p>
                     </div>
                 </div>
