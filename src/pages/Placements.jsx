@@ -28,7 +28,7 @@ const Placements = () => {
         <main className="min-h-screen bg-slate-50">
             <SEO 
                 title="Placements" 
-                description="MSIT boasts exceptional placement records with students placed at MAANG and top tech firms. Explore our 95% placement rate and top recruiter statistics." 
+                description="Explore stellar placement records at Maharaja Surajmal Institute of Technology. Our graduates secure top roles at Google, Microsoft, and Amazon with 95%+ success." 
                 canonicalPath="/placements"
             />
             {/* Extended Hero Header */}
@@ -36,9 +36,10 @@ const Placements = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-slate-900/50 mix-blend-multiply"></div>
                 <div className="relative z-10 max-w-4xl mx-auto px-6">
                     <span className="text-emerald-400 font-bold tracking-widest text-sm uppercase mb-4 block">Careers & Placements</span>
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Launching Global Careers</h1>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Careers & Placements</h1>
                     <p className="text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
-                        Maharaja Surajmal Institute of Technology (MSIT) has a legacy of producing industry-ready engineers. Explore our decade-long track record of stellar placements across top tech titans.
+                        Maharaja Surajmal Institute of Technology (MSIT) has a legacy of producing industry-ready engineers.
+ Explore our decade-long track record of stellar placements across top tech titans.
                     </p>
                 </div>
             </div>
