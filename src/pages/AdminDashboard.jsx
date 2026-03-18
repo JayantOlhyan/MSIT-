@@ -105,7 +105,7 @@ const AdminDashboard = () => {
                                 <Lock className="w-8 h-8 text-blue-600" />
                             </div>
                         </div>
-                        <h2 className="text-2xl font-bold text-center text-slate-900 mb-2">Admin Access</h2>
+                        <h1 className="text-2xl font-bold text-center text-slate-900 mb-2">Admin Access</h1>
                         <p className="text-center text-slate-500 mb-8 text-sm">Sign in to manage MSIT website content</p>
 
                         {loginError && (
@@ -155,7 +155,7 @@ const AdminDashboard = () => {
     // -------------------------------------------------------------
     return (
         <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
-            <SEO title="Admin Dashboard" description="Secure administrative portal for MSIT website content management." canonicalPath="/admin" />
+            <SEO title="Admin Dashboard" description="Access the MSIT secure administrative dashboard to manage website content, news, events, and campus stories for Maharaja Surajmal Institute of Technology." canonicalPath="/admin" />
             <div className="max-w-4xl mx-auto space-y-8">
 
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
