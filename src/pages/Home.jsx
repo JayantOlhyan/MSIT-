@@ -143,7 +143,7 @@ const Home = () => {
         <main>
             <SEO 
                 title="Home" 
-                description="Maharaja Surajmal Institute of Technology (MSIT) is a premier engineering college in Delhi, NAAC 'A' Grade and NBA accredited, offering world-class B.Tech programs." 
+                description="Maharaja Surajmal Institute of Technology (MSIT) is a premier engineering college in Delhi offering top-tier B.Tech programs, placements, and innovation." 
             />
             {/* HERO SECTION */}
             <section ref={heroRef} className="relative w-full h-[90vh] min-h-[700px] flex items-center bg-slate-900 overflow-hidden">
