@@ -6,8 +6,8 @@ const CSEDepartment = () => {
     return (
         <main className="min-h-screen bg-slate-50">
             <SEO 
-                title="Computer Science & Engineering" 
-                description="Explore the Computer Science & Engineering (CSE) department at MSIT, featuring NBA accredited programs and state-of-the-art laboratories." 
+                title="CSE Department" 
+                description="The Computer Science and Engineering department at MSIT offers advanced curriculum in AI, software engineering, and systems for aspiring tech leaders." 
                 canonicalPath="/cse"
             />
             {/* HER0 - PAGE TITLE */}
