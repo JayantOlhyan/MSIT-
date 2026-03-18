@@ -42,8 +42,8 @@ const Syllabus = () => {
     return (
         <main className="min-h-screen bg-slate-50 py-16">
             <SEO 
-                title="Curriculum & Syllabus" 
-                description="Download the complete B.Tech syllabus and curriculum schemes for CSE, IT, ECE, and EEE departments at MSIT New Delhi." 
+                title="Syllabus" 
+                description="Access official B.Tech syllabi for all departments at Maharaja Surajmal Institute of Technology. Download current course structures and curriculum guidelines." 
                 canonicalPath="/syllabus"
             />
             <div className="max-w-6xl mx-auto px-6">
@@ -55,7 +55,7 @@ const Syllabus = () => {
                     </div>
                     <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Curriculum & Syllabus</h1>
                     <p className="text-xl text-slate-600 font-light max-w-3xl leading-relaxed">
-                        Access detailed, up-to-date syllabi for all engineering branches and academic years as prescribed by Guru Gobind Singh Indraprastha University.
+                        Access detailed, up-to-date syllabi for all engineering branches at Maharaja Surajmal Institute of Technology as prescribed by GGSIP University.
                     </p>
                 </div>
 
