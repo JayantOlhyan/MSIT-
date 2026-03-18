@@ -14,8 +14,8 @@ const Brochure = () => {
     return (
         <main className="min-h-screen bg-slate-50 py-16">
             <SEO 
-                title="Information Bulletins" 
-                description="Download the official MSIT information brochures and bulletins. Explore academic programs, faculty, and campus infrastructure." 
+                title="Information Brochure" 
+                description="Download the official MSIT admission brochure for the 2026-27 session. Get detailed information on courses, infrastructure, and Maharaja Surajmal Institute." 
                 canonicalPath="/brochure"
             />
             <div className="max-w-4xl mx-auto px-6">
@@ -28,7 +28,7 @@ const Brochure = () => {
                     </div>
                     <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Information Bulletins</h1>
                     <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
-                        Download the official MSIT Information Brochures to explore our academic programs, campus facilities, faculty details, and admission guidelines.
+                        Download the official MSIT Information Brochures for Maharaja Surajmal Institute of Technology to explore our academic programs, faculty details, and guidelines.
                     </p>
                 </div>
 
