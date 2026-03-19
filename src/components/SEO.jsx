@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, canonicalPath = "" }) => {
-    const siteTitle = "MSIT – Maharaja Surajmal Institute of Technology";
-    const fullTitle = title ? `${title} – MSIT` : siteTitle;
+    const siteTitle = "MSIT Delhi – Maharaja Surajmal Institute of Technology";
+    const fullTitle = (title && title !== "Home") ? `${title} | MSIT Delhi` : siteTitle;
     const baseUrl = "https://msit-website.netlify.app";
     const canonicalUrl = `${baseUrl}${canonicalPath}`;
 
