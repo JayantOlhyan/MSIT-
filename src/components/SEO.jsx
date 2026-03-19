@@ -12,6 +12,7 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
             {/* Standard metadata tags */}
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
+            <meta name="author" content="Jayant Olhyan" />
             <link rel="canonical" href={canonicalUrl} />
             <link rel="alternate" hreflang="en-IN" href={canonicalUrl} />
             <link rel="alternate" hreflang="x-default" href={canonicalUrl} />

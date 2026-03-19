@@ -122,7 +122,7 @@ const Footer = () => {
                         <Link to="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
                         <Link to="/admin" className="hover:text-white transition-colors font-medium">Admin Portal</Link>
                     </div>
-                    <div className="flex items-center">Made with <Heart className="w-3 h-3 mx-1 text-red-500" /> in Delhi</div>
+                    <div className="flex items-center">Developed with <Heart className="w-3 h-3 mx-1 text-red-500" /> by <span className="text-white font-medium ml-1">Jayant Olhyan</span> in Delhi</div>
                 </div>
             </div>
         </footer>
