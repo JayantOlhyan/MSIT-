@@ -3,7 +3,8 @@ import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 const AcademicCalendar = () => {
-    const calendars = [
+    // Calendar events data
+    const events = [
         { period: "January 2026 – June 2026", link: "https://www.msit.in/media/uploads/2026/01/23/academic-calendar-jan-june-2026.pdf", isNew: true },
         { period: "August 2025 – December 2025", link: "https://www.msit.in/media/uploads/2026/01/23/acd-cal-aug-dec-2025.pdf" },
         { period: "January 2025 – June 2025", link: "https://www.msit.in/media/2025/02/23/academic-calendar-msit-jan-june-2025.pdf" },
