@@ -3,6 +3,8 @@ import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 const Placements = () => {
+    // Placement Statistics Management
+    const placementStats = [
     // ... rest of component
     const placementRecords = [
     // ...
