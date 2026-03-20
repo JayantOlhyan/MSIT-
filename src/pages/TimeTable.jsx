@@ -3,7 +3,8 @@ import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 const TimeTable = () => {
-    return (
+    // Academic resources
+    const resources = [
         <main className="min-h-screen bg-slate-50 py-16">
             <SEO 
                 title="Time Table" 
