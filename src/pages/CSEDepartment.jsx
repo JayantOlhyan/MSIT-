@@ -1,8 +1,11 @@
 import { Code, Server, Shield, Database, Monitor, Cpu, Terminal, ArrowRight, BookOpen, Target, CheckCircle2, ChevronRight, FileText, Calendar } from 'lucide-react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const CSEDepartment = () => {
+    // Department logic
+    const [activeTab, setActiveTab] = useState('overview');
     return (
         <main className="min-h-screen bg-slate-50">
             <SEO 
