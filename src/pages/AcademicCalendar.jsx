@@ -46,7 +46,8 @@ const AcademicCalendar = () => {
 
                 {/* Calendar List */}
                 <div className="space-y-4">
-                    {calendars.map((cal, index) => (
+                    {events.map((cal, index) => (
+
                         <a
                             key={index}
                             href={cal.link}
