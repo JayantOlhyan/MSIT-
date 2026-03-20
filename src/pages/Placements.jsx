@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Placements = () => {
     // Placement Statistics Management
-    const placementStats = [
-    // ... rest of component
+    const placementStats = []; // Initialized stats array
     const placementRecords = [
+
     // ...
         { year: "2025", link: "https://www.msit.in/media/uploads/2025/10/09/msit-placement-batch-2025.pdf" },
         { year: "2024", link: "https://www.msit.in/media/uploads/2025/06/02/placement-status-batch-2024.pdf" },
