@@ -73,7 +73,35 @@ const Home = () => {
         }
     }, []);
 
+    const [currentHighlight, setCurrentHighlight] = useState(0);
+
+    const highlights = [
+        {
+            image: "/campus-lab.png",
+            quote: "The facilities here rival those of top Silicon Valley tech companies.",
+            source: "TechCrunch University Review"
+        },
+        {
+            image: "/campus-library.png",
+            quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.",
+            source: "MIT Technology Review"
+        },
+        {
+            image: "/campus-excellence.png",
+            quote: "A breeding ground for the next generation of global technology leaders.",
+            source: "Forbes Education"
+        }
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentHighlight((prev) => (prev + 1) % highlights.length);
+        }, 6000);
+        return () => clearInterval(timer);
+    }, []);
+
     const [touchStartX, setTouchStartX] = useState(null);
+
 
     const [touchEndX, setTouchEndX] = useState(null);
 
@@ -337,17 +365,41 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="relative h-[600px] rounded-2xl overflow-hidden group">
-                            <div className="absolute inset-0 bg-slate-800 transition-transform duration-700 group-hover:scale-105" style={{
-                                backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzEwMjg1MyIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZTJhNDkiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnKSIgLz48L3N2Zz4=')"
-                            }}></div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
-                            <div className="absolute bottom-8 left-8 right-8">
-                                <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
-                                    <div className="text-2xl font-light text-white mb-2">"The facilities here rival those of top Silicon Valley tech companies."</div>
-                                    <div className="text-sm font-medium text-slate-300">— TechCrunch University Review</div>
+                            {highlights.map((highlight, idx) => (
+                                <div
+                                    key={idx}
+                                    className={`absolute inset-0 transition-all duration-1000 ease-in-out transform ${
+                                        idx === currentHighlight ? 'opacity-100 scale-100' : 'opacity-0 scale-110 pointer-events-none'
+                                    }`}
+                                >
+                                    <div 
+                                        className="absolute inset-0 bg-slate-800 bg-cover bg-center transition-transform duration-[10s] ease-linear" 
+                                        style={{ backgroundImage: `url('${highlight.image}')`, transform: idx === currentHighlight ? 'scale(1.1)' : 'scale(1)' }}
+                                    ></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80"></div>
+                                    
+                                    <div className="absolute bottom-12 left-8 right-8 animate-slide-up">
+                                        <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-2xl">
+                                            <div className="text-2xl md:text-3xl font-light text-white mb-4 leading-relaxed">"{highlight.quote}"</div>
+                                            <div className="text-sm font-semibold tracking-widest text-blue-400 uppercase">— {highlight.source}</div>
+                                        </div>
+                                    </div>
                                 </div>
+                            ))}
+
+                            {/* Carousel Navigation Dots */}
+                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                                {highlights.map((_, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => setCurrentHighlight(i)}
+                                        className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === currentHighlight ? 'bg-white w-6' : 'bg-white/30 hover:bg-white/50'}`}
+                                        aria-label={`Go to slide ${i + 1}`}
+                                    />
+                                ))}
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
