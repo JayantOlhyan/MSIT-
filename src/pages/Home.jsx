@@ -74,31 +74,30 @@ const Home = () => {
     }, []);
 
     const [currentHighlight, setCurrentHighlight] = useState(0);
-
-    const highlights = [
-        {
-            image: "/campus-lab.png",
-            quote: "The facilities here rival those of top Silicon Valley tech companies.",
-            source: "TechCrunch University Review"
-        },
-        {
-            image: "/campus-library.png",
-            quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.",
-            source: "MIT Technology Review"
-        },
-        {
-            image: "/campus-excellence.png",
-            quote: "A breeding ground for the next generation of global technology leaders.",
-            source: "Forbes Education"
-        }
-    ];
+    const [highlights, setHighlights] = useState([]);
 
     useEffect(() => {
+        const storedHighlights = localStorage.getItem('msit_highlights');
+        if (storedHighlights) {
+            setHighlights(JSON.parse(storedHighlights));
+        } else {
+            const defaultHighlights = [
+                { id: 1, image: "/campus-lab.png", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
+                { id: 2, image: "/campus-library.png", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
+                { id: 3, image: "/campus-excellence.png", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
+            ];
+            setHighlights(defaultHighlights);
+        }
+    }, []);
+
+    useEffect(() => {
+        if (highlights.length === 0) return;
         const timer = setInterval(() => {
             setCurrentHighlight((prev) => (prev + 1) % highlights.length);
         }, 6000);
         return () => clearInterval(timer);
-    }, []);
+    }, [highlights]);
+
 
     const [touchStartX, setTouchStartX] = useState(null);
 

@@ -24,6 +24,13 @@ const AdminDashboard = () => {
     const [tQuote, setTQuote] = useState('');
     const [tCompany, setTCompany] = useState('');
     const [tImage, setTImage] = useState('');
+
+    // Highlights State
+    const [highlights, setHighlights] = useState([]);
+    const [hQuote, setHQuote] = useState('');
+    const [hSource, setHSource] = useState('');
+    const [hImage, setHImage] = useState('');
+
     
     const [status, setStatus] = useState(null);
 
@@ -58,7 +65,22 @@ const AdminDashboard = () => {
             setTestimonials(defaultTestimonials);
             localStorage.setItem('msit_testimonials', JSON.stringify(defaultTestimonials));
         }
+
+        // Load highlights from storage
+        const storedHighlights = localStorage.getItem('msit_highlights');
+        if (storedHighlights) {
+            setHighlights(JSON.parse(storedHighlights));
+        } else {
+            const defaultHighlights = [
+                { id: 1, image: "/campus-lab.png", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
+                { id: 2, image: "/campus-library.png", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
+                { id: 3, image: "/campus-excellence.png", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
+            ];
+            setHighlights(defaultHighlights);
+            localStorage.setItem('msit_highlights', JSON.stringify(defaultHighlights));
+        }
     }, []);
+
 
 
     const handleLogin = (e) => {
@@ -155,6 +177,40 @@ const AdminDashboard = () => {
         setStatus({ type: 'success', message: 'Testimonial removed.' });
         setTimeout(() => setStatus(null), 3000);
     };
+
+    const saveHighlights = (newHighlights) => {
+        setHighlights(newHighlights);
+        localStorage.setItem('msit_highlights', JSON.stringify(newHighlights));
+    };
+
+    const handleAddHighlight = (e) => {
+        e.preventDefault();
+
+        const newHighlight = {
+            id: Date.now(),
+            quote: hQuote,
+            source: hSource,
+            image: hImage || "/campus-lab.png"
+        };
+
+        const updatedHighlights = [newHighlight, ...highlights];
+        saveHighlights(updatedHighlights);
+
+        // Reset form
+        setHQuote('');
+        setHSource('');
+        setHImage('');
+        setStatus({ type: 'success', message: 'Highlight added successfully!' });
+        setTimeout(() => setStatus(null), 3000);
+    };
+
+    const handleDeleteHighlight = (id) => {
+        const updatedHighlights = highlights.filter(h => h.id !== id);
+        saveHighlights(updatedHighlights);
+        setStatus({ type: 'success', message: 'Highlight removed.' });
+        setTimeout(() => setStatus(null), 3000);
+    };
+
 
 
     // -------------------------------------------------------------
@@ -458,6 +514,89 @@ const AdminDashboard = () => {
                         )}
                     </div>
                 </div>
+
+                {/* HIGHLIGHTS MANAGER */}
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                    <div className="border-b border-slate-100 pb-8 mb-8">
+                        <h2 className="text-3xl font-bold text-slate-900 mb-2">Highlights Manager</h2>
+                        <p className="text-slate-500">Manage the "MSIT Difference" carousel slides, quotes, and background images.</p>
+                    </div>
+
+                    <form onSubmit={handleAddHighlight} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
+                        <h3 className="text-xl font-semibold text-slate-800 flex items-center">
+                            <Plus className="w-5 h-5 mr-2 text-blue-600" /> Add New Slide
+                        </h3>
+
+                        <div className="grid grid-cols-1 gap-6">
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Source Name</label>
+                                <input
+                                    type="text"
+                                    placeholder="e.g. MIT Technology Review"
+                                    required
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={hSource}
+                                    onChange={(e) => setHSource(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Background Image URL</label>
+                                <input
+                                    type="text"
+                                    placeholder="e.g. /campus-lab.png or https://..."
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={hImage}
+                                    onChange={(e) => setHImage(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Impactful Quote</label>
+                                <textarea
+                                    placeholder="Enter the highlight quote here..."
+                                    required
+                                    rows="3"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={hQuote}
+                                    onChange={(e) => setHQuote(e.target.value)}
+                                />
+                            </div>
+                        </div>
+
+                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
+                            Add Slide to Carousel
+                        </button>
+                    </form>
+
+                    <div className="space-y-4">
+                        <h3 className="text-lg font-semibold text-slate-800 mb-4 border-b border-slate-100 pb-2">Manage Current Slides</h3>
+                        {highlights.length === 0 ? (
+                            <p className="text-slate-500 italic">No highlights found.</p>
+                        ) : (
+                            highlights.map(h => (
+                                <div key={h.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <div className="flex items-center gap-4 flex-grow mb-4 sm:mb-0">
+                                        <div className="w-20 h-12 rounded-lg overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
+                                            <img src={h.image} alt="Highlight" className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className="min-w-0">
+                                            <h4 className="text-slate-900 font-bold truncate">{h.source}</h4>
+                                            <p className="text-sm text-slate-600 truncate max-w-md italic">"{h.quote}"</p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={() => handleDeleteHighlight(h.id)}
+                                        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors flex items-center shrink-0"
+                                    >
+                                        <Trash2 className="w-5 h-5" />
+                                    </button>
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
+
 
 
                 <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-yellow-800 text-sm">
