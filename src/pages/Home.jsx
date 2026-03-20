@@ -73,6 +73,7 @@ const Home = () => {
         }
     }, []);
 
+    // Campus Highlights state 
     const [currentHighlight, setCurrentHighlight] = useState(0);
     const [highlights, setHighlights] = useState([]);
 
