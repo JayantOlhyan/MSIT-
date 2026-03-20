@@ -1,5 +1,7 @@
-import { BookMarked, Download, CalendarDays, ChevronRight } from 'lucide-react';
+import { BookMarked, Download, CalendarDays, ChevronRight, FileText, ExternalLink } from 'lucide-react';
+
 import SEO from '../components/SEO';
+
 import { Link } from 'react-router-dom';
 
 const Brochure = () => {
