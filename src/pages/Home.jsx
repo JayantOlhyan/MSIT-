@@ -33,34 +33,48 @@ const Home = () => {
         };
     }, []);
 
-    const testimonials = [
-        {
-            name: "Priya Sharma",
-            year: "22",
-            major: "Computer Science & Engineering",
-            quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google. The connections I made here will last a lifetime.",
-            company: "Google",
-            image: "/priya-sharma.png"
-        },
-        {
-            name: "Rahul Verma",
-            year: "23",
-            major: "Information Technology",
-            quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.",
-            company: "Microsoft",
-            image: "/rahul-verma.png"
-        },
-        {
-            name: "Ananya Iyer",
-            year: "21",
-            major: "Electronics & Communication",
-            quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
-            company: "Apple",
-            image: "/ananya-iyer.png"
+    const [testimonials, setTestimonials] = useState([]);
+
+    useEffect(() => {
+        const storedTestimonials = localStorage.getItem('msit_testimonials');
+        if (storedTestimonials) {
+            setTestimonials(JSON.parse(storedTestimonials));
+        } else {
+            const defaultTestimonials = [
+                {
+                    id: 1,
+                    name: "Priya Sharma",
+                    year: "22",
+                    major: "Computer Science & Engineering",
+                    quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google. The connections I made here will last a lifetime.",
+                    company: "Google",
+                    image: "/priya-sharma.png"
+                },
+                {
+                    id: 2,
+                    name: "Rahul Verma",
+                    year: "23",
+                    major: "Information Technology",
+                    quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.",
+                    company: "Microsoft",
+                    image: "/rahul-verma.png"
+                },
+                {
+                    id: 3,
+                    name: "Ananya Iyer",
+                    year: "21",
+                    major: "Electronics & Communication",
+                    quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
+                    company: "Apple",
+                    image: "/ananya-iyer.png"
+                }
+            ];
+            setTestimonials(defaultTestimonials);
         }
-    ];
+    }, []);
 
     const [touchStartX, setTouchStartX] = useState(null);
+
     const [touchEndX, setTouchEndX] = useState(null);
 
     const handleTouchStart = (e) => {

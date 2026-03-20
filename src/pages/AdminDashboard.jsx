@@ -15,7 +15,18 @@ const AdminDashboard = () => {
     const [date, setDate] = useState('');
     const [link, setLink] = useState('');
     const [type, setType] = useState('NEWS');
+    
+    // Testimonials State
+    const [testimonials, setTestimonials] = useState([]);
+    const [tName, setTName] = useState('');
+    const [tYear, setTYear] = useState('');
+    const [tMajor, setTMajor] = useState('');
+    const [tQuote, setTQuote] = useState('');
+    const [tCompany, setTCompany] = useState('');
+    const [tImage, setTImage] = useState('');
+    
     const [status, setStatus] = useState(null);
+
 
     // Initial default data if storage is empty
     const defaultEvents = [
@@ -33,7 +44,22 @@ const AdminDashboard = () => {
             setEvents(defaultEvents);
             localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
         }
+
+        // Load testimonials from storage
+        const storedTestimonials = localStorage.getItem('msit_testimonials');
+        if (storedTestimonials) {
+            setTestimonials(JSON.parse(storedTestimonials));
+        } else {
+            const defaultTestimonials = [
+                { id: 1, name: "Priya Sharma", year: "22", major: "Computer Science & Engineering", quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google.", company: "Google", image: "/priya-sharma.png" },
+                { id: 2, name: "Rahul Verma", year: "23", major: "Information Technology", quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.", company: "Microsoft", image: "/rahul-verma.png" },
+                { id: 3, name: "Ananya Iyer", year: "21", major: "Electronics & Communication", quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems.", company: "Apple", image: "/ananya-iyer.png" }
+            ];
+            setTestimonials(defaultTestimonials);
+            localStorage.setItem('msit_testimonials', JSON.stringify(defaultTestimonials));
+        }
     }, []);
+
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -55,6 +81,11 @@ const AdminDashboard = () => {
     const saveEvents = (newEvents) => {
         setEvents(newEvents);
         localStorage.setItem('msit_events', JSON.stringify(newEvents));
+    };
+
+    const saveTestimonials = (newTestimonials) => {
+        setTestimonials(newTestimonials);
+        localStorage.setItem('msit_testimonials', JSON.stringify(newTestimonials));
     };
 
     const handleAddEvent = (e) => {
@@ -84,12 +115,47 @@ const AdminDashboard = () => {
         setTimeout(() => setStatus(null), 3000);
     };
 
-    const handleDelete = (id) => {
+    const handleDeleteEvent = (id) => {
         const updatedEvents = events.filter(ev => ev.id !== id);
         saveEvents(updatedEvents);
         setStatus({ type: 'success', message: 'Event removed.' });
         setTimeout(() => setStatus(null), 3000);
     };
+
+    const handleAddTestimonial = (e) => {
+        e.preventDefault();
+
+        const newTestimonial = {
+            id: Date.now(),
+            name: tName,
+            year: tYear,
+            major: tMajor,
+            quote: tQuote,
+            company: tCompany,
+            image: tImage || "/priya-sharma.png" // Default if empty
+        };
+
+        const updatedTestimonials = [newTestimonial, ...testimonials];
+        saveTestimonials(updatedTestimonials);
+
+        // Reset form
+        setTName('');
+        setTYear('');
+        setTMajor('');
+        setTQuote('');
+        setTCompany('');
+        setTImage('');
+        setStatus({ type: 'success', message: 'Testimonial added successfully!' });
+        setTimeout(() => setStatus(null), 3000);
+    };
+
+    const handleDeleteTestimonial = (id) => {
+        const updatedTestimonials = testimonials.filter(t => t.id !== id);
+        saveTestimonials(updatedTestimonials);
+        setStatus({ type: 'success', message: 'Testimonial removed.' });
+        setTimeout(() => setStatus(null), 3000);
+    };
+
 
     // -------------------------------------------------------------
     // LOGIN RENDERER
@@ -258,7 +324,7 @@ const AdminDashboard = () => {
                                         </div>
 
                                         <button
-                                            onClick={() => handleDelete(ev.id)}
+                                            onClick={() => handleDeleteEvent(ev.id)}
                                             className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors flex items-center shrink-0"
                                             title="Delete this item"
                                         >
@@ -271,6 +337,128 @@ const AdminDashboard = () => {
                     </div>
 
                 </div>
+
+                {/* TESTIMONIALS MANAGER */}
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                    <div className="border-b border-slate-100 pb-8 mb-8">
+                        <h2 className="text-3xl font-bold text-slate-900 mb-2">Testimonials Manager</h2>
+                        <p className="text-slate-500">Manage alumni testimonials that appear in the homepage carousel.</p>
+                    </div>
+
+                    <form onSubmit={handleAddTestimonial} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
+                        <h3 className="text-xl font-semibold text-slate-800 flex items-center">
+                            <Plus className="w-5 h-5 mr-2 text-blue-600" /> Add New Testimonial
+                        </h3>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Full Name</label>
+                                <input
+                                    type="text"
+                                    placeholder="e.g. Rahul Verma"
+                                    required
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={tName}
+                                    onChange={(e) => setTName(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Batch / Graduation Year</label>
+                                <input
+                                    type="text"
+                                    placeholder="e.g. 23"
+                                    required
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={tYear}
+                                    onChange={(e) => setTYear(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Department / Major</label>
+                                <input
+                                    type="text"
+                                    placeholder="e.g. Information Technology"
+                                    required
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={tMajor}
+                                    onChange={(e) => setTMajor(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-slate-700">Company</label>
+                                <input
+                                    type="text"
+                                    placeholder="e.g. Microsoft"
+                                    required
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={tCompany}
+                                    onChange={(e) => setTCompany(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2 md:col-span-2">
+                                <label className="text-sm font-medium text-slate-700">Profile Image URL</label>
+                                <input
+                                    type="text"
+                                    placeholder="e.g. /rahul-verma.png or https://..."
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={tImage}
+                                    onChange={(e) => setTImage(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2 md:col-span-2">
+                                <label className="text-sm font-medium text-slate-700">Quote</label>
+                                <textarea
+                                    placeholder="Enter the testimonial quote here..."
+                                    required
+                                    rows="3"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    value={tQuote}
+                                    onChange={(e) => setTQuote(e.target.value)}
+                                />
+                            </div>
+                        </div>
+
+                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
+                            Add Testimonial
+                        </button>
+                    </form>
+
+                    <div className="space-y-4">
+                        <h3 className="text-lg font-semibold text-slate-800 mb-4 border-b border-slate-100 pb-2">Manage Testimonials</h3>
+                        {testimonials.length === 0 ? (
+                            <p className="text-slate-500 italic">No testimonials found.</p>
+                        ) : (
+                            testimonials.map(t => (
+                                <div key={t.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <div className="flex items-center gap-4 flex-grow mb-4 sm:mb-0">
+                                        <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
+                                            <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className="min-w-0">
+                                            <div className="flex items-center gap-2">
+                                                <h4 className="text-slate-900 font-bold truncate">{t.name}</h4>
+                                                <span className="text-xs text-slate-500">'{t.year}</span>
+                                            </div>
+                                            <p className="text-sm text-slate-600 truncate max-w-md">{t.company} • {t.major}</p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={() => handleDeleteTestimonial(t.id)}
+                                        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors flex items-center shrink-0"
+                                    >
+                                        <Trash2 className="w-5 h-5" />
+                                    </button>
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
+
 
                 <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-yellow-800 text-sm">
                     <strong>Note for Developer Environments:</strong> Since this site does not currently have a backend database connected (like Firebase, Postgres, or MongoDB), these events are saved in your browser's Local Storage. This allows you to manage the frontend dynamically. To deploy this globally so everyone can see the changes and updates without GitHub, we can connect a cloud database later.
