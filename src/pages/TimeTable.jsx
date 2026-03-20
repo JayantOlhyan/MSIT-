@@ -3,15 +3,14 @@ import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 const TimeTable = () => {
-    // Academic resources list
-    const resources = [];
     return (
-
+        <main className="min-h-screen bg-slate-50 py-16">
             <SEO 
                 title="Time Table" 
                 description="View and download current semester class schedules and lab timetables for all departments at Maharaja Surajmal Institute of Technology. Stay organized." 
                 canonicalPath="/timetable"
             />
+
             <div className="max-w-6xl mx-auto px-6">
                 {/* Breadcrumbs */}
                 <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
