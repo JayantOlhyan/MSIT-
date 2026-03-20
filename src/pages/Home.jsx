@@ -39,23 +39,53 @@ const Home = () => {
             year: "22",
             major: "Computer Science & Engineering",
             quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google. The connections I made here will last a lifetime.",
-            company: "Google"
+            company: "Google",
+            image: "/priya-sharma.png"
         },
         {
             name: "Rahul Verma",
             year: "23",
             major: "Information Technology",
             quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.",
-            company: "Microsoft"
+            company: "Microsoft",
+            image: "/rahul-verma.png"
         },
         {
             name: "Ananya Iyer",
             year: "21",
             major: "Electronics & Communication",
             quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
-            company: "Apple"
+            company: "Apple",
+            image: "/ananya-iyer.png"
         }
     ];
+
+    const [touchStartX, setTouchStartX] = useState(null);
+    const [touchEndX, setTouchEndX] = useState(null);
+
+    const handleTouchStart = (e) => {
+        setTouchEndX(null);
+        setTouchStartX(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        setTouchEndX(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStartX || !touchEndX) return;
+        const distance = touchStartX - touchEndX;
+        const isLeftSwipe = distance > 50;
+        const isRightSwipe = distance < -50;
+
+        if (isLeftSwipe) {
+            setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+        }
+        if (isRightSwipe) {
+            setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+        }
+    };
+
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -351,21 +381,32 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h2 className="text-4xl font-light text-slate-900 tracking-tight mb-16">Alumni Shaping the World</h2>
 
-                    <div className="relative max-w-4xl mx-auto px-4 md:px-0">
+                    <div
+                        className="relative max-w-5xl mx-auto px-4 md:px-0"
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
+                    >
                         <div className="text-6xl text-slate-100 absolute -top-10 -left-2 md:-top-8 md:-left-8 font-serif z-0">"</div>
-                        <div className="min-h-[350px] md:min-h-[250px] lg:min-h-[200px] flex items-center justify-center relative z-10">
+                        <div className="min-h-[450px] md:min-h-[350px] flex items-center justify-center relative z-10">
                             {testimonials.map((t, i) => (
                                 <div
                                     key={i}
-                                    className={`absolute inset-0 transition-all duration-700 flex flex-col items-center justify-center px-2 sm:px-4
+                                    className={`absolute inset-0 transition-all duration-700 flex flex-col md:flex-row items-center justify-center gap-12 px-2 sm:px-4
                                     ${i === currentTestimonial ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-12 pointer-events-none -z-10'}`}
                                 >
-                                    <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800 leading-relaxed mb-6 md:mb-8">
-                                        {t.quote}
-                                    </p>
-                                    <div className="font-semibold text-base md:text-lg text-slate-900">{t.name} <span className="font-light text-slate-500">'{t.year}</span></div>
-                                    <div className="text-blue-600 font-medium text-sm md:text-base">{t.major}</div>
-                                    <div className="text-xs md:text-sm uppercase tracking-widest text-slate-400 mt-2 font-bold">{t.company}</div>
+                                    <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white shrink-0 transform -rotate-2 group-hover:rotate-0 transition-transform duration-500">
+                                        <img src={t.image} alt={t.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                    </div>
+
+                                    <div className="text-center md:text-left flex-grow max-w-2xl">
+                                        <p className="text-xl sm:text-2xl font-light text-slate-800 leading-relaxed mb-6 md:mb-8 italic">
+                                            "{t.quote}"
+                                        </p>
+                                        <div className="font-semibold text-lg md:text-xl text-slate-900">{t.name} <span className="font-light text-slate-500">'{t.year}</span></div>
+                                        <div className="text-blue-600 font-medium text-base md:text-lg">{t.major}</div>
+                                        <div className="inline-block mt-3 px-4 py-1 bg-slate-900 text-white text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-full">{t.company}</div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -383,6 +424,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
 
             {/* CAMPUS VIRTUAL TOUR */}
             <section className="py-32 bg-slate-100 relative overflow-hidden flex flex-col items-center justify-center text-center">
