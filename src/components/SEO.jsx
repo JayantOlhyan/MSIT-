@@ -34,3 +34,5 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
 };
 
 export default SEO;
+
+
