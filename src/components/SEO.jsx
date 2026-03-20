@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, canonicalPath = "" }) => {
-    const siteTitle = "MSIT Delhi by Jayant Olhyan – Maharaja Surajmal Institute of Technology";
-    const fullTitle = (title && title !== "Home") ? `${title} | MSIT Delhi` : siteTitle;
+    const siteTitle = "msit by Jayant Olhyan – Maharaja Surajmal Institute of Technology";
+    const fullTitle = (title && title !== "Home") ? `${title} | msit by Jayant Olhyan` : siteTitle;
     const baseUrl = "https://msit-website.netlify.app";
     const canonicalUrl = `${baseUrl}${canonicalPath}`;
 
@@ -22,12 +22,13 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description} />
             <meta property="og:url" content={canonicalUrl} />
-            <meta property="og:site_name" content="MSIT New Delhi" />
+            <meta property="og:site_name" content="msit by Jayant Olhyan" />
 
             {/* Twitter tags */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content="https://msit-website.netlify.app/msit-logo.png" />
         </Helmet>
     );
 };
