@@ -535,9 +535,13 @@ const Home = () => {
                                 <div className="text-white text-xl font-light tracking-widest">{lightboxImage} Viewer Placeholder</div>
                             </>
                         )}
+                    </div>
+                </div>
+            )}
         </main>
     );
 };
 
 export default Home;
+
 
