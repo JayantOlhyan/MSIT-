@@ -537,37 +537,7 @@ const Home = () => {
                         )}
                     </div>
                 </div>
-            )}
-
-            {/* CALL-TO-ACTION / LEAD */}
-            <section className="py-24 relative overflow-hidden group">
-                <div
-                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[15s] ease-out group-hover:scale-110"
-                    style={{ backgroundImage: "url('/campus-hero.jpg')" }}
-                ></div>
-                <div className="absolute inset-0 z-0 bg-indigo-950/80 mix-blend-multiply"></div>
-
-                <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-                    <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">Ready to Start Your Journey?</h2>
-                    <p className="text-xl text-indigo-100 font-light mb-12">Subscribe to our admissions newsletter for deadline updates, campus news, and exclusive insights into life at MSIT.</p>
-
-                    <form className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto" onSubmit={(e) => e.preventDefault()}>
-                        <div className="relative flex-grow">
-                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                            <input
-                                type="email"
-                                placeholder="Enter your email address"
-                                className="w-full pl-12 pr-4 py-4 rounded-xl text-slate-900 focus:outline-none focus:ring-4 focus:ring-blue-500/50 shadow-lg font-medium"
-                                required
-                            />
-                        </div>
-                        <button className="px-8 py-4 bg-white text-indigo-950 font-bold rounded-xl shadow-lg hover:bg-indigo-50 transition-colors whitespace-nowrap">
-                            Subscribe Now
-                        </button>
-                    </form>
-                    <p className="text-sm text-indigo-200/70 mt-6 font-light">We respect your inbox. Unsubscribe securely at any time.</p>
-                </div>
-            </section>
+      </section>
         </main>
     );
 };
