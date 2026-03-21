@@ -1,43 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
   <url>
     <loc>https://msit-website.netlify.app/</loc>
-    <lastmod>2026-03-18</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://msit-website.netlify.app/about</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://msit-website.netlify.app/cse</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://msit-website.netlify.app/placements</loc>
-    <lastmod>2026-03-18</lastmod>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msit-website.netlify.app/contact</loc>
+    <lastmod>2026-03-21</lastmod>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://msit-website.netlify.app/academic-calendar</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://msit-website.netlify.app/syllabus</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://msit-website.netlify.app/timetable</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://msit-website.netlify.app/brochure</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.7</priority>
-  </url>
+
+  <!-- About Section -->
+  <url><loc>https://msit-website.netlify.app/vision-mission</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/history</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/administration</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/facilities</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/smes</loc><lastmod>2026-03-21</lastmod><priority>0.6</priority></url>
+
+  <!-- Admission & Aid -->
+  <url><loc>https://msit-website.netlify.app/brochure</loc><lastmod>2026-03-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://msit-website.netlify.app/online-fee</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/scholarships</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/mandatory-disclosures</loc><lastmod>2026-03-21</lastmod><priority>0.6</priority></url>
+
+  <!-- Academic Departments -->
+  <url><loc>https://msit-website.netlify.app/cse</loc><lastmod>2026-03-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://msit-website.netlify.app/it</loc><lastmod>2026-03-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://msit-website.netlify.app/ece</loc><lastmod>2026-03-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://msit-website.netlify.app/eee</loc><lastmod>2026-03-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://msit-website.netlify.app/ap</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+
+  <!-- Academic Resources -->
+  <url><loc>https://msit-website.netlify.app/academic-calendar</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/timetable</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/syllabus</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/research</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+
+  <!-- Life at MSIT -->
+  <url><loc>https://msit-website.netlify.app/society</loc><lastmod>2026-03-21</lastmod><priority>0.6</priority></url>
+  <url><loc>https://msit-website.netlify.app/events</loc><lastmod>2026-03-21</lastmod><priority>0.6</priority></url>
+  <url><loc>https://msit-website.netlify.app/antiragging</loc><lastmod>2026-03-21</lastmod><priority>0.5</priority></url>
+  <url><loc>https://msit-website.netlify.app/posh</loc><lastmod>2026-03-21</lastmod><priority>0.5</priority></url>
+  <url><loc>https://msit-website.netlify.app/disaster</loc><lastmod>2026-03-21</lastmod><priority>0.5</priority></url>
+  <url><loc>https://msit-website.netlify.app/discipline</loc><lastmod>2026-03-21</lastmod><priority>0.5</priority></url>
+  <url><loc>https://msit-website.netlify.app/attendance</loc><lastmod>2026-03-21</lastmod><priority>0.5</priority></url>
+
+  <!-- Career & Other -->
+  <url><loc>https://msit-website.netlify.app/internship-cell</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
 </urlset>
