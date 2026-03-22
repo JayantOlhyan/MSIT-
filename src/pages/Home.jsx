@@ -5,6 +5,11 @@ import {
     Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
     const [activeNewsTab, setActiveNewsTab] = useState('all');
@@ -15,6 +20,22 @@ const Home = () => {
 
     const heroRef = useRef(null);
     const [heroVisible, setHeroVisible] = useState(false);
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: heroRef.current,
+                start: "top top",
+                end: "bottom top",
+                scrub: 1,
+            }
+        });
+
+        tl.to("#home-parallax-bg", { yPercent: 5, scale: 1.15, ease: "none" }, 0);
+        tl.to("#home-parallax-mid", { yPercent: -10, ease: "none" }, 0);
+        tl.to("#home-parallax-fg", { yPercent: -20, ease: "none" }, 0);
+        tl.to("#home-parallax-ui", { yPercent: -50, opacity: 0, ease: "power1.inOut" }, 0);
+    }, { scope: heroRef });
 
     useEffect(() => {
         const currentHeroRef = heroRef.current;
@@ -219,18 +240,19 @@ const Home = () => {
             />
             {/* HERO SECTION */}
             <section ref={heroRef} className="relative w-full h-[90vh] min-h-[700px] flex items-center bg-slate-900 overflow-hidden">
-                {/* Interactive Campus Background Image */}
-                <div className="absolute inset-0 z-0 group overflow-hidden">
-                    <div
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[20s] ease-out hover:scale-110"
-                        style={{ backgroundImage: "url('/campus-hero.jpg')" }}
-                    ></div>
-                    {/* Premium dark gradient overlays for maximum text readability and aesthetic */}
-                    <div className="absolute inset-0 bg-slate-950/60 mix-blend-multiply"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-slate-900/40"></div>
+                {/* Cinematic Parallax Layers */}
+                <div className="absolute inset-0 z-0 w-full h-full scale-[1.25] pointer-events-none">
+                    <img id="home-parallax-bg" src="/assets/background.png" alt="Background" className="absolute inset-0 w-full h-full object-cover object-center will-change-transform z-[1]" />
+                    <img id="home-parallax-mid" src="/assets/midground.png" alt="Midground" className="absolute inset-0 w-full h-full object-cover object-center will-change-transform z-[2]" />
+                    <img id="home-parallax-fg" src="/assets/foreground.png" alt="Foreground" className="absolute inset-0 w-full h-full object-cover object-center will-change-transform z-[3]" />
                 </div>
+                
+                {/* Premium dark gradient overlays for maximum text readability and aesthetic */}
+                <div className="absolute inset-0 z-[4] bg-slate-950/40 mix-blend-multiply pointer-events-none"></div>
+                <div className="absolute inset-0 z-[4] bg-gradient-to-t from-slate-900 via-transparent to-slate-900/60 pointer-events-none"></div>
 
-                <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20 flex flex-col items-center sm:items-start text-center sm:text-left transition-all duration-1000 transform">
+                {/* Hero UI Content */}
+                <div id="home-parallax-ui" className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20 flex flex-col items-center sm:items-start text-center sm:text-left will-change-transform">
                     <div className={`mt-auto mb-6 opacity-0 translate-y-8 animate-[slideUp_1s_ease-out_0.2s_forwards] flex flex-wrap justify-center sm:justify-start gap-3`}>
                         <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm text-xs font-semibold uppercase tracking-wider text-slate-300">
                             <Check className="w-3 h-3 mr-1.5 text-emerald-400" /> NAAC 'A' Grade

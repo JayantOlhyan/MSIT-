@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-import { Search, Mail, Award, BookOpen, ChevronRight, X, TrendingUp, AlertTriangle, FileText, Download, User, Star, Briefcase } from 'lucide-react';
+import { Search, Mail, Award, BookOpen, ChevronRight, X, TrendingUp, Search as Target, FileText, Download, User, Star, Briefcase, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FacultyStaff = () => {
@@ -27,7 +27,8 @@ const FacultyStaff = () => {
             role: "Director",
             dept: "Administration",
             email: "director@msit.in",
-            img: "https://api.uifaces.co/our-content/donated/x16sq_ms.jpg",
+            linkedin: "https://in.linkedin.com/in/avanish-kumar-srivastava-6b711b15",
+            img: "/faculty/director.png",
             qual: "Ph.D. (IISc Bangalore), M.Tech (IIT Kanpur)",
             experience: "30+",
             publications: "460+",
@@ -43,7 +44,8 @@ const FacultyStaff = () => {
             role: "Professor & HOD",
             dept: "CSE",
             email: "geetika.dhand@msit.in",
-            img: "https://api.uifaces.co/our-content/donated/vY_F6gnP.jpg",
+            linkedin: "https://in.linkedin.com/in/geetika-dhand-a775447",
+            img: "/faculty/geetika-dhand.png",
             qual: "Ph.D., M.Tech (CSE)",
             experience: "20+",
             publications: "50+",
@@ -52,6 +54,40 @@ const FacultyStaff = () => {
             badAt: ["Heavy departmental administration load limits core research time"],
             pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-geetika-dhand.pdf",
             bio: "Dr. Dhand has over two decades of experience shaping the Computer Science curriculum. She is deeply involved in industry-academia partnerships and advancing AI education."
+        },
+        {
+            id: 'cse-2',
+            name: "Dr. Naveen Dahiya",
+            role: "Professor & Dean Academics",
+            dept: "CSE",
+            email: "naveen.dahiya@msit.in",
+            linkedin: "https://in.linkedin.com/in/naveen-dahiya-7a18156b",
+            img: "/faculty/naveen-dahiya.png",
+            qual: "Ph.D., M.Tech., B.E. (CSE)",
+            experience: "20+",
+            publications: "15+",
+            patents: "1",
+            goodAt: ["Database Analytics", "SCIE Research", "Academic Leadership", "Patent Innovation"],
+            badAt: ["Extensive administrative responsibilities may limit available time for direct student mentorship."],
+            pdfLink: "https://www.msit.in/media/2024/10/09/naveen-detailed-profile.pdf",
+            bio: "Dr. Dahiya serves as the Dean of Academics and brings two decades of experience. His research focuses heavily on Database Analytics and he frequently publishes in high-impact SCIE indexed journals."
+        },
+        {
+            id: 'cse-3',
+            name: "Dr. Koyel Datta Gupta",
+            role: "Professor",
+            dept: "CSE",
+            email: "koyel.dattagupta@msit.in",
+            linkedin: "https://in.linkedin.com/in/koyel-dattagupta-99832a9",
+            img: "/faculty/koyel-datta.png",
+            qual: "Ph.D. (Jamia Millia Islamia), M.Tech Gold Medalist",
+            experience: "21+",
+            publications: "36+",
+            patents: "Multiple",
+            goodAt: ["Wireless Communication & IoT", "Blockchain & Cybersecurity Expert", "36+ SCI/SCIE Journal Publications", "IEEE Senior Member"],
+            badAt: ["Broad research interests across multiple domains may require narrower specialization for next-gen deep tech impact."],
+            pdfLink: "https://www.msit.in/media/uploads/2026/02/17/koyel-dg-name-of-faculty_main-profile-16jan2026.pdf",
+            bio: "Dr. Datta Gupta is a Gold Medalist researcher with expertise in secure wireless communications and blockchain. She is a senior member of IEEE and has a prolific publication record."
         },
         {
             id: 'it-1',
@@ -117,6 +153,7 @@ const FacultyStaff = () => {
             pdfLink: "#",
             bio: "Dr. Singh ensures that every incoming engineering student has an unbreakable foundation in the physical and applied sciences during their crucial first year."
         }
+
     ];
 
     const filteredFaculty = facultyMembers.filter(f => 
@@ -366,19 +403,19 @@ const FacultyStaff = () => {
                                     </ul>
                                 </div>
 
-                                {/* Areas for Improvement / Observations */}
-                                <div className="bg-amber-50/50 rounded-3xl p-8 border border-amber-100">
+                                {/* Areas for Improvement / Observations - Softer Design */}
+                                <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200">
                                     <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center">
-                                            <AlertTriangle className="w-5 h-5 text-amber-600" />
+                                        <div className="w-10 h-10 rounded-xl bg-slate-200 flex items-center justify-center">
+                                            <Target className="w-5 h-5 text-slate-600" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-amber-950">Areas of Observation</h3>
+                                        <h3 className="text-xl font-bold text-slate-800">Academic Focus & Observations</h3>
                                     </div>
                                     <ul className="space-y-4">
                                         {selectedFaculty.badAt.map((trait, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-amber-800">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0"></div>
-                                                <span className="font-medium leading-relaxed">{trait}</span>
+                                            <li key={i} className="flex items-start gap-3 text-slate-600">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2.5 shrink-0"></div>
+                                                <span className="font-medium leading-relaxed italic">{trait}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -387,13 +424,26 @@ const FacultyStaff = () => {
 
                             {/* Actions */}
                             <div className="flex flex-col sm:flex-row gap-4 items-center justify-between border-t border-slate-200 pt-8">
-                                <a 
-                                    href={`mailto:${selectedFaculty.email}`} 
-                                    className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-slate-100 text-slate-700 font-bold hover:bg-slate-200 transition-colors w-full sm:w-auto"
-                                >
-                                    <Mail className="w-5 h-5" />
-                                    {selectedFaculty.email}
-                                </a>
+                                <div className="flex flex-wrap gap-4 w-full sm:w-auto">
+                                    <a 
+                                        href={`mailto:${selectedFaculty.email}`} 
+                                        className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-slate-100 text-slate-700 font-bold hover:bg-slate-200 transition-colors"
+                                    >
+                                        <Mail className="w-5 h-5" />
+                                        {selectedFaculty.email}
+                                    </a>
+                                    {selectedFaculty.linkedin && (
+                                        <a 
+                                            href={selectedFaculty.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#0077B5] text-white font-bold hover:bg-[#005a8a] transition-colors"
+                                        >
+                                            <Linkedin className="w-5 h-5" />
+                                            LinkedIn
+                                        </a>
+                                    )}
+                                </div>
                                 
                                 {selectedFaculty.pdfLink !== "#" ? (
                                     <a 
