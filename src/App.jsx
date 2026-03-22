@@ -12,7 +12,6 @@ import TimeTable from './pages/TimeTable';
 import Brochure from './pages/Brochure';
 import AdminDashboard from './pages/AdminDashboard';
 import DynamicPage from './pages/DynamicPage';
-import ParallaxDemo from './pages/ParallaxDemo';
 
 import NotFound from './pages/NotFound';
 import ServerError from './pages/ServerError';
@@ -38,7 +37,6 @@ const App = () => {
                     <Route path="/timetable" element={<TimeTable />} />
                     <Route path="/brochure" element={<Brochure />} />
                     <Route path="/admin" element={<AdminDashboard />} />
-                    <Route path="/parallax-demo" element={<ParallaxDemo />} />
                     <Route path="/privacy" element={<PrivacyPolicy />} />
                     <Route path="/terms" element={<TermsOfUse />} />
                     <Route path="/facilities" element={<Facilities />} />
