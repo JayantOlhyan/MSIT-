@@ -15,6 +15,9 @@ import DynamicPage from './pages/DynamicPage';
 
 import NotFound from './pages/NotFound';
 import ServerError from './pages/ServerError';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfUse from './pages/TermsOfUse';
+
 
 const App = () => {
     return (
@@ -31,7 +34,10 @@ const App = () => {
                     <Route path="/timetable" element={<TimeTable />} />
                     <Route path="/brochure" element={<Brochure />} />
                     <Route path="/admin" element={<AdminDashboard />} />
+                    <Route path="/privacy" element={<PrivacyPolicy />} />
+                    <Route path="/terms" element={<TermsOfUse />} />
                     <Route path="/500" element={<ServerError />} />
+
                     <Route path="/:slug" element={<DynamicPage />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
