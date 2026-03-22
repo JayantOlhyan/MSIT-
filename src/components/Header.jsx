@@ -1,23 +1,77 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { searchIndex } from '../data/searchIndex';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [searchOpen, setSearchOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState({ faculty: [], pages: [], qa: [] });
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 49);
-
         };
+
+        const handleKeyDown = (e) => {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                setSearchOpen(true);
+            }
+            if (e.key === 'Escape') {
+                setSearchOpen(false);
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('keydown', handleKeyDown);
+        };
     }, []);
 
-    const toggleSearch = () => setSearchOpen(!searchOpen);
+    const toggleSearch = () => {
+        setSearchOpen(!searchOpen);
+        setSearchQuery('');
+        setSearchResults({ faculty: [], pages: [], qa: [] });
+    };
+
+    const handleSearch = (query) => {
+        setSearchQuery(query);
+        if (!query.trim()) {
+            setSearchResults({ faculty: [], pages: [], qa: [] });
+            return;
+        }
+
+        const lQuery = query.toLowerCase();
+
+        const facultyMatches = searchIndex.faculty.filter(f => 
+            f.name.toLowerCase().includes(lQuery) || 
+            f.dept.toLowerCase().includes(lQuery) ||
+            f.role.toLowerCase().includes(lQuery)
+        );
+
+        const pageMatches = searchIndex.pages.filter(p => 
+            p.title.toLowerCase().includes(lQuery) || 
+            p.keywords.toLowerCase().includes(lQuery)
+        );
+
+        const qaMatches = searchIndex.qa.filter(q => 
+            q.q.toLowerCase().includes(lQuery) || 
+            q.keywords.toLowerCase().includes(lQuery)
+        );
+
+        setSearchResults({
+            faculty: facultyMatches.slice(0, 3),
+            pages: pageMatches.slice(0, 4),
+            qa: qaMatches.slice(0, 2)
+        });
+    };
 
     const megaMenuData = {
         about: [
@@ -215,45 +269,115 @@ const Header = () => {
 
             {/* Search Modal */}
             {searchOpen && (
-                <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-start justify-center pt-24 px-4 animate-fade-in">
-                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl p-6 md:p-8 animate-slide-up relative">
-                        <button onClick={toggleSearch} className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-900 rounded-full hover:bg-slate-100 transition-all">
-                            <X className="w-6 h-6" />
-                        </button>
-
-                        <form onSubmit={(e) => {
-                            e.preventDefault();
-                            const query = e.target.searchQuery.value;
-                            if (query) {
-                                window.location.href = `/search?q=${encodeURIComponent(query)}`;
-                                toggleSearch();
-                            }
-                        }} className="flex items-center border-b-2 border-slate-900 pb-3 md:pb-4 mt-6 md:mt-4">
-                            <button type="submit" className="shrink-0">
-                                <Search className="w-6 h-6 md:w-8 md:h-8 text-slate-900 mr-3 md:mr-4" />
-                            </button>
+                <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[100] flex items-start justify-center pt-24 px-4 animate-fade-in" onClick={toggleSearch}>
+                    <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up relative" onClick={(e) => e.stopPropagation()}>
+                        <div className="p-6 border-b border-slate-100 flex items-center gap-4">
+                            <Search className="w-6 h-6 text-slate-400" />
                             <input
-                                type="search"
-                                name="searchQuery"
-                                placeholder="What are you looking for?"
-                                className="w-full text-lg sm:text-2xl md:text-3xl font-light focus:ring-0 focus:outline-none border-none text-slate-900 placeholder-slate-300 bg-transparent px-0"
+                                type="text"
+                                value={searchQuery}
+                                onChange={(e) => handleSearch(e.target.value)}
+                                placeholder="Search faculty, departments, or ask a question..."
+                                className="w-full text-xl font-light focus:outline-none text-slate-900 placeholder-slate-300 bg-transparent"
                                 autoFocus
                             />
-                        </form>
+                            <div className="hidden sm:flex items-center gap-1 px-2 py-1 rounded bg-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+                                <span className="px-1 italic">esc</span> to close
+                            </div>
+                        </div>
 
-                        <div className="mt-8">
-                            <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Quick Links</h4>
-                            <div className="flex flex-wrap gap-2">
-                                {['Admissions 2026', 'Faculty Directory', 'Academic Calendar', 'Placements', 'Campus Map'].map(term => (
-                                    <Link
-                                        key={term}
-                                        to={`/search?q=${encodeURIComponent(term)}`}
-                                        onClick={toggleSearch}
-                                        className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm rounded-full cursor-pointer transition-colors"
-                                    >
-                                        {term}
-                                    </Link>
-                                ))}
+                        <div className="max-h-[60vh] overflow-y-auto p-4 custom-scrollbar">
+                            {!searchQuery && (
+                                <div className="p-4">
+                                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 px-2">Quick Access</h4>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                        {[
+                                            { name: 'Admissions 2026', icon: <Hash size={14} />, url: '/brochure' },
+                                            { name: 'Faculty Directory', icon: <User size={14} />, url: '/faculty' },
+                                            { name: 'Academic Calendar', icon: <Book size={14} />, url: '/academic-calendar' },
+                                            { name: 'Placements', icon: <TrendingUp size={14} />, url: '/placements' }
+                                        ].map(item => (
+                                            <Link key={item.name} to={item.url} onClick={toggleSearch} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-colors group">
+                                                <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                                                    {item.icon}
+                                                </div>
+                                                <span className="text-sm font-medium">{item.name}</span>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {searchQuery && (
+                                <div className="space-y-6 p-2">
+                                    {/* AI-Style Quick Answers */}
+                                    {searchResults.qa.length > 0 && (
+                                        <div>
+                                            <h4 className="text-[10px] font-bold uppercase tracking-widest text-blue-500 mb-3 px-2 flex items-center gap-2">
+                                                <MessageSquare size={12} /> Quick Answer
+                                            </h4>
+                                            {searchResults.qa.map((qa, i) => (
+                                                <div key={i} className="p-4 bg-blue-50/50 rounded-2xl border border-blue-100/50 mb-2">
+                                                    <p className="text-xs font-semibold text-blue-900 mb-1">Q: {qa.q}</p>
+                                                    <p className="text-sm text-slate-700 leading-relaxed font-light">{qa.a}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {/* Faculty Results */}
+                                    {searchResults.faculty.length > 0 && (
+                                        <div>
+                                            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-2">Faculty</h4>
+                                            <div className="space-y-1">
+                                                {searchResults.faculty.map((f, i) => (
+                                                    <Link key={i} to={f.url} onClick={toggleSearch} className="flex items-center justify-between p-3 rounded-xl hover:bg-slate-50 transition-colors group">
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-blue-100 group-hover:text-blue-600">
+                                                                <User size={18} />
+                                                            </div>
+                                                            <div>
+                                                                <div className="text-sm font-semibold text-slate-900 leading-none mb-1">{f.name}</div>
+                                                                <div className="text-xs text-slate-500">{f.role} • {f.dept}</div>
+                                                            </div>
+                                                        </div>
+                                                        <ArrowRight size={14} className="text-slate-300 group-hover:text-slate-900 group-hover:translate-x-1 transition-all" />
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* Page Results */}
+                                    {searchResults.pages.length > 0 && (
+                                        <div>
+                                            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-2">Pages & Navigation</h4>
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                                                {searchResults.pages.map((p, i) => (
+                                                    <Link key={i} to={p.url} onClick={toggleSearch} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-colors group">
+                                                        <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                                                            <Hash size={14} />
+                                                        </div>
+                                                        <span className="text-sm font-medium">{p.title}</span>
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {searchResults.faculty.length === 0 && searchResults.pages.length === 0 && searchResults.qa.length === 0 && (
+                                        <div className="text-center py-12">
+                                            <Search className="w-12 h-12 text-slate-100 mx-auto mb-4" />
+                                            <p className="text-slate-400 font-light italic">No results found for "{searchQuery}"</p>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+
+                        <div className="p-4 bg-slate-50/50 border-t border-slate-100 flex justify-center">
+                             <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-4">
+                                <span className="flex items-center gap-1.5"><HelpCircle size={12} className="text-blue-400"/> Ask anything about MSIT</span>
                             </div>
                         </div>
                     </div>
