@@ -58,5 +58,8 @@
   <url><loc>https://msit-website.netlify.app/attendance</loc><lastmod>2026-03-21</lastmod><priority>0.5</priority></url>
 
   <!-- Career & Other -->
-  <url><loc>https://msit-website.netlify.app/internship-cell</loc><lastmod>2026-03-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/internship-cell</loc><lastmod>2026-03-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://msit-website.netlify.app/privacy</loc><lastmod>2026-03-22</lastmod><priority>0.4</priority></url>
+  <url><loc>https://msit-website.netlify.app/terms</loc><lastmod>2026-03-22</lastmod><priority>0.4</priority></url>
+
 </urlset>
