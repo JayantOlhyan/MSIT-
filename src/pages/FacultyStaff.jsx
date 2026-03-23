@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-import { Search, Mail, Award, BookOpen, ChevronRight, X, TrendingUp, Search as Target, FileText, Download, User, Star, Briefcase, Linkedin } from 'lucide-react';
+import { Search, Mail, Award, BookOpen, ChevronRight, X, TrendingUp, Search as Target, FileText, Download, Star, Briefcase, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 
 const FacultyStaff = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -171,31 +172,17 @@ const FacultyStaff = () => {
                 canonicalPath="/faculty"
             />
 
-            {/* Cinematic Hero Section */}
-            <div className="relative bg-[#020617] pt-32 pb-24 px-6 border-b border-slate-800 overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
-                    <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] mix-blend-screen" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
-                </div>
+            <PageHero 
+                title="Faculty &" 
+                accentTitle="Staff" 
+                description="Explore the minds shaping the future. Our directory provides unparalleled transparency into the expertise, research impact, and academic focus of our 130+ distinguished members."
+                breadcrumbs={[{ label: 'Directory' }, { label: 'Faculty & Staff' }]}
+            />
 
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="flex items-center text-blue-400 gap-2 mb-6 font-medium tracking-widest text-xs uppercase animate-fade-in">
-                        <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                        <ChevronRight className="w-3 h-3" />
-                        <span className="text-white">Directory</span>
-                    </div>
-                    
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-200 to-slate-500 tracking-tight leading-none mb-8 animate-slide-up">
-                        FACULTY <br/>& STAFF.
-                    </h1>
-                    
-                    <p className="text-slate-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                        Explore the minds shaping the future. Our directory provides unparalleled transparency into the expertise, research impact, and academic focus of our 130+ distinguished members.
-                    </p>
-
-                    {/* Hero Stats */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 pt-8 border-t border-slate-800/50 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            {/* Hero Stats (Preserved from original premium design) */}
+            <div className="bg-slate-950 border-b border-slate-900 pb-16 px-6">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 pt-8 border-t border-slate-800/50 animate-slide-up">
                         <div>
                             <div className="text-3xl font-bold text-white mb-1">130+</div>
                             <div className="text-xs text-slate-500 uppercase tracking-widest font-medium">Expert Faculty</div>

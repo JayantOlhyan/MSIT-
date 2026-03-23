@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-import { Beaker, Book, Home, Trophy, Activity, ChevronRight, Server, Cpu, Database } from 'lucide-react';
+import { Beaker, Book, Home, Trophy, Activity, Server, Cpu, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 
 const Facilities = () => {
     const [activeTab, setActiveTab] = useState('labs');
@@ -40,26 +41,12 @@ const Facilities = () => {
                 canonicalPath="/facilities"
             />
 
-            {/* Hero Header */}
-            <div className="bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
-                </div>
-                
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="flex items-center text-blue-400 gap-2 mb-4 font-medium tracking-wide text-sm">
-                        <Link to="/" className="hover:text-blue-300 transition-colors">Home</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <span>Facilities</span>
-                    </div>
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                        World-Class <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Campus Facilities</span>
-                    </h1>
-                    <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
-                        MSIT provides a state-of-the-art environment designed to foster innovation, research, and holistic student development.
-                    </p>
-                </div>
-            </div>
+            <PageHero 
+                title="World-Class" 
+                accentTitle="Campus Facilities" 
+                description="MSIT provides a state-of-the-art environment designed to foster innovation, research, and holistic student development."
+                breadcrumbs={[{ label: 'Facilities' }]}
+            />
 
             {/* Tab Navigation */}
             <div className="border-b border-slate-200 sticky top-0 bg-white/80 backdrop-blur-md z-20">

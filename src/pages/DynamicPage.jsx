@@ -1,8 +1,8 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, LayoutDashboard } from 'lucide-react';
+import { ArrowRight, LayoutDashboard } from 'lucide-react';
 import { pagesData } from '../data/pagesData';
 import SEO from '../components/SEO';
+import PageHero from '../components/PageHero';
 
 const DynamicPage = () => {
     const { slug } = useParams();
@@ -22,38 +22,21 @@ const DynamicPage = () => {
     }
 
     return (
-        <main className="min-h-screen bg-slate-50">
+        <main className="min-h-screen bg-white">
             <SEO 
                 title={pageData.title} 
                 description={pageData.seo_description || pageData.subtitle} 
                 canonicalPath={`/${slug}`} 
             />
-            {/* HER0 - PAGE TITLE */}
-            <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-900 border-b border-slate-800">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 transition-transform duration-[10s] hover:scale-105" style={{ backgroundImage: "url('" + pageData.heroImage + "')" }}></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40"></div>
-                </div>
-                <div className="relative z-10 max-w-7xl mx-auto px-6">
-                    {/* Breadcrumbs */}
-                    <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
-                        <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-slate-500">{pageData.category}</span>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-blue-400">{pageData.title}</span>
-                    </div>
-
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-white tracking-tight mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                        {pageData.title.split(' ').map((word, i, arr) => (
-                            i === arr.length - 1 ? <span key={i} className="font-semibold text-blue-400">{word}</span> : <React.Fragment key={i}>{word} </React.Fragment>
-                        ))}
-                    </h1>
-                    <p className="text-xl text-slate-300 font-light max-w-3xl leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                        {pageData.subtitle}
-                    </p>
-                </div>
-            </section>
+            <PageHero 
+                title={pageData.title.split(' ').slice(0, -1).join(' ')}
+                accentTitle={pageData.title.split(' ').pop()}
+                description={pageData.subtitle}
+                breadcrumbs={[
+                    { label: pageData.category || 'MSIT' },
+                    { label: pageData.title }
+                ]}
+            />
 
             {/* MAIN CONTENT LAYOUT */}
             <section className="py-24 bg-white relative">
