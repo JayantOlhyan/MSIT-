@@ -1,5 +1,7 @@
 export const searchIndex = {
-    faculty: [],
+    faculty: [
+        { name: "Prof. (Dr.) Avanish Kumar Srivastava", role: "Director", dept: "Administration", url: "/administration" }
+    ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
         { title: "Placement Overview", url: "/placements", keywords: "jobs, salary, companies, recruit" },

@@ -1,5 +1,22 @@
 export const facultyMembers = [
     {
+        id: 'dir-1',
+        name: "Prof. (Dr.) Avanish Kumar Srivastava",
+        role: "Director",
+        dept: "Administration",
+        email: "director@msit.in",
+        linkedin: "#",
+        img: "/faculty/avanish-kumar.png",
+        qual: "Ph.D. (IISc Bangalore), M.Tech. (IIT Kanpur)",
+        experience: "30+",
+        publications: "460+",
+        patents: "12",
+        goodAt: ["Nano-science & Technology", "Electron Microscopy", "Strategic Leadership", "Innovation Management"],
+        badAt: ["Extensive administrative responsibilities as Director MSIT", "Heavy focus on institutional growth and strategic leadership"],
+        pdfLink: "https://ampri.res.in/wp-content/uploads/2023/12/CV-of-Prof-AK-Srivastava-AMPRI-20231214.pdf",
+        bio: "Prof. (Dr.) Avanish Kumar Srivastava is a distinguished scientist and academic leader with a Ph.D. from IISc Bangalore and M.Tech from IIT Kanpur. Former Director of CSIR-AMPRI and Acting Director of CSIR-NML, he is a Fellow of FNAE and consistently ranked among the top 2% of scientists globally by Stanford University. His pioneering work includes establishing high-resolution TEM facilities and developing indigenous Raman spectrometers."
+    },
+    {
         id: 'staff-1',
         name: "Mr. Azad Singh",
         role: "Jr. Administrative Officer",
