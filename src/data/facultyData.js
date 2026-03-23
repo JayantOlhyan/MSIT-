@@ -256,5 +256,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as HOD CSE", "Balancing departmental oversight with extensive research output"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-geetika-dhand.pdf",
         bio: "Dr. Geetika Dhand is an Associate Professor and the current HOD of the CSE Department at MSIT. With over 20 years of teching experience, she has made significant contributions to AI, Machine Learning, and Wireless Sensor Networks. She is a recipient of the 'Excellence in Research' award (2023) and has published several books and patents in the field of technology transfer."
+    },
+    {
+        id: 'cse-2',
+        name: "Dr. Naveen Dahiya",
+        role: "Professor & Dean (Academics)",
+        dept: "CSE",
+        email: "naveend@msit.in",
+        linkedin: "https://in.linkedin.com/in/naveen-dahiya-7a18156b",
+        img: "/faculty/naveen-dahiya.png",
+        qual: "Ph.D., M.Tech., B.E.",
+        experience: "20+",
+        publications: "34",
+        patents: "2",
+        goodAt: ["Data Warehouse Design", "Federated Machine Learning", "Best Faculty Award (2016)", "Dean Academics Leadership", "Data Analytics"],
+        badAt: ["Significant administrative responsibilities as Dean Academics", "Overseeing institutional academic policy and compliance"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/naveen-detailed-profile.pdf",
+        bio: "Dr. Naveen Dahiya is a Professor in the CSE Department and currently serves as the Dean (Academics) at MSIT. With extensive experience in academia and research since 2005, his expertise spans Data Warehouse Design and Federated Machine Learning. He is a recipient of the 'Best Faculty Award' (2016) and has multiple publications in high-impact SCIE journals."
     }
 ];
