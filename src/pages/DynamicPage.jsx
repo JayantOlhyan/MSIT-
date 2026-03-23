@@ -34,8 +34,16 @@ const DynamicPage = () => {
                 description={pageData.subtitle}
                 breadcrumbs={[
                     { label: pageData.category || 'MSIT' },
-                    { label: pageData.title }
+                    { 
+                        label: pageData.title === 'Applied Sciences' ? (
+                            <span className="group/crumb">
+                                Applied Sciences
+                                <span className="opacity-0 group-hover/crumb:opacity-100 transition-opacity duration-300 ml-1 text-blue-500 font-medium">(First Year)</span>
+                            </span>
+                        ) : pageData.title 
+                    }
                 ]}
+                suffix={pageData.title === 'Applied Sciences' ? "(First Year)" : null}
             />
 
             {/* MAIN CONTENT LAYOUT */}

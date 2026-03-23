@@ -142,7 +142,7 @@ const About = () => {
                                     <div>
                                         <h3 className="text-2xl font-semibold text-slate-900 mb-4">Electronics & Undergrad Labs</h3>
                                         <p className="text-slate-600 font-light leading-relaxed">
-                                            For the fresh students there are well equipped labs for 'Applied Sciences', 'Applied Mechanics' and 'Electrical Engg. Lab'. The Electronics & Comm. Engg. Department has eight modern laboratories covering all the important subjects e.g. Analog Electronics Lab, Control Engg. Lab, Digital Image Processing Lab. Recently a VLSI Design Lab and a Satellite & Mobile Comm. Lab have been also added.
+                                            For the fresh students there are well equipped labs for <span className="group relative inline-block cursor-help font-medium text-slate-800">'Applied Sciences'<span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1 text-blue-600 font-bold">(First Year)</span></span>, 'Applied Mechanics' and 'Electrical Engg. Lab'. The Electronics & Comm. Engg. Department has eight modern laboratories covering all the important subjects e.g. Analog Electronics Lab, Control Engg. Lab, Digital Image Processing Lab. Recently a VLSI Design Lab and a Satellite & Mobile Comm. Lab have been also added.
                                         </p>
                                     </div>
                                 </div>
