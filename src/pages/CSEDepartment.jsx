@@ -1,45 +1,25 @@
-import { Code, Server, Shield, Database, Monitor, Cpu, Terminal, ArrowRight, BookOpen, Target, CheckCircle2, ChevronRight, FileText, Calendar } from 'lucide-react';
+import { Code, Server, Shield, Database, Monitor, Cpu, Terminal, ArrowRight, BookOpen, Target, CheckCircle2, FileText, Calendar } from 'lucide-react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import PageHero from '../components/PageHero';
 
 const CSEDepartment = () => {
     // Department logic
     const [activeTab, setActiveTab] = useState('overview');
     return (
-        <main className="min-h-screen bg-slate-50">
+        <main className="min-h-screen bg-white">
             <SEO 
                 title="CSE Department" 
                 description="The Computer Science and Engineering department at MSIT offers advanced curriculum in AI, software engineering, and systems for aspiring tech leaders." 
                 canonicalPath="/cse"
             />
-            {/* HER0 - PAGE TITLE */}
-            <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-900 border-b border-slate-800">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: "url('/campus-hero.jpg')" }}></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40"></div>
-                </div>
-                <div className="relative z-10 max-w-7xl mx-auto px-6">
-                    {/* Breadcrumbs */}
-                    <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in justify-center sm:justify-start">
-                        <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-slate-500">Departments</span>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-blue-400">Computer Science</span>
-                    </div>
-
-                    <span className="text-emerald-400 font-bold tracking-widest text-sm uppercase mb-4 block animate-fade-in flex items-center justify-center gap-2">
-                        <CheckCircle2 className="w-4 h-4" /> NBA Accredited Program
-                    </span>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white tracking-tight mb-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                        Computer Science & <span className="font-semibold text-blue-400">Engineering.</span>
-                    </h1>
-                    <p className="text-xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                        The Department of Computer Science & Engineering at Maharaja Surajmal Institute of Technology (MSIT) was established in 2001 to impart world-class education and prepare future software engineers for the rapidly evolving technological landscape.
-                    </p>
-                </div>
-            </section>
+            <PageHero 
+                title="Computer Science &" 
+                accentTitle="Engineering" 
+                description="Imparting world-class education since 2001 to prepare future software engineers for the rapidly evolving technological landscape (NBA Accredited)."
+                breadcrumbs={[{ label: 'Departments' }, { label: 'Computer Science' }]}
+            />
 
             {/* QUICK RESOURCES LINKING (SEO Internal Linking) */}
             <section className="py-8 bg-slate-100 border-b border-slate-200">

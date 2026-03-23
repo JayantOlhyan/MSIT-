@@ -1,6 +1,7 @@
-import { Download, FileText, TrendingUp, Building2, Users, ChevronRight } from 'lucide-react';
+import { Download, FileText, TrendingUp, Building2, Users } from 'lucide-react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 
 const Placements = () => {
     // Placement Statistics Management
@@ -33,27 +34,12 @@ const Placements = () => {
                 description="Explore stellar placement records at Maharaja Surajmal Institute of Technology. Our graduates secure top roles at Google, Microsoft, and Amazon with 95%+ success." 
                 canonicalPath="/placements"
             />
-            {/* Extended Hero Header */}
-            <div className="bg-slate-900 py-24 text-center text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-slate-900/50 mix-blend-multiply"></div>
-                <div className="relative z-10 max-w-7xl mx-auto px-6">
-                    {/* Breadcrumbs */}
-                    <div className="flex items-center text-sm font-medium text-slate-400 mb-12 animate-fade-in justify-center sm:justify-start">
-                        <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-slate-500">MSIT</span>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-blue-400">Placements</span>
-                    </div>
-
-                    <span className="text-emerald-400 font-bold tracking-widest text-sm uppercase mb-4 block">Careers & Placements</span>
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Careers & Placements</h1>
-                    <p className="text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
-                        Maharaja Surajmal Institute of Technology (MSIT) has a legacy of producing industry-ready engineers.
- Explore our decade-long track record of stellar placements across top tech titans.
-                    </p>
-                </div>
-            </div>
+            <PageHero 
+                title="Stellar Placement" 
+                accentTitle="Records & Success" 
+                description="Maharaja Surajmal Institute of Technology (MSIT) has a legacy of producing industry-ready engineers. Explore our decade-long track record of stellar placements."
+                breadcrumbs={[{ label: 'Placements' }]}
+            />
 
             {/* Quick Stats Banner */}
             <div className="bg-white border-b border-slate-200">

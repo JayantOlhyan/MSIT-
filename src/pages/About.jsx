@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookOpen, Target, Globe, Award, Shield, Cpu, Users } from 'lucide-react';
 import SEO from '../components/SEO';
+import PageHero from '../components/PageHero';
 
 const About = () => {
     return (
@@ -10,22 +11,12 @@ const About = () => {
                 description="Discover the legacy of Maharaja Surajmal Institute of Technology. Learn about our mission to provide excellence in engineering and technology since 2001." 
                 canonicalPath="/about"
             />
-            {/* HER0 - PAGE TITLE */}
-            <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-900 border-b border-slate-800">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{ backgroundImage: "url('/campus-hero.jpg')" }}></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40"></div>
-                </div>
-                <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-                    <span className="text-blue-400 font-bold tracking-widest text-sm uppercase mb-4 block animate-fade-in">Discover MSIT</span>
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-tight mb-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                        About <span className="font-semibold text-blue-400">MSIT New Delhi.</span>
-                    </h1>
-                    <p className="text-xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                        A legacy of excellence at Maharaja Surajmal Institute of Technology, driven by the vision to shape tomorrow's engineers and innovators.
-                    </p>
-                </div>
-            </section>
+            <PageHero 
+                title="Defining Excellence" 
+                accentTitle="at MSIT New Delhi" 
+                description="A legacy of engineering brilliance, innovation, and holistic development since 2001. Shaping tomorrow's leaders today."
+                breadcrumbs={[{ label: 'About Us' }]}
+            />
 
             {/* MAIN CONTENT - THE INSTITUTE */}
             <section className="py-24 bg-white relative">

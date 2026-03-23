@@ -1,7 +1,7 @@
-import React from 'react';
-import { BookOpen, Download, FileText, LayoutTemplate, Layers, ExternalLink, ChevronRight } from 'lucide-react';
+import { BookOpen, Download, FileText, LayoutTemplate, Layers } from 'lucide-react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 
 const Syllabus = () => {
     const syllabi = [
@@ -41,32 +41,19 @@ const Syllabus = () => {
     );
 
     return (
-        <main className="min-h-screen bg-slate-50 py-16">
+        <main className="min-h-screen bg-white">
             <SEO 
                 title="Syllabus" 
-                description="Access official B.Tech syllabi for all departments at Maharaja Surajmal Institute of Technology. Download current course structures and curriculum guidelines." 
+                description="Access official B.Tech syllabi for all departments at Maharaja Surajmal Institute of Technology." 
                 canonicalPath="/syllabus"
             />
-            <div className="max-w-7xl mx-auto px-6">
-                {/* Breadcrumbs */}
-                <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
-                    <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                    <ChevronRight className="w-4 h-4 mx-2" />
-                    <span className="text-slate-500">Academics</span>
-                    <ChevronRight className="w-4 h-4 mx-2" />
-                    <span className="text-blue-400">Syllabus</span>
-                </div>
-
-                {/* Header */}
-                <div className="text-center mb-16 animate-fade-in">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider mb-6">
-                        <BookOpen className="w-4 h-4" /> Academic Resources
-                    </div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Curriculum & Syllabus</h1>
-                    <p className="text-xl text-slate-600 font-light max-w-3xl leading-relaxed">
-                        Access detailed, up-to-date syllabi for all engineering branches at Maharaja Surajmal Institute of Technology as prescribed by GGSIP University.
-                    </p>
-                </div>
+            <PageHero 
+                title="Curriculum &" 
+                accentTitle="Official Syllabus" 
+                description="Access detailed, up-to-date syllabi for all engineering branches at MSIT as prescribed by GGSIP University."
+                breadcrumbs={[{ label: 'Academics' }, { label: 'Syllabus' }]}
+            />
+            <div className="max-w-7xl mx-auto px-6 py-12">
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {/* Left Column: Departmental */}

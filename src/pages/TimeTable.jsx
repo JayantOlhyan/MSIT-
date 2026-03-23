@@ -1,38 +1,24 @@
-import { Clock, BookOpen, Layers, ChevronRight } from 'lucide-react';
+import { Clock, BookOpen, Layers } from 'lucide-react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 
 const TimeTable = () => {
     return (
-        <main className="min-h-screen bg-slate-50 py-16">
+        <main className="min-h-screen bg-white">
             <SEO 
                 title="Time Table" 
                 description="View and download current semester class schedules and lab timetables for all departments at Maharaja Surajmal Institute of Technology. Stay organized." 
                 canonicalPath="/timetable"
             />
+            <PageHero 
+                title="Academic" 
+                accentTitle="Time Table" 
+                description="View and download the latest department-wise class and laboratory schedules for the current academic semester at MSIT."
+                breadcrumbs={[{ label: 'Academics' }, { label: 'Time Table' }]}
+            />
 
-            <div className="max-w-6xl mx-auto px-6">
-                {/* Breadcrumbs */}
-                <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
-                    <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                    <ChevronRight className="w-4 h-4 mx-2" />
-                    <span className="text-slate-500">Academics</span>
-                    <ChevronRight className="w-4 h-4 mx-2" />
-                    <span className="text-blue-400">Time Table</span>
-                </div>
-
-                {/* Header Section */}
-                <div className="text-center mb-16 animate-fade-in shadow-sm bg-white border border-slate-200 p-12 rounded-3xl relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
-                    <div className="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6">
-                        <Clock className="w-10 h-10 text-blue-600" />
-                    </div>
-                    <span className="text-blue-600 font-bold tracking-widest text-sm uppercase mb-3 block">Daily Schedules</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Time Table</h1>
-                    <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
-                        View and download the latest department-wise class and laboratory schedules for the current academic semester at Maharaja Surajmal Institute of Technology.
-                    </p>
-                </div>
+            <div className="max-w-6xl mx-auto px-6 py-12">
 
                 {/* Main Content Area */}
                 <div className="bg-white rounded-xl p-8 lg:p-12 border border-slate-200 shadow-sm max-w-4xl mx-auto">
