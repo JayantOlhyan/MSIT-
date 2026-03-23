@@ -93,7 +93,7 @@ const Header = () => {
             { name: "Information Technology (IT)", url: "/it" },
             { name: "Electronics & Comm. (ECE)", url: "/ece" },
             { name: "Electrical Engineering (EEE)", url: "/eee" },
-            { name: "Applied Sciences", url: "/ap" },
+            { name: "Applied Sciences", url: "/applied-sciences" },
             { name: "Academic Calendar", url: "/academic-calendar" },
             { name: "Time Table & Syllabus", url: "/timetable" },
             { name: "Research & Innovation", url: "/research" }
@@ -194,12 +194,7 @@ const Header = () => {
                                                     </a>
                                                 ) : (
                                                     <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
-                                                        <span className="flex items-center">
-                                                            {link.name}
-                                                            {link.name === 'Applied Sciences' && (
-                                                                <span className="opacity-0 group-hover/link:opacity-100 transition-opacity duration-300 ml-1 text-blue-500 font-medium">(First Year)</span>
-                                                            )}
-                                                        </span>
+                                                        {link.name}
                                                         <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
                                                     </Link>
                                                 )

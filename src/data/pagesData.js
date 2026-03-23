@@ -247,14 +247,14 @@ export const pagesData = {
         ],
         bulletPoints: ["Renewable Energy Research", "Power Systems Lab", "Robotics & Automation"]
     },
-    "ap": {
+    "applied-sciences": {
         title: "Applied Sciences",
         subtitle: "The mathematical and scientific bedrock at Maharaja Surajmal Institute of Technology.",
         seo_description: "Learn about the Applied Sciences department at Maharaja Surajmal Institute of Technology. We provide the foundational physics and math for B.Tech students.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
         content: `
-            <p className="mb-6">Before you can engineer, you must understand the universe. The <span class="group relative inline-block cursor-help font-medium text-slate-900">Applied Sciences<span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1 text-blue-600 font-bold">(First Year)</span></span> department imparts rigorous training in Engineering Mathematics, Applied Physics, and Applied Chemistry during the critical first year.</p>
+            <p className="mb-6">Before you can engineer, you must understand the universe. The Applied Sciences department imparts rigorous training in Engineering Mathematics, Applied Physics, and Applied Chemistry during the critical first year.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">First-Year Foundation</h3>
             <p className="mb-6">Our highly experienced faculty ensure a smooth transition from high school to university, building analytical thinking muscles and deep scientific comprehension that serves as the foundation for the next three years.</p>
         `,
