@@ -273,5 +273,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative responsibilities as Dean Academics", "Overseeing institutional academic policy and compliance"],
         pdfLink: "https://www.msit.in/media/2024/10/09/naveen-detailed-profile.pdf",
         bio: "Dr. Naveen Dahiya is a Professor in the CSE Department and currently serves as the Dean (Academics) at MSIT. With extensive experience in academia and research since 2005, his expertise spans Data Warehouse Design and Federated Machine Learning. He is a recipient of the 'Best Faculty Award' (2016) and has multiple publications in high-impact SCIE journals."
+    },
+    {
+        id: 'cse-3',
+        name: "Dr. Koyel Datta Gupta",
+        role: "Professor",
+        dept: "CSE",
+        email: "koyeldg@msit.in",
+        linkedin: "https://in.linkedin.com/in/koyel-dattagupta-99832a9",
+        img: "/faculty/koyel-datta.png",
+        qual: "Ph.D. (Jamia Millia Islamia), M.Tech. Gold Medalist (Jadavpur University), B.Tech.",
+        experience: "21+",
+        publications: "36+",
+        patents: "5",
+        goodAt: ["Wireless Communication", "Machine Learning", "IoT and Blockchain", "Gold Medalist (M.Tech)", "Excellence in Research Award (2022)"],
+        badAt: ["Heavy involvement in institutional committees (AICTE, NAAC, NBA)", "Balancing research with departmental leadership responsibilities"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/koyel-dg-name-of-faculty_main-profile-16jan2026.pdf",
+        bio: "Dr. Koyel Datta Gupta is a Professor in the CSE Department at MSIT. She is an M.Tech Gold Medalist from Jadavpur University and earned her Ph.D. from Jamia Millia Islamia. With over 21 years of experience, her research focuses on Wireless Communication and Blockchain. She has received multiple 'Excellence in Research' awards and coordinates various high-level institutional cells including AICTE and Higher Study Cell."
     }
 ];
