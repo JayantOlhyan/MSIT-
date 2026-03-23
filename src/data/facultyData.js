@@ -239,5 +239,22 @@ export const facultyMembers = [
         goodAt: ["Placement Portals", "Database Management"],
         badAt: ["N/A"],
         bio: "Developing and maintaining technical systems for the MSIT Placement Cell."
+    },
+    {
+        id: 'cse-1',
+        name: "Dr. Geetika Dhand",
+        role: "Associate Professor & HOD",
+        dept: "CSE",
+        email: "geetika.dhand@msit.in",
+        linkedin: "https://in.linkedin.com/in/geetika-dhand-a775447",
+        img: "/faculty/geetika-dhand.png",
+        qual: "Ph.D., M.Tech. (IT), B.E.",
+        experience: "20+",
+        publications: "50+",
+        patents: "9",
+        goodAt: ["Artificial Intelligence", "Machine Learning", "Wireless Sensor Networks", "Data Wrangling", "Excellence in Research Award (2023)"],
+        badAt: ["Significant administrative load as HOD CSE", "Balancing departmental oversight with extensive research output"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-geetika-dhand.pdf",
+        bio: "Dr. Geetika Dhand is an Associate Professor and the current HOD of the CSE Department at MSIT. With over 20 years of teching experience, she has made significant contributions to AI, Machine Learning, and Wireless Sensor Networks. She is a recipient of the 'Excellence in Research' award (2023) and has published several books and patents in the field of technology transfer."
     }
 ];
