@@ -1,32 +1,24 @@
-import React from 'react';
 import SEO from '../components/SEO';
-import { Shield, Lock, Eye, FileText, ChevronRight } from 'lucide-react';
+import { Shield, Lock, Eye, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 
 const PrivacyPolicy = () => {
     return (
-        <main className="min-h-screen bg-slate-50 py-16">
+        <main className="min-h-screen bg-white">
             <SEO 
                 title="Privacy Policy" 
                 description="Read the official Privacy Policy of Maharaja Surajmal Institute of Technology (MSIT). Learn how we protect student data and user privacy." 
                 canonicalPath="/privacy"
             />
+            <PageHero 
+                title="Privacy &" 
+                accentTitle="Data Protection" 
+                description="Maharaja Surajmal Institute of Technology is committed to protecting the personal data of our students, faculty, and website visitors."
+                breadcrumbs={[{ label: 'MSIT' }, { label: 'Privacy Policy' }]}
+            />
             
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Breadcrumbs */}
-                <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
-                    <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                    <ChevronRight className="w-4 h-4 mx-2" />
-                    <span className="text-blue-400">Privacy Policy</span>
-                </div>
-
-                <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
-                    <div className="bg-slate-900 px-8 py-12 text-center relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
-                        <Shield className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                        <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Privacy Policy</h1>
-                        <p className="text-slate-400 text-sm italic">Last Updated: March 22, 2026</p>
-                    </div>
+            <div className="max-w-4xl mx-auto px-6 py-12">
 
                     <div className="p-8 md:p-12 space-y-10 prose prose-slate max-w-none">
                         <section>
@@ -83,7 +75,6 @@ const PrivacyPolicy = () => {
                                 <li><strong>Address:</strong> Maharaja Surajmal Institute of Technology, C-4, Janakpuri, New Delhi</li>
                             </ul>
                         </section>
-                    </div>
                 </div>
             </div>
         </main>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import SEO from '../components/SEO';
+import PageHero from '../components/PageHero';
 
 const SearchPage = () => {
     const location = useLocation();
@@ -16,18 +17,20 @@ const SearchPage = () => {
     }, [location.search]);
 
     return (
-        <div className="min-h-screen bg-slate-50 py-16">
+        <div className="min-h-screen bg-white">
             <SEO 
                 title={query ? `Search Results for "${query}"` : "Search"} 
                 description="Search for courses, departments, faculty, and academic resources at Maharaja Surajmal Institute of Technology. Find the information you need quickly today." 
                 canonicalPath="/search"
             />
-            <div className="max-w-5xl mx-auto px-4">
+            <PageHero 
+                title="Search Results for" 
+                accentTitle={query ? `"${query}"` : "MSIT"} 
+                description="Find the information you need quickly across Maharaja Surajmal Institute of Technology's departments, faculty, and resources."
+                breadcrumbs={[{ label: 'Search' }]}
+            />
+            <div className="max-w-5xl mx-auto px-4 py-12">
                 <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-8 md:p-12 mb-8">
-                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 flex items-center">
-                        <Search className="w-8 h-8 mr-4 text-blue-600" />
-                        Search Results – <span className="text-blue-600 ml-2">MSIT.</span>
-                    </h1>
 
                     {query ? (
                         <div className="space-y-4">

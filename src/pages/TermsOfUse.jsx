@@ -1,32 +1,24 @@
-import React from 'react';
 import SEO from '../components/SEO';
-import { FileText, Scale, AlertCircle, BookOpen, ChevronRight } from 'lucide-react';
+import { FileText, Scale, AlertCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 
 const TermsOfUse = () => {
     return (
-        <main className="min-h-screen bg-slate-50 py-16">
+        <main className="min-h-screen bg-white">
             <SEO 
                 title="Terms of Use" 
                 description="Review the terms and conditions for using the Maharaja Surajmal Institute of Technology (MSIT) official website and digital services." 
                 canonicalPath="/terms"
             />
+            <PageHero 
+                title="Terms &" 
+                accentTitle="Conditions" 
+                description="Review the terms and conditions for using the Maharaja Surajmal Institute of Technology (MSIT) official website and digital services."
+                breadcrumbs={[{ label: 'MSIT' }, { label: 'Terms of Use' }]}
+            />
             
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Breadcrumbs */}
-                <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
-                    <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                    <ChevronRight className="w-4 h-4 mx-2" />
-                    <span className="text-blue-400">Terms of Use</span>
-                </div>
-
-                <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
-                    <div className="bg-slate-900 px-8 py-12 text-center relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-1 bg-indigo-500"></div>
-                        <Scale className="w-12 h-12 text-indigo-400 mx-auto mb-4" />
-                        <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Terms of Use</h1>
-                        <p className="text-slate-400 text-sm italic">Last Updated: March 22, 2026</p>
-                    </div>
+            <div className="max-w-4xl mx-auto px-6 py-12">
 
                     <div className="p-8 md:p-12 space-y-10 prose prose-slate max-w-none">
                         <section>
@@ -77,7 +69,6 @@ const TermsOfUse = () => {
                                 These Terms of Use are governed by the laws of India and are subject to the exclusive jurisdiction of the courts in **New Delhi**.
                             </p>
                         </section>
-                    </div>
                 </div>
             </div>
         </main>

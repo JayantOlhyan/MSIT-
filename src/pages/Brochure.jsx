@@ -1,8 +1,7 @@
-import { BookMarked, Download, CalendarDays, ChevronRight, FileText, ExternalLink } from 'lucide-react';
-
+import { BookMarked, Download, CalendarDays, FileText } from 'lucide-react';
 import SEO from '../components/SEO';
-
 import { Link } from 'react-router-dom';
+import PageHero from '../components/PageHero';
 
 const Brochure = () => {
     const brochures = [
@@ -14,33 +13,19 @@ const Brochure = () => {
     ];
 
     return (
-        <main className="min-h-screen bg-slate-50 py-16">
+        <main className="min-h-screen bg-white">
             <SEO 
                 title="Information Brochure" 
                 description="Download the official MSIT admission brochure for the 2026-27 session. Get detailed information on courses, infrastructure, and Maharaja Surajmal Institute." 
                 canonicalPath="/brochure"
             />
-            <div className="max-w-4xl mx-auto px-6">
-                {/* Breadcrumbs */}
-                <div className="flex items-center text-sm font-medium text-slate-400 mb-8 animate-fade-in">
-                    <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-                    <ChevronRight className="w-4 h-4 mx-2" />
-                    <span className="text-slate-500">MSIT</span>
-                    <ChevronRight className="w-4 h-4 mx-2" />
-                    <span className="text-blue-400">Brochure</span>
-                </div>
-
-                {/* Header */}
-                <div className="text-center mb-16 bg-white border border-slate-200 p-12 rounded-3xl relative overflow-hidden shadow-sm">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
-                    <div className="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
-                        <BookMarked className="w-10 h-10 text-blue-600" />
-                    </div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Information Bulletins</h1>
-                    <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
-                        Download the official MSIT Information Brochures for Maharaja Surajmal Institute of Technology to explore our academic programs, faculty details, and guidelines.
-                    </p>
-                </div>
+            <PageHero 
+                title="Information" 
+                accentTitle="Bulletins & Brochure" 
+                description="Download the official MSIT Information Brochures to explore our academic programs, faculty details, and guidelines."
+                breadcrumbs={[{ label: 'MSIT' }, { label: 'Brochure' }]}
+            />
+            <div className="max-w-4xl mx-auto px-6 py-12">
 
                 {/* Brochure List */}
                 <div className="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
