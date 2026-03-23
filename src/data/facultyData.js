@@ -290,5 +290,22 @@ export const facultyMembers = [
         badAt: ["Heavy involvement in institutional committees (AICTE, NAAC, NBA)", "Balancing research with departmental leadership responsibilities"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/koyel-dg-name-of-faculty_main-profile-16jan2026.pdf",
         bio: "Dr. Koyel Datta Gupta is a Professor in the CSE Department at MSIT. She is an M.Tech Gold Medalist from Jadavpur University and earned her Ph.D. from Jamia Millia Islamia. With over 21 years of experience, her research focuses on Wireless Communication and Blockchain. She has received multiple 'Excellence in Research' awards and coordinates various high-level institutional cells including AICTE and Higher Study Cell."
+    },
+    {
+        id: 'cse-4',
+        name: "Dr. Rinky Dwivedi",
+        role: "Professor & HOD",
+        dept: "CSE",
+        email: "rinkydwivedi@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-rinky-dwivedi-0843615",
+        img: "/faculty/rinky-dwivedi.png",
+        qual: "Ph.D. (DTU), M.E. (DCE), B.Tech.",
+        experience: "19+",
+        publications: "20+",
+        patents: "3",
+        goodAt: ["Software Engineering", "Agile Method Engineering", "Machine Learning", "IoT and Blockchain", "HOD CSE Leadership"],
+        badAt: ["Significant administrative load as HOD CSE", "Managing departmental infrastructure and academic schedules"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/rinky-dwivedi.pdf",
+        bio: "Dr. Rinky Dwivedi is a Professor and the Head of Department (CSE) at MSIT. She holds a Ph.D. from DTU specializing in Agile Method Engineering. With over 19 years of teaching and research experience, her work focuses on Software Engineering and Soft Computing. She has received professional certifications like ISO Auditor and has guided numerous research projects in IoT."
     }
 ];

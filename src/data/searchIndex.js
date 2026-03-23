@@ -3,7 +3,8 @@ export const searchIndex = {
         { name: "Prof. (Dr.) Avanish Kumar Srivastava", role: "Director", dept: "Administration", url: "/administration" },
         { name: "Dr. Geetika Dhand", role: "Associate Professor & HOD", dept: "CSE", url: "/faculty" },
         { name: "Dr. Naveen Dahiya", role: "Professor & Dean Academics", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Koyel Datta Gupta", role: "Professor", dept: "CSE", url: "/faculty" }
+        { name: "Dr. Koyel Datta Gupta", role: "Professor", dept: "CSE", url: "/faculty" },
+        { name: "Dr. Rinky Dwivedi", role: "Professor & HOD", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
