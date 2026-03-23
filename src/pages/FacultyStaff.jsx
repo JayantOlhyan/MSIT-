@@ -230,7 +230,7 @@ const FacultyStaff = () => {
                             >
                                 {dept}
                                 {dept === 'Applied Sciences' && (
-                                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1 text-blue-400 font-medium">(First Year)</span>
+                                    <span className="ml-1 text-blue-400 font-medium">(1st Year)</span>
                                 )}
                             </button>
                         ))}
@@ -259,7 +259,7 @@ const FacultyStaff = () => {
                                         <span className="inline-block px-2.5 py-1 bg-slate-100 text-slate-600 text-[10px] uppercase tracking-bolder font-bold rounded-lg mb-2 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
                                             {faculty.dept}
                                             {faculty.dept === 'Applied Sciences' && (
-                                                <span className="opacity-0 group-hover/dept:opacity-100 transition-opacity duration-300 ml-1 font-bold">(First Year)</span>
+                                                <span className="ml-1 font-bold text-blue-600/70">(1st Year)</span>
                                             )}
                                         </span>
                                         <h3 className="text-lg font-bold text-slate-900 leading-tight mb-1 group-hover:text-blue-700 transition-colors line-clamp-2">{faculty.name}</h3>
@@ -332,10 +332,10 @@ const FacultyStaff = () => {
                                     <img src={selectedFaculty.img} alt={selectedFaculty.name} className="w-full h-full object-cover rounded-2xl" />
                                 </div>
                                 <div className="text-center md:text-left flex-1">
-                                    <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-widest rounded-lg mb-4 group/dept-modal">
+                                    <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-widest rounded-lg mb-4">
                                         {selectedFaculty.dept} Department
                                         {selectedFaculty.dept === 'Applied Sciences' && (
-                                            <span className="opacity-0 group-hover/dept-modal:opacity-100 transition-opacity duration-300 ml-1 text-blue-400 font-bold">(First Year)</span>
+                                            <span className="ml-1 text-blue-300 font-bold">(1st Year)</span>
                                         )}
                                     </div>
                                     <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-2">

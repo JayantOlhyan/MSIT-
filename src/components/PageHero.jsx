@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 
-const PageHero = ({ title, accentTitle, description, breadcrumbs, suffix }) => {
+const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle }) => {
     return (
         <div className="bg-slate-950 text-white py-20 px-6 relative overflow-hidden group/hero">
             {/* Opaque Bluish Background Effect */}
@@ -29,14 +29,16 @@ const PageHero = ({ title, accentTitle, description, breadcrumbs, suffix }) => {
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-                    {title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 animate-gradient-x">{accentTitle}</span>
-                    {suffix && (
-                        <span className="opacity-0 group-hover/hero:opacity-100 transition-opacity duration-500 ml-4 lg:ml-6 text-xl md:text-3xl lg:text-4xl align-middle text-blue-500/60 font-medium tracking-normal inline-block transform translate-y-[-2px]">
-                            {suffix}
-                        </span>
+                <div className="mb-8">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-2">
+                        {title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 animate-gradient-x">{accentTitle}</span>
+                    </h1>
+                    {subtitle && (
+                        <div className="text-xl md:text-3xl font-light text-blue-400/80 tracking-widest uppercase">
+                            {subtitle}
+                        </div>
                     )}
-                </h1>
+                </div>
 
                 {/* Description */}
                 {description && (

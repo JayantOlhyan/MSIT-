@@ -36,14 +36,14 @@ const DynamicPage = () => {
                     { label: pageData.category || 'MSIT' },
                     { 
                         label: pageData.title === 'Applied Sciences' ? (
-                            <span className="group/crumb">
+                            <span>
                                 Applied Sciences
-                                <span className="opacity-0 group-hover/crumb:opacity-100 transition-opacity duration-300 ml-1 text-blue-500 font-medium">(First Year)</span>
+                                <span className="ml-1 text-blue-500 font-medium">(1st Year)</span>
                             </span>
                         ) : pageData.title 
                     }
                 ]}
-                suffix={pageData.title === 'Applied Sciences' ? "(First Year)" : null}
+                subtitle={pageData.title === 'Applied Sciences' ? "1st Year" : null}
             />
 
             {/* MAIN CONTENT LAYOUT */}
