@@ -307,5 +307,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as HOD CSE", "Managing departmental infrastructure and academic schedules"],
         pdfLink: "https://www.msit.in/media/2024/10/09/rinky-dwivedi.pdf",
         bio: "Dr. Rinky Dwivedi is a Professor and the Head of Department (CSE) at MSIT. She holds a Ph.D. from DTU specializing in Agile Method Engineering. With over 19 years of teaching and research experience, her work focuses on Software Engineering and Soft Computing. She has received professional certifications like ISO Auditor and has guided numerous research projects in IoT."
+    },
+    {
+        id: 'cse-5',
+        name: "Dr. Naresh Kumar",
+        role: "Professor",
+        dept: "CSE",
+        email: "nareshkumar@msit.in",
+        linkedin: "#",
+        img: "/faculty/naresh-kumar.png",
+        qual: "Ph.D., M.Tech., B.Tech.",
+        experience: "16+",
+        publications: "13+",
+        patents: "0",
+        goodAt: ["Web Technologies", "Information Retrieval", "Deepfake Detection", "Search Engine Optimization", "NSGA-III based Deep Learning"],
+        badAt: ["Common name profile conflicts on social research platforms", "Managing multiple high-level research data sets"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-naresh-kumar.pdf",
+        bio: "Dr. Naresh Kumar is a Professor in the CSE Department at MSIT with over 16 years of academic experience. His research interests include Web Technologies, Information Retrieval, and Deep Learning applications such as COVID-19 screening and deepfake detection. He is an active member of ISTE and serves as the Convener of the SC/ST Cell at MSIT."
     }
 ];
