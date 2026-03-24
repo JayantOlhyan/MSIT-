@@ -715,5 +715,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load in Software Development and Placement cells", "Managing departmental ISO records and NBA documentation"],
         pdfLink: "https://www.msit.in/media/2024/10/09/gunjan_main-profile.pdf",
         bio: "Ms. Gunjan Beniwal is an Assistant Professor in the CSE Department at MSIT with over 9 years of experience. She is currently pursuing her Ph.D. and has research expertise in Internet of Things (IoT), Fog Computing, and QoS monitoring. She is an active member of MSIT's Software Development and Placement cells and holds a patent in IoT-based healthcare monitoring."
+    },
+    {
+        id: 'cse-29',
+        name: "Dr. Vikrant Shokeen",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "vikrantshokeen@msit.in",
+        linkedin: "https://in.linkedin.com/in/vikrant-shokeen-61870123",
+        img: "/faculty/vikrant-shokeen.png",
+        qual: "Ph.D., M.Tech., B.Tech.",
+        experience: "4+",
+        publications: "4+",
+        patents: "1",
+        goodAt: ["Machine Learning", "Image Processing", "Medical Image Analysis (Lung Cancer Detection)", "Blockchain Technology", "Biometric Sensing"],
+        badAt: ["Significant focus on high-impact conference representations (ICCAD Paris)", "Managing cross-disciplinary research in federated learning and IoT monitoring"],
+        pdfLink: "https://www.msit.in/media/2021/11/29/vikrant-shokeen_main-profile-converted.pdf",
+        bio: "Dr. Vikrant Shokeen is an Assistant Professor in the CSE Department at MSIT. He holds a Ph.D. and specializes in Machine Learning and Image Processing, with significant research in medical imaging for lung cancer detection. He recently represented MSIT at the international ICCAD conference in Paris (2024) and holds a patent for an IoT-based gas monitoring system."
     }
 ];
