@@ -1956,5 +1956,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from research in chaos theory", "Managing microexpression analysis projects while overseeing department-wide solar electric bus research"],
         pdfLink: "https://www.msit.in/media/2021/11/24/mamta-rani_main-profile.pdf",
         bio: "Ms. Mamta Rani is an Assistant Professor in the EEE Department at MSIT with 10 years of experience. She is currently pursuing her Ph.D. and specializes in Computer Vision, Machine Learning, and Artificial Intelligence. Her research, which includes microexpression analysis and solar electric transport systems, has been presented at international conferences like the 3rd International Conference on Computing Informatics and Networks."
+    },
+    {
+        id: 'eee-11',
+        name: "Mr. Sachit Rathee",
+        role: "Assistant Professor",
+        dept: "EEE",
+        email: "rathisachit16@msit.in",
+        linkedin: "https://linkedin.com/in/sachit-rathee-153835a6",
+        img: "/faculty/sachit-rathee.png",
+        qual: "Ph.D (p), M.Tech., B.Tech.",
+        experience: "5",
+        publications: "4+",
+        patents: "0",
+        goodAt: ["Electric Vehicle", "Reliability", "Optimization", "Renewable Energy", "Wireless Power Transfer"],
+        badAt: ["Significant administrative load from placement coordination", "Managing research in MIMO-OFDM systems while overseeing department-wide disaster committee assignments"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/sachit-rathee_main-profile.pdf",
+        bio: "Mr. Sachit Rathee is an Assistant Professor in the EEE Department at MSIT with 5 years of experience. He is currently pursuing his Ph.D. and specializes in Electric Vehicle infrastructure, Reliability, and Optimization. His research on inductive power transfer and MIMO-OFDM systems has been published in journals such as IJREAT and IJETR, and he serves as a placement coordinator for the department."
     }
 ];
