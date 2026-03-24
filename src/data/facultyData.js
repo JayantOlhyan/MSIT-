@@ -1157,5 +1157,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from outstanding contribution recognition", "Managing complex vulnerability assessments for cryptocurrency wallets while overseeing IoT patent implementation"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-ms-saba-khanum-msit-it-faculty.pdf",
         bio: "Dr. Saba Khanum is an Assistant Professor in the IT Department at MSIT with over 10 years of experience. She is currently pursuing her Ph.D. from Jamia Millia Islamia and is an expert in Blockchain and Information Security. A recipient of a 'Best Paper Award' in 2023, she has published extensively on lattice-based signatures and sensitive data protection in blockchain applications."
+    },
+    {
+        id: 'it-19',
+        name: "Dr. Preeti Sehrawat",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "preeti@msit.in",
+        linkedin: "https://in.linkedin.com/in/preeti-sehrawat-28a14316a",
+        img: "/faculty/preeti-sehrawat.png",
+        qual: "Ph.D. (Pursuing), M.Tech., B.E.",
+        experience: "10",
+        publications: "4+",
+        patents: "0",
+        goodAt: ["Wireless Communication", "Vehicular Networking (VANETs)", "Machine Learning", "SDTMRP Routing", "Image Colorization"],
+        badAt: ["Significant administrative load as Life Time Member of ISTE New Delhi", "Managing complex performance evaluation of machine learning algorithms in SD-VANET environments"],
+        pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-preeti-sehrawat-it-faculty-msit.pdf",
+        bio: "Dr. Preeti Sehrawat is an Assistant Professor in the IT Department at MSIT with 10 years of experience. She is currently pursuing her Ph.D. and specializes in Wireless Communication and Vehicular Networking (VANETs). Her latest research, published in high-impact journals, focuses on machine learning algorithms for efficient multimedia transmission in SD-VANET systems."
     }
 ];
