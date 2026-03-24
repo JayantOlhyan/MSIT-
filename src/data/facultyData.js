@@ -579,5 +579,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load in Examination Cell and Infrastructure Committee", "Managing hospitality for large-scale international conferences (ICAIA)"],
         pdfLink: "https://www.msit.in/media/2021/11/29/navdeep_TTDeLKN.pdf",
         bio: "Dr. Navdeep Bohra is an Assistant Professor in the CSE Department at MSIT with over 15 years of experience across academia and industry. He is currently pursuing his Ph.D. and specializes in Machine Learning and Popularity Prediction. He holds a granted patent for an IoT-based waste management system and has a strong background in departmental administrative roles, including the Examination Cell."
+    },
+    {
+        id: 'cse-21',
+        name: "Dr. Ravi Choudhary",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "ravichoudhary@msit.in",
+        linkedin: "#",
+        img: "/faculty/ravi-choudhary.png",
+        qual: "Ph.D. (Pursuing), M.Tech., B.Tech.",
+        experience: "16+",
+        publications: "4",
+        patents: "0",
+        goodAt: ["Control Systems", "Power Systems", "Machine Learning", "Energy Storage Optimization", "Research Excellence Award (2023)"],
+        badAt: ["Significant focus on power system modeling and controller tuning", "Balancing Ph.D. research with high-volume academic commitments"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/ravi-choudhary_main-profile.pdf",
+        bio: "Dr. Ravi Choudhary is an Assistant Professor in the CSE Department at MSIT with 16 years of academic experience. He is currently pursuing his Ph.D. and holds an M.Tech. from NSIT Delhi. He was awarded the 'Research Excellence Award (2023)' by DTU for his SCI paper publications. His research interests include Power Systems, Intelligent Algorithms, and Machine Learning."
     }
 ];
