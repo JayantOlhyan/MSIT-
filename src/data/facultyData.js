@@ -2011,19 +2011,19 @@ export const facultyMembers = [
     {
         id: 'as-2',
         name: "Dr. Ajay Kumar Singh",
-        role: "Professor (Deputy Director)",
+        role: "Associate Professor (Deputy Director)",
         dept: "Applied Sciences",
-        email: "ajayks@msit.in",
-        linkedin: "https://scholar.google.com/citations?user=placeholder2",
+        email: "ajaysingh@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=Lzl6fO8AAAAJ",
         img: "/faculty/ajay-kumar-singh.png",
-        qual: "Ph.D., B.E.",
-        experience: "20",
+        qual: "Ph.D., M.Sc., B.E.",
+        experience: "25",
         publications: "20+",
         patents: "0",
-        goodAt: ["Uranium Concentration in Rock", "Soil and Fly Ash", "Radon Levels", "Physics", "Environmental Monitoring"],
-        badAt: ["Significant administrative load from Deputy Director duties", "Managing complex radon measurement projects while overseeing institute-wide governing body representation"],
-        pdfLink: "https://msit.in/faculty/ajay-kumar-singh",
-        bio: "Dr. Ajay Kumar Singh is a Professor and the Deputy Director of MSIT, serving in the Applied Sciences Department. He holds a Ph.D. in Physics from AMU and has over 20 years of teaching experience. A prolific researcher, he has published over 20 research papers specializing in Uranium concentration and Radon levels in various materials, and has co-authored two books published by McGraw Hill."
+        goodAt: ["Liquid Crystals", "Condensed Matter Physics", "Physics", "Uranium Concentration", "Governing Body Representation"],
+        badAt: ["Significant administrative load as Deputy Director and HOD of Applied Science", "Managing high-volume physics research projects while overseeing foundational courses and teacher representation in the Governing Body"],
+        pdfLink: "https://www.msit.in/media/2021/12/08/aks_main-profile.pdf",
+        bio: "Dr. Ajay Kumar Singh is an Associate Professor of Physics at MSIT. His research interests include Liquid Crystals and Condensed Matter Physics. He has published numerous papers in international journals of repute."
     },
     {
         id: 'as-3',
