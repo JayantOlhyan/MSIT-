@@ -1259,5 +1259,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Proctor and Mentor", "Managing high-volume online platform content reviews while overseeing R&D team duties"],
         pdfLink: "https://www.msit.in/media/2022/05/09/priyankak_cv_msit.pdf",
         bio: "Ms. Priyanka Kalkandha is an Assistant Professor in the IT Department at MSIT with 5 years of teaching experience. She holds an M.Tech. from BIT Mesra and is a three-time NTA NET qualifier. Her expertise lies in energy-efficient routing protocols for sensor networks and web security, with previous experience as an educator and content reviewer for major platforms like Unacademy."
+    },
+    {
+        id: 'it-25',
+        name: "Ms. Nidhi Goel",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "nidhi.goel@msit.in",
+        linkedin: "https://in.linkedin.com/in/nidhi-goel-3b246a21",
+        img: "/faculty/nidhi-goel.png",
+        qual: "M.Tech., MCA, Ph.D. (Pursuing)",
+        experience: "12.5+",
+        publications: "2+",
+        patents: "0",
+        goodAt: ["Data Mining", "Internet of Things (IoT)", "Biometric Techniques", "Cyber Security", "Deep Learning"],
+        badAt: ["Significant administrative load from technical training and proctor duties", "Managing complex research in ubiquitous computing while overseeing software certifications"],
+        pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-nidhi-goel-it-faculty-msit.pdf",
+        bio: "Ms. Nidhi Goel is an Assistant Professor in the IT Department at MSIT with over 12 years of academic experience. She holds an M.Tech. (CSE) and MCA, and is currently pursuing her Ph.D. from GGSIPU. Her research expertise includes Data Mining and IoT, and she has been recognized for her outstanding academic record including a first position in her MCA at the university level."
     }
 ];
