@@ -1973,5 +1973,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from placement coordination", "Managing research in MIMO-OFDM systems while overseeing department-wide disaster committee assignments"],
         pdfLink: "https://www.msit.in/media/2021/11/24/sachit-rathee_main-profile.pdf",
         bio: "Mr. Sachit Rathee is an Assistant Professor in the EEE Department at MSIT with 5 years of experience. He is currently pursuing his Ph.D. and specializes in Electric Vehicle infrastructure, Reliability, and Optimization. His research on inductive power transfer and MIMO-OFDM systems has been published in journals such as IJREAT and IJETR, and he serves as a placement coordinator for the department."
+    },
+    {
+        id: 'eee-12',
+        name: "Ms. Nisha Singh",
+        role: "Assistant Professor",
+        dept: "EEE",
+        email: "nishasingh@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=MIm2vJYyjLYC",
+        img: "/faculty/nisha-singh.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "5",
+        publications: "7+",
+        patents: "0",
+        goodAt: ["Automatic generation control", "Deregulated power system", "Optimal power flow", "Power frequency balance", "Wireless Sensor Networks"],
+        badAt: ["Significant administrative load from AICTE PARAKH coordination", "Managing research in subsynchronous resonance while overseeing department-wide AC-DC link simulation labs"],
+        pdfLink: "https://www.msit.in/media/2022/12/21/detailed-profile.pdf",
+        bio: "Ms. Nisha Singh is an Assistant Professor in the EEE Department at MSIT with over 5 years of experience. She holds an M.Tech. in Power Systems and specializes in Automatic Generation Control in deregulated power systems and Optimal Power Flow. Her research, published in journals such as Recent Advances in Electrical & Electronic Engineering, focuses on subsynchronous resonance and power frequency balance in interconnected systems."
     }
 ];
