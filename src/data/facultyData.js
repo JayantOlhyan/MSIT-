@@ -2483,5 +2483,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from transition metal complex research coordination", "Managing agricultural automation patents while overseeing foundational chemistry courses as an ad-hoc faculty member for over 15 years"],
         pdfLink: "https://msit.in/faculty/malvika-chaudhary",
         bio: "Dr. Malvika Chaudhary is an Assistant Professor (Ad-hoc) in the Applied Sciences Department (Chemistry) at MSIT with over 15 years of experience. She holds a Ph.D. in Chemistry from CCSU Meerut. Her research involves Transition Metal Complexes of Biologically Active Amines and she holds a patent for a real-time Agricultural Automation Irrigation System."
+    },
+    {
+        id: 'as-30',
+        name: "Dr. Anjali Gupta",
+        role: "Assistant Professor (Ad-hoc)",
+        dept: "Applied Sciences",
+        email: "anjali.gupta@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder30",
+        img: "/faculty/anjali-gupta.png",
+        qual: "Ph.D.",
+        experience: "5",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Approximation Theory in Mathematics", "Mathematical Analysis", "Numerical Methods", "Stochastic Systems", "Advanced Calculus"],
+        badAt: ["Significant administrative load from approximation theory research coordination", "Managing competitive exam preparation modules while overseeing foundational mathematics courses as an ad-hoc faculty member"],
+        pdfLink: "https://msit.in/faculty/anjali-gupta",
+        bio: "Dr. Anjali Gupta is an Assistant Professor (Ad-hoc) in the Applied Sciences Department (Mathematics) at MSIT. She holds a Ph.D. in Mathematics, specializing in Approximation Theory. She has a strong academic background, including being a GATE 2021 and CSIR NET June 2022 qualified scholar, and was an INSPIRE Scholarship recipient."
     }
 ];

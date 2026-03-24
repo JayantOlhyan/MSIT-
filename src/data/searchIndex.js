@@ -132,7 +132,8 @@ export const searchIndex = {
         { name: "Dr. Sachin Dhull", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Ms. Anisha", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Ms. Mansi", role: "Assistant Professor (Ad-hoc)", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Malvika Chaudhary", role: "Assistant Professor (Ad-hoc)", dept: "Applied Sciences", url: "/faculty" }
+        { name: "Dr. Malvika Chaudhary", role: "Assistant Professor (Ad-hoc)", dept: "Applied Sciences", url: "/faculty" },
+        { name: "Dr. Anjali Gupta", role: "Assistant Professor (Ad-hoc)", dept: "Applied Sciences", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
