@@ -58,7 +58,8 @@ export const searchIndex = {
         { name: "Dr. Preeti Sehrawat", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Dr. Preeti Rathee", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Ms. Ashish Kumari", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Mr. Akshay Singh", role: "Assistant Professor", dept: "IT", url: "/faculty" }
+        { name: "Mr. Akshay Singh", role: "Assistant Professor", dept: "IT", url: "/faculty" },
+        { name: "Dr. Priya Dalal", role: "Assistant Professor", dept: "IT", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

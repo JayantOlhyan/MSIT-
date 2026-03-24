@@ -1225,5 +1225,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Proctor and Committee member", "Managing high-volume research in blockchain projects while overseeing environmental management duties"],
         pdfLink: "https://www.msit.in/media/2021/11/24/akshay-singh_main-profile.pdf",
         bio: "Mr. Akshay Singh is an Assistant Professor in the IT Department at MSIT. He holds an M.Tech. from USICT (GGSIPU) and is a three-time GATE qualifier. With previous experience as a J.R.F. at AIIMS Delhi and Associate Consultant at Oodles Technologies, his research focuses on deep learning applications in medical imaging and automated diagnostic systems."
+    },
+    {
+        id: 'it-23',
+        name: "Dr. Priya Dalal",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "priya@msit.in",
+        linkedin: "https://in.linkedin.com/in/priya-dalal-b2a14316a",
+        img: "/faculty/priya-dalal.png",
+        qual: "Ph.D., M.Tech (CSE), B.E (CSE)",
+        experience: "11+",
+        publications: "12+",
+        patents: "3",
+        goodAt: ["Internet of Things", "Cloud Computing", "Healthcare Analytics", "Explainable AI (XAI)", "Blockchain"],
+        badAt: ["Significant administrative load from GDSC advising and farewell organizing", "Managing complex research in LPWAN technologies while overseeing multiple smart grid patents"],
+        pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-dr-priya-dalal-it-faculty-msit.pdf",
+        bio: "Dr. Priya Dalal is an Assistant Professor in the IT Department at MSIT with over 11 years of experience. She holds a Ph.D. and specializes in IoT and Cloud Computing. An active researcher with three patents and a book on Data Science, her work focuses on integrated healthcare models and AI-driven systems for emerging vehicle technologies."
     }
 ];
