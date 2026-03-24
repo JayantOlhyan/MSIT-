@@ -1208,5 +1208,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from patent management", "Managing complex research in system orientation and automatic test case generation"],
         pdfLink: "https://www.msit.in/media/2021/11/24/ashish_main-profile.pdf",
         bio: "Ms. Ashish Kumari is an Assistant Professor in the IT Department at MSIT with 7 years of experience. She holds an M.Tech. and is currently pursuing her Ph.D. from DTU. Her research specializes in Data Science and IoT, specifically focusing on steganography and automated testing, for which she holds a patent in IoT-based intelligent waste management systems."
+    },
+    {
+        id: 'it-22',
+        name: "Mr. Akshay Singh",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "akshaysingh@msit.in",
+        linkedin: "https://in.linkedin.com/in/akshay-singh-612b7a13a",
+        img: "/faculty/akshay-singh.png",
+        qual: "M.Tech (CSE), B.Tech (CSE)",
+        experience: "2+",
+        publications: "2+",
+        patents: "0",
+        goodAt: ["Machine Learning", "Deep Learning", "Medical Imaging", "Vessel Segmentation", "Data Wrangling"],
+        badAt: ["Significant administrative load as Proctor and Committee member", "Managing high-volume research in blockchain projects while overseeing environmental management duties"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/akshay-singh_main-profile.pdf",
+        bio: "Mr. Akshay Singh is an Assistant Professor in the IT Department at MSIT. He holds an M.Tech. from USICT (GGSIPU) and is a three-time GATE qualifier. With previous experience as a J.R.F. at AIIMS Delhi and Associate Consultant at Oodles Technologies, his research focuses on deep learning applications in medical imaging and automated diagnostic systems."
     }
 ];
