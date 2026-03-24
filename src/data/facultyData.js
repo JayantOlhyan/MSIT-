@@ -2024,5 +2024,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from Deputy Director duties", "Managing complex radon measurement projects while overseeing institute-wide governing body representation"],
         pdfLink: "https://msit.in/faculty/ajay-kumar-singh",
         bio: "Dr. Ajay Kumar Singh is a Professor and the Deputy Director of MSIT, serving in the Applied Sciences Department. He holds a Ph.D. in Physics from AMU and has over 20 years of teaching experience. A prolific researcher, he has published over 20 research papers specializing in Uranium concentration and Radon levels in various materials, and has co-authored two books published by McGraw Hill."
+    },
+    {
+        id: 'as-3',
+        name: "Dr. Man Singh Beniwal",
+        role: "Professor",
+        dept: "Applied Sciences",
+        email: "mansingh@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder3",
+        img: "/faculty/man-singh-beniwal.png",
+        qual: "Ph.D.",
+        experience: "33",
+        publications: "15+",
+        patents: "0",
+        goodAt: ["Approximation Theory", "Linear Positive Operators", "Wave Propagation", "Engineering Mathematics"],
+        badAt: ["Significant administrative load from overseeing department-wide mathematics curriculum", "Managing research in wave propagation while coordinating high-volume first-year engineering mathematics courses"],
+        pdfLink: "https://msit.in/faculty/man-singh-beniwal",
+        bio: "Dr. Man Singh Beniwal is a Professor in the Applied Sciences Department (Mathematics) at MSIT with over 33 years of extensive teaching experience. He holds a Ph.D. in Mathematics and specializes in Approximation Theory and Linear Positive Operators. His research includes wave propagation, and he has published 15+ research papers in national and international journals."
     }
 ];
