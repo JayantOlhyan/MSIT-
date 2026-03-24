@@ -2150,16 +2150,16 @@ export const facultyMembers = [
         role: "Assistant Professor",
         dept: "Applied Sciences",
         email: "surender@msit.in",
-        linkedin: "https://scholar.google.com/citations?user=placeholder10",
+        linkedin: "https://www.researchgate.net/profile/Surender-Kumar-52",
         img: "/faculty/surender.png",
         qual: "Ph.D., M.Sc.",
         experience: "18",
         publications: "10+",
         patents: "0",
-        goodAt: ["Conducting Polymer Nanocomposites", "Organic Chemistry", "Polymer Chemistry", "UGC-CSIR NET Research"],
-        badAt: ["Significant administrative load from conducting polymer research infrastructure", "Managing nanocomposite characterization projects while overseeing first-year organic chemistry laboratory sessions"],
-        pdfLink: "https://msit.in/faculty/surender",
-        bio: "Dr. Surender is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT with over 18 years of teaching experience. He holds a Ph.D. in Chemistry and is UGC-CSIR NET qualified. His research expertise lies in Conducting Polymer Nanocomposites, and he specializing in Organic chemistry, having earned his M.Sc. from MDU."
+        goodAt: ["Magnetic Materials", "Ferrites", "Nanoparticles", "Structural Properties", "Physics"],
+        badAt: ["Significant administrative load from magnetic materials research lab safety", "Managing nanoparticle structural analysis while overseeing foundational physics courses for nearly two decades"],
+        pdfLink: "https://www.msit.in/media/2025/02/14/dr-surender-applied-sciences-m-main-profile.pdf",
+        bio: "Dr. Surender is an Assistant Professor of Physics at MSIT. His research area includes Magnetic Materials and Ferrites. He is involved in the study of structural and magnetic properties of nanoparticles."
     },
     {
         id: 'as-11',
