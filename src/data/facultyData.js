@@ -1854,5 +1854,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from doctoral research", "Managing iterative fuzzy clustering projects while overseeing department-wide ubiquitous computing applications"],
         pdfLink: "https://www.msit.in/media/2021/11/24/soniagoel_main-profile.pdf",
         bio: "Dr. Sonia Goel is an Assistant Professor in the EEE Department at MSIT with 20 years of experience. She is currently pursuing her Ph.D. and specializes in Control Systems and Fuzzy Clustering Techniques. Her research, published in journals like Recent Advances in Electrical & Electronic Engineering, focuses on innovative approaches for missing data handling and imputation-based fuzzy modeling for ubiquitous computing."
+    },
+    {
+        id: 'eee-5',
+        name: "Ms. Annu Dagar",
+        role: "Assistant Professor",
+        dept: "EEE",
+        email: "annudagar@msit.in",
+        linkedin: "https://linkedin.com/in/annu-dagar-600985160",
+        img: "/faculty/annu-dagar.png",
+        qual: "B.Tech (EEE), M.Tech (EEE), Ph.D (p)",
+        experience: "12",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Renewable Energy", "Microgrid", "Microgrid Protection", "Islanding Detection", "Hybrid AC/DC Microgrid"],
+        badAt: ["Significant administrative load from time table committee as coordinator", "Managing complex research in islanding detection while overseeing department-wide write-off audits"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/annu-dagar_main-profile.pdf",
+        bio: "Ms. Annu Dagar is an Assistant Professor in the EEE Department at MSIT with 12 years of experience. She is currently pursuing her Ph.D. and specializes in Renewable Energy and Microgrid Protection. Her research on islanding detection methods and hybrid AC/DC microgrids has been published in high-impact journals like Renewable and Sustainable Energy Reviews (Impact Factor 14.982)."
     }
 ];
