@@ -1837,5 +1837,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from exam coordination as Deputy Superintendent", "Managing complex research in quantum technology for 6G while overseeing lab development for Electrical Science"],
         pdfLink: "https://www.msit.in/media/2024/12/10/final-resume-jyoti.pdf",
         bio: "Dr. Jyoti Jain is an Associate Professor in the EEE Department at MSIT with over 30 years of experience. She holds a Ph.D. and specializes in Power System Optimization and Swarm Intelligence. An IEEE Senior Member and Outstanding Engineer Award recipient (2020), she has significantly contributed to the institute by setting up Electrical Machines laboratories and serving as a chapter advisor for IEEE PES MSIT."
+    },
+    {
+        id: 'eee-4',
+        name: "Dr. Sonia Goel",
+        role: "Assistant Professor",
+        dept: "EEE",
+        email: "soniagoel@msit.in",
+        linkedin: "https://researchgate.net/profile/Sonia-Goel",
+        img: "/faculty/sonia-goel.png",
+        qual: "B.E. (EE), M.E (I&C), Ph.D (p)",
+        experience: "20",
+        publications: "7+",
+        patents: "0",
+        goodAt: ["Control Systems", "Fuzzy Clustering", "Data Analytics", "Machine Learning", "Incomplete Data Handling"],
+        badAt: ["Significant administrative load from doctoral research", "Managing iterative fuzzy clustering projects while overseeing department-wide ubiquitous computing applications"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/soniagoel_main-profile.pdf",
+        bio: "Dr. Sonia Goel is an Assistant Professor in the EEE Department at MSIT with 20 years of experience. She is currently pursuing her Ph.D. and specializes in Control Systems and Fuzzy Clustering Techniques. Her research, published in journals like Recent Advances in Electrical & Electronic Engineering, focuses on innovative approaches for missing data handling and imputation-based fuzzy modeling for ubiquitous computing."
     }
 ];
