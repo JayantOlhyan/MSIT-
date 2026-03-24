@@ -2347,5 +2347,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from hypergeometric function research coordination", "Managing complex special function analytics while overseeing department-wide mathematics student performance for over 15 years"],
         pdfLink: "https://msit.in/faculty/pooja-singh-math",
         bio: "Dr. Pooja Singh is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT with over 15 years of teaching experience since 2009. She holds a Ph.D. in Mathematics and specializes in Special Functions, specifically focusing on Hypergeometric and Generalized Hypergeometric Functions and their various scientific applications."
+    },
+    {
+        id: 'as-22',
+        name: "Dr. Rashmi Gupta",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "rashmi@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder22",
+        img: "/faculty/rashmi-gupta.png",
+        qual: "Ph.D., M.Phil.",
+        experience: "15",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Teaching English Language Expansion in India", "Indian Writing in English Literature", "Societal Problems and Solutions through Literature", "Communication Skills", "Literary Analysis"],
+        badAt: ["Significant administrative load from literature-based societal solution research coordination", "Managing English language expansion projects while overseeing foundational communication skills for first-year engineering students"],
+        pdfLink: "https://msit.in/faculty/rashmi-gupta",
+        bio: "Dr. Rashmi Gupta is an Assistant Professor in the Applied Sciences Department (English/Communication Skills) at MSIT. She holds a Ph.D. and an M.Phil. in English. Her research interests include the expansion of English language teaching in India and Indian writing in English literature, with a focus on addressing societal problems through literary solutions."
     }
 ];
