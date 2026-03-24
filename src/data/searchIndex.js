@@ -45,7 +45,8 @@ export const searchIndex = {
         { name: "Mr. Manoj Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Dr. Sonika Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Dr. Jyoti Khurana", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Deepshikha Yadav", role: "Assistant Professor", dept: "IT", url: "/faculty" }
+        { name: "Dr. Deepshikha Yadav", role: "Assistant Professor", dept: "IT", url: "/faculty" },
+        { name: "Dr. Meena Siwach", role: "Assistant Professor", dept: "IT", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

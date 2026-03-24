@@ -1004,5 +1004,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from multiple prize-winning projects", "Managing complex research in thermoelectric materials and SMPS testing standards"],
         pdfLink: "https://www.msit.in/media/2022/07/23/deepshikha-yadav_main-profile.pdf",
         bio: "Dr. Deepshikha Yadav is an Assistant Professor in the IT Department at MSIT with over 12 years of experience. She is currently pursuing her Ph.D. from GGSIPU and specializes in Renewable Energy Resources and Embedded Systems. Her award-winning research includes low-cost triboelectric sensors and solar energy harvesting, and she holds a patent for a Wi-Fi based home automation system."
+    },
+    {
+        id: 'it-10',
+        name: "Dr. Meena Siwach",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "meena.siwach@msit.in",
+        linkedin: "https://in.linkedin.com/in/meena-siwach-84221124",
+        img: "/faculty/meena-siwach.png",
+        qual: "M.Tech. (IT), B.Tech.(CSE)",
+        experience: "14+",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Data Warehousing", "Data Mining", "Machine Learning", "Deep Learning", "Image Segmentation"],
+        badAt: ["Significant administrative load from long-standing teaching career", "Managing complex meta-analysis of statistical techniques and transition strategies for IPv6"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/meena-siwach_main-profile.pdf",
+        bio: "Dr. Meena Siwach is an Assistant Professor in the IT Department at MSIT with over 14 years of teaching experience. She holds an M.Tech. (IT) and specializes in Data Warehousing and Data Mining. Her research contributions include papers on statistical techniques in ICAIA and transition strategies for networking, and she has been recognized with an Appreciation Certificate for her consistent performance."
     }
 ];
