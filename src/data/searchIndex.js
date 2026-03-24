@@ -6,7 +6,8 @@ export const searchIndex = {
         { name: "Dr. Koyel Datta Gupta", role: "Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Rinky Dwivedi", role: "Professor & HOD", dept: "CSE", url: "/faculty" },
         { name: "Dr. Naresh Kumar", role: "Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Priyanka Nandal", role: "Associate Professor", dept: "CSE", url: "/faculty" }
+        { name: "Dr. Priyanka Nandal", role: "Associate Professor", dept: "CSE", url: "/faculty" },
+        { name: "Dr. Sandeep Kumar", role: "Associate Professor", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
