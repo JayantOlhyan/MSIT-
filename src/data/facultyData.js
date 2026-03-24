@@ -2079,19 +2079,19 @@ export const facultyMembers = [
     {
         id: 'as-6',
         name: "Dr. Sobinder Singh",
-        role: "Associate Professor",
+        role: "Assistant Professor",
         dept: "Applied Sciences",
         email: "sobinder@msit.in",
-        linkedin: "https://scholar.google.com/citations?user=placeholder6",
+        linkedin: "https://scholar.google.com/citations?user=Y7y8qQUAAAAJ",
         img: "/faculty/sobinder-singh.png",
-        qual: "Ph.D.",
+        qual: "Ph.D., M.Sc.",
         experience: "15",
         publications: "10+",
         patents: "0",
-        goodAt: ["Cloud Computing", "Energy Consumption Reduction", "Building Blocks of Cloud Computing", "Cloud Models", "Research Challenges"],
-        badAt: ["Significant administrative load from physics department research coordination", "Managing energy consumption reduction in cloud models while overseeing first-year physics laboratories"],
-        pdfLink: "https://msit.in/faculty/sobinder-singh",
-        bio: "Dr. Sobinder Singh is an Associate Professor in the Applied Sciences Department (Physics) at MSIT. He holds a Ph.D. in Physics and specializes in Cloud Computing, particularly focusing on Energy Consumption Reduction and the building blocks of cloud models. His research addresses key challenges in cloud computing infrastructures, while he teaches core physics courses to undergraduate students."
+        goodAt: ["Theoretical Condensed Matter Physics", "Electronic Properties", "Transport Properties", "Low-dimensional Systems", "Physics"],
+        badAt: ["Significant administrative load from condensed matter physics research lab simulation management", "Managing electronic property research while overseeing foundational physics courses for multiple engineering departments"],
+        pdfLink: "https://www.msit.in/media/2021/12/08/drsobinder-singh_main-profile.pdf",
+        bio: "Dr. Sobinder Singh is an Assistant Professor of Physics at MSIT. He specializes in Theoretical Condensed Matter Physics, specifically investigating the electronic and transport properties of low-dimensional systems."
     },
     {
         id: 'as-7',
