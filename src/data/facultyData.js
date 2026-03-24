@@ -1565,5 +1565,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as SATYAM Editor", "Managing complex research in mobility management while overseeing department-wide industrial visits and PTMs"],
         pdfLink: "https://www.msit.in/media/2022/12/02/sakshi-rajput.pdf",
         bio: "Dr. Sakshi Rajput is an Assistant Professor in the ECE Department at MSIT, where she has served since 2012. She holds a Ph.D. and specializes in Optical Networks and VLSI Design. An academic standout, she was a University Topper during her M.Tech. Her leadership profile includes serving as the Editor of MSIT’s research journal, SATYAM, and as an ISO Certified Internal Auditor."
+    },
+    {
+        id: 'ece-16',
+        name: "Dr. Nishtha",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "nishthasarohaece@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-nishtha-01111116a",
+        img: "/faculty/nishtha.png",
+        qual: "Ph.D (p), M.Tech, B.Tech",
+        experience: "8",
+        publications: "1+",
+        patents: "0",
+        goodAt: ["MIMO Antennas", "5G communication", "Dielectric Resonator Antenna", "Electronic Devices", "Circuit Analysis"],
+        badAt: ["Significant administrative load as NAAC Committee member", "Managing research in equivalent RLC circuit modelling while overseeing HULT Prize mentoring"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/nishtha_main-profile.pdf",
+        bio: "Dr. Nishtha is an Assistant Professor in the ECE Department at MSIT with 8 years of experience. She specializes in Electronic Devices and Circuit Analysis, with a research focus on MIMO Antennas and 5G communications. She actively contributes to the institute's quality assurance as a member of the NAAC and HULT Prize committees."
     }
 ];
