@@ -2220,14 +2220,14 @@ export const facultyMembers = [
         email: "jayesh@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder14",
         img: "/faculty/jayesh-kumar.png",
-        qual: "Ph.D., M.Tech., B.Tech.",
-        experience: "16",
-        publications: "5+",
+        qual: "Ph.D., M.Sc.",
+        experience: "12",
+        publications: "15+",
         patents: "0",
-        goodAt: ["Manufacturing Technology", "Engineering Mechanics", "Thermal Energy Storage", "Computational Fluid Dynamics (CFD)", "Latent Heat Thermal Energy Storage Systems"],
-        badAt: ["Significant administrative load from CFD simulation laboratory management", "Managing latent heat storage research while overseeing foundational manufacturing technology courses for multiple streams"],
-        pdfLink: "https://msit.in/faculty/jayesh-kumar",
-        bio: "Dr. Jayesh Kumar is an Assistant Professor in the Applied Sciences Department at MSIT with over 16 years of teaching experience. He holds a Ph.D. and an M.Tech., and is GATE qualified. His research expertise includes Manufacturing Technology, Thermal Energy Storage, and Computational Fluid Dynamics (CFD), focusing particularly on latent heat thermal energy storage systems."
+        goodAt: ["Computational Chemistry", "Nano-catalysis", "Molecular Modeling", "Chemical Reactions", "Chemistry"],
+        badAt: ["Significant administrative load from computational chemistry research lab optimization", "Managing nano-catalysis simulations while overseeing foundational chemistry courses for first-year engineering students"],
+        pdfLink: "https://www.msit.in/media/uploads/2025/12/29/jayesh-kumar_main-profile-27-dec.pdf",
+        bio: "Dr. Jayesh Kumar is an Assistant Professor of Chemistry at MSIT. His research interests include Computational Chemistry and Nano-catalysis. He works on modeling chemical reactions at the molecular level."
     },
     {
         id: 'as-15',
