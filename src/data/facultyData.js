@@ -477,5 +477,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load in departmental committees", "Balancing hardware-intensive robotics research with software simulation tasks"],
         pdfLink: "https://www.msit.in/media/2024/08/12/main-profile.pdf",
         bio: "Dr. Sapna Malik is an Associate Professor in the CSE Department at MSIT with 19 years of experience. She holds a Ph.D. and received the 'Best Researcher Award (2022)' from SMES. Her research is focused on Mobile Security and Machine Learning, specifically Android malware detection and IoT applications. She holds 3 patents and has published over 30 research papers."
+    },
+    {
+        id: 'cse-15',
+        name: "Dr. Sonia Rathee",
+        role: "Associate Professor",
+        dept: "CSE",
+        email: "sonia@msit.in",
+        linkedin: "#",
+        img: "/faculty/sonia-rathee.png",
+        qual: "Ph.D. (MDU), M.Tech., B.E.",
+        experience: "17+",
+        publications: "50+",
+        patents: "1",
+        goodAt: ["Database Management Systems", "Spatial and Temporal Databases", "Spatio-temporal distribution analytics", "Machine Learning", "GIS"],
+        badAt: ["Significant administrative load as active reviewer for multiple journals", "Balancing long-term database system research with curriculum-aligned lab management"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/sonia-rathee.pdf",
+        bio: "Dr. Sonia Rathee is an Associate Professor in the CSE Department at MSIT. Since 2007, she has contributed over 17 years of teaching and research experience. She holds a Ph.D. and specializes in Database Management Systems and Spatio-temporal Databases. With over 50 publications and a patent in ML-based image detection, her work often explores the intersection of AI and spatial data analytics."
     }
 ];
