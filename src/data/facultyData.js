@@ -1089,5 +1089,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from Media Cell and NBA coordination", "Managing complex research in ensembled approach for multi-document extractive text summarization"],
         pdfLink: "https://www.msit.in/media/2021/12/01/minakshi-tomer_main.pdf",
         bio: "Dr. Minakshi Tomer is an Assistant Professor in the IT Department at MSIT with 10 years of academic experience. She holds a M.Tech. (IT) and specializes in Natural Language Processing and Deep Learning. Her research focus includes ensembled approaches for text summarization using fuzzy logic and LSTM networks, and she has been recognized for her coordination of major inter-college competitions."
+    },
+    {
+        id: 'it-15',
+        name: "Dr. Sandeep Singh",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "sandeep@msit.in",
+        linkedin: "https://in.linkedin.com/in/sandeep-singh-9548b111",
+        img: "/faculty/sandeep-singh.png",
+        qual: "Pursuing Ph.D., M.Tech, B.Tech",
+        experience: "10",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Digital Signal Processing (DSP)", "Adaptive System Identification", "Optimization Algorithms", "Bio-inspired Computing", "Neural Network Filters"],
+        badAt: ["Managing complex research in adaptive infinite impulse response systems", "Significant focus on teacher-learner based optimization for digital differentiators"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/sandeepsingh_main-profile.pdf",
+        bio: "Dr. Sandeep Singh is an Assistant Professor in the IT Department at MSIT with 10 years of experience. He is currently pursuing his Ph.D. and specializes in Digital Signal Processing (DSP). His research involves adaptive IIR system identification using bio-inspired optimization algorithms like teacher-learner based optimization and dragonfly algorithms, with core publications in SCI journals."
     }
 ];
