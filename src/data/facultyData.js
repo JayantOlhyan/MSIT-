@@ -2432,5 +2432,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from abrasive flow machining research lab optimization", "Managing complex manufacturing simulations while overseeing foundational mechanical engineering workshops"],
         pdfLink: "https://msit.in/faculty/sachin-dhull",
         bio: "Dr. Sachin Dhull is an Assistant Professor in the Applied Sciences Department (Mechanical) at MSIT. He holds a Ph.D. and an M.Tech. in Mechanical Engineering. His research focuses on Advanced Manufacturing Processes, specifically Abrasive Flow Machining and the modelling and simulation of manufacturing processes. He specializes in Industrial Engineering, Thermodynamics, and Strength of Materials."
+    },
+    {
+        id: 'as-27',
+        name: "Ms. Anisha",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "anisha@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder27",
+        img: "/faculty/anisha.png",
+        qual: "M.A., Ph.D. (Pursuing)",
+        experience: "10",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Environmental & Ecological Crisis and Catastrophes", "Literary Representations of Environment", "Ethnic Issues in Literature", "Communication Skills", "English Literature"],
+        badAt: ["Significant administrative load from ecological literature research symposiums", "Managing literary analysis projects while overseeing foundational communication skills for engineering students"],
+        pdfLink: "https://msit.in/faculty/anisha",
+        bio: "Ms. Anisha is an Assistant Professor in the Applied Sciences Department (English) at MSIT. She holds an M.A. in English and a B.Ed., and is twice UGC NET qualified. Currently pursuing her Ph.D., her research focus includes Environmental & Ecological Crisis and Catastrophes, Literary Representations of Environment, and Ethnic Issues in Literature."
     }
 ];
