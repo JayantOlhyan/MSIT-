@@ -2160,5 +2160,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from conducting polymer research infrastructure", "Managing nanocomposite characterization projects while overseeing first-year organic chemistry laboratory sessions"],
         pdfLink: "https://msit.in/faculty/surender",
         bio: "Dr. Surender is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT with over 18 years of teaching experience. He holds a Ph.D. in Chemistry and is UGC-CSIR NET qualified. His research expertise lies in Conducting Polymer Nanocomposites, and he specializing in Organic chemistry, having earned his M.Sc. from MDU."
+    },
+    {
+        id: 'as-11',
+        name: "Dr. Anju Ahlawat",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "anjua@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder11",
+        img: "/faculty/anju-ahlawat.png",
+        qual: "Ph.D.",
+        experience: "15",
+        publications: "17+",
+        patents: "0",
+        goodAt: ["Synthesis of Condensed Bridgehead Nitrogen Heterocyclic Systems", "Antimicrobial Activity", "Antifungal Activity", "Antihistamine Activity Studies", "Organic Chemistry"],
+        badAt: ["Significant administrative load from SCI journal publication coordination", "Managing synthesis of complex heterocyclic systems while overseeing first-year organic chemistry laboratory sessions"],
+        pdfLink: "https://msit.in/faculty/anju-ahlawat",
+        bio: "Dr. Anju Ahlawat is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Organic Chemistry and is a prolific researcher with over 17 research papers, including 11 in SCI indexed journals. Her expertise focuses on the synthesis of condensed bridgehead nitrogen heterocyclic systems and their antimicrobial, antifungal, and antihistamine activities."
     }
 ];
