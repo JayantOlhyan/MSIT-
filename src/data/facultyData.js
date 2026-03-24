@@ -851,5 +851,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load in faculty development programs", "Managing high-volume curriculum for inter-polytechnic sports and technical coordination"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mr-deepak-full-profile.pdf",
         bio: "Mr. Deepak Goyal is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 21 years of experience. He holds an M.Tech. from NSIT and is currently pursuing his Ph.D. A veteran educator, he specializes in Renewable Energy Resources, Analog Electronics, and Microprocessors. He has a long-standing career at MSIT and is actively involved in faculty development programs on universal human values."
+    },
+    {
+        id: 'it-1',
+        name: "Prof. Prabhjot Kaur Sidhu",
+        role: "Professor & HOD",
+        dept: "IT",
+        email: "prabhjot.kaur@msit.in",
+        linkedin: "https://in.linkedin.com/in/prabhjot-kaur-sidhu-415b3617",
+        img: "/faculty/prabhjot-kaur.png",
+        qual: "Ph.D. (twice), M.Tech., B.E. (CSE)",
+        experience: "23+",
+        publications: "70+",
+        patents: "8",
+        goodAt: ["Medical Image Segmentation", "Soft Computing", "Machine Learning", "Fuzzy Systems", "IoT"],
+        badAt: ["Significant administrative load as HOD of IT Department", "Managing high-volume research publications and patent filings simultaneously"],
+        pdfLink: "https://www.msit.in/media/2024/08/03/resume_dr_prabhjot_kaur.pdf",
+        bio: "Prof. (Dr.) Prabhjot Kaur Sidhu is a Professor and HOD of the IT Department at MSIT with over 23 years of experience. Ranked among the Top 2% of Researchers in the World by Stanford University (2020), she holds two PhDs and specializes in Medical Image Segmentation, Soft Computing, and Machine Learning. An extensively published academic, she has 8 patents and 3 books to her credit, and has served as HOD of the IT department multiple times."
     }
 ];
