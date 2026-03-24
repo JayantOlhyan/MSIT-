@@ -2028,19 +2028,19 @@ export const facultyMembers = [
     {
         id: 'as-3',
         name: "Dr. Man Singh Beniwal",
-        role: "Professor",
+        role: "Associate Professor",
         dept: "Applied Sciences",
-        email: "mansingh@msit.in",
+        email: "msbeniwal@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder3",
         img: "/faculty/man-singh-beniwal.png",
-        qual: "Ph.D.",
-        experience: "33",
+        qual: "Ph.D., M.Sc.",
+        experience: "25",
         publications: "15+",
         patents: "0",
-        goodAt: ["Approximation Theory", "Linear Positive Operators", "Wave Propagation", "Engineering Mathematics"],
-        badAt: ["Significant administrative load from overseeing department-wide mathematics curriculum", "Managing research in wave propagation while coordinating high-volume first-year engineering mathematics courses"],
-        pdfLink: "https://msit.in/faculty/man-singh-beniwal",
-        bio: "Dr. Man Singh Beniwal is a Professor in the Applied Sciences Department (Mathematics) at MSIT with over 33 years of extensive teaching experience. He holds a Ph.D. in Mathematics and specializes in Approximation Theory and Linear Positive Operators. His research includes wave propagation, and he has published 15+ research papers in national and international journals."
+        goodAt: ["Experimental Nuclear Physics", "Radiation Physics", "Physics", "Approximation Theory", "Mathematics"],
+        badAt: ["Significant administrative load from nuclear physics research lab compliance", "Managing radiation safety protocols while overseeing foundational physics courses for first-year students"],
+        pdfLink: "https://www.msit.in/media/2021/11/15/drmansingh.pdf",
+        bio: "Dr. Man Singh Beniwal is an Associate Professor of Physics at MSIT. He specializes in Experimental Nuclear Physics and Radiation Physics, with over two decades of academic contribution to the institute."
     },
     {
         id: 'as-4',
