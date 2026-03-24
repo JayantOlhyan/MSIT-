@@ -38,7 +38,8 @@ export const searchIndex = {
         { name: "Mrs. Sabnam Kumari", role: "Assistant Professor (Ad-hoc)", dept: "CSE", url: "/faculty" },
         { name: "Mr. Deepak Goyal", role: "Assistant Professor (Ad-hoc)", dept: "CSE", url: "/faculty" },
         { name: "Prof. Prabhjot Kaur Sidhu", role: "Professor & HOD", dept: "IT", url: "/faculty" },
-        { name: "Prof. Tripti Sharma", role: "Professor", dept: "IT", url: "/faculty" }
+        { name: "Prof. Tripti Sharma", role: "Professor", dept: "IT", url: "/faculty" },
+        { name: "Dr. Anupama Kaushik", role: "Associate Professor", dept: "IT", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

@@ -885,5 +885,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as former HOD of IT Department", "Managing high-volume research in network security and FPGA optimization"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-dr-tripti-sharma-it-faculty-msit.pdf",
         bio: "Prof. (Dr.) Tripti Sharma is a Professor in the IT Department at MSIT with over 21 years of academic experience. She holds two PhDs and is an expert in Wireless Sensor Networks (WSN) and Compiler Design. With over 75 research publications and multiple patents, she has been recognized as a 'Top 100 Educator' and received the Rashtriya Shiksha Gaurav Puruskar. She has also served as HOD of the IT department for several years."
+    },
+    {
+        id: 'it-3',
+        name: "Dr. Anupama Kaushik",
+        role: "Associate Professor",
+        dept: "IT",
+        email: "anupama@msit.in",
+        linkedin: "https://in.linkedin.com/in/anupama-kaushik-246a4816",
+        img: "/faculty/anupama-kaushik.png",
+        qual: "Ph.D. (twice), M.Tech (IT), B.E (CSE)",
+        experience: "20+",
+        publications: "30+",
+        patents: "7",
+        goodAt: ["Software Cost Estimation", "Neural Networks", "Optimization Techniques", "Agile Methodologies", "AI in Clinical Domain"],
+        badAt: ["Significant administrative load as Best Branch Counselor and research coordinator", "Managing complex hybrid models for software development effort estimation while overseeing multiple patents"],
+        pdfLink: "https://www.msit.in/media/2023/10/13/dranupama-kaushik_main-profile_update.pdf",
+        bio: "Dr. Anupama Kaushik is an Associate Professor in the IT Department at MSIT with over 20 years of experience. Her expertise lies in Software Cost Estimation, Neural Networks, and Optimization Techniques. She holds two PhDs and is widely cited for her work in software development effort estimation. She holds 7 patents (1 granted) and has authored several book chapters on software cost optimization and machine learning."
     }
 ];
