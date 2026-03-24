@@ -409,5 +409,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as NSS Program Officer", "Managing large-scale student cultural festivals (Anugoonj)"],
         pdfLink: "https://www.msit.in/media/2024/10/09/savitaahlawat.pdf",
         bio: "Dr. Savita Ahlawat is an Associate Professor in the CSE Department at MSIT with over 19 years of experience. She holds a Ph.D. and specializes in Machine Learning and Computer Vision, with specific expertise in offline handwritten character recognition. She serves as the Program Officer of the NSS cell and is the In-charge of the Environmental and Humanitarian Society (Prakriti)."
+    },
+    {
+        id: 'cse-11',
+        name: "Dr. Nishtha Jatana",
+        role: "Associate Professor & HOD (2nd Shift)",
+        dept: "CSE",
+        email: "nishthajatana@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-nishtha-jatana-8b27521a",
+        img: "/faculty/nishtha-jatana.png",
+        qual: "Ph.D. (USICT), M.Tech. (DTU), B.Tech.",
+        experience: "15+",
+        publications: "40+",
+        patents: "4",
+        goodAt: ["Software Testing", "Soft Computing", "Assistive Technologies", "Blockchain", "Research Excellence Award (2023)"],
+        badAt: ["Deep involvement in shift management and HOD responsibilities", "Managing large-scale AMC for computers and technical societies"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/nishtha-jatana_main-profile.pdf",
+        bio: "Dr. Nishtha Jatana is an Associate Professor and HOD (CSE 2nd Shift) at MSIT with over 15 years of experience. She holds a Ph.D. from USICT and specializes in Software Testing and Assistive Technologies for the visually impaired. She is a recipient of the 'Research Excellence Award (2023)' and serves as the Convener of TechSoc and IOSD."
     }
 ];
