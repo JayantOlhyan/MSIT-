@@ -9,7 +9,8 @@ export const searchIndex = {
         { name: "Dr. Priyanka Nandal", role: "Associate Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Sandeep Kumar", role: "Associate Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Kavita Sheoran", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Amita Yadav", role: "Associate Professor", dept: "CSE", url: "/faculty" }
+        { name: "Dr. Amita Yadav", role: "Associate Professor", dept: "CSE", url: "/faculty" },
+        { name: "Dr. Savita Ahlawat", role: "Associate Professor", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

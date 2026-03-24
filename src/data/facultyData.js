@@ -392,5 +392,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Convener of Institute-Industry Interaction Cell", "Managing hardware procurement and AMC for departmental labs"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-amita-yadav-website-resume.pdf",
         bio: "Dr. Amita Yadav is an Associate Professor in the CSE Department at MSIT with 25 years of extensive academic experience. She holds a Ph.D. and has received the 'National Award for Outstanding Academic Leader 2024'. Her research specializes in Green Computing and Wireless Sensor Networks, with over 30 publications and 3 patents. She also serves as the Convener of the Institute-Industry Interaction Cell."
+    },
+    {
+        id: 'cse-10',
+        name: "Dr. Savita Ahlawat",
+        role: "Associate Professor",
+        dept: "CSE",
+        email: "savita@msit.in",
+        linkedin: "https://in.linkedin.com/in/savita-ahlawat-76649022",
+        img: "/faculty/savita-ahlawat.png",
+        qual: "Ph.D., M.Tech. (IT), B.E.",
+        experience: "19+",
+        publications: "20+",
+        patents: "1+",
+        goodAt: ["Machine Learning", "Deep Learning", "Computer Vision", "Character Recognition", "Handwritten Character Analysis"],
+        badAt: ["Significant administrative load as NSS Program Officer", "Managing large-scale student cultural festivals (Anugoonj)"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/savitaahlawat.pdf",
+        bio: "Dr. Savita Ahlawat is an Associate Professor in the CSE Department at MSIT with over 19 years of experience. She holds a Ph.D. and specializes in Machine Learning and Computer Vision, with specific expertise in offline handwritten character recognition. She serves as the Program Officer of the NSS cell and is the In-charge of the Environmental and Humanitarian Society (Prakriti)."
     }
 ];
