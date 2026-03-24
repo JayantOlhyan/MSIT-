@@ -1276,5 +1276,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from technical training and proctor duties", "Managing complex research in ubiquitous computing while overseeing software certifications"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-nidhi-goel-it-faculty-msit.pdf",
         bio: "Ms. Nidhi Goel is an Assistant Professor in the IT Department at MSIT with over 12 years of academic experience. She holds an M.Tech. (CSE) and MCA, and is currently pursuing her Ph.D. from GGSIPU. Her research expertise includes Data Mining and IoT, and she has been recognized for her outstanding academic record including a first position in her MCA at the university level."
+    },
+    {
+        id: 'it-26',
+        name: "Ms. Indu Khatri",
+        role: "Assistant Professor (Ad-hoc)",
+        dept: "IT",
+        email: "indukhatri@msit.in",
+        linkedin: "https://in.linkedin.com/in/indu-khatri-0a5b8b10b",
+        img: "/faculty/indu-khatri.png",
+        qual: "M.Tech., B.Tech., Ph.D. (Pursuing)",
+        experience: "9",
+        publications: "2+",
+        patents: "0",
+        goodAt: ["Machine Learning", "Operating Systems", "Ethical Hacking", "Data Security", "Intelligent System Design"],
+        badAt: ["Managing significant research load in ethical hacking alongside ad-hoc professor duties", "Coordinating high-volume data security projects while pursuing Ph.D. at DTU"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/indu_main-profile-1.pdf",
+        bio: "Ms. Indu Khatri is an Assistant Professor in the IT Department at MSIT. She is currently pursuing her Ph.D. from Delhi Technological University (DTU) and has 9 years of experience in higher education. Her research specializes in Machine Learning and Operating Systems, with specific interests in ethical hacking and data security protection."
     }
 ];
