@@ -511,5 +511,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Suraj Sujan Magazine contributor", "Balancing long-term data science research with curriculum-aligned web development labs"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-vinita-rohilla.pdf",
         bio: "Dr. Vinita Rohilla is an Assistant Professor in the CSE Department at MSIT with 18 years of experience. She holds a Ph.D. and specializes in Machine Learning and Computer Vision, with unique research in Location-Based Advertising and Geo-fencing. She has published over 13 research papers and has presented at various international IEEE and Springer conferences."
+    },
+    {
+        id: 'cse-17',
+        name: "Dr. Shaily Malik",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "shailymalik@msit.in",
+        linkedin: "https://in.linkedin.com/in/shaily-malik-3154451a",
+        img: "/faculty/shaily-malik.png",
+        qual: "Ph.D., M.Tech., B.E.",
+        experience: "18+",
+        publications: "30+",
+        patents: "4",
+        goodAt: ["Information Retrieval", "Semantic Similarity Measures", "Machine Learning", "Software Engineering", "Compiler Design"],
+        badAt: ["Significant administrative load as EBSB Cell Coordinator", "Managing multi-institutional patent collaborations for assistive technologies"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/shaily-malik.pdf",
+        bio: "Dr. Shaily Malik is an Assistant Professor in the CSE Department at MSIT with over 18 years of academic experience. She holds a Ph.D. and specializes in Information Retrieval and Semantic Similarity Measures. She is the Coordinator of the EBSB Cell and has a strong research track record with 4 patents and numerous publications in SCI and Scopus indexed journals."
     }
 ];

@@ -16,7 +16,8 @@ export const searchIndex = {
         { name: "Dr. Sangeeta", role: "Associate Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Sapna Malik", role: "Associate Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Sonia Rathee", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Vinita Rohilla", role: "Assistant Professor", dept: "CSE", url: "/faculty" }
+        { name: "Dr. Vinita Rohilla", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
+        { name: "Dr. Shaily Malik", role: "Assistant Professor", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
