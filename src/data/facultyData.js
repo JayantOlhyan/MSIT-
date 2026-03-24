@@ -1429,5 +1429,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from lab management", "Managing complex research in zero motion prejudgment while overseeing department-wide ISO standardization for lab manuals"],
         pdfLink: "https://www.msit.in/media/2021/11/13/shaifali.pdf",
         bio: "Dr. Shaifali M. Arora is an Associate Professor in the ECE Department at MSIT with 19 years of academic experience. She holds a Ph.D. and specializes in Image and Video Processing and Embedded Systems. An accomplished author with three books and a patent in IoT healthcare, she has made significant contributions to the department, including setting up the Digital Image Processing Lab."
+    },
+    {
+        id: 'ece-8',
+        name: "Dr. Richa Gupta",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "richagupta@msit.in",
+        linkedin: "https://in.linkedin.com/in/richa-gupta-01111116a",
+        img: "/faculty/richa-gupta.png",
+        qual: "Ph.D, M.Tech, B.Tech.",
+        experience: "17",
+        publications: "11+",
+        patents: "1",
+        goodAt: ["Antenna Design", "Embedded Systems", "Signal Processing", "Analog Electronics", "Reconfigurable Resonators"],
+        badAt: ["Significant administrative load from research lab management", "Managing complex research in superstrate embedded hybrid MHD antennas while overseeing ISRO regional coordination"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/dr-richa-gupta_-main-profile.pdf",
+        bio: "Dr. Richa Gupta is an Assistant Professor in the ECE Department at MSIT with 17 years of experience. She holds a Ph.D. and specializes in Antenna Design and Embedded Systems. Her research, published in top-tier journals like Optik and Frequenz, focuses on reconfigurable resonators and neural fuzzy interfaces. She also spearheaded the creation of the AWP-PCB research lab in collaboration with IEEE."
     }
 ];
