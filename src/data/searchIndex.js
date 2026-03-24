@@ -34,7 +34,8 @@ export const searchIndex = {
         { name: "Ms. Jyoti", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
         { name: "Ms. Vaani Garg", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
         { name: "Ms. Kirti Dahiya", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Bhawna Bhardwaj", role: "Assistant Professor (Ad-hoc)", dept: "CSE", url: "/faculty" }
+        { name: "Ms. Bhawna Bhardwaj", role: "Assistant Professor (Ad-hoc)", dept: "CSE", url: "/faculty" },
+        { name: "Mrs. Sabnam Kumari", role: "Assistant Professor (Ad-hoc)", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

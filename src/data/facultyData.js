@@ -817,5 +817,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as FDP Organiser for AICTE ATAL", "Managing high-volume research in educational technology and learning devices"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mrs-bhawna-bhardwaj_2MWOj2h.pdf",
         bio: "Ms. Bhawna Bhardwaj is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 10 years of experience. She is currently pursuing her Ph.D. in Information Technology from GGSIPU and holds an M.Tech. from C-DAC Noida. Her expertise lies in Machine Learning, Deep Learning, and Generative AI, and she holds a design patent for an 'Interactive Learning Device'."
+    },
+    {
+        id: 'cse-35',
+        name: "Mrs. Sabnam Kumari",
+        role: "Assistant Professor (Ad-hoc)",
+        dept: "CSE",
+        email: "sabnamkumari@msit.in",
+        linkedin: "https://in.linkedin.com/in/sabnam-kumari-010471131",
+        img: "/faculty/sabnam-kumari.png",
+        qual: "Ph.D. (Thesis Submitted), M.Tech., B.Tech.",
+        experience: "12+",
+        publications: "40+",
+        patents: "2",
+        goodAt: ["Natural Language Processing (NLP)", "Sanskrit Computational Processing", "Text-to-Speech Synthesis", "Machine Learning", "Data Analytics"],
+        badAt: ["Significant focus on word sense disambiguation and genetic algorithms", "Managing administrative duties for social and charitable trusts"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mrs-sabnam-kumari.pdf",
+        bio: "Mrs. Sabnam Kumari is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 12 years of research and teaching experience. She has submitted her Ph.D. thesis at DCRUST, Murthal, and specializes in Natural Language Processing and Machine Learning. An author of the book 'Text-to-Speech Analytics', she is particularly recognized for her work in Sanskrit and Hindi language processing."
     }
 ];
