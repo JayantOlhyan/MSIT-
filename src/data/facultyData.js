@@ -1123,5 +1123,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from ISO and project coordination", "Managing research in obstruction evasion robots while overseeing healthcare IoT implementations"],
         pdfLink: "https://www.msit.in/media/2021/11/24/mamta-gahlan_main-profile.pdf",
         bio: "Ms. Mamta Devi is an Assistant Professor in the IT Department at MSIT with 15 years of experience. She is currently pursuing her Ph.D. and specializes in Machine Learning and IoT applications for healthcare. Her research explores visual cryptography and software quality assurance, and she holds a patent for an IoT-enabled obstruction evasion robot."
+    },
+    {
+        id: 'it-17',
+        name: "Dr. Sitender Malik",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "sitender@msit.in",
+        linkedin: "https://in.linkedin.com/in/sitender-malik-6500801a",
+        img: "/faculty/sitender-malik.png",
+        qual: "Ph.D. (CSE), M.Tech., B.E.",
+        experience: "10+",
+        publications: "20+",
+        patents: "6",
+        goodAt: ["Natural Language Processing (NLP)", "Machine Translation (Sanskrit)", "Software Reliability", "Neural Machine Translation", "Universal Networking Language (UNL)"],
+        badAt: ["Significant administrative load from NIRF team and Media Cell coordination", "Managing high-volume research in e-commerce quality and encrypted steganography simultaneously"],
+        pdfLink: "https://www.msit.in/media/2022/11/29/dr-sitender-resume.pdf",
+        bio: "Dr. Sitender Malik is an Assistant Professor in the IT Department at MSIT. He holds a Ph.D. from Thapar Institute of Engineering and Technology and specializes in Natural Language Processing and Machine Translation. His award-winning research includes six patents and two books, with a core focus on Sanskrit-to-English translation and software reliability models."
     }
 ];

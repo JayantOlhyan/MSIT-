@@ -52,7 +52,8 @@ export const searchIndex = {
         { name: "Dr. Tripti Rathee", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Dr. Minakshi Tomer", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Dr. Sandeep Singh", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Ms. Mamta Devi", role: "Assistant Professor", dept: "IT", url: "/faculty" }
+        { name: "Ms. Mamta Devi", role: "Assistant Professor", dept: "IT", url: "/faculty" },
+        { name: "Dr. Sitender Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
