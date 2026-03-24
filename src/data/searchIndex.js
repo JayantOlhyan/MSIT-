@@ -92,7 +92,8 @@ export const searchIndex = {
         { name: "Ms. Himani", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Ms. Sonia Malik", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Ms. Neha (Nagar)", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Prof. (Dr.) Meena Tushir", role: "Professor & HOD", dept: "EEE", url: "/faculty" }
+        { name: "Prof. (Dr.) Meena Tushir", role: "Professor & HOD", dept: "EEE", url: "/faculty" },
+        { name: "Dr. Sunil Gupta", role: "Associate Professor", dept: "EEE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

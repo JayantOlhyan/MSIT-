@@ -1803,5 +1803,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from HOD responsibilities", "Managing institute-wide technical festivals like Avensis while coordinating GGSIPU academic audits"],
         pdfLink: "https://www.msit.in/media/2021/11/24/meena-tushir_main-profile.pdf",
         bio: "Prof. (Dr.) Meena Tushir is a senior Professor and the Head of Department (HOD) of EEE at MSIT with over 25 years of teaching experience. She specializes in Instrumentation and Control, Fuzzy Logic, Soft Computing, and AI. A life member of ISTE and IAENG, her research on kernelized hybrid c-means clustering models has been widely published and presented at prestigious international conferences like IEEE-FUZZ in London."
+    },
+    {
+        id: 'eee-2',
+        name: "Dr. Sunil Gupta",
+        role: "Associate Professor",
+        dept: "EEE",
+        email: "sunil.gupta_eee@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=Z3gL9uoAAAAJ",
+        img: "/faculty/sunil-gupta.png",
+        qual: "Ph.D., M.E., B.Tech.",
+        experience: "19",
+        publications: "15+",
+        patents: "0",
+        goodAt: ["Power Systems", "IEC 61850", "Substation Automation", "Renewable Energy", "Microgrids"],
+        badAt: ["Significant administrative load from research excellence coordination", "Managing substation communication architecture projects while overseeing department-wide power quality investigation"],
+        pdfLink: "https://www.msit.in/media/2021/12/10/sunil-gupta_main-profile-converted.pdf",
+        bio: "Dr. Sunil Gupta is an Associate Professor in the EEE Department at MSIT with 19 years of experience. He specializes in Power Systems, specifically focusing on IEC 61850 Substation Automation Systems, Renewable Energy, and Microgrids. He received the MSIT Certificate of Excellence in Research in 2020 and has a significant publication record in high-impact journals like Taylor & Francis and Springer."
     }
 ];
