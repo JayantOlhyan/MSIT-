@@ -902,5 +902,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Best Branch Counselor and research coordinator", "Managing complex hybrid models for software development effort estimation while overseeing multiple patents"],
         pdfLink: "https://www.msit.in/media/2023/10/13/dranupama-kaushik_main-profile_update.pdf",
         bio: "Dr. Anupama Kaushik is an Associate Professor in the IT Department at MSIT with over 20 years of experience. Her expertise lies in Software Cost Estimation, Neural Networks, and Optimization Techniques. She holds two PhDs and is widely cited for her work in software development effort estimation. She holds 7 patents (1 granted) and has authored several book chapters on software cost optimization and machine learning."
+    },
+    {
+        id: 'it-4',
+        name: "Dr. Sunesh Malik",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "suneshmalik@msit.in",
+        linkedin: "https://in.linkedin.com/in/sunesh-malik-71aba924",
+        img: "/faculty/sunesh-malik.png",
+        qual: "Ph.D., M.Tech., B.E.",
+        experience: "11+",
+        publications: "4+",
+        patents: "0",
+        goodAt: ["Digital Image Security", "Spiking Neural Networks", "Artificial Intelligence", "Image Processing", "Digital Watermarking"],
+        badAt: ["Significant focus on GA-based optimized image watermarking", "Managing academic load while maintaining research output in specialized Neural network fields"],
+        pdfLink: "https://www.msit.in/media/2021/12/01/sunesh_main-profile.pdf",
+        bio: "Dr. Sunesh Malik is an Assistant Professor in the IT Department at MSIT with over 11 years of experience in the IT domain. She holds a Ph.D. and specializes in Digital Image Security and Spiking Neural Networks. Her research focus includes advanced image processing and digital watermarking techniques, and she is an active scholar in the field of Artificial Intelligence."
     }
 ];
