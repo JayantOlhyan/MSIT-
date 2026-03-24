@@ -664,5 +664,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load in departmental database management", "Managing high-volume intelligent analytics research while supervising student projects"],
         pdfLink: "https://www.msit.in/media/2024/10/09/neeti-sangwan_main-profile2024.pdf",
         bio: "Dr. Neeti Sangwan is an Assistant Professor in the CSE Department at MSIT with over 12 years of academic experience. She holds a Ph.D. and centers her research on Databases and Data Mining. She has published widely in SCIE and Scopus indexed journals, specifically in the areas of video popularity prediction and deep learning for text classification. She also holds a granted patent for an IoT-based waste management system."
+    },
+    {
+        id: 'cse-26',
+        name: "Dr. Parul Chaudhary",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "parul@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-parul-chaudhary-6691451a",
+        img: "/faculty/parul-chaudhary.png",
+        qual: "Ph.D. (GGSIPU), M.Tech., B.E. (ECE), UGC-NET",
+        experience: "14",
+        publications: "10+",
+        patents: "4",
+        goodAt: ["Energy Harvesting", "Triboelectric Materials", "IoT in Healthcare", "Smart Energy Management", "Blockchain Applications"],
+        badAt: ["Significant administrative load as NAAC and NBA core member", "Managing Microsoft Learn Student Ambassador Chapter while overseeing multiple patents"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/parul.pdf",
+        bio: "Dr. Parul Chaudhary is an Assistant Professor in the CSE Department at MSIT with over 14 years of research and teaching experience. She holds a Ph.D. from GGSIPU and is an expert in Energy Harvesting and IoT applications. A recipient of the 'Certificate of Excellence in Research (2023)', she has four patents to her credit and established the Microsoft Learn Student Ambassador Chapter at MSIT. Her research is at the forefront of piezoelectric materials and smart health systems."
     }
 ];
