@@ -2486,19 +2486,19 @@ export const facultyMembers = [
     },
     {
         id: 'as-30',
-        name: "Dr. Anjali Gupta",
-        role: "Assistant Professor (Ad-hoc)",
+        name: "Dr. Shalu",
+        role: "Assistant Professor",
         dept: "Applied Sciences",
-        email: "anjali.gupta@msit.in",
-        linkedin: "https://scholar.google.com/citations?user=placeholder30",
-        img: "/faculty/anjali-gupta.png",
-        qual: "Ph.D.",
-        experience: "5",
-        publications: "5+",
+        email: "shalu@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=Y70xY8AAAAAJ",
+        img: "/faculty/shalu.png",
+        qual: "Ph.D., M.Sc.",
+        experience: "15",
+        publications: "12+",
         patents: "0",
-        goodAt: ["Approximation Theory in Mathematics", "Mathematical Analysis", "Numerical Methods", "Stochastic Systems", "Advanced Calculus"],
-        badAt: ["Significant administrative load from approximation theory research coordination", "Managing competitive exam preparation modules while overseeing foundational mathematics courses as an ad-hoc faculty member"],
-        pdfLink: "https://msit.in/faculty/anjali-gupta",
-        bio: "Dr. Anjali Gupta is an Assistant Professor (Ad-hoc) in the Applied Sciences Department (Mathematics) at MSIT. She holds a Ph.D. in Mathematics, specializing in Approximation Theory. She has a strong academic background, including being a GATE 2021 and CSIR NET June 2022 qualified scholar, and was an INSPIRE Scholarship recipient."
+        goodAt: ["Algebra", "Cryptography", "Secure Communication", "Digital Protocols", "Mathematics"],
+        badAt: ["Significant administrative load from cryptography research lab security audits", "Managing complex algebraic protocols while overseeing foundational mathematics courses for the institute"],
+        pdfLink: "https://www.msit.in/media/2021/12/10/shalu_main-profile.pdf",
+        bio: "Dr. Shalu is an Assistant Professor of Mathematics at MSIT. Her expertise lies in Algebra and Cryptography, focusing on secure communication protocols for digital environments."
     }
 ];
