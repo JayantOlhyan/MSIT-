@@ -596,5 +596,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on power system modeling and controller tuning", "Balancing Ph.D. research with high-volume academic commitments"],
         pdfLink: "https://www.msit.in/media/2024/10/09/ravi-choudhary_main-profile.pdf",
         bio: "Dr. Ravi Choudhary is an Assistant Professor in the CSE Department at MSIT with 16 years of academic experience. He is currently pursuing his Ph.D. and holds an M.Tech. from NSIT Delhi. He was awarded the 'Research Excellence Award (2023)' by DTU for his SCI paper publications. His research interests include Power Systems, Intelligent Algorithms, and Machine Learning."
+    },
+    {
+        id: 'cse-22',
+        name: "Mr. Sushil Kumar",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "sushil@msit.in",
+        linkedin: "#",
+        img: "/faculty/sushil-kumar.png",
+        qual: "M.Tech., Ph.D. (Pursuing)",
+        experience: "16",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Image Processing", "Computer Vision", "Machine Learning", "Facial Emotion Recognition", "Image Encryption"],
+        badAt: ["Significant focus on hardware-software co-design for image analytics", "Managing long-term research projects in chaotic neural networks"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/sushil-kumar.pdf",
+        bio: "Mr. Sushil Kumar is an Assistant Professor in the CSE Department at MSIT, where he has been a faculty member since January 2008. He holds an M.Tech. and is currently pursuing his Ph.D. His research expertise lies in Image Processing, Computer Vision, and Machine Learning, with a specific focus on facial emotion recognition and secure image encryption."
     }
 ];
