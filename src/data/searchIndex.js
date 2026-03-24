@@ -62,7 +62,8 @@ export const searchIndex = {
         { name: "Dr. Priya Dalal", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Ms. Priyanka Kalkandha", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Ms. Nidhi Goel", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Ms. Indu Khatri", role: "Assistant Professor", dept: "IT", url: "/faculty" }
+        { name: "Ms. Indu Khatri", role: "Assistant Professor", dept: "IT", url: "/faculty" },
+        { name: "Ms. Jyoti Sandhu", role: "Assistant Professor", dept: "IT", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

@@ -1293,5 +1293,22 @@ export const facultyMembers = [
         badAt: ["Managing significant research load in ethical hacking alongside ad-hoc professor duties", "Coordinating high-volume data security projects while pursuing Ph.D. at DTU"],
         pdfLink: "https://www.msit.in/media/2024/10/09/indu_main-profile-1.pdf",
         bio: "Ms. Indu Khatri is an Assistant Professor in the IT Department at MSIT. She is currently pursuing her Ph.D. from Delhi Technological University (DTU) and has 9 years of experience in higher education. Her research specializes in Machine Learning and Operating Systems, with specific interests in ethical hacking and data security protection."
+    },
+    {
+        id: 'it-27',
+        name: "Ms. Jyoti Sandhu",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "jyotisandhu@msit.in",
+        linkedin: "https://in.linkedin.com/in/jyoti-sandhu-b0a14316a",
+        img: "/faculty/jyoti-sandhu.png",
+        qual: "M. Tech (KU), B. Tech (MDU)",
+        experience: "2+",
+        publications: "1+",
+        patents: "0",
+        goodAt: ["Mobile Networks", "MANETs", "Congestion Control", "Wireless Sensor Networks", "Admission Management"],
+        badAt: ["Significant administrative load as Proctor and Mentor", "Managing complex research in bottleneck flow control while overseeing college counselling sessions"],
+        pdfLink: "https://www.msit.in/media/uploads/2025/10/06/detailedprofilejyotisandhu.pdf",
+        bio: "Ms. Jyoti Sandhu is an Assistant Professor in the IT Department at MSIT. She holds an M.Tech. from Kurukshetra University and specializes in Mobile Networks and Congestion Control in MANETs. Her research focuses on bandwidth utilization in wireless sensors, and she actively contributes to department administration as a proctor for second-year students."
     }
 ];
