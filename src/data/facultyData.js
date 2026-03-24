@@ -1361,5 +1361,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Head of ECE-2nd Shift", "Managing high-volume research in neural networks for unsupervised deep learning while overseeing multiple institute committees"],
         pdfLink: "https://www.msit.in/media/2021/11/24/pardeep-sangwan_main-profile.pdf",
         bio: "Dr. Pardeep Sangwan is an Associate Professor and Head of Department (ECE-2nd Shift) at MSIT. With over 18 years of experience at the institute, he holds a Ph.D. from UTU Dehradun and an M.Tech. from NIT Kurukshetra. His research focuses on speech processing and renewable energy, and he holds three patents for devices ranging from medical gloves to microstrip antennas."
+    },
+    {
+        id: 'ece-4',
+        name: "Dr. Puneet Azad",
+        role: "Associate Professor",
+        dept: "ECE",
+        email: "puneet.azad@msit.in",
+        linkedin: "https://in.linkedin.com/in/puneet-azad-66228416a",
+        img: "/faculty/puneet-azad.png",
+        qual: "Ph.D., M.E., B.E.",
+        experience: "20+",
+        publications: "15+",
+        patents: "1",
+        goodAt: ["Energy Harvesting", "Self-Powered Systems", "Electronic Circuit Design", "Piezoelectricity", "Academic Administration"],
+        badAt: ["Significant administrative load as Dean Academics and former HOD", "Managing complex research in triboelectric nanogenerators while overseeing AICTE approvals and JAC convenorship"],
+        pdfLink: "https://www.msit.in/media/2021/11/02/dr-puneet-azad.pdf",
+        bio: "Dr. Puneet Azad is an Associate Professor and the Dean Academics at MSIT, where he has served since 2002. He holds a Ph.D. from Gautam Buddha University and an M.E. from Delhi College of Engineering. An expert in energy harvesting and self-powered IoT systems, his research has been published on the cover of leading journals like the Bulletin of Materials Science."
     }
 ];
