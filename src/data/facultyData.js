@@ -443,5 +443,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as NBA/ISO Coordinator", "Managing complex departmental counseling and branch counseling awards"],
         pdfLink: "https://www.msit.in/media/2024/10/09/vimalgaur.pdf",
         bio: "Dr. Vimal Gaur is an Associate Professor in the CSE Department at MSIT with 20 years of academic experience. She holds a Ph.D. and has received the 'Certificate of Excellence in Research (2022)'. Her research focuses on IoT security, Machine Learning, and Quantum Key Distribution. She also serves as the ISO Certification Convener and has been a recipient of the IEEE 'Outstanding Service' award."
+    },
+    {
+        id: 'cse-13',
+        name: "Dr. Sangeeta",
+        role: "Associate Professor",
+        dept: "CSE",
+        email: "sangeeta@msit.in",
+        linkedin: "#",
+        img: "/faculty/sangeeta.png",
+        qual: "Ph.D. (DTU), M.Tech. (DTU), B.E., UGC NET-JRF",
+        experience: "16",
+        publications: "50+",
+        patents: "5",
+        goodAt: ["Software Reliability Modeling", "Soft Computing", "Optimization", "Machine Translation (English, Hindi, Sanskrit)", "Quality Research Excellence Award 2020"],
+        badAt: ["Significant focus on the intersection of diverse linguistic machine translation and software engineering", "Managing multi-domain patent lifecycles"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-sangeeta-detailed-profile.pdf",
+        bio: "Dr. Sangeeta is an Associate Professor in the CSE Department at MSIT with 16 years of academic experience. She holds a Ph.D. from DTU and is a recipient of the 'Quality Research Excellence Award (2020)'. Her research expertise includes Software Reliability Modeling and NLP, with over 50 publications and 5 patents across IoT and Green Energy. She has also served as a session chair at international venues in Poland."
     }
 ];

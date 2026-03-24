@@ -12,7 +12,8 @@ export const searchIndex = {
         { name: "Dr. Amita Yadav", role: "Associate Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Savita Ahlawat", role: "Associate Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Nishtha Jatana", role: "Associate Professor & HOD", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Vimal Gaur", role: "Associate Professor", dept: "CSE", url: "/faculty" }
+        { name: "Dr. Vimal Gaur", role: "Associate Professor", dept: "CSE", url: "/faculty" },
+        { name: "Dr. Sangeeta", role: "Associate Professor", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
