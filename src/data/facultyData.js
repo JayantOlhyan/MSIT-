@@ -1038,5 +1038,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from MODROB coordination and M.Tech. supervision", "Managing extensive research in coupling/cohesion and software reconstruction"],
         pdfLink: "https://www.msit.in/media/2021/11/24/surender-singh_main-profile.pdf",
         bio: "Mr. Surender Singh is an Assistant Professor in the IT Department at MSIT with over 16 years of experience. He holds an M.Tech. and specializes in Machine Learning and Web Mining. A co-coordinator for two AICTE MODROB projects, he has supervised multiple M.Tech. students and has published extensively on PageRank optimization and feature selection techniques."
+    },
+    {
+        id: 'it-12',
+        name: "Mr. Parveen Kumar",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "parveen@msit.in",
+        linkedin: "https://in.linkedin.com/in/parveen-kumar-773a7316",
+        img: "/faculty/parveen-kumar.png",
+        qual: "M.Tech., B.E.",
+        experience: "14+",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Wireless Communication", "Sensor Networks", "VANETs", "Intelligent Transportation Systems", "Placement Coordination"],
+        badAt: ["Significant administrative load as Placement Co-convener and IEEE Advisor", "Managing high-volume advisory roles for MTT-S and RAS chapters simultaneously"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/parveen-kumar_main-profile.pdf",
+        bio: "Mr. Parveen Kumar is an Assistant Professor in the IT Department at MSIT with over 14 years of experience. He serves as the Placement Co-convener and has been an advisor for IEEE MTT-S and RAS chapters. His expertise lies in Wireless Communication and Sensor Networks, with a research focus on Vehicular Ad-hoc Networks (VANET) and Intelligent Transportation Systems."
     }
 ];
