@@ -545,5 +545,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as member of Time table committee", "Managing long-term sensor testbeds while balancing AI research"],
         pdfLink: "https://www.msit.in/media/2024/10/09/shalu.pdf",
         bio: "Dr. Shalu is an Assistant Professor in the CSE Department at MSIT with over 17 years of experience. She holds a Ph.D. from DCRUST and specializes in Wireless Sensor Networks and Swarm Intelligence. Her research is at the intersection of AI and IoT, with a patent in Speaker Recognition Systems. She has also served as a member of the college's Time Table Committee for three years."
+    },
+    {
+        id: 'cse-19',
+        name: "Dr. Pooja Kherwa",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "poojakherwa@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-pooja-kherwa-a91a9217",
+        img: "/faculty/pooja-kherwa.png",
+        qual: "Ph.D. (GGSIPU), M.Tech. (GGSIPU), B.E.",
+        experience: "15+",
+        publications: "20+",
+        patents: "0",
+        goodAt: ["Topic Modeling", "Sentiment Analysis", "Machine Learning", "Data Mining", "Research Excellence Award (2022)"],
+        badAt: ["Significant focus on high-readership research analytics", "Balancing CS Chapter Advisor duties with intensive research supervision"],
+        pdfLink: "https://www.msit.in/media/2023/10/07/dr-pooja-kherwa-detailed-profile.pdf",
+        bio: "Dr. Pooja Kherwa is an Assistant Professor in the CSE Department at MSIT with 15+ years of experience. She holds a Ph.D. from GGSIPU and is the recipient of the 'Research Excellence Award (2022)'. Her research focuses on Topic Modeling and Sentiment Analysis, and she has been recognized as the 'most-read researcher' in her department multiple times on ResearchGate. She also serves as the CS Chapter Advisor."
     }
 ];
