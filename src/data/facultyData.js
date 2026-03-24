@@ -2322,14 +2322,14 @@ export const facultyMembers = [
         email: "gitanjali@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder20",
         img: "/faculty/gitanjali.png",
-        qual: "Ph.D., M.Phil.",
+        qual: "Ph.D., M.Sc.",
         experience: "15",
-        publications: "10+",
+        publications: "12+",
         patents: "0",
-        goodAt: ["Reliability Theory and Modelling", "Statistical Distributions for Repairable Hardware Devices", "Semi-Markov Process", "Regeneration Point Technique", "Stochastic Systems"],
-        badAt: ["Significant administrative load from reliability modeling research lab setup", "Managing complex semi-Markov analytics while overseeing foundational mathematics courses for repairable device engineering"],
-        pdfLink: "https://msit.in/faculty/gitanjali",
-        bio: "Dr. Gitanjali is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT. She holds a Ph.D. in Mathematics and an M.Phil. Her research focuses on Reliability Theory and Modelling, specifically investigating statistical distributions for repairable hardware devices. Her expertise covers Semi-Markov Processes, Regeneration Point Techniques, and Stochastic Systems."
+        goodAt: ["Polymer Chemistry", "Nano-composites", "Sustainable Materials", "Industrial Applications", "Chemistry"],
+        badAt: ["Significant administrative load from polymer chemistry research lab safety and hazardous waste management", "Managing nano-composite synthesis projects while overseeing foundational chemistry courses for first-year engineering students"],
+        pdfLink: "https://www.msit.in/media/2021/12/08/gitanjali_main-profile.pdf",
+        bio: "Dr. Gitanjali is an Assistant Professor of Chemistry at MSIT. She specializes in Polymer Chemistry and Nano-composites. Her work focuses on the synthesis of sustainable materials for industrial applications."
     },
     {
         id: 'as-21',
