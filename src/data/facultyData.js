@@ -1344,5 +1344,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from innovation cell mentorship", "Managing complex research in FinFET and TFET technologies while overseeing ECell activities"],
         pdfLink: "https://www.msit.in/media/2021/11/13/neeru-rathee.pdf",
         bio: "Dr. Neeru Rathee is an Associate Professor in the ECE Department at MSIT. She specializes in VLSI Design, Low Power Electronics, and Nano-electronics, with significant research in FinFET and TFET technologies. An award-winning academic with multiple mentorship and research excellence honors, she has authored two books and a patent on ML-based big data processing."
+    },
+    {
+        id: 'ece-3',
+        name: "Dr. Pardeep Sangwan",
+        role: "Associate Professor",
+        dept: "ECE",
+        email: "sangwanpardeep@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-pardeep-sangwan-011111111",
+        img: "/faculty/pardeep-sangwan.png",
+        qual: "Ph. D, M. Tech., B. E.",
+        experience: "18+",
+        publications: "15+",
+        patents: "3",
+        goodAt: ["Speech Processing", "Renewable Energy", "Machine Learning", "Microstrip Patch Antenna", "Admission Counselling"],
+        badAt: ["Significant administrative load as Head of ECE-2nd Shift", "Managing high-volume research in neural networks for unsupervised deep learning while overseeing multiple institute committees"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/pardeep-sangwan_main-profile.pdf",
+        bio: "Dr. Pardeep Sangwan is an Associate Professor and Head of Department (ECE-2nd Shift) at MSIT. With over 18 years of experience at the institute, he holds a Ph.D. from UTU Dehradun and an M.Tech. from NIT Kurukshetra. His research focuses on speech processing and renewable energy, and he holds three patents for devices ranging from medical gloves to microstrip antennas."
     }
 ];

@@ -65,7 +65,8 @@ export const searchIndex = {
         { name: "Ms. Indu Khatri", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Ms. Jyoti Sandhu", role: "Assistant Professor", dept: "IT", url: "/faculty" },
         { name: "Dr. Archana Balyan", role: "Professor & HOD", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Neeru Rathee", role: "Associate Professor", dept: "ECE", url: "/faculty" }
+        { name: "Dr. Neeru Rathee", role: "Associate Professor", dept: "ECE", url: "/faculty" },
+        { name: "Dr. Pardeep Sangwan", role: "Associate Professor", dept: "ECE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
