@@ -528,5 +528,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as EBSB Cell Coordinator", "Managing multi-institutional patent collaborations for assistive technologies"],
         pdfLink: "https://www.msit.in/media/2024/10/09/shaily-malik.pdf",
         bio: "Dr. Shaily Malik is an Assistant Professor in the CSE Department at MSIT with over 18 years of academic experience. She holds a Ph.D. and specializes in Information Retrieval and Semantic Similarity Measures. She is the Coordinator of the EBSB Cell and has a strong research track record with 4 patents and numerous publications in SCI and Scopus indexed journals."
+    },
+    {
+        id: 'cse-18',
+        name: "Dr. Shalu",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "shalu.mehta@msit.in",
+        linkedin: "#",
+        img: "/faculty/shalu-mehta.png",
+        qual: "Ph.D., M.Tech., B.E.",
+        experience: "17+",
+        publications: "13+",
+        patents: "1",
+        goodAt: ["Wireless Sensor Networks", "Swarm Intelligence", "Machine Learning", "IoT", "Speaker Recognition System"],
+        badAt: ["Significant administrative load as member of Time table committee", "Managing long-term sensor testbeds while balancing AI research"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/shalu.pdf",
+        bio: "Dr. Shalu is an Assistant Professor in the CSE Department at MSIT with over 17 years of experience. She holds a Ph.D. from DCRUST and specializes in Wireless Sensor Networks and Swarm Intelligence. Her research is at the intersection of AI and IoT, with a patent in Speaker Recognition Systems. She has also served as a member of the college's Time Table Committee for three years."
     }
 ];
