@@ -1633,5 +1633,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from medical automation research", "Managing complex research in pancreatic cancer detection while overseeing industrial partnership coordination"],
         pdfLink: "https://www.msit.in/faculty/ece",
         bio: "Ms. Jasmine Chhikara is an Assistant Professor in the ECE Department at MSIT. She holds an M.Tech. in VLSI Design and is currently pursuing her Ph.D. with a research focus on Deep Learning in Biomedical Engineering, specifically pancreatic cancer detection. Her professional background includes significant industrial experience at Cadence Design Systems."
+    },
+    {
+        id: 'ece-20',
+        name: "Ms. Prinkle Talan",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "prinkletalan@msit.in",
+        linkedin: "https://in.linkedin.com/in/prinkle-talan-8316161a",
+        img: "/faculty/prinkle-talan.png",
+        qual: "M.Tech. (Signal Processing), B.Tech.",
+        experience: "10+",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Wireless Communication", "VLSI Design", "Signal Processing", "Event Coordination"],
+        badAt: ["Significant administrative load from event management", "Managing high-volume research in signal processing while overseeing institute-wide cultural and technical fests"],
+        pdfLink: "https://www.msit.in/faculty/ece",
+        bio: "Ms. Prinkle Talan is an Assistant Professor in the ECE Department at MSIT with over 10 years of experience. She holds an M.Tech. in Signal Processing and specializes in Wireless Communication and VLSI Design. Beyond academics, she is actively involved in coordinating the institute's cultural and technical events."
     }
 ];
