@@ -1996,17 +1996,17 @@ export const facultyMembers = [
         name: "Dr. Brijpal Singh",
         role: "Associate Professor & HOD",
         dept: "Applied Sciences",
-        email: "brijpal@msit.in",
+        email: "brijpalsingh@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder1",
         img: "/faculty/brijpal-singh.png",
         qual: "Ph.D., M.Tech., B.E.",
         experience: "29",
-        publications: "5+",
+        publications: "15+",
         patents: "0",
-        goodAt: ["Submerged Arc Welding", "Manufacturing Technology", "Production Engineering", "Industrial Engineering", "Engineering Drawing"],
-        badAt: ["Significant administrative load from HOD responsibilities", "Managing high-volume workshop practice sessions while overseeing department-wide accreditation"],
-        pdfLink: "https://msit.in/faculty/brijpal-singh",
-        bio: "Dr. Brijpal Singh is an Associate Professor and the Head of Department for Applied Sciences at MSIT. With over 29 years of teaching experience, he holds a Ph.D. and an M.Tech. in Industrial Engineering. His expertise spans across Manufacturing Technology, Submerged Arc Welding, and Production Engineering, and he has taught core subjects like Engineering Mechanics and Workshop Technology."
+        goodAt: ["Characterization of Polymers", "Material Science", "Physics", "Industrial Engineering", "Submerged Arc Welding"],
+        badAt: ["Significant administrative load as HOD of Applied Sciences department", "Managing complex industrial engineering research while overseeing foundational physics courses for first-year students"],
+        pdfLink: "https://www.msit.in/media/2021/11/15/brijpal-singh_main-profile.pdf",
+        bio: "Dr. Brijpal Singh is an Associate Professor and Head of Applied Sciences at MSIT. He holds a Ph.D. in Physics and has over 22 years of experience. His research focuses on the Characterization of Polymers and Material Science."
     },
     {
         id: 'as-2',
