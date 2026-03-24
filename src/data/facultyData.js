@@ -2466,5 +2466,22 @@ export const facultyMembers = [
         runAt: ["Significant administrative load from 4D printing research lab setup for biomedical applications", "Managing machine learning models for gear condition monitoring while overseeing foundational mechanical engineering workshops as an ad-hoc faculty member"],
         pdfLink: "https://msit.in/faculty/mansi",
         bio: "Ms. Mansi is an Assistant Professor (Ad-hoc) in the Applied Sciences Department (Mechanical) at MSIT. She holds an M.Tech. in Mechanical Engineering and is currently pursuing her Ph.D. Her research interests include 4D Printing of Shape Memory Polymers for Biomedical Applications and Condition Monitoring of Gears using Machine Learning Algorithms."
+    },
+    {
+        id: 'as-29',
+        name: "Dr. Malvika Chaudhary",
+        role: "Assistant Professor (Ad-hoc)",
+        dept: "Applied Sciences",
+        email: "malvika@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder29",
+        img: "/faculty/malvika-chaudhary.png",
+        qual: "Ph.D.",
+        experience: "15",
+        publications: "5+",
+        patents: "1",
+        goodAt: ["Transition Metal Complexes", "Biologically Active Amines", "Agricultural Automation", "Irrigation Systems", "Environmental Chemistry"],
+        badAt: ["Significant administrative load from transition metal complex research coordination", "Managing agricultural automation patents while overseeing foundational chemistry courses as an ad-hoc faculty member for over 15 years"],
+        pdfLink: "https://msit.in/faculty/malvika-chaudhary",
+        bio: "Dr. Malvika Chaudhary is an Assistant Professor (Ad-hoc) in the Applied Sciences Department (Chemistry) at MSIT with over 15 years of experience. She holds a Ph.D. in Chemistry from CCSU Meerut. Her research involves Transition Metal Complexes of Biologically Active Amines and she holds a patent for a real-time Agricultural Automation Irrigation System."
     }
 ];
