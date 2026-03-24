@@ -1327,5 +1327,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Professor & HOD", "Managing complex research in automatic phonetic segmentation while overseeing departmental coordination"],
         pdfLink: "https://www.msit.in/media/2021/11/12/archana_main-profile-1_D5w1Mww.pdf",
         bio: "Dr. Archana Balyan is the Professor and Head of Department (HOD) for ECE at MSIT with over 32 years of academic and administrative experience. She holds a Ph.D. from GGSIPU and an M.E. from DTU. Her research expertise includes wireless communication, MIMO-OFDM systems, and speech signal processing, specifically focusing on Hindi speech synthesis using HMM models."
+    },
+    {
+        id: 'ece-2',
+        name: "Dr. Neeru Rathee",
+        role: "Associate Professor",
+        dept: "ECE",
+        email: "neeru@msit.in",
+        linkedin: "https://in.linkedin.com/in/neeru-rathee-87143116a",
+        img: "/faculty/neeru-rathee.png",
+        qual: "Ph.D., M.Tech.",
+        experience: "15+",
+        publications: "20+",
+        patents: "1",
+        goodAt: ["VLSI Design", "Nano-electronics", "Signal Processing", "Image Processing", "Emotion Recognition"],
+        badAt: ["Significant administrative load from innovation cell mentorship", "Managing complex research in FinFET and TFET technologies while overseeing ECell activities"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/neeru-rathee.pdf",
+        bio: "Dr. Neeru Rathee is an Associate Professor in the ECE Department at MSIT. She specializes in VLSI Design, Low Power Electronics, and Nano-electronics, with significant research in FinFET and TFET technologies. An award-winning academic with multiple mentorship and research excellence honors, she has authored two books and a patent on ML-based big data processing."
     }
 ];
