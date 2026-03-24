@@ -2279,5 +2279,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from micro-machining laboratory optimization", "Managing fabrication of miniature 3D features while overseeing foundational mechanical engineering workshops"],
         pdfLink: "https://msit.in/faculty/narender-singh-malik",
         bio: "Dr. Narender Singh Malik is an Assistant Professor in the Applied Sciences Department (Mechanical) at MSIT. He holds a Ph.D. and an M.Tech. in Tool & Die Design. His research focuses on Micro-Electric Discharge Machining (Micro-EDM) and the manufacturing of miniature-size 3D features on Titanium alloys, contributing to advancements in high-precision engineering and tool design."
+    },
+    {
+        id: 'as-18',
+        name: "Dr. Anju",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "anjuap@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder18",
+        img: "/faculty/anju.png",
+        qual: "Ph.D.",
+        experience: "15",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Conducting Polymers", "Synthesis and Optimization", "Characterization and Devices", "Nanotechnology", "Ion Beam Induced Engineering of Nanostructures"],
+        badAt: ["Significant administrative load from nanostructure research facility management", "Managing publication of physics textbooks while overseeing complex ion beam engineering projects for multiple departments"],
+        pdfLink: "https://msit.in/faculty/anju",
+        bio: "Dr. Anju is an Assistant Professor in the Applied Sciences Department (Physics) at MSIT. She holds a Ph.D. in Physics and specializes in Conducting Polymers, Nanotechnology, and Ion Beam Induced Engineering of Nanostructures. She has a strong research background with multiple papers published and is the author of three books in her field."
     }
 ];
