@@ -1939,5 +1939,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from research publication coordination", "Managing optimization of DC-DC converters for off-grid lighting projects while overseeing department-wide MATLAB labs"],
         pdfLink: "https://www.msit.in/media/2021/11/24/monu-malik_main-profile.pdf",
         bio: "Dr. Monu Malik is an Assistant Professor in the EEE Department at MSIT with 15 years of experience. He holds a Ph.D. and specializes in Renewable Energy, Control Systems, and Power Systems. His research, published in journals such as JARDCS, focuses on the optimization of DC-DC boost converters using Artificial Neural Networks (ANN) and solar energy applications in battery charging and rail transport."
+    },
+    {
+        id: 'eee-10',
+        name: "Ms. Mamta Rani",
+        role: "Assistant Professor",
+        dept: "EEE",
+        email: "mamtatholia@msit.in",
+        linkedin: "https://researchgate.net/profile/Mamta-Rani-2",
+        img: "/faculty/mamta-rani.png",
+        qual: "M.Tech., Ph.D (p)",
+        experience: "10",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Computer Vision", "Machine learning", "Deep-learning", "Embedded Systems", "Artificial Intelligence", "Mathematical Imaging"],
+        badAt: ["Significant administrative load from research in chaos theory", "Managing microexpression analysis projects while overseeing department-wide solar electric bus research"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/mamta-rani_main-profile.pdf",
+        bio: "Ms. Mamta Rani is an Assistant Professor in the EEE Department at MSIT with 10 years of experience. She is currently pursuing her Ph.D. and specializes in Computer Vision, Machine Learning, and Artificial Intelligence. Her research, which includes microexpression analysis and solar electric transport systems, has been presented at international conferences like the 3rd International Conference on Computing Informatics and Networks."
     }
 ];
