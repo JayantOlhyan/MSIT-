@@ -2058,5 +2058,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from physics laboratory coordination", "Managing research in fusion plasma while overseeing foundational physics courses for multiple engineering departments"],
         pdfLink: "https://msit.in/faculty/ajay-gahlot",
         bio: "Dr. Ajay Gahlot is an Associate Professor in the Applied Sciences Department (Physics) at MSIT. He holds a Ph.D. in Physics and an M.Tech., with over 15 years of teaching experience. His research interests focus on Plasma Physics, including waves in dusty plasmas and condensed matter physics, contributing to the understanding of fusion and strongly coupled plasma systems."
+    },
+    {
+        id: 'as-5',
+        name: "Dr. Rekha Tripathi",
+        role: "Associate Professor",
+        dept: "Applied Sciences",
+        email: "rekha@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder5",
+        img: "/faculty/rekha-tripathi.png",
+        qual: "Ph.D.",
+        experience: "15",
+        publications: "10+",
+        patents: "0",
+        goodAt: ["Pharmacological Study of Indian Medicinal Plants", "Phytochemical Study", "Groundwater Pollution", "Applied Chemistry", "Environmental Studies"],
+        badAt: ["Significant administrative load from chemistry laboratory management", "Managing research in Rajasthan groundwater pollution while overseeing first-year applied chemistry curriculum"],
+        pdfLink: "https://msit.in/faculty/rekha-tripathi",
+        bio: "Dr. Rekha Tripathi is an Associate Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Chemistry and specializes in the Pharmacological and Phytochemical study of Indian medicinal plants. Her research projects include investigating groundwater pollution in Rajasthan districts, and she teaches foundational courses in Applied Chemistry and Environmental Studies."
     }
 ];
