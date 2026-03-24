@@ -2075,5 +2075,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from chemistry laboratory management", "Managing research in Rajasthan groundwater pollution while overseeing first-year applied chemistry curriculum"],
         pdfLink: "https://msit.in/faculty/rekha-tripathi",
         bio: "Dr. Rekha Tripathi is an Associate Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Chemistry and specializes in the Pharmacological and Phytochemical study of Indian medicinal plants. Her research projects include investigating groundwater pollution in Rajasthan districts, and she teaches foundational courses in Applied Chemistry and Environmental Studies."
+    },
+    {
+        id: 'as-6',
+        name: "Dr. Sobinder Singh",
+        role: "Associate Professor",
+        dept: "Applied Sciences",
+        email: "sobinder@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder6",
+        img: "/faculty/sobinder-singh.png",
+        qual: "Ph.D.",
+        experience: "15",
+        publications: "10+",
+        patents: "0",
+        goodAt: ["Cloud Computing", "Energy Consumption Reduction", "Building Blocks of Cloud Computing", "Cloud Models", "Research Challenges"],
+        badAt: ["Significant administrative load from physics department research coordination", "Managing energy consumption reduction in cloud models while overseeing first-year physics laboratories"],
+        pdfLink: "https://msit.in/faculty/sobinder-singh",
+        bio: "Dr. Sobinder Singh is an Associate Professor in the Applied Sciences Department (Physics) at MSIT. He holds a Ph.D. in Physics and specializes in Cloud Computing, particularly focusing on Energy Consumption Reduction and the building blocks of cloud models. His research addresses key challenges in cloud computing infrastructures, while he teaches core physics courses to undergraduate students."
     }
 ];
