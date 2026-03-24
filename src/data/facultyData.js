@@ -783,5 +783,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Summer Training Coordinator and IIC Coordinator", "Managing high-volume research publications in serverless architecture and smart traffic systems"],
         pdfLink: "https://www.msit.in/media/2024/10/09/vaani-full-profile.pdf",
         bio: "Ms. Vaani Garg is an Assistant Professor in the CSE Department at MSIT. She is currently pursuing her Ph.D. from DTU under a research scholarship. Her research expertise is in Image Processing, Machine Learning, and Video Summarization. She holds a patent for a 'Compact Electronic Single Braille Cell Display' and has been recognized for her work in pattern recognition."
+    },
+    {
+        id: 'cse-33',
+        name: "Ms. Kirti Dahiya",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "kirtidahiya@msit.in",
+        linkedin: "https://in.linkedin.com/in/kirti-dahiya-935105151",
+        img: "/faculty/kirti-dahiya.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "4",
+        publications: "4+",
+        patents: "0",
+        goodAt: ["Artificial Intelligence", "Data Science", "Web Optimization", "Deep Learning", "AgriTech Solutions"],
+        badAt: ["Significant focus on multithreaded server optimization", "Managing long-term research in hybrid software development methods"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/03/06/kirti-detailed-profile.pdf",
+        bio: "Ms. Kirti Dahiya is an Assistant Professor in the CSE Department at MSIT with 4 years of experience. She holds an M.Tech. and has a strong research focus on Artificial Intelligence and Data Science. She has contributed research papers to MSIT's Satyam Journal and International Journals, exploring topics like multithreaded servers and web performance optimization."
     }
 ];
