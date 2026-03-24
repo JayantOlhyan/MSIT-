@@ -358,5 +358,22 @@ export const facultyMembers = [
         badAt: ["Balancing intensive international research with domestic academic cycles", "Managing complex IoT and defense-related robotic hardware projects"],
         pdfLink: "https://www.msit.in/media/2024/10/29/sandeep-jaglan-detailed-cv.pdf",
         bio: "Dr. Sandeep Kumar is an Associate Professor in the CSE Department at MSIT with over 19 years of experience. He holds a Ph.D. from Maharshi Dayanand University and has a prolific research background with 45 publications and 5 patents. His expertise covers Data Mining, Image Processing, and IoT, and he recently represented MSIT at the ICCAD-24 conference in Paris, France."
+    },
+    {
+        id: 'cse-8',
+        name: "Dr. Kavita Sheoran",
+        role: "Associate Professor",
+        dept: "CSE",
+        email: "kavita@msit.in",
+        linkedin: "https://in.linkedin.com/in/kavita-sheoran-0a991614",
+        img: "/faculty/kavita-sheoran.png",
+        qual: "Ph.D., M.Tech. (IT), B.E.",
+        experience: "20+",
+        publications: "40+",
+        patents: "3+",
+        goodAt: ["Soft Computing", "Wireless Networking", "Machine Learning", "Algorithm Design", "Book Authoring"],
+        badAt: ["Managing extensive departmental committee work", "Balancing teaching loads with multi-patent filing cycles"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-kavita-sheoran.pdf",
+        bio: "Dr. Kavita Sheoran is an Associate Professor in the CSE Department at MSIT. With over 20 years of experience, her research interests include Soft Computing, Wireless Networking, and Machine Learning. She has published over 40 papers in indexed journals and has authored three books, contributing significantly to academic research and student mentorship."
     }
 ];
