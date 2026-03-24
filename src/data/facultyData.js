@@ -1752,5 +1752,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from technical workshop coordination", "Managing research in smart railway track fault detection while overseeing department-wide practical implementation of circuits"],
         pdfLink: "https://www.msit.in/media/2022/07/08/himani_main-profile.pdf",
         bio: "Ms. Himani is an Assistant Professor in the ECE Department at MSIT with 12 years of academic experience. She holds an M.Tech. and specializes in Speech Processing and Wireless Communication. She has contributed to various technical workshops at MSIT and has published research on IOT-based railway track fault detection and smart water management."
+    },
+    {
+        id: 'ece-27',
+        name: "Ms. Sonia Malik",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "sonia.malik@msit.in",
+        linkedin: "https://in.linkedin.com/in/sonia-malik-01111116a",
+        img: "/faculty/sonia-malik.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "7",
+        publications: "2+",
+        patents: "0",
+        goodAt: ["Image Processing", "Machine Learning", "Deep Learning", "Speaker Identification", "Network Analysis"],
+        badAt: ["Significant administrative load from intelligent systems research", "Managing complex research in blocking artifacts reduction while overseeing department-wide speaker recognition projects"],
+        pdfLink: "https://www.msit.in/media/2022/07/07/soniamalik_main-profile-1.pdf",
+        bio: "Ms. Sonia Malik is an Assistant Professor in the ECE Department at MSIT with 7 years of experience. She holds an M.Tech. and specializes in Image Processing and Speaker Identification. Her research focuses on signal adaptive weighted sum techniques for reduction of compression artifacts, and she is actively involved in developing AI-driven human-centric systems."
     }
 ];
