@@ -1191,5 +1191,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as ISO coordinator and Firewall Committee member", "Managing complex research in ontology merging while overseeing college magazine coordination"],
         pdfLink: "https://www.msit.in/media/2021/11/24/preeti-rathee_main-profile.pdf",
         bio: "Dr. Preeti Rathee is an Assistant Professor in the IT Department at MSIT with 7 years of teaching experience. She completed her Ph.D. from GGSIPU in 2023 and specializes in the Semantic Web and Explainable AI (XAI). Her research focus includes ontology merging and semantic similarity measures using advanced optimization algorithms like Ant Colony Optimization."
+    },
+    {
+        id: 'it-21',
+        name: "Ms. Ashish Kumari",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "ashishkumari@msit.in",
+        linkedin: "https://in.linkedin.com/in/ashish-kumari-11b14316a",
+        img: "/faculty/ashish-kumari.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "7",
+        publications: "6+",
+        patents: "1",
+        goodAt: ["Data Science", "IoT", "Image Steganography", "Software Quality Assurance", "Test Case Reduction"],
+        badAt: ["Significant administrative load from patent management", "Managing complex research in system orientation and automatic test case generation"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/ashish_main-profile.pdf",
+        bio: "Ms. Ashish Kumari is an Assistant Professor in the IT Department at MSIT with 7 years of experience. She holds an M.Tech. and is currently pursuing her Ph.D. from DTU. Her research specializes in Data Science and IoT, specifically focusing on steganography and automated testing, for which she holds a patent in IoT-based intelligent waste management systems."
     }
 ];
