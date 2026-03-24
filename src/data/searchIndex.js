@@ -84,7 +84,8 @@ export const searchIndex = {
         { name: "Dr. Upma Singh", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Ms. Jasmine Chhikara", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Ms. Prinkle Talan", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Garima", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
+        { name: "Ms. Garima", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
+        { name: "Ms. Vishakha Tomar", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

@@ -1667,5 +1667,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from lab standardization", "Managing high-volume research in EEG-based emotion identification while overseeing department-wide exam coordination"],
         pdfLink: "https://www.msit.in/media/2021/11/24/garima_main-profile.pdf",
         bio: "Ms. Garima is an Assistant Professor in the ECE Department at MSIT with 6 years of experience. She holds an M.Tech. from GGSIPU and specializes in Digital System Design and CMOS Digital Circuits. Her research interests include biomedical signal processing, specifically EEG-based emotion identification and optimized multiplier topologies."
+    },
+    {
+        id: 'ece-22',
+        name: "Ms. Vishakha Tomar",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "vishakhatomar@msit.in",
+        linkedin: "https://in.linkedin.com/in/vishakha-tomar-01111116a",
+        img: "/faculty/vishakha-tomar.png",
+        qual: "Ph.D (p), M.Tech., B.Tech.",
+        experience: "6",
+        publications: "2+",
+        patents: "0",
+        goodAt: ["SIW Antenna Technology", "5G Antennas", "Wireless Sensor Networks", "Semiconducting Materials", "Academic Excellence"],
+        badAt: ["Significant administrative load from JAC committee duties", "Managing complex research in micellar nano cavities while overseeing department-wide ISO surveillance audits"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/vishakha-tomar_main-profile.pdf",
+        bio: "Ms. Vishakha Tomar is an Assistant Professor in the ECE Department at MSIT with 6 years of experience. She is currently pursuing her Ph.D. and specializes in SIW Antenna Technology and 5G communications. A gold medalist during her M.Tech at JIIT, her research on connectivity-aware protocols for sensor networks has been presented at several international conferences."
     }
 ];
