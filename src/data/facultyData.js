@@ -1446,5 +1446,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from research lab management", "Managing complex research in superstrate embedded hybrid MHD antennas while overseeing ISRO regional coordination"],
         pdfLink: "https://www.msit.in/media/2021/11/13/dr-richa-gupta_-main-profile.pdf",
         bio: "Dr. Richa Gupta is an Assistant Professor in the ECE Department at MSIT with 17 years of experience. She holds a Ph.D. and specializes in Antenna Design and Embedded Systems. Her research, published in top-tier journals like Optik and Frequenz, focuses on reconfigurable resonators and neural fuzzy interfaces. She also spearheaded the creation of the AWP-PCB research lab in collaboration with IEEE."
+    },
+    {
+        id: 'ece-9',
+        name: "Dr. Aman Kumari Dahiya",
+        role: "Associate Professor",
+        dept: "ECE",
+        email: "amandahiya@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-aman-kumari-dahiya-011111111",
+        img: "/faculty/aman-kumari-dahiya.png",
+        qual: "Ph.D., M.Tech, M.B.A., B.E.",
+        experience: "16+",
+        publications: "45+",
+        patents: "3",
+        goodAt: ["Artificial Intelligence", "IOT based applications", "Microwave Waveguides", "Antenna Designing", "Academic Administration"],
+        badAt: ["Significant administrative load as BOG Faculty Representative", "Managing complex research in millennial-wave waveguides while overseeing department-wide media cell branding"],
+        pdfLink: "https://www.msit.in/media/2024/07/30/dr-aman-dahiya_detailed_-profile-july-24.pdf",
+        bio: "Dr. Aman Kumari Dahiya is an Associate Professor in the ECE Department at MSIT with over 16 years of experience. She holds a Ph.D. in Microwave Engineering and an M.B.A. Her versatile research spans AI-driven healthcare, IOT applications, and reconfigurable antennas, earning her multiple Research Excellence Awards. She has served as a Faculty Representative on the Board of Governors."
     }
 ];
