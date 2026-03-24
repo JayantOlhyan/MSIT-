@@ -2096,19 +2096,19 @@ export const facultyMembers = [
     {
         id: 'as-7',
         name: "Dr. Ajay Kumar",
-        role: "Associate Professor",
+        role: "Assistant Professor",
         dept: "Applied Sciences",
-        email: "ajayk@msit.in",
+        email: "ajaykumar@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder7",
         img: "/faculty/ajay-kumar.png",
-        qual: "Ph.D.",
+        qual: "Ph.D., M.Sc.",
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Astrophysics", "Mobile Networks", "Differential Pressure Gauge", "Mathematics", "Engineering Mechanics"],
-        badAt: ["Significant administrative load from selection committee memberships (DRDO)", "Managing research in astrophysics while overseeing foundational mathematics courses for IGNOU Diploma programs"],
-        pdfLink: "https://msit.in/faculty/ajay-kumar",
-        bio: "Dr. Ajay Kumar is an Associate Professor in the Applied Sciences Department (Mathematics) at MSIT. He holds a Ph.D. specializing in the Simulation of Periodic Orbits and has a diverse research background including Astrophysics and Mobile Networks. He has published 12+ research papers and contributed a book chapter to the IGNOU Diploma in Engineering Mechanics, while also serving on prestigious selection committees like DRDO."
+        goodAt: ["Complex Analysis", "Special Functions", "Mathematics", "Engineering Mathematics", "Research Methodologies"],
+        badAt: ["Significant administrative load from mathematics research coordination", "Managing complex analysis simulations while overseeing foundational engineering mathematics courses for a large student body"],
+        pdfLink: "https://www.msit.in/media/2021/11/15/drajay-katha.pdf",
+        bio: "Dr. Ajay Kumar is an Assistant Professor of Mathematics at MSIT. His research interests include Complex Analysis and Special Functions. He has over 15 years of teaching experience in engineering mathematics."
     },
     {
         id: 'as-8',
