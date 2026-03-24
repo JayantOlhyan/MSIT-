@@ -2109,5 +2109,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from selection committee memberships (DRDO)", "Managing research in astrophysics while overseeing foundational mathematics courses for IGNOU Diploma programs"],
         pdfLink: "https://msit.in/faculty/ajay-kumar",
         bio: "Dr. Ajay Kumar is an Associate Professor in the Applied Sciences Department (Mathematics) at MSIT. He holds a Ph.D. specializing in the Simulation of Periodic Orbits and has a diverse research background including Astrophysics and Mobile Networks. He has published 12+ research papers and contributed a book chapter to the IGNOU Diploma in Engineering Mechanics, while also serving on prestigious selection committees like DRDO."
+    },
+    {
+        id: 'as-8',
+        name: "Dr. Sumita Dabas",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "sumita@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder8",
+        img: "/faculty/sumita-dabas.png",
+        qual: "Ph.D., M.Sc.",
+        experience: "15",
+        publications: "10+",
+        patents: "0",
+        goodAt: ["Complexing Behaviour", "Analytical Applications of Chelating Ion-Exchangers", "Heavy Metal Ion Detection", "Isolation in Polluted Water", "Applied Chemistry"],
+        badAt: ["Significant administrative load from laboratory safety compliance", "Managing research in heavy metal ion detection while overseeing foundational chemistry courses for first-year students"],
+        pdfLink: "https://msit.in/faculty/sumita-dabas",
+        bio: "Dr. Sumita Dabas is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Chemistry and is NET-CSIR-UGC qualified. Her research focuses on the complexing behaviour and analytical applications of chelating ion-exchangers, specifically for heavy metal ion detection and isolation in polluted water environments."
     }
 ];

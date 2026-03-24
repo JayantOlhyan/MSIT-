@@ -110,7 +110,8 @@ export const searchIndex = {
         { name: "Dr. Ajay Gahlot", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Dr. Rekha Tripathi", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Dr. Sobinder Singh", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Ajay Kumar", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" }
+        { name: "Dr. Ajay Kumar", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" },
+        { name: "Dr. Sumita Dabas", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
