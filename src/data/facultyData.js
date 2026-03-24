@@ -2415,5 +2415,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from environmental chemistry research lab safety and water analysis facility management", "Managing industrial R&D projects while overseeing foundational chemistry courses for environmental engineering for nearly two decades"],
         pdfLink: "https://msit.in/faculty/rakesh-kumar",
         bio: "Dr. Rakesh Kumar is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT with 17 years of teaching experience and 2 years of industrial R&D experience. He holds a Ph.D. in Chemistry and specializes in the synthesis of conducting polymers and their composites. His research interests also include Water Analysis & Treatment and Environmental Chemistry."
+    },
+    {
+        id: 'as-26',
+        name: "Dr. Sachin Dhull",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "sachin@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder26",
+        img: "/faculty/sachin-dhull.png",
+        qual: "Ph.D., M.Tech.",
+        experience: "15",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Advanced Manufacturing Processes", "Abrasive Flow Machining", "Modelling and Simulation", "Industrial Engineering", "Thermodynamics"],
+        badAt: ["Significant administrative load from abrasive flow machining research lab optimization", "Managing complex manufacturing simulations while overseeing foundational mechanical engineering workshops"],
+        pdfLink: "https://msit.in/faculty/sachin-dhull",
+        bio: "Dr. Sachin Dhull is an Assistant Professor in the Applied Sciences Department (Mechanical) at MSIT. He holds a Ph.D. and an M.Tech. in Mechanical Engineering. His research focuses on Advanced Manufacturing Processes, specifically Abrasive Flow Machining and the modelling and simulation of manufacturing processes. He specializes in Industrial Engineering, Thermodynamics, and Strength of Materials."
     }
 ];
