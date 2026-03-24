@@ -1514,5 +1514,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from research review", "Managing complex research in language identification while reviewing for various high-impact Springer and IEEE journals"],
         pdfLink: "https://www.msit.in/media/2021/11/13/deepti-deshwal_main-profile.pdf",
         bio: "Dr. Deepti Deshwal is an Assistant Professor in the ECE Department at MSIT with over 14 years of experience. She holds a Ph.D. and specializes in Machine Learning and Speech Processing. Her research on language identification systems and sanitizing devices has been published in journals like Applied Acoustics and Energy Research & Social Science."
+    },
+    {
+        id: 'ece-13',
+        name: "Ms. Neelam Nehra",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "neelamnehra@msit.in",
+        linkedin: "https://in.linkedin.com/in/neelam-nehra-01111116a",
+        img: "/faculty/neelam-nehra.png",
+        qual: "Ph.D (p), M.Tech, B.E",
+        experience: "13",
+        publications: "4+",
+        patents: "0",
+        goodAt: ["Artificial Intelligence", "Machine learning", "Speech Recognition", "Speaker Recognition", "Information Theory"],
+        badAt: ["Significant administrative load from social media coordination", "Managing complex research in pattern classification while overseeing B.Tech projects in embedded systems"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/neelam-nehra_main-profile.pdf",
+        bio: "Ms. Neelam Nehra is an Assistant Professor in the ECE Department at MSIT with over 13 years of teaching experience. She specializes in Information Theory, Coding, and Speaker Recognition. Currently pursuing her Ph.D., her research on pattern classification in speaker recognition has been published in journals such as IJSRD and MSIT Satyam."
     }
 ];
