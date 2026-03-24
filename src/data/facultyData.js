@@ -953,5 +953,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load in ISO and placement coordination", "Managing social contribution through various NGOs and non-government trusts"],
         pdfLink: "https://www.msit.in/media/2021/12/01/manojmalik_main-profile.pdf",
         bio: "Mr. Manoj Malik is an Assistant Professor in the IT Department at MSIT with over 17 years of experience. He holds an M.Tech. and specializes in Cloud Computing and Fault Tolerance. His research includes workflow scheduling and blockchain-based authentication. He holds a patent for process execution optimization and is actively involved in social initiatives through various NGOs."
+    },
+    {
+        id: 'it-7',
+        name: "Dr. Sonika Malik",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "sonika.malik@msit.in",
+        linkedin: "https://in.linkedin.com/in/sonika-malik-06a14316a",
+        img: "/faculty/sonika-malik.png",
+        qual: "Ph.D., M. Tech (CSE), B. Tech (CSE)",
+        experience: "18+",
+        publications: "20+",
+        patents: "3",
+        goodAt: ["Ontology Engineering", "Semantic Web", "Knowledge Representation", "Neuro-Symbolic AI", "Deep Learning for IoT"],
+        badAt: ["Significant administrative load as ISO In-charge and Placement Faculty Coordinator", "Managing high-volume research in racial & gender inequities on social media and music recommendation systems"],
+        pdfLink: "https://www.msit.in/media/uploads/2025/10/04/sonika-malik_main-profile.pdf",
+        bio: "Dr. Sonika Malik is an Assistant Professor in the IT Department at MSIT with over 18 years of experience. She holds a Ph.D. from NIT Kurukshetra and is an expert in Ontology Engineering and the Semantic Web. Her research spans from Neuro-Symbolic AI to blockchained voting systems. She holds three patents in IoT and deep learning and has been recognized with MSIT's Research Excellence Award."
     }
 ];
