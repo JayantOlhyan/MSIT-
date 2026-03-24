@@ -2449,5 +2449,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from ecological literature research symposiums", "Managing literary analysis projects while overseeing foundational communication skills for engineering students"],
         pdfLink: "https://msit.in/faculty/anisha",
         bio: "Ms. Anisha is an Assistant Professor in the Applied Sciences Department (English) at MSIT. She holds an M.A. in English and a B.Ed., and is twice UGC NET qualified. Currently pursuing her Ph.D., her research focus includes Environmental & Ecological Crisis and Catastrophes, Literary Representations of Environment, and Ethnic Issues in Literature."
+    },
+    {
+        id: 'as-28',
+        name: "Ms. Mansi",
+        role: "Assistant Professor (Ad-hoc)",
+        dept: "Applied Sciences",
+        email: "mansi@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder28",
+        img: "/faculty/mansi.png",
+        qual: "M.Tech., Ph.D. (Pursuing)",
+        experience: "5",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["4D Printing of Shape Memory Polymers", "Biomedical Applications", "Condition Monitoring of Gears", "Machine Learning Algorithms", "Mechanical Engineering"],
+        runAt: ["Significant administrative load from 4D printing research lab setup for biomedical applications", "Managing machine learning models for gear condition monitoring while overseeing foundational mechanical engineering workshops as an ad-hoc faculty member"],
+        pdfLink: "https://msit.in/faculty/mansi",
+        bio: "Ms. Mansi is an Assistant Professor (Ad-hoc) in the Applied Sciences Department (Mechanical) at MSIT. She holds an M.Tech. in Mechanical Engineering and is currently pursuing her Ph.D. Her research interests include 4D Printing of Shape Memory Polymers for Biomedical Applications and Condition Monitoring of Gears using Machine Learning Algorithms."
     }
 ];
