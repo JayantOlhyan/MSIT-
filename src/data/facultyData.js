@@ -375,5 +375,22 @@ export const facultyMembers = [
         badAt: ["Managing extensive departmental committee work", "Balancing teaching loads with multi-patent filing cycles"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-kavita-sheoran.pdf",
         bio: "Dr. Kavita Sheoran is an Associate Professor in the CSE Department at MSIT. With over 20 years of experience, her research interests include Soft Computing, Wireless Networking, and Machine Learning. She has published over 40 papers in indexed journals and has authored three books, contributing significantly to academic research and student mentorship."
+    },
+    {
+        id: 'cse-9',
+        name: "Dr. Amita Yadav",
+        role: "Associate Professor",
+        dept: "CSE",
+        email: "amita.yadav@msit.in",
+        linkedin: "https://in.linkedin.com/in/amita-yadav-93a5aa52",
+        img: "/faculty/amita-yadav.png",
+        qual: "Ph.D., M.Tech., M.Sc.",
+        experience: "25+",
+        publications: "30+",
+        patents: "3",
+        goodAt: ["Wireless Sensor Networks (WSN)", "Green Computing", "Network Security", "Machine Learning", "National Award for Outstanding Academic Leader 2024"],
+        badAt: ["Significant administrative load as Convener of Institute-Industry Interaction Cell", "Managing hardware procurement and AMC for departmental labs"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-amita-yadav-website-resume.pdf",
+        bio: "Dr. Amita Yadav is an Associate Professor in the CSE Department at MSIT with 25 years of extensive academic experience. She holds a Ph.D. and has received the 'National Award for Outstanding Academic Leader 2024'. Her research specializes in Green Computing and Wireless Sensor Networks, with over 30 publications and 3 patents. She also serves as the Convener of the Institute-Industry Interaction Cell."
     }
 ];
