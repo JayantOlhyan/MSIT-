@@ -426,5 +426,22 @@ export const facultyMembers = [
         badAt: ["Deep involvement in shift management and HOD responsibilities", "Managing large-scale AMC for computers and technical societies"],
         pdfLink: "https://www.msit.in/media/2024/10/09/nishtha-jatana_main-profile.pdf",
         bio: "Dr. Nishtha Jatana is an Associate Professor and HOD (CSE 2nd Shift) at MSIT with over 15 years of experience. She holds a Ph.D. from USICT and specializes in Software Testing and Assistive Technologies for the visually impaired. She is a recipient of the 'Research Excellence Award (2023)' and serves as the Convener of TechSoc and IOSD."
+    },
+    {
+        id: 'cse-12',
+        name: "Dr. Vimal Gaur",
+        role: "Associate Professor",
+        dept: "CSE",
+        email: "vimalgaur@msit.in",
+        linkedin: "https://in.linkedin.com/in/vimal-gaur-3410b253",
+        img: "/faculty/vimal-gaur.png",
+        qual: "Ph.D., M.Tech., B.Tech.",
+        experience: "20",
+        publications: "20+",
+        patents: "1",
+        goodAt: ["Internet of Things (IoT)", "Artificial Intelligence", "Machine Learning", "DDoS Attack Detection", "Quantum Key Distribution"],
+        badAt: ["Significant administrative load as NBA/ISO Coordinator", "Managing complex departmental counseling and branch counseling awards"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/vimalgaur.pdf",
+        bio: "Dr. Vimal Gaur is an Associate Professor in the CSE Department at MSIT with 20 years of academic experience. She holds a Ph.D. and has received the 'Certificate of Excellence in Research (2022)'. Her research focuses on IoT security, Machine Learning, and Quantum Key Distribution. She also serves as the ISO Certification Convener and has been a recipient of the IEEE 'Outstanding Service' award."
     }
 ];
