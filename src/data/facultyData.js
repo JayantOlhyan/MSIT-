@@ -1021,5 +1021,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from long-standing teaching career", "Managing complex meta-analysis of statistical techniques and transition strategies for IPv6"],
         pdfLink: "https://www.msit.in/media/2021/11/24/meena-siwach_main-profile.pdf",
         bio: "Dr. Meena Siwach is an Assistant Professor in the IT Department at MSIT with over 14 years of teaching experience. She holds an M.Tech. (IT) and specializes in Data Warehousing and Data Mining. Her research contributions include papers on statistical techniques in ICAIA and transition strategies for networking, and she has been recognized with an Appreciation Certificate for her consistent performance."
+    },
+    {
+        id: 'it-11',
+        name: "Mr. Surender Singh",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "surender@msit.in",
+        linkedin: "https://in.linkedin.com/in/surender-singh-48a17916",
+        img: "/faculty/surender-singh.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "16+",
+        publications: "12+",
+        patents: "0",
+        goodAt: ["Machine Learning", "Web-Spam Detection", "Data Mining", "PageRank Optimization", "Feature Selection"],
+        badAt: ["Significant administrative load from MODROB coordination and M.Tech. supervision", "Managing extensive research in coupling/cohesion and software reconstruction"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/surender-singh_main-profile.pdf",
+        bio: "Mr. Surender Singh is an Assistant Professor in the IT Department at MSIT with over 16 years of experience. He holds an M.Tech. and specializes in Machine Learning and Web Mining. A co-coordinator for two AICTE MODROB projects, he has supervised multiple M.Tech. students and has published extensively on PageRank optimization and feature selection techniques."
     }
 ];
