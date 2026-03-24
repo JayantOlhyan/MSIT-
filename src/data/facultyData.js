@@ -1242,5 +1242,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from GDSC advising and farewell organizing", "Managing complex research in LPWAN technologies while overseeing multiple smart grid patents"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-dr-priya-dalal-it-faculty-msit.pdf",
         bio: "Dr. Priya Dalal is an Assistant Professor in the IT Department at MSIT with over 11 years of experience. She holds a Ph.D. and specializes in IoT and Cloud Computing. An active researcher with three patents and a book on Data Science, her work focuses on integrated healthcare models and AI-driven systems for emerging vehicle technologies."
+    },
+    {
+        id: 'it-24',
+        name: "Ms. Priyanka Kalkandha",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "priyanka.kalkandha@msit.in",
+        linkedin: "https://in.linkedin.com/in/priyanka-kalkandha-30501a115",
+        img: "/faculty/priyanka-kalkandha.png",
+        qual: "M.Tech(BIT MESRA, CSE), B.TECH(CSE)",
+        experience: "5+",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Cloud Computing", "Sensor Networks", "Routing Protocols (PEGASIS)", "Web Security (SQLi)", "Online Education"],
+        badAt: ["Significant administrative load as Proctor and Mentor", "Managing high-volume online platform content reviews while overseeing R&D team duties"],
+        pdfLink: "https://www.msit.in/media/2022/05/09/priyankak_cv_msit.pdf",
+        bio: "Ms. Priyanka Kalkandha is an Assistant Professor in the IT Department at MSIT with 5 years of teaching experience. She holds an M.Tech. from BIT Mesra and is a three-time NTA NET qualifier. Her expertise lies in energy-efficient routing protocols for sensor networks and web security, with previous experience as an educator and content reviewer for major platforms like Unacademy."
     }
 ];
