@@ -630,5 +630,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative overhead as Head of Department", "Managing institute-level leadership roles while maintaining active research in NLP"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-poonam-detailed-profile.pdf",
         bio: "Dr. Poonam Bansal is a Professor and the Head of the Department (CSE) at MSIT. She holds a Ph.D. and has extensive experience in academia and research. Her primary expertise lies in Natural Language Processing (NLP) and Speech Processing, where she has published numerous research papers in international journals. She plays a pivotal leadership role at the institute, overseeing departmental growth and academic excellence."
+    },
+    {
+        id: 'cse-24',
+        name: "Dr. Anshul Pareek",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "er.anshulpareek@msit.in",
+        linkedin: "https://in.linkedin.com/in/anshul-pareek-70a9271a",
+        img: "/faculty/anshul-pareek.png",
+        qual: "Ph.D., M.Tech., B.E.",
+        experience: "20+",
+        publications: "30+",
+        patents: "4",
+        goodAt: ["Human-Robot Interaction", "Computer Vision", "Machine Learning", "Innovation Ambassador (MHRD)", "IoT and WSN"],
+        badAt: ["Significant administrative load as IIC Content Coordinator and IEEE RAS Chapter Chair", "Managing high-volume NBA accreditation documentation while overseeing student startups"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-anshul-pareek_NmeoAP2.pdf",
+        bio: "Dr. Anshul Pareek is an Assistant Professor in the CSE Department at MSIT with over 20 years of expertise. She holds a Ph.D. in Human-Robot Interfacing and is a certified 'Innovation Ambassador' by the MHRD. Her research spans AI, Computer Vision, and IoT, with four filed patents in healthcare and safety systems. She also serves as the Chapter Chair for IEEE RAS at MSIT."
     }
 ];
