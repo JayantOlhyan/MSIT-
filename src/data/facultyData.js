@@ -460,5 +460,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on the intersection of diverse linguistic machine translation and software engineering", "Managing multi-domain patent lifecycles"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-sangeeta-detailed-profile.pdf",
         bio: "Dr. Sangeeta is an Associate Professor in the CSE Department at MSIT with 16 years of academic experience. She holds a Ph.D. from DTU and is a recipient of the 'Quality Research Excellence Award (2020)'. Her research expertise includes Software Reliability Modeling and NLP, with over 50 publications and 5 patents across IoT and Green Energy. She has also served as a session chair at international venues in Poland."
+    },
+    {
+        id: 'cse-14',
+        name: "Dr. Sapna Malik",
+        role: "Associate Professor",
+        dept: "CSE",
+        email: "sapnamalik@msit.in",
+        linkedin: "https://in.linkedin.com/in/sapna-malik-5b858280",
+        img: "/faculty/sapna-malik.png",
+        qual: "Ph.D., M.Tech., B.E.",
+        experience: "19",
+        publications: "30+",
+        patents: "3",
+        goodAt: ["Mobile Security", "Machine Learning", "Cyber Security", "Malware Detection in Android", "Best Researcher Award 2022"],
+        badAt: ["Significant administrative load in departmental committees", "Balancing hardware-intensive robotics research with software simulation tasks"],
+        pdfLink: "https://www.msit.in/media/2024/08/12/main-profile.pdf",
+        bio: "Dr. Sapna Malik is an Associate Professor in the CSE Department at MSIT with 19 years of experience. She holds a Ph.D. and received the 'Best Researcher Award (2022)' from SMES. Her research is focused on Mobile Security and Machine Learning, specifically Android malware detection and IoT applications. She holds 3 patents and has published over 30 research papers."
     }
 ];
