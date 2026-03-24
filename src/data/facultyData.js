@@ -1871,5 +1871,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from time table committee as coordinator", "Managing complex research in islanding detection while overseeing department-wide write-off audits"],
         pdfLink: "https://www.msit.in/media/2021/11/24/annu-dagar_main-profile.pdf",
         bio: "Ms. Annu Dagar is an Assistant Professor in the EEE Department at MSIT with 12 years of experience. She is currently pursuing her Ph.D. and specializes in Renewable Energy and Microgrid Protection. Her research on islanding detection methods and hybrid AC/DC microgrids has been published in high-impact journals like Renewable and Sustainable Energy Reviews (Impact Factor 14.982)."
+    },
+    {
+        id: 'eee-6',
+        name: "Dr. Shilpam Malik",
+        role: "Assistant Professor",
+        dept: "EEE",
+        email: "malik.shilpam@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=Ug9uTtEAAAAJ",
+        img: "/faculty/shilpam-malik.png",
+        qual: "Ph.D (p), M.Tech., B.Tech.",
+        experience: "15",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Power System", "Renewable Energy Sources", "Intelligent Control Techniques", "Load Frequency Control", "Hybrid Power Systems"],
+        badAt: ["Significant administrative load from technical event coordination", "Managing frequency excursion mitigation research while overseeing department-wide power system simulation labs"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/shilpam-malik_main-profile.pdf",
+        bio: "Dr. Shilpam Malik is an Assistant Professor in the EEE Department at MSIT with 15 years of teaching experience. She is currently pursuing her Ph.D. and specializes in Power Systems, Renewable Energy Sources, and Intelligent Control Techniques. Her research on SSA tuned PI-TDF control schemes for hybrid power systems has been published in Smart Science, and she is a lifetime member of ISTE."
     }
 ];
