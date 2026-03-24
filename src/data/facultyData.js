@@ -2364,5 +2364,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from literature-based societal solution research coordination", "Managing English language expansion projects while overseeing foundational communication skills for first-year engineering students"],
         pdfLink: "https://msit.in/faculty/rashmi-gupta",
         bio: "Dr. Rashmi Gupta is an Assistant Professor in the Applied Sciences Department (English/Communication Skills) at MSIT. She holds a Ph.D. and an M.Phil. in English. Her research interests include the expansion of English language teaching in India and Indian writing in English literature, with a focus on addressing societal problems through literary solutions."
+    },
+    {
+        id: 'as-23',
+        name: "Ms. Pooja Singh",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "poojap@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder23",
+        img: "/faculty/pooja-singh-physics.png",
+        qual: "M.Tech., M.Sc.",
+        experience: "10",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Applied Physics", "Wave and Optics", "Solid State Electronic Devices", "Microwave Electronics", "Electronic Circuits"],
+        badAt: ["Significant administrative load from microwave electronics laboratory maintenance", "Managing research in solid state devices while overseeing foundational wave and optics courses for first-year engineering students"],
+        pdfLink: "https://msit.in/faculty/pooja-singh-physics",
+        bio: "Ms. Pooja Singh is an Assistant Professor in the Applied Sciences Department (Physics) at MSIT. She holds an M.Tech. in Microwave Electronics and an M.Sc. in Physics with an Electronics specialization, and is UGC NET qualified. Her research interests include Applied Physics, Wave Optics, and Solid State Electronic Devices, with a focus on electronic circuit applications."
     }
 ];
