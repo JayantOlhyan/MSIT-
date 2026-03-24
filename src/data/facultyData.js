@@ -1684,5 +1684,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from JAC committee duties", "Managing complex research in micellar nano cavities while overseeing department-wide ISO surveillance audits"],
         pdfLink: "https://www.msit.in/media/2021/11/13/vishakha-tomar_main-profile.pdf",
         bio: "Ms. Vishakha Tomar is an Assistant Professor in the ECE Department at MSIT with 6 years of experience. She is currently pursuing her Ph.D. and specializes in SIW Antenna Technology and 5G communications. A gold medalist during her M.Tech at JIIT, her research on connectivity-aware protocols for sensor networks has been presented at several international conferences."
+    },
+    {
+        id: 'ece-23',
+        name: "Dr. Suman Lata",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "suman@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-suman-lata-01111116a",
+        img: "/faculty/suman-lata.png",
+        qual: "Ph.D (p), M.Tech., B.Tech.",
+        experience: "10",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Speech Recognition", "Emotion Recognition", "Embedded Systems", "Microcontrollers", "Deep Learning"],
+        badAt: ["Significant administrative load from institute level assignments", "Managing complex research in multi-area power system control while overseeing department-wide project evaluations"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/suman-lata_main-profile.pdf",
+        bio: "Dr. Suman Lata is an Assistant Professor in the ECE Department at MSIT with 10 years of experience. She holds a Ph.D. and specializes in Speech Recognition and Deep Learning. Her research explorations include multi-area power system control and non-conventional transistors like TFETs, with multiple publications in recognized journals."
     }
 ];
