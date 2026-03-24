@@ -2313,5 +2313,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from trauma literature research symposiums", "Managing creative fiction writing workshops while overseeing department-wide professional communication assessment modules"],
         pdfLink: "https://msit.in/faculty/jindagi-kumari",
         bio: "Dr. Jindagi Kumari is an Assistant Professor in the Applied Sciences Department (English/Communication Skills) at MSIT with over 10 years of teaching experience. She holds a Ph.D. in English and is UGC NET qualified. Her research explores Trauma Representation in South Asian Fiction and Eco-Critical Trends, and she specializes in Postcolonial Analysis and Creative Fiction Writing, while teaching Professional Communication to engineering students."
+    },
+    {
+        id: 'as-20',
+        name: "Dr. Gitanjali",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "gitanjali@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder20",
+        img: "/faculty/gitanjali.png",
+        qual: "Ph.D., M.Phil.",
+        experience: "15",
+        publications: "10+",
+        patents: "0",
+        goodAt: ["Reliability Theory and Modelling", "Statistical Distributions for Repairable Hardware Devices", "Semi-Markov Process", "Regeneration Point Technique", "Stochastic Systems"],
+        badAt: ["Significant administrative load from reliability modeling research lab setup", "Managing complex semi-Markov analytics while overseeing foundational mathematics courses for repairable device engineering"],
+        pdfLink: "https://msit.in/faculty/gitanjali",
+        bio: "Dr. Gitanjali is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT. She holds a Ph.D. in Mathematics and an M.Phil. Her research focuses on Reliability Theory and Modelling, specifically investigating statistical distributions for repairable hardware devices. Her expertise covers Semi-Markov Processes, Regeneration Point Techniques, and Stochastic Systems."
     }
 ];
