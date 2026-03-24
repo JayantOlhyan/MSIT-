@@ -647,5 +647,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as IIC Content Coordinator and IEEE RAS Chapter Chair", "Managing high-volume NBA accreditation documentation while overseeing student startups"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-anshul-pareek_NmeoAP2.pdf",
         bio: "Dr. Anshul Pareek is an Assistant Professor in the CSE Department at MSIT with over 20 years of expertise. She holds a Ph.D. in Human-Robot Interfacing and is a certified 'Innovation Ambassador' by the MHRD. Her research spans AI, Computer Vision, and IoT, with four filed patents in healthcare and safety systems. She also serves as the Chapter Chair for IEEE RAS at MSIT."
+    },
+    {
+        id: 'cse-25',
+        name: "Dr. Neeti Sangwan",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "neeti@msit.in",
+        linkedin: "https://in.linkedin.com/in/neeti-sangwan-b9b55225",
+        img: "/faculty/neeti-sangwan.png",
+        qual: "Ph.D., M.Tech., B.E., UGC-NET",
+        experience: "12+",
+        publications: "11+",
+        patents: "1",
+        goodAt: ["Databases", "Data Mining", "Machine Learning", "Video Popularity Forecast", "Deep Learning for Text Classification"],
+        badAt: ["Significant administrative load in departmental database management", "Managing high-volume intelligent analytics research while supervising student projects"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/neeti-sangwan_main-profile2024.pdf",
+        bio: "Dr. Neeti Sangwan is an Assistant Professor in the CSE Department at MSIT with over 12 years of academic experience. She holds a Ph.D. and centers her research on Databases and Data Mining. She has published widely in SCIE and Scopus indexed journals, specifically in the areas of video popularity prediction and deep learning for text classification. She also holds a granted patent for an IoT-based waste management system."
     }
 ];

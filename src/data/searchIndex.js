@@ -24,7 +24,8 @@ export const searchIndex = {
         { name: "Dr. Ravi Choudhary", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
         { name: "Mr. Sushil Kumar", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Poonam Bansal", role: "Professor & HOD", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Anshul Pareek", role: "Assistant Professor", dept: "CSE", url: "/faculty" }
+        { name: "Dr. Anshul Pareek", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
+        { name: "Dr. Neeti Sangwan", role: "Assistant Professor", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
