@@ -2441,14 +2441,14 @@ export const facultyMembers = [
         email: "anisha@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder27",
         img: "/faculty/anisha.png",
-        qual: "M.A., Ph.D. (Pursuing)",
-        experience: "10",
+        qual: "M.A.",
+        experience: "15",
         publications: "5+",
         patents: "0",
-        goodAt: ["Environmental & Ecological Crisis and Catastrophes", "Literary Representations of Environment", "Ethnic Issues in Literature", "Communication Skills", "English Literature"],
-        badAt: ["Significant administrative load from ecological literature research symposiums", "Managing literary analysis projects while overseeing foundational communication skills for engineering students"],
-        pdfLink: "https://msit.in/faculty/anisha",
-        bio: "Ms. Anisha is an Assistant Professor in the Applied Sciences Department (English) at MSIT. She holds an M.A. in English and a B.Ed., and is twice UGC NET qualified. Currently pursuing her Ph.D., her research focus includes Environmental & Ecological Crisis and Catastrophes, Literary Representations of Environment, and Ethnic Issues in Literature."
+        goodAt: ["English Language Teaching", "Technical Communication", "Industrial Requirements", "Soft Skills", "English"],
+        badAt: ["Significant administrative load from technical communication curriculum development", "Managing ELT workshops while overseeing foundational English courses for the institute"],
+        pdfLink: "https://www.msit.in/media/2023/05/04/anisha-detailed-profile.pdf",
+        bio: "Ms. Anisha is an Assistant Professor of English at MSIT. Her research focus is on English Language Teaching (ELT) and Technical Communication, bridging the gap between academic knowledge and industrial requirements."
     },
     {
         id: 'as-28',
