@@ -1055,5 +1055,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Placement Co-convener and IEEE Advisor", "Managing high-volume advisory roles for MTT-S and RAS chapters simultaneously"],
         pdfLink: "https://www.msit.in/media/2021/11/13/parveen-kumar_main-profile.pdf",
         bio: "Mr. Parveen Kumar is an Assistant Professor in the IT Department at MSIT with over 14 years of experience. He serves as the Placement Co-convener and has been an advisor for IEEE MTT-S and RAS chapters. His expertise lies in Wireless Communication and Sensor Networks, with a research focus on Vehicular Ad-hoc Networks (VANET) and Intelligent Transportation Systems."
+    },
+    {
+        id: 'it-13',
+        name: "Dr. Tripti Rathee",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "rathee.tripti@msit.in",
+        linkedin: "https://in.linkedin.com/in/tripti-rathee-a9a14316a",
+        img: "/faculty/tripti-rathee.png",
+        qual: "Ph.D.",
+        experience: "10",
+        publications: "3+",
+        patents: "1",
+        goodAt: ["Blockchain Technology", "Identity and Access Management", "Information Security", "Secure Data Sharing", "Self-Sovereign Identity"],
+        badAt: ["Significant administrative load from IPR and Software Renewal Committee duties", "Managing high-volume research in decentralized identity while overseeing Australian patent implementation"],
+        pdfLink: "https://www.msit.in/media/2022/07/15/tripti-rathee2s_main-profile.pdf",
+        bio: "Dr. Tripti Rathee is an Assistant Professor in the IT Department at MSIT with 10 years of experience. She holds a Ph.D. and is an expert in Blockchain Technology and Identity Management. Her research on secure identity management using blockchain has been published in high-impact SCIE journals (IF 13), and she holds an Australian patent for a blockchain-based data verification system."
     }
 ];
