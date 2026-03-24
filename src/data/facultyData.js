@@ -2126,5 +2126,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from laboratory safety compliance", "Managing research in heavy metal ion detection while overseeing foundational chemistry courses for first-year students"],
         pdfLink: "https://msit.in/faculty/sumita-dabas",
         bio: "Dr. Sumita Dabas is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Chemistry and is NET-CSIR-UGC qualified. Her research focuses on the complexing behaviour and analytical applications of chelating ion-exchangers, specifically for heavy metal ion detection and isolation in polluted water environments."
+    },
+    {
+        id: 'as-9',
+        name: "Dr. Deeba Naqvi",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "deeba@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder9",
+        img: "/faculty/deeba-naqvi.png",
+        qual: "Ph.D., M.Sc.",
+        experience: "10",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Fuzzy Optimization Problems", "Non-Cooperative Constant/Non-Constant Sum Games", "Qualitative Payoff Matrices"],
+        badAt: ["Significant administrative load from research in fuzzy logic", "Managing complex game theory models while overseeing department-wide mathematics student performance analytics"],
+        pdfLink: "https://msit.in/faculty/deeba-naqvi",
+        bio: "Dr. Deeba Naqvi is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT. She holds a Ph.D. and an M.Sc. in Mathematics and is NET-JRF qualified. Her research specializes in Fuzzy Optimization Problems and Game Theory, particularly focusing on non-cooperative constant and non-constant sum games with qualitative payoff matrices."
     }
 ];
