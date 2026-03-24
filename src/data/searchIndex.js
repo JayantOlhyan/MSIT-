@@ -77,7 +77,8 @@ export const searchIndex = {
         { name: "Mr. Deepak Goyal", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Dr. Deepti Deshwal", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Ms. Neelam Nehra", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Geetanjali Sharma", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
+        { name: "Dr. Geetanjali Sharma", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
+        { name: "Dr. Sakshi Rajput", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
