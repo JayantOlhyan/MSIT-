@@ -613,5 +613,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on hardware-software co-design for image analytics", "Managing long-term research projects in chaotic neural networks"],
         pdfLink: "https://www.msit.in/media/2024/10/09/sushil-kumar.pdf",
         bio: "Mr. Sushil Kumar is an Assistant Professor in the CSE Department at MSIT, where he has been a faculty member since January 2008. He holds an M.Tech. and is currently pursuing his Ph.D. His research expertise lies in Image Processing, Computer Vision, and Machine Learning, with a specific focus on facial emotion recognition and secure image encryption."
+    },
+    {
+        id: 'cse-23',
+        name: "Dr. Poonam Bansal",
+        role: "Professor & HOD",
+        dept: "CSE",
+        email: "poonambansal@msit.in",
+        linkedin: "https://in.linkedin.com/in/poonam-bansal-64478119",
+        img: "/faculty/poonam-bansal.png",
+        qual: "Ph.D., M.Tech., B.Tech.",
+        experience: "25+",
+        publications: "50+",
+        patents: "3+",
+        goodAt: ["Speech Processing", "Natural Language Processing (NLP)", "Machine Learning", "Departmental Leadership (HOD CSE)", "Digital Image Processing"],
+        badAt: ["Significant administrative overhead as Head of Department", "Managing institute-level leadership roles while maintaining active research in NLP"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-poonam-detailed-profile.pdf",
+        bio: "Dr. Poonam Bansal is a Professor and the Head of the Department (CSE) at MSIT. She holds a Ph.D. and has extensive experience in academia and research. Her primary expertise lies in Natural Language Processing (NLP) and Speech Processing, where she has published numerous research papers in international journals. She plays a pivotal leadership role at the institute, overseeing departmental growth and academic excellence."
     }
 ];
