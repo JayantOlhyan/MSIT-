@@ -766,5 +766,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load in institute website committee", "Managing high-volume research in Kotlin-based CNN applications"],
         pdfLink: "https://www.msit.in/media/2024/10/09/jyoti.pdf",
         bio: "Ms. Jyoti is an Assistant Professor in the CSE Department at MSIT. She is currently pursuing her Ph.D. from NIT Delhi and holds an M.Tech. in Computer Science. Her research focus includes Machine Learning and Deep Learning, with specific projects in sign language recognition and driver drowsiness detection. She is also a member of the institute's Website Committee."
+    },
+    {
+        id: 'cse-32',
+        name: "Ms. Vaani Garg",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "vaani.garg@msit.in",
+        linkedin: "https://in.linkedin.com/in/vaani-garg-a9514a4b",
+        img: "/faculty/vaani-garg.png",
+        qual: "Ph.D. (Pursuing), M.Tech., B.Tech., UGC-NET & GATE",
+        experience: "2.5+",
+        publications: "11+",
+        patents: "1",
+        goodAt: ["Image Processing", "Machine Learning", "Video Summarization", "Face Recognition", "Pattern Recognition"],
+        badAt: ["Significant administrative load as Summer Training Coordinator and IIC Coordinator", "Managing high-volume research publications in serverless architecture and smart traffic systems"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/vaani-full-profile.pdf",
+        bio: "Ms. Vaani Garg is an Assistant Professor in the CSE Department at MSIT. She is currently pursuing her Ph.D. from DTU under a research scholarship. Her research expertise is in Image Processing, Machine Learning, and Video Summarization. She holds a patent for a 'Compact Electronic Single Braille Cell Display' and has been recognized for her work in pattern recognition."
     }
 ];
