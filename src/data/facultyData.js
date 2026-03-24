@@ -2115,17 +2115,17 @@ export const facultyMembers = [
         name: "Dr. Sumita Dabas",
         role: "Assistant Professor",
         dept: "Applied Sciences",
-        email: "sumita@msit.in",
-        linkedin: "https://scholar.google.com/citations?user=placeholder8",
+        email: "sumitadabas@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=K7Z6L-cAAAAJ",
         img: "/faculty/sumita-dabas.png",
         qual: "Ph.D., M.Sc.",
         experience: "15",
         publications: "10+",
         patents: "0",
-        goodAt: ["Complexing Behaviour", "Analytical Applications of Chelating Ion-Exchangers", "Heavy Metal Ion Detection", "Isolation in Polluted Water", "Applied Chemistry"],
-        badAt: ["Significant administrative load from laboratory safety compliance", "Managing research in heavy metal ion detection while overseeing foundational chemistry courses for first-year students"],
-        pdfLink: "https://msit.in/faculty/sumita-dabas",
-        bio: "Dr. Sumita Dabas is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Chemistry and is NET-CSIR-UGC qualified. Her research focuses on the complexing behaviour and analytical applications of chelating ion-exchangers, specifically for heavy metal ion detection and isolation in polluted water environments."
+        goodAt: ["Information Theory", "Mathematical Modeling", "Entropy-based Measures", "Communication Theory", "Mathematics"],
+        badAt: ["Significant administrative load from information theory research lab simulation coordination", "Managing entropy-based communication models while overseeing foundational mathematics courses for the institute"],
+        pdfLink: "https://www.msit.in/media/2021/11/15/drsumita-dabas.pdf",
+        bio: "Dr. Sumita Dabas is an Assistant Professor of Mathematics at MSIT. She focuses on Information Theory and Mathematical Modeling, particularly entropy-based measures in communication."
     },
     {
         id: 'as-9',
