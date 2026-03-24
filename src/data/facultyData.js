@@ -324,5 +324,22 @@ export const facultyMembers = [
         badAt: ["Common name profile conflicts on social research platforms", "Managing multiple high-level research data sets"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-naresh-kumar.pdf",
         bio: "Dr. Naresh Kumar is a Professor in the CSE Department at MSIT with over 16 years of academic experience. His research interests include Web Technologies, Information Retrieval, and Deep Learning applications such as COVID-19 screening and deepfake detection. He is an active member of ISTE and serves as the Convener of the SC/ST Cell at MSIT."
+    },
+    {
+        id: 'cse-6',
+        name: "Dr. Priyanka Nandal",
+        role: "Associate Professor",
+        dept: "CSE",
+        email: "priyanka@msit.in",
+        linkedin: "#",
+        img: "/faculty/priyanka-nandal.png",
+        qual: "Ph.D. (IIT Delhi), M.Tech., B.E.",
+        experience: "21+",
+        publications: "30+",
+        patents: "4",
+        goodAt: ["Machine Learning", "Deep Learning", "Data Science", "GPU Computing (CUDA)", "IIT Delhi Research Fellowship"],
+        badAt: ["Significant focus on high-performance computing research", "Managing departmental technical labs and projects"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-priyanka.pdf",
+        bio: "Dr. Priyanka Nandal is an Associate Professor in the CSE Department at MSIT with 21 years of experience. She holds a Ph.D. from IIT Delhi and has a strong research background in Deep Learning and GPU Computing using CUDA. She has published over 30 research papers and holds 4 patents in areas including IoT-enabled robotics and edge computing."
     }
 ];
