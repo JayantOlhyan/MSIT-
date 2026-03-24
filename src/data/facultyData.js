@@ -1735,5 +1735,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from research publication coordination", "Managing high-precision research in automated depth-of-focus microscopy while overseeing department-wide instrumentation setup"],
         pdfLink: "https://www.msit.in/media/2021/11/24/neelam_faculty-profile.pdf",
         bio: "Dr. Neelam Barak is an Assistant Professor in the ECE Department at MSIT. She holds a Ph.D. and specializes in Optical Microscopy and Digital Holography. Her research, published in journals like Micron and the Journal of Optics, focuses on automated depth-of-focus microscopy and two-dimensional mapping using single ultrasonic sensors."
+    },
+    {
+        id: 'ece-26',
+        name: "Ms. Himani",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "himani@msit.in",
+        linkedin: "https://in.linkedin.com/in/himani-15a0171a",
+        img: "/faculty/himani.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "12",
+        publications: "3+",
+        patents: "0",
+        goodAt: ["Speech Processing", "Wireless Communication", "Embedded Systems", "Microprocessors", "VLSI Design"],
+        badAt: ["Significant administrative load from technical workshop coordination", "Managing research in smart railway track fault detection while overseeing department-wide practical implementation of circuits"],
+        pdfLink: "https://www.msit.in/media/2022/07/08/himani_main-profile.pdf",
+        bio: "Ms. Himani is an Assistant Professor in the ECE Department at MSIT with 12 years of academic experience. She holds an M.Tech. and specializes in Speech Processing and Wireless Communication. She has contributed to various technical workshops at MSIT and has published research on IOT-based railway track fault detection and smart water management."
     }
 ];
