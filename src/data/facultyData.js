@@ -2245,5 +2245,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from multi-university academic coordination", "Managing research in mathematical modeling while overseeing first-year engineering mathematics courses for two decades"],
         pdfLink: "https://msit.in/faculty/nidhi",
         bio: "Dr. Nidhi is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT with over 20 years of teaching experience. She holds a Ph.D. and an M.Sc. in Mathematics from S.C.D. Govt. College Ludhiana (Panjab University) and is JRF-NET qualified. Her extensive experience informs her teaching of foundational and advanced mathematics to engineering students."
+    },
+    {
+        id: 'as-16',
+        name: "Ms. Reenu Kumari",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "reenu@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder16",
+        img: "/faculty/reenu-kumari.png",
+        qual: "M.Sc.",
+        experience: "10",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Fuzzy Portfolio Selection Problems", "Multi-Criteria Decision Making Methods", "Data Envelopment Analysis (DEA)", "Mathematics", "Optimization Techniques"],
+        badAt: ["Significant administrative load from multi-criteria decision modeling research", "Managing research in portfolio selection while overseeing first-year engineering mathematics laboratory sessions"],
+        pdfLink: "https://msit.in/faculty/reenu-kumari",
+        bio: "Ms. Reenu Kumari is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT with over 10 years of teaching experience. She holds an M.Sc. in Mathematics and is NET qualified. Her research focuses on Fuzzy Portfolio Selection Problems, Multi-Criteria Decision Making Methods, and Data Envelopment Analysis (DEA), contributing to the field of optimization in engineering applications."
     }
 ];
