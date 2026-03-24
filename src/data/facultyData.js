@@ -2453,19 +2453,19 @@ export const facultyMembers = [
     {
         id: 'as-28',
         name: "Ms. Mansi",
-        role: "Assistant Professor (Ad-hoc)",
+        role: "Assistant Professor",
         dept: "Applied Sciences",
         email: "mansi@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder28",
         img: "/faculty/mansi.png",
-        qual: "M.Tech., Ph.D. (Pursuing)",
-        experience: "5",
+        qual: "M.Sc.",
+        experience: "15",
         publications: "5+",
         patents: "0",
-        goodAt: ["4D Printing of Shape Memory Polymers", "Biomedical Applications", "Condition Monitoring of Gears", "Machine Learning Algorithms", "Mechanical Engineering"],
-        runAt: ["Significant administrative load from 4D printing research lab setup for biomedical applications", "Managing machine learning models for gear condition monitoring while overseeing foundational mechanical engineering workshops as an ad-hoc faculty member"],
-        pdfLink: "https://msit.in/faculty/mansi",
-        bio: "Ms. Mansi is an Assistant Professor (Ad-hoc) in the Applied Sciences Department (Mechanical) at MSIT. She holds an M.Tech. in Mechanical Engineering and is currently pursuing her Ph.D. Her research interests include 4D Printing of Shape Memory Polymers for Biomedical Applications and Condition Monitoring of Gears using Machine Learning Algorithms."
+        goodAt: ["Advanced Calculus", "Linear Algebra", "Engineering Mathematics", "Applied Mathematics", "Mathematics"],
+        badAt: ["Significant administrative load from calculus department assessment moderation", "Managing high-volume linear algebra labs while overseeing foundational engineering mathematics for first-year students"],
+        pdfLink: "https://www.msit.in/media/2021/11/15/ms-mansi-detailed-profile.pdf",
+        bio: "Ms. Mansi is an Assistant Professor of Mathematics at MSIT. She specializes in Advanced Calculus and Linear Algebra, ensuring a strong mathematical foundation for first-year engineering students."
     },
     {
         id: 'as-29',
