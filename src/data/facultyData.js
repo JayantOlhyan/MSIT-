@@ -1140,5 +1140,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from NIRF team and Media Cell coordination", "Managing high-volume research in e-commerce quality and encrypted steganography simultaneously"],
         pdfLink: "https://www.msit.in/media/2022/11/29/dr-sitender-resume.pdf",
         bio: "Dr. Sitender Malik is an Assistant Professor in the IT Department at MSIT. He holds a Ph.D. from Thapar Institute of Engineering and Technology and specializes in Natural Language Processing and Machine Translation. His award-winning research includes six patents and two books, with a core focus on Sanskrit-to-English translation and software reliability models."
+    },
+    {
+        id: 'it-18',
+        name: "Dr. Saba Khanum",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "saba@msit.in",
+        linkedin: "https://in.linkedin.com/in/saba-khanum-9b514316a",
+        img: "/faculty/saba-khanum.png",
+        qual: "M.Tech., Ph.D. (Pursuing)",
+        experience: "10+",
+        publications: "12+",
+        patents: "1",
+        goodAt: ["Blockchain Technology", "Information Security", "Lattice-based Signatures", "Wireless Networks", "Sensitive Data Protection"],
+        badAt: ["Significant administrative load from outstanding contribution recognition", "Managing complex vulnerability assessments for cryptocurrency wallets while overseeing IoT patent implementation"],
+        pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-ms-saba-khanum-msit-it-faculty.pdf",
+        bio: "Dr. Saba Khanum is an Assistant Professor in the IT Department at MSIT with over 10 years of experience. She is currently pursuing her Ph.D. from Jamia Millia Islamia and is an expert in Blockchain and Information Security. A recipient of a 'Best Paper Award' in 2023, she has published extensively on lattice-based signatures and sensitive data protection in blockchain applications."
     }
 ];
