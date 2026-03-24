@@ -117,7 +117,8 @@ export const searchIndex = {
         { name: "Dr. Anju Ahlawat", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Mr. Rajbir Singh", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Mr. R. S. Rathee", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Jayesh Kumar", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
+        { name: "Dr. Jayesh Kumar", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
+        { name: "Dr. Nidhi", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

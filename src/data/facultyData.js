@@ -2228,5 +2228,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from CFD simulation laboratory management", "Managing latent heat storage research while overseeing foundational manufacturing technology courses for multiple streams"],
         pdfLink: "https://msit.in/faculty/jayesh-kumar",
         bio: "Dr. Jayesh Kumar is an Assistant Professor in the Applied Sciences Department at MSIT with over 16 years of teaching experience. He holds a Ph.D. and an M.Tech., and is GATE qualified. His research expertise includes Manufacturing Technology, Thermal Energy Storage, and Computational Fluid Dynamics (CFD), focusing particularly on latent heat thermal energy storage systems."
+    },
+    {
+        id: 'as-15',
+        name: "Dr. Nidhi",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "nidhiap@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder15",
+        img: "/faculty/nidhi.png",
+        qual: "Ph.D., M.Sc.",
+        experience: "20",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Mathematics", "Advanced Calculus", "Linear Algebra", "Numerical Analysis", "Panjab University Research Standards"],
+        badAt: ["Significant administrative load from multi-university academic coordination", "Managing research in mathematical modeling while overseeing first-year engineering mathematics courses for two decades"],
+        pdfLink: "https://msit.in/faculty/nidhi",
+        bio: "Dr. Nidhi is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT with over 20 years of teaching experience. She holds a Ph.D. and an M.Sc. in Mathematics from S.C.D. Govt. College Ludhiana (Panjab University) and is JRF-NET qualified. Her extensive experience informs her teaching of foundational and advanced mathematics to engineering students."
     }
 ];
