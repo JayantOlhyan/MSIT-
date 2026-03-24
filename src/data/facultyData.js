@@ -2211,5 +2211,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from multi-disciplinary department coordination", "Managing environmental engineering research while overseeing foundational graphics and mechanics courses for over three decades"],
         pdfLink: "https://msit.in/faculty/r-s-rathee",
         bio: "Mr. R. S. Rathee is an Assistant Professor in the Applied Sciences Department at MSIT with an exceptional 36+ years of teaching experience. He holds an M.Tech. in Environmental Engineering and a B.E. in Civil Engineering, both from DTU. His expertise spans Engineering Mechanics, Engineering Graphics, and Manufacturing Processes, having served MSIT in various capacities since 2001."
+    },
+    {
+        id: 'as-14',
+        name: "Dr. Jayesh Kumar",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "jayesh@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder14",
+        img: "/faculty/jayesh-kumar.png",
+        qual: "Ph.D., M.Tech., B.Tech.",
+        experience: "16",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Manufacturing Technology", "Engineering Mechanics", "Thermal Energy Storage", "Computational Fluid Dynamics (CFD)", "Latent Heat Thermal Energy Storage Systems"],
+        badAt: ["Significant administrative load from CFD simulation laboratory management", "Managing latent heat storage research while overseeing foundational manufacturing technology courses for multiple streams"],
+        pdfLink: "https://msit.in/faculty/jayesh-kumar",
+        bio: "Dr. Jayesh Kumar is an Assistant Professor in the Applied Sciences Department at MSIT with over 16 years of teaching experience. He holds a Ph.D. and an M.Tech., and is GATE qualified. His research expertise includes Manufacturing Technology, Thermal Energy Storage, and Computational Fluid Dynamics (CFD), focusing particularly on latent heat thermal energy storage systems."
     }
 ];
