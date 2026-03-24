@@ -106,7 +106,8 @@ export const searchIndex = {
         { name: "Ms. Nisha Singh", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
         { name: "Dr. Brijpal Singh", role: "Associate Professor & HOD", dept: "Applied Sciences", url: "/faculty" },
         { name: "Dr. Ajay Kumar Singh", role: "Professor (Deputy Director)", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Man Singh Beniwal", role: "Professor", dept: "Applied Sciences", url: "/faculty" }
+        { name: "Dr. Man Singh Beniwal", role: "Professor", dept: "Applied Sciences", url: "/faculty" },
+        { name: "Dr. Ajay Gahlot", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
