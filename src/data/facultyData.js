@@ -1412,5 +1412,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Placement Convener", "Managing complex research in energy-efficient routing while overseeing student career progression"],
         pdfLink: "https://www.msit.in/media/2021/11/13/meena-rao_main-profile.pdf",
         bio: "Dr. Meena Rao is an Associate Professor and the Placement Convener in the ECE Department at MSIT, with over 16 years of experience. She holds a Ph.D. and specializes in Wireless Communication and MANETs. Her research on energy-efficient routing protocols and AI-driven healthcare rescue systems has been published in several SCIE and SCOPUS indexed journals."
+    },
+    {
+        id: 'ece-7',
+        name: "Dr. Shaifali M. Arora",
+        role: "Associate Professor",
+        dept: "ECE",
+        email: "shaifali04@msit.in",
+        linkedin: "https://in.linkedin.com/in/shaifali-madan-arora-011111111",
+        img: "/faculty/shafali-madan-arora.png",
+        qual: "Ph.D., M.Tech(ECE), B.Tech(ECE)",
+        experience: "19",
+        publications: "22+",
+        patents: "1",
+        goodAt: ["Image Processing", "Video Processing", "Embedded Systems", "Artificial Intelligence", "Digital Watermarking"],
+        badAt: ["Significant administrative load from lab management", "Managing complex research in zero motion prejudgment while overseeing department-wide ISO standardization for lab manuals"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/shaifali.pdf",
+        bio: "Dr. Shaifali M. Arora is an Associate Professor in the ECE Department at MSIT with 19 years of academic experience. She holds a Ph.D. and specializes in Image and Video Processing and Embedded Systems. An accomplished author with three books and a patent in IoT healthcare, she has made significant contributions to the department, including setting up the Digital Image Processing Lab."
     }
 ];

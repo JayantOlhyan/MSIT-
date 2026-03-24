@@ -69,7 +69,8 @@ export const searchIndex = {
         { name: "Dr. Pardeep Sangwan", role: "Associate Professor", dept: "ECE", url: "/faculty" },
         { name: "Dr. Puneet Azad", role: "Associate Professor", dept: "ECE", url: "/faculty" },
         { name: "Dr. Sudesh Pahal", role: "Associate Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Meena Rao", role: "Associate Professor", dept: "ECE", url: "/faculty" }
+        { name: "Dr. Meena Rao", role: "Associate Professor", dept: "ECE", url: "/faculty" },
+        { name: "Dr. Shaifali M. Arora", role: "Associate Professor", dept: "ECE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
