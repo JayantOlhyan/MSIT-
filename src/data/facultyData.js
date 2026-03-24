@@ -2203,14 +2203,14 @@ export const facultyMembers = [
         email: "rsrathee@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder13",
         img: "/faculty/r-s-rathee.png",
-        qual: "M.Tech., B.E.",
-        experience: "36",
+        qual: "M.Sc.",
+        experience: "30",
         publications: "5+",
         patents: "0",
-        goodAt: ["Engineering Mechanics", "Engineering Graphics", "Manufacturing Processes", "Environmental Engineering", "Civil Engineering"],
-        badAt: ["Significant administrative load from multi-disciplinary department coordination", "Managing environmental engineering research while overseeing foundational graphics and mechanics courses for over three decades"],
-        pdfLink: "https://msit.in/faculty/r-s-rathee",
-        bio: "Mr. R. S. Rathee is an Assistant Professor in the Applied Sciences Department at MSIT with an exceptional 36+ years of teaching experience. He holds an M.Tech. in Environmental Engineering and a B.E. in Civil Engineering, both from DTU. His expertise spans Engineering Mechanics, Engineering Graphics, and Manufacturing Processes, having served MSIT in various capacities since 2001."
+        goodAt: ["Discrete Mathematics", "Linear Algebra", "Computer Science Engineering", "Engineering Mathematics", "Mathematics"],
+        badAt: ["Significant administrative load from department-wide linear algebra curriculum development", "Managing veteran-level academic leadership while overseeing high-volume foundational mathematics for CSE departments"],
+        pdfLink: "https://www.msit.in/media/2021/11/15/r-s-rahtee_main-profile.pdf",
+        bio: "Mr. R. S. Rathee is an Assistant Professor of Mathematics at MSIT. A veteran in the department, he focuses on Discrete Mathematics and Linear Algebra for Computer Science engineering curricula."
     },
     {
         id: 'as-14',
