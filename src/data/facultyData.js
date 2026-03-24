@@ -800,5 +800,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on multithreaded server optimization", "Managing long-term research in hybrid software development methods"],
         pdfLink: "https://www.msit.in/media/uploads/2026/03/06/kirti-detailed-profile.pdf",
         bio: "Ms. Kirti Dahiya is an Assistant Professor in the CSE Department at MSIT with 4 years of experience. She holds an M.Tech. and has a strong research focus on Artificial Intelligence and Data Science. She has contributed research papers to MSIT's Satyam Journal and International Journals, exploring topics like multithreaded servers and web performance optimization."
+    },
+    {
+        id: 'cse-34',
+        name: "Ms. Bhawna Bhardwaj",
+        role: "Assistant Professor (Ad-hoc)",
+        dept: "CSE",
+        email: "bhawnabhardwaj@msit.in",
+        linkedin: "https://in.linkedin.com/in/bhawna-bhardwaj-48b4b964",
+        img: "/faculty/bhawna-bhardwaj.png",
+        qual: "Ph.D. (Pursuing), M.Tech. (IT), B.Tech. (CSE)",
+        experience: "10+",
+        publications: "5+",
+        patents: "1",
+        goodAt: ["Generative AI", "Machine Learning", "Deep Learning", "IoT", "Faculty Development Coordination"],
+        badAt: ["Significant administrative load as FDP Organiser for AICTE ATAL", "Managing high-volume research in educational technology and learning devices"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mrs-bhawna-bhardwaj_2MWOj2h.pdf",
+        bio: "Ms. Bhawna Bhardwaj is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 10 years of experience. She is currently pursuing her Ph.D. in Information Technology from GGSIPU and holds an M.Tech. from C-DAC Noida. Her expertise lies in Machine Learning, Deep Learning, and Generative AI, and she holds a design patent for an 'Interactive Learning Device'."
     }
 ];
