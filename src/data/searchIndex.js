@@ -40,7 +40,8 @@ export const searchIndex = {
         { name: "Prof. Prabhjot Kaur Sidhu", role: "Professor & HOD", dept: "IT", url: "/faculty" },
         { name: "Prof. Tripti Sharma", role: "Professor", dept: "IT", url: "/faculty" },
         { name: "Dr. Anupama Kaushik", role: "Associate Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Sunesh Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" }
+        { name: "Dr. Sunesh Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" },
+        { name: "Dr. Bharti Sharma", role: "Associate Professor", dept: "IT", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

@@ -919,5 +919,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on GA-based optimized image watermarking", "Managing academic load while maintaining research output in specialized Neural network fields"],
         pdfLink: "https://www.msit.in/media/2021/12/01/sunesh_main-profile.pdf",
         bio: "Dr. Sunesh Malik is an Assistant Professor in the IT Department at MSIT with over 11 years of experience in the IT domain. She holds a Ph.D. and specializes in Digital Image Security and Spiking Neural Networks. Her research focus includes advanced image processing and digital watermarking techniques, and she is an active scholar in the field of Artificial Intelligence."
+    },
+    {
+        id: 'it-5',
+        name: "Dr. Bharti Sharma",
+        role: "Associate Professor",
+        dept: "IT",
+        email: "bhartisharma@msit.in",
+        linkedin: "https://in.linkedin.com/in/bharti-sharma-51347021",
+        img: "/faculty/bharti-sharma.png",
+        qual: "Ph.D. (CSE), M.Tech., B.Tech.",
+        experience: "13+",
+        publications: "8+",
+        patents: "2",
+        goodAt: ["Recommendation Systems", "Optimization Techniques", "Text Summarization", "Deep Learning", "Kubernetes Cluster Benchmarking"],
+        badAt: ["Significant administrative load as HOD of IT (2nd Shift)", "Managing complex multi-disciplinary research in EEG signal classification and Arduino-based neural states"],
+        pdfLink: "https://www.msit.in/media/2021/12/01/bharti_main-profile.pdf",
+        bio: "Dr. Bharti Sharma is an Associate Professor in the IT Department at MSIT with over 13 years of experience. She holds a Ph.D. from GGSIPU and specializes in Recommendation Systems and Deep Learning. Currently serving as HOD of the IT (2nd shift), she has published several high-impact papers in SCIE journals and holds two patents in IoT-based healthcare and AI traffic management."
     }
 ];
