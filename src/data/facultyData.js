@@ -1650,5 +1650,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from event management", "Managing high-volume research in signal processing while overseeing institute-wide cultural and technical fests"],
         pdfLink: "https://www.msit.in/faculty/ece",
         bio: "Ms. Prinkle Talan is an Assistant Professor in the ECE Department at MSIT with over 10 years of experience. She holds an M.Tech. in Signal Processing and specializes in Wireless Communication and VLSI Design. Beyond academics, she is actively involved in coordinating the institute's cultural and technical events."
+    },
+    {
+        id: 'ece-21',
+        name: "Ms. Garima",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "garima@msit.in",
+        linkedin: "https://in.linkedin.com/in/garima-01111116a",
+        img: "/faculty/garima.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "6",
+        publications: "2+",
+        patents: "0",
+        goodAt: ["Digital System Design", "CMOS Digital Circuits", "Biomedical Signal Processing", "Emotion Recognition", "Multiplier Topologies"],
+        badAt: ["Significant administrative load from lab standardization", "Managing high-volume research in EEG-based emotion identification while overseeing department-wide exam coordination"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/garima_main-profile.pdf",
+        bio: "Ms. Garima is an Assistant Professor in the ECE Department at MSIT with 6 years of experience. She holds an M.Tech. from GGSIPU and specializes in Digital System Design and CMOS Digital Circuits. Her research interests include biomedical signal processing, specifically EEG-based emotion identification and optimized multiplier topologies."
     }
 ];
