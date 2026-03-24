@@ -1174,5 +1174,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Life Time Member of ISTE New Delhi", "Managing complex performance evaluation of machine learning algorithms in SD-VANET environments"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-preeti-sehrawat-it-faculty-msit.pdf",
         bio: "Dr. Preeti Sehrawat is an Assistant Professor in the IT Department at MSIT with 10 years of experience. She is currently pursuing her Ph.D. and specializes in Wireless Communication and Vehicular Networking (VANETs). Her latest research, published in high-impact journals, focuses on machine learning algorithms for efficient multimedia transmission in SD-VANET systems."
+    },
+    {
+        id: 'it-20',
+        name: "Dr. Preeti Rathee",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "preetirathee@msit.in",
+        linkedin: "https://in.linkedin.com/in/preeti-rathee-158214152",
+        img: "/faculty/preeti-rathee.png",
+        qual: "Ph.D. (GGSIPU), M. Tech, B,Tech",
+        experience: "7",
+        publications: "4+",
+        patents: "0",
+        goodAt: ["Semantic Web", "Ontology Design", "Semantic Similarity", "IWD Optimization", "ECG Signal Denoising"],
+        badAt: ["Significant administrative load as ISO coordinator and Firewall Committee member", "Managing complex research in ontology merging while overseeing college magazine coordination"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/preeti-rathee_main-profile.pdf",
+        bio: "Dr. Preeti Rathee is an Assistant Professor in the IT Department at MSIT with 7 years of teaching experience. She completed her Ph.D. from GGSIPU in 2023 and specializes in the Semantic Web and Explainable AI (XAI). Her research focus includes ontology merging and semantic similarity measures using advanced optimization algorithms like Ant Colony Optimization."
     }
 ];
