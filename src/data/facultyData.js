@@ -1310,5 +1310,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Proctor and Mentor", "Managing complex research in bottleneck flow control while overseeing college counselling sessions"],
         pdfLink: "https://www.msit.in/media/uploads/2025/10/06/detailedprofilejyotisandhu.pdf",
         bio: "Ms. Jyoti Sandhu is an Assistant Professor in the IT Department at MSIT. She holds an M.Tech. from Kurukshetra University and specializes in Mobile Networks and Congestion Control in MANETs. Her research focuses on bandwidth utilization in wireless sensors, and she actively contributes to department administration as a proctor for second-year students."
+    },
+    {
+        id: 'ece-1',
+        name: "Dr. Archana Balyan",
+        role: "Professor & HOD",
+        dept: "ECE",
+        email: "archanabalyan@msit.in",
+        linkedin: "https://in.linkedin.com/in/archana-balyan-0105b4105",
+        img: "/faculty/archana-balyan.png",
+        qual: "Ph.D. (GGSIPU), M.E. (ECE), B.E.",
+        experience: "32+",
+        publications: "50+",
+        patents: "2",
+        goodAt: ["Speech Signal Processing", "Speech Synthesis", "Wireless Communication", "MIMO-OFDM Systems", "Machine Learning"],
+        badAt: ["Significant administrative load as Professor & HOD", "Managing complex research in automatic phonetic segmentation while overseeing departmental coordination"],
+        pdfLink: "https://www.msit.in/media/2021/11/12/archana_main-profile-1_D5w1Mww.pdf",
+        bio: "Dr. Archana Balyan is the Professor and Head of Department (HOD) for ECE at MSIT with over 32 years of academic and administrative experience. She holds a Ph.D. from GGSIPU and an M.E. from DTU. Her research expertise includes wireless communication, MIMO-OFDM systems, and speech signal processing, specifically focusing on Hindi speech synthesis using HMM models."
     }
 ];
