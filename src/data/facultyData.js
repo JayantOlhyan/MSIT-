@@ -681,5 +681,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as NAAC and NBA core member", "Managing Microsoft Learn Student Ambassador Chapter while overseeing multiple patents"],
         pdfLink: "https://www.msit.in/media/2024/10/09/parul.pdf",
         bio: "Dr. Parul Chaudhary is an Assistant Professor in the CSE Department at MSIT with over 14 years of research and teaching experience. She holds a Ph.D. from GGSIPU and is an expert in Energy Harvesting and IoT applications. A recipient of the 'Certificate of Excellence in Research (2023)', she has four patents to her credit and established the Microsoft Learn Student Ambassador Chapter at MSIT. Her research is at the forefront of piezoelectric materials and smart health systems."
+    },
+    {
+        id: 'cse-27',
+        name: "Ms. Swati Malik",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "swatimalik@msit.in",
+        linkedin: "https://in.linkedin.com/in/swati-malik-0b83b817",
+        img: "/faculty/swati-malik.png",
+        qual: "Ph.D., M.Tech., B.Tech.",
+        experience: "11+",
+        publications: "9+",
+        patents: "1",
+        goodAt: ["Digital Communication", "Sentiment Analysis (Tweepy)", "FPGA Implementation", "MIMO-OFDM Systems", "Information Security (AES/RSA)"],
+        badAt: ["Significant focus on high-speed hardware multipliers", "Managing complex MIMO-OFDM signal processing architectures"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/swati-malik_main-profile.pdf",
+        bio: "Ms. Swati Malik is an Assistant Professor in the CSE Department at MSIT with over 11 years of experience. She holds a Ph.D. and specializes in Digital Communication and Information Security. Her research includes real-time Sentiment Analysis and FPGA-based system design. She also holds a published patent for an 'Aluminium Louver'."
     }
 ];
