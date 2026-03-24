@@ -2194,5 +2194,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from welding process laboratory maintenance", "Managing research in manufacturing processes while overseeing first-year engineering graphics and computer science courses"],
         pdfLink: "https://msit.in/faculty/rajbir-singh",
         bio: "Mr. Rajbir Singh is an Assistant Professor in the Applied Sciences Department at MSIT with 13 years of teaching experience. He holds an M.Tech. in Computer Science and specializes in Manufacturing Processes, Engineering Graphics, and Welding Processes. His research interests bridge mechanical engineering foundations with computer-aided design and manufacturing."
+    },
+    {
+        id: 'as-13',
+        name: "Mr. R. S. Rathee",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "rsrathee@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder13",
+        img: "/faculty/r-s-rathee.png",
+        qual: "M.Tech., B.E.",
+        experience: "36",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Engineering Mechanics", "Engineering Graphics", "Manufacturing Processes", "Environmental Engineering", "Civil Engineering"],
+        badAt: ["Significant administrative load from multi-disciplinary department coordination", "Managing environmental engineering research while overseeing foundational graphics and mechanics courses for over three decades"],
+        pdfLink: "https://msit.in/faculty/r-s-rathee",
+        bio: "Mr. R. S. Rathee is an Assistant Professor in the Applied Sciences Department at MSIT with an exceptional 36+ years of teaching experience. He holds an M.Tech. in Environmental Engineering and a B.E. in Civil Engineering, both from DTU. His expertise spans Engineering Mechanics, Engineering Graphics, and Manufacturing Processes, having served MSIT in various capacities since 2001."
     }
 ];
