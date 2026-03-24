@@ -1463,5 +1463,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as BOG Faculty Representative", "Managing complex research in millennial-wave waveguides while overseeing department-wide media cell branding"],
         pdfLink: "https://www.msit.in/media/2024/07/30/dr-aman-dahiya_detailed_-profile-july-24.pdf",
         bio: "Dr. Aman Kumari Dahiya is an Associate Professor in the ECE Department at MSIT with over 16 years of experience. She holds a Ph.D. in Microwave Engineering and an M.B.A. Her versatile research spans AI-driven healthcare, IOT applications, and reconfigurable antennas, earning her multiple Research Excellence Awards. She has served as a Faculty Representative on the Board of Governors."
+    },
+    {
+        id: 'ece-10',
+        name: "Dr. Dinesh Sheoran",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "dineshsheoran@msit.in",
+        linkedin: "https://in.linkedin.com/in/dinesh-sheoran-01111116a",
+        img: "/faculty/dinesh-sheoran.png",
+        qual: "Ph.D., M.Tech., MBA, B.E.",
+        experience: "21",
+        publications: "13+",
+        patents: "1",
+        goodAt: ["Speech Recognition", "Artificial Intelligence", "Renewable Energy", "Digital Communication", "Waste Management"],
+        badAt: ["Significant administrative load from administrative coordination", "Managing high-volume research in tensor factorization while overseeing industry-informed project competitions"],
+        pdfLink: "https://www.msit.in/media/2023/10/07/long-resume-dinesh-sheoran.pdf",
+        bio: "Dr. Dinesh Sheoran is an Assistant Professor in the ECE Department at MSIT with 21 years of experience across industry and academia. He holds a Ph.D. and an MBA, specializing in Speech Recognition and Artificial Intelligence. He is a patent holder for an IOT-based waste management system and has a strong research portfolio in digital communication and sensor networks."
     }
 ];

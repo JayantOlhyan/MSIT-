@@ -72,7 +72,8 @@ export const searchIndex = {
         { name: "Dr. Meena Rao", role: "Associate Professor", dept: "ECE", url: "/faculty" },
         { name: "Dr. Shaifali M. Arora", role: "Associate Professor", dept: "ECE", url: "/faculty" },
         { name: "Dr. Richa Gupta", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Aman Kumari Dahiya", role: "Associate Professor", dept: "ECE", url: "/faculty" }
+        { name: "Dr. Aman Kumari Dahiya", role: "Associate Professor", dept: "ECE", url: "/faculty" },
+        { name: "Dr. Dinesh Sheoran", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
