@@ -2092,5 +2092,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from physics department research coordination", "Managing energy consumption reduction in cloud models while overseeing first-year physics laboratories"],
         pdfLink: "https://msit.in/faculty/sobinder-singh",
         bio: "Dr. Sobinder Singh is an Associate Professor in the Applied Sciences Department (Physics) at MSIT. He holds a Ph.D. in Physics and specializes in Cloud Computing, particularly focusing on Energy Consumption Reduction and the building blocks of cloud models. His research addresses key challenges in cloud computing infrastructures, while he teaches core physics courses to undergraduate students."
+    },
+    {
+        id: 'as-7',
+        name: "Dr. Ajay Kumar",
+        role: "Associate Professor",
+        dept: "Applied Sciences",
+        email: "ajayk@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder7",
+        img: "/faculty/ajay-kumar.png",
+        qual: "Ph.D.",
+        experience: "15",
+        publications: "12+",
+        patents: "0",
+        goodAt: ["Astrophysics", "Mobile Networks", "Differential Pressure Gauge", "Mathematics", "Engineering Mechanics"],
+        badAt: ["Significant administrative load from selection committee memberships (DRDO)", "Managing research in astrophysics while overseeing foundational mathematics courses for IGNOU Diploma programs"],
+        pdfLink: "https://msit.in/faculty/ajay-kumar",
+        bio: "Dr. Ajay Kumar is an Associate Professor in the Applied Sciences Department (Mathematics) at MSIT. He holds a Ph.D. specializing in the Simulation of Periodic Orbits and has a diverse research background including Astrophysics and Mobile Networks. He has published 12+ research papers and contributed a book chapter to the IGNOU Diploma in Engineering Mechanics, while also serving on prestigious selection committees like DRDO."
     }
 ];
