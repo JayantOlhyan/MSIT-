@@ -834,5 +834,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on word sense disambiguation and genetic algorithms", "Managing administrative duties for social and charitable trusts"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mrs-sabnam-kumari.pdf",
         bio: "Mrs. Sabnam Kumari is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 12 years of research and teaching experience. She has submitted her Ph.D. thesis at DCRUST, Murthal, and specializes in Natural Language Processing and Machine Learning. An author of the book 'Text-to-Speech Analytics', she is particularly recognized for her work in Sanskrit and Hindi language processing."
+    },
+    {
+        id: 'cse-36',
+        name: "Mr. Deepak Goyal",
+        role: "Assistant Professor (Ad-hoc)",
+        dept: "CSE",
+        email: "deepakgoyal@msit.in",
+        linkedin: "https://in.linkedin.com/in/deepak-goyal-64778119",
+        img: "/faculty/deepak-goyal.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "21+",
+        publications: "12+",
+        patents: "0",
+        goodAt: ["Renewable Energy Resources", "Analog Electronics", "Microprocessors", "Wireless Sensor Networks", "Predictive Modeling"],
+        badAt: ["Significant administrative load in faculty development programs", "Managing high-volume curriculum for inter-polytechnic sports and technical coordination"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mr-deepak-full-profile.pdf",
+        bio: "Mr. Deepak Goyal is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 21 years of experience. He holds an M.Tech. from NSIT and is currently pursuing his Ph.D. A veteran educator, he specializes in Renewable Energy Resources, Analog Electronics, and Microprocessors. He has a long-standing career at MSIT and is actively involved in faculty development programs on universal human values."
     }
 ];
