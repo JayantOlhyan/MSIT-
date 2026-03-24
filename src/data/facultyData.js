@@ -494,5 +494,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as active reviewer for multiple journals", "Balancing long-term database system research with curriculum-aligned lab management"],
         pdfLink: "https://www.msit.in/media/2024/10/09/sonia-rathee.pdf",
         bio: "Dr. Sonia Rathee is an Associate Professor in the CSE Department at MSIT. Since 2007, she has contributed over 17 years of teaching and research experience. She holds a Ph.D. and specializes in Database Management Systems and Spatio-temporal Databases. With over 50 publications and a patent in ML-based image detection, her work often explores the intersection of AI and spatial data analytics."
+    },
+    {
+        id: 'cse-16',
+        name: "Dr. Vinita Rohilla",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "vinita@msit.in",
+        linkedin: "#",
+        img: "/faculty/vinita-rohilla.png",
+        qual: "Ph.D., M.Tech., B.E.",
+        experience: "18",
+        publications: "13+",
+        patents: "0",
+        goodAt: ["Machine Learning", "Data Science", "Computer Vision", "Deep Learning", "Location-Based Advertising", "Geo-fencing"],
+        badAt: ["Significant administrative load as Suraj Sujan Magazine contributor", "Balancing long-term data science research with curriculum-aligned web development labs"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-vinita-rohilla.pdf",
+        bio: "Dr. Vinita Rohilla is an Assistant Professor in the CSE Department at MSIT with 18 years of experience. She holds a Ph.D. and specializes in Machine Learning and Computer Vision, with unique research in Location-Based Advertising and Geo-fencing. She has published over 13 research papers and has presented at various international IEEE and Springer conferences."
     }
 ];
