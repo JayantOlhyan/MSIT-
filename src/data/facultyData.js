@@ -1990,5 +1990,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from AICTE PARAKH coordination", "Managing research in subsynchronous resonance while overseeing department-wide AC-DC link simulation labs"],
         pdfLink: "https://www.msit.in/media/2022/12/21/detailed-profile.pdf",
         bio: "Ms. Nisha Singh is an Assistant Professor in the EEE Department at MSIT with over 5 years of experience. She holds an M.Tech. in Power Systems and specializes in Automatic Generation Control in deregulated power systems and Optimal Power Flow. Her research, published in journals such as Recent Advances in Electrical & Electronic Engineering, focuses on subsynchronous resonance and power frequency balance in interconnected systems."
+    },
+    {
+        id: 'as-1',
+        name: "Dr. Brijpal Singh",
+        role: "Associate Professor & HOD",
+        dept: "Applied Sciences",
+        email: "brijpal@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder1",
+        img: "/faculty/brijpal-singh.png",
+        qual: "Ph.D., M.Tech., B.E.",
+        experience: "29",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Submerged Arc Welding", "Manufacturing Technology", "Production Engineering", "Industrial Engineering", "Engineering Drawing"],
+        badAt: ["Significant administrative load from HOD responsibilities", "Managing high-volume workshop practice sessions while overseeing department-wide accreditation"],
+        pdfLink: "https://msit.in/faculty/brijpal-singh",
+        bio: "Dr. Brijpal Singh is an Associate Professor and the Head of Department for Applied Sciences at MSIT. With over 29 years of teaching experience, he holds a Ph.D. and an M.Tech. in Industrial Engineering. His expertise spans across Manufacturing Technology, Submerged Arc Welding, and Production Engineering, and he has taught core subjects like Engineering Mechanics and Workshop Technology."
     }
 ];

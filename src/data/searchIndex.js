@@ -103,7 +103,8 @@ export const searchIndex = {
         { name: "Dr. Monu Malik", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
         { name: "Ms. Mamta Rani", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
         { name: "Mr. Sachit Rathee", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Ms. Nisha Singh", role: "Assistant Professor", dept: "EEE", url: "/faculty" }
+        { name: "Ms. Nisha Singh", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
+        { name: "Dr. Brijpal Singh", role: "Associate Professor & HOD", dept: "Applied Sciences", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
