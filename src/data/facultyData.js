@@ -868,5 +868,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as HOD of IT Department", "Managing high-volume research publications and patent filings simultaneously"],
         pdfLink: "https://www.msit.in/media/2024/08/03/resume_dr_prabhjot_kaur.pdf",
         bio: "Prof. (Dr.) Prabhjot Kaur Sidhu is a Professor and HOD of the IT Department at MSIT with over 23 years of experience. Ranked among the Top 2% of Researchers in the World by Stanford University (2020), she holds two PhDs and specializes in Medical Image Segmentation, Soft Computing, and Machine Learning. An extensively published academic, she has 8 patents and 3 books to her credit, and has served as HOD of the IT department multiple times."
+    },
+    {
+        id: 'it-2',
+        name: "Prof. Tripti Sharma",
+        role: "Professor",
+        dept: "IT",
+        email: "tripti_sharma@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-tripti-sharma-19812420",
+        img: "/faculty/tripti-sharma.png",
+        qual: "Ph.D. (twice), M.Phil (CS), M.Tech., B.E. (CSE)",
+        experience: "21+",
+        publications: "75+",
+        patents: "7",
+        goodAt: ["Wireless Sensor Networks (WSN)", "Compiler Design", "Soft Computing", "Artificial Intelligence", "Genetic Algorithms"],
+        badAt: ["Significant administrative load as former HOD of IT Department", "Managing high-volume research in network security and FPGA optimization"],
+        pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-dr-tripti-sharma-it-faculty-msit.pdf",
+        bio: "Prof. (Dr.) Tripti Sharma is a Professor in the IT Department at MSIT with over 21 years of academic experience. She holds two PhDs and is an expert in Wireless Sensor Networks (WSN) and Compiler Design. With over 75 research publications and multiple patents, she has been recognized as a 'Top 100 Educator' and received the Rashtriya Shiksha Gaurav Puruskar. She has also served as HOD of the IT department for several years."
     }
 ];
