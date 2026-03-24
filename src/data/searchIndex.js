@@ -79,7 +79,8 @@ export const searchIndex = {
         { name: "Ms. Neelam Nehra", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Dr. Geetanjali Sharma", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Dr. Sakshi Rajput", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Nishtha", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
+        { name: "Dr. Nishtha", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
+        { name: "Dr. Neetu (Sehrawat)", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

@@ -1582,5 +1582,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as NAAC Committee member", "Managing research in equivalent RLC circuit modelling while overseeing HULT Prize mentoring"],
         pdfLink: "https://www.msit.in/media/2021/11/13/nishtha_main-profile.pdf",
         bio: "Dr. Nishtha is an Assistant Professor in the ECE Department at MSIT with 8 years of experience. She specializes in Electronic Devices and Circuit Analysis, with a research focus on MIMO Antennas and 5G communications. She actively contributes to the institute's quality assurance as a member of the NAAC and HULT Prize committees."
+    },
+    {
+        id: 'ece-17',
+        name: "Dr. Neetu (Sehrawat)",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "neetu@msit.in",
+        linkedin: "https://in.linkedin.com/in/neetu-sehrawat-01111116a",
+        img: "/faculty/neetu-sehrawat.png",
+        qual: "Ph.D (p), M.Tech. (RFM), B.Tech.",
+        experience: "9+",
+        publications: "2+",
+        patents: "0",
+        goodAt: ["RF & Microwave Engineering", "Dielectric Resonator Antennas", "Microstrip Antennas", "Wideband Antennas", "Academic Research"],
+        badAt: ["Significant administrative load from research coordination", "Managing complex research in inhomogeneous circularly polarized antennas while overseeing B.Tech thesis evaluations"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/neetu_main-profile.pdf",
+        bio: "Dr. Neetu (Sehrawat) is an Assistant Professor in the ECE Department at MSIT with over 9 years of experience. She holds a Ph.D. and specializes in RF & Microwave Engineering, specifically Dielectric Resonator Antennas (DRA). A gold medalist in her M.Tech and a three-time GATE qualifier, her research on inhomogeneous circularly polarized antennas has been published in leading computational electronics journals."
     }
 ];
