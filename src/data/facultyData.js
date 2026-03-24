@@ -2262,5 +2262,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from multi-criteria decision modeling research", "Managing research in portfolio selection while overseeing first-year engineering mathematics laboratory sessions"],
         pdfLink: "https://msit.in/faculty/reenu-kumari",
         bio: "Ms. Reenu Kumari is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT with over 10 years of teaching experience. She holds an M.Sc. in Mathematics and is NET qualified. Her research focuses on Fuzzy Portfolio Selection Problems, Multi-Criteria Decision Making Methods, and Data Envelopment Analysis (DEA), contributing to the field of optimization in engineering applications."
+    },
+    {
+        id: 'as-17',
+        name: "Dr. Narender Singh Malik",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "narender@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder17",
+        img: "/faculty/narender-singh-malik.png",
+        qual: "Ph.D., M.Tech.",
+        experience: "15",
+        publications: "10+",
+        patents: "0",
+        goodAt: ["Micro-Electric Discharge Machining (Micro-EDM)", "Miniature-Size 3D Feature Manufacturing", "Titanium Alloy Machining", "Tool & Die Design", "Advanced Manufacturing"],
+        badAt: ["Significant administrative load from micro-machining laboratory optimization", "Managing fabrication of miniature 3D features while overseeing foundational mechanical engineering workshops"],
+        pdfLink: "https://msit.in/faculty/narender-singh-malik",
+        bio: "Dr. Narender Singh Malik is an Assistant Professor in the Applied Sciences Department (Mechanical) at MSIT. He holds a Ph.D. and an M.Tech. in Tool & Die Design. His research focuses on Micro-Electric Discharge Machining (Micro-EDM) and the manufacturing of miniature-size 3D features on Titanium alloys, contributing to advancements in high-precision engineering and tool design."
     }
 ];
