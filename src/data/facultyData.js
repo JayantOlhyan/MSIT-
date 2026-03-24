@@ -1072,5 +1072,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from IPR and Software Renewal Committee duties", "Managing high-volume research in decentralized identity while overseeing Australian patent implementation"],
         pdfLink: "https://www.msit.in/media/2022/07/15/tripti-rathee2s_main-profile.pdf",
         bio: "Dr. Tripti Rathee is an Assistant Professor in the IT Department at MSIT with 10 years of experience. She holds a Ph.D. and is an expert in Blockchain Technology and Identity Management. Her research on secure identity management using blockchain has been published in high-impact SCIE journals (IF 13), and she holds an Australian patent for a blockchain-based data verification system."
+    },
+    {
+        id: 'it-14',
+        name: "Dr. Minakshi Tomer",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "minakshi.tomer@msit.in",
+        linkedin: "https://in.linkedin.com/in/minakshi-tomer-b8a14316a",
+        img: "/faculty/minakshi-tomer.png",
+        qual: "M.Tech (IT)",
+        experience: "10+",
+        publications: "6+",
+        patents: "0",
+        goodAt: ["Text Summarization", "Deep Learning", "Natural Language Processing (NLP)", "Machine Learning", "Fuzzy Logic"],
+        badAt: ["Significant administrative load from Media Cell and NBA coordination", "Managing complex research in ensembled approach for multi-document extractive text summarization"],
+        pdfLink: "https://www.msit.in/media/2021/12/01/minakshi-tomer_main.pdf",
+        bio: "Dr. Minakshi Tomer is an Assistant Professor in the IT Department at MSIT with 10 years of academic experience. She holds a M.Tech. (IT) and specializes in Natural Language Processing and Deep Learning. Her research focus includes ensembled approaches for text summarization using fuzzy logic and LSTM networks, and she has been recognized for her coordination of major inter-college competitions."
     }
 ];
