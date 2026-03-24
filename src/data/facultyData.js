@@ -1378,5 +1378,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Dean Academics and former HOD", "Managing complex research in triboelectric nanogenerators while overseeing AICTE approvals and JAC convenorship"],
         pdfLink: "https://www.msit.in/media/2021/11/02/dr-puneet-azad.pdf",
         bio: "Dr. Puneet Azad is an Associate Professor and the Dean Academics at MSIT, where he has served since 2002. He holds a Ph.D. from Gautam Buddha University and an M.E. from Delhi College of Engineering. An expert in energy harvesting and self-powered IoT systems, his research has been published on the cover of leading journals like the Bulletin of Materials Science."
+    },
+    {
+        id: 'ece-5',
+        name: "Dr. Sudesh Pahal",
+        role: "Associate Professor",
+        dept: "ECE",
+        email: "sudeshpahal@msit.in",
+        linkedin: "https://in.linkedin.com/in/sudesh-pahal-0105b4105",
+        img: "/faculty/sudesh-pahal.png",
+        qual: "Ph.D., M.E., B.E. (ECE)",
+        experience: "15",
+        publications: "7+",
+        patents: "1",
+        goodAt: ["Communication Systems", "Machine Learning", "Wireless Networks", "Vehicular Networks", "Image Colorization"],
+        badAt: ["Significant administrative load from innovation cell mentorship", "Managing complex research in dynamic handover decisions while overseeing MHRD innovation ambassador duties"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/sudeshpahal_main-profile.pdf",
+        bio: "Dr. Sudesh Pahal is an Associate Professor in the ECE Department at MSIT with 15 years of experience. She holds a Ph.D. and specializes in Communication Systems and Machine Learning. An active researcher with a patent in ML-based big data processing, her work includes predictive handover mechanisms in next-generation wireless networks and image colorization using deep CNNs."
     }
 ];
