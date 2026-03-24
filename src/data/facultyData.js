@@ -2398,5 +2398,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from nucleic acid research lab coordination", "Managing biophysical studies of complex DNA structures while overseeing foundational chemistry courses for gene therapy applications"],
         pdfLink: "https://msit.in/faculty/swati-chaudhary",
         bio: "Dr. Swati Chaudhary is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Chemistry and specializes in Nucleic Acids Chemistry. Her research explores the biophysical aspects of multistranded DNA/RNA structures, DNA-drug interaction studies, and gene therapy, contributing to the intersection of chemistry and biotechnology."
+    },
+    {
+        id: 'as-25',
+        name: "Dr. Rakesh Kumar",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "rakeshap@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder25",
+        img: "/faculty/rakesh-kumar.png",
+        qual: "Ph.D.",
+        experience: "17",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Synthesis of Conducting Polymers and their Composites", "Water Analysis & Treatment", "Environmental Chemistry", "Organic Chemistry", "R&D"],
+        badAt: ["Significant administrative load from environmental chemistry research lab safety and water analysis facility management", "Managing industrial R&D projects while overseeing foundational chemistry courses for environmental engineering for nearly two decades"],
+        pdfLink: "https://msit.in/faculty/rakesh-kumar",
+        bio: "Dr. Rakesh Kumar is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT with 17 years of teaching experience and 2 years of industrial R&D experience. He holds a Ph.D. in Chemistry and specializes in the synthesis of conducting polymers and their composites. His research interests also include Water Analysis & Treatment and Environmental Chemistry."
     }
 ];
