@@ -970,5 +970,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as ISO In-charge and Placement Faculty Coordinator", "Managing high-volume research in racial & gender inequities on social media and music recommendation systems"],
         pdfLink: "https://www.msit.in/media/uploads/2025/10/04/sonika-malik_main-profile.pdf",
         bio: "Dr. Sonika Malik is an Assistant Professor in the IT Department at MSIT with over 18 years of experience. She holds a Ph.D. from NIT Kurukshetra and is an expert in Ontology Engineering and the Semantic Web. Her research spans from Neuro-Symbolic AI to blockchained voting systems. She holds three patents in IoT and deep learning and has been recognized with MSIT's Research Excellence Award."
+    },
+    {
+        id: 'it-8',
+        name: "Dr. Jyoti Khurana",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "jyotikhurana@msit.in",
+        linkedin: "https://in.linkedin.com/in/jyoti-arora-1506b3a0",
+        img: "/faculty/jyoti-khurana.png",
+        qual: "Ph.D. (Pursuing), M.Tech (IT), B.Tech (CSE)",
+        experience: "15",
+        publications: "20+",
+        patents: "1",
+        goodAt: ["Data Mining", "Machine Learning (GANs)", "Augmented Reality", "Image Segmentation", "Cyber Security (Game Theory)"],
+        badAt: ["Significant administrative load as Summer Training Incharge and ISO Incharge", "Managing complex research in driver-drowsiness detection and Indian sign language recognition"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/jyoti-khurana_main-profile.pdf",
+        bio: "Dr. Jyoti Khurana is an Assistant Professor in the IT Department at MSIT with 15 years of teaching experience. She is currently pursuing her Ph.D. from GGSIPU and specializes in Machine Learning and Augmented Reality. A recipient of several 'Excellence in Research' awards, she holds a patent for an intelligent image retrieval model and has published extensively on deep learning and image segmentation."
     }
 ];
