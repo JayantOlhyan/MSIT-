@@ -1786,5 +1786,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from high-speed data research", "Managing research in network optimization while overseeing department-wide MATLAB labs and microwave experiments"],
         pdfLink: "https://www.msit.in/media/2022/07/08/neha-main-profile.pdf",
         bio: "Ms. Neha (Nagar) is an Assistant Professor in the ECE Department at MSIT. She holds an M.Tech. from GGSIPU and specializes in Communication Systems and Digital Electronics. Her research, supported by tools like HFSS and Xilinx ISE, covers high-speed data transmission, network security protocols, and vehicular ad-hoc networks (VANET)."
+    },
+    {
+        id: 'eee-1',
+        name: "Prof. (Dr.) Meena Tushir",
+        role: "Professor & HOD",
+        dept: "EEE",
+        email: "meenatushir@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=vE7f2VOAAAAJ",
+        img: "/faculty/meena-tushir.png",
+        qual: "Ph.D., M.E., B.Tech.",
+        experience: "25",
+        publications: "50+",
+        patents: "0",
+        goodAt: ["Artificial Intelligence", "Fuzzy Systems", "Soft Computing", "Neural Networks", "Instrumentation and Control"],
+        badAt: ["Significant administrative load from HOD responsibilities", "Managing institute-wide technical festivals like Avensis while coordinating GGSIPU academic audits"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/meena-tushir_main-profile.pdf",
+        bio: "Prof. (Dr.) Meena Tushir is a senior Professor and the Head of Department (HOD) of EEE at MSIT with over 25 years of teaching experience. She specializes in Instrumentation and Control, Fuzzy Logic, Soft Computing, and AI. A life member of ISTE and IAENG, her research on kernelized hybrid c-means clustering models has been widely published and presented at prestigious international conferences like IEEE-FUZZ in London."
     }
 ];
