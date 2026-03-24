@@ -2143,5 +2143,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from research in fuzzy logic", "Managing complex game theory models while overseeing department-wide mathematics student performance analytics"],
         pdfLink: "https://msit.in/faculty/deeba-naqvi",
         bio: "Dr. Deeba Naqvi is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT. She holds a Ph.D. and an M.Sc. in Mathematics and is NET-JRF qualified. Her research specializes in Fuzzy Optimization Problems and Game Theory, particularly focusing on non-cooperative constant and non-constant sum games with qualitative payoff matrices."
+    },
+    {
+        id: 'as-10',
+        name: "Dr. Surender",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "surender@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder10",
+        img: "/faculty/surender.png",
+        qual: "Ph.D., M.Sc.",
+        experience: "18",
+        publications: "10+",
+        patents: "0",
+        goodAt: ["Conducting Polymer Nanocomposites", "Organic Chemistry", "Polymer Chemistry", "UGC-CSIR NET Research"],
+        badAt: ["Significant administrative load from conducting polymer research infrastructure", "Managing nanocomposite characterization projects while overseeing first-year organic chemistry laboratory sessions"],
+        pdfLink: "https://msit.in/faculty/surender",
+        bio: "Dr. Surender is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT with over 18 years of teaching experience. He holds a Ph.D. in Chemistry and is UGC-CSIR NET qualified. His research expertise lies in Conducting Polymer Nanocomposites, and he specializing in Organic chemistry, having earned his M.Sc. from MDU."
     }
 ];
