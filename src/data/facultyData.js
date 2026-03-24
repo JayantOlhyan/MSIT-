@@ -936,5 +936,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as HOD of IT (2nd Shift)", "Managing complex multi-disciplinary research in EEG signal classification and Arduino-based neural states"],
         pdfLink: "https://www.msit.in/media/2021/12/01/bharti_main-profile.pdf",
         bio: "Dr. Bharti Sharma is an Associate Professor in the IT Department at MSIT with over 13 years of experience. She holds a Ph.D. from GGSIPU and specializes in Recommendation Systems and Deep Learning. Currently serving as HOD of the IT (2nd shift), she has published several high-impact papers in SCIE journals and holds two patents in IoT-based healthcare and AI traffic management."
+    },
+    {
+        id: 'it-6',
+        name: "Mr. Manoj Malik",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "manojmalik@msit.in",
+        linkedin: "https://in.linkedin.com/in/manoj-malik-546b5a19",
+        img: "/faculty/manoj-malik.png",
+        qual: "M.Tech., B.E.",
+        experience: "17+",
+        publications: "8+",
+        patents: "1",
+        goodAt: ["Cloud Computing", "Fault Tolerance", "Workflow Scheduling", "Blockchain for Authentication", "Routing Protocols"],
+        badAt: ["Significant administrative load in ISO and placement coordination", "Managing social contribution through various NGOs and non-government trusts"],
+        pdfLink: "https://www.msit.in/media/2021/12/01/manojmalik_main-profile.pdf",
+        bio: "Mr. Manoj Malik is an Assistant Professor in the IT Department at MSIT with over 17 years of experience. He holds an M.Tech. and specializes in Cloud Computing and Fault Tolerance. His research includes workflow scheduling and blockchain-based authentication. He holds a patent for process execution optimization and is actively involved in social initiatives through various NGOs."
     }
 ];
