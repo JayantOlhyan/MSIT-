@@ -1701,5 +1701,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from institute level assignments", "Managing complex research in multi-area power system control while overseeing department-wide project evaluations"],
         pdfLink: "https://www.msit.in/media/2021/11/24/suman-lata_main-profile.pdf",
         bio: "Dr. Suman Lata is an Assistant Professor in the ECE Department at MSIT with 10 years of experience. She holds a Ph.D. and specializes in Speech Recognition and Deep Learning. Her research explorations include multi-area power system control and non-conventional transistors like TFETs, with multiple publications in recognized journals."
+    },
+    {
+        id: 'ece-24',
+        name: "Ms. Anjali Balyan",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "anjalibalyan@msit.in",
+        linkedin: "https://in.linkedin.com/in/anjali-balyan-01111116a",
+        img: "/faculty/anjali-balyan.png",
+        qual: "Ph.D (p), M.Tech, B.Tech",
+        experience: "3",
+        publications: "1+",
+        patents: "0",
+        goodAt: ["Digital Communication", "Wireless Networks", "VLSI Design", "Antenna Engineering", "Microwaves"],
+        badAt: ["Significant administrative load from academic committee duties", "Managing research in digital multiplier implementation while overseeing student projects in signal processing"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/anjali-baliyan_main-profile.pdf",
+        bio: "Ms. Anjali Balyan is an Assistant Professor in the ECE Department at MSIT with 3 years of experience. She is currently pursuing her Ph.D. and specializes in Digital Communication and Wireless Networks. Her research focuses on VLSI design optimization and antenna engineering, and she is an active member of the department's academic committee."
     }
 ];
