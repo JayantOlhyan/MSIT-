@@ -2177,5 +2177,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from SCI journal publication coordination", "Managing synthesis of complex heterocyclic systems while overseeing first-year organic chemistry laboratory sessions"],
         pdfLink: "https://msit.in/faculty/anju-ahlawat",
         bio: "Dr. Anju Ahlawat is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Organic Chemistry and is a prolific researcher with over 17 research papers, including 11 in SCI indexed journals. Her expertise focuses on the synthesis of condensed bridgehead nitrogen heterocyclic systems and their antimicrobial, antifungal, and antihistamine activities."
+    },
+    {
+        id: 'as-12',
+        name: "Mr. Rajbir Singh",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "rajbir@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder12",
+        img: "/faculty/rajbir-singh.png",
+        qual: "M.Tech.",
+        experience: "13",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Manufacturing Process", "Engineering Graphics", "Engineering Mechanics", "Welding Processes", "Computer Science"],
+        badAt: ["Significant administrative load from welding process laboratory maintenance", "Managing research in manufacturing processes while overseeing first-year engineering graphics and computer science courses"],
+        pdfLink: "https://msit.in/faculty/rajbir-singh",
+        bio: "Mr. Rajbir Singh is an Assistant Professor in the Applied Sciences Department at MSIT with 13 years of teaching experience. He holds an M.Tech. in Computer Science and specializes in Manufacturing Processes, Engineering Graphics, and Welding Processes. His research interests bridge mechanical engineering foundations with computer-aided design and manufacturing."
     }
 ];
