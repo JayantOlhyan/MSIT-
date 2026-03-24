@@ -30,7 +30,8 @@ export const searchIndex = {
         { name: "Ms. Swati Malik", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
         { name: "Ms. Gunjan Beniwal", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Vikrant Shokeen", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Sonica Upadhyay", role: "Assistant Professor", dept: "CSE", url: "/faculty" }
+        { name: "Ms. Sonica Upadhyay", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
+        { name: "Ms. Jyoti", role: "Assistant Professor", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

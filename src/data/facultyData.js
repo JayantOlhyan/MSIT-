@@ -749,5 +749,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on high-impact research regarding 2D materials", "Managing academic load while pursuing advanced research in Neural Networks"],
         pdfLink: "https://www.msit.in/media/uploads/2026/03/06/sonica-upadhyay-detailed-profile.pdf",
         bio: "Ms. Sonica Upadhyay is an Assistant Professor in the CSE Department at MSIT with over 5 years of experience. She is currently pursuing her Ph.D. from Banasthali Vidyapith and holds an M.Tech. in Computer Science. Her research interests include Big Data Analytics, Neural Networks, and Image Processing, specifically focusing on 2D-MoS2 thin films."
+    },
+    {
+        id: 'cse-31',
+        name: "Ms. Jyoti",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "jyoti@msit.in",
+        linkedin: "https://in.linkedin.com/in/jyoti-9a1b2413b",
+        img: "/faculty/jyoti.png",
+        qual: "Ph.D. (Pursuing), M.Tech. (CSE), B.Tech. (CSE)",
+        experience: "3+",
+        publications: "4+",
+        patents: "0",
+        goodAt: ["Machine Learning", "Deep Learning", "Image Processing", "Driver Drowsiness Detection", "Sign Language Recognition"],
+        badAt: ["Significant administrative load in institute website committee", "Managing high-volume research in Kotlin-based CNN applications"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/jyoti.pdf",
+        bio: "Ms. Jyoti is an Assistant Professor in the CSE Department at MSIT. She is currently pursuing her Ph.D. from NIT Delhi and holds an M.Tech. in Computer Science. Her research focus includes Machine Learning and Deep Learning, with specific projects in sign language recognition and driver drowsiness detection. She is also a member of the institute's Website Committee."
     }
 ];
