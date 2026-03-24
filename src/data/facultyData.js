@@ -2296,5 +2296,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from nanostructure research facility management", "Managing publication of physics textbooks while overseeing complex ion beam engineering projects for multiple departments"],
         pdfLink: "https://msit.in/faculty/anju",
         bio: "Dr. Anju is an Assistant Professor in the Applied Sciences Department (Physics) at MSIT. She holds a Ph.D. in Physics and specializes in Conducting Polymers, Nanotechnology, and Ion Beam Induced Engineering of Nanostructures. She has a strong research background with multiple papers published and is the author of three books in her field."
+    },
+    {
+        id: 'as-19',
+        name: "Dr. Jindagi Kumari",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "jindagi@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder19",
+        img: "/faculty/jindagi-kumari.png",
+        qual: "Ph.D.",
+        experience: "10",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Trauma Representation in South Asian Fiction", "Eco-Critical Trends", "Postcolonial Analysis", "Creative Fiction Writing", "Professional Communication"],
+        badAt: ["Significant administrative load from trauma literature research symposiums", "Managing creative fiction writing workshops while overseeing department-wide professional communication assessment modules"],
+        pdfLink: "https://msit.in/faculty/jindagi-kumari",
+        bio: "Dr. Jindagi Kumari is an Assistant Professor in the Applied Sciences Department (English/Communication Skills) at MSIT with over 10 years of teaching experience. She holds a Ph.D. in English and is UGC NET qualified. Her research explores Trauma Representation in South Asian Fiction and Eco-Critical Trends, and she specializes in Postcolonial Analysis and Creative Fiction Writing, while teaching Professional Communication to engineering students."
     }
 ];

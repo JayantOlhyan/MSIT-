@@ -121,7 +121,8 @@ export const searchIndex = {
         { name: "Dr. Nidhi", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Ms. Reenu Kumari", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Dr. Narender Singh Malik", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Anju", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
+        { name: "Dr. Anju", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
+        { name: "Dr. Jindagi Kumari", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
