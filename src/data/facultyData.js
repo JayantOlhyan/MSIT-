@@ -1480,5 +1480,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from administrative coordination", "Managing high-volume research in tensor factorization while overseeing industry-informed project competitions"],
         pdfLink: "https://www.msit.in/media/2023/10/07/long-resume-dinesh-sheoran.pdf",
         bio: "Dr. Dinesh Sheoran is an Assistant Professor in the ECE Department at MSIT with 21 years of experience across industry and academia. He holds a Ph.D. and an MBA, specializing in Speech Recognition and Artificial Intelligence. He is a patent holder for an IOT-based waste management system and has a strong research portfolio in digital communication and sensor networks."
+    },
+    {
+        id: 'ece-11',
+        name: "Mr. Deepak Goyal",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "deepakgoyal@msit.in",
+        linkedin: "https://in.linkedin.com/in/deepak-goyal-64778119",
+        img: "/faculty/deepak-goyal.png",
+        qual: "Ph.D. (p), M.Tech (NSIT), B.E (SATI)",
+        experience: "21",
+        publications: "0+",
+        patents: "0",
+        goodAt: ["Analog Electronics", "Microprocessors", "Microcontrollers", "Renewable Energy Resources"],
+        badAt: ["Significant administrative load from institute-level duties", "Managing high-volume teaching hours while pursuing Ph.D. at IFTM University"],
+        pdfLink: "https://www.msit.in/media/2021/11/12/deepak-goyal_main-profile.pdf",
+        bio: "Mr. Deepak Goyal is an Assistant Professor in the ECE Department at MSIT. With 21 years of teaching experience, he specializes in Analog Electronics, Microprocessors, and Renewable Energy. He holds an M.Tech. from NSIT and is currently pursuing his Ph.D. from IFTM University."
     }
 ];
