@@ -1106,5 +1106,22 @@ export const facultyMembers = [
         badAt: ["Managing complex research in adaptive infinite impulse response systems", "Significant focus on teacher-learner based optimization for digital differentiators"],
         pdfLink: "https://www.msit.in/media/2021/11/24/sandeepsingh_main-profile.pdf",
         bio: "Dr. Sandeep Singh is an Assistant Professor in the IT Department at MSIT with 10 years of experience. He is currently pursuing his Ph.D. and specializes in Digital Signal Processing (DSP). His research involves adaptive IIR system identification using bio-inspired optimization algorithms like teacher-learner based optimization and dragonfly algorithms, with core publications in SCI journals."
+    },
+    {
+        id: 'it-16',
+        name: "Ms. Mamta Devi",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "mamtagahlan@msit.in",
+        linkedin: "https://in.linkedin.com/in/mamta-devi-8951b117b",
+        img: "/faculty/mamta-devi.png",
+        qual: "Pursuing Ph.D., M.Tech CSE",
+        experience: "15",
+        publications: "10+",
+        patents: "1",
+        goodAt: ["Machine Learning in Healthcare", "IoT for Healthcare", "Visual Cryptography", "Software Quality Assurance", "Digital Enveloping"],
+        badAt: ["Significant administrative load from ISO and project coordination", "Managing research in obstruction evasion robots while overseeing healthcare IoT implementations"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/mamta-gahlan_main-profile.pdf",
+        bio: "Ms. Mamta Devi is an Assistant Professor in the IT Department at MSIT with 15 years of experience. She is currently pursuing her Ph.D. and specializes in Machine Learning and IoT applications for healthcare. Her research explores visual cryptography and software quality assurance, and she holds a patent for an IoT-enabled obstruction evasion robot."
     }
 ];
