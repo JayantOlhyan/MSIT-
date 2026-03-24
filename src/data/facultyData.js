@@ -2330,5 +2330,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from reliability modeling research lab setup", "Managing complex semi-Markov analytics while overseeing foundational mathematics courses for repairable device engineering"],
         pdfLink: "https://msit.in/faculty/gitanjali",
         bio: "Dr. Gitanjali is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT. She holds a Ph.D. in Mathematics and an M.Phil. Her research focuses on Reliability Theory and Modelling, specifically investigating statistical distributions for repairable hardware devices. Her expertise covers Semi-Markov Processes, Regeneration Point Techniques, and Stochastic Systems."
+    },
+    {
+        id: 'as-21',
+        name: "Dr. Pooja Singh",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "poojas@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder21",
+        img: "/faculty/pooja-singh-math.png",
+        qual: "Ph.D.",
+        experience: "15",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Special Functions", "Hypergeometric Functions", "Generalized Hypergeometric Functions", "Mathematical Applications", "Advanced Calculus"],
+        badAt: ["Significant administrative load from hypergeometric function research coordination", "Managing complex special function analytics while overseeing department-wide mathematics student performance for over 15 years"],
+        pdfLink: "https://msit.in/faculty/pooja-singh-math",
+        bio: "Dr. Pooja Singh is an Assistant Professor in the Applied Sciences Department (Mathematics) at MSIT with over 15 years of teaching experience since 2009. She holds a Ph.D. in Mathematics and specializes in Special Functions, specifically focusing on Hypergeometric and Generalized Hypergeometric Functions and their various scientific applications."
     }
 ];
