@@ -19,7 +19,8 @@ export const searchIndex = {
         { name: "Dr. Vinita Rohilla", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Shaily Malik", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
         { name: "Dr. Shalu", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Pooja Kherwa", role: "Assistant Professor", dept: "CSE", url: "/faculty" }
+        { name: "Dr. Pooja Kherwa", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
+        { name: "Dr. Navdeep Bohra", role: "Assistant Professor", dept: "CSE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

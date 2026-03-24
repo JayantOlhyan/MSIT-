@@ -562,5 +562,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on high-readership research analytics", "Balancing CS Chapter Advisor duties with intensive research supervision"],
         pdfLink: "https://www.msit.in/media/2023/10/07/dr-pooja-kherwa-detailed-profile.pdf",
         bio: "Dr. Pooja Kherwa is an Assistant Professor in the CSE Department at MSIT with 15+ years of experience. She holds a Ph.D. from GGSIPU and is the recipient of the 'Research Excellence Award (2022)'. Her research focuses on Topic Modeling and Sentiment Analysis, and she has been recognized as the 'most-read researcher' in her department multiple times on ResearchGate. She also serves as the CS Chapter Advisor."
+    },
+    {
+        id: 'cse-20',
+        name: "Dr. Navdeep Bohra",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "navdeepbohra@msit.in",
+        linkedin: "#",
+        img: "/faculty/navdeep-bohra.png",
+        qual: "Ph.D. (Pursuing), M.Tech., B.Tech.",
+        experience: "15+",
+        publications: "3",
+        patents: "1",
+        goodAt: ["Machine Learning", "Popularity Prediction", "Social Media Analytics", "Waste Management Systems (IoT)", "RRR Strategy"],
+        badAt: ["Significant administrative load in Examination Cell and Infrastructure Committee", "Managing hospitality for large-scale international conferences (ICAIA)"],
+        pdfLink: "https://www.msit.in/media/2021/11/29/navdeep_TTDeLKN.pdf",
+        bio: "Dr. Navdeep Bohra is an Assistant Professor in the CSE Department at MSIT with over 15 years of experience across academia and industry. He is currently pursuing his Ph.D. and specializes in Machine Learning and Popularity Prediction. He holds a granted patent for an IoT-based waste management system and has a strong background in departmental administrative roles, including the Examination Cell."
     }
 ];
