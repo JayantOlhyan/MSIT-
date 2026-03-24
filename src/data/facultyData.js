@@ -1531,5 +1531,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from social media coordination", "Managing complex research in pattern classification while overseeing B.Tech projects in embedded systems"],
         pdfLink: "https://www.msit.in/media/2021/11/13/neelam-nehra_main-profile.pdf",
         bio: "Ms. Neelam Nehra is an Assistant Professor in the ECE Department at MSIT with over 13 years of teaching experience. She specializes in Information Theory, Coding, and Speaker Recognition. Currently pursuing her Ph.D., her research on pattern classification in speaker recognition has been published in journals such as IJSRD and MSIT Satyam."
+    },
+    {
+        id: 'ece-14',
+        name: "Dr. Geetanjali Sharma",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "gsharma@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-geetanjali-sharma-01111116a",
+        img: "/faculty/geetanjali-sharma.png",
+        qual: "Ph.D (p), M.Tech, B.E",
+        experience: "14",
+        publications: "20+",
+        patents: "1",
+        goodAt: ["Digital Signal Processing", "Wireless Communication", "Biomedical Signal Processing", "Low Power VLSI", "Industry Interaction"],
+        badAt: ["Significant administrative load as III Cell In-charge", "Managing complex research in EEG-based screening while overseeing student internships and training programs"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/geetanjali-sharma_main-profile.pdf",
+        bio: "Dr. Geetanjali Sharma is an Assistant Professor in the ECE Department at MSIT with 14 years of experience. She specializes in Digital Signal Processing and Wireless Communication. An active researcher with over 20 papers and a patent in user monitoring devices, she also manages the Institute Industry Interaction cell (III Cell) and the Electronic Devices Lab."
     }
 ];
