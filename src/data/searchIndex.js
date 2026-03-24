@@ -97,7 +97,8 @@ export const searchIndex = {
         { name: "Dr. Jyoti Jain", role: "Associate Professor", dept: "EEE", url: "/faculty" },
         { name: "Dr. Sonia Goel", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
         { name: "Ms. Annu Dagar", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Shilpam Malik", role: "Assistant Professor", dept: "EEE", url: "/faculty" }
+        { name: "Dr. Shilpam Malik", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
+        { name: "Dr. Nidhi Gupta", role: "Assistant Professor", dept: "EEE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },

@@ -1888,5 +1888,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from technical event coordination", "Managing frequency excursion mitigation research while overseeing department-wide power system simulation labs"],
         pdfLink: "https://www.msit.in/media/2021/11/24/shilpam-malik_main-profile.pdf",
         bio: "Dr. Shilpam Malik is an Assistant Professor in the EEE Department at MSIT with 15 years of teaching experience. She is currently pursuing her Ph.D. and specializes in Power Systems, Renewable Energy Sources, and Intelligent Control Techniques. Her research on SSA tuned PI-TDF control schemes for hybrid power systems has been published in Smart Science, and she is a lifetime member of ISTE."
+    },
+    {
+        id: 'eee-7',
+        name: "Dr. Nidhi Gupta",
+        role: "Assistant Professor",
+        dept: "EEE",
+        email: "nidhi@msit.in",
+        linkedin: "https://researchgate.net/profile/Nidhi-Gupta-35",
+        img: "/faculty/nidhi-gupta.png",
+        qual: "Ph.D., M.E., B.Tech.",
+        experience: "21",
+        publications: "12+",
+        patents: "3",
+        goodAt: ["Power System Operation and Control", "Renewable Energy", "Battery Energy Sources", "JAYA Algorithm", "PSO Algorithms"],
+        badAt: ["Significant administrative load from conveyer of library committee", "Managing high-speed data research for IoT-based passenger counting while overseeing department-wide ISO surveillance audits"],
+        pdfLink: "https://www.msit.in/media/2023/10/04/nidhi-gupta_main-profile_oct23.pdf",
+        bio: "Dr. Nidhi Gupta is an Assistant Professor in the EEE Department at MSIT with over 21 years of experience. She holds a Ph.D. from DTU and specializes in Power System Operation and Control, Renewable Energy, and Battery Energy Sources. An active researcher with 3 published patents, she has received the MSIT Research Excellence Award (2022) and has served as the conveyer of the institute's library committee."
     }
 ];
