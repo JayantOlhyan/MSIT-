@@ -1820,5 +1820,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from research excellence coordination", "Managing substation communication architecture projects while overseeing department-wide power quality investigation"],
         pdfLink: "https://www.msit.in/media/2021/12/10/sunil-gupta_main-profile-converted.pdf",
         bio: "Dr. Sunil Gupta is an Associate Professor in the EEE Department at MSIT with 19 years of experience. He specializes in Power Systems, specifically focusing on IEC 61850 Substation Automation Systems, Renewable Energy, and Microgrids. He received the MSIT Certificate of Excellence in Research in 2020 and has a significant publication record in high-impact journals like Taylor & Francis and Springer."
+    },
+    {
+        id: 'eee-3',
+        name: "Dr. Jyoti Jain",
+        role: "Associate Professor",
+        dept: "EEE",
+        email: "jyotieee@msit.in",
+        linkedin: "https://linkedin.com/in/dr-jyoti-jain-b5266b14",
+        img: "/faculty/jyoti-jain.png",
+        qual: "Ph.D., M.Tech., B.Tech.",
+        experience: "30",
+        publications: "35+",
+        patents: "0",
+        goodAt: ["Power System Optimization", "Swarm Intelligence", "Artificial Intelligence", "Electrical Machines", "PSO Algorithms"],
+        badAt: ["Significant administrative load from exam coordination as Deputy Superintendent", "Managing complex research in quantum technology for 6G while overseeing lab development for Electrical Science"],
+        pdfLink: "https://www.msit.in/media/2024/12/10/final-resume-jyoti.pdf",
+        bio: "Dr. Jyoti Jain is an Associate Professor in the EEE Department at MSIT with over 30 years of experience. She holds a Ph.D. and specializes in Power System Optimization and Swarm Intelligence. An IEEE Senior Member and Outstanding Engineer Award recipient (2020), she has significantly contributed to the institute by setting up Electrical Machines laboratories and serving as a chapter advisor for IEEE PES MSIT."
     }
 ];
