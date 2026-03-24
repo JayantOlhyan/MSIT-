@@ -1616,5 +1616,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from energy systems optimization", "Managing complex research in wind and solar power prediction while overseeing department-wide instrumentation labs"],
         pdfLink: "https://www.msit.in/media/2021/11/24/upma-singh_main-profile.pdf",
         bio: "Dr. Upma Singh is an Assistant Professor in the ECE Department at MSIT with over 9 years of academic experience. She is currently pursuing her Ph.D. and specializes in Instrumentation, Control, and Renewable Energy. Her research focuses on machine learning-based forecasting for wind power production and smart grid optimization, with publications in high-impact journals like Energies."
+    },
+    {
+        id: 'ece-19',
+        name: "Ms. Jasmine Chhikara",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "jasminechhikara@msit.in",
+        linkedin: "https://in.linkedin.com/in/jasmine-chhikara-01111116a",
+        img: "/faculty/jasmine-chhikara.png",
+        qual: "M.Tech. (VLSI), B.Tech.",
+        experience: "Former industry professional at Cadence Design Systems",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Biomedical Engineering", "Deep Learning", "VLSI Design", "Analog Electronics", "Embedded Systems"],
+        badAt: ["Significant administrative load from medical automation research", "Managing complex research in pancreatic cancer detection while overseeing industrial partnership coordination"],
+        pdfLink: "https://www.msit.in/faculty/ece",
+        bio: "Ms. Jasmine Chhikara is an Assistant Professor in the ECE Department at MSIT. She holds an M.Tech. in VLSI Design and is currently pursuing her Ph.D. with a research focus on Deep Learning in Biomedical Engineering, specifically pancreatic cancer detection. Her professional background includes significant industrial experience at Cadence Design Systems."
     }
 ];
