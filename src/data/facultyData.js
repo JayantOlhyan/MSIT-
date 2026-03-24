@@ -1395,5 +1395,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from innovation cell mentorship", "Managing complex research in dynamic handover decisions while overseeing MHRD innovation ambassador duties"],
         pdfLink: "https://www.msit.in/media/2021/11/13/sudeshpahal_main-profile.pdf",
         bio: "Dr. Sudesh Pahal is an Associate Professor in the ECE Department at MSIT with 15 years of experience. She holds a Ph.D. and specializes in Communication Systems and Machine Learning. An active researcher with a patent in ML-based big data processing, her work includes predictive handover mechanisms in next-generation wireless networks and image colorization using deep CNNs."
+    },
+    {
+        id: 'ece-6',
+        name: "Dr. Meena Rao",
+        role: "Associate Professor",
+        dept: "ECE",
+        email: "meenarao@msit.in",
+        linkedin: "https://in.linkedin.com/in/meena-rao-01111116a",
+        img: "/faculty/meena-rao.png",
+        qual: "Ph.D, M.Tech, B.E.",
+        experience: "16+",
+        publications: "10+",
+        patents: "2",
+        goodAt: ["Wireless communication", "MANETs", "Artificial Intelligence", "Digital Electronics", "Placement Management"],
+        badAt: ["Significant administrative load as Placement Convener", "Managing complex research in energy-efficient routing while overseeing student career progression"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/meena-rao_main-profile.pdf",
+        bio: "Dr. Meena Rao is an Associate Professor and the Placement Convener in the ECE Department at MSIT, with over 16 years of experience. She holds a Ph.D. and specializes in Wireless Communication and MANETs. Her research on energy-efficient routing protocols and AI-driven healthcare rescue systems has been published in several SCIE and SCOPUS indexed journals."
     }
 ];
