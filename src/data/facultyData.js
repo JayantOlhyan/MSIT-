@@ -1497,5 +1497,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from institute-level duties", "Managing high-volume teaching hours while pursuing Ph.D. at IFTM University"],
         pdfLink: "https://www.msit.in/media/2021/11/12/deepak-goyal_main-profile.pdf",
         bio: "Mr. Deepak Goyal is an Assistant Professor in the ECE Department at MSIT. With 21 years of teaching experience, he specializes in Analog Electronics, Microprocessors, and Renewable Energy. He holds an M.Tech. from NSIT and is currently pursuing his Ph.D. from IFTM University."
+    },
+    {
+        id: 'ece-12',
+        name: "Dr. Deepti Deshwal",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "deshwaldeepti@msit.in",
+        linkedin: "https://in.linkedin.com/in/deepti-deshwal-01111116a",
+        img: "/faculty/deepti-deshwal.png",
+        qual: "Ph.D., M.Tech, B.E.",
+        experience: "14+",
+        publications: "6+",
+        patents: "2",
+        goodAt: ["Machine Learning", "Artificial Intelligence", "Speech Processing", "VLSI Design", "Embedded Systems"],
+        badAt: ["Significant administrative load from research review", "Managing complex research in language identification while reviewing for various high-impact Springer and IEEE journals"],
+        pdfLink: "https://www.msit.in/media/2021/11/13/deepti-deshwal_main-profile.pdf",
+        bio: "Dr. Deepti Deshwal is an Assistant Professor in the ECE Department at MSIT with over 14 years of experience. She holds a Ph.D. and specializes in Machine Learning and Speech Processing. Her research on language identification systems and sanitizing devices has been published in journals like Applied Acoustics and Energy Research & Social Science."
     }
 ];
