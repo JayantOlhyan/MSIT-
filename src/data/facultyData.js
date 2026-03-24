@@ -1718,5 +1718,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from academic committee duties", "Managing research in digital multiplier implementation while overseeing student projects in signal processing"],
         pdfLink: "https://www.msit.in/media/2021/11/24/anjali-baliyan_main-profile.pdf",
         bio: "Ms. Anjali Balyan is an Assistant Professor in the ECE Department at MSIT with 3 years of experience. She is currently pursuing her Ph.D. and specializes in Digital Communication and Wireless Networks. Her research focuses on VLSI design optimization and antenna engineering, and she is an active member of the department's academic committee."
+    },
+    {
+        id: 'ece-25',
+        name: "Dr. Neelam Barak",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "neelam.barak@msit.in",
+        linkedin: "https://in.linkedin.com/in/dr-neelam-barak-01111116a",
+        img: "/faculty/neelam-barak.png",
+        qual: "Ph.D., M.Tech. (Robotics & Automation), B.Tech.",
+        experience: "8 months",
+        publications: "10+",
+        patents: "0",
+        goodAt: ["Optical Microscopy", "Digital Holography", "Mechatronics", "Image Processing", "Wireless Sensor Networks"],
+        badAt: ["Significant administrative load from research publication coordination", "Managing high-precision research in automated depth-of-focus microscopy while overseeing department-wide instrumentation setup"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/neelam_faculty-profile.pdf",
+        bio: "Dr. Neelam Barak is an Assistant Professor in the ECE Department at MSIT. She holds a Ph.D. and specializes in Optical Microscopy and Digital Holography. Her research, published in journals like Micron and the Journal of Optics, focuses on automated depth-of-focus microscopy and two-dimensional mapping using single ultrasonic sensors."
     }
 ];
