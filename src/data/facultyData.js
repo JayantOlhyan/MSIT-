@@ -698,5 +698,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on high-speed hardware multipliers", "Managing complex MIMO-OFDM signal processing architectures"],
         pdfLink: "https://www.msit.in/media/2024/10/09/swati-malik_main-profile.pdf",
         bio: "Ms. Swati Malik is an Assistant Professor in the CSE Department at MSIT with over 11 years of experience. She holds a Ph.D. and specializes in Digital Communication and Information Security. Her research includes real-time Sentiment Analysis and FPGA-based system design. She also holds a published patent for an 'Aluminium Louver'."
+    },
+    {
+        id: 'cse-28',
+        name: "Ms. Gunjan Beniwal",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "gunjanbeniwal@msit.in",
+        linkedin: "https://in.linkedin.com/in/gunjan-beniwal-82717056",
+        img: "/faculty/gunjan-beniwal.png",
+        qual: "M.Tech., Ph.D. (Pursuing)",
+        experience: "9+",
+        publications: "4+",
+        patents: "1",
+        goodAt: ["IoT Gateways", "Fog Computing", "Quality of Service (QoS)", "Federated Learning", "Healthcare Monitoring Systems"],
+        badAt: ["Significant administrative load in Software Development and Placement cells", "Managing departmental ISO records and NBA documentation"],
+        pdfLink: "https://www.msit.in/media/2024/10/09/gunjan_main-profile.pdf",
+        bio: "Ms. Gunjan Beniwal is an Assistant Professor in the CSE Department at MSIT with over 9 years of experience. She is currently pursuing her Ph.D. and has research expertise in Internet of Things (IoT), Fog Computing, and QoS monitoring. She is an active member of MSIT's Software Development and Placement cells and holds a patent in IoT-based healthcare monitoring."
     }
 ];
