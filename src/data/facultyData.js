@@ -2367,20 +2367,20 @@ export const facultyMembers = [
     },
     {
         id: 'as-23',
-        name: "Ms. Pooja Singh",
+        name: "Ms. Pooja Singh (Physics)",
         role: "Assistant Professor",
         dept: "Applied Sciences",
-        email: "poojap@msit.in",
+        email: "poojasinghphysics@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder23",
         img: "/faculty/pooja-singh-physics.png",
-        qual: "M.Tech., M.Sc.",
-        experience: "10",
+        qual: "M.Sc.",
+        experience: "15",
         publications: "5+",
         patents: "0",
-        goodAt: ["Applied Physics", "Wave and Optics", "Solid State Electronic Devices", "Microwave Electronics", "Electronic Circuits"],
-        badAt: ["Significant administrative load from microwave electronics laboratory maintenance", "Managing research in solid state devices while overseeing foundational wave and optics courses for first-year engineering students"],
-        pdfLink: "https://msit.in/faculty/pooja-singh-physics",
-        bio: "Ms. Pooja Singh is an Assistant Professor in the Applied Sciences Department (Physics) at MSIT. She holds an M.Tech. in Microwave Electronics and an M.Sc. in Physics with an Electronics specialization, and is UGC NET qualified. Her research interests include Applied Physics, Wave Optics, and Solid State Electronic Devices, with a focus on electronic circuit applications."
+        goodAt: ["Holography", "Speckle Interferometry", "Non-destructive Testing", "Material Characterization", "Physics"],
+        badAt: ["Significant administrative load from holography research lab darkroom maintenance", "Managing speckle interferometry simulations while overseeing foundational physics courses for first-year engineering students"],
+        pdfLink: "https://www.msit.in/media/2021/11/15/pooja-singh_main-profile.pdf",
+        bio: "Ms. Pooja Singh is an Assistant Professor of Physics at MSIT. She is involved in the study of Holography and Speckle Interferometry for non-destructive testing of materials."
     },
     {
         id: 'as-24',
