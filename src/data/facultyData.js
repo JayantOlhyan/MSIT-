@@ -1905,5 +1905,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from conveyer of library committee", "Managing high-speed data research for IoT-based passenger counting while overseeing department-wide ISO surveillance audits"],
         pdfLink: "https://www.msit.in/media/2023/10/04/nidhi-gupta_main-profile_oct23.pdf",
         bio: "Dr. Nidhi Gupta is an Assistant Professor in the EEE Department at MSIT with over 21 years of experience. She holds a Ph.D. from DTU and specializes in Power System Operation and Control, Renewable Energy, and Battery Energy Sources. An active researcher with 3 published patents, she has received the MSIT Research Excellence Award (2022) and has served as the conveyer of the institute's library committee."
+    },
+    {
+        id: 'eee-8',
+        name: "Dr. Rakhi Kamra",
+        role: "Assistant Professor",
+        dept: "EEE",
+        email: "rakhikamra@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=rpUrr5wAAAAJ",
+        img: "/faculty/rakhi-kamra.png",
+        qual: "Ph.D., M.Tech., B.Tech.",
+        experience: "19",
+        publications: "12+",
+        patents: "0",
+        goodAt: ["Cloud Computing", "IoT", "Information Security", "Power Engineering", "Wireless Sensor Networks"],
+        badAt: ["Significant administrative load from placement coordination", "Managing research in trust-based neural networks while overseeing department-wide JAC committee assignments"],
+        pdfLink: "https://www.msit.in/media/2023/05/04/rakhi-kamra_main-profile_2023.pdf",
+        bio: "Dr. Rakhi Kamra is an Assistant Professor in the EEE Department at MSIT with 19 years of experience. She holds a Ph.D. and specializes in Cloud Computing, IoT, and Information Security. Her research, published in journals such as the International Journal of Communication Networks and Distributed Systems, focuses on building trust-aware frameworks for wireless sensor networks and vehicular ad-hoc networks."
     }
 ];
