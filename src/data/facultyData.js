@@ -987,5 +987,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load as Summer Training Incharge and ISO Incharge", "Managing complex research in driver-drowsiness detection and Indian sign language recognition"],
         pdfLink: "https://www.msit.in/media/2021/11/24/jyoti-khurana_main-profile.pdf",
         bio: "Dr. Jyoti Khurana is an Assistant Professor in the IT Department at MSIT with 15 years of teaching experience. She is currently pursuing her Ph.D. from GGSIPU and specializes in Machine Learning and Augmented Reality. A recipient of several 'Excellence in Research' awards, she holds a patent for an intelligent image retrieval model and has published extensively on deep learning and image segmentation."
+    },
+    {
+        id: 'it-9',
+        name: "Dr. Deepshikha Yadav",
+        role: "Assistant Professor",
+        dept: "IT",
+        email: "deepshikha@msit.in",
+        linkedin: "https://in.linkedin.com/in/deepshikha-yadav-00b86561",
+        img: "/faculty/deepshikha-yadav.png",
+        qual: "Ph.D.(pursuing), M.Tech, B.E(MDU)",
+        experience: "12+",
+        publications: "3+",
+        patents: "1",
+        goodAt: ["Renewable Energy Harvesting", "Embedded Systems", "Microprocessors", "Circuit Designing", "Triboelectric Sensors"],
+        badAt: ["Significant administrative load from multiple prize-winning projects", "Managing complex research in thermoelectric materials and SMPS testing standards"],
+        pdfLink: "https://www.msit.in/media/2022/07/23/deepshikha-yadav_main-profile.pdf",
+        bio: "Dr. Deepshikha Yadav is an Assistant Professor in the IT Department at MSIT with over 12 years of experience. She is currently pursuing her Ph.D. from GGSIPU and specializes in Renewable Energy Resources and Embedded Systems. Her award-winning research includes low-cost triboelectric sensors and solar energy harvesting, and she holds a patent for a Wi-Fi based home automation system."
     }
 ];
