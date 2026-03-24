@@ -732,5 +732,22 @@ export const facultyMembers = [
         badAt: ["Significant focus on high-impact conference representations (ICCAD Paris)", "Managing cross-disciplinary research in federated learning and IoT monitoring"],
         pdfLink: "https://www.msit.in/media/2021/11/29/vikrant-shokeen_main-profile-converted.pdf",
         bio: "Dr. Vikrant Shokeen is an Assistant Professor in the CSE Department at MSIT. He holds a Ph.D. and specializes in Machine Learning and Image Processing, with significant research in medical imaging for lung cancer detection. He recently represented MSIT at the international ICCAD conference in Paris (2024) and holds a patent for an IoT-based gas monitoring system."
+    },
+    {
+        id: 'cse-30',
+        name: "Ms. Sonica Upadhyay",
+        role: "Assistant Professor",
+        dept: "CSE",
+        email: "sonicaupadhyay@msit.in",
+        linkedin: "https://in.linkedin.com/in/sonica-upadhyay-82a8b368",
+        img: "/faculty/sonica-upadhyay.png",
+        qual: "Ph.D. (Pursuing), M.Tech. (CS), B.Tech.",
+        experience: "5+",
+        publications: "6+",
+        patents: "0",
+        goodAt: ["Big Data Analytics", "Neural Networks", "Image Processing", "2D-MoS2 Thin Films", "Data Analytics"],
+        badAt: ["Significant focus on high-impact research regarding 2D materials", "Managing academic load while pursuing advanced research in Neural Networks"],
+        pdfLink: "https://www.msit.in/media/uploads/2026/03/06/sonica-upadhyay-detailed-profile.pdf",
+        bio: "Ms. Sonica Upadhyay is an Assistant Professor in the CSE Department at MSIT with over 5 years of experience. She is currently pursuing her Ph.D. from Banasthali Vidyapith and holds an M.Tech. in Computer Science. Her research interests include Big Data Analytics, Neural Networks, and Image Processing, specifically focusing on 2D-MoS2 thin films."
     }
 ];
