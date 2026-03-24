@@ -2381,5 +2381,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from microwave electronics laboratory maintenance", "Managing research in solid state devices while overseeing foundational wave and optics courses for first-year engineering students"],
         pdfLink: "https://msit.in/faculty/pooja-singh-physics",
         bio: "Ms. Pooja Singh is an Assistant Professor in the Applied Sciences Department (Physics) at MSIT. She holds an M.Tech. in Microwave Electronics and an M.Sc. in Physics with an Electronics specialization, and is UGC NET qualified. Her research interests include Applied Physics, Wave Optics, and Solid State Electronic Devices, with a focus on electronic circuit applications."
+    },
+    {
+        id: 'as-24',
+        name: "Dr. Swati Chaudhary",
+        role: "Assistant Professor",
+        dept: "Applied Sciences",
+        email: "swatiap@msit.in",
+        linkedin: "https://scholar.google.com/citations?user=placeholder24",
+        img: "/faculty/swati-chaudhary.png",
+        qual: "Ph.D.",
+        experience: "10",
+        publications: "5+",
+        patents: "0",
+        goodAt: ["Nucleic Acids Chemistry", "Biophysical Aspects of Multistranded DNA/RNA Structures", "DNA-Drug Interaction Studies", "Gene Therapy", "Organic Chemistry"],
+        badAt: ["Significant administrative load from nucleic acid research lab coordination", "Managing biophysical studies of complex DNA structures while overseeing foundational chemistry courses for gene therapy applications"],
+        pdfLink: "https://msit.in/faculty/swati-chaudhary",
+        bio: "Dr. Swati Chaudhary is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Chemistry and specializes in Nucleic Acids Chemistry. Her research explores the biophysical aspects of multistranded DNA/RNA structures, DNA-drug interaction studies, and gene therapy, contributing to the intersection of chemistry and biotechnology."
     }
 ];

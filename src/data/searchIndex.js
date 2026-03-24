@@ -126,7 +126,8 @@ export const searchIndex = {
         { name: "Dr. Gitanjali", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Dr. Pooja Singh", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
         { name: "Dr. Rashmi Gupta", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Ms. Pooja Singh", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
+        { name: "Ms. Pooja Singh", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
+        { name: "Dr. Swati Chaudhary", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
