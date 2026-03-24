@@ -1769,5 +1769,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from intelligent systems research", "Managing complex research in blocking artifacts reduction while overseeing department-wide speaker recognition projects"],
         pdfLink: "https://www.msit.in/media/2022/07/07/soniamalik_main-profile-1.pdf",
         bio: "Ms. Sonia Malik is an Assistant Professor in the ECE Department at MSIT with 7 years of experience. She holds an M.Tech. and specializes in Image Processing and Speaker Identification. Her research focuses on signal adaptive weighted sum techniques for reduction of compression artifacts, and she is actively involved in developing AI-driven human-centric systems."
+    },
+    {
+        id: 'ece-28',
+        name: "Ms. Neha (Nagar)",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "neha@msit.in",
+        linkedin: "https://in.linkedin.com/in/neha-01111116a",
+        img: "/faculty/neha-nagar.png",
+        qual: "M.Tech., B.Tech.",
+        experience: "1.5",
+        publications: "1+",
+        patents: "0",
+        goodAt: ["Communication Systems", "Digital Electronics", "VLSI Design", "VANET", "Network Security"],
+        badAt: ["Significant administrative load from high-speed data research", "Managing research in network optimization while overseeing department-wide MATLAB labs and microwave experiments"],
+        pdfLink: "https://www.msit.in/media/2022/07/08/neha-main-profile.pdf",
+        bio: "Ms. Neha (Nagar) is an Assistant Professor in the ECE Department at MSIT. She holds an M.Tech. from GGSIPU and specializes in Communication Systems and Digital Electronics. Her research, supported by tools like HFSS and Xilinx ISE, covers high-speed data transmission, network security protocols, and vehicular ad-hoc networks (VANET)."
     }
 ];

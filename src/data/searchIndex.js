@@ -90,7 +90,8 @@ export const searchIndex = {
         { name: "Ms. Anjali Balyan", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Dr. Neelam Barak", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
         { name: "Ms. Himani", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Sonia Malik", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
+        { name: "Ms. Sonia Malik", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
+        { name: "Ms. Neha (Nagar)", role: "Assistant Professor", dept: "ECE", url: "/faculty" }
     ],
     pages: [
         { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
