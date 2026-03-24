@@ -1599,5 +1599,22 @@ export const facultyMembers = [
         badAt: ["Significant administrative load from research coordination", "Managing complex research in inhomogeneous circularly polarized antennas while overseeing B.Tech thesis evaluations"],
         pdfLink: "https://www.msit.in/media/2021/11/24/neetu_main-profile.pdf",
         bio: "Dr. Neetu (Sehrawat) is an Assistant Professor in the ECE Department at MSIT with over 9 years of experience. She holds a Ph.D. and specializes in RF & Microwave Engineering, specifically Dielectric Resonator Antennas (DRA). A gold medalist in her M.Tech and a three-time GATE qualifier, her research on inhomogeneous circularly polarized antennas has been published in leading computational electronics journals."
+    },
+    {
+        id: 'ece-18',
+        name: "Dr. Upma Singh",
+        role: "Assistant Professor",
+        dept: "ECE",
+        email: "upmasingh@msit.in",
+        linkedin: "https://in.linkedin.com/in/upma-singh-01111116a",
+        img: "/faculty/upma-singh.png",
+        qual: "Ph.D (p), M.Tech., B.Tech.",
+        experience: "9+",
+        publications: "15+",
+        patents: "0",
+        goodAt: ["Renewable Energy", "Intelligent Forecasting", "Power Electronics", "Smart Grids", "Machine Learning"],
+        badAt: ["Significant administrative load from energy systems optimization", "Managing complex research in wind and solar power prediction while overseeing department-wide instrumentation labs"],
+        pdfLink: "https://www.msit.in/media/2021/11/24/upma-singh_main-profile.pdf",
+        bio: "Dr. Upma Singh is an Assistant Professor in the ECE Department at MSIT with over 9 years of academic experience. She is currently pursuing her Ph.D. and specializes in Instrumentation, Control, and Renewable Energy. Her research focuses on machine learning-based forecasting for wind power production and smart grid optimization, with publications in high-impact journals like Energies."
     }
 ];
