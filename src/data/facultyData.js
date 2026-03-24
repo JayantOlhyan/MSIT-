@@ -2166,17 +2166,17 @@ export const facultyMembers = [
         name: "Dr. Anju Ahlawat",
         role: "Assistant Professor",
         dept: "Applied Sciences",
-        email: "anjua@msit.in",
+        email: "anjuahlawat@msit.in",
         linkedin: "https://scholar.google.com/citations?user=placeholder11",
         img: "/faculty/anju-ahlawat.png",
         qual: "Ph.D.",
         experience: "15",
         publications: "17+",
         patents: "0",
-        goodAt: ["Synthesis of Condensed Bridgehead Nitrogen Heterocyclic Systems", "Antimicrobial Activity", "Antifungal Activity", "Antihistamine Activity Studies", "Organic Chemistry"],
-        badAt: ["Significant administrative load from SCI journal publication coordination", "Managing synthesis of complex heterocyclic systems while overseeing first-year organic chemistry laboratory sessions"],
-        pdfLink: "https://msit.in/faculty/anju-ahlawat",
-        bio: "Dr. Anju Ahlawat is an Assistant Professor in the Applied Sciences Department (Chemistry) at MSIT. She holds a Ph.D. in Organic Chemistry and is a prolific researcher with over 17 research papers, including 11 in SCI indexed journals. Her expertise focuses on the synthesis of condensed bridgehead nitrogen heterocyclic systems and their antimicrobial, antifungal, and antihistamine activities."
+        goodAt: ["Inorganic Chemistry", "Coordination Compounds", "Metal Complexes", "Therapeutic Potential", "Chemistry"],
+        badAt: ["Significant administrative load from coordination chemistry research lab management", "Managing metal complex synthesis projects while overseeing foundational chemistry courses for first-year engineering students"],
+        pdfLink: "https://www.msit.in/media/2021/12/14/anju-rathee-ahlawat_main-profile-converted-converted-compressed.pdf",
+        bio: "Dr. Anju Ahlawat is an Assistant Professor of Chemistry at MSIT. She specializes in Inorganic Chemistry and Coordination Compounds. Her research involves the synthesis of metal complexes with therapeutic potential."
     },
     {
         id: 'as-12',
