@@ -140,19 +140,23 @@ const Header = () => {
     return (
         <>
             <header className="fixed top-0 left-0 w-full z-[60] flex flex-col">
-                {/* Tier 1: Persistent Branding & Utility Bar (White) */}
-                <div className="bg-white text-slate-800 py-3 px-4 lg:px-6 xl:px-12 border-b border-slate-100 shadow-sm relative z-20">
+                {/* Tier 1: Persistent Branding & Utility Bar (Transparent on Home, White on Scroll) */}
+                <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 border-b relative z-20 ${
+                    isTransparent 
+                        ? 'bg-transparent border-transparent' 
+                        : 'bg-white border-slate-100 shadow-sm text-slate-800'
+                }`}>
                     <div className="w-full max-w-[1536px] mx-auto flex justify-between items-center">
                         {/* Logo Area */}
                         <Link to="/" className="flex items-center gap-3 lg:gap-4 cursor-pointer select-none">
                             <img 
                                 src="/msit-logo.png" 
                                 alt="MSIT Logo" 
-                                className="h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0" 
+                                className={`h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0 transition-all duration-300 ${isTransparent ? 'brightness-[1.2]' : ''}`} 
                                 loading="eager" 
                             />
                             <div className="flex flex-col justify-center">
-                                <span className={`font-['Libre_Baskerville',serif] font-bold text-[14px] md:text-[18px] lg:text-[24px] tracking-tight leading-tight text-[#1e4a9b]`}>
+                                <span className={`font-['Libre_Baskerville',serif] font-bold text-[14px] md:text-[18px] lg:text-[24px] tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
                                     <span className="hidden sm:inline">Maharaja Surajmal Institute of Technology</span>
                                     <span className="sm:hidden">MSIT Delhi</span>
                                 </span>
@@ -160,23 +164,23 @@ const Header = () => {
                         </Link>
 
                         {/* Top Utility Bar (Desktop) */}
-                        <div className="hidden xl:flex items-center space-x-6 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
-                            <span className="text-slate-400">Information for:</span>
+                        <div className={`hidden xl:flex items-center space-x-6 text-[10px] font-bold uppercase tracking-[0.15em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
+                            <span className={isTransparent ? 'text-white/50' : 'text-slate-400'}>Information for:</span>
                             <div className="flex space-x-6">
-                                <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-[#1e4a9b] transition-colors">Current Students</a>
-                                <Link to="/faculty" className="hover:text-[#1e4a9b] transition-colors">Faculty & Staff</Link>
-                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#1e4a9b] transition-colors">Campus Mail</a>
-                                <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#1e4a9b] transition-colors">Grievances</a>
+                                <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Current Students</a>
+                                <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Faculty & Staff</Link>
+                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Campus Mail</a>
+                                <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Grievances</a>
                             </div>
-                            <div className="w-px h-3 bg-slate-200 mx-2"></div>
-                            <button onClick={toggleSearch} className="flex items-center gap-1.5 hover:text-[#1e4a9b] transition-colors" aria-label="Search">
+                            <div className={`w-px h-3 mx-2 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
+                            <button onClick={toggleSearch} className={`flex items-center gap-1.5 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`} aria-label="Search">
                                 <Search className="w-3.5 h-3.5" /> <span>Search</span>
                             </button>
                         </div>
 
                         {/* Mobile Header Controls */}
                         <div className="xl:hidden flex items-center gap-3 shrink-0">
-                            <button onClick={toggleSearch} className="p-2 text-slate-700">
+                            <button onClick={toggleSearch} className={`p-2 transition-colors ${isTransparent ? 'text-white' : 'text-slate-700'}`}>
                                 <Search className="w-5 h-5" />
                             </button>
                             <button
@@ -184,9 +188,9 @@ const Header = () => {
                                 className="w-10 h-10 relative focus:outline-none flex justify-center items-center group cursor-pointer"
                                 aria-label="Toggle Menu"
                             >
-                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
-                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
-                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
+                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
+                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
+                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
                             </button>
                         </div>
                     </div>
