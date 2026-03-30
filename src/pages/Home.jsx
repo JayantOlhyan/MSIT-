@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
-    Check, Award, ArrowRight, Play, X, Mail, Globe,
+    Check, Award, ArrowRight, Play, X, Mail, Globe, ChevronDown,
     Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -137,10 +137,19 @@ const Home = () => {
     }, [testimonials.length]);
 
     const scrollToSection = (id) => {
-        document.getElementById(id)?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        const element = document.getElementById(id);
+        if (element) {
+            const offset = 150; // Account for fixed header
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = element.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     };
 
     const openLightbox = (imageLabel) => {
@@ -218,50 +227,34 @@ const Home = () => {
                 description="Maharaja Surajmal Institute of Technology (MSIT) is a premier engineering college in Delhi offering top-tier B.Tech programs, placements, and innovation." 
             />
             {/* HERO SECTION */}
-            <section ref={heroRef} className="relative w-full h-[90vh] min-h-[700px] flex items-center bg-slate-900 overflow-hidden">
+            <section ref={heroRef} className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center bg-slate-900 overflow-hidden">
                 {/* Interactive Campus Background Image */}
                 <div className="absolute inset-0 z-0 group overflow-hidden">
                     <div
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[20s] ease-out hover:scale-110"
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[20s] ease-out group-hover:scale-105"
                         style={{ backgroundImage: "url('/campus-hero.jpg')" }}
                     ></div>
-                    {/* Premium dark gradient overlays for maximum text readability and aesthetic */}
-                    <div className="absolute inset-0 bg-slate-950/60 mix-blend-multiply"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-slate-900/40"></div>
+                    {/* Dark gradient overlays */}
+                    <div className="absolute inset-0 bg-slate-950/40 mix-blend-multiply"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-slate-900/60"></div>
                 </div>
 
-                <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20 flex flex-col items-center sm:items-start text-center sm:text-left transition-all duration-1000 transform">
-                    <div className={`mt-auto mb-6 opacity-0 translate-y-8 animate-[slideUp_1s_ease-out_0.2s_forwards] flex flex-wrap justify-center sm:justify-start gap-3`}>
-                        <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm text-xs font-semibold uppercase tracking-wider text-slate-300">
-                            <Check className="w-3 h-3 mr-1.5 text-emerald-400" /> NAAC 'A' Grade
-                        </span>
-                        <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm text-xs font-semibold uppercase tracking-wider text-slate-300">
-                            <Award className="w-3 h-3 mr-1.5 pl-[1px]" /> NBA Accredited
-                        </span>
-                        <span className="hidden md:inline-flex items-center px-4 py-1.5 rounded-full border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm text-xs font-semibold uppercase tracking-wider text-slate-300">
-                            50+ Years of Excellence
-                        </span>
-                    </div>
-
-                    <h1 className={`text-6xl sm:text-7xl md:text-8xl lg:text-[100px] font-light tracking-tight text-white leading-[0.9] opacity-0 animate-[slideUp_1s_ease-out_0.4s_forwards]`}>
-                        More Than <br />
-                        <span className="font-semibold text-white">Ready.</span>
+                {/* Giant Centered Text */}
+                <div className="relative z-10 w-full px-4 flex flex-col items-center justify-center text-center -mt-20 sm:-mt-32 pointer-events-none">
+                    <h1 className="text-[15vw] sm:text-[12vw] md:text-[160px] lg:text-[200px] xl:text-[240px] font-serif font-bold tracking-[0.08em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white/90 to-white/20 leading-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.5)] transition-all duration-1000 ease-out select-none">
+                        MSIT
                     </h1>
+                    <div className="h-1 w-24 bg-white/30 mt-4 rounded-full"></div>
+                </div>
 
-                    <div className={`w-32 h-1 bg-white mt-10 mb-8 rounded-full opacity-0 animate-[slideUp_1s_ease-out_0.6s_forwards]`}></div>
-
-                    <p className={`text-xl sm:text-2xl font-light text-slate-300 max-w-3xl leading-relaxed mb-12 opacity-0 animate-[slideUp_1s_ease-out_0.8s_forwards]`}>
-                        At Maharaja Surajmal Institute of Technology (MSIT), we are preparing tomorrow's engineers and innovators through uncompromising academic excellence, active industry collaboration, and transformative learning experiences.
-                    </p>
-
-                    <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto opacity-0 animate-[slideUp_1s_ease-out_1s_forwards]`}>
-                        <button onClick={() => scrollToSection('programs')} className="px-10 py-5 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl shadow-white/10 flex items-center justify-center">
-                            Explore Programs <ArrowRight className="w-5 h-5 ml-2" />
-                        </button>
-                        <button className="px-10 py-5 border-2 border-slate-500 text-white font-semibold rounded-lg hover:border-white hover:bg-white/5 transition-all duration-300 flex items-center justify-center">
-                            Take Virtual Tour <Play className="w-5 h-5 ml-2" />
-                        </button>
-                    </div>
+                {/* Explore Banner at Bottom */}
+                <div 
+                    className="absolute bottom-0 left-0 w-full bg-[#1e4a9b] py-4 cursor-pointer hover:bg-[#153a7a] transition-all duration-300 z-20 flex justify-center items-center group/banner"
+                    onClick={() => scrollToSection('news')}
+                >
+                    <span className="text-white font-semibold flex items-center gap-2 group-hover/banner:translate-y-[-2px] transition-transform">
+                        Explore MSIT <ChevronDown className="w-5 h-5 animate-bounce" />
+                    </span>
                 </div>
             </section>
 

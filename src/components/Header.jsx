@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { searchIndex } from '../data/searchIndex';
 
 const Header = () => {
@@ -11,6 +11,7 @@ const Header = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState({ faculty: [], pages: [], qa: [] });
     const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -124,119 +125,126 @@ const Header = () => {
         ]
     };
 
+    const isHomePage = location.pathname === '/';
+    const isTransparent = isHomePage && !isScrolled && !isMenuOpen;
+
+    const headerContainerClass = isHomePage
+        ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white shadow-lg py-1'}`
+        : `sticky top-0 z-[60] w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-lg py-1' : 'bg-white/95 backdrop-blur-sm py-2'}`;
+
+    const textStyle = isTransparent ? 'text-white hover:text-slate-200' : 'text-slate-700 hover:text-blue-600';
+    const mutedTextStyle = isTransparent ? 'text-white/80' : 'text-slate-500';
+    const logoColorStyle = isTransparent ? 'text-white' : 'text-[#1e4a9b]';
+    const logoSubStyle = isTransparent ? 'text-white/90' : 'text-[#f05023]';
+
     return (
         <>
-            {/* =========================================
-              SECTION 1: TOP UTILITY BAR 
-              ========================================= */}
-            <div className="bg-slate-900 text-slate-300 text-xs py-2 px-6 flex justify-between items-center z-50 relative">
-                <div className="flex space-x-6 overflow-x-auto whitespace-nowrap hide-scrollbar">
-                    <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium">Current Students</a>
-                    <Link to="/faculty" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Faculty & Staff</Link>
-                    <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden sm:block">Campus Mail</a>
-                    <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 uppercase tracking-widest font-medium hidden md:block">Grievances</a>
-                </div>
-                <div className="flex space-x-3 shrink-0">
-                    <Link to="/facilities" className="px-4 py-1.5 border border-slate-600 rounded text-white hover:bg-slate-800 transition-colors hidden sm:block">Visit Campus</Link>
-                    <Link to="/brochure" className="px-4 py-1.5 bg-white text-slate-900 rounded font-semibold hover:bg-slate-100 transition-colors">Apply Now</Link>
-                </div>
-            </div>
+            <header className="fixed top-0 left-0 w-full z-[60] flex flex-col">
+                {/* Tier 1: Persistent Branding & Utility Bar (White) */}
+                <div className="bg-white text-slate-800 py-3 px-4 lg:px-6 xl:px-12 border-b border-slate-100 shadow-sm relative z-20">
+                    <div className="w-full max-w-[1536px] mx-auto flex justify-between items-center">
+                        {/* Logo Area */}
+                        <Link to="/" className="flex items-center gap-3 lg:gap-4 cursor-pointer select-none">
+                            <img 
+                                src="/msit-logo.png" 
+                                alt="MSIT Logo" 
+                                className="h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0" 
+                                loading="eager" 
+                            />
+                            <div className="flex flex-col justify-center">
+                                <span className={`font-['Libre_Baskerville',serif] font-bold text-[14px] md:text-[18px] lg:text-[24px] tracking-tight leading-tight text-[#1e4a9b]`}>
+                                    <span className="hidden sm:inline">Maharaja Surajmal Institute of Technology</span>
+                                    <span className="sm:hidden">MSIT Delhi</span>
+                                </span>
+                            </div>
+                        </Link>
 
-            {/* =========================================
-              SECTION 2: MAIN HEADER / NAVIGATION
-              ========================================= */}
-            <header
-                className={`sticky top-0 z-[60] transition-all duration-300 w-full ${isScrolled || isMenuOpen ? 'bg-white shadow-lg py-3' : 'bg-white/95 backdrop-blur-sm py-5'
-                    }`}
-            >
-                <div className="w-full max-w-[1536px] mx-auto px-4 lg:px-6 xl:px-8 flex justify-between items-center">
-
-                    {/* Logo Area */}
-                    <Link to="/" className="flex-1 min-w-0 flex items-center gap-2 xl:gap-3 cursor-pointer select-none mr-auto pr-4">
-                        <img src="/msit-logo.png" alt="Maharaja Surajmal Institute of Technology Logo" className="h-10 md:h-12 lg:h-14 xl:h-[60px] w-auto object-contain shrink-0 drop-shadow-sm" loading="eager" />
-                        <div className="flex flex-col justify-center transform lg:-translate-y-0.5 font-sans min-w-0">
-                            <span className="font-bold text-[13px] md:text-[18px] lg:text-[20px] xl:text-[23px] text-[#1e4a9b] tracking-tight leading-tight mb-0.5 md:mb-1 truncate sm:whitespace-normal hidden sm:block">
-                                Maharaja Surajmal Institute of Technology
-                            </span>
-                            <span className="font-bold text-[14px] text-[#1e4a9b] tracking-tight leading-tight mb-0.5 sm:hidden truncate">
-                                MSIT
-                            </span>
-                            <span className="hidden md:block text-[8px] lg:text-[9px] xl:text-[10px] font-semibold tracking-wide text-[#f05023] leading-tight truncate">
-                                Affiliated to GGSIPU | NAAC Accredited 'A' Grade | NBA (CSE, IT, ECE, EEE)
-                            </span>
+                        {/* Top Utility Bar (Desktop) */}
+                        <div className="hidden xl:flex items-center space-x-6 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">
+                            <span className="text-slate-400">Information for:</span>
+                            <div className="flex space-x-6">
+                                <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-[#1e4a9b] transition-colors">Current Students</a>
+                                <Link to="/faculty" className="hover:text-[#1e4a9b] transition-colors">Faculty & Staff</Link>
+                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#1e4a9b] transition-colors">Campus Mail</a>
+                                <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#1e4a9b] transition-colors">Grievances</a>
+                            </div>
+                            <div className="w-px h-3 bg-slate-200 mx-2"></div>
+                            <button onClick={toggleSearch} className="flex items-center gap-1.5 hover:text-[#1e4a9b] transition-colors" aria-label="Search">
+                                <Search className="w-3.5 h-3.5" /> <span>Search</span>
+                            </button>
                         </div>
-                    </Link>
 
-                    {/* Desktop Navigation */}
-                    <nav className="hidden xl:flex items-center space-x-1 xl:space-x-2 shrink-0 text-[13px] xl:text-[14px]">
-                        {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements', 'Student Portal'].map((item, idx) => {
-                            const key = item.split(' ')[0].toLowerCase();
-                            return (
-                                <div
-                                    key={idx}
-                                    className="relative group px-1.5 xl:px-3 py-2 shrink-0"
-                                    onMouseEnter={() => setActiveDropdown(key)}
-                                    onMouseLeave={() => setActiveDropdown(null)}
-                                >
-                                    <button className="flex items-center gap-1.5 font-medium text-slate-700 group-hover:text-slate-900 transition-colors whitespace-nowrap">
-                                        {item}
-                                        <ChevronDown className="w-3 h-3 text-slate-400 group-hover:text-slate-900 group-hover:-rotate-180 transition-all duration-300 shrink-0" />
-                                    </button>
+                        {/* Mobile Header Controls */}
+                        <div className="xl:hidden flex items-center gap-3 shrink-0">
+                            <button onClick={toggleSearch} className="p-2 text-slate-700">
+                                <Search className="w-5 h-5" />
+                            </button>
+                            <button
+                                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                className="w-10 h-10 relative focus:outline-none flex justify-center items-center group cursor-pointer"
+                                aria-label="Toggle Menu"
+                            >
+                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
+                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
+                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-                                    {/* Mega Menu Dropdown */}
-                                    <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white shadow-2xl rounded-2xl border border-slate-100 p-8 w-[500px] transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
-                                        <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-                                            {megaMenuData[key]?.map((link, i) => (
-                                                link.external ? (
-                                                    <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
-                                                        {link.name}
-                                                        <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
-                                                    </a>
-                                                ) : (
-                                                    <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm text-slate-600 hover:text-slate-900 hover:underline underline-offset-4 flex items-center group/link">
-                                                        {link.name}
-                                                        <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
-                                                    </Link>
-                                                )
-                                            ))}
-                                        </div>
-                                        <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                                            <div className="text-sm font-semibold text-slate-900">Explore all in {item}</div>
-                                            <Link to="/about" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center hover:bg-slate-100 cursor-pointer shrink-0">
-                                                <ArrowRight className="w-4 h-4 text-slate-900" />
-                                            </Link>
+                {/* Tier 2: Dynamic Navigation Row (Transparent -> White) */}
+                <div 
+                    className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 border-b transition-all duration-300 ${
+                        isTransparent 
+                            ? 'bg-transparent border-transparent py-3' 
+                            : 'bg-white shadow-md border-slate-100 py-1.5'
+                    }`}
+                >
+                    <div className="w-full max-w-[1536px] mx-auto">
+                        <nav className="hidden xl:flex justify-center items-center space-x-10 text-[14px]">
+                            {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements', 'Student Portal'].map((item, idx) => {
+                                const key = item.split(' ')[0].toLowerCase();
+                                return (
+                                    <div
+                                        key={idx}
+                                        className="relative group px-1 py-1 shrink-0"
+                                        onMouseEnter={() => setActiveDropdown(key)}
+                                        onMouseLeave={() => setActiveDropdown(null)}
+                                    >
+                                        <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap ${isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]'}`}>
+                                            {item}
+                                            <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isTransparent ? 'text-white/60' : 'text-slate-400'}`} />
+                                        </button>
+
+                                        {/* Mega Menu Dropdown */}
+                                        <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
+                                            <div className="bg-white shadow-2xl rounded-xl border border-slate-100 p-8 w-[550px]">
+                                                <div className="grid grid-cols-2 gap-x-10 gap-y-5">
+                                                    {megaMenuData[key]?.map((link, i) => (
+                                                        link.external ? (
+                                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-[13px] font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
+                                                                {link.name}
+                                                                <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                            </a>
+                                                        ) : (
+                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-[13px] font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
+                                                                {link.name}
+                                                                <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                            </Link>
+                                                        )
+                                                    ))}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            );
-                        })}
-
-                        <Link to="/contact" className="px-1.5 xl:px-3 py-2 font-medium text-slate-700 hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">Contact</Link>
-
-                        <div className="w-px h-5 bg-slate-200 mx-1 xl:mx-2 shrink-0"></div>
-
-                        <button onClick={toggleSearch} className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all shrink-0" aria-label="Search">
-                            <Search className="w-4 h-4 xl:w-5 xl:h-5" />
-                        </button>
-                    </nav>
-
-                    {/* Mobile Menu Toggle */}
-                    <div className="xl:hidden flex items-center gap-2 sm:gap-3 shrink-0">
-                        <button onClick={toggleSearch} className="p-2 text-slate-600 hover:text-slate-900">
-                            <Search className="w-5 h-5 sm:w-6 sm:h-6" />
-                        </button>
-                        <button
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="w-10 h-10 relative focus:outline-none flex justify-center items-center group cursor-pointer"
-                            aria-label="Toggle Menu"
-                        >
-                            <span className={`block w-6 h-[2px] bg-slate-900 rounded-full absolute transition-all duration-300 ease-in-out ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
-                            <span className={`block w-6 h-[2px] bg-slate-900 rounded-full absolute transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
-                            <span className={`block w-6 h-[2px] bg-slate-900 rounded-full absolute transition-all duration-300 ease-in-out ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
-                        </button>
+                                );
+                            })}
+                            <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 ${isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]'}`}>Contact</Link>
+                        </nav>
                     </div>
                 </div>
             </header>
+
 
             {/* Mobile Nav Overlay (Smooth Sliding Drawer) */}
             <div className={`fixed inset-x-0 top-0 z-50 bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] h-[100dvh] pt-24 pb-8 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>

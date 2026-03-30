@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import BackToTop from './BackToTop';
 import { Outlet, useLocation } from 'react-router-dom';
 
 const Layout = () => {
@@ -12,12 +13,13 @@ const Layout = () => {
     }, [pathname]);
 
     return (
-        <div className="font-sans text-slate-700 w-full min-h-screen selection:bg-slate-200 selection:text-slate-900 bg-white flex flex-col">
+        <div className="font-sans text-slate-700 w-full min-h-screen selection:bg-slate-200 selection:text-slate-900 bg-white flex flex-col overflow-x-hidden">
             <Header />
             <main className="flex-grow">
                 <Outlet />
             </main>
             <Footer />
+            <BackToTop />
         </div>
     );
 };
