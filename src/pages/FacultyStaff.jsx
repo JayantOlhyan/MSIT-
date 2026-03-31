@@ -40,7 +40,7 @@ const FacultyStaff = () => {
         });
 
     return (
-        <main className="min-h-screen bg-[#f8fafc] overflow-hidden">
+        <main className="min-h-screen bg-[#f8fafc]">
             <SEO 
                 title="Premium Faculty Directory" 
                 description="Explore the comprehensive profiles, research strengths, and detailed metrics of the distinguished faculty at MSIT."
@@ -79,7 +79,7 @@ const FacultyStaff = () => {
             </div>
 
             {/* Advanced Search & Filtering - Sticky */}
-            <div className="sticky top-[124px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm transition-all duration-300">
+            <div className="sticky top-[132px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm transition-all duration-300">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row gap-4 md:items-center justify-between">
                     <div className="relative w-full md:w-96 group">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
