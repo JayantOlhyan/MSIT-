@@ -165,7 +165,7 @@ const Header = () => {
 
                         {/* Top Utility Bar (Desktop) */}
                         <div className={`hidden xl:flex items-center space-x-6 text-[10px] font-bold uppercase tracking-[0.15em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
-                            <span className={isTransparent ? 'text-white/50' : 'text-slate-400'}>Information for:</span>
+                            <span className={isTransparent ? 'text-white/50' : 'text-slate-400'}>Information about:</span>
                             <div className="flex space-x-6">
                                 <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Current Students</a>
                                 <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Faculty & Staff</Link>
