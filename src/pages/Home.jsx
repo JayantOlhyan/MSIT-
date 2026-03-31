@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Check, Award, ArrowRight, Play, X, Mail, Globe, ChevronDown,
-    Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink
+    Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink,
+    Laptop, Satellite, Zap
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -169,7 +170,7 @@ const Home = () => {
             name: "Computer Science & Engineering",
             code: "CSE",
             students: 480,
-            icon: "💻",
+            icon: <Laptop className="w-8 h-8 lg:w-10 lg:h-10 text-slate-700" />,
             desc: "Master software architecture, artificial intelligence, and scalable systems.",
             accredited: true
         },
@@ -177,7 +178,7 @@ const Home = () => {
             name: "Information Technology",
             code: "IT",
             students: 240,
-            icon: "🌐",
+            icon: <Globe className="w-8 h-8 lg:w-10 lg:h-10 text-blue-500" />,
             desc: "Focus on network security, cloud infrastructure, and data analytics.",
             accredited: true
         },
@@ -185,7 +186,7 @@ const Home = () => {
             name: "Electronics & Communication",
             code: "ECE",
             students: 180,
-            icon: "📡",
+            icon: <Satellite className="w-8 h-8 lg:w-10 lg:h-10 text-slate-600" />,
             desc: "Pioneer the hardware of tomorrow with embedded systems and VLSI design.",
             accredited: true
         },
@@ -193,7 +194,7 @@ const Home = () => {
             name: "Electrical & Electronics",
             code: "EEE",
             students: 120,
-            icon: "⚡",
+            icon: <Zap className="w-8 h-8 lg:w-10 lg:h-10 text-amber-500" />,
             desc: "Innovate sustainable power systems, control engineering, and robotics.",
             accredited: true
         }
@@ -411,7 +412,7 @@ const Home = () => {
                             <Link to={`/${dept.code.toLowerCase()}`} key={i} className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-2xl transition-all duration-300 group cursor-pointer relative overflow-hidden block">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-10 transition-transform group-hover:scale-150 duration-500"></div>
                                 <div className="flex justify-between items-start mb-6">
-                                    <div className="text-5xl bg-slate-100 w-20 h-20 rounded-xl flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                                    <div className="bg-slate-100 p-4 lg:p-5 rounded-2xl flex items-center justify-center group-hover:bg-blue-50 transition-colors">
                                         {dept.icon}
                                     </div>
                                     <div className="text-right">
