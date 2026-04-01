@@ -169,7 +169,7 @@ const Home = () => {
             name: "Computer Science & Engineering",
             code: "CSE",
             students: 480,
-            icon: "/icons/3d/laptop.png",
+            icon: "/icons/3d/laptop.png?v=2",
             desc: "Master software architecture, artificial intelligence, and scalable systems.",
             accredited: true
         },
@@ -177,7 +177,7 @@ const Home = () => {
             name: "Information Technology",
             code: "IT",
             students: 240,
-            icon: "/icons/3d/globe.png",
+            icon: "/icons/3d/globe.png?v=2",
             desc: "Focus on network security, cloud infrastructure, and data analytics.",
             accredited: true
         },
@@ -185,7 +185,7 @@ const Home = () => {
             name: "Electronics & Communication",
             code: "ECE",
             students: 180,
-            icon: "/icons/3d/satellite.png",
+            icon: "/icons/3d/satellite.png?v=2",
             desc: "Pioneer the hardware of tomorrow with embedded systems and VLSI design.",
             accredited: true
         },
@@ -193,7 +193,7 @@ const Home = () => {
             name: "Electrical & Electronics",
             code: "EEE",
             students: 120,
-            icon: "/icons/3d/zap.png",
+            icon: "/icons/3d/zap.png?v=2",
             desc: "Innovate sustainable power systems, control engineering, and robotics.",
             accredited: true
         }
