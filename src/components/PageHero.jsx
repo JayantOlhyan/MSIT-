@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 
 const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle }) => {
     return (
-        <div className="bg-slate-950 text-white pt-40 lg:pt-44 pb-20 px-6 relative overflow-hidden group/hero">
+        <div className="bg-slate-950 text-white pt-28 sm:pt-40 lg:pt-44 pb-16 sm:pb-20 px-6 relative overflow-hidden group/hero">
             {/* Opaque Bluish Background Effect */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-600/15 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>

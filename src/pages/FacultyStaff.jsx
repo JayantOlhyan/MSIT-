@@ -79,8 +79,8 @@ const FacultyStaff = () => {
             </div>
 
             {/* Advanced Search & Filtering - Sticky */}
-            <div className="sticky top-[132px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm transition-all duration-300">
-                <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row gap-4 md:items-center justify-between">
+            <div className="sticky top-[68px] xl:top-[128px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm transition-all duration-300">
+                <div className="max-w-7xl mx-auto px-6 py-3 sm:py-4 flex flex-col md:flex-row gap-4 md:items-center justify-between">
                     <div className="relative w-full md:w-96 group">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
                         <input 
@@ -201,7 +201,7 @@ const FacultyStaff = () => {
                         </button>
 
                         {/* Modal Header/Hero */}
-                        <div className="bg-slate-900 pt-16 pb-24 px-8 md:px-16 relative overflow-hidden">
+                        <div className="bg-slate-900 pt-16 pb-20 sm:pb-24 px-6 sm:px-8 md:px-16 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-[80px]"></div>
                             
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
@@ -226,7 +226,7 @@ const FacultyStaff = () => {
                         </div>
 
                         {/* Modal Body */}
-                        <div className="px-8 md:px-16 pt-20 md:pt-16 pb-16 bg-[#f8fafc]">
+                        <div className="px-6 sm:px-8 md:px-16 pt-16 sm:pt-20 md:pt-16 pb-16 bg-[#f8fafc]">
                             {/* Bio */}
                             <p className="text-slate-600 text-lg leading-relaxed mb-12 font-light">
                                 {selectedFaculty.bio}

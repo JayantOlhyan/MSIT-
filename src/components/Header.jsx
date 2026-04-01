@@ -157,8 +157,8 @@ const Header = () => {
                             />
                             <div className="flex flex-col justify-center">
                                 <span className={`font-['Libre_Baskerville',serif] font-bold text-[14px] md:text-[18px] lg:text-[24px] tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
-                                    <span className="hidden sm:inline">Maharaja Surajmal Institute of Technology</span>
-                                    <span className="sm:hidden">MSIT Delhi</span>
+                                    <span className="hidden sm:inline text-balance">Maharaja Surajmal Institute of Technology</span>
+                                    <span className="sm:hidden text-base font-bold">MSIT Delhi</span>
                                 </span>
                             </div>
                         </Link>
@@ -251,8 +251,8 @@ const Header = () => {
 
 
             {/* Mobile Nav Overlay (Smooth Sliding Drawer) */}
-            <div className={`fixed inset-x-0 top-0 z-50 bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] h-[100dvh] pt-24 pb-8 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
-                <div className="p-4 sm:p-6 flex flex-col space-y-2 mt-4">
+            <div className={`fixed inset-0 z-50 bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pt-24 pb-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+                <div className="p-6 sm:p-8 flex flex-col space-y-4 max-w-lg mx-auto">
                     {Object.entries(megaMenuData).map(([key, items], idx) => (
                         <div key={idx} className="border-b border-slate-50 py-2">
                             <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3 mt-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
@@ -272,9 +272,9 @@ const Header = () => {
                         </div>
                     ))}
 
-                    <div className="pt-8 space-y-4 pb-12">
-                        <button className="w-full py-4 text-center rounded-lg bg-slate-900 text-white font-medium text-lg shadow-md">Apply Now</button>
-                        <button className="w-full py-4 text-center rounded-lg border-2 border-slate-200 text-slate-700 font-medium text-lg">Visit Campus</button>
+                    <div className="pt-10 space-y-4 pb-20">
+                        <button className="w-full py-5 text-center rounded-2xl bg-slate-900 text-white font-bold text-lg shadow-xl hover:bg-slate-800 transition-all active:scale-95 cursor-pointer">Apply Now</button>
+                        <button className="w-full py-5 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-lg hover:bg-slate-50 transition-all active:scale-95 cursor-pointer">Visit Campus</button>
                     </div>
                 </div>
             </div>
