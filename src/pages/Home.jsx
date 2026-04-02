@@ -216,7 +216,7 @@ const Home = () => {
                     onClick={() => scrollToSection('news')}
                 >
                     <span className="font-heading text-white text-sm md:text-base font-bold tracking-widest uppercase flex items-center gap-3 group-hover/banner:translate-y-[-3px] transition-transform">
-                        Explore Maharaja Surajmal Institute <ChevronDown className="w-5 h-5 animate-bounce text-blue-300" />
+                        Explore <ChevronDown className="w-5 h-5 animate-bounce text-blue-300" />
                     </span>
                 </div>
             </section>
