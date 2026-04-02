@@ -14,16 +14,16 @@ const NotFound = () => {
                 {/* Visual Header */}
                 <div className="relative mb-12">
                     <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none select-none">
-                        <span className="text-[15rem] md:text-[20rem] font-black">404</span>
+                        <span className="font-heading text-[15rem] md:text-[20rem] font-black">404</span>
                     </div>
                     <div className="relative z-10">
                         <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-3xl bg-slate-900 shadow-2xl shadow-slate-900/20 mb-8 transform hover:rotate-12 transition-transform duration-500">
                             <Search className="w-8 h-8 md:w-10 md:h-10 text-white" />
                         </div>
-                        <h1 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tight">
-                            Lost in <span className="text-slate-500 font-medium italic">space?</span>
+                        <h1 className="font-heading text-4xl md:text-7xl font-bold text-slate-900 tracking-tight">
+                            Lost in <span className="font-heading text-slate-500 italic font-medium">space?</span>
                         </h1>
-                        <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-lg mx-auto leading-relaxed">
+                        <p className="font-body mt-6 text-lg md:text-xl text-slate-600 max-w-lg mx-auto leading-relaxed">
                             The page you're looking for at Maharaja Surajmal Institute of Technology seems to have vanished. Don't worry, we'll help you find your way back to campus.
                         </p>
                     </div>
@@ -33,14 +33,14 @@ const NotFound = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
                     <Link 
                         to="/" 
-                        className="group w-full sm:w-auto px-10 py-4 md:py-5 bg-slate-900 text-white rounded-2xl font-bold shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-slate-900/20 hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
+                        className="font-heading group w-full sm:w-auto px-10 py-4 md:py-5 bg-slate-900 text-white rounded-2xl font-bold shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-slate-900/20 hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
                     >
                         <Home className="w-5 h-5 group-hover:scale-110 transition-transform" />
                         Back to Home
                     </Link>
                     <button 
                         onClick={() => window.history.back()}
-                        className="w-full sm:w-auto px-10 py-4 md:py-5 bg-white text-slate-900 border-2 border-slate-100 rounded-2xl font-bold hover:border-slate-200 hover:bg-slate-50 transition-all flex items-center justify-center gap-3"
+                        className="font-heading w-full sm:w-auto px-10 py-4 md:py-5 bg-white text-slate-900 border-2 border-slate-100 rounded-2xl font-bold hover:border-slate-200 hover:bg-slate-50 transition-all flex items-center justify-center gap-3"
                     >
                         <ArrowLeft className="w-5 h-5" />
                         Go Back
@@ -53,27 +53,27 @@ const NotFound = () => {
                         <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-slate-900 transition-colors">
                             <BookOpen className="w-6 h-6 text-blue-600 group-hover:text-white" />
                         </div>
-                        <h3 className="font-bold text-slate-900 mb-1 font-inter">About MSIT</h3>
-                        <p className="text-sm text-slate-500">Learn about our history and values.</p>
+                        <h3 className="font-heading font-bold text-slate-900 mb-1">About MSIT</h3>
+                        <p className="font-body text-sm text-slate-500">Learn about our history and values.</p>
                     </Link>
                     <Link to="/admissions" className="p-6 bg-white rounded-3xl border border-slate-100 hover:border-slate-900/10 hover:shadow-xl hover:shadow-slate-900/5 transition-all group">
                         <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center mb-4 group-hover:bg-slate-900 transition-colors">
                             <GraduationCap className="w-6 h-6 text-emerald-600 group-hover:text-white" />
                         </div>
-                        <h3 className="font-bold text-slate-900 mb-1 font-inter">Admissions</h3>
-                        <p className="text-sm text-slate-500">Join MSIT's vibrant community.</p>
+                        <h3 className="font-heading font-bold text-slate-900 mb-1">Admissions</h3>
+                        <p className="font-body text-sm text-slate-500">Join MSIT's vibrant community.</p>
                     </Link>
                     <Link to="/placements" className="p-6 bg-white rounded-3xl border border-slate-100 hover:border-slate-900/10 hover:shadow-xl hover:shadow-slate-900/5 transition-all group">
                         <div className="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center mb-4 group-hover:bg-slate-900 transition-colors">
                             <Briefcase className="w-6 h-6 text-purple-600 group-hover:text-white" />
                         </div>
-                        <h3 className="font-bold text-slate-900 mb-1 font-inter">Careers</h3>
-                        <p className="text-sm text-slate-500">Placement cell and opportunities.</p>
+                        <h3 className="font-heading font-bold text-slate-900 mb-1">Careers</h3>
+                        <p className="font-body text-sm text-slate-500">Placement cell and opportunities.</p>
                     </Link>
                 </div>
 
                 <div className="mt-20 opacity-50">
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                    <p className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
                         Error Code: 404_PAGE_NOT_FOUND
                     </p>
                 </div>

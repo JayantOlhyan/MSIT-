@@ -30,10 +30,10 @@ const Syllabus = () => {
                 <Icon className="w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-colors" />
             </div>
             <div className="flex-grow">
-                <h3 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors leading-snug pr-4">
+                <h3 className="font-heading text-lg font-bold text-slate-800 group-hover:text-blue-700 transition-colors leading-snug pr-4">
                     {item.name}
                 </h3>
-                <div className="flex items-center mt-3 text-sm font-medium text-slate-500 group-hover:text-blue-600 transition-colors">
+                <div className="font-heading flex items-center mt-3 text-sm font-semibold text-slate-500 group-hover:text-blue-600 transition-colors">
                     <Download className="w-4 h-4 mr-1.5" /> Download PDF
                 </div>
             </div>
@@ -60,7 +60,7 @@ const Syllabus = () => {
                     <div className="lg:col-span-2 space-y-12">
 
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center border-b border-slate-200 pb-4">
+                            <h2 className="font-heading text-2xl font-bold text-slate-900 mb-6 flex items-center border-b border-slate-200 pb-4">
                                 <LayoutTemplate className="w-6 h-6 mr-3 text-blue-600" /> Departmental Syllabi
                             </h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -71,7 +71,7 @@ const Syllabus = () => {
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center border-b border-slate-200 pb-4">
+                            <h2 className="font-heading text-2xl font-bold text-slate-900 mb-6 flex items-center border-b border-slate-200 pb-4">
                                 <Layers className="w-6 h-6 mr-3 text-emerald-600" /> First Year / Foundation
                             </h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -86,7 +86,7 @@ const Syllabus = () => {
                     {/* Right Column: General / Schemes */}
                     <div>
                         <div className="bg-slate-900 rounded-2xl p-8 text-white sticky top-32 shadow-xl shadow-slate-900/10">
-                            <h3 className="text-xl font-bold mb-6 flex items-center">
+                            <h3 className="font-heading text-xl font-bold mb-6 flex items-center">
                                 <FileText className="w-5 h-5 mr-3 text-blue-400" /> Comprehensive Schemes
                             </h3>
                             <div className="space-y-4">
@@ -98,8 +98,8 @@ const Syllabus = () => {
                                         rel="noopener noreferrer"
                                         className="block bg-slate-800 hover:bg-slate-700/80 p-5 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all group"
                                     >
-                                        <h4 className="font-semibold text-slate-200 group-hover:text-white mb-2 pr-2 leading-tight">{item.name}</h4>
-                                        <div className="text-xs font-semibold uppercase tracking-wider text-blue-400 flex items-center">
+                                        <h4 className="font-heading font-semibold text-slate-200 group-hover:text-white mb-2 pr-2 leading-tight">{item.name}</h4>
+                                        <div className="font-heading text-xs font-semibold uppercase tracking-wider text-blue-400 flex items-center">
                                             <Download className="w-3 h-3 mr-1" /> View Document
                                         </div>
                                     </a>
@@ -107,7 +107,7 @@ const Syllabus = () => {
                             </div>
 
                             <div className="mt-8 pt-8 border-t border-slate-700">
-                                <p className="text-sm text-slate-400 font-light leading-relaxed">
+                                <p className="font-body text-sm text-slate-400 leading-relaxed">
                                     The schemes define the credit requirements, subjects breakdown, and evaluation criteria for the full 4-year B.Tech journey.
                                 </p>
                             </div>

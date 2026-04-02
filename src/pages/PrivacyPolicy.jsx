@@ -22,35 +22,35 @@ const PrivacyPolicy = () => {
 
                     <div className="p-8 md:p-12 space-y-10 prose prose-slate max-w-none">
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
+                            <h2 className="font-heading text-2xl font-bold text-slate-900 mb-4 flex items-center">
                                 <Eye className="w-6 h-6 mr-3 text-blue-600" /> 1. Introduction
                             </h2>
-                            <p className="text-slate-600 leading-relaxed font-light">
+                            <p className="font-body text-slate-600 leading-relaxed">
                                 Welcome to Maharaja Surajmal Institute of Technology (MSIT). We respect your privacy and are committed to protecting the personal data of our students, faculty, staff, and website visitors. This Privacy Policy outlines how we collect, use, and safeguard your information when you interact with our digital platforms.
                             </p>
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
+                            <h2 className="font-heading text-2xl font-bold text-slate-900 mb-4 flex items-center">
                                 <Lock className="w-6 h-6 mr-3 text-blue-600" /> 2. Information We Collect
                             </h2>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                    <h3 className="font-bold text-slate-800 mb-2">Personal Data</h3>
-                                    <p className="text-sm text-slate-600">While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you, including names, email addresses, and phone numbers via admission forms or inquiries.</p>
+                                    <h3 className="font-heading font-bold text-slate-800 mb-2">Personal Data</h3>
+                                    <p className="font-body text-sm text-slate-600">While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you, including names, email addresses, and phone numbers via admission forms or inquiries.</p>
                                 </div>
                                 <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                    <h3 className="font-bold text-slate-800 mb-2">Usage Data</h3>
-                                    <p className="text-sm text-slate-600">Usage Data is collected automatically when using the Service. This may include your device's IP address, browser type, page visit duration, and other diagnostic data to improve site performance.</p>
+                                    <h3 className="font-heading font-bold text-slate-800 mb-2">Usage Data</h3>
+                                    <p className="font-body text-sm text-slate-600">Usage Data is collected automatically when using the Service. This may include your device's IP address, browser type, page visit duration, and other diagnostic data to improve site performance.</p>
                                 </div>
                             </div>
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
+                            <h2 className="font-heading text-2xl font-bold text-slate-900 mb-4 flex items-center">
                                 <Shield className="w-6 h-6 mr-3 text-blue-600" /> 3. How We Use Your Data
                             </h2>
-                            <ul className="list-disc pl-6 space-y-3 text-slate-600 font-light">
+                            <ul className="font-body list-disc pl-6 space-y-3 text-slate-600">
                                 <li><strong>To provide and maintain our Service:</strong> Including to monitor the usage of our Service.</li>
                                 <li><strong>To manage Your Account:</strong> To manage Your registration as a user of the Service and student portal.</li>
                                 <li><strong>For academic purposes:</strong> Processing admissions, maintaining academic records, and facilitating examinations.</li>
@@ -59,20 +59,20 @@ const PrivacyPolicy = () => {
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center">
+                            <h2 className="font-heading text-2xl font-bold text-slate-900 mb-4 flex items-center">
                                 <FileText className="w-6 h-6 mr-3 text-blue-600" /> 4. Data Security
                             </h2>
-                            <p className="text-slate-600 leading-relaxed font-light">
+                            <p className="font-body text-slate-600 leading-relaxed">
                                 The security of Your Personal Data is important to Us. We implement enterprise-grade security measures to prevent unauthorized access, disclosure, or modification of student records. However, no method of transmission over the Internet is 100% secure, and we strive to use commercially acceptable means to protect Your Personal Data.
                             </p>
                         </section>
 
                         <section className="bg-blue-50 p-8 rounded-2xl border border-blue-100">
-                            <h2 className="text-xl font-bold text-blue-900 mb-2">5. Contact Us</h2>
-                            <p className="text-blue-800 text-sm mb-4">If you have any questions about this Privacy Policy, You can contact us:</p>
-                            <ul className="text-sm text-blue-700 space-y-1">
-                                <li><strong>Email:</strong> privacy@msit.in</li>
-                                <li><strong>Address:</strong> Maharaja Surajmal Institute of Technology, C-4, Janakpuri, New Delhi</li>
+                            <h2 className="font-heading text-xl font-bold text-blue-900 mb-2">5. Contact Us</h2>
+                            <p className="font-body text-blue-800 text-sm mb-4">If you have any questions about this Privacy Policy, You can contact us:</p>
+                            <ul className="font-body text-sm text-blue-700 space-y-1">
+                                <li><strong className="font-heading font-bold">Email:</strong> privacy@msit.in</li>
+                                <li><strong className="font-heading font-bold">Address:</strong> Maharaja Surajmal Institute of Technology, C-4, Janakpuri, New Delhi</li>
                             </ul>
                         </section>
                 </div>
