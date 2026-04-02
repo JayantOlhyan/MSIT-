@@ -47,18 +47,18 @@ const Placements = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
                         <div className="flex flex-col items-center text-center p-4">
                             <TrendingUp className="w-10 h-10 text-blue-600 mb-4" />
-                            <div className="font-heading text-4xl font-bold text-slate-900 mb-2">95%+</div>
-                            <div className="font-body text-sm text-slate-500 uppercase tracking-widest font-normal">Placement Rate</div>
+                            <div className="text-4xl font-bold text-slate-900 mb-2">95%+</div>
+                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest">Placement Rate</div>
                         </div>
                         <div className="flex flex-col items-center text-center p-4">
                             <Building2 className="w-10 h-10 text-blue-600 mb-4" />
-                            <div className="font-heading text-4xl font-bold text-slate-900 mb-2">250+</div>
-                            <div className="font-body text-sm text-slate-500 uppercase tracking-widest font-normal">Recruiting Companies</div>
+                            <div className="text-4xl font-bold text-slate-900 mb-2">250+</div>
+                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest">Recruiting Companies</div>
                         </div>
                         <div className="flex flex-col items-center text-center p-4">
                             <Users className="w-10 h-10 text-blue-600 mb-4" />
-                            <div className="font-heading text-4xl font-bold text-slate-900 mb-2">₹1.2Cr</div>
-                            <div className="font-body text-sm text-slate-500 uppercase tracking-widest font-normal">Highest Package Offered</div>
+                            <div className="text-4xl font-bold text-slate-900 mb-2">₹1.2Cr</div>
+                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest">Highest Package Offered</div>
                         </div>
                     </div>
                 </div>
@@ -70,9 +70,9 @@ const Placements = () => {
                 <div className="flex-grow">
                     <div className="flex items-center mb-8 pb-4 border-b border-slate-200">
                         <FileText className="w-8 h-8 text-blue-600 mr-4" />
-                        <h2 className="font-heading text-3xl font-bold text-slate-900">Official Placement Records</h2>
+                        <h2 className="text-3xl font-bold text-slate-900">Official Placement Records</h2>
                     </div>
-                    <p className="font-body text-slate-600 mb-8 text-lg">
+                    <p className="text-slate-600 mb-8 font-light text-lg">
                         Transparency is our core value. View our detailed, year-wise historical placement data containing company lists, packages, and student achievements.
                     </p>
 
@@ -86,8 +86,8 @@ const Placements = () => {
                                 className="group bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-between"
                             >
                                 <div>
-                                    <div className="font-heading text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">Batch of</div>
-                                    <div className="font-heading text-2xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1">Batch of</div>
+                                    <div className="text-2xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
                                         {record.year}
                                     </div>
                                 </div>
@@ -102,7 +102,7 @@ const Placements = () => {
                 {/* Top Recruiters Sidebar */}
                 <div className="lg:w-80 shrink-0">
                     <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sticky top-32">
-                        <h3 className="font-heading text-xl font-bold text-slate-900 mb-6 flex items-center">
+                        <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
                             <Building2 className="w-5 h-5 mr-3 text-blue-600" />
                             Top Recruiters
                         </h3>
@@ -110,7 +110,7 @@ const Placements = () => {
                             {topRecruiters.map((company, index) => (
                                 <span
                                     key={index}
-                                    className="font-body px-3 py-1.5 bg-slate-50 border border-slate-100 rounded-md text-sm text-slate-600 hover:border-slate-300 hover:text-slate-900 transition-colors cursor-default"
+                                    className="px-3 py-1.5 bg-slate-50 border border-slate-100 rounded-md text-sm font-medium text-slate-600 hover:border-slate-300 hover:text-slate-900 transition-colors cursor-default"
                                 >
                                     {company}
                                 </span>
@@ -118,11 +118,11 @@ const Placements = () => {
                         </div>
 
                         <div className="mt-8 pt-8 border-t border-slate-100">
-                            <h4 className="font-heading font-bold text-slate-900 mb-2">Training & Placement Cell</h4>
-                            <p className="font-body text-sm text-slate-500 mb-4">
+                            <h4 className="font-bold text-slate-900 mb-2">Training & Placement Cell</h4>
+                            <p className="text-sm text-slate-500 mb-4">
                                 The T&P cell actively bridges the gap between academia and industry.
                             </p>
-                            <a href="mailto:placements@msit.in" className="font-heading text-sm font-semibold text-blue-600 hover:underline">
+                            <a href="mailto:placements@msit.in" className="text-sm font-semibold text-blue-600 hover:underline">
                                 Contact Placement Cell &rarr;
                             </a>
                         </div>

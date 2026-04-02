@@ -23,7 +23,7 @@ const TimeTable = () => {
                 {/* Main Content Area */}
                 <div className="bg-white rounded-xl p-8 lg:p-12 border border-slate-200 shadow-sm max-w-4xl mx-auto">
 
-                    <h2 className="font-heading text-2xl font-bold text-slate-900 mb-8 border-b border-slate-100 pb-4 flex items-center">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-100 pb-4 flex items-center">
                         <Layers className="w-6 h-6 mr-3 text-blue-600" /> Current Semester Time Tables
                     </h2>
 
@@ -40,11 +40,11 @@ const TimeTable = () => {
                                     <BookOpen className="w-6 h-6 text-slate-500 group-hover:text-blue-600 transition-colors" />
                                 </div>
                                 <div>
-                                    <h3 className="font-heading font-bold text-lg text-slate-800 group-hover:text-blue-700 transition-colors">First Year (All Branches)</h3>
-                                    <p className="font-body text-sm text-slate-500 mt-1">Foundational academic schedule for freshers.</p>
+                                    <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-700 transition-colors">First Year (All Branches)</h3>
+                                    <p className="text-sm text-slate-500 font-medium mt-1">Foundational academic schedule for freshers.</p>
                                 </div>
                             </div>
-                            <div className="font-heading px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-semibold rounded-lg group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all text-sm w-full sm:w-auto text-center">
+                            <div className="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-semibold rounded-lg group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all text-sm w-full sm:w-auto text-center">
                                 View PDF
                             </div>
                         </a>
@@ -61,11 +61,11 @@ const TimeTable = () => {
                                     <Layers className="w-6 h-6 text-slate-500 group-hover:text-blue-600 transition-colors" />
                                 </div>
                                 <div>
-                                    <h3 className="font-heading font-bold text-lg text-slate-800 group-hover:text-blue-700 transition-colors">2nd, 3rd & 4th Year (All Branches)</h3>
-                                    <p className="font-body text-sm text-slate-500 mt-1">Core departmental schedules (CSE, IT, ECE, EEE).</p>
+                                    <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-700 transition-colors">2nd, 3rd & 4th Year (All Branches)</h3>
+                                    <p className="text-sm text-slate-500 font-medium mt-1">Core departmental schedules (CSE, IT, ECE, EEE).</p>
                                 </div>
                             </div>
-                            <div className="font-heading px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-semibold rounded-lg group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all text-sm w-full sm:w-auto text-center">
+                            <div className="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-semibold rounded-lg group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all text-sm w-full sm:w-auto text-center">
                                 View PDF
                             </div>
                         </a>

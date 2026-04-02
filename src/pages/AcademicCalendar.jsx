@@ -47,21 +47,21 @@ const AcademicCalendar = () => {
                                 </div>
                                 <div>
                                     <div className="flex items-center gap-3 mb-1">
-                                        <h3 className="font-heading text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                                        <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
                                             {cal.period}
                                         </h3>
                                         {cal.isNew && (
-                                            <span className="font-heading px-2 py-0.5 bg-emerald-100 text-emerald-700 text-[10px] font-semibold uppercase tracking-wider rounded border border-emerald-200">
+                                            <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider rounded border border-emerald-200">
                                                 Latest
                                             </span>
                                         )}
                                     </div>
-                                    <p className="font-body text-sm text-slate-500">Official Schedule PDF Download</p>
+                                    <p className="text-sm text-slate-500 font-medium">Official Schedule PDF Download</p>
                                 </div>
                             </div>
 
                             <div className="sm:ml-4 w-full sm:w-auto">
-                                <div className="font-heading flex items-center justify-center sm:justify-start w-full sm:w-auto px-5 py-2.5 bg-slate-50 text-slate-700 font-semibold rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors border border-slate-200 group-hover:border-blue-600">
+                                <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto px-5 py-2.5 bg-slate-50 text-slate-700 font-semibold rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors border border-slate-200 group-hover:border-blue-600">
                                     <Download className="w-4 h-4 mr-2" />
                                     Download
                                 </div>
@@ -71,8 +71,8 @@ const AcademicCalendar = () => {
                 </div>
 
                 <div className="mt-12 p-6 bg-blue-50 border border-blue-100 rounded-xl text-center">
-                    <p className="font-body text-blue-800 text-sm">
-                        <strong className="font-heading font-bold">Note:</strong> The academic calendar is subject to change based on guidelines from Guru Gobind Singh Indraprastha University (GGSIPU). Please check back regularly for updates.
+                    <p className="text-blue-800 text-sm">
+                        <strong>Note:</strong> The academic calendar is subject to change based on guidelines from Guru Gobind Singh Indraprastha University (GGSIPU). Please check back regularly for updates.
                     </p>
                 </div>
 

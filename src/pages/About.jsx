@@ -36,25 +36,25 @@ const About = () => {
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="font-heading text-blue-600 font-bold tracking-widest text-sm uppercase mb-4 block">Our Origin</span>
-                            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-8 leading-tight">
+                            <span className="text-blue-600 font-bold tracking-widest text-sm uppercase mb-4 block">Our Origin</span>
+                            <h2 className="text-3xl md:text-4xl font-light text-slate-900 tracking-tight mb-8 leading-tight">
                                 Established in 2001, <br />
-                                <span className="font-bold">Built for the future.</span>
+                                <span className="font-semibold">Built for the future.</span>
                             </h2>
-                            <p className="font-body text-lg text-slate-600 leading-relaxed mb-6">
+                            <p className="text-lg text-slate-600 font-light leading-relaxed mb-6">
                                 This AICTE approved Institute under GGSIP University is ideally located in the Institutional area of Janakpuri, New Delhi. MSIT has a campus spread over eight acres of land with beautiful eco-friendly surroundings.
                             </p>
-                            <p className="font-body text-lg text-slate-600 leading-relaxed">
+                            <p className="text-lg text-slate-600 font-light leading-relaxed">
                                 The institute was earlier operating from a four-storey building of 6279 sq.m of built-up area. Later it was shifted to a more spacious seven-storeyed building with a built-up area of 17837 sq.m. The institute has over a short span of time acquired and developed impressive infrastructure, expertise and resources for imparting high-quality engineering education.
                             </p>
                             <div className="mt-10 pt-10 border-t border-slate-100 grid grid-cols-2 gap-8">
                                 <div>
-                                    <div className="font-heading text-3xl font-bold text-slate-900 mb-1">8 Acres</div>
-                                    <div className="font-body text-sm font-medium text-slate-500 uppercase tracking-widest text-xs">Eco-Friendly Campus</div>
+                                    <div className="text-3xl font-bold text-slate-900 mb-1">8 Acres</div>
+                                    <div className="text-sm font-medium text-slate-500 uppercase tracking-widest text-xs">Eco-Friendly Campus</div>
                                 </div>
                                 <div>
-                                    <div className="font-heading text-3xl font-bold text-slate-900 mb-1">17,837</div>
-                                    <div className="font-body text-sm font-medium text-slate-500 uppercase tracking-widest text-xs">Sq.M. Built-Up Area</div>
+                                    <div className="text-3xl font-bold text-slate-900 mb-1">17,837</div>
+                                    <div className="text-sm font-medium text-slate-500 uppercase tracking-widest text-xs">Sq.M. Built-Up Area</div>
                                 </div>
                             </div>
                         </div>
@@ -67,9 +67,9 @@ const About = () => {
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] mix-blend-screen opacity-50 pointer-events-none"></div>
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="max-w-3xl mx-auto text-center mb-16">
-                        <span className="font-heading text-blue-400 font-bold tracking-widest text-sm uppercase mb-4 block">Pedagogy</span>
-                        <h2 className="font-heading text-4xl md:text-5xl font-bold text-white tracking-tight mb-8">Teaching Methodology</h2>
-                        <p className="font-body text-xl text-slate-400 leading-relaxed">
+                        <span className="text-blue-400 font-bold tracking-widest text-sm uppercase mb-4 block">Pedagogy</span>
+                        <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight mb-8">Teaching Methodology</h2>
+                        <p className="text-xl text-slate-400 font-light leading-relaxed">
                             The institute aims to achieve and excel the high standards set by premiere technical institutions of the country.
                         </p>
                     </div>
@@ -78,24 +78,24 @@ const About = () => {
                         {/* Box 1 */}
                         <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl p-8 border border-white/5 hover:bg-slate-800 transition-colors group">
                             <BookOpen className="w-10 h-10 text-blue-400 mb-6 group-hover:scale-110 transition-transform" />
-                            <h3 className="font-heading text-xl font-semibold mb-4 text-white">Comprehensive Learning</h3>
-                            <p className="font-body text-slate-400 leading-relaxed text-sm">
+                            <h3 className="text-xl font-semibold mb-4 text-white">Comprehensive Learning</h3>
+                            <p className="text-slate-400 font-light leading-relaxed text-sm">
                                 Traditional classroom teaching is supplemented by regular tests, tutorials, group discussions, extensive lab work, projects, seminars and industrial exposure by way of industry visits and summer training.
                             </p>
                         </div>
                         {/* Box 2 */}
                         <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl p-8 border border-white/5 hover:bg-slate-800 transition-colors group">
                             <Users className="w-10 h-10 text-emerald-400 mb-6 group-hover:scale-110 transition-transform" />
-                            <h3 className="font-heading text-xl font-semibold mb-4 text-white">Eminent Faculty</h3>
-                            <p className="font-body text-slate-400 leading-relaxed text-sm">
+                            <h3 className="text-xl font-semibold mb-4 text-white">Eminent Faculty</h3>
+                            <p className="text-slate-400 font-light leading-relaxed text-sm">
                                 The institute has a well qualified and experienced faculty. Eminent academicians & professionals are invited as visiting faculty to teach & guide specific courses.
                             </p>
                         </div>
                         {/* Box 3 */}
                         <div className="bg-slate-800/50 backdrop-blur-md rounded-2xl p-8 border border-white/5 hover:bg-slate-800 transition-colors group">
                             <Target className="w-10 h-10 text-amber-400 mb-6 group-hover:scale-110 transition-transform" />
-                            <h3 className="font-heading text-xl font-semibold mb-4 text-white">Interactive Sessions</h3>
-                            <p className="font-body text-slate-400 leading-relaxed text-sm">
+                            <h3 className="text-xl font-semibold mb-4 text-white">Interactive Sessions</h3>
+                            <p className="text-slate-400 font-light leading-relaxed text-sm">
                                 The classroom atmosphere is synergetic with interactive and participative sessions. This makes learning proactive and instills in the students a sense of team spirit, responsibility and professional integrity.
                             </p>
                         </div>
@@ -109,8 +109,8 @@ const About = () => {
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
                         <div className="w-full lg:w-1/3">
                             <div className="sticky top-32">
-                                <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-8">Infrastructure <br /><span className="font-bold">& Facilities</span></h2>
-                                <p className="font-body text-lg text-slate-600 leading-relaxed mb-8">
+                                <h2 className="text-4xl md:text-5xl font-light text-slate-900 tracking-tight mb-8">Infrastructure <br /><span className="font-semibold">& Facilities</span></h2>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">
                                     The infrastructure consists of well-lit lecture halls, fully furnished labs, seminar halls, staff rooms, a large size play ground etc.
                                 </p>
                             </div>
@@ -123,13 +123,13 @@ const About = () => {
                                         <Cpu className="w-8 h-8 text-blue-600" />
                                     </div>
                                     <div>
-                                        <h3 className="font-heading text-2xl font-semibold text-slate-900 mb-4">Computing Laboratories</h3>
-                                        <p className="font-body text-slate-600 leading-relaxed mb-4">
+                                        <h3 className="text-2xl font-semibold text-slate-900 mb-4">Computing Laboratories</h3>
+                                        <p className="text-slate-600 font-light leading-relaxed mb-4">
                                             The six modern air-conditioned networked computers labs cover entire range of Computer Science & IT subjects like Software Engg., Network Technology, Mobile Computing, Artificial Intelligence & Robotics, Computer Graphics, Compiler Construction, Analysis & Design of Algorithms, Interface Programming, Data Structure, DBMS & OOP.
                                         </p>
                                         <div className="flex flex-wrap gap-2 mt-4">
                                             {['Visual Studio', '.Net', 'Auto Cad', 'Oracle 9i', 'Linux'].map(t => (
-                                                <span key={t} className="font-heading px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold uppercase rounded-full tracking-wider">{t}</span>
+                                                <span key={t} className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full tracking-wider">{t}</span>
                                             ))}
                                         </div>
                                     </div>
@@ -140,8 +140,8 @@ const About = () => {
                                         <Shield className="w-8 h-8 text-purple-600" />
                                     </div>
                                     <div>
-                                        <h3 className="font-heading text-2xl font-semibold text-slate-900 mb-4">Electronics & Undergrad Labs</h3>
-                                        <p className="font-body text-slate-600 leading-relaxed">
+                                        <h3 className="text-2xl font-semibold text-slate-900 mb-4">Electronics & Undergrad Labs</h3>
+                                        <p className="text-slate-600 font-light leading-relaxed">
                                             For the fresh students there are well equipped labs for 'Applied Sciences', 'Applied Mechanics' and 'Electrical Engg. Lab'. The Electronics & Comm. Engg. Department has eight modern laboratories covering all the important subjects e.g. Analog Electronics Lab, Control Engg. Lab, Digital Image Processing Lab. Recently a VLSI Design Lab and a Satellite & Mobile Comm. Lab have been also added.
                                         </p>
                                     </div>

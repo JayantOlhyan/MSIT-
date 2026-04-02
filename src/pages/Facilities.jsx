@@ -56,7 +56,7 @@ const Facilities = () => {
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`font-heading flex items-center gap-2 px-1 py-2 text-sm font-semibold transition-all relative whitespace-nowrap ${
+                                className={`flex items-center gap-2 px-1 py-2 text-sm font-semibold transition-all relative whitespace-nowrap ${
                                     activeTab === tab.id ? 'text-blue-600' : 'text-slate-500 hover:text-slate-800'
                                 }`}
                             >
@@ -77,22 +77,22 @@ const Facilities = () => {
                     <div className="space-y-12 animate-fade-in">
                         {labContent.map((section, idx) => (
                             <div key={idx}>
-                                <h3 className="font-heading text-2xl font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-4">{section.dept}</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-4">{section.dept}</h3>
                                 <div className="grid md:grid-cols-3 gap-6">
                                     {section.labs.map((lab, lidx) => (
                                         <div key={lidx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
                                             <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 mb-6">
                                                 <Cpu className="w-6 h-6" />
                                             </div>
-                                            <h4 className="font-heading text-lg font-bold text-slate-900 mb-3">{lab.name}</h4>
-                                            <div className="font-body space-y-3 text-sm">
+                                            <h4 className="text-lg font-bold text-slate-900 mb-3">{lab.name}</h4>
+                                            <div className="space-y-3 text-sm">
                                                 <p className="text-slate-500 flex items-start gap-2">
                                                     <Server className="w-4 h-4 shrink-0 mt-0.5 text-blue-400" />
-                                                    <span><strong className="font-heading font-bold">Hardware:</strong> {lab.specs}</span>
+                                                    <span><strong>Hardware:</strong> {lab.specs}</span>
                                                 </p>
                                                 <p className="text-slate-500 flex items-start gap-2">
                                                     <Database className="w-4 h-4 shrink-0 mt-0.5 text-blue-400" />
-                                                    <span><strong className="font-heading font-bold">Software:</strong> {lab.software}</span>
+                                                    <span><strong>Software:</strong> {lab.software}</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -106,18 +106,18 @@ const Facilities = () => {
                 {activeTab === 'library' && (
                     <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
                         <div className="order-2 md:order-1">
-                            <h3 className="font-heading text-3xl font-bold text-slate-900 mb-6">Central Library & Information Center</h3>
-                            <p className="font-body text-slate-600 mb-6 leading-relaxed">
+                            <h3 className="text-3xl font-bold text-slate-900 mb-6">Central Library & Information Center</h3>
+                            <p className="text-slate-600 mb-6 leading-relaxed">
                                 Our library is an intellectual hub housing over 50,000+ volumes, 100+ national and international journals, and a dedicated Digital Library section with access to IEEE Explorer and DELNET.
                             </p>
                             <div className="space-y-4">
                                 <div className="p-4 bg-blue-50 rounded-xl border border-blue-100">
-                                    <h4 className="font-heading font-bold text-blue-900 mb-1">Book Bank Facility</h4>
-                                    <p className="font-body text-sm text-blue-700">Providing dedicated sets of textbooks to students for the entire semester.</p>
+                                    <h4 className="font-bold text-blue-900 mb-1">Book Bank Facility</h4>
+                                    <p className="text-sm text-blue-700">Providing dedicated sets of textbooks to students for the entire semester.</p>
                                 </div>
                                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                    <h4 className="font-heading font-bold text-slate-900 mb-1">E-Resources</h4>
-                                    <p className="font-body text-sm text-slate-600">Access to online journals, project reports, and a massive research database.</p>
+                                    <h4 className="font-bold text-slate-900 mb-1">E-Resources</h4>
+                                    <p className="text-sm text-slate-600">Access to online journals, project reports, and a massive research database.</p>
                                 </div>
                             </div>
                         </div>
@@ -130,11 +130,11 @@ const Facilities = () => {
                 {activeTab === 'hostel' && (
                     <div className="bg-slate-950 text-white rounded-3xl p-12 relative overflow-hidden animate-fade-in">
                         <div className="max-w-xl relative z-10">
-                            <h3 className="font-heading text-3xl font-bold mb-6">Campus Accommodation</h3>
-                            <p className="font-body text-slate-400 mb-8 leading-relaxed">
+                            <h3 className="text-3xl font-bold mb-6">Campus Accommodation</h3>
+                            <p className="text-slate-400 mb-8 leading-relaxed">
                                 Separate hostels for boys and girls provide a "home away from home" experience with 24/7 security, high-speed Wi-Fi, and nutritious dining facilities.
                             </p>
-                            <ul className="font-heading grid grid-cols-2 gap-4 text-sm font-semibold">
+                            <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> 24/7 Power Backup</li>
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> RO Drinking Water</li>
                                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Sports Courts</li>

@@ -14,7 +14,7 @@ const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle }) =>
             
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Breadcrumbs */}
-                <div className="flex items-center text-blue-400/80 gap-2 mb-6 font-heading font-semibold tracking-wide text-xs sm:text-sm">
+                <div className="flex items-center text-blue-400/80 gap-2 mb-6 font-medium tracking-wide text-xs sm:text-sm">
                     <Link to="/" className="hover:text-blue-300 transition-colors shrink-0">Home</Link>
                     {breadcrumbs && breadcrumbs.map((crumb, index) => (
                         <React.Fragment key={index}>
@@ -30,11 +30,11 @@ const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle }) =>
 
                 {/* Main Heading */}
                 <div className="mb-8">
-                    <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-2">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-2">
                         {title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 animate-gradient-x">{accentTitle}</span>
                     </h1>
                     {subtitle && (
-                        <div className="font-heading text-xl md:text-3xl font-semibold text-blue-400/80 tracking-widest uppercase">
+                        <div className="text-xl md:text-3xl font-light text-blue-400/80 tracking-widest uppercase">
                             {subtitle}
                         </div>
                     )}
@@ -42,7 +42,7 @@ const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle }) =>
 
                 {/* Description */}
                 {description && (
-                    <p className="font-body text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed">
+                    <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed font-light">
                         {description}
                     </p>
                 )}

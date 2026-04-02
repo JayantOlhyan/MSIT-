@@ -227,18 +227,18 @@ const AdminDashboard = () => {
                                 <Lock className="w-8 h-8 text-blue-600" />
                             </div>
                         </div>
-                        <h1 className="font-heading text-2xl font-bold text-center text-slate-900 mb-2">Admin Access</h1>
-                        <p className="font-body text-center text-slate-500 mb-8 text-sm">Sign in to manage MSIT website content</p>
+                        <h1 className="text-2xl font-bold text-center text-slate-900 mb-2">Admin Access</h1>
+                        <p className="text-center text-slate-500 mb-8 text-sm">Sign in to manage MSIT website content</p>
 
                         {loginError && (
-                            <div className="font-body mb-6 p-3 bg-red-50 text-red-600 text-sm font-medium rounded-lg text-center border border-red-100">
+                            <div className="mb-6 p-3 bg-red-50 text-red-600 text-sm font-medium rounded-lg text-center border border-red-100">
                                 {loginError}
                             </div>
                         )}
 
                         <form onSubmit={handleLogin} className="space-y-5">
                             <div>
-                                <label className="font-heading text-sm font-semibold text-slate-700 block mb-1.5">Admin ID</label>
+                                <label className="text-sm font-semibold text-slate-700 block mb-1.5">Admin ID</label>
                                 <input
                                     type="text"
                                     required
@@ -249,7 +249,7 @@ const AdminDashboard = () => {
                                 />
                             </div>
                             <div>
-                                <label className="font-heading text-sm font-semibold text-slate-700 block mb-1.5">Password</label>
+                                <label className="text-sm font-semibold text-slate-700 block mb-1.5">Password</label>
                                 <input
                                     type="password"
                                     required
@@ -259,7 +259,7 @@ const AdminDashboard = () => {
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
                             </div>
-                            <button type="submit" className="font-heading w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2">
+                            <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2">
                                 Login to Dashboard
                             </button>
                         </form>
@@ -283,32 +283,32 @@ const AdminDashboard = () => {
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 pb-8 mb-8">
                         <div>
-                            <h1 className="font-heading text-3xl font-bold text-slate-900 mb-2">Website Content Manager</h1>
-                            <p className="font-body text-slate-500">Add or remove news, events, and stories directly from the homepage.</p>
+                            <h1 className="text-3xl font-bold text-slate-900 mb-2">Website Content Manager</h1>
+                            <p className="text-slate-500">Add or remove news, events, and stories directly from the homepage.</p>
                         </div>
                         <button
                             onClick={handleLogout}
-                            className="font-heading mt-4 sm:mt-0 px-4 py-2 text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors flex items-center"
+                            className="mt-4 sm:mt-0 px-4 py-2 text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors flex items-center"
                         >
                             <Lock className="w-4 h-4 mr-2" /> Lock / Logout
                         </button>
                     </div>
 
                     {status && (
-                        <div className={`font-body mb-6 p-4 rounded-lg flex items-center ${status.type === 'success' ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
+                        <div className={`mb-6 p-4 rounded-lg flex items-center ${status.type === 'success' ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
                             {status.type === 'success' ? <CheckCircle2 className="w-5 h-5 mr-3" /> : <AlertCircle className="w-5 h-5 mr-3" />}
                             <span className="font-medium">{status.message}</span>
                         </div>
                     )}
 
                     <form onSubmit={handleAddEvent} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
-                        <h2 className="font-heading text-xl font-bold text-slate-800 flex items-center">
+                        <h2 className="text-xl font-semibold text-slate-800 flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Create New Content
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Content Type</label>
+                                <label className="text-sm font-medium text-slate-700">Content Type</label>
                                 <select
                                     className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={type}
@@ -321,7 +321,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Display Date</label>
+                                <label className="text-sm font-medium text-slate-700">Display Date</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. MAY 18, 2026"
@@ -333,7 +333,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Headline / Title</label>
+                                <label className="text-sm font-medium text-slate-700">Headline / Title</label>
                                 <input
                                     type="text"
                                     placeholder="Enter the title for the card"
@@ -345,7 +345,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Target Link URL (Optional)</label>
+                                <label className="text-sm font-medium text-slate-700">Target Link URL (Optional)</label>
                                 <input
                                     type="text"
                                     placeholder="https://..."
@@ -356,27 +356,27 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="font-heading w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors">
+                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
                             Publish to Homepage
                         </button>
                     </form>
 
                     <div>
-                        <h2 className="font-heading text-xl font-bold text-slate-800 mb-6 border-b border-slate-100 pb-4">Manage Current Content</h2>
+                        <h2 className="text-xl font-semibold text-slate-800 mb-6 border-b border-slate-100 pb-4">Manage Current Content</h2>
 
                         <div className="space-y-4">
                             {events.length === 0 ? (
-                                <p className="font-body text-slate-500 italic">No events found. Create one above.</p>
+                                <p className="text-slate-500 italic">No events found. Create one above.</p>
                             ) : (
                                 events.map(ev => (
                                     <div key={ev.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
                                         <div className="mb-4 sm:mb-0 pr-4">
                                             <div className="flex items-center gap-3 mb-1">
-                                                <span className="font-heading text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-slate-200 text-slate-700 rounded">{ev.label}</span>
-                                                <span className="font-body text-sm text-slate-500">{ev.date}</span>
+                                                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-slate-200 text-slate-700 rounded">{ev.label}</span>
+                                                <span className="text-sm text-slate-500 font-medium">{ev.date}</span>
                                             </div>
-                                            <h3 className="font-heading text-slate-900 font-bold">{ev.title}</h3>
-                                            <a href={ev.link} target="_blank" rel="noopener noreferrer" className="font-heading text-blue-600 text-sm hover:underline mt-1 inline-block truncate max-w-xs">{ev.link !== "#" ? ev.link : "No active link"}</a>
+                                            <h3 className="text-slate-900 font-semibold">{ev.title}</h3>
+                                            <a href={ev.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm hover:underline mt-1 inline-block truncate max-w-xs">{ev.link !== "#" ? ev.link : "No active link"}</a>
                                         </div>
 
                                         <button
@@ -397,18 +397,18 @@ const AdminDashboard = () => {
                 {/* TESTIMONIALS MANAGER */}
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
                     <div className="border-b border-slate-100 pb-8 mb-8">
-                        <h2 className="font-heading text-3xl font-bold text-slate-900 mb-2">Testimonials Manager</h2>
-                        <p className="font-body text-slate-500">Manage alumni testimonials that appear in the homepage carousel.</p>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-2">Testimonials Manager</h2>
+                        <p className="text-slate-500">Manage alumni testimonials that appear in the homepage carousel.</p>
                     </div>
 
                     <form onSubmit={handleAddTestimonial} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
-                        <h3 className="font-heading text-xl font-bold text-slate-800 flex items-center">
+                        <h3 className="text-xl font-semibold text-slate-800 flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Add New Testimonial
                         </h3>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Full Name</label>
+                                <label className="text-sm font-medium text-slate-700">Full Name</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. Rahul Verma"
@@ -420,7 +420,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Batch / Graduation Year</label>
+                                <label className="text-sm font-medium text-slate-700">Batch / Graduation Year</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. 23"
@@ -432,7 +432,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Department / Major</label>
+                                <label className="text-sm font-medium text-slate-700">Department / Major</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. Information Technology"
@@ -444,7 +444,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Company</label>
+                                <label className="text-sm font-medium text-slate-700">Company</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. Microsoft"
@@ -456,7 +456,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Profile Image URL</label>
+                                <label className="text-sm font-medium text-slate-700">Profile Image URL</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. /rahul-verma.png or https://..."
@@ -467,7 +467,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Quote</label>
+                                <label className="text-sm font-medium text-slate-700">Quote</label>
                                 <textarea
                                     placeholder="Enter the testimonial quote here..."
                                     required
@@ -479,15 +479,15 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="font-heading w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors">
+                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
                             Add Testimonial
                         </button>
                     </form>
 
                     <div className="space-y-4">
-                        <h3 className="font-heading text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Manage Testimonials</h3>
+                        <h3 className="text-lg font-semibold text-slate-800 mb-4 border-b border-slate-100 pb-2">Manage Testimonials</h3>
                         {testimonials.length === 0 ? (
-                            <p className="font-body text-slate-500 italic">No testimonials found.</p>
+                            <p className="text-slate-500 italic">No testimonials found.</p>
                         ) : (
                             testimonials.map(t => (
                                 <div key={t.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
@@ -497,10 +497,10 @@ const AdminDashboard = () => {
                                         </div>
                                         <div className="min-w-0">
                                             <div className="flex items-center gap-2">
-                                                <h4 className="font-heading text-slate-900 font-bold truncate">{t.name}</h4>
-                                                <span className="font-body text-xs text-slate-500">'{t.year}</span>
+                                                <h4 className="text-slate-900 font-bold truncate">{t.name}</h4>
+                                                <span className="text-xs text-slate-500">'{t.year}</span>
                                             </div>
-                                            <p className="font-body text-sm text-slate-600 truncate max-w-md">{t.company} • {t.major}</p>
+                                            <p className="text-sm text-slate-600 truncate max-w-md">{t.company} • {t.major}</p>
                                         </div>
                                     </div>
                                     <button
@@ -518,18 +518,18 @@ const AdminDashboard = () => {
                 {/* HIGHLIGHTS MANAGER */}
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
                     <div className="border-b border-slate-100 pb-8 mb-8">
-                        <h2 className="font-heading text-3xl font-bold text-slate-900 mb-2">Highlights Manager</h2>
-                        <p className="font-body text-slate-500">Manage the "MSIT Difference" carousel slides, quotes, and background images.</p>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-2">Highlights Manager</h2>
+                        <p className="text-slate-500">Manage the "MSIT Difference" carousel slides, quotes, and background images.</p>
                     </div>
 
                     <form onSubmit={handleAddHighlight} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
-                        <h3 className="font-heading text-xl font-bold text-slate-800 flex items-center">
+                        <h3 className="text-xl font-semibold text-slate-800 flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Add New Slide
                         </h3>
 
                         <div className="grid grid-cols-1 gap-6">
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Source Name</label>
+                                <label className="text-sm font-medium text-slate-700">Source Name</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. MIT Technology Review"
@@ -541,7 +541,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Background Image URL</label>
+                                <label className="text-sm font-medium text-slate-700">Background Image URL</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. /campus-lab.png or https://..."
@@ -552,7 +552,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="font-heading text-sm font-semibold text-slate-700">Impactful Quote</label>
+                                <label className="text-sm font-medium text-slate-700">Impactful Quote</label>
                                 <textarea
                                     placeholder="Enter the highlight quote here..."
                                     required
@@ -564,15 +564,15 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="font-heading w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors">
+                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
                             Add Slide to Carousel
                         </button>
                     </form>
 
                     <div className="space-y-4">
-                        <h3 className="font-heading text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Manage Current Slides</h3>
+                        <h3 className="text-lg font-semibold text-slate-800 mb-4 border-b border-slate-100 pb-2">Manage Current Slides</h3>
                         {highlights.length === 0 ? (
-                            <p className="font-body text-slate-500 italic">No highlights found.</p>
+                            <p className="text-slate-500 italic">No highlights found.</p>
                         ) : (
                             highlights.map(h => (
                                 <div key={h.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
@@ -581,8 +581,8 @@ const AdminDashboard = () => {
                                             <img src={h.image} alt="Highlight" className="w-full h-full object-cover" />
                                         </div>
                                         <div className="min-w-0">
-                                            <h4 className="font-heading text-slate-900 font-bold truncate">{h.source}</h4>
-                                            <p className="font-body text-sm text-slate-600 truncate max-w-md italic">"{h.quote}"</p>
+                                            <h4 className="text-slate-900 font-bold truncate">{h.source}</h4>
+                                            <p className="text-sm text-slate-600 truncate max-w-md italic">"{h.quote}"</p>
                                         </div>
                                     </div>
                                     <button
@@ -599,8 +599,8 @@ const AdminDashboard = () => {
 
 
 
-                <div className="font-body bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-yellow-800 text-sm">
-                    <strong className="font-heading font-bold">Note for Developer Environments:</strong> Since this site does not currently have a backend database connected (like Firebase, Postgres, or MongoDB), these events are saved in your browser's Local Storage. This allows you to manage the frontend dynamically. To deploy this globally so everyone can see the changes and updates without GitHub, we can connect a cloud database later.
+                <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-yellow-800 text-sm">
+                    <strong>Note for Developer Environments:</strong> Since this site does not currently have a backend database connected (like Firebase, Postgres, or MongoDB), these events are saved in your browser's Local Storage. This allows you to manage the frontend dynamically. To deploy this globally so everyone can see the changes and updates without GitHub, we can connect a cloud database later.
                 </div>
             </div>
         </div>
