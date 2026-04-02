@@ -16,6 +16,8 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 49);
+            // Auto-close dropdowns on scroll for better UX
+            if (activeDropdown) setActiveDropdown(null);
         };
 
         const handleKeyDown = (e) => {
@@ -148,33 +150,34 @@ const Header = () => {
                 }`}>
                     <div className="w-full max-w-[1536px] mx-auto flex justify-between items-center">
                         {/* Logo Area */}
-                        <Link to="/" className="flex items-center gap-3 lg:gap-4 cursor-pointer select-none">
+                        <Link to="/" className="flex items-center gap-4 lg:gap-6 cursor-pointer select-none group/logo">
                             <img 
                                 src="/msit-logo.png" 
                                 alt="MSIT Logo" 
-                                className={`h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0 transition-all duration-300 ${isTransparent ? 'brightness-[1.2]' : ''}`} 
+                                className={`h-12 md:h-16 lg:h-20 w-auto object-contain shrink-0 transition-all duration-500 ${isTransparent ? 'brightness-[1.2]' : ''} group-hover/logo:scale-110`} 
                                 loading="eager" 
                             />
                             <div className="flex flex-col justify-center">
-                                <span className={`font-['Libre_Baskerville',serif] font-bold text-[14px] md:text-[18px] lg:text-[24px] tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
-                                    <span className="hidden sm:inline text-balance">Maharaja Surajmal Institute of Technology</span>
-                                    <span className="sm:hidden text-base font-bold">MSIT Delhi</span>
+                                <span className={`font-heading font-black tracking-tight leading-none transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
+                                    <span className="hidden sm:max-lg:inline lg:inline text-balance text-nowrap text-[13px] md:text-[18px] lg:text-[26px]">Maharaja Surajmal Institute of Technology</span>
+                                    <span className="sm:hidden text-lg font-black">MSIT Delhi</span>
                                 </span>
+                                <div className={`h-0.5 w-0 group-hover/logo:w-full transition-all duration-500 mt-1 ${isTransparent ? 'bg-white/40' : 'bg-[#f05023]/40'}`}></div>
                             </div>
                         </Link>
 
                         {/* Top Utility Bar (Desktop) */}
-                        <div className={`hidden xl:flex items-center space-x-6 text-[10px] font-bold uppercase tracking-[0.15em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
-                            <span className={isTransparent ? 'text-white/50' : 'text-slate-400'}>Information about:</span>
-                            <div className="flex space-x-6">
-                                <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Current Students</a>
-                                <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Faculty & Staff</Link>
-                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Campus Mail</a>
-                                <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Grievances</a>
+                        <div className={`hidden xl:flex items-center space-x-6 text-[11px] font-bold uppercase tracking-[0.18em] transition-colors duration-300 font-heading shrink-0 ${isTransparent ? 'text-white/90' : 'text-slate-600'}`}>
+                            <span className={`whitespace-nowrap ${isTransparent ? 'text-white/40' : 'text-slate-400'}`}>Information for:</span>
+                            <div className="flex space-x-5 whitespace-nowrap">
+                                <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className={`transition-all hover:translate-y-[-1px] ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Students</a>
+                                <Link to="/faculty" className={`transition-all hover:translate-y-[-1px] ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Faculty</Link>
+                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-all hover:translate-y-[-1px] ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Mail</a>
+                                <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className={`transition-all hover:translate-y-[-1px] ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Grievances</a>
                             </div>
-                            <div className={`w-px h-3 mx-2 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
-                            <button onClick={toggleSearch} className={`flex items-center gap-1.5 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`} aria-label="Search">
-                                <Search className="w-3.5 h-3.5" /> <span>Search</span>
+                            <div className={`w-px h-3 mx-1 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
+                            <button onClick={toggleSearch} className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all ${isTransparent ? 'border-white/10 hover:bg-white/10 hover:text-white' : 'border-slate-200 hover:bg-slate-50 hover:text-[#1e4a9b]'}`} aria-label="Search">
+                                <Search className="w-3.5 h-3.5" /> <span className="mt-0.5">Search</span>
                             </button>
                         </div>
 
@@ -215,7 +218,7 @@ const Header = () => {
                                         onMouseEnter={() => setActiveDropdown(key)}
                                         onMouseLeave={() => setActiveDropdown(null)}
                                     >
-                                        <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap ${isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]'}`}>
+                                        <button className={`flex items-center gap-1.5 font-heading font-bold uppercase tracking-wider transition-colors whitespace-nowrap ${isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]'}`}>
                                             {item}
                                             <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isTransparent ? 'text-white/60' : 'text-slate-400'}`} />
                                         </button>
@@ -231,7 +234,7 @@ const Header = () => {
                                                                 <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
                                                             </a>
                                                         ) : (
-                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-[13px] font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
+                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-[13px] font-heading font-semibold text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
                                                                 {link.name}
                                                                 <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
                                                             </Link>
@@ -243,7 +246,7 @@ const Header = () => {
                                     </div>
                                 );
                             })}
-                            <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 ${isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]'}`}>Contact</Link>
+                             <Link to="/contact" className={`font-heading font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 ${isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]'}`}>Contact</Link>
                         </nav>
                     </div>
                 </div>
@@ -251,8 +254,8 @@ const Header = () => {
 
 
             {/* Mobile Nav Overlay (Smooth Sliding Drawer) */}
-            <div className={`fixed inset-0 z-50 bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pt-24 pb-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
-                <div className="p-6 sm:p-8 flex flex-col space-y-4 max-w-lg mx-auto">
+            <div className={`fixed inset-0 z-[70] bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pt-24 pb-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+                <div className="p-6 sm:p-12 mb-20 flex flex-col space-y-6 max-w-lg mx-auto">
                     {Object.entries(megaMenuData).map(([key, items], idx) => (
                         <div key={idx} className="border-b border-slate-50 py-2">
                             <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3 mt-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
@@ -272,7 +275,7 @@ const Header = () => {
                         </div>
                     ))}
 
-                    <div className="pt-10 space-y-4 pb-20">
+                     <div className="pt-10 space-y-4 pb-20 font-heading">
                         <button className="w-full py-5 text-center rounded-2xl bg-slate-900 text-white font-bold text-lg shadow-xl hover:bg-slate-800 transition-all active:scale-95 cursor-pointer">Apply Now</button>
                         <button className="w-full py-5 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-lg hover:bg-slate-50 transition-all active:scale-95 cursor-pointer">Visit Campus</button>
                     </div>
@@ -285,12 +288,12 @@ const Header = () => {
                     <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up relative" onClick={(e) => e.stopPropagation()}>
                         <div className="p-6 border-b border-slate-100 flex items-center gap-4">
                             <Search className="w-6 h-6 text-slate-400" />
-                            <input
+                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => handleSearch(e.target.value)}
                                 placeholder="Search faculty, departments, or ask a question..."
-                                className="w-full text-xl font-light focus:outline-none text-slate-900 placeholder-slate-300 bg-transparent"
+                                className="w-full text-xl font-body focus:outline-none text-slate-900 placeholder-slate-300 bg-transparent"
                                 autoFocus
                             />
                             <div className="hidden sm:flex items-center gap-1 px-2 py-1 rounded bg-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
