@@ -339,6 +339,77 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* SUCCESS STORIES (TESTIMONIALS) */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <span className="font-heading text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">Success Stories</span>
+                    <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-16">Voice of Our Alumni</h2>
+
+                    <div className="relative min-h-[400px] flex flex-col justify-center">
+                        {testimonials.map((t, i) => (
+                            <div
+                                key={t.id}
+                                className={`absolute inset-0 transition-all duration-700 ease-in-out transform ${
+                                    i === currentTestimonial ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95 pointer-events-none'
+                                }`}
+                            >
+                                <div className="text-blue-600/20 absolute -top-12 left-1/2 -translate-x-1/2 select-none">
+                                    <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L21.017 3V15C21.017 16.1046 20.1216 17 19.017 17H16.017V21H14.017ZM3.01697 21L3.01697 18C3.01697 16.8954 3.9124 16 5.01697 16H8.01697C8.56925 16 9.01697 15.5523 9.01697 15V9C9.01697 8.44772 8.56925 8 8.01697 8H5.01697C3.9124 8 3.01697 7.10457 3.01697 6V3L10.017 3V15C10.017 16.1046 9.12154 17 8.01697 17H5.01697V21H3.01697Z" /></svg>
+                                </div>
+                                <p className="font-body text-xl md:text-2xl text-slate-700 leading-relaxed italic mb-10 relative z-10 font-medium">
+                                    "{t.quote}"
+                                </p>
+                                <div className="flex flex-col items-center">
+                                    <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-blue-600 p-0.5">
+                                        <div className="w-full h-full rounded-full bg-slate-200 bg-cover bg-center" style={{ backgroundImage: `url('${t.image}')` }}></div>
+                                    </div>
+                                    <h4 className="font-heading text-lg font-bold text-slate-900">{t.name}</h4>
+                                    <p className="font-body text-sm text-slate-500">{t.major} • Class of '{t.year}</p>
+                                    <div className="mt-4 px-4 py-1 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t.company}</div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="flex justify-center gap-3 mt-12">
+                        {testimonials.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => setCurrentTestimonial(i)}
+                                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentTestimonial ? 'bg-blue-600 w-8' : 'bg-slate-300 hover:bg-slate-400'}`}
+                                aria-label={`Go to testimonial ${i + 1}`}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CAMPUS VIRTUAL TOUR */}
+            <section className="py-32 bg-slate-900 relative overflow-hidden flex flex-col items-center justify-center text-center">
+                {/* Background Decorations */}
+                <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600 rounded-full blur-[120px]"></div>
+                    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600 rounded-full blur-[120px]"></div>
+                </div>
+
+                <div className="relative z-10 max-w-4xl mx-auto px-6">
+                    <div 
+                        className="w-24 h-24 bg-white rounded-full shadow-2xl flex items-center justify-center mx-auto mb-12 cursor-pointer hover:scale-110 active:scale-95 transition-all duration-300 group" 
+                        onClick={() => {
+                            setLightboxImage('Virtual Tour Launch');
+                            setLightboxOpen(true);
+                        }}
+                    >
+                        <Play className="w-10 h-10 text-slate-900 ml-1 group-hover:text-blue-600 transition-colors" />
+                    </div>
+                    <span className="font-heading text-blue-400 font-bold tracking-widest text-xs uppercase mb-4 block">Immersive Experience</span>
+                    <h2 className="font-heading text-4xl md:text-6xl font-bold text-white tracking-tight mb-8">See Your Future Campus</h2>
+                    <p className="font-body text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                        Take a fully immersive 360° virtual tour of our world-class labs, extensive library, and smart learning spaces from wherever you are.
+                    </p>
+                </div>
+            </section>
+
             {/* Lightbox Modal */}
             {lightboxOpen && (
                 <div className="fixed inset-0 bg-slate-900/95 z-[100] flex flex-col items-center justify-center p-4 lg:p-12 animate-fade-in" onClick={() => setLightboxOpen(false)}>
