@@ -242,31 +242,31 @@ const Home = () => {
                 {/* Giant Centered Text */}
                 <div className="relative z-10 w-full px-6 flex flex-col items-center justify-center text-center -mt-16 sm:-mt-32 pointer-events-none">
                     <h1 
-                        className="font-serif font-bold tracking-[0.08em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white/100 to-white/20 leading-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.5)] transition-all duration-1000 ease-out select-none"
+                        className="font-serif font-black tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white/100 to-white/20 leading-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)] transition-all duration-1000 ease-out select-none uppercase"
                         style={{ fontSize: '26vw' }}
                     >
                         MSIT
                     </h1>
-                    <div className="h-1 w-20 sm:w-24 bg-white/30 mt-6 rounded-full"></div>
+                    <div className="h-1.5 w-24 sm:w-32 bg-white/40 mt-8 rounded-full blur-[0.5px]"></div>
                 </div>
 
                 {/* Explore Banner at Bottom */}
                 <div 
-                    className="absolute bottom-0 left-0 w-full bg-[#1e4a9b] py-4 cursor-pointer hover:bg-[#153a7a] transition-all duration-300 z-20 flex justify-center items-center group/banner"
+                    className="absolute bottom-0 left-0 w-full bg-[#1e4a9b] py-6 cursor-pointer hover:bg-[#153a7a] transition-all duration-500 z-20 flex justify-center items-center group/banner border-t border-white/5"
                     onClick={() => scrollToSection('news')}
                 >
-                    <span className="text-white font-semibold flex items-center gap-2 group-hover/banner:translate-y-[-2px] transition-transform">
-                        Explore <ChevronDown className="w-5 h-5 animate-bounce" />
+                    <span className="text-white font-bold text-sm tracking-[0.2em] uppercase flex items-center gap-4 group-hover/banner:translate-y-[-2px] transition-transform">
+                        Explore <ChevronDown className="w-5 h-5 animate-bounce text-blue-300" />
                     </span>
                 </div>
             </section>
 
             {/* ANNOUNCEMENT TICKER */}
-            <div className="bg-slate-100 border-b border-slate-200 py-3 relative z-20">
+            <div className="bg-slate-50 border-b border-slate-200 py-4 relative z-20 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 flex items-center">
-                    <div className="bg-slate-900 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded mr-4 shrink-0">Alert</div>
-                    <div className="text-sm font-medium text-slate-600 truncate flex-grow">
-                        Admission for B.Tech lateral entry programs is now open. <a href="http://www.ipu.ac.in/" target="_blank" rel="noopener noreferrer" className="text-slate-900 underline underline-offset-2 ml-2 hover:text-slate-600 transition-colors">View Details</a>
+                    <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-sm mr-6 shrink-0 shadow-sm">Alert</div>
+                    <div className="text-sm font-semibold text-slate-800 truncate flex-grow tracking-tight">
+                        Admissions Open for Batch 2026-30. Last date to apply for B.Tech programs is April 30th.
                     </div>
                 </div>
             </div>
@@ -317,12 +317,12 @@ const Home = () => {
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
                         {stats.map((stat, i) => (
                             <div key={i} className="flex flex-col items-center text-center group">
-                                <div className="transform group-hover:-translate-y-2 transition-transform duration-300 mb-2">{React.cloneElement(stat.icon, { size: 32, className: "text-slate-800" })}</div>
-                                <div className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tighter text-slate-900 mb-2">{stat.value}</div>
-                                <div className="text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-3">{stat.label}</div>
+                                <div className="transform group-hover:-translate-y-2 transition-transform duration-300 mb-2">{React.cloneElement(stat.icon, { size: 32, className: "text-slate-900" })}</div>
+                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-slate-900 mb-2">{stat.value}</div>
+                                <div className="text-[10px] sm:text-[12px] font-black uppercase tracking-[0.25em] text-slate-500 mb-4">{stat.label}</div>
                                 {stat.label === "PLACEMENT RATE" && (
-                                    <Link to="/placements" className="mt-1 text-[10px] sm:text-xs font-bold text-blue-600 border border-blue-600/30 px-3 py-1 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap">
-                                        View Records <ArrowRight className="w-3 h-3 ml-1" />
+                                    <Link to="/placements" className="mt-1 text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
+                                        Records <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                             </div>
@@ -337,59 +337,59 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div>
-                            <span className="text-blue-400 font-semibold tracking-wider text-sm uppercase mb-4 block">Why Choose Us</span>
-                            <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-8 leading-tight">
-                                Education that <br /><span className="font-semibold text-white">Transcend Boundaries.</span>
+                            <span className="text-blue-400 font-black tracking-[0.2em] text-[10px] uppercase mb-4 block">The MSIT Advantage</span>
+                            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
+                                Education that <br /><span className="text-blue-400 underline decoration-blue-500/30 underline-offset-8">Transcend Boundaries.</span>
                             </h2>
-                            <p className="text-lg text-slate-400 font-light leading-relaxed mb-10">
+                            <p className="text-lg text-slate-300 font-medium leading-relaxed mb-12 opacity-90">
                                 MSIT stands at the intersection of rigorous academic theory and practical, industry-driven application. We don't just teach engineering; we cultivate the mindset required to solve the complex challenges of tomorrow.
                             </p>
-                            <div className="space-y-8">
+                            <div className="space-y-10">
                                 {[
                                     { icon: <Target className="w-6 h-6 text-emerald-400" />, title: "Industry-Aligned Curriculum", desc: "Syllabus constantly updated in collaboration with tech giants." },
                                     { icon: <Lightbulb className="w-6 h-6 text-amber-400" />, title: "Innovation Ecosystem", desc: "Access to incubation centers, maker spaces, and heavy research funding." },
                                     { icon: <Globe className="w-6 h-6 text-blue-400" />, title: "Global Perspective", desc: "Exchange programs and international hackathon participation." }
                                 ].map((feature, i) => (
-                                    <div key={i} className="flex items-start gap-4">
-                                        <div className="mt-1 p-2 bg-slate-800 rounded-lg">{feature.icon}</div>
+                                    <div key={i} className="flex items-start gap-6">
+                                        <div className="mt-1 p-2.5 bg-slate-800 rounded-xl border border-white/5 shadow-inner">{feature.icon}</div>
                                         <div>
-                                            <h4 className="text-xl font-medium text-white mb-2">{feature.title}</h4>
-                                            <p className="text-slate-400 font-light">{feature.desc}</p>
+                                            <h4 className="text-xl font-bold text-white mb-2 tracking-tight">{feature.title}</h4>
+                                            <p className="text-slate-400 font-medium text-sm leading-relaxed">{feature.desc}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="relative h-[600px] rounded-2xl overflow-hidden group">
+                        <div className="relative h-[600px] rounded-3xl overflow-hidden group shadow-2xl border border-white/5">
                             {highlights.map((highlight, idx) => (
                                 <div
                                     key={idx}
                                     className={`absolute inset-0 transition-all duration-1000 ease-in-out transform ${
-                                        idx === currentHighlight ? 'opacity-100 scale-100' : 'opacity-0 scale-110 pointer-events-none'
+                                        idx === currentHighlight ? 'opacity-100 scale-100' : 'opacity-0 scale-105 pointer-events-none'
                                     }`}
                                 >
                                     <div 
-                                        className="absolute inset-0 bg-slate-800 bg-cover bg-center transition-transform duration-[10s] ease-linear" 
-                                        style={{ backgroundImage: `url('${highlight.image}')`, transform: idx === currentHighlight ? 'scale(1.1)' : 'scale(1)' }}
+                                        className="absolute inset-0 bg-slate-800 bg-cover bg-center transition-transform duration-[12s] ease-linear" 
+                                        style={{ backgroundImage: `url('${highlight.image}')`, transform: idx === currentHighlight ? 'scale(1.15)' : 'scale(1)' }}
                                     ></div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-90"></div>
                                     
                                     <div className="absolute bottom-12 left-8 right-8 animate-slide-up">
-                                        <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-2xl">
-                                            <div className="text-2xl md:text-3xl font-light text-white mb-4 leading-relaxed">"{highlight.quote}"</div>
-                                            <div className="text-sm font-semibold tracking-widest text-blue-400 uppercase">— {highlight.source}</div>
+                                        <div className="bg-black/20 backdrop-blur-xl p-8 rounded-2xl border border-white/10 shadow-2xl">
+                                            <div className="text-2xl md:text-3xl font-bold text-white mb-6 leading-relaxed">"{highlight.quote}"</div>
+                                            <div className="text-xs font-black tracking-[0.25em] text-blue-400 uppercase">— {highlight.source}</div>
                                         </div>
                                     </div>
                                 </div>
                             ))}
 
                             {/* Carousel Navigation Dots */}
-                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
                                 {highlights.map((_, i) => (
                                     <button
                                         key={i}
                                         onClick={() => setCurrentHighlight(i)}
-                                        className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === currentHighlight ? 'bg-white w-6' : 'bg-white/30 hover:bg-white/50'}`}
+                                        className={`h-1.5 rounded-full transition-all duration-500 ${i === currentHighlight ? 'bg-white w-8 shadow-lg' : 'bg-white/20 hover:bg-white/40 w-1.5'}`}
                                         aria-label={`Go to slide ${i + 1}`}
                                     />
                                 ))}
@@ -401,35 +401,35 @@ const Home = () => {
             </section>
 
             {/* ACADEMIC PROGRAMS */}
-            <section id="programs" className="py-24 bg-slate-50">
+            <section id="programs" className="py-24 bg-slate-50 border-y border-slate-200">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-blue-600 font-bold tracking-widest text-sm uppercase mb-3 block">Academics</span>
-                        <h2 className="text-4xl md:text-5xl font-light text-slate-900 tracking-tight mb-6">World-Class Engineering Departments</h2>
-                        <p className="text-xl text-slate-600 font-light">Choose from our NBA accredited, highly specialized programs designed to create leaders in technology.</p>
+                    <div className="text-center max-w-3xl mx-auto mb-20">
+                        <span className="text-blue-600 font-black tracking-[0.25em] text-[10px] uppercase mb-4 block">Academics</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-8">Technical Specializations</h2>
+                        <p className="text-xl text-slate-500 font-medium leading-relaxed">Choose from our NBA accredited, highly specialized programs designed to create leaders in technology.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {departments.map((dept, i) => (
-                            <Link to={`/${dept.code.toLowerCase()}`} key={i} className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-2xl transition-all duration-300 group cursor-pointer relative overflow-hidden block">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-10 transition-transform group-hover:scale-150 duration-500"></div>
-                                <div className="flex justify-between items-start mb-6">
-                                    <div className="text-5xl bg-slate-100 w-20 h-20 rounded-xl flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                                        {dept.icon}
+                            <Link to={`/${dept.code.toLowerCase()}`} key={i} className="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] transition-all duration-500 group cursor-pointer relative overflow-hidden block">
+                                <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50 rounded-bl-full -z-10 transition-transform group-hover:scale-125 duration-700"></div>
+                                <div className="flex justify-between items-start mb-10">
+                                    <div className="text-5xl bg-slate-50 w-24 h-24 rounded-2xl flex items-center justify-center group-hover:bg-blue-50 transition-all duration-500 shadow-inner group-hover:rotate-3">
+                                        <span className="grayscale group-hover:grayscale-0 transition-all duration-500">{dept.icon}</span>
                                     </div>
                                     <div className="text-right">
-                                        <div className="text-3xl font-bold text-slate-200 group-hover:text-blue-100 transition-colors">{dept.code}</div>
-                                        {dept.accredited && <div className="text-xs font-bold uppercase tracking-wider text-emerald-500 mt-1">NBA Accredited</div>}
+                                        <div className="text-4xl font-black text-slate-100 group-hover:text-blue-600/10 transition-colors tracking-tighter">{dept.code}</div>
+                                        {dept.accredited && <div className="text-[9px] font-black uppercase tracking-[0.2em] text-emerald-600 mt-2 bg-emerald-50 px-2 py-0.5 rounded inline-block">NBA Accredited</div>}
                                     </div>
                                 </div>
-                                <h3 className="text-2xl font-semibold text-slate-900 mb-4">{dept.name}</h3>
-                                <p className="text-slate-600 font-light mb-8 leading-relaxed h-12">{dept.desc}</p>
-                                <div className="flex items-center justify-between border-t border-slate-100 pt-6">
-                                    <div className="flex items-center text-sm font-medium text-slate-500">
-                                        <Users className="w-4 h-4 mr-2" /> {dept.students} Students / Batch
+                                <h3 className="text-3xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-700 transition-colors">{dept.name}</h3>
+                                <p className="text-slate-500 font-medium mb-10 leading-relaxed text-sm">{dept.desc}</p>
+                                <div className="flex items-center justify-between border-t border-slate-100 pt-8">
+                                    <div className="flex items-center text-[11px] font-black text-slate-400 uppercase tracking-widest leading-none">
+                                        <Users className="w-4 h-4 mr-2.5 text-blue-500" /> {dept.students} Slots / Batch
                                     </div>
-                                    <div className="text-blue-600 font-medium text-sm flex items-center group-hover:translate-x-2 transition-transform">
-                                        Explore Dept <ArrowRight className="w-4 h-4 ml-1" />
+                                    <div className="text-blue-600 font-black text-[11px] uppercase tracking-widest flex items-center group-hover:translate-x-3 transition-transform">
+                                        Full Details <ArrowRight className="w-4 h-4 ml-2" />
                                     </div>
                                 </div>
                             </Link>
@@ -439,9 +439,10 @@ const Home = () => {
             </section>
 
             {/* TESTIMONIALS CAROUSEL */}
-            <section className="py-24 bg-white border-y border-slate-100 overflow-hidden">
+            <section className="py-32 bg-white border-b border-slate-100 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl font-light text-slate-900 tracking-tight mb-16">Alumni Shaping the World</h2>
+                    <span className="text-blue-600 font-black tracking-[0.25em] text-[10px] uppercase mb-4 block">Success Stories</span>
+                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-20 leading-tight">Alumni Shaping the World</h2>
 
                     <div
                         className="relative max-w-5xl mx-auto px-4 md:px-0"
@@ -449,36 +450,36 @@ const Home = () => {
                         onTouchMove={handleTouchMove}
                         onTouchEnd={handleTouchEnd}
                     >
-                        <div className="text-6xl text-slate-100 absolute -top-10 -left-2 md:-top-8 md:-left-8 font-serif z-0">"</div>
+                        <div className="text-[120px] leading-none text-blue-600/10 absolute -top-16 -left-8 font-serif z-0 select-none italic text-opacity-20 pointer-events-none">"</div>
                         <div className="min-h-[450px] md:min-h-[350px] flex items-center justify-center relative z-10">
                             {testimonials.map((t, i) => (
                                 <div
                                     key={i}
-                                    className={`absolute inset-0 transition-all duration-700 flex flex-col md:flex-row items-center justify-center gap-12 px-2 sm:px-4
-                                    ${i === currentTestimonial ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-12 pointer-events-none -z-10'}`}
+                                    className={`absolute inset-0 transition-all duration-1000 flex flex-col md:flex-row items-center justify-center gap-16 px-2 sm:px-4
+                                    ${i === currentTestimonial ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-32 pointer-events-none -z-10'}`}
                                 >
-                                    <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white shrink-0 transform -rotate-2 group-hover:rotate-0 transition-transform duration-500">
-                                        <img src={t.image} alt={t.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                    <div className="w-56 h-56 md:w-80 md:h-80 rounded-[40px] overflow-hidden shadow-2xl border-[12px] border-white shrink-0 transform -rotate-3 group-hover:rotate-0 transition-all duration-700 hover:scale-105">
+                                        <img src={t.image} alt={t.name} className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" />
                                     </div>
 
-                                    <div className="text-center md:text-left flex-grow max-w-2xl">
-                                        <p className="text-xl sm:text-2xl font-light text-slate-800 leading-relaxed mb-6 md:mb-8 italic">
+                                    <div className="text-center md:text-left flex-grow max-w-xl">
+                                        <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed mb-8 md:mb-10 italic opacity-95">
                                             "{t.quote}"
                                         </p>
-                                        <div className="font-semibold text-lg md:text-xl text-slate-900">{t.name} <span className="font-light text-slate-500">'{t.year}</span></div>
-                                        <div className="text-blue-600 font-medium text-base md:text-lg">{t.major}</div>
-                                        <div className="inline-block mt-3 px-4 py-1 bg-slate-900 text-white text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-full">{t.company}</div>
+                                        <div className="font-bold text-2xl text-slate-900 mb-1 tracking-tight">{t.name} <span className="font-medium text-slate-400 text-lg ml-2">Class of '{t.year}</span></div>
+                                        <div className="text-blue-600 font-bold text-lg tracking-tight mb-6">{t.major}</div>
+                                        <div className="inline-block px-5 py-2 bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-lg shadow-lg border border-white/10">{t.company}</div>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="flex justify-center gap-3 mt-12">
+                        <div className="flex justify-center gap-4 mt-16">
                             {testimonials.map((_, i) => (
                                 <button
                                     key={i}
                                     onClick={() => setCurrentTestimonial(i)}
-                                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentTestimonial ? 'bg-slate-900 w-8' : 'bg-slate-300 hover:bg-slate-400'}`}
+                                    className={`h-2 rounded-full transition-all duration-500 ${i === currentTestimonial ? 'bg-blue-600 w-12 shadow-md shadow-blue-200' : 'bg-slate-200 hover:bg-slate-300 w-2.5'}`}
                                     aria-label={`Go to testimonial ${i + 1}`}
                                 />
                             ))}
@@ -489,19 +490,29 @@ const Home = () => {
 
 
             {/* CAMPUS VIRTUAL TOUR */}
-            <section className="py-32 bg-slate-100 relative overflow-hidden flex flex-col items-center justify-center text-center">
-                <div className="relative z-10 max-w-3xl mx-auto px-6">
-                    <div className="w-24 h-24 bg-white rounded-full shadow-2xl flex items-center justify-center mx-auto mb-10 cursor-pointer hover:scale-110 transition-transform duration-300 group" onClick={() => openLightbox('Virtual Tour Launch')}>
-                        <Play className="w-8 h-8 text-slate-900 ml-1 group-hover:text-blue-600 transition-colors" />
+            <section className="py-32 bg-slate-50 relative overflow-hidden flex flex-col items-center justify-center text-center">
+                <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-200 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
+                </div>
+                
+                <div className="relative z-10 max-w-4xl mx-auto px-6">
+                    <div className="w-28 h-28 bg-white rounded-full shadow-2xl flex items-center justify-center mx-auto mb-12 cursor-pointer hover:scale-110 active:scale-95 transition-all duration-500 group border border-slate-100" onClick={() => openLightbox('Virtual Tour Launch')}>
+                        <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-blue-700 transition-colors">
+                            <Play className="w-8 h-8 text-white ml-1.5" />
+                        </div>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-light text-slate-900 tracking-tight mb-6">Explore Our Campus</h2>
-                    <p className="text-xl text-slate-600 font-light mb-12">Take a fully immersive 360° virtual tour of our world-class laboratories, extensive libraries, and intelligent learning spaces.</p>
-                    <button onClick={() => openLightbox('Virtual Tour Launch')} className="px-10 py-5 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors shadow-xl">
-                        Start Virtual Tour
+                    <span className="text-blue-600 font-black tracking-[0.25em] text-[10px] uppercase mb-4 block">Immersive Experience</span>
+                    <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-8">Engineering Campus Tour</h2>
+                    <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto mb-16 leading-relaxed">Take a fully immersive 360° virtual tour of our world-class laboratories, extensive libraries, and intelligent learning spaces.</p>
+                    
+                    <button onClick={() => openLightbox('Virtual Tour Launch')} className="px-12 py-5 bg-slate-900 text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-slate-800 transition-all shadow-2xl hover:shadow-slate-300 active:scale-95">
+                        Start Exploration
                     </button>
-                    <div className="mt-16 flex flex-wrap justify-center gap-4">
+                    
+                    <div className="mt-20 flex flex-wrap justify-center gap-6">
                         {['Main Block', 'AI Labs', 'Library', 'Sports Complex', 'Auditorium'].map((loc, i) => (
-                            <span key={i} className="px-5 py-2.5 bg-white border border-slate-200 rounded-full text-sm font-medium text-slate-700 shadow-sm hover:border-slate-400 cursor-pointer transition-colors" onClick={() => openLightbox(loc)}>
+                            <span key={i} className="px-6 py-3 bg-white border border-slate-200 rounded-2xl text-xs font-bold uppercase tracking-widest text-slate-600 shadow-sm hover:border-blue-400 hover:text-blue-600 cursor-pointer transition-all hover:shadow-md active:scale-95" onClick={() => openLightbox(loc)}>
                                 {loc}
                             </span>
                         ))}

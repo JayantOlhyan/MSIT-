@@ -156,29 +156,26 @@ const Header = () => {
                                 loading="eager" 
                             />
                             <div className="flex flex-col justify-center">
-                                <span className={`font-['Libre_Baskerville',serif] font-bold text-[14px] md:text-[18px] lg:text-[24px] tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
+                                <span className={`font-['Libre_Baskerville',serif] font-black text-[14px] md:text-[18px] lg:text-[24px] tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
                                     <span className="hidden sm:inline text-balance">Maharaja Surajmal Institute of Technology</span>
-                                    <span className="sm:hidden text-base font-bold">MSIT Delhi</span>
+                                    <span className="sm:hidden text-base font-black">MSIT Delhi</span>
                                 </span>
                             </div>
                         </Link>
 
-                        {/* Top Utility Bar (Desktop) */}
-                        <div className={`hidden xl:flex items-center space-x-6 text-[10px] font-bold uppercase tracking-[0.15em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
-                            <span className={isTransparent ? 'text-white/50' : 'text-slate-400'}>Information about:</span>
+                        <div className={`hidden xl:flex items-center space-x-6 text-[10px] font-black uppercase tracking-[0.2em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
+                            <span className={isTransparent ? 'text-white/40' : 'text-slate-400'}>Contact:</span>
                             <div className="flex space-x-6">
-                                <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Current Students</a>
-                                <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Faculty & Staff</Link>
+                                <a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Student Portal</a>
+                                <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Faculty Directory</Link>
                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Campus Mail</a>
-                                <a href="http://grievance.msit.in" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Grievances</a>
                             </div>
                             <div className={`w-px h-3 mx-2 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
-                            <button onClick={toggleSearch} className={`flex items-center gap-1.5 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`} aria-label="Search">
-                                <Search className="w-3.5 h-3.5" /> <span>Search</span>
+                            <button onClick={toggleSearch} className={`flex items-center gap-2 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`} aria-label="Search">
+                                <Search className="w-4 h-4" /> <span>Search</span>
                             </button>
                         </div>
 
-                        {/* Mobile Header Controls */}
                         <div className="xl:hidden flex items-center gap-3 shrink-0">
                             <button onClick={toggleSearch} className={`p-2 transition-colors ${isTransparent ? 'text-white' : 'text-slate-700'}`}>
                                 <Search className="w-5 h-5" />
@@ -196,7 +193,6 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Tier 2: Dynamic Navigation Row (Transparent -> White) */}
                 <div 
                     className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 border-b transition-all duration-300 ${
                         isTransparent 
@@ -220,7 +216,6 @@ const Header = () => {
                                             <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isTransparent ? 'text-white/60' : 'text-slate-400'}`} />
                                         </button>
 
-                                        {/* Mega Menu Dropdown */}
                                         <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
                                             <div className="bg-white shadow-2xl rounded-xl border border-slate-100 p-8 w-[550px]">
                                                 <div className="grid grid-cols-2 gap-x-10 gap-y-5">
