@@ -709,5 +709,116 @@ export const pagesData = {
             { label: "R10 Rank", value: "#1" }
         ],
         bulletPoints: ["Computer Society (CS)", "Power & Energy (PES)", "Robotics (RAS)", "Women in Engineering"]
+    },
+
+    // ---------------- PRIMARY OVERVIEWS ----------------
+    "about": {
+        title: "About MSIT",
+        subtitle: "A legacy of innovation and excellence in engineering education.",
+        seo_description: "Learn about Maharaja Surajmal Institute of Technology, a premier engineering college in Delhi. Explore our mission, vision, and decades of academic brilliance.",
+        category: "About MSIT",
+        heroImage: "/campus-hero.jpg",
+        content: `
+            <p class="text-xl leading-relaxed text-slate-700 mb-8">
+                Maharaja Surajmal Institute of Technology (MSIT) is an institution that stands for excellence, innovation, and integrity. Since its inception in 2001, MSIT has been dedicated to providing high-quality technical education and fostering an environment where students can realize their full potential.
+            </p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-12 mb-6">Our Core Philosophy</h3>
+            <p class="mb-6">
+                Affiliated with Guru Gobind Singh Indraprastha University (GGSIPU), MSIT offers AICTE-approved B.Tech programs across four core engineering disciplines. Our philosophy is rooted in the belief that engineering is not just a profession, but a tool for social and national progress.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+                <div class="p-8 bg-blue-50 rounded-3xl border border-blue-100">
+                    <h4 class="font-bold text-blue-900 mb-4">Academic Brilliance</h4>
+                    <p class="text-sm text-blue-800 leading-relaxed opacity-80">Consistent university toppers and a faculty team consisting of doctoral experts and industry veterans.</p>
+                </div>
+                <div class="p-8 bg-slate-900 rounded-3xl text-white">
+                    <h4 class="font-bold mb-4">Research & Innovation</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed opacity-90">State-of-the-art incubation centers and a robust culture of publishing in international journals.</p>
+                </div>
+            </div>
+            <p class="mb-6">
+                Located in a lush 8-acre campus in Janakpuri, New Delhi, MSIT provides a serene and intellectually stimulating environment for thousands of budding engineers every year.
+            </p>
+        `,
+        stats: [
+            { label: "University Rank", value: "#1" },
+            { label: "Faculty PhDs", value: "85+" }
+        ],
+        bulletPoints: ["Top-tier Placements", "NBA Accredited", "Holistic Development", "Strong Alumni Base"]
+    },
+
+    "contact": {
+        title: "Get in Touch",
+        subtitle: "The MSIT administrative desk is here to assist you with any inquiries.",
+        seo_description: "Contact Maharaja Surajmal Institute of Technology. Find our address, phone number, and official email for admissions, administration, and support.",
+        category: "Contact Us",
+        heroImage: "/campus-hero.jpg",
+        content: `
+            <div class="space-y-12">
+                <!-- Main Contact Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="tel:+919667344125" class="group block p-8 bg-white rounded-3xl border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all cursor-pointer">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 1.11L8.09 9.91a16 16 0 0 0 6 6l2.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <h4 class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Phone Inquiries</h4>
+                        <p class="text-2xl font-bold text-slate-900">+91 96673 44125</p>
+                        <p class="text-sm text-slate-400 mt-2">Mon - Sat: 9:00 AM - 5:00 PM</p>
+                    </a>
+                    
+                    <a href="mailto:info@msit.in" class="group block p-8 bg-white rounded-3xl border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all cursor-pointer">
+                        <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <h4 class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Email Support</h4>
+                        <p class="text-2xl font-bold text-slate-900">info@msit.in</p>
+                        <p class="text-sm text-slate-400 mt-2">Expect a response within 24 hours.</p>
+                    </a>
+                </div>
+
+                <!-- Campus Location -->
+                <div class="p-10 bg-slate-50 rounded-3xl border border-slate-200 overflow-hidden relative group">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">Campus Location</h3>
+                        <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+                            Maharaja Surajmal Institute of Technology <br />
+                            C-4 Janakpuri, New Delhi <br />
+                            Delhi — 110058, India
+                        </p>
+                        <a href="https://maps.google.com/?q=Maharaja+Surajmal+Institute+of+Technology" target="_blank" class="mt-8 inline-flex items-center gap-2 text-blue-600 font-bold uppercase tracking-widest text-xs hover:gap-4 transition-all">
+                            View on Google Maps <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Internal Departments -->
+                <div class="pt-8 border-t border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-8">Department Extensions</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="p-4">
+                            <h5 class="text-[10px] font-black uppercase tracking-tighter text-slate-400 mb-1">Director Office</h5>
+                            <p class="text-sm font-semibold text-slate-700">Ext: 101</p>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="text-[10px] font-black uppercase tracking-tighter text-slate-400 mb-1">Accounts</h5>
+                            <p class="text-sm font-semibold text-slate-700">Ext: 122</p>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="text-[10px] font-black uppercase tracking-tighter text-slate-400 mb-1">Admissions</h5>
+                            <p class="text-sm font-semibold text-slate-700">Ext: 205</p>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="text-[10px] font-black uppercase tracking-tighter text-slate-400 mb-1">Placement Cell</h5>
+                            <p class="text-sm font-semibold text-slate-700">Ext: 412</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `,
+        stats: [
+            { label: "Admin Staff", value: "45+" },
+            { label: "Response Time", value: "< 24h" }
+        ],
+        bulletPoints: ["Anti-Ragging Helpline", "Hostel Warden Contact", "Grievance Portal"]
     }
 };

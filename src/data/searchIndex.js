@@ -140,6 +140,24 @@ export const searchIndex = {
         { title: "Placement Overview", url: "/placements", keywords: "jobs, salary, companies, recruit" },
         { title: "Facilities & Campus", url: "/facilities", keywords: "hostel, library, lab, physical" },
         { title: "Admission Guidance", url: "/admission", keywords: "apply, fees, process, intake" },
-        { title: "CSE Department", url: "/departments/cse", keywords: "computer science, engineering, tech" }
+        { title: "CSE Department", url: "/departments/cse", keywords: "computer science, engineering, tech" },
+        { title: "Contact Us", url: "/contact", keywords: "phone, email, map, address, help, contact, office" }
+    ],
+    qa: [
+        {
+            q: "Where is MSIT located?",
+            a: "Maharaja Surajmal Institute of Technology is at C-4 Janakpuri, New Delhi. The campus is 2.5km from Janakpuri West Metro Station.",
+            keywords: "address, location, place, office"
+        },
+        {
+            q: "How to contact the college?",
+            a: "For immediate assistance, please contact the Administration Office at MSIT Janakpuri. Phone: +91 96673 44125 or Email: info@msit.in",
+            keywords: "phone, inquiry, help, call, contact"
+        },
+        {
+            q: "What are the B.Tech programs offered?",
+            a: "MSIT offers B.Tech in Computer Science (CSE), Information Technology (IT), Electronics & Communication (ECE), and Electrical & Electronics (EEE).",
+            keywords: "courses, branches, majors, btech"
+        }
     ]
 };
