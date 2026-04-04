@@ -31,10 +31,16 @@ const Footer = () => {
                     {/* Col 1 */}
                     <div className="lg:col-span-2 pr-4">
                         <Link to="/" className="flex items-center gap-4 mb-10 group" aria-label="MSIT New Delhi Home">
-                            <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center group-hover:rotate-6 transition-all duration-500 shadow-2xl">
-                                <span className="text-slate-950 text-2xl font-black tracking-tighter">M</span>
+                            <img 
+                                src="/msit-logo.png" 
+                                alt="MSIT Logo" 
+                                className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105 brightness-[1.1]" 
+                            />
+                            <div className="flex flex-col justify-center">
+                                <span className="font-['Libre_Baskerville',serif] font-black text-[18px] md:text-[22px] tracking-tight leading-tight text-white group-hover:text-blue-400 transition-colors">
+                                    Maharaja Surajmal Institute of Technology
+                                </span>
                             </div>
-                            <span className="font-black text-3xl tracking-tighter text-white group-hover:text-blue-400 transition-colors">MSIT</span>
                         </Link>
                         <p className="text-slate-300 font-medium leading-relaxed mb-10 max-w-sm opacity-80">
                             Shaping tomorrow's engineers and innovators through exceptional academic rigor and profound industry immersion.
