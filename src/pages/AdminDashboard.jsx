@@ -110,6 +110,22 @@ const AdminDashboard = () => {
         localStorage.setItem('msit_testimonials', JSON.stringify(newTestimonials));
     };
 
+    const handleImageUpload = (file, setter) => {
+        if (!file) return;
+        
+        // Basic check for file size (localStorage is limited)
+        if (file.size > 1024 * 1024) { // 1MB limit for safety
+            setStatus({ type: 'error', message: 'Image too large. Please use a file smaller than 1MB.' });
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setter(reader.result);
+        };
+        reader.readAsDataURL(file);
+    };
+
     const handleAddEvent = (e) => {
         e.preventDefault();
 
@@ -456,14 +472,23 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Profile Image URL</label>
-                                <input
-                                    type="text"
-                                    placeholder="e.g. /rahul-verma.png or https://..."
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
-                                    value={tImage}
-                                    onChange={(e) => setTImage(e.target.value)}
-                                />
+                                <label className="text-sm font-medium text-slate-700">Profile Photo (Local Upload)</label>
+                                <div className="flex items-center gap-4">
+                                    <div className="flex-grow">
+                                        <input
+                                            type="file"
+                                            accept="image/*"
+                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                                            onChange={(e) => handleImageUpload(e.target.files[0], setTImage)}
+                                        />
+                                    </div>
+                                    {tImage && (
+                                        <div className="w-12 h-12 rounded-full overflow-hidden border border-slate-200">
+                                            <img src={tImage} alt="Preview" className="w-full h-full object-cover" />
+                                        </div>
+                                    )}
+                                </div>
+                                <p className="text-xs text-slate-400 mt-1 italic">Tip: Use a small square image (under 1MB) for best performance.</p>
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
@@ -541,14 +566,22 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Background Image URL</label>
-                                <input
-                                    type="text"
-                                    placeholder="e.g. /campus-lab.png or https://..."
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
-                                    value={hImage}
-                                    onChange={(e) => setHImage(e.target.value)}
-                                />
+                                <label className="text-sm font-medium text-slate-700">Background Image (Local Upload)</label>
+                                <div className="flex items-center gap-4">
+                                    <div className="flex-grow">
+                                        <input
+                                            type="file"
+                                            accept="image/*"
+                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                                            onChange={(e) => handleImageUpload(e.target.files[0], setHImage)}
+                                        />
+                                    </div>
+                                    {hImage && (
+                                        <div className="w-20 h-10 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+                                            <img src={hImage} alt="Preview" className="w-full h-full object-cover" />
+                                        </div>
+                                    )}
+                                </div>
                             </div>
 
                             <div className="space-y-2">
