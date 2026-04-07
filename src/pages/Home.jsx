@@ -325,6 +325,11 @@ const Home = () => {
                                         Records <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
+                                {stat.label === "EXPERT FACULTY" && (
+                                    <Link to="/faculty" className="mt-1 flex items-center justify-center text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
+                                        Faculty <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                    </Link>
+                                )}
                             </div>
                         ))}
                     </div>
