@@ -321,7 +321,7 @@ const Home = () => {
                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-slate-900 mb-2">{stat.value}</div>
                                 <div className="text-[10px] sm:text-[12px] font-black uppercase tracking-[0.25em] text-slate-500 mb-4">{stat.label}</div>
                                 {stat.label === "PLACEMENT RATE" && (
-                                    <Link to="/placements" className="mt-1 text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
+                                    <Link to="/placements" className="mt-1 flex items-center justify-center text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
                                         Records <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
