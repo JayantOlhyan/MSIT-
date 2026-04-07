@@ -139,7 +139,8 @@ const Header = () => {
 
     return (
         <>
-            <header className="fixed top-0 left-0 w-full z-[60] flex flex-col">
+        <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded" style={{ position: 'absolute', left: '-9999px' }}>Skip to main content</a>
+            <header role="navigation" className="fixed top-0 left-0 w-full z-[60] flex flex-col">
                 {/* Tier 1: Persistent Branding & Utility Bar (Transparent on Home, White on Scroll) */}
                 <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 border-b relative z-20 ${
                     isTransparent 

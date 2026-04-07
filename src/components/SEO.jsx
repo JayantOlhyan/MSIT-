@@ -8,6 +8,8 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
     const canonicalUrl = `${baseUrl}${canonicalPath}`;
 
     return (
+        <>
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline';" />
         <Helmet>
             {/* Standard metadata tags */}
             <title>{fullTitle}</title>

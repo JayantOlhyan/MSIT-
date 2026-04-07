@@ -123,7 +123,7 @@ const Footer = () => {
                     <div className="flex gap-8">
                         <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
                         <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
-                        <Link to="/administration" className="hover:text-white transition-colors">Admin</Link>
+                        <Link to="/admin" className="hover:text-white transition-colors">Admin</Link>
                     </div>
                     <div className="flex items-center gap-2 text-slate-600">
                         Made with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> in India
