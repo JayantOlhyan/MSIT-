@@ -1,8 +1,10 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Heart, MessageSquare, ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAccessibility } from '../context/AccessibilityContext';
 
 const Footer = () => {
+    const { setIsModalOpen } = useAccessibility();
     return (
         <footer className="bg-slate-950 pt-0 pb-12 border-t border-slate-900 text-slate-400">
             {/* Feedback Banner */}
@@ -128,6 +130,13 @@ const Footer = () => {
                     <div className="flex gap-8">
                         <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
                         <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
+                        <button 
+                            onClick={() => setIsModalOpen(true)}
+                            className="hover:text-white transition-colors cursor-pointer uppercase font-bold"
+                            aria-label="Open accessibility settings"
+                        >
+                            Accessibility
+                        </button>
                         <Link to="/admin" className="hover:text-white transition-colors">Admin</Link>
                     </div>
                     <div className="flex items-center gap-2 text-slate-600">

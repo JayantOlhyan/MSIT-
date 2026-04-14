@@ -40,10 +40,41 @@ html {
   max-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  :focus {
-  outline: 2px solid #2563eb;
-  outline-offset: 2px;
-}
+  /* Accessibility Focus Ring - Conditional */
+  &.acc-focus-ring *:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+
+  /* High Contrast Mode Overrides */
+  &.acc-high-contrast {
+    --text-slate-700: #000;
+    --text-slate-500: #000;
+    --bg-white: #fff;
+    --bg-slate-50: #f1f5f9;
+        
+    background-color: #ffffff;
+    color: #000000;
+
+    body {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    * {
+      border-color: #00000080 !important;
+    }
+  }
+
+  /* Reduced Motion Mode */
+  &.acc-reduced-motion {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 
   background-color: #0f172a; 
 }

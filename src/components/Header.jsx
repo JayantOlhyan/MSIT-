@@ -137,6 +137,11 @@ const Header = () => {
     const logoColorStyle = isTransparent ? 'text-white' : 'text-[#1e4a9b]';
     const logoSubStyle = isTransparent ? 'text-white/90' : 'text-[#f05023]';
 
+    const isPathActive = (path) => location.pathname === path;
+    const isCategoryActive = (categoryKey) => {
+        return megaMenuData[categoryKey]?.some(link => isPathActive(link.url));
+    };
+
     return (
         <>
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded" style={{ position: 'absolute', left: '-9999px' }}>Skip to main content</a>
@@ -212,9 +217,16 @@ const Header = () => {
                                         onMouseEnter={() => setActiveDropdown(key)}
                                         onMouseLeave={() => setActiveDropdown(null)}
                                     >
-                                        <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap ${isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]'}`}>
+                                        <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap relative py-1 ${
+                                            isCategoryActive(key)
+                                                ? (isTransparent ? 'text-white' : 'text-[#1e4a9b]')
+                                                : (isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]')
+                                        }`}>
                                             {item}
-                                            <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isTransparent ? 'text-white/60' : 'text-slate-400'}`} />
+                                            <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isCategoryActive(key) ? (isTransparent ? 'text-white' : 'text-[#1e4a9b]') : (isTransparent ? 'text-white/60' : 'text-slate-400')}`} />
+                                            {isCategoryActive(key) && (
+                                                <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-[#1e4a9b]'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
+                                            )}
                                         </button>
 
                                         <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
@@ -227,9 +239,11 @@ const Header = () => {
                                                                 <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
                                                             </a>
                                                         ) : (
-                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
+                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className={`text-sm font-medium transition-all underline-offset-4 flex items-center group/link ${
+                                                                isPathActive(link.url) ? 'text-[#1e4a9b] font-bold' : 'text-slate-600 hover:text-[#1e4a9b] hover:underline'
+                                                            }`}>
                                                                 {link.name}
-                                                                <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                                <ArrowRight className={`w-3 h-3 ml-2 transition-all shrink-0 ${isPathActive(link.url) ? 'opacity-100 translate-x-1' : 'opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1'}`} />
                                                             </Link>
                                                         )
                                                     ))}
@@ -239,7 +253,16 @@ const Header = () => {
                                     </div>
                                 );
                             })}
-                            <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 ${isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]'}`}>Contact</Link>
+                            <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${
+                                                                isPathActive('/contact')
+                                                                    ? (isTransparent ? 'text-white' : 'text-[#1e4a9b]')
+                                                                    : (isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]')
+                                                            }`}>
+                                                                Contact
+                                                                {isPathActive('/contact') && (
+                                                                    <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-[#1e4a9b]'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
+                                                                )}
+                                                            </Link>
                         </nav>
                     </div>
                 </div>
@@ -259,7 +282,9 @@ const Header = () => {
                                             {link.name}
                                         </a>
                                     ) : (
-                                        <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
+                                        <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-lg ${
+                                            isPathActive(link.url) ? 'bg-blue-50 text-[#1e4a9b] font-bold border-l-4 border-[#1e4a9b]' : 'font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+                                        }`}>
                                             {link.name}
                                         </Link>
                                     )

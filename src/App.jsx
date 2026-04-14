@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import { AccessibilityProvider } from './context/AccessibilityContext';
 import Home from './pages/Home';
 
 import Placements from './pages/Placements';
@@ -23,30 +24,32 @@ import FacultyStaff from './pages/FacultyStaff';
 
 const App = () => {
     return (
-        <Router basename={import.meta.env.BASE_URL}>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
+        <AccessibilityProvider>
+            <Router basename={import.meta.env.BASE_URL}>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
 
-                    <Route path="/search" element={<SearchPage />} />
-                    <Route path="/placements" element={<Placements />} />
-                    <Route path="/academic-calendar" element={<AcademicCalendar />} />
-                    <Route path="/syllabus" element={<Syllabus />} />
-                    <Route path="/timetable" element={<TimeTable />} />
-                    <Route path="/brochure" element={<Brochure />} />
-                    <Route path="/admin" element={<AdminDashboard />} />
-                    <Route path="/privacy" element={<PrivacyPolicy />} />
-                    <Route path="/terms" element={<TermsOfUse />} />
-                    <Route path="/facilities" element={<Facilities />} />
-                    <Route path="/faculty" element={<FacultyStaff />} />
-                    <Route path="/500" element={<ServerError />} />
+                        <Route path="/search" element={<SearchPage />} />
+                        <Route path="/placements" element={<Placements />} />
+                        <Route path="/academic-calendar" element={<AcademicCalendar />} />
+                        <Route path="/syllabus" element={<Syllabus />} />
+                        <Route path="/timetable" element={<TimeTable />} />
+                        <Route path="/brochure" element={<Brochure />} />
+                        <Route path="/admin" element={<AdminDashboard />} />
+                        <Route path="/privacy" element={<PrivacyPolicy />} />
+                        <Route path="/terms" element={<TermsOfUse />} />
+                        <Route path="/facilities" element={<Facilities />} />
+                        <Route path="/faculty" element={<FacultyStaff />} />
+                        <Route path="/500" element={<ServerError />} />
 
 
-                    <Route path="/:slug" element={<DynamicPage />} />
-                    <Route path="*" element={<NotFound />} />
-                </Route>
-            </Routes>
-        </Router>
+                        <Route path="/:slug" element={<DynamicPage />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Route>
+                </Routes>
+            </Router>
+        </AccessibilityProvider>
     );
 };
 
