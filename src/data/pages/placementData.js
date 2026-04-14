@@ -5,6 +5,7 @@ export const placementData = {
         seo_description: "Experience record-breaking placements at Maharaja Surajmal Institute of Technology. Our graduates secure top roles at Google, Microsoft, Amazon, and MAANG.",
         category: "Placements",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT students celebrating successful job placements at top technology firms like Google and Amazon",
         content: `
             <p className="mb-6">The MSIT Placement Cell is highly aggressive and renowned across North India. We consistently achieve placement records exceeding 95%, with students securing software engineering roles at MAANG companies and top tier startups.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Industry Readiness</h3>
@@ -22,6 +23,7 @@ export const placementData = {
         seo_description: "Get industrial exposure through the Internship Cell at Maharaja Surajmal Institute of Technology. Gain real-world experience and Pre-Placement Offers (PPOs).",
         category: "Placements",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Engineering interns from MSIT collaborating on industrial software projects in a corporate setting",
         content: `
             <p className="mb-6">Practical exposure is crucial. The Internship Cell actively procures 2-month summer internships and 6-month semester-long internships for 3rd and 4th-year students to work on live industrial projects.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Real World Experience</h3>

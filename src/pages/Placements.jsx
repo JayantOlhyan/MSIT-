@@ -83,7 +83,7 @@ const Placements = () => {
                                 href={record.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-between"
+                                className="group bg-white rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex items-center justify-between"
                             >
                                 <div>
                                     <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1">Batch of</div>
@@ -101,7 +101,7 @@ const Placements = () => {
 
                 {/* Top Recruiters Sidebar */}
                 <div className="lg:w-80 shrink-0">
-                    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sticky top-32">
+                    <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8 sticky top-32">
                         <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
                             <Building2 className="w-5 h-5 mr-3 text-blue-600" />
                             Top Recruiters

@@ -79,7 +79,7 @@ const FacultyStaff = () => {
             </div>
 
             {/* Advanced Search & Filtering - Sticky */}
-            <div className="sticky top-[68px] xl:top-[128px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm transition-all duration-300">
+            <div className="sticky top-[68px] xl:top-[128px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-card transition-all duration-300">
                 <div className="max-w-7xl mx-auto px-6 py-3 sm:py-4 flex flex-col md:flex-row gap-4 md:items-center justify-between">
                     <div className="relative w-full md:w-96 group">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
@@ -99,7 +99,7 @@ const FacultyStaff = () => {
                                 onClick={() => setActiveDept(dept)}
                                 className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all whitespace-nowrap border-2 group ${
                                     activeDept === dept 
-                                    ? 'bg-slate-900 border-slate-900 text-white shadow-lg shadow-slate-900/20' 
+                                    ? 'bg-slate-900 border-slate-900 text-white shadow-card shadow-slate-900/20' 
                                     : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
                                 }`}
                             >
@@ -121,17 +121,17 @@ const FacultyStaff = () => {
                             <div 
                                 key={idx} 
                                 onClick={() => setSelectedFaculty(faculty)}
-                                className="group bg-white rounded-[2rem] p-6 shadow-sm hover:shadow-2xl border border-slate-200 hover:border-blue-200 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 relative overflow-hidden flex flex-col h-full"
+                                className="group bg-white rounded-[2rem] p-6 shadow-card hover:shadow-card-hover border border-slate-200 hover:border-blue-200 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 relative overflow-hidden flex flex-col h-full"
                             >
                                 {/* Decorative Glow */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                                 <div className="flex items-start gap-5 relative z-10 mb-6">
                                     <div className="w-20 h-20 rounded-2xl overflow-hidden bg-slate-100 shrink-0 shadow-inner p-1 border border-slate-200 group-hover:border-blue-300 transition-colors duration-500">
-                                        <img src={faculty.img} alt={faculty.name} className="w-full h-full object-cover rounded-xl" />
+                                        <img src={faculty.img} alt={`${faculty.name}, ${faculty.role} in the ${faculty.dept} department at MSIT`} className="w-full h-full object-cover rounded-xl" />
                                     </div>
                                     <div className="group/dept">
-                                        <span className="inline-block px-2.5 py-1 bg-slate-100 text-slate-600 text-[10px] uppercase tracking-bolder font-bold rounded-lg mb-2 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+                                        <span className="inline-block px-2.5 py-1 bg-slate-100 text-slate-600 text-xs uppercase tracking-bolder font-bold rounded-lg mb-2 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
                                             {faculty.dept}
                                             {faculty.dept === 'Applied Sciences' && (
                                                 <span className="ml-1 font-bold text-blue-600/70">(1st Year)</span>
@@ -191,11 +191,12 @@ const FacultyStaff = () => {
                     ></div>
 
                     {/* Modal Content */}
-                    <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-2xl animate-scale-in border border-white/20">
+                    <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-card animate-scale-in border border-white/20">
                         {/* Close Button */}
                         <button 
                             onClick={() => setSelectedFaculty(null)}
-                            className="absolute top-6 right-6 w-12 h-12 bg-white/20 backdrop-blur-xl border border-white/40 hover:bg-white/40 text-slate-800 rounded-full flex items-center justify-center z-20 transition-all shadow-sm cursor-pointer"
+                            className="absolute top-6 right-6 w-12 h-12 bg-white/20 backdrop-blur-xl border border-white/40 hover:bg-white/40 text-slate-800 rounded-full flex items-center justify-center z-20 transition-all shadow-card cursor-pointer"
+                            aria-label="Close faculty profile"
                         >
                             <X className="w-6 h-6" />
                         </button>
@@ -205,8 +206,8 @@ const FacultyStaff = () => {
                             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-[80px]"></div>
                             
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
-                                <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-2xl shrink-0 -mb-20 md:-mb-32 z-10 border-2 border-white/10">
-                                    <img src={selectedFaculty.img} alt={selectedFaculty.name} className="w-full h-full object-cover rounded-2xl" />
+                                <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-card shrink-0 -mb-20 md:-mb-32 z-10 border-2 border-white/10">
+                                    <img src={selectedFaculty.img} alt={`High-resolution portrait of ${selectedFaculty.name}, ${selectedFaculty.role} at MSIT`} className="w-full h-full object-cover rounded-2xl" />
                                 </div>
                                 <div className="text-center md:text-left flex-1">
                                     <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-widest rounded-lg mb-4">
@@ -234,28 +235,28 @@ const FacultyStaff = () => {
 
                             {/* Metrics Grid */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
                                     <Briefcase className="w-6 h-6 text-indigo-500 mb-3" />
                                     <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.experience}</div>
                                     <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Years Exp.</div>
                                 </div>
                                 {selectedFaculty.type !== 'staff' && (
                                     <>
-                                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
                                             <BookOpen className="w-6 h-6 text-blue-500 mb-3" />
                                             <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.publications}</div>
                                             <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Publications</div>
                                         </div>
-                                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
                                             <Award className="w-6 h-6 text-amber-500 mb-3" />
                                             <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.patents}</div>
                                             <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Patents</div>
                                         </div>
                                     </>
                                 )}
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
                                     <FileText className="w-6 h-6 text-emerald-500 mb-3" />
-                                    <div className="text-[10px] sm:text-xs font-bold text-slate-900 mb-1 break-words w-full px-1">{selectedFaculty.qual || "Professional Staff"}</div>
+                                    <div className="text-xs font-bold text-slate-900 mb-1 break-words w-full px-1">{selectedFaculty.qual || "Professional Staff"}</div>
                                     <div className="text-xs text-slate-500 font-bold uppercase tracking-wider mt-auto">Qualification</div>
                                 </div>
                             </div>
@@ -327,7 +328,7 @@ const FacultyStaff = () => {
                                         href={selectedFaculty.pdfLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
+                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 hover:shadow-card-hover hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
                                     >
                                         <Download className="w-5 h-5" />
                                         View Official Profile PDF

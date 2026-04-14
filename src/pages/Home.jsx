@@ -264,7 +264,7 @@ const Home = () => {
             {/* ANNOUNCEMENT TICKER */}
             <div className="bg-slate-50 border-b border-slate-200 py-4 relative z-20 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 flex items-center">
-                    <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-sm mr-6 shrink-0 shadow-sm">Alert</div>
+                    <div className="bg-blue-600 text-white text-xs font-black uppercase tracking-widest px-2.5 py-1 rounded-sm mr-6 shrink-0 shadow-card">Alert</div>
                     <div className="text-sm font-semibold text-slate-800 truncate flex-grow tracking-tight">
                         Admissions Open for Batch 2026-30. Last date to apply for B.Tech programs is April 30th.
                     </div>
@@ -283,7 +283,7 @@ const Home = () => {
                                 <button
                                     key={tab}
                                     onClick={() => setActiveNewsTab(tab)}
-                                    className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap active:scale-95 ${activeNewsTab === tab ? 'bg-slate-900 text-white shadow-lg' : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-400'}`}
+                                    className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap active:scale-95 ${activeNewsTab === tab ? 'bg-slate-900 text-white shadow-card' : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-400'}`}
                                 >
                                     {tab.charAt(0).toUpperCase() + tab.slice(1)}
                                 </button>
@@ -293,9 +293,9 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredEvents.map((item, i) => (
-                            <a href={item.link} key={item.id || i} className={`bg-white rounded-xl shadow-sm hover:shadow-xl border-l-4 ${item.color} p-8 flex flex-col justify-between group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
+                            <a href={item.link} key={item.id || i} className={`bg-white rounded-xl shadow-card hover:shadow-card-hover border-l-4 ${item.color} p-8 flex flex-col justify-between group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
                                 <div>
-                                    <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-4">{item.label}</span>
+                                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">{item.label}</span>
                                     <h3 className="text-xl font-semibold text-slate-900 leading-snug mb-6 group-hover:text-blue-700 transition-colors">{item.title}</h3>
                                 </div>
                                 <div className="flex justify-between items-center mt-auto pt-6 border-t border-slate-100">
@@ -319,24 +319,24 @@ const Home = () => {
                             <div key={i} className="flex flex-col items-center text-center group">
                                 <div className="transform group-hover:-translate-y-2 transition-transform duration-300 mb-2">{React.cloneElement(stat.icon, { size: 32, className: "text-slate-900" })}</div>
                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-slate-900 mb-2">{stat.value}</div>
-                                <div className="text-[10px] sm:text-[12px] font-black uppercase tracking-[0.25em] text-slate-500 mb-4">{stat.label}</div>
+                                <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 mb-4">{stat.label}</div>
                                 {stat.label === "STUDENTS ENROLLED" && (
-                                    <Link to="/about" className="mt-1 flex items-center justify-center text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
+                                    <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-card">
                                         Overview <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                                 {stat.label === "PLACEMENT RATE" && (
-                                    <Link to="/placements" className="mt-1 flex items-center justify-center text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
+                                    <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-card">
                                         Placements <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                                 {stat.label === "EXPERT FACULTY" && (
-                                    <Link to="/faculty" className="mt-1 flex items-center justify-center text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
+                                    <Link to="/faculty" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-card">
                                         Faculty <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                                 {stat.label === "YEARS OF EXCELLENCE" && (
-                                    <Link to="/about" className="mt-1 flex items-center justify-center text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
+                                    <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-card">
                                         History <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
@@ -352,7 +352,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div>
-                            <span className="text-blue-400 font-black tracking-[0.2em] text-[10px] uppercase mb-4 block">The MSIT Advantage</span>
+                            <span className="text-blue-400 font-black tracking-[0.2em] text-xs uppercase mb-4 block">The MSIT Advantage</span>
                             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
                                 Education that <br /><span className="text-blue-400 underline decoration-blue-500/30 underline-offset-8">Transcends Boundaries.</span>
                             </h2>
@@ -375,7 +375,7 @@ const Home = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="relative h-[600px] rounded-3xl overflow-hidden group shadow-2xl border border-white/5">
+                        <div className="relative h-[600px] rounded-3xl overflow-hidden group shadow-card border border-white/5">
                             {highlights.map((highlight, idx) => (
                                 <div
                                     key={idx}
@@ -390,8 +390,8 @@ const Home = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-90"></div>
                                     
                                     <div className="absolute bottom-12 left-8 right-8 animate-slide-up">
-                                        <div className="bg-black/20 backdrop-blur-xl p-8 rounded-2xl border border-white/10 shadow-2xl">
-                                            <div className="text-2xl md:text-3xl font-bold text-white mb-6 leading-relaxed">"{highlight.quote}"</div>
+                                        <div className="bg-black/20 backdrop-blur-xl p-8 rounded-2xl border border-white/10 shadow-card">
+                                            <div className="text-2xl md:text-3xl font-bold text-white mb-6 leading-relaxed">{highlight.quote}</div>
                                             <div className="text-xs font-black tracking-[0.25em] text-blue-400 uppercase">— {highlight.source}</div>
                                         </div>
                                     </div>
@@ -404,7 +404,7 @@ const Home = () => {
                                     <button
                                         key={i}
                                         onClick={() => setCurrentHighlight(i)}
-                                        className={`h-1.5 rounded-full transition-all duration-500 ${i === currentHighlight ? 'bg-white w-8 shadow-lg' : 'bg-white/20 hover:bg-white/40 w-1.5'}`}
+                                        className={`h-1.5 rounded-full transition-all duration-500 ${i === currentHighlight ? 'bg-white w-8 shadow-card' : 'bg-white/20 hover:bg-white/40 w-1.5'}`}
                                         aria-label={`Go to slide ${i + 1}`}
                                     />
                                 ))}
@@ -419,30 +419,33 @@ const Home = () => {
             <section id="programs" className="py-24 bg-slate-50 border-y border-slate-200">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto mb-20">
-                        <span className="text-blue-600 font-black tracking-[0.25em] text-[10px] uppercase mb-4 block">Academics</span>
+                        <span className="text-blue-600 font-black tracking-[0.25em] text-xs uppercase mb-4 block">Academics</span>
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-8">Technical Specializations</h2>
                         <p className="text-xl text-slate-500 font-medium leading-relaxed">Choose from our NBA accredited, highly specialized programs designed to create leaders in technology.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {departments.map((dept, i) => (
-                            <Link to={`/${dept.code.toLowerCase()}`} key={i} className="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] transition-all duration-500 group cursor-pointer relative overflow-hidden block">
-                                <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50 rounded-bl-full -z-10 transition-transform group-hover:scale-125 duration-700"></div>
+                            <Link to={`/${dept.code.toLowerCase()}`} key={i} className="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-card-hover transition-all duration-500 group cursor-pointer relative overflow-hidden block">
+                                <div className="absolute -top-6 -right-6 text-8xl font-black text-slate-100/50 group-hover:text-blue-500/10 transition-all duration-700 select-none group-hover:scale-110 group-hover:-rotate-12 pointer-events-none -z-10 tracking-tighter">
+                                    {dept.code}
+                                </div>
+                                <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50/50 rounded-bl-full -z-20 transition-transform group-hover:scale-125 duration-700"></div>
                                 <div className="flex justify-between items-start mb-10">
                                     <div className="text-5xl bg-slate-50 w-24 h-24 rounded-2xl flex items-center justify-center group-hover:bg-blue-50 transition-all duration-500 shadow-inner group-hover:rotate-3">
-                                        <span className="grayscale group-hover:grayscale-0 transition-all duration-500">{dept.icon}</span>
+                                        <span className="grayscale group-hover:grayscale-0 transition-all duration-500" role="img" aria-label={`${dept.name} department icon`}>{dept.icon}</span>
                                     </div>
                                     <div className="text-right">
-                                        {dept.accredited && <div className="text-[9px] font-black uppercase tracking-[0.2em] text-emerald-600 mt-2 bg-emerald-50 px-2 py-0.5 rounded inline-block">NBA Accredited</div>}
+                                        {dept.accredited && <div className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mt-2 bg-emerald-50 px-2 py-0.5 rounded inline-block">NBA Accredited</div>}
                                     </div>
                                 </div>
                                 <h3 className="text-3xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-700 transition-colors">{dept.name}</h3>
                                 <p className="text-slate-500 font-medium mb-10 leading-relaxed text-sm">{dept.desc}</p>
                                 <div className="flex items-center justify-between border-t border-slate-100 pt-8">
-                                    <div className="flex items-center text-[11px] font-black text-slate-400 uppercase tracking-widest leading-none">
+                                    <div className="flex items-center text-xs font-black text-slate-400 uppercase tracking-widest leading-none">
                                         <Users className="w-4 h-4 mr-2.5 text-blue-500" /> {dept.students} Slots / Batch
                                     </div>
-                                    <div className="text-blue-600 font-black text-[11px] uppercase tracking-widest flex items-center group-hover:translate-x-3 transition-transform">
+                                    <div className="text-blue-600 font-black text-xs uppercase tracking-widest flex items-center group-hover:translate-x-3 transition-transform">
                                         Full Details <ArrowRight className="w-4 h-4 ml-2" />
                                     </div>
                                 </div>
@@ -455,7 +458,7 @@ const Home = () => {
             {/* TESTIMONIALS CAROUSEL */}
             <section className="py-32 bg-white border-b border-slate-100 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <span className="text-blue-600 font-black tracking-[0.25em] text-[10px] uppercase mb-4 block">Success Stories</span>
+                    <span className="text-blue-600 font-black tracking-[0.25em] text-xs uppercase mb-4 block">Success Stories</span>
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-20 leading-tight">Alumni Shaping the World</h2>
 
                     <div
@@ -472,18 +475,22 @@ const Home = () => {
                                     className={`absolute inset-0 transition-all duration-1000 flex flex-col md:flex-row items-center justify-center gap-16 px-2 sm:px-4
                                     ${i === currentTestimonial ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-32 pointer-events-none -z-10'}`}
                                 >
-                                    <div className="w-56 h-56 md:w-80 md:h-80 rounded-[40px] overflow-hidden shadow-2xl border-[12px] border-white shrink-0 transform -rotate-3 group-hover:rotate-0 transition-all duration-700 hover:scale-105">
-                                        <img src={t.image} alt={t.name} className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" />
+                                    <div className="w-56 h-56 md:w-80 md:h-80 rounded-[40px] overflow-hidden shadow-card border-[12px] border-white shrink-0 transform -rotate-3 group-hover:rotate-0 transition-all duration-700 hover:scale-105">
+                                        <img 
+                                            src={t.image} 
+                                            alt={`Portrait of MSIT Alumnus ${t.name}, Class of '${t.year}, currently at ${t.company}`} 
+                                            className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" 
+                                        />
                                     </div>
 
                                     <div className="text-center md:text-left flex-grow max-w-xl relative">
-                                        <div className="text-[120px] leading-none text-blue-600/10 absolute -top-10 -left-6 md:-left-10 font-serif z-0 select-none italic pointer-events-none">"</div>
+                                        <div className="text-hero leading-none text-blue-600/10 absolute -top-10 -left-6 md:-left-10 font-serif z-0 select-none italic pointer-events-none">"</div>
                                         <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed mb-8 md:mb-10 italic opacity-95">
                                             {t.quote}
                                         </p>
                                         <div className="font-bold text-2xl text-slate-900 mb-1 tracking-tight">{t.name} <span className="font-medium text-slate-400 text-lg ml-2">Class of '{t.year}</span></div>
                                         <div className="text-blue-600 font-bold text-lg tracking-tight mb-6">{t.major}</div>
-                                        <div className="inline-block px-5 py-2 bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-lg shadow-lg border border-white/10">{t.company}</div>
+                                        <div className="inline-block px-5 py-2 bg-slate-900 text-white text-xs font-black uppercase tracking-[0.2em] rounded-lg shadow-card border border-white/10">{t.company}</div>
                                     </div>
                                 </div>
                             ))}
@@ -494,7 +501,7 @@ const Home = () => {
                                 <button
                                     key={i}
                                     onClick={() => setCurrentTestimonial(i)}
-                                    className={`h-2 rounded-full transition-all duration-500 ${i === currentTestimonial ? 'bg-blue-600 w-12 shadow-md shadow-blue-200' : 'bg-slate-200 hover:bg-slate-300 w-2.5'}`}
+                                    className={`h-2 rounded-full transition-all duration-500 ${i === currentTestimonial ? 'bg-blue-600 w-12 shadow-card shadow-blue-200' : 'bg-slate-200 hover:bg-slate-300 w-2.5'}`}
                                     aria-label={`Go to testimonial ${i + 1}`}
                                 />
                             ))}
@@ -512,22 +519,22 @@ const Home = () => {
                 </div>
                 
                 <div className="relative z-10 max-w-4xl mx-auto px-6">
-                    <div className="w-28 h-28 bg-white rounded-full shadow-2xl flex items-center justify-center mx-auto mb-12 cursor-pointer hover:scale-110 active:scale-95 transition-all duration-500 group border border-slate-100" onClick={() => openLightbox('Virtual Tour Launch')}>
-                        <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-blue-700 transition-colors">
+                    <div className="w-28 h-28 bg-white rounded-full shadow-card flex items-center justify-center mx-auto mb-12 cursor-pointer hover:scale-110 active:scale-95 transition-all duration-500 group border border-slate-100" onClick={() => openLightbox('Virtual Tour Launch')}>
+                        <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-card group-hover:bg-blue-700 transition-colors">
                             <Play className="w-8 h-8 text-white ml-1.5" />
                         </div>
                     </div>
-                    <span className="text-blue-600 font-black tracking-[0.25em] text-[10px] uppercase mb-4 block">Immersive Experience</span>
+                    <span className="text-blue-600 font-black tracking-[0.25em] text-xs uppercase mb-4 block">Immersive Experience</span>
                     <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-8">Engineering Campus Tour</h2>
                     <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto mb-16 leading-relaxed">Take a fully immersive 360° virtual tour of our world-class laboratories, extensive libraries, and intelligent learning spaces.</p>
                     
-                    <button onClick={() => openLightbox('Virtual Tour Launch')} className="px-12 py-5 bg-slate-900 text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-slate-800 transition-all shadow-2xl hover:shadow-slate-300 active:scale-95">
+                    <button onClick={() => openLightbox('Virtual Tour Launch')} className="px-12 py-5 bg-slate-900 text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-slate-800 transition-all shadow-card hover:shadow-slate-300 active:scale-95">
                         Start Exploration
                     </button>
                     
                     <div className="mt-20 flex flex-wrap justify-center gap-6">
                         {['Main Block', 'AI Labs', 'Library', 'Sports Complex', 'Auditorium'].map((loc, i) => (
-                            <span key={i} className="px-6 py-3 bg-white border border-slate-200 rounded-2xl text-xs font-bold uppercase tracking-widest text-slate-600 shadow-sm hover:border-blue-400 hover:text-blue-600 cursor-pointer transition-all hover:shadow-md active:scale-95" onClick={() => openLightbox(loc)}>
+                            <span key={i} className="px-6 py-3 bg-white border border-slate-200 rounded-2xl text-xs font-bold uppercase tracking-widest text-slate-600 shadow-card hover:border-blue-400 hover:text-blue-600 cursor-pointer transition-all hover:shadow-card-hover active:scale-95" onClick={() => openLightbox(loc)}>
                                 {loc}
                             </span>
                         ))}
@@ -541,7 +548,7 @@ const Home = () => {
                     <button className="absolute top-6 right-6 p-2 text-white/50 hover:text-white rounded-full transition-colors z-50 bg-black/50">
                         <X className="w-8 h-8" />
                     </button>
-                    <div className="w-full max-w-6xl aspect-video bg-black rounded-xl border border-slate-700 shadow-2xl flex items-center justify-center flex-col overflow-hidden relative animate-slide-up" onClick={(e) => e.stopPropagation()}>
+                    <div className="w-full max-w-6xl aspect-video bg-black rounded-xl border border-slate-700 shadow-card flex items-center justify-center flex-col overflow-hidden relative animate-slide-up" onClick={(e) => e.stopPropagation()}>
                         {lightboxImage === 'Virtual Tour Launch' ? (
                             <iframe
                                 className="absolute inset-0 w-full h-full"

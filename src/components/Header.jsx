@@ -129,8 +129,8 @@ const Header = () => {
     const isTransparent = isHomePage && !isScrolled && !isMenuOpen;
 
     const headerContainerClass = isHomePage
-        ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white shadow-lg py-1'}`
-        : `sticky top-0 z-[60] w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-lg py-1' : 'bg-white/95 backdrop-blur-sm py-2'}`;
+        ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white shadow-card py-1'}`
+        : `sticky top-0 z-[60] w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-card py-1' : 'bg-white/95 backdrop-blur-sm py-2'}`;
 
     const textStyle = isTransparent ? 'text-white hover:text-slate-200' : 'text-slate-700 hover:text-blue-600';
     const mutedTextStyle = isTransparent ? 'text-white/80' : 'text-slate-500';
@@ -145,26 +145,26 @@ const Header = () => {
                 <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 border-b relative z-20 ${
                     isTransparent 
                         ? 'bg-transparent border-transparent' 
-                        : 'bg-white border-slate-100 shadow-sm text-slate-800'
+                        : 'bg-white border-slate-100 shadow-card text-slate-800'
                 }`}>
                     <div className="w-full max-w-[1536px] mx-auto flex justify-between items-center">
                         {/* Logo Area */}
                         <Link to="/" className="flex items-center gap-3 lg:gap-4 cursor-pointer select-none">
                             <img 
                                 src="/msit-logo.png" 
-                                alt="MSIT Logo" 
+                                alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Main Campus Entrance" 
                                 className={`h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0 transition-all duration-300 ${isTransparent ? 'brightness-[1.2]' : ''}`} 
                                 loading="eager" 
                             />
                             <div className="flex flex-col justify-center">
-                                <span className={`font-['Libre_Baskerville',serif] font-black text-[14px] md:text-[18px] lg:text-[24px] tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
+                                <span className={`font-['Libre_Baskerville',serif] font-black text-sm md:text-base lg:text-xl tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
                                     <span className="hidden sm:inline text-balance">Maharaja Surajmal Institute of Technology</span>
                                     <span className="sm:hidden text-base font-black">MSIT Delhi</span>
                                 </span>
                             </div>
                         </Link>
 
-                        <div className={`hidden xl:flex items-center space-x-6 text-[10px] font-black uppercase tracking-[0.2em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
+                        <div className={`hidden xl:flex items-center space-x-6 text-xs font-black uppercase tracking-[0.2em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
                             <span className={isTransparent ? 'text-white/40' : 'text-slate-400'}>Contact:</span>
                             <div className="flex space-x-6">
 
@@ -178,13 +178,13 @@ const Header = () => {
                         </div>
 
                         <div className="xl:hidden flex items-center gap-3 shrink-0">
-                            <button onClick={toggleSearch} className={`p-2 transition-colors ${isTransparent ? 'text-white' : 'text-slate-700'}`}>
+                            <button onClick={toggleSearch} className={`p-2 transition-colors ${isTransparent ? 'text-white' : 'text-slate-700'}`} aria-label="Open global search overlay">
                                 <Search className="w-5 h-5" />
                             </button>
                             <button
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 className="w-10 h-10 relative focus:outline-none flex justify-center items-center group cursor-pointer"
-                                aria-label="Toggle Menu"
+                                aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                             >
                                 <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
                                 <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
@@ -198,11 +198,11 @@ const Header = () => {
                     className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 border-b transition-all duration-300 ${
                         isTransparent 
                             ? 'bg-transparent border-transparent py-3' 
-                            : 'bg-white shadow-md border-slate-100 py-1.5'
+                            : 'bg-white shadow-card border-slate-100 py-1.5'
                     }`}
                 >
                     <div className="w-full max-w-[1536px] mx-auto">
-                        <nav className="hidden xl:flex justify-center items-center space-x-10 text-[14px]">
+                        <nav className="hidden xl:flex justify-center items-center space-x-10 text-sm">
                             {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements', 'Student Portal'].map((item, idx) => {
                                 const key = item.split(' ')[0].toLowerCase();
                                 return (
@@ -218,16 +218,16 @@ const Header = () => {
                                         </button>
 
                                         <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
-                                            <div className="bg-white shadow-2xl rounded-xl border border-slate-100 p-8 w-[550px]">
+                                            <div className="bg-white shadow-card rounded-xl border border-slate-100 p-8 w-[550px]">
                                                 <div className="grid grid-cols-2 gap-x-10 gap-y-5">
                                                     {megaMenuData[key]?.map((link, i) => (
                                                         link.external ? (
-                                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-[13px] font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
+                                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-sm font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
                                                                 {link.name}
                                                                 <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
                                                             </a>
                                                         ) : (
-                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-[13px] font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
+                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className="text-sm font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
                                                                 {link.name}
                                                                 <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
                                                             </Link>
@@ -269,7 +269,7 @@ const Header = () => {
                     ))}
 
                     <div className="pt-10 space-y-4 pb-20">
-                        <button className="w-full py-5 text-center rounded-2xl bg-slate-900 text-white font-bold text-lg shadow-xl hover:bg-slate-800 transition-all active:scale-95 cursor-pointer">Apply Now</button>
+                        <button className="w-full py-5 text-center rounded-2xl bg-slate-900 text-white font-bold text-lg shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer">Apply Now</button>
                         <button className="w-full py-5 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-lg hover:bg-slate-50 transition-all active:scale-95 cursor-pointer">Visit Campus</button>
                     </div>
                 </div>
@@ -278,7 +278,7 @@ const Header = () => {
             {/* Search Modal */}
             {searchOpen && (
                 <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[100] flex items-start justify-center pt-24 px-4 animate-fade-in" onClick={toggleSearch}>
-                    <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up relative" onClick={(e) => e.stopPropagation()}>
+                    <div className="bg-white rounded-3xl shadow-card w-full max-w-3xl overflow-hidden animate-slide-up relative" onClick={(e) => e.stopPropagation()}>
                         <div className="p-6 border-b border-slate-100 flex items-center gap-4">
                             <Search className="w-6 h-6 text-slate-400" />
                             <input
@@ -289,7 +289,7 @@ const Header = () => {
                                 className="w-full text-xl font-light focus:outline-none text-slate-900 placeholder-slate-300 bg-transparent"
                                 autoFocus
                             />
-                            <div className="hidden sm:flex items-center gap-1 px-2 py-1 rounded bg-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+                            <div className="hidden sm:flex items-center gap-1 px-2 py-1 rounded bg-slate-100 text-xs font-bold text-slate-400 uppercase tracking-tighter">
                                 <span className="px-1 italic">esc</span> to close
                             </div>
                         </div>
@@ -297,7 +297,7 @@ const Header = () => {
                         <div className="max-h-[60vh] overflow-y-auto p-4 custom-scrollbar">
                             {!searchQuery && (
                                 <div className="p-4">
-                                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 px-2">Quick Access</h4>
+                                    <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 px-2">Quick Access</h4>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                         {[
                                             { name: 'Admissions 2026', icon: <Hash size={14} />, url: '/brochure' },
@@ -321,7 +321,7 @@ const Header = () => {
                                     {/* AI-Style Quick Answers */}
                                     {searchResults.qa.length > 0 && (
                                         <div>
-                                            <h4 className="text-[10px] font-bold uppercase tracking-widest text-blue-500 mb-3 px-2 flex items-center gap-2">
+                                            <h4 className="text-xs font-bold uppercase tracking-widest text-blue-500 mb-3 px-2 flex items-center gap-2">
                                                 <MessageSquare size={12} /> Quick Answer
                                             </h4>
                                             {searchResults.qa.map((qa, i) => (
@@ -336,7 +336,7 @@ const Header = () => {
                                     {/* Faculty Results */}
                                     {searchResults.faculty.length > 0 && (
                                         <div>
-                                            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-2">Faculty</h4>
+                                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3 px-2">Faculty</h4>
                                             <div className="space-y-1">
                                                 {searchResults.faculty.map((f, i) => (
                                                     <Link key={i} to={f.url} onClick={toggleSearch} className="flex items-center justify-between p-3 rounded-xl hover:bg-slate-50 transition-colors group">
@@ -359,7 +359,7 @@ const Header = () => {
                                     {/* Page Results */}
                                     {searchResults.pages.length > 0 && (
                                         <div>
-                                            <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 px-2">Pages & Navigation</h4>
+                                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3 px-2">Pages & Navigation</h4>
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
                                                 {searchResults.pages.map((p, i) => (
                                                     <Link key={i} to={p.url} onClick={toggleSearch} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-colors group">
@@ -384,7 +384,7 @@ const Header = () => {
                         </div>
 
                         <div className="p-4 bg-slate-50/50 border-t border-slate-100 flex justify-center">
-                             <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-4">
+                         <div className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-4">
                                 <span className="flex items-center gap-1.5"><HelpCircle size={12} className="text-blue-400"/> Ask anything about MSIT</span>
                             </div>
                         </div>

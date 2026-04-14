@@ -5,6 +5,7 @@ export const academicData = {
         seo_description: "The Computer Science and Engineering department at MSIT offers advanced curriculum in AI, software engineering, and systems for aspiring tech leaders.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Students collaborating in the MSIT Computer Science and Engineering laboratory",
         content: `
             <div class="space-y-12">
                 <section>
@@ -63,6 +64,7 @@ export const academicData = {
         seo_description: "Discover the Information Technology (IT) department at Maharaja Surajmal Institute of Technology. Learn about our focus on cloud computing and data analytics.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Advanced networking and server infrastructure at the MSIT Information Technology department",
         content: `
             <p className="mb-6">The Information Technology department at MSIT is a vibrant hub of innovation. We focus heavily on network infrastructure, cloud engineering, cybersecurity, and data analytics, preparing students to lead the digital transformation of modern industries.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Core Competencies</h3>
@@ -80,6 +82,7 @@ export const academicData = {
         seo_description: "Join the B.Tech ECE program at Maharaja Surajmal Institute of Technology. Explore our advanced labs for VLSI design, IoT, and satellite communication systems.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Modern VLSI design and signal processing equipment in the MSIT ECE lab",
         content: `
             <p className="mb-6">The ECE department designs the hardware that runs the software. From microprocessors and VLSI design to satellite communication and IoT, our students build the physical layer of the digital revolution.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Hardware Innovation</h3>
@@ -97,6 +100,7 @@ export const academicData = {
         seo_description: "Explore the Electrical & Electronics (EEE) branch at Maharaja Surajmal Institute of Technology. Focus on renewable energy, robotics, and automation excellence.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Sustainable power systems and industrial control units in the MSIT Electrical laboratory",
         content: `
             <p className="mb-6">The EEE department addresses the world's growing energy and automation needs. We teach the fundamentals of power generation, renewable energy systems, robotics, and advanced control systems.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Power & Control</h3>
@@ -114,6 +118,7 @@ export const academicData = {
         seo_description: "Learn about the Applied Sciences department at Maharaja Surajmal Institute of Technology. We provide the foundational physics and math for B.Tech students.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Applied Sciences lab at MSIT where first-year students perform physics experiments",
         content: `
             <p className="mb-6">Before you can engineer, you must understand the universe. The Applied Sciences department imparts rigorous training in Engineering Mathematics, Applied Physics, and Applied Chemistry during the critical first year.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">First-Year Foundation</h3>
@@ -131,6 +136,7 @@ export const academicData = {
         seo_description: "View the official academic calendar for Maharaja Surajmal Institute of Technology. Stay updated on semester dates, exams, and holidays for the 2026-27 session.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT academic block overview for the official semester calendar",
         content: `
             <p className="mb-6">The MSIT academic calendar dictates the rhythm of the institution. It contains crucial dates for semester commencements, mid-term examinations, end-term practicals, holidays, and cultural festivals.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Adherence & Discipline</h3>
@@ -148,6 +154,7 @@ export const academicData = {
         seo_description: "Access the latest class timetables and B.Tech syllabus at Maharaja Surajmal Institute of Technology. Get detailed course structure and laboratory schedules.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Students in a technical lecture hall at MSIT following the semester syllabus",
         content: `
             <p className="mb-6">Access official GGSIPU syllabi for all departments and branches. The syllabus outlines learning objectives, textbooks, unit breakdowns, and evaluation schemes for every subject.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Class Schedules</h3>
@@ -165,6 +172,7 @@ export const academicData = {
         seo_description: "Explore research and innovation at Maharaja Surajmal Institute of Technology. Learn about our student publications, patents, and cutting-edge labs in AI.",
         category: "Academics",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Researchers working on AI and quantum computing projects at MSIT innovation cell",
         content: `
             <p className="mb-6">At MSIT, research isn't just for faculty. We encourage undergraduate students to publish papers, file patents, and present at international conferences. Our innovation cells provide the funding and mentorship required to turn ideas into reality.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Areas of Focus</h3>

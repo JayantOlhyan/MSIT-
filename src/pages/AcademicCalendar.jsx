@@ -39,7 +39,7 @@ const AcademicCalendar = () => {
                             href={cal.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between group"
+                            className="bg-white rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:border-blue-300 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between group"
                         >
                             <div className="flex items-center mb-4 sm:mb-0">
                                 <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center mr-5 group-hover:bg-blue-50 transition-colors shrink-0">
@@ -51,7 +51,7 @@ const AcademicCalendar = () => {
                                             {cal.period}
                                         </h3>
                                         {cal.isNew && (
-                                            <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider rounded border border-emerald-200">
+                                            <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider rounded border border-emerald-200">
                                                 Latest
                                             </span>
                                         )}

@@ -5,6 +5,7 @@ export const quickLinksData = {
         seo_description: "Access the MSIT ERP portal. Stay connected with your campus at Maharaja Surajmal Institute of Technology for attendance, marks, and official notices.",
         category: "Quick Links",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT student ERP portal interface for centralized academic management",
         content: `
             <p className="mb-6">The centralized Enterprise Resource Planning (ERP) portal for MSIT students. Access your attendance records, internal marks, fee receipts, and official institutional notices all in one secure place.</p>
         `,
@@ -17,6 +18,7 @@ export const quickLinksData = {
         seo_description: "Connect with the global alumni network of Maharaja Surajmal Institute of Technology. Network with 15,000+ professionals and leaders across the world.",
         category: "Quick Links",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT global alumni network gathering with professionals and industry leaders",
         content: `
             <p className="mb-6">Stay connected with over 15,000 MSIT alumni spread across the globe. Our alumni network facilitates mentorship, peer networking, and exclusive job referrals from seniors working in top tech companies.</p>
         `,
@@ -29,6 +31,7 @@ export const quickLinksData = {
         seo_description: "Learn about IEEE MSIT, the premier technical society of Maharaja Surajmal Institute of Technology. Explore workshops, hackathons, and global tech recognition.",
         category: "Student Societies",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "IEEE MSIT student branch members collaborating on a hardware project",
         content: `
             <div class="space-y-16">
                 <!-- Introduction -->
@@ -42,19 +45,19 @@ export const quickLinksData = {
                 <section>
                     <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-8">Chapters & Affinity Groups</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
                             <h4 class="font-bold text-slate-900 mb-3">Computer Society (CS)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Focuses on CS fundamentals and emerging tech like Data Mining, Networking, Web Dev, and AR.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
                             <h4 class="font-bold text-slate-900 mb-3">Power & Energy Society (PES)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Explores the world of electrical power, practical projects like solar systems, and automation.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
                             <h4 class="font-bold text-slate-900 mb-3">Robotics & Automation Society (RAS)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Nurtures interest in robotics through antenna fabrication, Arduino workshops, and hardware projects.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
                             <h4 class="font-bold text-slate-900 mb-3">Women in Engineering (WiE)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Empowers women in tech through the STAR initiative and social awareness programs.</p>
                         </div>

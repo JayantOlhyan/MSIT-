@@ -18,7 +18,7 @@ const Footer = () => {
                         href="https://docs.google.com/forms/d/e/1FAIpQLSdy7gs1NPTGYN_ryfaL9HLq1lqdnQWIKEQZQTCaLg5jltxP7A/viewform?usp=publish-editor"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-xl transition-all active:scale-95 whitespace-nowrap"
+                        className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-card transition-all active:scale-95 whitespace-nowrap"
                     >
                         Give Feedback 📝
                     </a>
@@ -33,11 +33,11 @@ const Footer = () => {
                         <Link to="/" className="flex items-center gap-4 mb-10 group" aria-label="MSIT New Delhi Home">
                             <img 
                                 src="/msit-logo.png" 
-                                alt="MSIT Logo" 
+                                alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Footer Attribution" 
                                 className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105 brightness-[1.1]" 
                             />
                             <div className="flex flex-col justify-center">
-                                <span className="font-['Libre_Baskerville',serif] font-black text-[18px] md:text-[22px] tracking-tight leading-tight text-white group-hover:text-blue-400 transition-colors">
+                                <span className="font-['Libre_Baskerville',serif] font-black text-base md:text-xl tracking-tight leading-tight text-white group-hover:text-blue-400 transition-colors">
                                     Maharaja Surajmal Institute of Technology
                                 </span>
                             </div>
@@ -70,8 +70,8 @@ const Footer = () => {
 
                     {/* Col 2 */}
                     <div>
-                        <h4 className="text-white text-[11px] font-black uppercase tracking-[0.25em] mb-10 opacity-60">Quick Links</h4>
-                        <ul className="space-y-5 font-bold text-[13px]">
+                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-60">Quick Links</h4>
+                        <ul className="space-y-5 font-bold text-sm">
                             <li><Link to="/about" className="hover:text-blue-400 transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-blue-400 transition-all"></span> About MSIT</Link></li>
                             <li><Link to="/online-fee" className="hover:text-blue-400 transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-blue-400 transition-all"></span> Admissions 2026</Link></li>
                             <li><Link to="/cse" className="hover:text-blue-400 transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-blue-400 transition-all"></span> Academic Programs</Link></li>
@@ -82,8 +82,8 @@ const Footer = () => {
 
                     {/* Col 3 */}
                     <div>
-                        <h4 className="text-white text-[11px] font-black uppercase tracking-[0.25em] mb-10 opacity-60">Resources</h4>
-                        <ul className="space-y-5 font-bold text-[13px]">
+                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-60">Resources</h4>
+                        <ul className="space-y-5 font-bold text-sm">
                             <li><a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
                             <li><a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Digital Library</a></li>
                             <li><a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Campus Mail</a></li>
@@ -95,19 +95,24 @@ const Footer = () => {
 
                     {/* Col 4 */}
                     <div>
-                        <h4 className="text-white text-[11px] font-black uppercase tracking-[0.25em] mb-10 opacity-60">Follow Us</h4>
+                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-60">Follow Us</h4>
                         <div className="flex gap-4 mb-10">
-                            {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all hover:-translate-y-1 border border-slate-800">
+                            {[
+                                { Icon: Facebook, label: "Follow MSIT on Facebook" },
+                                { Icon: Twitter, label: "Follow MSIT on Twitter" },
+                                { Icon: Linkedin, label: "Follow MSIT on LinkedIn" },
+                                { Icon: Instagram, label: "Follow MSIT on Instagram" }
+                            ].map(({ Icon, label }, i) => (
+                                <a key={i} href="#" className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all hover:-translate-y-1 border border-slate-800" aria-label={label}>
                                     <Icon className="w-5 h-5" />
                                 </a>
                             ))}
                         </div>
                         <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-900">
-                            <h5 className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-500 mb-3">Newsletter</h5>
+                            <h5 className="text-xs font-black uppercase tracking-[0.2em] text-blue-500 mb-3">Newsletter</h5>
                             <div className="flex gap-2">
                                 <input type="email" placeholder="Email" className="bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs focus:border-blue-500 outline-none w-full" />
-                                <button className="bg-blue-600 p-2 rounded-lg text-white hover:bg-blue-500 transition-colors"><ArrowRight className="w-4 h-4" /></button>
+                                <button className="bg-blue-600 p-2 rounded-lg text-white hover:bg-blue-500 transition-colors" aria-label="Subscribe to newsletter"><ArrowRight className="w-4 h-4" /></button>
                             </div>
                         </div>
                     </div>

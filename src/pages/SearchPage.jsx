@@ -30,7 +30,7 @@ const SearchPage = () => {
                 breadcrumbs={[{ label: 'Search' }]}
             />
             <div className="max-w-5xl mx-auto px-4 py-12">
-                <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-8 md:p-12 mb-8">
+                <div className="bg-white rounded-3xl shadow-card border border-slate-100 p-8 md:p-12 mb-8">
 
                     {query ? (
                         <div className="space-y-4">
@@ -41,7 +41,7 @@ const SearchPage = () => {
                             {/* Dummy search results - in a real app this would map over fetched data */}
                             <div className="mt-8 pt-8 border-t border-slate-100">
                                 <div className="space-y-6">
-                                    <div className="rounded-xl border border-slate-100 p-6 hover:shadow-md transition-shadow bg-slate-50/50 cursor-pointer">
+                                    <div className="rounded-xl border border-slate-100 p-6 hover:shadow-card-hover transition-shadow bg-slate-50/50 cursor-pointer">
                                         <h3 className="text-xl font-bold text-slate-900 mb-2 hover:text-blue-600 transition-colors">
                                             Result relating to {query}
                                         </h3>
@@ -53,7 +53,7 @@ const SearchPage = () => {
                                         </div>
                                     </div>
 
-                                    <div className="rounded-xl border border-slate-100 p-6 hover:shadow-md transition-shadow bg-slate-50/50 cursor-pointer">
+                                    <div className="rounded-xl border border-slate-100 p-6 hover:shadow-card-hover transition-shadow bg-slate-50/50 cursor-pointer">
                                         <h3 className="text-xl font-bold text-slate-900 mb-2 hover:text-blue-600 transition-colors">
                                             Information about {query}
                                         </h3>

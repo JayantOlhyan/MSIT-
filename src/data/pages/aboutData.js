@@ -5,6 +5,7 @@ export const aboutData = {
         seo_description: "Discover the vision and mission of Maharaja Surajmal Institute of Technology. Learn how we shape the future of engineering with excellence and ethical values.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT main building facade, Janakpuri, New Delhi - Vision and Mission view",
         content: `
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">VISION</h3>
             <p className="mb-6">To become one of the most admired centers of academic excellence in the field of Engineering & Technology for all-round professional development of students to enable them to meet the growing technological needs of the country.</p>
@@ -23,6 +24,7 @@ export const aboutData = {
         seo_description: "Explore the legacy of Maharaja Surajmal Institute of Technology since 2001. Learn about our foundation under the Surajmal Memorial Education Society in Delhi.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Historical view of the MSIT campus foundation, Janakpuri",
         content: `
             <p className="mb-6">Surajmal Memorial Education Society was founded in 1972 at Janakpuri to emulate the great qualities of Maharaja Surajmal with an aim to impart quality education in rural as well as urban areas. Academic Programmes were started in various technical streams in 1982.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Foundation of MSIT</h3>
@@ -42,6 +44,7 @@ export const aboutData = {
         seo_description: "Discover the legacy of Maharaja Surajmal Institute of Technology. Learn about our mission to provide excellence in engineering and technology since 2001.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Maharaja Surajmal Institute of Technology campus overview, New Delhi",
         content: `
             <div class="space-y-12">
                 <section>
@@ -94,6 +97,7 @@ export const aboutData = {
         seo_description: "Meet the leadership team at Maharaja Surajmal Institute of Technology. Learn about our administrative structure and commitment to high academic standards.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT Administrative Block and Director's Office entrance",
         content: `
             <p className="mb-6">The leadership at MSIT is helmed by distinguished academicians and administrative experts dedicated to maintaining the highest standards of institutional governance. Under the leadership of our Director, Prof. (Dr.) Avanish Kumar Srivastava, the institute continuously strives for excellence.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Director's Office</h3>
@@ -111,6 +115,7 @@ export const aboutData = {
         seo_description: "Discover the esteemed assembly of educationists and industry experts governing Maharaja Surajmal Institute of Technology to ensure strategic excellence.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Governing Body meeting area at Mahogany Surajmal Institute",
         content: `
             <p className="mb-6">The Governing Body of Maharaja Surajmal Institute of Technology consists of an esteemed assembly of educationists, industry representatives, and society nominees who steer the strategic direction of the institute.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Leadership Structure</h3>
@@ -128,6 +133,7 @@ export const aboutData = {
         seo_description: "Read messages from the leadership of Maharaja Surajmal Institute of Technology. Learn about our commitment to quality technical education and student success.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT President and Secretary's official desk area",
         content: `
             <p className="mb-6"><strong>Message from the President:</strong> The foundation of socio-economic development of a country is the education of its youth. MSIT was established by Surajmal Memorial Education Society with the aim of creating centers of excellence without profit motives, strictly following AICTE standards.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">A Commitment to Quality</h3>
@@ -145,6 +151,7 @@ export const aboutData = {
         seo_description: "Explore the 8-acre eco-friendly campus of Maharaja Surajmal Institute of Technology. Discover our advanced labs, library, and modern hostel facilities in Delhi.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Campus facilities and modern academic infrastructure at MSIT",
         content: `
             <p className="mb-6">MSIT operates on a beautiful 8-acre eco-friendly campus in Janakpuri, New Delhi. Originally in a four-storey building (6279 sq.m), it was shifted to a more spacious seven-storey building with a built-up area of 17,837 sq.m, acquiring impressive infrastructure and resources for high-quality engineering education.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">State-of-the-Art Resources</h3>
@@ -164,6 +171,7 @@ export const aboutData = {
         seo_description: "Learn about the Surajmal Memorial Education Society (SMES), the philanthropic force behind Maharaja Surajmal Institute of Technology and its quality mission.",
         category: "About MSIT",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Surajmal Memorial Education Society flagship banner on campus",
         content: `
             <p className="mb-6">The Surajmal Memorial Education Society (SMES) was established with a singular objective: to disseminate quality education and foster intellectual growth across the nation. MSIT is the flagship engineering institute of the SMES family.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">A Philanthropic Vision</h3>
@@ -181,10 +189,11 @@ export const aboutData = {
         seo_description: "Contact Maharaja Surajmal Institute of Technology. Find our address, phone number, and official email for admissions, administration, and support.",
         category: "Contact Us",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT Contact desk and visitor reception area in Janakpuri",
         content: `
             <div class="space-y-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="tel:+919667344125" class="group block p-8 bg-white rounded-3xl border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all cursor-pointer">
+                    <a href="tel:+919667344125" class="group block p-8 bg-white rounded-3xl border border-slate-200 hover:border-blue-500 hover:shadow-card-hover transition-all cursor-pointer">
                         <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 1.11L8.09 9.91a16 16 0 0 0 6 6l2.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         </div>
@@ -193,7 +202,7 @@ export const aboutData = {
                         <p class="text-sm text-slate-400 mt-2">Mon - Sat: 9:00 AM - 5:00 PM</p>
                     </a>
                     
-                    <a href="mailto:info@msit.in" class="group block p-8 bg-white rounded-3xl border border-slate-200 hover:border-blue-500 hover:shadow-xl transition-all cursor-pointer">
+                    <a href="mailto:info@msit.in" class="group block p-8 bg-white rounded-3xl border border-slate-200 hover:border-blue-500 hover:shadow-card-hover transition-all cursor-pointer">
                         <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         </div>

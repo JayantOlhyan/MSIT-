@@ -46,6 +46,8 @@ const Facilities = () => {
                 accentTitle="Campus Facilities" 
                 description="MSIT provides a state-of-the-art environment designed to foster innovation, research, and holistic student development."
                 breadcrumbs={[{ label: 'Facilities' }]}
+                heroImage="/campus-hero.jpg"
+                heroImageAlt="Modern academic infrastructure and lab facilities at the MSIT Janakpuri campus"
             />
 
             {/* Tab Navigation */}
@@ -80,7 +82,7 @@ const Facilities = () => {
                                 <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-4">{section.dept}</h3>
                                 <div className="grid md:grid-cols-3 gap-6">
                                     {section.labs.map((lab, lidx) => (
-                                        <div key={lidx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
+                                        <div key={lidx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                                             <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 mb-6">
                                                 <Cpu className="w-6 h-6" />
                                             </div>
@@ -121,8 +123,8 @@ const Facilities = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=1000" alt="MSIT Library" className="w-full h-[400px] object-cover" />
+                        <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-card">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=1000" alt="Modern MSIT Central Library showing the spacious reading area and technical book collection" className="w-full h-[400px] object-cover" />
                         </div>
                     </div>
                 )}

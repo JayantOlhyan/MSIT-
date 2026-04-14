@@ -24,7 +24,7 @@ const Syllabus = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 hover:border-blue-200"
+            className="group bg-white rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 hover:border-blue-200"
         >
             <div className="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-blue-50 group-hover:border-blue-100 transition-colors">
                 <Icon className="w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-colors" />
@@ -85,7 +85,7 @@ const Syllabus = () => {
 
                     {/* Right Column: General / Schemes */}
                     <div>
-                        <div className="bg-slate-900 rounded-2xl p-8 text-white sticky top-32 shadow-xl shadow-slate-900/10">
+                        <div className="bg-slate-900 rounded-2xl p-8 text-white sticky top-32 shadow-card shadow-slate-900/10">
                             <h3 className="text-xl font-bold mb-6 flex items-center">
                                 <FileText className="w-5 h-5 mr-3 text-blue-400" /> Comprehensive Schemes
                             </h3>

@@ -235,7 +235,7 @@ const AdminDashboard = () => {
     if (!isLoggedIn) {
         return (
             <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
-                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-md w-full animate-fade-in relative">
+                <div className="bg-white rounded-2xl shadow-card overflow-hidden max-w-md w-full animate-fade-in relative">
                     <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
                     <div className="p-8">
                         <div className="flex justify-center mb-6">
@@ -296,7 +296,7 @@ const AdminDashboard = () => {
             <SEO title="Admin Dashboard" description="Access the MSIT secure administrative dashboard to manage website content, news, events, and campus stories for Maharaja Surajmal Institute of Technology." canonicalPath="/admin" />
             <div className="max-w-4xl mx-auto space-y-8">
 
-                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 pb-8 mb-8">
                         <div>
                             <h1 className="text-3xl font-bold text-slate-900 mb-2">Website Content Manager</h1>
@@ -388,7 +388,7 @@ const AdminDashboard = () => {
                                     <div key={ev.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
                                         <div className="mb-4 sm:mb-0 pr-4">
                                             <div className="flex items-center gap-3 mb-1">
-                                                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-slate-200 text-slate-700 rounded">{ev.label}</span>
+                                                <span className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 bg-slate-200 text-slate-700 rounded">{ev.label}</span>
                                                 <span className="text-sm text-slate-500 font-medium">{ev.date}</span>
                                             </div>
                                             <h3 className="text-slate-900 font-semibold">{ev.title}</h3>
@@ -411,7 +411,7 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* TESTIMONIALS MANAGER */}
-                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
                     <div className="border-b border-slate-100 pb-8 mb-8">
                         <h2 className="text-3xl font-bold text-slate-900 mb-2">Testimonials Manager</h2>
                         <p className="text-slate-500">Manage alumni testimonials that appear in the homepage carousel.</p>
@@ -484,7 +484,7 @@ const AdminDashboard = () => {
                                     </div>
                                     {tImage && (
                                         <div className="w-12 h-12 rounded-full overflow-hidden border border-slate-200">
-                                            <img src={tImage} alt="Preview" className="w-full h-full object-cover" />
+                                            <img src={tImage} alt="Testimonial profile photo preview" className="w-full h-full object-cover" />
                                         </div>
                                     )}
                                 </div>
@@ -518,7 +518,7 @@ const AdminDashboard = () => {
                                 <div key={t.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
                                     <div className="flex items-center gap-4 flex-grow mb-4 sm:mb-0">
                                         <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
-                                            <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                                            <img src={t.image} alt={`${t.name} profile picture`} className="w-full h-full object-cover" />
                                         </div>
                                         <div className="min-w-0">
                                             <div className="flex items-center gap-2">
@@ -541,7 +541,7 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* HIGHLIGHTS MANAGER */}
-                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
                     <div className="border-b border-slate-100 pb-8 mb-8">
                         <h2 className="text-3xl font-bold text-slate-900 mb-2">Highlights Manager</h2>
                         <p className="text-slate-500">Manage the "MSIT Difference" carousel slides, quotes, and background images.</p>
@@ -577,8 +577,8 @@ const AdminDashboard = () => {
                                         />
                                     </div>
                                     {hImage && (
-                                        <div className="w-20 h-10 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
-                                            <img src={hImage} alt="Preview" className="w-full h-full object-cover" />
+                                        <div className="w-20 h-10 rounded-lg overflow-hidden border border-slate-200 shadow-card">
+                                            <img src={hImage} alt="Highlight background image preview" className="w-full h-full object-cover" />
                                         </div>
                                     )}
                                 </div>
@@ -611,7 +611,7 @@ const AdminDashboard = () => {
                                 <div key={h.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
                                     <div className="flex items-center gap-4 flex-grow mb-4 sm:mb-0">
                                         <div className="w-20 h-12 rounded-lg overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
-                                            <img src={h.image} alt="Highlight" className="w-full h-full object-cover" />
+                                            <img src={h.image} alt={`Highlight image from ${h.source}`} className="w-full h-full object-cover" />
                                         </div>
                                         <div className="min-w-0">
                                             <h4 className="text-slate-900 font-bold truncate">{h.source}</h4>

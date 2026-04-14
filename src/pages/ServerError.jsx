@@ -18,10 +18,10 @@ const ServerError = () => {
                 {/* Visual Header */}
                 <div className="relative mb-12">
                     <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none select-none">
-                        <span className="text-[15rem] md:text-[20rem] font-black text-red-900">500</span>
+                        <span className="text-giant md:text-mega font-black text-red-900">500</span>
                     </div>
                     <div className="relative z-10">
-                        <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-3xl bg-red-600 shadow-2xl shadow-red-600/20 mb-8 transform hover:-rotate-12 transition-transform duration-500">
+                        <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-3xl bg-red-600 shadow-card shadow-red-600/20 mb-8 transform hover:-rotate-12 transition-transform duration-500">
                             <AlertTriangle className="w-8 h-8 md:w-10 md:h-10 text-white" />
                         </div>
                         <h1 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tight">
@@ -37,7 +37,7 @@ const ServerError = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
                     <button 
                         onClick={handleRetry}
-                        className="group w-full sm:w-auto px-10 py-4 md:py-5 bg-red-600 text-white rounded-2xl font-bold shadow-xl shadow-red-600/10 hover:shadow-2xl hover:shadow-red-600/20 hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
+                        className="group w-full sm:w-auto px-10 py-4 md:py-5 bg-red-600 text-white rounded-2xl font-bold shadow-card shadow-red-600/10 hover:shadow-card-hover hover:shadow-red-600/20 hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
                     >
                         <RefreshCcw className="w-5 h-5 group-hover:rotate-180 transition-transform duration-500" />
                         Try Again
@@ -52,7 +52,7 @@ const ServerError = () => {
                 </div>
 
                 {/* Support Contact */}
-                <div className="max-w-2xl mx-auto p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-xl shadow-slate-900/5">
+                <div className="max-w-2xl mx-auto p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-card shadow-slate-900/5">
                     <div className="flex items-center gap-3 mb-6">
                         <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center">
                             <LifeBuoy className="w-5 h-5 text-slate-600" />

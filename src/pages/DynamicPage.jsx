@@ -44,6 +44,8 @@ const DynamicPage = () => {
                     }
                 ]}
                 subtitle={pageData.title === 'Applied Sciences' ? "1st Year" : null}
+                heroImage={pageData.heroImage}
+                heroImageAlt={pageData.heroImageAlt}
             />
 
             {/* MAIN CONTENT LAYOUT */}
@@ -64,7 +66,7 @@ const DynamicPage = () => {
                                 {pageData.stats && pageData.stats.length > 0 && (
                                     <div className="grid grid-cols-2 gap-4">
                                         {pageData.stats.map((stat, i) => (
-                                            <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                            <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-card">
                                                 <div className="text-2xl font-bold text-slate-900 mb-1">{stat.value}</div>
                                                 <div className="text-xs font-bold uppercase tracking-widest text-slate-500">{stat.label}</div>
                                             </div>
@@ -74,7 +76,7 @@ const DynamicPage = () => {
 
                                 {/* Key Highlights */}
                                 {pageData.bulletPoints && pageData.bulletPoints.length > 0 && (
-                                    <div className="bg-slate-900 p-8 rounded-2xl text-white shadow-xl">
+                                    <div className="bg-slate-900 p-8 rounded-2xl text-white shadow-card">
                                         <h4 className="text-lg font-semibold mb-6 flex items-center">Key Highlights</h4>
                                         <ul className="space-y-4">
                                             {pageData.bulletPoints.map((point, i) => (

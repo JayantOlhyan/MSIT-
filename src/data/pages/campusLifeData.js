@@ -5,6 +5,7 @@ export const campusLifeData = {
         seo_description: "Explore the vibrant student societies of Maharaja Surajmal Institute of Technology. Join IEEE, GDSC, Mutants, and more for a holistic campus experience.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Vibrant group of MSIT students from various technical and cultural societies on campus",
         content: `
             <div class="space-y-16">
                 <!-- Overview -->
@@ -18,28 +19,28 @@ export const campusLifeData = {
                 <section>
                     <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-8">Technical & Innovation Hubs</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <a href="/society-ieee" class="block p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow group">
+                        <a href="/society-ieee" class="block p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow group">
                             <h4 class="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">IEEE MSIT</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">A premier technical community focused on engineering excellence, professional networking, and high-impact workshops.</p>
                             <div class="mt-4 text-xs font-semibold text-blue-600 flex items-center group-hover:translate-x-1 transition-transform">Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7"></path></svg></div>
                         </a>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">GDSC (Google Developer Student Clubs)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">The hub for Google technologies, mobile app dev, and cloud computing. Solving real-world problems through code.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">E-yantra (Robotics)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">For the hardware enthusiasts. Building autonomous rovers, drones, and competing in national robotics challenges.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">NISP & Startup Cell</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Fostering an ecosystem for student-led startups, innovation policy, and entrepreneurial mentorship.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">Geek Room</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">A collaborative community for modern web development, open-source contribution, and tech trends.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">TechSoc</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">MSIT's amateur technical society serving as an umbrella for various engineering projects and technical efforts.</p>
                         </div>
@@ -50,19 +51,19 @@ export const campusLifeData = {
                 <section>
                     <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-purple-600 pl-4 mb-8">Cultural & Creative Arts</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">Mutants (Cultural Society)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">The main cultural hub featuring <strong>Octave</strong> (Music), <strong>Aarambh</strong> (Dramatics), <strong>Unity</strong> (Street Dance), and <strong>Astitva</strong> (Dance).</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">Cerebrate (Debating)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">The official debating society. Mastering the art of persuasion, logical reasoning, and intellectual discourse.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">Veda (Quiz Society)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">For the sharpest minds. Organizing competitive quizzes across general knowledge, tech, and literature.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">Broadcast Society</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">The media wing of MSIT. Handling photography, filmmaking, content creation, and institutional media.</p>
                         </div>
@@ -73,11 +74,11 @@ export const campusLifeData = {
                 <section>
                     <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-8">Social Responsibility & Academic Knowledge</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">NSS & Prakriti</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Dedicated to community service and environmental sustainability. Organizing blood donation camps and eco-drives.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">SPARK</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">The Society for Promotion of Academic and Research Knowledge. Bridging the gap between syllabus and industry research.</p>
                         </div>
@@ -97,6 +98,7 @@ export const campusLifeData = {
         seo_description: "Experience the energy of Maharaja Surajmal Institute of Technology's annual fests. Learn about Avensis and Genesis, our flagship tech and cultural celebrations.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Celebrity performance and energized crowd at MSIT's annual Avensis technical festival",
         content: `
             <p className="mb-6">The MSIT campus is always buzzing with activity. We host international tech symposiums, rigorous hackathons, alumni meets, and our massive annual cultural and technical festivals.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Avensis & Genesis</h3>
@@ -114,6 +116,7 @@ export const campusLifeData = {
         seo_description: "Maharaja Surajmal Institute of Technology ensures a safe, ragging-free campus. Our dedicated committee and squads maintain strict zero-tolerance policies.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Informational posters and security desks at MSIT ensuring a safe environment for new students",
         content: `
             <p className="mb-6">MSIT enforces a strict ZERO TOLERANCE policy towards any form of ragging. We pride ourselves on cultivating a safe, welcoming, and intellectually stimulating environment for all incoming freshers.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Vigilance & Support</h3>
@@ -131,6 +134,7 @@ export const campusLifeData = {
         seo_description: "Maharaja Surajmal Institute of Technology's ICC (POSH) cell ensures a safe academic atmosphere for all. Access support and gender equity guidelines online.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "MSIT Internal Complaint Committee (ICC) office and dedicated counseling area overview",
         content: `
             <p className="mb-6">In compliance with the POSH Act, MSIT has constituted a dedicated Internal Complaint Committee to prevent, prohibit, and redress sexual harassment of women at the workplace and campus.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Empowerment & Redressal</h3>
@@ -148,6 +152,7 @@ export const campusLifeData = {
         seo_description: "Learn about disaster preparedness at Maharaja Surajmal Institute of Technology. We conduct regular safety drills and maintain high-standard emergency protocols.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Emergency response and fire safety mock drill conducted at the MSIT Janakpuri campus",
         content: `
             <p className="mb-6">The safety of our students and staff is our paramount concern. The Disaster Management cell conducts regular evacuation mock drills, fire safety training, and earthquake preparedness seminars.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Infrastructure Readiness</h3>
@@ -165,6 +170,7 @@ export const campusLifeData = {
         seo_description: "Understanding the code of conduct at Maharaja Surajmal Institute of Technology. Our discipline committee ensures a professional and focused learning environment.",
         category: "Campus Life",
         heroImage: "/campus-hero.jpg",
+        heroImageAlt: "Disciplined and professional technical classroom environment at MSIT New Delhi",
         content: `
             <p className="mb-6">True engineers are marked by discipline. The committee ensures that students adhere to the institute's code of conduct, maintaining decorum within classrooms, laboratories, and common areas.</p>
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Code of Conduct</h3>
