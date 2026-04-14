@@ -2,196 +2,130 @@
   <img src="public/msit-logo.png" alt="MSIT Logo" width="120" />
 
   # MSIT — Maharaja Surajmal Institute of Technology
-
-  **Modern, high-performance college website built with React 18 + Vite**
+  
+  **A modern React 18 + Vite redesign of the MSIT platform.**
+  *Project developed as a high-performance SPA portfolio showcase.*
 
   [![Live Site](https://img.shields.io/badge/Live%20Site-msit--website.netlify.app-1B5E3B?style=for-the-badge&logo=netlify&logoColor=white)](https://msit-website.netlify.app/)
   [![React](https://img.shields.io/badge/React-18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
   [![Vite](https://img.shields.io/badge/Vite-5-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://netlify.com/)
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 </div>
 
 ---
 
-## Overview
+## 📖 Overview
 
-This is a full redesign of the official MSIT college website. It replaces the legacy
-static HTML site with a fast, modern Single Page Application (SPA) that is responsive,
-scalable, and easy to maintain.
+This repository contains a comprehensive redesign of the Maharaja Surajmal Institute of Technology (MSIT) website. The goal of this project was to demonstrate modern full-stack web development practices by transforming a traditional institutional website into a fast, accessible, and maintainable Single Page Application (SPA).
 
-The architecture uses a single `DynamicPage.jsx` template driven by a `pagesData.js`
-data dictionary, which powers 30+ subpages across departments, admissions, faculty,
-placements, and campus life — without any code duplication.
+> [!NOTE]
+> This is a **student portfolio project** and is not the official website of the institution. The official website can be found at [msit.in](http://www.msit.in).
 
-**Live:** https://msit-website.netlify.app/
-**College:** Maharaja Surajmal Institute of Technology, New Delhi
-**Affiliated to:** Guru Gobind Singh Indraprastha University (GGSIPU)
+## 🚀 Key Features
 
----
-
-## Features
-
-- **Dynamic page engine** — `pagesData.js` + `DynamicPage.jsx` renders 30+
-pages from a single template
-- **Mega menu navigation** — full desktop mega-menu with a mobile slide-out
-panel
-- **Fully responsive** — works on all screen sizes from 320px mobile to 4K
-desktop
-- **Instant routing** — React Router v6 with client-side navigation, zero
-full-page reloads
-- **Smooth animations** — scroll-aware components, parallax hero,
-micro-interactions
-- **Netlify-ready** — includes `_redirects` and `netlify.toml` so all routes
-work on refresh
+- **Architectural Excellence** — Powered by a modular "Dynamic Page Engine" where 30+ subpages are rendered from a single, optimized template.
+- **Performance Optimized** — Built with Vite 5 for instant HMR and high-efficiency production bundles.
+- **Premium UI** — Modern aesthetic utilizing Tailwind CSS 3, featuring glassmorphism accents, smooth parallax effects, and micro-interactions.
+- **Developer Hygiene** — Modularized data structures, centralized SEO management, and robust Netlify deployment configuration.
+- **Responsive Design** — Fully fluid layouts optimized for everything from ultra-wide 4K displays to small-screen mobile devices.
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
 | Layer | Technology |
 |-----------------------|---------------------------------|
-| Framework | React 18 |
-| Build Tool | Vite 5 |
-| Styling | Tailwind CSS 3 |
-| Routing | React Router v6 |
-| Icons | Lucide React |
-| Hosting | Netlify |
+| **Framework** | React 18 |
+| **Build Tool** | Vite 5 |
+| **Styling** | Tailwind CSS 3 |
+| **Routing** | React Router v6 |
+| **Icons** | Lucide React |
+| **Deployment** | Netlify |
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```
 MSIT-/
-├── public/
-│   ├── msit-logo.png
-│   ├── _redirects         ← Netlify SPA routing fix
-│   ├── robots.txt
-│   └── sitemap.xml
+├── public/                 ← Static assets & Netlify config
 ├── src/
-│   ├── components/
-│   │   ├── Header.jsx      ← Global nav + mega menu
-│   │   ├── Footer.jsx      ← Footer with links
-│   │   └── Layout.jsx      ← App shell / route wrapper
-│   ├── pages/
-│   │   ├── Home.jsx        ← Landing page (hero, events, quick links)
-│   │   ├── About.jsx       ← About MSIT
-│   │   ├── CSEDepartment.jsx
-│   │   ├── DynamicPage.jsx ← Universal template for all subpages
-│   │   └── NotFound.jsx    ← Custom 404 page
+│   ├── components/         ← Reusable UI components
 │   ├── data/
-│   │   └── pagesData.js    ← Content source for all dynamic pages
-│   ├── App.jsx             ← Route definitions
-│   ├── index.css           ← Global styles + Tailwind directives
-│   └── main.jsx            ← React DOM entry point
-├── netlify.toml            ← Netlify redirect config
-├── vite.config.js
+│   │   ├── pages/          ← Modularized domain data
+│   │   └── pagesData.js    ← Central data aggregator
+│   ├── pages/              ← Primary route views
+│   ├── App.jsx             ← Routing & App logic
+│   └── main.jsx            ← Entry point
+├── netlify.toml            ← Deployment & Security configuration
+├── LICENSE                 ← MIT License
 └── package.json
 ```
 
 ---
 
-## Getting Started
+## ⚙️ Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- npm 9+
+- **Node.js** (v18 or higher)
+- **npm** (v9 or higher)
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/JayantOlhyan/MSIT-.git
-cd MSIT-
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JayantOlhyan/MSIT-.git
+   cd MSIT-
+   ```
 
-# Install dependencies
-npm install
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-# Start the development server
-npm run dev
-```
+3. Setup environment variables:
+   ```bash
+   cp .env.example .env
+   ```
 
-Open http://localhost:5173 in your browser.
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-### Build for Production
-
-```bash
-npm run build
-```
-
-The output goes to the `dist/` folder. Preview it locally with:
-
-```bash
-npm run preview
-```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## Deployment
+## 🚢 Deployment
 
-This project is deployed on **Netlify** with automatic deployments on every
-push to `main`.
+Deployed via **Netlify** with a focus on security and SPA reliability.
 
-The `public/_redirects` file and `netlify.toml` are both configured to handle SPA
-routing correctly — all routes redirect to `index.html` and let React Router
-take over:
-
-```
-/* /index.html 200
-```
-
-To deploy your own instance:
-1. Fork this repo
-2. Log in to https://netlify.com
-3. Click **Add new site -> Import from GitHub**
-4. Select this repo
-5. Build command: `npm run build`
-6. Publish directory: `dist`
-7. Click **Deploy**
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
+- **Security**: Includes custom headers in `netlify.toml` for CSP, XSS protection, and HSTS.
 
 ---
 
-## Pages & Routes
+## 🤝 Contributing
 
-| Route | Page |
-|-----------------------|---------------------------------|
-| `/` | Home |
-| `/about` | About MSIT |
-| `/departments` | All Departments |
-| `/departments/cse` | Computer Science & Engineering |
-| `/faculty` | Faculty Directory |
-| `/admissions` | Admissions |
-| `/placements` | Placements & Careers |
-| `/notices` | Notices & Circulars |
-| `/contact` | Contact Us |
-| `*` | 404 Not Found |
-
----
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to
-discuss
-what you would like to change.
+Contributions are welcome. For major changes, please open an issue first to discuss your proposed improvements.
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m "Add: your feature"`
-4. Push to the branch: `git push origin feature/your-feature`
+2. Create a feature branch (`git checkout -b feat/your-feature`)
+3. Commit your changes (`git commit -m "feat: add your-feature"`)
+4. Push to the branch (`git push origin feat/your-feature`)
 5. Open a Pull Request
 
 ---
 
-## License
+## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
+This project is open-source and available under the [MIT License](LICENSE).
 
 <div align="center">
-  Built by <a href="https://github.com/JayantOlhyan">Jayant Olhyan</a> · MSIT,
-New Delhi
+  Developed by <a href="https://github.com/JayantOlhyan">Jayant Olhyan</a>
 </div>

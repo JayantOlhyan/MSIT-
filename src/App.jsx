@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import About from './pages/About';
-import CSEDepartment from './pages/CSEDepartment';
+
 import Placements from './pages/Placements';
 import SearchPage from './pages/SearchPage';
 import AcademicCalendar from './pages/AcademicCalendar';
@@ -28,8 +27,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/cse" element={<CSEDepartment />} />
+
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="/placements" element={<Placements />} />
                     <Route path="/academic-calendar" element={<AcademicCalendar />} />
