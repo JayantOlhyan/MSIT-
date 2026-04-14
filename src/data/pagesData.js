@@ -138,7 +138,7 @@ export const pagesData = {
             <p className="mb-6">Admission to all B.Tech programs is strictly based on the Common Entrance Test (CET) conducted by GGSIPU or JEE Main scores. Read the brochure for detailed eligibility criteria and counseling procedures.</p>
         `,
         stats: [
-            { label: "Intake", value: "960" },
+            { label: "Intake", value: "480" },
             { label: "Programs", value: "4 Core" }
         ],
         bulletPoints: ["Download PDF Brochure", "Admission Requirements", "Counseling Walkthrough"]
@@ -208,7 +208,7 @@ export const pagesData = {
             <p className="mb-6">Our curriculum bridges the gap between software development and systems engineering. Students deploy live applications, configure secure networks, and analyze massive datasets in our advanced IT laboratories.</p>
         `,
         stats: [
-            { label: "Intake", value: "180" },
+            { label: "Intake", value: "120" },
             { label: "NBA Status", value: "Accredited" }
         ],
         bulletPoints: ["Cloud & DevOps Labs", "Cybersecurity Research", "Full-Stack Development"]

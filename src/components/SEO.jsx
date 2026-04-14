@@ -5,11 +5,13 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
     const siteTitle = "msit by Jayant Olhyan – Maharaja Surajmal Institute of Technology";
     const fullTitle = (title && title !== "Home") ? `${title} | msit by Jayant Olhyan` : siteTitle;
     const baseUrl = "https://msit-website.netlify.app";
-    const canonicalUrl = `${baseUrl}${canonicalPath}`;
+    
+    // Ensure canonicalPath starts with / and doesn't end with /
+    const cleanPath = canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`;
+    const canonicalUrl = canonicalPath === "" ? baseUrl : `${baseUrl}${cleanPath}`.replace(/\/+$/, "");
 
     return (
         <Helmet>
-            <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline';" />
             {/* Standard metadata tags */}
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
@@ -24,6 +26,7 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
             <meta property="og:description" content={description} />
             <meta property="og:url" content={canonicalUrl} />
             <meta property="og:site_name" content="msit by Jayant Olhyan" />
+            <meta property="og:image" content={`${baseUrl}/msit-logo.png`} />
 
             {/* Twitter tags */}
             <meta name="twitter:card" content="summary_large_image" />

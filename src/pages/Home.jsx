@@ -168,7 +168,7 @@ const Home = () => {
         {
             name: "Computer Science & Engineering",
             code: "CSE",
-            students: 480,
+            students: 240,
             icon: "💻",
             desc: "Master software architecture, artificial intelligence, and scalable systems.",
             accredited: true
@@ -176,7 +176,7 @@ const Home = () => {
         {
             name: "Information Technology",
             code: "IT",
-            students: 240,
+            students: 120,
             icon: "🌐",
             desc: "Focus on network security, cloud infrastructure, and data analytics.",
             accredited: true
@@ -184,7 +184,7 @@ const Home = () => {
         {
             name: "Electronics & Communication",
             code: "ECE",
-            students: 180,
+            students: 90,
             icon: "🛰️",
             desc: "Pioneer the hardware of tomorrow with embedded systems and VLSI design.",
             accredited: true
@@ -192,7 +192,7 @@ const Home = () => {
         {
             name: "Electrical & Electronics",
             code: "EEE",
-            students: 120,
+            students: 60,
             icon: "⚡",
             desc: "Innovate sustainable power systems, control engineering, and robotics.",
             accredited: true
