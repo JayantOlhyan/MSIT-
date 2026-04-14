@@ -433,7 +433,6 @@ const Home = () => {
                                         <span className="grayscale group-hover:grayscale-0 transition-all duration-500">{dept.icon}</span>
                                     </div>
                                     <div className="text-right">
-                                        <div className="text-4xl font-black text-slate-100 group-hover:text-blue-600/10 transition-colors tracking-tighter">{dept.code}</div>
                                         {dept.accredited && <div className="text-[9px] font-black uppercase tracking-[0.2em] text-emerald-600 mt-2 bg-emerald-50 px-2 py-0.5 rounded inline-block">NBA Accredited</div>}
                                     </div>
                                 </div>

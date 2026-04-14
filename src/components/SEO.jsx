@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, canonicalPath = "" }) => {
-    const siteTitle = "msit by Jayant Olhyan – Maharaja Surajmal Institute of Technology";
-    const fullTitle = (title && title !== "Home") ? `${title} | msit by Jayant Olhyan` : siteTitle;
+    const siteTitle = "Maharaja Surajmal Institute of Technology (MSIT)";
+    const fullTitle = (title && title !== "Home") ? `${title} | MSIT` : siteTitle;
     const baseUrl = "https://msit-website.netlify.app";
     
     // Ensure canonicalPath starts with / and doesn't end with /
@@ -15,7 +15,7 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
             {/* Standard metadata tags */}
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
-            <meta name="author" content="Jayant Olhyan" />
+            <meta name="author" content="Maharaja Surajmal Institute of Technology" />
             <link rel="canonical" href={canonicalUrl} />
             <link rel="alternate" hreflang="en-IN" href={canonicalUrl} />
             <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
@@ -25,7 +25,7 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description} />
             <meta property="og:url" content={canonicalUrl} />
-            <meta property="og:site_name" content="msit by Jayant Olhyan" />
+            <meta property="og:site_name" content="MSIT Delhi" />
             <meta property="og:image" content={`${baseUrl}/msit-logo.png`} />
 
             {/* Twitter tags */}
