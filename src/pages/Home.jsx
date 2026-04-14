@@ -158,10 +158,10 @@ const Home = () => {
     };
 
     const stats = [
-        { icon: <Users size={40} className="mb-4 text-slate-800" />, value: "3,000+", label: "STUDENTS ENROLLED" },
+        { icon: <Users size={40} className="mb-4 text-slate-800" />, value: "2,000+", label: "STUDENTS ENROLLED" },
         { icon: <Award size={40} className="mb-4 text-slate-800" />, value: "95%", label: "PLACEMENT RATE" },
-        { icon: <GraduationCap size={40} className="mb-4 text-slate-800" />, value: "200+", label: "EXPERT FACULTY" },
-        { icon: <TrendingUp size={40} className="mb-4 text-slate-800" />, value: "50+", label: "YEARS OF EXCELLENCE" }
+        { icon: <GraduationCap size={40} className="mb-4 text-slate-800" />, value: "150+", label: "EXPERT FACULTY" },
+        { icon: <TrendingUp size={40} className="mb-4 text-slate-800" />, value: "25", label: "YEARS OF EXCELLENCE" }
     ];
 
     const departments = [
@@ -327,7 +327,7 @@ const Home = () => {
                                 )}
                                 {stat.label === "PLACEMENT RATE" && (
                                     <Link to="/placements" className="mt-1 flex items-center justify-center text-[11px] sm:text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-sm">
-                                        Records <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                        Placements <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                                 {stat.label === "EXPERT FACULTY" && (
@@ -354,7 +354,7 @@ const Home = () => {
                         <div>
                             <span className="text-blue-400 font-black tracking-[0.2em] text-[10px] uppercase mb-4 block">The MSIT Advantage</span>
                             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
-                                Education that <br /><span className="text-blue-400 underline decoration-blue-500/30 underline-offset-8">Transcend Boundaries.</span>
+                                Education that <br /><span className="text-blue-400 underline decoration-blue-500/30 underline-offset-8">Transcends Boundaries.</span>
                             </h2>
                             <p className="text-lg text-slate-300 font-medium leading-relaxed mb-12 opacity-90">
                                 MSIT stands at the intersection of rigorous academic theory and practical, industry-driven application. We don't just teach engineering; we cultivate the mindset required to solve the complex challenges of tomorrow.
@@ -464,7 +464,7 @@ const Home = () => {
                         onTouchMove={handleTouchMove}
                         onTouchEnd={handleTouchEnd}
                     >
-                        <div className="text-[120px] leading-none text-blue-600/10 absolute -top-16 -left-8 font-serif z-0 select-none italic text-opacity-20 pointer-events-none">"</div>
+
                         <div className="min-h-[450px] md:min-h-[350px] flex items-center justify-center relative z-10">
                             {testimonials.map((t, i) => (
                                 <div
@@ -476,9 +476,10 @@ const Home = () => {
                                         <img src={t.image} alt={t.name} className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" />
                                     </div>
 
-                                    <div className="text-center md:text-left flex-grow max-w-xl">
+                                    <div className="text-center md:text-left flex-grow max-w-xl relative">
+                                        <div className="text-[120px] leading-none text-blue-600/10 absolute -top-10 -left-6 md:-left-10 font-serif z-0 select-none italic pointer-events-none">"</div>
                                         <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed mb-8 md:mb-10 italic opacity-95">
-                                            "{t.quote}"
+                                            {t.quote}
                                         </p>
                                         <div className="font-bold text-2xl text-slate-900 mb-1 tracking-tight">{t.name} <span className="font-medium text-slate-400 text-lg ml-2">Class of '{t.year}</span></div>
                                         <div className="text-blue-600 font-bold text-lg tracking-tight mb-6">{t.major}</div>
