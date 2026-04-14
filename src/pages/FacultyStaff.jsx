@@ -40,7 +40,7 @@ const FacultyStaff = () => {
         });
 
     return (
-        <main className="min-h-screen bg-[#f8fafc]">
+        <main className="min-h-screen bg-surface">
             <SEO 
                 title="Premium Faculty Directory" 
                 description="Explore the comprehensive profiles, research strengths, and detailed metrics of the distinguished faculty at MSIT."
@@ -60,19 +60,19 @@ const FacultyStaff = () => {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 pt-8 border-t border-slate-800/50 animate-slide-up">
                         <div>
                             <div className="text-3xl font-bold text-white mb-1">130+</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-widest font-medium">Expert Faculty</div>
+                            <div className="text-xs text-muted uppercase tracking-widest font-medium">Expert Faculty</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-bold text-blue-400 mb-1">1000+</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-widest font-medium">Publications</div>
+                            <div className="text-3xl font-bold text-primary mb-1">1000+</div>
+                            <div className="text-xs text-muted uppercase tracking-widest font-medium">Publications</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-bold text-indigo-400 mb-1">5</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-widest font-medium">Core Departments</div>
+                            <div className="text-3xl font-bold text-accent mb-1">5</div>
+                            <div className="text-xs text-muted uppercase tracking-widest font-medium">Core Departments</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-bold text-purple-400 mb-1">15+</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-widest font-medium">Avg Years Exp.</div>
+                            <div className="text-3xl font-bold text-white/80 mb-1">15+</div>
+                            <div className="text-xs text-muted uppercase tracking-widest font-medium">Avg Years Exp.</div>
                         </div>
                     </div>
                 </div>
@@ -82,11 +82,11 @@ const FacultyStaff = () => {
             <div className="sticky top-[68px] xl:top-[128px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-card transition-all duration-300">
                 <div className="max-w-7xl mx-auto px-6 py-3 sm:py-4 flex flex-col md:flex-row gap-4 md:items-center justify-between">
                     <div className="relative w-full md:w-96 group">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted group-focus-within:text-primary transition-colors" />
                         <input 
                             type="text" 
                             placeholder="Search names, skills, or roles..."
-                            className="w-full pl-12 pr-4 py-3 bg-slate-100 border-2 border-transparent rounded-2xl focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-slate-800 font-medium placeholder-slate-400"
+                            className="w-full pl-12 pr-4 py-3 bg-surface border-2 border-transparent rounded-2xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-title font-medium placeholder-slate-400"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
@@ -127,18 +127,18 @@ const FacultyStaff = () => {
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                                 <div className="flex items-start gap-5 relative z-10 mb-6">
-                                    <div className="w-20 h-20 rounded-2xl overflow-hidden bg-slate-100 shrink-0 shadow-inner p-1 border border-slate-200 group-hover:border-blue-300 transition-colors duration-500">
+                                    <div className="w-20 h-20 rounded-2xl overflow-hidden bg-surface shrink-0 shadow-inner p-1 border border-slate-200 group-hover:border-primary/30 transition-colors duration-500">
                                         <img src={faculty.img} alt={`${faculty.name}, ${faculty.role} in the ${faculty.dept} department at MSIT`} className="w-full h-full object-cover rounded-xl" />
                                     </div>
                                     <div className="group/dept">
-                                        <span className="inline-block px-2.5 py-1 bg-slate-100 text-slate-600 text-xs uppercase tracking-bolder font-bold rounded-lg mb-2 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+                                        <span className="inline-block px-2.5 py-1 bg-surface text-muted text-xs uppercase tracking-bolder font-bold rounded-lg mb-2 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                                             {faculty.dept}
                                             {faculty.dept === 'Applied Sciences' && (
-                                                <span className="ml-1 font-bold text-blue-600/70">(1st Year)</span>
+                                                <span className="ml-1 font-bold text-primary/70">(1st Year)</span>
                                             )}
                                         </span>
-                                        <h3 className="text-lg font-bold text-slate-900 leading-tight mb-1 group-hover:text-blue-700 transition-colors line-clamp-2">{faculty.name}</h3>
-                                        <p className="text-slate-500 text-sm font-medium">{faculty.role}</p>
+                                        <h3 className="text-lg font-bold text-title leading-tight mb-1 group-hover:text-primary transition-colors line-clamp-2">{faculty.name}</h3>
+                                        <p className="text-muted text-sm font-medium">{faculty.role}</p>
                                     </div>
                                 </div>
 
@@ -162,9 +162,9 @@ const FacultyStaff = () => {
                                         <span className="truncate font-medium">{faculty.goodAt[0]}</span>
                                     </div>
 
-                                    <div className="flex items-center justify-between text-blue-600 font-bold text-sm">
+                                    <div className="flex items-center justify-between text-primary font-bold text-sm">
                                         View Full Profile
-                                        <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                                        <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
                                             <ChevronRight className="w-4 h-4" />
                                         </div>
                                     </div>
@@ -175,8 +175,8 @@ const FacultyStaff = () => {
                 ) : (
                     <div className="flex flex-col items-center justify-center py-32 opacity-50 animate-fade-in">
                         <Search className="w-20 h-20 text-slate-300 mb-6" />
-                        <h3 className="text-2xl font-bold text-slate-900 mb-2">No Profiles Found</h3>
-                        <p className="text-slate-500 text-lg">Try adjusting your search terms or department filters.</p>
+                        <h3 className="text-2xl font-bold text-title mb-2">No Profiles Found</h3>
+                        <p className="text-muted text-lg">Try adjusting your search terms or department filters.</p>
                     </div>
                 )}
             </div>
@@ -213,13 +213,13 @@ const FacultyStaff = () => {
                                     <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-widest rounded-lg mb-4">
                                         {selectedFaculty.dept} Department
                                         {selectedFaculty.dept === 'Applied Sciences' && (
-                                            <span className="ml-1 text-blue-300 font-bold">(1st Year)</span>
+                                            <span className="ml-1 text-primary font-bold">(1st Year)</span>
                                         )}
                                     </div>
                                     <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-2">
                                         {selectedFaculty.name}
                                     </h2>
-                                    <p className="text-blue-400 text-lg md:text-xl font-medium tracking-wide">
+                                    <p className="text-primary text-lg md:text-xl font-medium tracking-wide transition-colors">
                                         {selectedFaculty.role}
                                     </p>
                                 </div>
@@ -301,11 +301,11 @@ const FacultyStaff = () => {
                             </div>
 
                             {/* Actions */}
-                            <div className="flex flex-col sm:flex-row gap-4 items-center justify-between border-t border-slate-200 pt-8">
+                                <div className="flex flex-col sm:flex-row gap-4 items-center justify-between border-t border-slate-200 pt-8">
                                 <div className="flex flex-wrap gap-4 w-full sm:w-auto">
                                     <a 
                                         href={`mailto:${selectedFaculty.email}`} 
-                                        className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-slate-100 text-slate-700 font-bold hover:bg-slate-200 transition-colors"
+                                        className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-surface text-body font-bold hover:bg-slate-200 transition-colors"
                                     >
                                         <Mail className="w-5 h-5" />
                                         {selectedFaculty.email}
@@ -328,7 +328,7 @@ const FacultyStaff = () => {
                                         href={selectedFaculty.pdfLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 hover:shadow-card-hover hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
+                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 hover:shadow-card-hover hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
                                     >
                                         <Download className="w-5 h-5" />
                                         View Official Profile PDF
@@ -336,7 +336,7 @@ const FacultyStaff = () => {
                                 ) : (
                                     <button 
                                         disabled
-                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-200 text-slate-400 font-bold cursor-not-allowed w-full sm:w-auto text-sm"
+                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface text-muted font-bold cursor-not-allowed w-full sm:w-auto text-sm"
                                     >
                                         <FileText className="w-5 h-5" />
                                         PDF Profile Unavailable

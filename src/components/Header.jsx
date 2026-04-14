@@ -132,10 +132,10 @@ const Header = () => {
         ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white shadow-card py-1'}`
         : `sticky top-0 z-[60] w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-card py-1' : 'bg-white/95 backdrop-blur-sm py-2'}`;
 
-    const textStyle = isTransparent ? 'text-white hover:text-slate-200' : 'text-slate-700 hover:text-blue-600';
-    const mutedTextStyle = isTransparent ? 'text-white/80' : 'text-slate-500';
-    const logoColorStyle = isTransparent ? 'text-white' : 'text-[#1e4a9b]';
-    const logoSubStyle = isTransparent ? 'text-white/90' : 'text-[#f05023]';
+    const textStyle = isTransparent ? 'text-white hover:text-blue-200' : 'text-body hover:text-primary';
+    const mutedTextStyle = isTransparent ? 'text-white/80' : 'text-muted';
+    const logoColorStyle = isTransparent ? 'text-white' : 'text-primary';
+    const logoSubStyle = isTransparent ? 'text-white/90' : 'text-accent';
 
     const isPathActive = (path) => location.pathname === path;
     const isCategoryActive = (categoryKey) => {
@@ -150,7 +150,7 @@ const Header = () => {
                 <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 border-b relative z-20 ${
                     isTransparent 
                         ? 'bg-transparent border-transparent' 
-                        : 'bg-white border-slate-100 shadow-card text-slate-800'
+                        : 'bg-white border-slate-100 shadow-card text-title'
                 }`}>
                     <div className="w-full max-w-[1536px] mx-auto flex justify-between items-center">
                         {/* Logo Area */}
@@ -162,22 +162,22 @@ const Header = () => {
                                 loading="eager" 
                             />
                             <div className="flex flex-col justify-center">
-                                <span className={`font-['Libre_Baskerville',serif] font-black text-sm md:text-base lg:text-xl tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-[#1e4a9b]'}`}>
+                                <span className={`font-['Libre_Baskerville',serif] font-black text-sm md:text-base lg:text-xl tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-primary'}`}>
                                     <span className="hidden sm:inline text-balance">Maharaja Surajmal Institute of Technology</span>
                                     <span className="sm:hidden text-base font-black">MSIT Delhi</span>
                                 </span>
                             </div>
                         </Link>
 
-                        <div className={`hidden xl:flex items-center space-x-6 text-xs font-black uppercase tracking-[0.2em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
-                            <span className={isTransparent ? 'text-white/40' : 'text-slate-400'}>Contact:</span>
+                        <div className={`hidden xl:flex items-center space-x-6 text-xs font-black uppercase tracking-[0.2em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-muted'}`}>
+                            <span className={isTransparent ? 'text-white/40' : 'text-slate-300'}>Contact:</span>
                             <div className="flex space-x-6">
 
-                                <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Faculty Directory</Link>
-                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Campus Mail</a>
+                                <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Faculty Directory</Link>
+                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Mail</a>
                             </div>
                             <div className={`w-px h-3 mx-2 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
-                            <button onClick={toggleSearch} className={`flex items-center gap-2 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`} aria-label="Search">
+                            <button onClick={toggleSearch} className={`flex items-center gap-2 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`} aria-label="Search">
                                 <Search className="w-4 h-4" /> <span>Search</span>
                             </button>
                         </div>
@@ -219,13 +219,13 @@ const Header = () => {
                                     >
                                         <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap relative py-1 ${
                                             isCategoryActive(key)
-                                                ? (isTransparent ? 'text-white' : 'text-[#1e4a9b]')
-                                                : (isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]')
+                                                ? (isTransparent ? 'text-white' : 'text-primary')
+                                                : (isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary')
                                         }`}>
                                             {item}
-                                            <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isCategoryActive(key) ? (isTransparent ? 'text-white' : 'text-[#1e4a9b]') : (isTransparent ? 'text-white/60' : 'text-slate-400')}`} />
+                                            <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isCategoryActive(key) ? (isTransparent ? 'text-white' : 'text-primary') : (isTransparent ? 'text-white/60' : 'text-slate-400')}`} />
                                             {isCategoryActive(key) && (
-                                                <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-[#1e4a9b]'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
+                                                <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-primary'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
                                             )}
                                         </button>
 
@@ -240,7 +240,7 @@ const Header = () => {
                                                             </a>
                                                         ) : (
                                                             <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className={`text-sm font-medium transition-all underline-offset-4 flex items-center group/link ${
-                                                                isPathActive(link.url) ? 'text-[#1e4a9b] font-bold' : 'text-slate-600 hover:text-[#1e4a9b] hover:underline'
+                                                                isPathActive(link.url) ? 'text-primary font-bold' : 'text-body hover:text-primary hover:underline'
                                                             }`}>
                                                                 {link.name}
                                                                 <ArrowRight className={`w-3 h-3 ml-2 transition-all shrink-0 ${isPathActive(link.url) ? 'opacity-100 translate-x-1' : 'opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1'}`} />
@@ -255,12 +255,12 @@ const Header = () => {
                             })}
                             <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${
                                                                 isPathActive('/contact')
-                                                                    ? (isTransparent ? 'text-white' : 'text-[#1e4a9b]')
-                                                                    : (isTransparent ? 'text-white hover:text-blue-200' : 'text-slate-800 hover:text-[#1e4a9b]')
+                                                                    ? (isTransparent ? 'text-white' : 'text-primary')
+                                                                    : (isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary')
                                                             }`}>
                                                                 Contact
                                                                 {isPathActive('/contact') && (
-                                                                    <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-[#1e4a9b]'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
+                                                                    <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-primary'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
                                                                 )}
                                                             </Link>
                         </nav>
@@ -283,7 +283,7 @@ const Header = () => {
                                         </a>
                                     ) : (
                                         <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-lg ${
-                                            isPathActive(link.url) ? 'bg-blue-50 text-[#1e4a9b] font-bold border-l-4 border-[#1e4a9b]' : 'font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+                                            isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-medium text-body hover:text-title hover:bg-slate-50'
                                         }`}>
                                             {link.name}
                                         </Link>

@@ -31,6 +31,14 @@
 
   --shadow-card: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.07);
   --shadow-card-hover: 0 2px 4px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.09), 0 24px 60px rgba(0,0,0,0.10);
+
+  /* Semantic Colors */
+  --color-primary: #1e4a9b;
+  --color-accent: #f05023;
+  --color-surface: #f8fafc;
+  --color-title: #0f172a;
+  --color-body: #1e293b;
+  --color-muted: #64748b;
 }
 
 html {
@@ -48,10 +56,12 @@ html {
 
   /* High Contrast Mode Overrides */
   &.acc-high-contrast {
-    --text-slate-700: #000;
-    --text-slate-500: #000;
-    --bg-white: #fff;
-    --bg-slate-50: #f1f5f9;
+    --color-primary: #000000;
+    --color-accent: #000000;
+    --color-surface: #ffffff;
+    --color-title: #000000;
+    --color-body: #000000;
+    --color-muted: #000000;
         
     background-color: #ffffff;
     color: #000000;
@@ -62,7 +72,8 @@ html {
     }
 
     * {
-      border-color: #00000080 !important;
+      border-color: #000000 !important;
+      background-image: none !important;
     }
   }
 

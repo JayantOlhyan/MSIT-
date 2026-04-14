@@ -158,10 +158,10 @@ const Home = () => {
     };
 
     const stats = [
-        { icon: <Users size={40} className="mb-4 text-slate-800" />, value: "2,000+", label: "STUDENTS ENROLLED" },
-        { icon: <Award size={40} className="mb-4 text-slate-800" />, value: "95%", label: "PLACEMENT RATE" },
-        { icon: <GraduationCap size={40} className="mb-4 text-slate-800" />, value: "150+", label: "EXPERT FACULTY" },
-        { icon: <TrendingUp size={40} className="mb-4 text-slate-800" />, value: "25", label: "YEARS OF EXCELLENCE" }
+        { icon: <Users size={40} className="mb-4 text-primary" />, value: "2,000+", label: "STUDENTS ENROLLED" },
+        { icon: <Award size={40} className="mb-4 text-primary" />, value: "95%", label: "PLACEMENT RATE" },
+        { icon: <GraduationCap size={40} className="mb-4 text-primary" />, value: "150+", label: "EXPERT FACULTY" },
+        { icon: <TrendingUp size={40} className="mb-4 text-primary" />, value: "25", label: "YEARS OF EXCELLENCE" }
     ];
 
     const departments = [
@@ -252,7 +252,7 @@ const Home = () => {
 
                 {/* Explore Banner at Bottom */}
                 <div 
-                    className="absolute bottom-0 left-0 w-full bg-[#1e4a9b] py-6 cursor-pointer hover:bg-[#153a7a] transition-all duration-500 z-20 flex justify-center items-center group/banner border-t border-white/5"
+                    className="absolute bottom-0 left-0 w-full bg-primary py-6 cursor-pointer hover:bg-primary/90 transition-all duration-500 z-20 flex justify-center items-center group/banner border-t border-white/5"
                     onClick={() => scrollToSection('news')}
                 >
                     <span className="text-white font-bold text-sm tracking-[0.2em] uppercase flex items-center gap-4 group-hover/banner:translate-y-[-2px] transition-transform">
@@ -262,10 +262,10 @@ const Home = () => {
             </section>
 
             {/* ANNOUNCEMENT TICKER */}
-            <div className="bg-slate-50 border-b border-slate-200 py-4 relative z-20 overflow-hidden">
+            <div className="bg-surface border-b border-slate-200 py-4 relative z-20 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 flex items-center">
-                    <div className="bg-blue-600 text-white text-xs font-black uppercase tracking-widest px-2.5 py-1 rounded-sm mr-6 shrink-0 shadow-card">Alert</div>
-                    <div className="text-sm font-semibold text-slate-800 truncate flex-grow tracking-tight">
+                    <div className="bg-primary text-white text-xs font-black uppercase tracking-widest px-2.5 py-1 rounded-sm mr-6 shrink-0 shadow-card">Alert</div>
+                    <div className="text-sm font-semibold text-title truncate flex-grow tracking-tight">
                         Admissions Open for Batch 2026-30. Last date to apply for B.Tech programs is April 30th.
                     </div>
                 </div>
@@ -295,13 +295,13 @@ const Home = () => {
                         {filteredEvents.map((item, i) => (
                             <a href={item.link} key={item.id || i} className={`bg-white rounded-xl shadow-card hover:shadow-card-hover border-l-4 ${item.color} p-8 flex flex-col justify-between group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
                                 <div>
-                                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">{item.label}</span>
-                                    <h3 className="text-xl font-semibold text-slate-900 leading-snug mb-6 group-hover:text-blue-700 transition-colors">{item.title}</h3>
+                                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-muted mb-4">{item.label}</span>
+                                    <h3 className="text-xl font-semibold text-title leading-snug mb-6 group-hover:text-primary transition-colors">{item.title}</h3>
                                 </div>
                                 <div className="flex justify-between items-center mt-auto pt-6 border-t border-slate-100">
-                                    <span className="text-sm font-medium text-slate-400">{item.date}</span>
-                                    <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600" />
+                                    <span className="text-sm font-medium text-muted">{item.date}</span>
+                                    <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                                        <ArrowRight className="w-4 h-4 text-muted group-hover:text-primary" />
                                     </div>
                                 </div>
                             </a>
@@ -317,26 +317,26 @@ const Home = () => {
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
                         {stats.map((stat, i) => (
                             <div key={i} className="flex flex-col items-center text-center group">
-                                <div className="transform group-hover:-translate-y-2 transition-transform duration-300 mb-2">{React.cloneElement(stat.icon, { size: 32, className: "text-slate-900" })}</div>
-                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-slate-900 mb-2">{stat.value}</div>
-                                <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 mb-4">{stat.label}</div>
+                                <div className="transform group-hover:-translate-y-2 transition-transform duration-300 mb-2">{React.cloneElement(stat.icon, { size: 32, className: "text-title" })}</div>
+                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-2">{stat.value}</div>
+                                <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-4">{stat.label}</div>
                                 {stat.label === "STUDENTS ENROLLED" && (
-                                    <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-card">
+                                    <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
                                         Overview <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                                 {stat.label === "PLACEMENT RATE" && (
-                                    <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-card">
+                                    <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
                                         Placements <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                                 {stat.label === "EXPERT FACULTY" && (
-                                    <Link to="/faculty" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-card">
+                                    <Link to="/faculty" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
                                         Faculty <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                                 {stat.label === "YEARS OF EXCELLENCE" && (
-                                    <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-blue-600 border-2 border-blue-600/20 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition-all whitespace-nowrap shadow-card">
+                                    <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
                                         History <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
@@ -362,8 +362,8 @@ const Home = () => {
                             <div className="space-y-10">
                                 {[
                                     { icon: <Target className="w-6 h-6 text-emerald-400" />, title: "Industry-Aligned Curriculum", desc: "Syllabus constantly updated in collaboration with tech giants." },
-                                    { icon: <Lightbulb className="w-6 h-6 text-amber-400" />, title: "Innovation Ecosystem", desc: "Access to incubation centers, maker spaces, and heavy research funding." },
-                                    { icon: <Globe className="w-6 h-6 text-blue-400" />, title: "Global Perspective", desc: "Exchange programs and international hackathon participation." }
+                                    { icon: <Lightbulb className="w-6 h-6 text-accent" />, title: "Innovation Ecosystem", desc: "Access to incubation centers, maker spaces, and heavy research funding." },
+                                    { icon: <Globe className="w-6 h-6 text-primary/80" />, title: "Global Perspective", desc: "Exchange programs and international hackathon participation." }
                                 ].map((feature, i) => (
                                     <div key={i} className="flex items-start gap-6">
                                         <div className="mt-1 p-2.5 bg-slate-800 rounded-xl border border-white/5 shadow-inner">{feature.icon}</div>
@@ -427,25 +427,25 @@ const Home = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {departments.map((dept, i) => (
                             <Link to={`/${dept.code.toLowerCase()}`} key={i} className="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-card-hover transition-all duration-500 group cursor-pointer relative overflow-hidden block">
-                                <div className="absolute -top-6 -right-6 text-8xl font-black text-slate-100/50 group-hover:text-blue-500/10 transition-all duration-700 select-none group-hover:scale-110 group-hover:-rotate-12 pointer-events-none -z-10 tracking-tighter">
+                                <div className="absolute -top-6 -right-6 text-8xl font-black text-slate-100/50 group-hover:text-primary/10 transition-all duration-700 select-none group-hover:scale-110 group-hover:-rotate-12 pointer-events-none -z-10 tracking-tighter">
                                     {dept.code}
                                 </div>
-                                <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50/50 rounded-bl-full -z-20 transition-transform group-hover:scale-125 duration-700"></div>
+                                <div className="absolute top-0 right-0 w-48 h-48 bg-surface/50 rounded-bl-full -z-20 transition-transform group-hover:scale-125 duration-700"></div>
                                 <div className="flex justify-between items-start mb-10">
-                                    <div className="text-5xl bg-slate-50 w-24 h-24 rounded-2xl flex items-center justify-center group-hover:bg-blue-50 transition-all duration-500 shadow-inner group-hover:rotate-3">
+                                    <div className="text-5xl bg-surface w-24 h-24 rounded-2xl flex items-center justify-center group-hover:bg-blue-50 transition-all duration-500 shadow-inner group-hover:rotate-3">
                                         <span className="grayscale group-hover:grayscale-0 transition-all duration-500" role="img" aria-label={`${dept.name} department icon`}>{dept.icon}</span>
                                     </div>
                                     <div className="text-right">
                                         {dept.accredited && <div className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mt-2 bg-emerald-50 px-2 py-0.5 rounded inline-block">NBA Accredited</div>}
                                     </div>
                                 </div>
-                                <h3 className="text-3xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-700 transition-colors">{dept.name}</h3>
-                                <p className="text-slate-500 font-medium mb-10 leading-relaxed text-sm">{dept.desc}</p>
+                                <h3 className="text-3xl font-bold text-title mb-4 tracking-tight group-hover:text-primary transition-colors">{dept.name}</h3>
+                                <p className="text-muted font-medium mb-10 leading-relaxed text-sm">{dept.desc}</p>
                                 <div className="flex items-center justify-between border-t border-slate-100 pt-8">
-                                    <div className="flex items-center text-xs font-black text-slate-400 uppercase tracking-widest leading-none">
-                                        <Users className="w-4 h-4 mr-2.5 text-blue-500" /> {dept.students} Slots / Batch
+                                    <div className="flex items-center text-xs font-black text-muted uppercase tracking-widest leading-none">
+                                        <Users className="w-4 h-4 mr-2.5 text-primary" /> {dept.students} Slots / Batch
                                     </div>
-                                    <div className="text-blue-600 font-black text-xs uppercase tracking-widest flex items-center group-hover:translate-x-3 transition-transform">
+                                    <div className="text-primary font-black text-xs uppercase tracking-widest flex items-center group-hover:translate-x-3 transition-transform">
                                         Full Details <ArrowRight className="w-4 h-4 ml-2" />
                                     </div>
                                 </div>
@@ -501,7 +501,7 @@ const Home = () => {
                                 <button
                                     key={i}
                                     onClick={() => setCurrentTestimonial(i)}
-                                    className={`h-2 rounded-full transition-all duration-500 ${i === currentTestimonial ? 'bg-blue-600 w-12 shadow-card shadow-blue-200' : 'bg-slate-200 hover:bg-slate-300 w-2.5'}`}
+                                    className={`h-2 rounded-full transition-all duration-500 ${i === currentTestimonial ? 'bg-primary w-12 shadow-card shadow-blue-200' : 'bg-slate-200 hover:bg-slate-300 w-2.5'}`}
                                     aria-label={`Go to testimonial ${i + 1}`}
                                 />
                             ))}
@@ -520,21 +520,21 @@ const Home = () => {
                 
                 <div className="relative z-10 max-w-4xl mx-auto px-6">
                     <div className="w-28 h-28 bg-white rounded-full shadow-card flex items-center justify-center mx-auto mb-12 cursor-pointer hover:scale-110 active:scale-95 transition-all duration-500 group border border-slate-100" onClick={() => openLightbox('Virtual Tour Launch')}>
-                        <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-card group-hover:bg-blue-700 transition-colors">
+                        <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-card group-hover:bg-primary/90 transition-colors">
                             <Play className="w-8 h-8 text-white ml-1.5" />
                         </div>
                     </div>
-                    <span className="text-blue-600 font-black tracking-[0.25em] text-xs uppercase mb-4 block">Immersive Experience</span>
-                    <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-8">Engineering Campus Tour</h2>
-                    <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto mb-16 leading-relaxed">Take a fully immersive 360° virtual tour of our world-class laboratories, extensive libraries, and intelligent learning spaces.</p>
+                    <span className="text-primary font-black tracking-[0.25em] text-xs uppercase mb-4 block">Immersive Experience</span>
+                    <h2 className="text-4xl md:text-6xl font-bold text-title tracking-tight mb-8">Engineering Campus Tour</h2>
+                    <p className="text-xl text-muted font-medium max-w-2xl mx-auto mb-16 leading-relaxed">Take a fully immersive 360° virtual tour of our world-class laboratories, extensive libraries, and intelligent learning spaces.</p>
                     
-                    <button onClick={() => openLightbox('Virtual Tour Launch')} className="px-12 py-5 bg-slate-900 text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-slate-800 transition-all shadow-card hover:shadow-slate-300 active:scale-95">
+                    <button onClick={() => openLightbox('Virtual Tour Launch')} className="px-12 py-5 bg-title text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-body transition-all shadow-card hover:shadow-slate-300 active:scale-95">
                         Start Exploration
                     </button>
                     
                     <div className="mt-20 flex flex-wrap justify-center gap-6">
                         {['Main Block', 'AI Labs', 'Library', 'Sports Complex', 'Auditorium'].map((loc, i) => (
-                            <span key={i} className="px-6 py-3 bg-white border border-slate-200 rounded-2xl text-xs font-bold uppercase tracking-widest text-slate-600 shadow-card hover:border-blue-400 hover:text-blue-600 cursor-pointer transition-all hover:shadow-card-hover active:scale-95" onClick={() => openLightbox(loc)}>
+                            <span key={i} className="px-6 py-3 bg-white border border-slate-200 rounded-2xl text-xs font-bold uppercase tracking-widest text-muted shadow-card hover:border-primary hover:text-primary cursor-pointer transition-all hover:shadow-card-hover active:scale-95" onClick={() => openLightbox(loc)}>
                                 {loc}
                             </span>
                         ))}
