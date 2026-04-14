@@ -167,18 +167,7 @@ const Header = () => {
                         <div className={`hidden xl:flex items-center space-x-6 text-[10px] font-black uppercase tracking-[0.2em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-slate-500'}`}>
                             <span className={isTransparent ? 'text-white/40' : 'text-slate-400'}>Contact:</span>
                             <div className="flex space-x-6">
-                                <a 
-                                    href="https://msit.techtron.net/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className={`px-4 py-1.5 rounded-full border font-black transition-all duration-300 transform hover:scale-105 active:scale-95 ${
-                                        isTransparent 
-                                            ? 'border-white/30 bg-white/10 hover:bg-white hover:text-slate-900 text-white shadow-sm' 
-                                            : 'border-slate-200 bg-slate-50 hover:bg-slate-900 hover:text-white text-slate-700 shadow-sm'
-                                    }`}
-                                >
-                                    STUDENT PORTAL
-                                </a>
+
                                 <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Faculty Directory</Link>
                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-[#1e4a9b]'}`}>Campus Mail</a>
                             </div>
