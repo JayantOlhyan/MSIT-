@@ -12,7 +12,7 @@ export const placementData = {
             <p className="mb-6">Beyond bringing companies to campus, the cell organizes intensive technical mock interviews, aptitude training, resume building workshops, and expert sessions on competitive programming.</p>
         `,
         stats: [
-            { label: "Highest Package", value: "1.2 Cr+" },
+            { label: "Highest Package", value: "₹1.2Cr" },
             { label: "Top Recruiters", value: "Google, MS, Amazon" }
         ],
         bulletPoints: ["Placement Statistics 2024", "Top Recruiters", "Placement Policy"]

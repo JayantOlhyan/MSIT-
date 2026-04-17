@@ -89,7 +89,7 @@ export const academicData = {
             <p className="mb-6">Equipped with oscilloscopes, spectrum analyzers, and industry-grade simulation software, the ECE labs provide hands-on experience in circuit design, signal processing, and embedded systems architecture.</p>
         `,
         stats: [
-            { label: "Lab Stations", value: "150+" },
+            { label: "Intake", value: "120" },
             { label: "NBA Status", value: "Accredited" }
         ],
         bulletPoints: ["VLSI Design Lab", "IoT & Embedded Systems", "Digital Signal Processing"]

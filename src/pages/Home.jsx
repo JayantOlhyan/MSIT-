@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Check, Award, ArrowRight, Play, X, Mail, Globe, ChevronDown,
-    Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink
+    Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink, Building2
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -158,10 +158,10 @@ const Home = () => {
     };
 
     const stats = [
-        { icon: <Users size={40} className="mb-4 text-primary" />, value: "2,000+", label: "STUDENTS ENROLLED" },
-        { icon: <Award size={40} className="mb-4 text-primary" />, value: "95%", label: "PLACEMENT RATE" },
-        { icon: <GraduationCap size={40} className="mb-4 text-primary" />, value: "150+", label: "EXPERT FACULTY" },
-        { icon: <TrendingUp size={40} className="mb-4 text-primary" />, value: "25", label: "YEARS OF EXCELLENCE" }
+        { icon: <TrendingUp size={40} className="mb-4 text-primary" />, value: "95%+", label: "PLACEMENT RATE" },
+        { icon: <Building2 size={40} className="mb-4 text-primary" />, value: "250+", label: "RECRUITING COMPANIES" },
+        { icon: <Award size={40} className="mb-4 text-primary" />, value: "₹1.2Cr", label: "HIGHEST PACKAGE OFFERED" },
+        { icon: <Users size={40} className="mb-4 text-primary" />, value: "2,000+", label: "STUDENTS ENROLLED" }
     ];
 
     const departments = [
@@ -184,7 +184,7 @@ const Home = () => {
         {
             name: "Electronics & Communication",
             code: "ECE",
-            students: 90,
+            students: 120,
             icon: "🛰️",
             desc: "Pioneer the hardware of tomorrow with embedded systems and VLSI design.",
             accredited: true
