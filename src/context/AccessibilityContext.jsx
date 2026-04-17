@@ -18,6 +18,7 @@ export const AccessibilityProvider = ({ children }) => {
             focusHighlight: true,
             highContrast: false,
             reducedMotion: false,
+            darkMode: false,
             textScaling: 100 // Percentage
         };
     });
@@ -39,6 +40,9 @@ export const AccessibilityProvider = ({ children }) => {
         
         if (settings.reducedMotion) root.classList.add('acc-reduced-motion');
         else root.classList.remove('acc-reduced-motion');
+        
+        if (settings.darkMode) root.classList.add('acc-dark-mode');
+        else root.classList.remove('acc-dark-mode');
         
         // Handle text scaling
         root.style.fontSize = settings.textScaling === 100 ? '' : `${settings.textScaling}%`;

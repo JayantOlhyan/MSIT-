@@ -87,6 +87,24 @@ html {
     }
   }
 
+  /* Dark Mode */
+  &.acc-dark-mode {
+    --color-primary: #3b82f6; 
+    --color-accent: #f97316; 
+    --color-surface: #1e293b; 
+    --color-title: #f8fafc; 
+    --color-body: #cbd5e1; 
+    --color-muted: #94a3b8; 
+    
+    background-color: #0f172a;
+    color: #cbd5e1;
+    
+    body {
+      background-color: #0f172a;
+      color: #cbd5e1;
+    }
+  }
+
   background-color: #0f172a; 
 }
 

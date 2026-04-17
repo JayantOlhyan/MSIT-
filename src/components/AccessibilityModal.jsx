@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Eye, EyeOff, Zap, ZapOff, Type, Move, MoveHorizontal, Check } from 'lucide-react';
+import { X, Eye, EyeOff, Zap, ZapOff, Type, Move, MoveHorizontal, Check, Moon } from 'lucide-react';
 import { useAccessibility } from '../context/AccessibilityContext';
 
 const AccessibilityModal = () => {
@@ -25,6 +25,12 @@ const AccessibilityModal = () => {
             label: 'Reduced Motion', 
             desc: 'Disable non-essential animations and transitions.',
             icon: MoveHorizontal
+        },
+        { 
+            key: 'darkMode', 
+            label: 'Dark Mode', 
+            desc: 'Switch to a dark color theme for low-light environments.',
+            icon: Moon
         }
     ];
 

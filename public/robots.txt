@@ -1,3 +1,5 @@
+Sitemap: https://msit-website.netlify.app/sitemap.xml
+
 User-agent: *
 Allow: /
 Disallow: /admin/
@@ -5,5 +7,3 @@ Disallow: /admin
 Disallow: /500
 Disallow: /search
 Disallow: /api/
-
-Sitemap: https://msit-website.netlify.app/sitemap.xml

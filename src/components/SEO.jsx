@@ -16,7 +16,12 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
             <meta name="author" content="Maharaja Surajmal Institute of Technology" />
+            <meta name="robots" content="index, follow" />
+            <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+            <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
             <link rel="canonical" href={canonicalUrl} />
+
+
             <link rel="alternate" hreflang="en-IN" href={canonicalUrl} />
             <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
 
