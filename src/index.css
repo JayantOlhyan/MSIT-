@@ -87,7 +87,7 @@ html {
     }
   }
 
-  /* Dark Mode */
+  /* Engineered High-End Dark Mode (Targeted Overrides) */
   &.acc-dark-mode {
     --color-primary: #3b82f6; 
     --color-accent: #f97316; 
@@ -102,6 +102,31 @@ html {
     body {
       background-color: #0f172a;
       color: #cbd5e1;
+    }
+
+    /* 1. Convert Light Backgrounds to Deep Blue/Slate */
+    .bg-white, .bg-slate-50, .bg-surface {
+      background-color: #0f172a !important;
+    }
+
+    /* 2. Keep Inherently Dark Sections Dark */
+    .bg-slate-900, .bg-slate-950 {
+      background-color: #020617 !important;
+    }
+
+    /* 3. Invert Dark Text Headings/Paragraphs */
+    .text-slate-900, .text-slate-800, .text-slate-700, .text-title {
+      color: #f8fafc !important;
+    }
+
+    /* 4. Soften Muted Texts */
+    .text-slate-600, .text-slate-500, .text-muted {
+      color: #94a3b8 !important;
+    }
+
+    /* 5. Subdue Light Borders */
+    .border-slate-100, .border-slate-200 {
+      border-color: #1e293b !important;
     }
   }
 
