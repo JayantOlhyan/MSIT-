@@ -3,33 +3,47 @@
 
   # MSIT — Maharaja Surajmal Institute of Technology
   
-  **A modern React 18 + Vite redesign of the MSIT platform.**
-  *Project developed as a high-performance SPA portfolio showcase.*
+  **A high-performance, accessible, and modern redesign of the MSIT platform.**
+  *Engineered with React 19, Vite 7, and Tailwind CSS 4.*
 
   [![Live Site](https://img.shields.io/badge/Live%20Site-msit--website.netlify.app-1B5E3B?style=for-the-badge&logo=netlify&logoColor=white)](https://msit-website.netlify.app/)
-  [![React](https://img.shields.io/badge/React-18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-  [![Vite](https://img.shields.io/badge/Vite-5-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  [![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+  [![Vite](https://img.shields.io/badge/Vite-7-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![GSAP](https://img.shields.io/badge/Animations-GSAP-green?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
 
 </div>
 
 ---
 
-## 📖 Overview
+## 📖 Project Overview
 
-This repository contains a comprehensive redesign of the Maharaja Surajmal Institute of Technology (MSIT) website. The goal of this project was to demonstrate modern full-stack web development practices by transforming a traditional institutional website into a fast, accessible, and maintainable Single Page Application (SPA).
+This repository features a complete architectural overhaul and visual redesign of the Maharaja Surajmal Institute of Technology (MSIT) website. Developed as a professional portfolio project, it transforms a legacy institutional web presence into a cutting-edge **Single Page Application (SPA)** focused on speed, modularity, and inclusive design.
 
 > [!NOTE]
-> This is a **student portfolio project** and is not the official website of the institution. The official website can be found at [msit.in](http://www.msit.in).
+> This is a **conceptual redesign** for portfolio purposes and is not the official website of MSIT. The official portal is located at [msit.in](http://www.msit.in).
 
-## 🚀 Key Features
+---
 
-- **Architectural Excellence** — Powered by a modular "Dynamic Page Engine" where 30+ subpages are rendered from a single, optimized template.
-- **Performance Optimized** — Built with Vite 5 for instant HMR and high-efficiency production bundles.
-- **Premium UI** — Modern aesthetic utilizing Tailwind CSS 3, featuring glassmorphism accents, smooth parallax effects, and micro-interactions.
-- **Developer Hygiene** — Modularized data structures, centralized SEO management, and robust Netlify deployment configuration.
-- **Responsive Design** — Fully fluid layouts optimized for everything from ultra-wide 4K displays to small-screen mobile devices.
+## 🏗️ Core Architecture
+
+### ⚡ Dynamic Page Engine
+The platform utilizes a data-driven rendering engine centered around `DynamicPage.jsx`. By decoupling content from structure, the application can render 30+ unique subpages (Departments, Admissions, Campus Life) using a single, highly optimized template. 
+
+- **Single Source of Truth**: All content is managed within modularized JS objects in `src/data/`.
+- **Slug-based Routing**: Seamlessly handles navigation via dynamic route parameters.
+- **Lazy Hydration**: Components only render when needed, ensuring minimal initial bundle size.
+
+### 🎨 Semantic Design System (Tailwind v4)
+The application has been migrated to **Tailwind CSS 4**, utilizing a centralized semantic design system.
+- **Design Tokens**: Standardized variables for `--color-primary`, `--color-accent`, and `--shadow-card`.
+- **Accessibility Engine**: Built-in support for high-contrast modes and typography scaling via `AccessibilityContext`.
+- **Glassmorphism UI**: Premium visual layer with translucent overlays and sleek micro-interactions powered by GSAP.
+
+### 🔍 Automated SEO & Performance
+- **Dynamic Meta Tags**: Integrated `react-helmet-async` for page-specific titles and descriptions.
+- **Automated Sitemaps**: `vite-plugin-sitemap` automatically indexes all 44+ routes during the build process.
+- **Optimized Assets**: Modern image formats and script splitting for near-perfect Lighthouse scores.
 
 ---
 
@@ -37,10 +51,11 @@ This repository contains a comprehensive redesign of the Maharaja Surajmal Insti
 
 | Layer | Technology |
 |-----------------------|---------------------------------|
-| **Framework** | React 18 |
-| **Build Tool** | Vite 5 |
-| **Styling** | Tailwind CSS 3 |
-| **Routing** | React Router v6 |
+| **Library** | React 19 (Modern Hooks) |
+| **Tooling** | Vite 7 (High-speed HMR) |
+| **Styling** | Tailwind CSS 4 (@theme variables) |
+| **Routing** | React Router v7 |
+| **Animation** | GSAP (Smooth Transitions) |
 | **Icons** | Lucide React |
 | **Deployment** | Netlify |
 
@@ -48,84 +63,54 @@ This repository contains a comprehensive redesign of the Maharaja Surajmal Insti
 
 ## 📂 Project Structure
 
-```
+```bash
 MSIT-/
-├── public/                 ← Static assets & Netlify config
+├── public/                 # Static assets & Deployment config (_redirects)
 ├── src/
-│   ├── components/         ← Reusable UI components
+│   ├── components/         # Reusable UI components (Layout, Header, Footer)
+│   ├── context/            # Global state (Accessibility, Theme)
 │   ├── data/
-│   │   ├── pages/          ← Modularized domain data
-│   │   └── pagesData.js    ← Central data aggregator
-│   ├── pages/              ← Primary route views
-│   ├── App.jsx             ← Routing & App logic
-│   └── main.jsx            ← Entry point
-├── netlify.toml            ← Deployment & Security configuration
-├── LICENSE                 ← MIT License
-└── package.json
+│   │   ├── pages/          # Modular domain content (About, Academic, Admission)
+│   │   └── pagesData.js    # Data aggregator for the Dynamic Engine
+│   ├── pages/              # Composite route views (Home, Placements, Search)
+│   ├── App.jsx             # Route definitions & Global providers
+│   └── main.jsx            # Entry point & Tailwind imports
+├── netlify.toml            # Security headers & Redirect rules
+└── package.json            # Dependencies & Scripts
 ```
 
 ---
 
-## ⚙️ Getting Started
+## ⚙️ Development
 
 ### Prerequisites
+- **Node.js**: v20 or higher (required for Vite 7)
+- **npm**: v10 or higher
 
-- **Node.js** (v18 or higher)
-- **npm** (v9 or higher)
-
-### Installation
-
-1. Clone the repository:
+### Installation & Startup
+1. **Clone the project**:
    ```bash
    git clone https://github.com/JayantOlhyan/MSIT-.git
    cd MSIT-
    ```
-
-2. Install dependencies:
+2. **Install dependencies**:
    ```bash
    npm install
    ```
-
-3. Setup environment variables:
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Start the development server:
+3. **Launch dev environment**:
    ```bash
    npm run dev
    ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
 ---
 
-## 🚢 Deployment
+## 🤝 Contributing & License
 
-Deployed via **Netlify** with a focus on security and SPA reliability.
+Contributions are welcome. For major changes, please open an issue first to discuss your proposal.
 
-- **Build Command**: `npm run build`
-- **Publish Directory**: `dist`
-- **Security**: Includes custom headers in `netlify.toml` for CSP, XSS protection, and HSTS.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome. For major changes, please open an issue first to discuss your proposed improvements.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feat/your-feature`)
-3. Commit your changes (`git commit -m "feat: add your-feature"`)
-4. Push to the branch (`git push origin feat/your-feature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+- **License**: [MIT](LICENSE)
+- **Author**: [Jayant Olhyan](https://github.com/JayantOlhyan)
 
 <div align="center">
-  Developed by <a href="https://github.com/JayantOlhyan">Jayant Olhyan</a>
+  <sub>Built with ❤️ for MSIT</sub>
 </div>
