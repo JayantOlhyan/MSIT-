@@ -176,13 +176,18 @@ const Header = () => {
                                 <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Faculty Directory</Link>
                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Mail</a>
                                 <Link to="/virtual-tour" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Tour</Link>
-                                <button className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
-                                    isTransparent 
-                                        ? 'bg-white text-primary hover:bg-blue-50 hover:scale-105 active:scale-95' 
-                                        : 'bg-primary text-white hover:bg-[#153a7a] hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10'
-                                }`}>
+                                <a 
+                                    href="https://ipu.admissions.nic.in/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
+                                        isTransparent 
+                                            ? 'bg-white text-primary hover:bg-blue-50 hover:scale-105 active:scale-95' 
+                                            : 'bg-primary text-white hover:bg-[#153a7a] hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10'
+                                    }`}
+                                >
                                     Apply Now
-                                </button>
+                                </a>
                             </div>
                             <div className={`w-px h-3 mx-2 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
                             <button onClick={toggleSearch} className={`flex items-center gap-2 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`} aria-label="Search">
@@ -302,7 +307,14 @@ const Header = () => {
                     ))}
 
                     <div className="pt-10 space-y-4 pb-20">
-                        <button className="w-full py-5 text-center rounded-2xl bg-slate-900 text-white font-bold text-lg shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer">Apply Now</button>
+                        <a 
+                            href="https://ipu.admissions.nic.in/" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="block w-full py-5 text-center rounded-2xl bg-slate-900 text-white font-bold text-lg shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer"
+                        >
+                            Apply Now
+                        </a>
                         <button className="w-full py-5 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-lg hover:bg-slate-50 transition-all active:scale-95 cursor-pointer">Visit Campus</button>
                     </div>
                 </div>
