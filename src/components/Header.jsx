@@ -175,6 +175,14 @@ const Header = () => {
 
                                 <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Faculty Directory</Link>
                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Mail</a>
+                                <Link to="/virtual-tour" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Tour</Link>
+                                <button className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
+                                    isTransparent 
+                                        ? 'bg-white text-primary hover:bg-blue-50 hover:scale-105 active:scale-95' 
+                                        : 'bg-primary text-white hover:bg-[#153a7a] hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10'
+                                }`}>
+                                    Apply Now
+                                </button>
                             </div>
                             <div className={`w-px h-3 mx-2 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
                             <button onClick={toggleSearch} className={`flex items-center gap-2 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`} aria-label="Search">
