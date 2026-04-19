@@ -330,14 +330,14 @@ const Home = () => {
                                         Placements <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
-                                {stat.label === "EXPERT FACULTY" && (
-                                    <Link to="/faculty" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                        Faculty <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                {stat.label === "RECRUITING COMPANIES" && (
+                                    <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                        Companies <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
-                                {stat.label === "YEARS OF EXCELLENCE" && (
-                                    <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                        History <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                {stat.label === "HIGHEST PACKAGE OFFERED" && (
+                                    <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                        Honors <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                             </div>
