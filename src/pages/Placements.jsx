@@ -44,22 +44,57 @@ const Placements = () => {
             {/* Quick Stats Banner */}
             <div className="bg-white border-b border-slate-200">
                 <div className="max-w-7xl mx-auto px-6 py-12">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
                         <div className="flex flex-col items-center text-center p-4">
                             <TrendingUp className="w-10 h-10 text-blue-600 mb-4" />
                             <div className="text-4xl font-bold text-slate-900 mb-2">95%+</div>
-                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest">Placement Rate</div>
+                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-4">Placement Rate</div>
+                            <button onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })} className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                Placements <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                            </button>
                         </div>
                         <div className="flex flex-col items-center text-center p-4">
                             <Building2 className="w-10 h-10 text-blue-600 mb-4" />
                             <div className="text-4xl font-bold text-slate-900 mb-2">250+</div>
-                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest">Recruiting Companies</div>
+                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-4">Recruiting Companies</div>
+                            <button onClick={() => window.scrollTo({ top: 1200, behavior: 'smooth' })} className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                Companies <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                            </button>
+                        </div>
+                        <div className="flex flex-col items-center text-center p-4">
+                            <Award className="w-10 h-10 text-blue-600 mb-4" />
+                            <div className="text-4xl font-bold text-slate-900 mb-2">₹1.2Cr</div>
+                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-4">Highest Package Offered</div>
+                            <button onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })} className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                Honors <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                            </button>
                         </div>
                         <div className="flex flex-col items-center text-center p-4">
                             <Users className="w-10 h-10 text-blue-600 mb-4" />
-                            <div className="text-4xl font-bold text-slate-900 mb-2">₹1.2Cr</div>
-                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest">Highest Package Offered</div>
+                            <div className="text-4xl font-bold text-slate-900 mb-2">2,000+</div>
+                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-4">Students Enrolled</div>
+                            <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                Overview <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                            </Link>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Recruiters Section (Below Stats) */}
+            <div className="bg-slate-50 border-b border-slate-200 py-16">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="flex items-center mb-10">
+                        <Building2 className="w-8 h-8 text-blue-600 mr-4" />
+                        <h2 className="text-3xl font-bold text-slate-900">Industry Giants Scouting at MSIT</h2>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        {topRecruiters.map((company, index) => (
+                            <div key={index} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center text-center group hover:border-blue-200 hover:shadow-md transition-all">
+                                <span className="text-sm font-bold text-slate-700 group-hover:text-blue-600 uppercase tracking-wider">{company}</span>
+                                <div className="mt-2 text-[10px] text-slate-400 font-medium tracking-widest uppercase">Global Recruiter</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
