@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/msit-logo.png" alt="MSIT Logo" width="120" />
+  <img src="public/msit-logo.webp" alt="MSIT Logo" width="120" />
 
   # MSIT — Maharaja Surajmal Institute of Technology
   
