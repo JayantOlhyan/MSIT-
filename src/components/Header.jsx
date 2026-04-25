@@ -162,8 +162,8 @@ const Header = () => {
                                 loading="eager" 
                                 fetchpriority="high" 
                                 decoding="async"
-                                width="160"
-                                height="150" 
+                                width="120"
+                                height="112" 
                             />
                             <div className="flex flex-col justify-center">
                                 <span className={`font-['Libre_Baskerville',serif] font-black text-sm md:text-base lg:text-xl tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-primary'}`}>

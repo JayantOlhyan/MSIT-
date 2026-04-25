@@ -37,8 +37,8 @@ const Footer = () => {
                                 src="/msit-logo.webp" 
                                 alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Footer Attribution" 
                                 className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105 brightness-[1.1]" 
-                                width="160"
-                                height="150"
+                                width="120"
+                                height="112"
                                 loading="lazy"
                                 decoding="async"
                             />
