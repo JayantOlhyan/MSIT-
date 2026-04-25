@@ -1,5 +1,0 @@
-# Force HTTPS
-http://msit-website.netlify.app/* https://msit-website.netlify.app/:splat 301!
-
-# SPA Routing
-/* /index.html 200

@@ -55,6 +55,14 @@
       }
     }
   </script>
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 
 <body>
@@ -74,7 +82,23 @@
       </nav>
     </div>
   </noscript>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Static SEO Shell (Seen by crawlers, replaced by React) -->
+    <div style="padding: 2rem; max-width: 800px; margin: 0 auto;">
+      <h1>Maharaja Surajmal Institute of Technology | MSIT Delhi</h1>
+      <p>Affiliated to Guru Gobind Singh Indraprastha University (GGSIPU), MSIT is a top-ranked engineering college in Delhi, India.</p>
+      <h2>Courses Offered</h2>
+      <ul>
+        <li>Computer Science & Engineering (CSE)</li>
+        <li>Information Technology (IT)</li>
+        <li>Electronics & Communication Engineering (ECE)</li>
+        <li>Electrical & Electronics Engineering (EEE)</li>
+      </ul>
+      <h2>Key Highlights</h2>
+      <p>95%+ Placement Rate, High-tech AI Labs, NBA Accredited, Dedicated Research Facilities.</p>
+      <p>Visit our campus in Janakpuri, New Delhi or explore our academic programs online.</p>
+    </div>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

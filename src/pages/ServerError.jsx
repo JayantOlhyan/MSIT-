@@ -84,7 +84,7 @@ const ServerError = () => {
                 </div>
 
                 <div className="mt-20 opacity-50">
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-600">
                         Error Code: 500_INTERNAL_SERVER_ERROR
                     </p>
                 </div>
