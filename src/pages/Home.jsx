@@ -453,7 +453,7 @@ const Home = () => {
                                 <h3 className="text-3xl font-bold text-title mb-4 tracking-tight group-hover:text-primary transition-colors">{dept.name}</h3>
                                 <p className="text-muted font-medium mb-10 leading-relaxed text-sm">{dept.desc}</p>
                                 <div className="flex items-center justify-between border-t border-slate-100 pt-8">
-                                    <div className="flex items-center text-xs font-black text-muted uppercase tracking-widest leading-none">
+                                    <div className="flex items-center text-xs font-black text-slate-600 uppercase tracking-widest leading-none">
                                         <Users className="w-4 h-4 mr-2.5 text-primary" /> {dept.students} Slots / Batch
                                     </div>
                                     <div className="text-primary font-black text-xs uppercase tracking-widest flex items-center group-hover:translate-x-3 transition-transform">
@@ -469,7 +469,7 @@ const Home = () => {
             {/* TESTIMONIALS CAROUSEL */}
             <section className="py-32 bg-white border-b border-slate-100 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <span className="text-blue-600 font-black tracking-[0.25em] text-xs uppercase mb-4 block">Success Stories</span>
+                    <span className="text-blue-700 font-black tracking-[0.25em] text-xs uppercase mb-4 block">Success Stories</span>
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-20 leading-tight">Alumni Shaping the World</h2>
 
                     <div
@@ -501,7 +501,7 @@ const Home = () => {
                                         <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed mb-8 md:mb-10 italic opacity-95">
                                             {t.quote}
                                         </p>
-                                        <div className="font-bold text-2xl text-slate-900 mb-1 tracking-tight">{t.name} <span className="font-medium text-slate-400 text-lg ml-2">Class of '{t.year}</span></div>
+                                        <div className="font-bold text-2xl text-slate-900 mb-1 tracking-tight">{t.name} <span className="font-medium text-slate-500 text-lg ml-2">Class of '{t.year}</span></div>
                                         <div className="text-blue-600 font-bold text-lg tracking-tight mb-6">{t.major}</div>
                                         <div className="inline-block px-5 py-2 bg-slate-900 text-white text-xs font-black uppercase tracking-[0.2em] rounded-lg shadow-card border border-white/10">{t.company}</div>
                                     </div>

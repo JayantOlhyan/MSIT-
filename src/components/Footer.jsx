@@ -76,7 +76,7 @@ const Footer = () => {
 
                     {/* Col 2 */}
                     <div>
-                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Quick Links</h4>
+                        <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Quick Links</h3>
                         <ul className="space-y-5 font-bold text-sm">
                             <li><Link to="/about" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> About MSIT</Link></li>
                             <li><Link to="/online-fee" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Admissions 2026</Link></li>
@@ -88,7 +88,7 @@ const Footer = () => {
 
                     {/* Col 3 */}
                     <div>
-                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Resources</h4>
+                        <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Resources</h3>
                         <ul className="space-y-5 font-bold text-sm">
                             <li><a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
                             <li><a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Digital Library</a></li>
@@ -101,7 +101,7 @@ const Footer = () => {
 
                     {/* Col 4 */}
                     <div>
-                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Follow Us</h4>
+                        <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Follow Us</h3>
                         <div className="flex gap-4 mb-10">
                             {[
                                 { Icon: Facebook, label: "Follow MSIT on Facebook" },
@@ -115,7 +115,7 @@ const Footer = () => {
                             ))}
                         </div>
                         <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-900">
-                            <h5 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Newsletter</h5>
+                            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-blue-400 mb-3">Newsletter</h4>
                             <div className="flex gap-2">
                                 <input type="email" placeholder="Email" className="bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs focus:border-primary outline-none w-full" />
                                 <button className="bg-primary p-2 rounded-lg text-white hover:bg-primary/80 transition-colors" aria-label="Subscribe to newsletter"><ArrowRight className="w-4 h-4" /></button>
