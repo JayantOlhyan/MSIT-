@@ -6,7 +6,7 @@ import { useAccessibility } from '../context/AccessibilityContext';
 const Footer = () => {
     const { setIsModalOpen } = useAccessibility();
     return (
-        <footer className="bg-slate-950 pt-0 pb-12 border-t border-slate-900 text-slate-400">
+        <footer className="bg-slate-950 pt-0 pb-12 border-t border-slate-900 text-slate-300">
             {/* Feedback Banner */}
             <div className="bg-gradient-to-r from-primary/30 to-blue-900/30 border-b border-slate-800 py-8 mb-20 shadow-inner">
                 <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
@@ -37,6 +37,10 @@ const Footer = () => {
                                 src="/msit-logo.png" 
                                 alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Footer Attribution" 
                                 className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105 brightness-[1.1]" 
+                                width="160"
+                                height="150"
+                                loading="lazy"
+                                decoding="async"
                             />
                             <div className="flex flex-col justify-center">
                                 <span className="font-['Libre_Baskerville',serif] font-black text-base md:text-xl tracking-tight leading-tight text-white group-hover:text-primary transition-colors">
@@ -44,10 +48,10 @@ const Footer = () => {
                                 </span>
                             </div>
                         </Link>
-                        <p className="text-slate-300 font-medium leading-relaxed mb-10 max-w-sm opacity-80">
+                        <p className="text-slate-300 font-medium leading-relaxed mb-10 max-w-sm">
                             Shaping tomorrow's engineers and innovators through exceptional academic rigor and profound industry immersion.
                         </p>
-                        <div className="space-y-6 text-sm font-bold text-muted">
+                        <div className="space-y-6 text-sm font-bold text-slate-400">
                             <div className="flex items-start group">
                                 <MapPin className="w-5 h-5 mr-4 text-slate-700 shrink-0 mt-0.5 group-hover:text-primary transition-colors" />
                                 <a 
@@ -56,7 +60,7 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     className="hover:text-white transition-colors leading-relaxed"
                                 >
-                                    C-4, Janakpuri, New Delhi<br /><span className="text-xs font-medium opacity-60 uppercase tracking-widest">PIN 110058, India</span>
+                                    C-4, Janakpuri, New Delhi<br /><span className="text-xs font-medium opacity-80 uppercase tracking-widest">PIN 110058, India</span>
                                 </a>
                             </div>
                             <div className="flex items-center group">
@@ -72,7 +76,7 @@ const Footer = () => {
 
                     {/* Col 2 */}
                     <div>
-                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-60">Quick Links</h4>
+                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Quick Links</h4>
                         <ul className="space-y-5 font-bold text-sm">
                             <li><Link to="/about" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> About MSIT</Link></li>
                             <li><Link to="/online-fee" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Admissions 2026</Link></li>
@@ -84,7 +88,7 @@ const Footer = () => {
 
                     {/* Col 3 */}
                     <div>
-                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-60">Resources</h4>
+                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Resources</h4>
                         <ul className="space-y-5 font-bold text-sm">
                             <li><a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
                             <li><a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Digital Library</a></li>
@@ -97,7 +101,7 @@ const Footer = () => {
 
                     {/* Col 4 */}
                     <div>
-                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-60">Follow Us</h4>
+                        <h4 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Follow Us</h4>
                         <div className="flex gap-4 mb-10">
                             {[
                                 { Icon: Facebook, label: "Follow MSIT on Facebook" },
@@ -121,7 +125,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold tracking-widest uppercase text-muted">
+                <div className="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold tracking-widest uppercase text-slate-400">
                     <div className="flex items-center gap-2">
                         <span>© 2026 MSIT New Delhi</span>
                         <span className="text-slate-800">•</span>
@@ -139,7 +143,7 @@ const Footer = () => {
                         </button>
                         <Link to="/admin" className="hover:text-white transition-colors">Admin</Link>
                     </div>
-                    <div className="flex items-center gap-2 text-slate-600">
+                    <div className="flex items-center gap-2 text-slate-400">
                         Made with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> in India
                     </div>
                 </div>

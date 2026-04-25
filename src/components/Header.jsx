@@ -160,6 +160,10 @@ const Header = () => {
                                 alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Main Campus Entrance" 
                                 className={`h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0 transition-all duration-300 ${isTransparent ? 'brightness-[1.2]' : ''}`} 
                                 loading="eager" 
+                                fetchpriority="high" 
+                                decoding="async"
+                                width="160"
+                                height="150" 
                             />
                             <div className="flex flex-col justify-center">
                                 <span className={`font-['Libre_Baskerville',serif] font-black text-sm md:text-base lg:text-xl tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-primary'}`}>

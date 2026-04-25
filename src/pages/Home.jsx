@@ -228,6 +228,15 @@ const Home = () => {
             />
             {/* HERO SECTION */}
             <section ref={heroRef} className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center bg-slate-900 overflow-hidden">
+                {/* LCP Discovery - Hidden High Priority Image for CSS background */}
+                <img 
+                    src="/campus-hero.jpg" 
+                    alt="Campus Hero LCP Discovery" 
+                    className="sr-only" 
+                    fetchpriority="high" 
+                    loading="eager" 
+                    decoding="async"
+                />
                 {/* Interactive Campus Background Image */}
                 <div className="absolute inset-0 z-0 group overflow-hidden">
                     <div
@@ -368,7 +377,7 @@ const Home = () => {
                                     <div key={i} className="flex items-start gap-6">
                                         <div className="mt-1 p-2.5 bg-slate-800 rounded-xl border border-white/5 shadow-inner">{feature.icon}</div>
                                         <div>
-                                            <h4 className="text-xl font-bold text-white mb-2 tracking-tight">{feature.title}</h4>
+                                            <h3 className="text-xl font-bold text-white mb-2 tracking-tight">{feature.title}</h3>
                                             <p className="text-slate-400 font-medium text-sm leading-relaxed">{feature.desc}</p>
                                         </div>
                                     </div>
@@ -404,9 +413,11 @@ const Home = () => {
                                     <button
                                         key={i}
                                         onClick={() => setCurrentHighlight(i)}
-                                        className={`h-1.5 rounded-full transition-all duration-500 ${i === currentHighlight ? 'bg-white w-8 shadow-card' : 'bg-white/20 hover:bg-white/40 w-1.5'}`}
+                                        className={`group relative py-4 px-1 rounded-full transition-all duration-500`}
                                         aria-label={`Go to slide ${i + 1}`}
-                                    />
+                                    >
+                                        <div className={`h-2 rounded-full transition-all duration-500 ${i === currentHighlight ? 'bg-white w-8 shadow-card' : 'bg-white/20 group-hover:bg-white/40 w-2.5'}`}></div>
+                                    </button>
                                 ))}
                             </div>
                         </div>
@@ -436,7 +447,7 @@ const Home = () => {
                                         <span className="grayscale group-hover:grayscale-0 transition-all duration-500" role="img" aria-label={`${dept.name} department icon`}>{dept.icon}</span>
                                     </div>
                                     <div className="text-right">
-                                        {dept.accredited && <div className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600 mt-2 bg-emerald-50 px-2 py-0.5 rounded inline-block">NBA Accredited</div>}
+                                        {dept.accredited && <div className="text-xs font-black uppercase tracking-[0.2em] text-emerald-800 mt-2 bg-emerald-50/90 px-2 py-0.5 rounded inline-block border border-emerald-100/50">NBA Accredited</div>}
                                     </div>
                                 </div>
                                 <h3 className="text-3xl font-bold text-title mb-4 tracking-tight group-hover:text-primary transition-colors">{dept.name}</h3>
@@ -480,6 +491,8 @@ const Home = () => {
                                             src={t.image} 
                                             alt={`Portrait of MSIT Alumnus ${t.name}, Class of '${t.year}, currently at ${t.company}`} 
                                             className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" 
+                                            loading="lazy"
+                                            decoding="async"
                                         />
                                     </div>
 
@@ -501,9 +514,11 @@ const Home = () => {
                                 <button
                                     key={i}
                                     onClick={() => setCurrentTestimonial(i)}
-                                    className={`h-2 rounded-full transition-all duration-500 ${i === currentTestimonial ? 'bg-primary w-12 shadow-card shadow-blue-200' : 'bg-slate-200 hover:bg-slate-300 w-2.5'}`}
+                                    className={`group relative py-4 px-1 rounded-full transition-all duration-500`}
                                     aria-label={`Go to testimonial ${i + 1}`}
-                                />
+                                >
+                                    <div className={`h-2 rounded-full transition-all duration-500 ${i === currentTestimonial ? 'bg-primary w-12 shadow-card shadow-blue-200' : 'bg-slate-200 group-hover:bg-slate-300 w-2.5'}`}></div>
+                                </button>
                             ))}
                         </div>
                     </div>
