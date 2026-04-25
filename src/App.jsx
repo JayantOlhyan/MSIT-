@@ -20,6 +20,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
 const Facilities = lazy(() => import('./pages/Facilities'));
 const FacultyStaff = lazy(() => import('./pages/FacultyStaff'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
 
 const App = () => {
     return (
@@ -40,6 +41,7 @@ const App = () => {
                             <Route path="/terms" element={<TermsOfUse />} />
                             <Route path="/facilities" element={<Facilities />} />
                             <Route path="/faculty" element={<FacultyStaff />} />
+                            <Route path="/sitemap" element={<Sitemap />} />
                             <Route path="/500" element={<ServerError />} />
                             <Route path="/:slug" element={<DynamicPage />} />
                             <Route path="*" element={<NotFound />} />
