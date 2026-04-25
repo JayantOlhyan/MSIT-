@@ -89,13 +89,11 @@ const Footer = () => {
                     {/* Col 3 */}
                     <div>
                         <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Resources</h3>
-                        <ul className="space-y-5 font-bold text-sm">
-                            <li><a href="https://msit.techtron.net/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Student Portal</a></li>
-                            <li><a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Digital Library</a></li>
-                            <li><a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Campus Mail</a></li>
-                            <li><Link to="/administration" className="hover:text-white transition-colors">Faculty Portal</Link></li>
-                            <li><Link to="/academic-calendar" className="hover:text-white transition-colors">Academic Calendar</Link></li>
-                            <li><Link to="/syllabus" className="hover:text-white transition-colors">Course Syllabus</Link></li>
+                        <ul className="space-y-4">
+                            <li><Link to="/Brochure" className="text-slate-400 hover:text-white transition-colors">Information Bulletin</Link></li>
+                            <li><Link to="/academic-calendar" className="text-slate-400 hover:text-white transition-colors">Academic Calendar</Link></li>
+                            <li><Link to="/timetable" className="text-slate-400 hover:text-white transition-colors">Time Table</Link></li>
+                            <li><Link to="/sitemap" className="text-slate-400 hover:text-white transition-colors">Sitemap</Link></li>
                         </ul>
                     </div>
 
