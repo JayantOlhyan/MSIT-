@@ -66,7 +66,7 @@ const ServerError = () => {
                                 <Mail className="w-5 h-5 text-blue-600 group-hover:text-white" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium text-slate-500">Email us at</p>
+                                <p className="text-base font-medium text-slate-500">Email us at</p>
                                 <p className="font-bold text-slate-900">support@msit.in</p>
                             </div>
                         </a>
@@ -76,7 +76,7 @@ const ServerError = () => {
                                 <Phone className="w-5 h-5 text-emerald-600 group-hover:text-white" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium text-slate-500">Call support</p>
+                                <p className="text-base font-medium text-slate-500">Call support</p>
                                 <p className="font-bold text-slate-900">+91 9667344125</p>
                             </div>
                         </a>
