@@ -4,7 +4,7 @@ export const campusLifeData = {
         subtitle: "Technical, Cultural, and Social Innovation at Maharaja Surajmal Institute of Technology.",
         seo_description: "Explore the vibrant student societies of Maharaja Surajmal Institute of Technology. Join IEEE, GDSC, Mutants, and more for a holistic campus experience.",
         category: "Campus Life",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Vibrant group of MSIT students from various technical and cultural societies on campus",
         content: `
             <div class="space-y-16">
@@ -97,7 +97,7 @@ export const campusLifeData = {
         subtitle: "The pulse of the campus at Maharaja Surajmal Institute of Technology.",
         seo_description: "Experience the energy of Maharaja Surajmal Institute of Technology's annual fests. Learn about Avensis and Genesis, our flagship tech and cultural celebrations.",
         category: "Campus Life",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Celebrity performance and energized crowd at MSIT's annual Avensis technical festival",
         content: `
             <p className="mb-6">The MSIT campus is always buzzing with activity. We host international tech symposiums, rigorous hackathons, alumni meets, and our massive annual cultural and technical festivals.</p>
@@ -115,7 +115,7 @@ export const campusLifeData = {
         subtitle: "Zero tolerance and absolute safety at Maharaja Surajmal Institute of Technology.",
         seo_description: "Maharaja Surajmal Institute of Technology ensures a safe, ragging-free campus. Our dedicated committee and squads maintain strict zero-tolerance policies.",
         category: "Campus Life",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Informational posters and security desks at MSIT ensuring a safe environment for new students",
         content: `
             <p className="mb-6">MSIT enforces a strict ZERO TOLERANCE policy towards any form of ragging. We pride ourselves on cultivating a safe, welcoming, and intellectually stimulating environment for all incoming freshers.</p>
@@ -133,7 +133,7 @@ export const campusLifeData = {
         subtitle: "A secure environment for all at Maharaja Surajmal Institute of Technology.",
         seo_description: "Maharaja Surajmal Institute of Technology's ICC (POSH) cell ensures a safe academic atmosphere for all. Access support and gender equity guidelines online.",
         category: "Campus Life",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT Internal Complaint Committee (ICC) office and dedicated counseling area overview",
         content: `
             <p className="mb-6">In compliance with the POSH Act, MSIT has constituted a dedicated Internal Complaint Committee to prevent, prohibit, and redress sexual harassment of women at the workplace and campus.</p>
@@ -151,7 +151,7 @@ export const campusLifeData = {
         subtitle: "Preparedness saves lives at Maharaja Surajmal Institute of Technology.",
         seo_description: "Learn about disaster preparedness at Maharaja Surajmal Institute of Technology. We conduct regular safety drills and maintain high-standard emergency protocols.",
         category: "Campus Life",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Emergency response and fire safety mock drill conducted at the MSIT Janakpuri campus",
         content: `
             <p className="mb-6">The safety of our students and staff is our paramount concern. The Disaster Management cell conducts regular evacuation mock drills, fire safety training, and earthquake preparedness seminars.</p>
@@ -169,7 +169,7 @@ export const campusLifeData = {
         subtitle: "Fostering professionalism and integrity at Maharaja Surajmal Institute of Technology.",
         seo_description: "Understanding the code of conduct at Maharaja Surajmal Institute of Technology. Our discipline committee ensures a professional and focused learning environment.",
         category: "Campus Life",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Disciplined and professional technical classroom environment at MSIT New Delhi",
         content: `
             <p className="mb-6">True engineers are marked by discipline. The committee ensures that students adhere to the institute's code of conduct, maintaining decorum within classrooms, laboratories, and common areas.</p>

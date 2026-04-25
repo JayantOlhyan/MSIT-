@@ -4,7 +4,7 @@ export const quickLinksData = {
         subtitle: "Your digital campus at Maharaja Surajmal Institute of Technology.",
         seo_description: "Access the MSIT ERP portal. Stay connected with your campus at Maharaja Surajmal Institute of Technology for attendance, marks, and official notices.",
         category: "Quick Links",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT student ERP portal interface for centralized academic management",
         content: `
             <p className="mb-6">The centralized Enterprise Resource Planning (ERP) portal for MSIT students. Access your attendance records, internal marks, fee receipts, and official institutional notices all in one secure place.</p>
@@ -17,7 +17,7 @@ export const quickLinksData = {
         subtitle: "A global community of innovators from Maharaja Surajmal Institute of Technology.",
         seo_description: "Connect with the global alumni network of Maharaja Surajmal Institute of Technology. Network with 15,000+ professionals and leaders across the world.",
         category: "Quick Links",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT global alumni network gathering with professionals and industry leaders",
         content: `
             <p className="mb-6">Stay connected with over 15,000 MSIT alumni spread across the globe. Our alumni network facilitates mentorship, peer networking, and exclusive job referrals from seniors working in top tech companies.</p>
@@ -30,7 +30,7 @@ export const quickLinksData = {
         subtitle: "Advancing technology for humanity at Maharaja Surajmal Institute of Technology.",
         seo_description: "Learn about IEEE MSIT, the premier technical society of Maharaja Surajmal Institute of Technology. Explore workshops, hackathons, and global tech recognition.",
         category: "Student Societies",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "IEEE MSIT student branch members collaborating on a hardware project",
         content: `
             <div class="space-y-16">

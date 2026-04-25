@@ -46,7 +46,7 @@ const Facilities = () => {
                 accentTitle="Campus Facilities" 
                 description="MSIT provides a state-of-the-art environment designed to foster innovation, research, and holistic student development."
                 breadcrumbs={[{ label: 'Facilities' }]}
-                heroImage="/campus-hero.jpg"
+                heroImage="/campus-hero.webp"
                 heroImageAlt="Modern academic infrastructure and lab facilities at the MSIT Janakpuri campus"
             />
 

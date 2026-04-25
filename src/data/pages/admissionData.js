@@ -4,7 +4,7 @@ export const admissionData = {
         subtitle: "Everything you need to know about joining Maharaja Surajmal Institute of Technology.",
         seo_description: "Download the official info brochure of Maharaja Surajmal Institute of Technology. Get details on courses, placements, faculty, and vibrant campus life at MSIT.",
         category: "Admissions",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Cover of the official MSIT information brochure featuring campus life and academic highlights",
         content: `
             <p className="mb-6">Discover why thousands of aspiring engineers choose MSIT every year. Our comprehensive information brochure outlines our academic philosophy, placement statistics, faculty profiles, and the vibrant campus life that awaits you.</p>
@@ -22,7 +22,7 @@ export const admissionData = {
         subtitle: "Secure, instant, and transparent fee portal for Maharaja Surajmal Institute of Technology.",
         seo_description: "Easily pay academic fees online at Maharaja Surajmal Institute of Technology. Our secure portal supports UPI, Net Banking, and Cards for tuition and hostel fees.",
         category: "Admissions",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Secure MSIT online fee payment portal and digital transaction interface overview",
         content: `
             <p className="mb-6">MSIT provides a fully encrypted, seamless online payment gateway for all academic fee transactions. Students can securely pay their tuition, hostel, and miscellaneous fees using Net Banking, UPI, or Credit/Debit Cards.</p>
@@ -40,7 +40,7 @@ export const admissionData = {
         subtitle: "Merit recognized and potential supported at Maharaja Surajmal Institute of Technology.",
         seo_description: "Explore scholarship opportunities at Maharaja Surajmal Institute of Technology. We offer merit-based and financial aid schemes to support deserving students.",
         category: "Admissions",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT students receiving merit scholarships and financial aid certificates on stage",
         content: `
             <p className="mb-6">We believe financial constraints should never hinder exceptional talent. MSIT offers a robust portfolio of merit-based scholarships and need-based financial assistance programs to support our most promising students.</p>
@@ -58,7 +58,7 @@ export const admissionData = {
         subtitle: "Commitment to absolute transparency at Maharaja Surajmal Institute of Technology.",
         seo_description: "View the official mandatory disclosures of Maharaja Surajmal Institute of Technology. Access AICTE approval, NBA accreditation, and audit reports for MSIT.",
         category: "Admissions",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Official AICTE and NBA mandatory disclosure documents for MSIT institutional transparency",
         content: `
             <p className="mb-6">In absolute compliance with the All India Council for Technical Education (AICTE), the University Grants Commission (UGC), and GGSIPU, MSIT publishes its mandatory disclosures for public review.</p>

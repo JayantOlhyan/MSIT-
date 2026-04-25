@@ -4,7 +4,7 @@ export const aboutData = {
         subtitle: "Shaping the future of technology and society at Maharaja Surajmal Institute of Technology.",
         seo_description: "Discover the vision and mission of Maharaja Surajmal Institute of Technology. Learn how we shape the future of engineering with excellence and ethical values.",
         category: "About MSIT",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT main building facade, Janakpuri, New Delhi - Vision and Mission view",
         content: `
             <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">VISION</h3>
@@ -23,7 +23,7 @@ export const aboutData = {
         subtitle: "Over two decades of academic excellence at Maharaja Surajmal Institute of Technology.",
         seo_description: "Explore the legacy of Maharaja Surajmal Institute of Technology since 2001. Learn about our foundation under the Surajmal Memorial Education Society in Delhi.",
         category: "About MSIT",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Historical view of the MSIT campus foundation, Janakpuri",
         content: `
             <p className="mb-6">Surajmal Memorial Education Society was founded in 1972 at Janakpuri to emulate the great qualities of Maharaja Surajmal with an aim to impart quality education in rural as well as urban areas. Academic Programmes were started in various technical streams in 1982.</p>
@@ -43,7 +43,7 @@ export const aboutData = {
         subtitle: "A legacy of engineering brilliance, innovation, and holistic development since 2001.",
         seo_description: "Discover the legacy of Maharaja Surajmal Institute of Technology. Learn about our mission to provide excellence in engineering and technology since 2001.",
         category: "About MSIT",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Maharaja Surajmal Institute of Technology campus overview, New Delhi",
         content: `
             <div class="space-y-12">
@@ -96,7 +96,7 @@ export const aboutData = {
         subtitle: "Guided by visionaries at Maharaja Surajmal Institute of Technology.",
         seo_description: "Meet the leadership team at Maharaja Surajmal Institute of Technology. Learn about our administrative structure and commitment to high academic standards.",
         category: "About MSIT",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT Administrative Block and Director's Office entrance",
         content: `
             <p className="mb-6">The leadership at MSIT is helmed by distinguished academicians and administrative experts dedicated to maintaining the highest standards of institutional governance. Under the leadership of our Director, Prof. (Dr.) Avanish Kumar Srivastava, the institute continuously strives for excellence.</p>
@@ -114,7 +114,7 @@ export const aboutData = {
         subtitle: "The visionary leadership driving Maharaja Surajmal Institute of Technology.",
         seo_description: "Discover the esteemed assembly of educationists and industry experts governing Maharaja Surajmal Institute of Technology to ensure strategic excellence.",
         category: "About MSIT",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Governing Body meeting area at Mahogany Surajmal Institute",
         content: `
             <p className="mb-6">The Governing Body of Maharaja Surajmal Institute of Technology consists of an esteemed assembly of educationists, industry representatives, and society nominees who steer the strategic direction of the institute.</p>
@@ -132,7 +132,7 @@ export const aboutData = {
         subtitle: "Messages from the honorable leadership of Maharaja Surajmal Institute of Technology.",
         seo_description: "Read messages from the leadership of Maharaja Surajmal Institute of Technology. Learn about our commitment to quality technical education and student success.",
         category: "About MSIT",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT President and Secretary's official desk area",
         content: `
             <p className="mb-6"><strong>Message from the President:</strong> The foundation of socio-economic development of a country is the education of its youth. MSIT was established by Surajmal Memorial Education Society with the aim of creating centers of excellence without profit motives, strictly following AICTE standards.</p>
@@ -150,7 +150,7 @@ export const aboutData = {
         subtitle: "A modern ecosystem for focused learning at Maharaja Surajmal Institute of Technology.",
         seo_description: "Explore the 8-acre eco-friendly campus of Maharaja Surajmal Institute of Technology. Discover our advanced labs, library, and modern hostel facilities in Delhi.",
         category: "About MSIT",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Campus facilities and modern academic infrastructure at MSIT",
         content: `
             <p className="mb-6">MSIT operates on a beautiful 8-acre eco-friendly campus in Janakpuri, New Delhi. Originally in a four-storey building (6279 sq.m), it was shifted to a more spacious seven-storey building with a built-up area of 17,837 sq.m, acquiring impressive infrastructure and resources for high-quality engineering education.</p>
@@ -170,7 +170,7 @@ export const aboutData = {
         subtitle: "The foundation of Maharaja Surajmal Institute of Technology.",
         seo_description: "Learn about the Surajmal Memorial Education Society (SMES), the philanthropic force behind Maharaja Surajmal Institute of Technology and its quality mission.",
         category: "About MSIT",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "Surajmal Memorial Education Society flagship banner on campus",
         content: `
             <p className="mb-6">The Surajmal Memorial Education Society (SMES) was established with a singular objective: to disseminate quality education and foster intellectual growth across the nation. MSIT is the flagship engineering institute of the SMES family.</p>
@@ -188,7 +188,7 @@ export const aboutData = {
         subtitle: "The MSIT administrative desk is here to assist you with any inquiries.",
         seo_description: "Contact Maharaja Surajmal Institute of Technology. Find our address, phone number, and official email for admissions, administration, and support.",
         category: "Contact Us",
-        heroImage: "/campus-hero.jpg",
+        heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT Contact desk and visitor reception area in Janakpuri",
         content: `
             <div class="space-y-12">

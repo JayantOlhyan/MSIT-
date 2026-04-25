@@ -34,7 +34,7 @@ const Footer = () => {
                     <div className="lg:col-span-2 pr-4">
                         <Link to="/" className="flex items-center gap-4 mb-10 group" aria-label="MSIT New Delhi Home">
                             <img 
-                                src="/msit-logo.png" 
+                                src="/msit-logo.webp" 
                                 alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Footer Attribution" 
                                 className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105 brightness-[1.1]" 
                                 width="160"

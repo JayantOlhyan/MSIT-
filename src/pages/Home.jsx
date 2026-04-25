@@ -48,7 +48,7 @@ const Home = () => {
                     major: "Computer Science & Engineering",
                     quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google. The connections I made here will last a lifetime.",
                     company: "Google",
-                    image: "/priya-sharma.png"
+                    image: "/priya-sharma.webp"
                 },
                 {
                     id: 2,
@@ -57,7 +57,7 @@ const Home = () => {
                     major: "Information Technology",
                     quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.",
                     company: "Microsoft",
-                    image: "/rahul-verma.png"
+                    image: "/rahul-verma.webp"
                 },
                 {
                     id: 3,
@@ -66,7 +66,7 @@ const Home = () => {
                     major: "Electronics & Communication",
                     quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
                     company: "Apple",
-                    image: "/ananya-iyer.png"
+                    image: "/ananya-iyer.webp"
                 }
             ];
             setTestimonials(defaultTestimonials);
@@ -83,9 +83,9 @@ const Home = () => {
             setHighlights(JSON.parse(storedHighlights));
         } else {
             const defaultHighlights = [
-                { id: 1, image: "/campus-lab.png", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
-                { id: 2, image: "/campus-library.png", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
-                { id: 3, image: "/campus-excellence.png", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
+                { id: 1, image: "/campus-lab.webp", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
+                { id: 2, image: "/campus-library.webp", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
+                { id: 3, image: "/campus-excellence.webp", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
             ];
             setHighlights(defaultHighlights);
         }
@@ -230,7 +230,7 @@ const Home = () => {
             <section ref={heroRef} className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center bg-slate-900 overflow-hidden">
                 {/* LCP Discovery - Hidden High Priority Image for CSS background */}
                 <img 
-                    src="/campus-hero.jpg" 
+                    src="/campus-hero.webp" 
                     alt="Campus Hero LCP Discovery" 
                     className="sr-only" 
                     fetchpriority="high" 
@@ -241,7 +241,7 @@ const Home = () => {
                 <div className="absolute inset-0 z-0 group overflow-hidden">
                     <div
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[20s] ease-out group-hover:scale-105"
-                        style={{ backgroundImage: "url('/campus-hero.jpg')" }}
+                        style={{ backgroundImage: "url('/campus-hero.webp')" }}
                     ></div>
                     {/* Dark gradient overlays */}
                     <div className="absolute inset-0 bg-slate-950/40 mix-blend-multiply"></div>

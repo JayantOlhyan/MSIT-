@@ -31,13 +31,13 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
             <meta property="og:description" content={description} />
             <meta property="og:url" content={canonicalUrl} />
             <meta property="og:site_name" content="MSIT Delhi" />
-            <meta property="og:image" content={`${baseUrl}/msit-logo.png`} />
+            <meta property="og:image" content={`${baseUrl}/msit-logo.webp`} />
 
             {/* Twitter tags */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content="https://msit-website.netlify.app/msit-logo.png" />
+            <meta name="twitter:image" content="https://msit-website.netlify.app/msit-logo.webp" />
         </Helmet>
     );
 };

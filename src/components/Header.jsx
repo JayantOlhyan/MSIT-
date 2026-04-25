@@ -156,7 +156,7 @@ const Header = () => {
                         {/* Logo Area */}
                         <Link to="/" className="flex items-center gap-3 lg:gap-4 cursor-pointer select-none">
                             <img 
-                                src="/msit-logo.png" 
+                                src="/msit-logo.webp" 
                                 alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Main Campus Entrance" 
                                 className={`h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0 transition-all duration-300 ${isTransparent ? 'brightness-[1.2]' : ''}`} 
                                 loading="eager" 
