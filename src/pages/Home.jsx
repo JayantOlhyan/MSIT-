@@ -335,42 +335,44 @@ const Home = () => {
                     <div className="relative group/stats">
                         <div 
                             ref={statsContainerRef}
-                            className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-8 md:gap-12 pb-12 lg:grid lg:grid-cols-5 lg:gap-8 lg:pb-0 lg:overflow-visible"
+                            className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-12 md:gap-16 pb-12"
                         >
                             {stats.map((stat, i) => (
                                 <div 
                                     key={i} 
                                     data-index={i}
-                                    className="flex flex-col items-center text-center group min-w-[260px] sm:min-w-[300px] lg:min-w-0 snap-center shrink-0"
+                                    className="flex flex-col items-center text-center group min-w-[300px] sm:min-w-[340px] snap-center shrink-0"
                                 >
                                     <div className="transform group-hover:-translate-y-3 transition-transform duration-300 mb-6">{React.cloneElement(stat.icon, { size: 48, className: "text-title" })}</div>
                                     <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-4 leading-none">{stat.value}</div>
-                                    <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-8">{stat.label}</div>
-                                    {stat.label === "STUDENTS ENROLLED" && (
-                                        <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                            Overview <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                        </Link>
-                                    )}
-                                    {stat.label === "PLACEMENT RATE" && (
-                                        <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                            Placements <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                        </Link>
-                                    )}
-                                    {stat.label === "RECRUITING COMPANIES" && (
-                                        <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                            Companies <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                        </Link>
-                                    )}
-                                    {stat.label === "HIGHEST PACKAGE OFFERED" && (
-                                        <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                            Honors <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                        </Link>
-                                    )}
-                                    {stat.label === "EXPERT FACULTY" && (
-                                        <Link to="/faculty" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                            Faculty <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                        </Link>
-                                    )}
+                                    <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-8 min-h-[2.5rem] flex items-center justify-center">{stat.label}</div>
+                                    <div className="mt-auto w-full flex justify-center">
+                                        {stat.label === "STUDENTS ENROLLED" && (
+                                            <Link to="/about" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                                Overview <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                            </Link>
+                                        )}
+                                        {stat.label === "PLACEMENT RATE" && (
+                                            <Link to="/placements" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                                Placements <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                            </Link>
+                                        )}
+                                        {stat.label === "RECRUITING COMPANIES" && (
+                                            <Link to="/placements" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                                Companies <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                            </Link>
+                                        )}
+                                        {stat.label === "HIGHEST PACKAGE OFFERED" && (
+                                            <Link to="/placements" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                                Honors <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                            </Link>
+                                        )}
+                                        {stat.label === "EXPERT FACULTY" && (
+                                            <Link to="/faculty" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                                Faculty <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                            </Link>
+                                        )}
+                                    </div>
                                 </div>
                             ))}
                         </div>
