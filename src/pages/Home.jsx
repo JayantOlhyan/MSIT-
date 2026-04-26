@@ -343,7 +343,15 @@ const Home = () => {
                                     data-index={i}
                                     className="flex flex-col items-center text-center group min-w-[300px] sm:min-w-[340px] snap-center shrink-0"
                                 >
-                                    <div className="transform group-hover:-translate-y-3 transition-transform duration-300 mb-6">{React.cloneElement(stat.icon, { size: 48, className: "text-title" })}</div>
+                                    <div className="transform group-hover:-translate-y-3 transition-transform duration-500 mb-8 flex items-center justify-center">
+                                        <div className="p-4 rounded-2xl bg-slate-50/50 group-hover:bg-blue-50 transition-colors duration-500 shadow-sm border border-slate-100/50">
+                                            {React.cloneElement(stat.icon, { 
+                                                size: 42, 
+                                                strokeWidth: 1.5,
+                                                className: "text-slate-800 group-hover:text-primary transition-colors duration-500" 
+                                            })}
+                                        </div>
+                                    </div>
                                     <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-4 leading-none">{stat.value}</div>
                                     <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-8 min-h-[2.5rem] flex items-center justify-center">{stat.label}</div>
                                     <div className="mt-auto w-full flex justify-center">
