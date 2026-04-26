@@ -392,6 +392,7 @@ const Home = () => {
                         ))}
                     </div>
                 </div>
+                </div>
                 <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
             </section>
 
