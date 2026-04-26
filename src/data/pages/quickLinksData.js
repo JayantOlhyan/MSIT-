@@ -20,10 +20,100 @@ export const quickLinksData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT global alumni network gathering with professionals and industry leaders",
         content: `
-            <p className="mb-6">Stay connected with over 15,000 MSIT alumni spread across the globe. Our alumni network facilitates mentorship, peer networking, and exclusive job referrals from seniors working in top tech companies.</p>
+            <div class="space-y-16">
+                <!-- Introduction -->
+                <section>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Maharaja Surajmal Institute of Technology (MSIT) takes immense pride in its ever-growing family of 15,000+ alumni. Our graduates are leading innovation in top tech companies, founding successful startups, and serving the nation in administrative roles. The <strong>Alumni Network</strong> serves as a bridge between the institute and its graduates, fostering a lifelong bond of mutual growth and support.
+                    </p>
+                </section>
+
+                <!-- Core Pillars -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-8">Core Pillars</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-blue-600">🤝</span> Mentorship
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Seniors provide valuable guidance to current students regarding career paths, higher education, and industry expectations.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-emerald-600">🌐</span> Networking
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Regular meets and digital platforms facilitate peer-to-peer networking among professionals across diverse industries.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-amber-600">💼</span> Job Referrals
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">A dedicated channel where alumni share job opportunities and refer talented MSITians within their organizations.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-purple-600">🎁</span> Giving Back
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Alumni contribute to the development of the institute through guest lectures, funding projects, and curriculum advice.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Global Presence -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-8">Global Footprint</h3>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">Our alumni are making their mark in leading global organizations, including:</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100">Google</span>
+                        <span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100">Microsoft</span>
+                        <span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100">Amazon</span>
+                        <span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100">Meta</span>
+                        <span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100">ISRO</span>
+                        <span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100">UPSC / Civil Services</span>
+                        <span class="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-100">Major Startups</span>
+                    </div>
+                </section>
+
+                <!-- Events -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-8">Alumni Engagement</h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
+                                <span class="text-blue-600 text-xl">🏠</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Annual Alumni Meet</h4>
+                                <p class="text-sm text-slate-600 leading-relaxed">The flagship 'Homecoming' event held every winter, where batches from across decades reunite on campus.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
+                                <span class="text-blue-600 text-xl">🎙️</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Expert Lectures</h4>
+                                <p class="text-sm text-slate-600 leading-relaxed">Regular interactive sessions where alumni share their journey and technological expertise with current students.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Registration -->
+                <section class="p-8 bg-slate-900 rounded-3xl text-white">
+                    <h3 class="text-2xl font-bold mb-4">Register as an Alumnus</h3>
+                    <p class="text-slate-300 mb-8 leading-relaxed">Join the official alumni portal to stay updated with institutional news, events, and job referrals.</p>
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-bold rounded-2xl hover:bg-blue-50 transition-all">
+                        Join the Network
+                    </a>
+                </section>
+            </div>
         `,
-        stats: [],
-        bulletPoints: ["Alumni Directory", "Upcoming Meets"]
+        stats: [
+            { label: "Global Alumni", value: "15,000+" },
+            { label: "Top Tech Hires", value: "2,000+" }
+        ],
+        bulletPoints: ["Mentorship Program", "Annual Homecoming", "Digital Directory", "Job Referral Hub"]
     },
     "society-ieee": {
         title: "IEEE MSIT",
