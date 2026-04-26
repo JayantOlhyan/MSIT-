@@ -1,4 +1,4 @@
-import { Download, FileText, TrendingUp, Building2, Users } from 'lucide-react';
+import { Download, FileText, TrendingUp, Building2, Users, ArrowRight, Award } from 'lucide-react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
