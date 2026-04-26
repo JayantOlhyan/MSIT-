@@ -331,16 +331,17 @@ const Home = () => {
             <section className="py-20 bg-white relative">
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
                 <div className="max-w-7xl mx-auto px-6">
-                    <div 
-                        ref={statsContainerRef}
-                        className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-16 md:gap-20 pb-12"
-                    >
-                        {stats.map((stat, i) => (
-                            <div 
-                                key={i} 
-                                data-index={i}
-                                className="flex flex-col items-center text-center group min-w-[280px] sm:min-w-[320px] snap-center shrink-0"
-                            >
+                    <div className="relative group/stats">
+                        <div 
+                            ref={statsContainerRef}
+                            className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-8 md:gap-12 pb-12 lg:grid lg:grid-cols-5 lg:gap-8 lg:pb-0 lg:overflow-visible"
+                        >
+                            {stats.map((stat, i) => (
+                                <div 
+                                    key={i} 
+                                    data-index={i}
+                                    className="flex flex-col items-center text-center group min-w-[260px] sm:min-w-[300px] lg:min-w-0 snap-center shrink-0"
+                                >
                                 <div className="transform group-hover:-translate-y-3 transition-transform duration-300 mb-6">{React.cloneElement(stat.icon, { size: 48, className: "text-title" })}</div>
                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-4 leading-none">{stat.value}</div>
                                 <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-8">{stat.label}</div>
