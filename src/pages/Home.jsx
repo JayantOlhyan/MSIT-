@@ -6,6 +6,14 @@ import {
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
+const stats = [
+    { icon: <GraduationCap />, value: "95%+", label: "PLACEMENT RATE" },
+    { icon: <Building2 />, value: "250+", label: "RECRUITING COMPANIES" },
+    { icon: <Award />, value: "₹1.2Cr", label: "HIGHEST PACKAGE OFFERED" },
+    { icon: <Users />, value: "4500+", label: "STUDENTS ENROLLED" },
+    { icon: <TrendingUp />, value: "150+", label: "EXPERT FACULTY" }
+];
+
 const Home = () => {
     const [activeNewsTab, setActiveNewsTab] = useState('all');
     // ... rest of state
@@ -164,13 +172,6 @@ const Home = () => {
         setLightboxOpen(true);
     };
 
-    const stats = [
-        { icon: <TrendingUp size={40} className="mb-4 text-primary" />, value: "95%+", label: "PLACEMENT RATE" },
-        { icon: <Building2 size={40} className="mb-4 text-primary" />, value: "250+", label: "RECRUITING COMPANIES" },
-        { icon: <Award size={40} className="mb-4 text-primary" />, value: "₹1.2Cr", label: "HIGHEST PACKAGE OFFERED" },
-        { icon: <Users size={40} className="mb-4 text-primary" />, value: "2,000+", label: "STUDENTS ENROLLED" },
-        { icon: <GraduationCap size={40} className="mb-4 text-primary" />, value: "150+", label: "EXPERT FACULTY" }
-    ];
 
     const departments = [
         {
