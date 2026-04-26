@@ -10,6 +10,8 @@ const Home = () => {
     const [activeNewsTab, setActiveNewsTab] = useState('all');
     // ... rest of state
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
+    const [activeStatIndex, setActiveStatIndex] = useState(0);
+    const statsContainerRef = useRef(null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxImage, setLightboxImage] = useState('');
 
@@ -115,6 +117,31 @@ const Home = () => {
         }, 6000);
         return () => clearInterval(timer);
     }, [testimonials.length]);
+
+    useEffect(() => {
+        const container = statsContainerRef.current;
+        if (!container) return;
+
+        const options = {
+            root: container,
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = parseInt(entry.target.getAttribute('data-index'));
+                    setActiveStatIndex(index);
+                }
+            });
+        }, options);
+
+        const children = Array.from(container.children);
+        children.forEach(child => observer.observe(child));
+
+        return () => observer.disconnect();
+    }, [stats]);
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
@@ -304,9 +331,16 @@ const Home = () => {
             <section className="py-20 bg-white relative">
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-16 md:gap-20 pb-12">
+                    <div 
+                        ref={statsContainerRef}
+                        className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-16 md:gap-20 pb-12"
+                    >
                         {stats.map((stat, i) => (
-                            <div key={i} className="flex flex-col items-center text-center group min-w-[280px] sm:min-w-[320px] snap-center shrink-0">
+                            <div 
+                                key={i} 
+                                data-index={i}
+                                className="flex flex-col items-center text-center group min-w-[280px] sm:min-w-[320px] snap-center shrink-0"
+                            >
                                 <div className="transform group-hover:-translate-y-3 transition-transform duration-300 mb-6">{React.cloneElement(stat.icon, { size: 48, className: "text-title" })}</div>
                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-4 leading-none">{stat.value}</div>
                                 <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-8">{stat.label}</div>
@@ -336,6 +370,24 @@ const Home = () => {
                                     </Link>
                                 )}
                             </div>
+                        ))}
+                    </div>
+
+                    {/* Scroll Indicators (Dots) */}
+                    <div className="flex justify-center gap-3 mt-4">
+                        {stats.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => {
+                                    const container = statsContainerRef.current;
+                                    if (container) {
+                                        const target = container.children[i];
+                                        target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                                    }
+                                }}
+                                className={`h-1.5 rounded-full transition-all duration-500 ${i === activeStatIndex ? 'bg-primary w-8 shadow-sm' : 'bg-slate-200 w-2.5'}`}
+                                aria-label={`Go to stat ${i + 1}`}
+                            />
                         ))}
                     </div>
                 </div>
