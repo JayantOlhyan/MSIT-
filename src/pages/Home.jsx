@@ -141,7 +141,8 @@ const Home = () => {
         { icon: <TrendingUp size={40} className="mb-4 text-primary" />, value: "95%+", label: "PLACEMENT RATE" },
         { icon: <Building2 size={40} className="mb-4 text-primary" />, value: "250+", label: "RECRUITING COMPANIES" },
         { icon: <Award size={40} className="mb-4 text-primary" />, value: "₹1.2Cr", label: "HIGHEST PACKAGE OFFERED" },
-        { icon: <Users size={40} className="mb-4 text-primary" />, value: "2,000+", label: "STUDENTS ENROLLED" }
+        { icon: <Users size={40} className="mb-4 text-primary" />, value: "2,000+", label: "STUDENTS ENROLLED" },
+        { icon: <GraduationCap size={40} className="mb-4 text-primary" />, value: "150+", label: "EXPERT FACULTY" }
     ];
 
     const departments = [
@@ -303,9 +304,9 @@ const Home = () => {
             <section className="py-20 bg-white relative">
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-12 pb-8 lg:grid lg:grid-cols-5 lg:pb-0">
                         {stats.map((stat, i) => (
-                            <div key={i} className="flex flex-col items-center text-center group">
+                            <div key={i} className="flex flex-col items-center text-center group min-w-[240px] snap-center lg:min-w-0">
                                 <div className="transform group-hover:-translate-y-2 transition-transform duration-300 mb-2">{React.cloneElement(stat.icon, { size: 32, className: "text-title" })}</div>
                                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-2">{stat.value}</div>
                                 <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-4">{stat.label}</div>
@@ -327,6 +328,11 @@ const Home = () => {
                                 {stat.label === "HIGHEST PACKAGE OFFERED" && (
                                     <Link to="/placements" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
                                         Honors <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                                    </Link>
+                                )}
+                                {stat.label === "EXPERT FACULTY" && (
+                                    <Link to="/faculty" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
+                                        Faculty <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                     </Link>
                                 )}
                             </div>
