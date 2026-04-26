@@ -65,8 +65,8 @@ const TermsOfUse = () => {
 
                         <section className="bg-indigo-50 p-8 rounded-2xl border border-indigo-100">
                             <h2 className="text-xl font-bold text-indigo-900 mb-2">5. Governing Law</h2>
-                            <p className="text-indigo-800 text-sm">
-                                These Terms of Use are governed by the laws of India and are subject to the exclusive jurisdiction of the courts in **New Delhi**.
+                            <p className="text-indigo-900 text-base font-medium">
+                                These Terms of Use are governed by the laws of India and are subject to the exclusive jurisdiction of the courts in <strong>New Delhi</strong>.
                             </p>
                         </section>
                 </div>

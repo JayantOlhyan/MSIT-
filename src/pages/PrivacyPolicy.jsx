@@ -37,11 +37,11 @@ const PrivacyPolicy = () => {
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
                                     <h3 className="font-bold text-slate-800 mb-2">Personal Data</h3>
-                                    <p className="text-sm text-slate-600">While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you, including names, email addresses, and phone numbers via admission forms or inquiries.</p>
+                                    <p className="text-base text-slate-600">While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you, including names, email addresses, and phone numbers via admission forms or inquiries.</p>
                                 </div>
                                 <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
                                     <h3 className="font-bold text-slate-800 mb-2">Usage Data</h3>
-                                    <p className="text-sm text-slate-600">Usage Data is collected automatically when using the Service. This may include your device's IP address, browser type, page visit duration, and other diagnostic data to improve site performance.</p>
+                                    <p className="text-base text-slate-600">Usage Data is collected automatically when using the Service. This may include your device's IP address, browser type, page visit duration, and other diagnostic data to improve site performance.</p>
                                 </div>
                             </div>
                         </section>
@@ -69,8 +69,8 @@ const PrivacyPolicy = () => {
 
                         <section className="bg-blue-50 p-8 rounded-2xl border border-blue-100">
                             <h2 className="text-xl font-bold text-blue-900 mb-2">5. Contact Us</h2>
-                            <p className="text-blue-800 text-sm mb-4">If you have any questions about this Privacy Policy, You can contact us:</p>
-                            <ul className="text-sm text-blue-700 space-y-1">
+                            <p className="text-blue-900 text-base mb-4 font-medium">If you have any questions about this Privacy Policy, You can contact us:</p>
+                            <ul className="text-base text-blue-900 space-y-2">
                                 <li><strong>Email:</strong> privacy@msit.in</li>
                                 <li><strong>Address:</strong> Maharaja Surajmal Institute of Technology, C-4, Janakpuri, New Delhi</li>
                             </ul>
