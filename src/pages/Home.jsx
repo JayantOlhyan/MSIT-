@@ -307,9 +307,9 @@ const Home = () => {
                     <div className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-16 md:gap-20 pb-12">
                         {stats.map((stat, i) => (
                             <div key={i} className="flex flex-col items-center text-center group min-w-[280px] sm:min-w-[320px] snap-center shrink-0">
-                                <div className="transform group-hover:-translate-y-2 transition-transform duration-300 mb-2">{React.cloneElement(stat.icon, { size: 32, className: "text-title" })}</div>
-                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-2">{stat.value}</div>
-                                <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-4">{stat.label}</div>
+                                <div className="transform group-hover:-translate-y-3 transition-transform duration-300 mb-6">{React.cloneElement(stat.icon, { size: 48, className: "text-title" })}</div>
+                                <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-4 leading-none">{stat.value}</div>
+                                <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-8">{stat.label}</div>
                                 {stat.label === "STUDENTS ENROLLED" && (
                                     <Link to="/about" className="mt-1 flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
                                         Overview <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
