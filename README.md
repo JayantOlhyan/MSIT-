@@ -28,7 +28,7 @@ This repository features a complete architectural overhaul and visual redesign o
 ## 🏗️ Core Architecture
 
 ### ⚡ Dynamic Page Engine
-The platform utilizes a data-driven rendering engine centered around `DynamicPage.jsx`. By decoupling content from structure, the application can render 30+ unique subpages (Departments, Admissions, Campus Life) using a single, highly optimized template. 
+The platform utilizes a data-driven rendering engine centered around `DynamicPage.jsx`. By Decoupling content from structure, the application can render 30+ unique subpages (Departments, Admissions, Campus Life) using a single, highly optimized template. 
 
 - **Single Source of Truth**: All content is managed within modularized JS objects in `src/data/`.
 - **Slug-based Routing**: Seamlessly handles navigation via dynamic route parameters.
