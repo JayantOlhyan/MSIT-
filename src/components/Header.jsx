@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp } from 'lucide-react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { searchIndex } from '../data/searchIndex';
 
 const Header = () => {
@@ -10,7 +10,6 @@ const Header = () => {
     const [searchOpen, setSearchOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState({ faculty: [], pages: [], qa: [] });
-    const navigate = useNavigate();
     const location = useLocation();
 
     useEffect(() => {
@@ -132,10 +131,7 @@ const Header = () => {
         ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white shadow-card py-1'}`
         : `sticky top-0 z-[60] w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white shadow-card py-1' : 'bg-white/95 backdrop-blur-sm py-2'}`;
 
-    const textStyle = isTransparent ? 'text-white hover:text-blue-200' : 'text-body hover:text-primary';
-    const mutedTextStyle = isTransparent ? 'text-white/80' : 'text-muted';
-    const logoColorStyle = isTransparent ? 'text-white' : 'text-primary';
-    const logoSubStyle = isTransparent ? 'text-white/90' : 'text-accent';
+
 
     const isPathActive = (path) => location.pathname === path;
     const isCategoryActive = (categoryKey) => {
@@ -144,8 +140,8 @@ const Header = () => {
 
     return (
         <>
-        <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded" style={{ position: 'absolute', left: '-9999px' }}>Skip to main content</a>
-            <header role="navigation" className="fixed top-0 left-0 w-full z-[60] flex flex-col">
+        <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
+            <header role="navigation" className={`${headerContainerClass} flex flex-col`}>
                 {/* Tier 1: Persistent Branding & Utility Bar (Transparent on Home, White on Scroll) */}
                 <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 border-b relative z-20 ${
                     isTransparent 

@@ -23,63 +23,55 @@ const Home = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxImage, setLightboxImage] = useState('');
 
-    const heroRef = useRef(null);
-    const [heroVisible, setHeroVisible] = useState(false);
-
-    useEffect(() => {
-        const currentHeroRef = heroRef.current;
-        const observer = new IntersectionObserver(
-            ([entry]) => setHeroVisible(entry.isIntersecting),
-            { threshold: 0.1 }
-        );
-        if (currentHeroRef) {
-            observer.observe(currentHeroRef);
-        }
-        return () => {
-            if (currentHeroRef) {
-                observer.unobserve(currentHeroRef);
+    const [testimonials] = useState(() => {
+        const stored = localStorage.getItem('msit_testimonials');
+        if (stored) return JSON.parse(stored);
+        const defaults = [
+            {
+                id: 1,
+                name: "Priya Sharma",
+                year: "22",
+                major: "Computer Science & Engineering",
+                quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google. The connections I made here will last a lifetime.",
+                company: "Google",
+                image: "/priya-sharma.webp"
+            },
+            {
+                id: 2,
+                name: "Rahul Verma",
+                year: "23",
+                major: "Information Technology",
+                quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.",
+                company: "Microsoft",
+                image: "/rahul-verma.webp"
+            },
+            {
+                id: 3,
+                name: "Ananya Iyer",
+                year: "21",
+                major: "Electronics & Communication",
+                quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
+                company: "Apple",
+                image: "/ananya-iyer.webp"
             }
-            observer.disconnect();
-        };
-    }, []);
-
-    const [testimonials, setTestimonials] = useState([
-        {
-            id: 1,
-            name: "Priya Sharma",
-            year: "22",
-            major: "Computer Science & Engineering",
-            quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google. The connections I made here will last a lifetime.",
-            company: "Google",
-            image: "/priya-sharma.webp"
-        },
-        {
-            id: 2,
-            name: "Rahul Verma",
-            year: "23",
-            major: "Information Technology",
-            quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.",
-            company: "Microsoft",
-            image: "/rahul-verma.webp"
-        },
-        {
-            id: 3,
-            name: "Ananya Iyer",
-            year: "21",
-            major: "Electronics & Communication",
-            quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
-            company: "Apple",
-            image: "/ananya-iyer.webp"
-        }
-    ]);
+        ];
+        localStorage.setItem('msit_testimonials', JSON.stringify(defaults));
+        return defaults;
+    });
 
     // Campus Highlights state 
     const [currentHighlight, setCurrentHighlight] = useState(0);
-    const [highlights, setHighlights] = useState([
-        { id: 1, image: "/campus-lab.webp", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
-        { id: 2, image: "/campus-library.webp", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
-        { id: 3, image: "/campus-excellence.webp", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
-    ]);
+    const [highlights] = useState(() => {
+        const stored = localStorage.getItem('msit_highlights');
+        if (stored) return JSON.parse(stored);
+        const defaults = [
+            { id: 1, image: "/campus-lab.webp", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
+            { id: 2, image: "/campus-library.webp", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
+            { id: 3, image: "/campus-excellence.webp", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
+        ];
+        localStorage.setItem('msit_highlights', JSON.stringify(defaults));
+        return defaults;
+    });
 
     useEffect(() => {
         if (highlights.length === 0) return;
@@ -149,7 +141,7 @@ const Home = () => {
         children.forEach(child => observer.observe(child));
 
         return () => observer.disconnect();
-    }, [stats]);
+    }, []);
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
@@ -208,22 +200,17 @@ const Home = () => {
         }
     ];
 
-    const [events, setEvents] = useState([]);
-
-    useEffect(() => {
+    const [events] = useState(() => {
         const storedEvents = localStorage.getItem('msit_events');
-        if (storedEvents) {
-            setEvents(JSON.parse(storedEvents));
-        } else {
-            const defaultEvents = [
-                { id: 1, label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
-                { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
-                { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
-            ];
-            setEvents(defaultEvents);
-            localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
-        }
-    }, []);
+        if (storedEvents) return JSON.parse(storedEvents);
+        const defaultEvents = [
+            { id: 1, label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
+            { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
+            { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
+        ];
+        localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
+        return defaultEvents;
+    });
 
     const filteredEvents = activeNewsTab === 'all'
         ? events
@@ -236,7 +223,7 @@ const Home = () => {
                 description="Maharaja Surajmal Institute of Technology (MSIT) is a premier engineering college in Delhi offering top-tier B.Tech programs, placements, and innovation." 
             />
             {/* HERO SECTION */}
-            <section ref={heroRef} className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center bg-slate-900 overflow-hidden">
+            <section className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center bg-slate-900 overflow-hidden">
                 {/* LCP Discovery - Hidden High Priority Image for CSS background */}
                 <img 
                     src="/campus-hero.webp" 

@@ -51,7 +51,7 @@ const Facilities = () => {
             />
 
             {/* Tab Navigation */}
-            <div className="border-b border-slate-200 sticky top-0 bg-white/80 backdrop-blur-md z-20">
+            <div className="border-b border-slate-200 sticky top-[68px] xl:top-[128px] bg-white/80 backdrop-blur-md z-20">
                 <div className="max-w-7xl mx-auto px-6 overflow-x-auto">
                     <div className="flex gap-8 py-4">
                         {tabs.map((tab) => (

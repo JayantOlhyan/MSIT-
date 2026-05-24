@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Trash2, Plus, AlertCircle, CheckCircle2, Lock } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -10,14 +10,34 @@ const AdminDashboard = () => {
     const [loginError, setLoginError] = useState('');
 
     // Dashboard State
-    const [events, setEvents] = useState([]);
+    const [events, setEvents] = useState(() => {
+        const storedEvents = localStorage.getItem('msit_events');
+        if (storedEvents) return JSON.parse(storedEvents);
+        const defaultEvents = [
+            { id: 1, label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
+            { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
+            { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
+        ];
+        localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
+        return defaultEvents;
+    });
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [link, setLink] = useState('');
     const [type, setType] = useState('NEWS');
     
     // Testimonials State
-    const [testimonials, setTestimonials] = useState([]);
+    const [testimonials, setTestimonials] = useState(() => {
+        const storedTestimonials = localStorage.getItem('msit_testimonials');
+        if (storedTestimonials) return JSON.parse(storedTestimonials);
+        const defaultTestimonials = [
+            { id: 1, name: "Priya Sharma", year: "22", major: "Computer Science & Engineering", quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google.", company: "Google", image: "/priya-sharma.webp" },
+            { id: 2, name: "Rahul Verma", year: "23", major: "Information Technology", quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.", company: "Microsoft", image: "/rahul-verma.webp" },
+            { id: 3, name: "Ananya Iyer", year: "21", major: "Electronics & Communication", quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems.", company: "Apple", image: "/ananya-iyer.webp" }
+        ];
+        localStorage.setItem('msit_testimonials', JSON.stringify(defaultTestimonials));
+        return defaultTestimonials;
+    });
     const [tName, setTName] = useState('');
     const [tYear, setTYear] = useState('');
     const [tMajor, setTMajor] = useState('');
@@ -26,60 +46,22 @@ const AdminDashboard = () => {
     const [tImage, setTImage] = useState('');
 
     // Highlights State
-    const [highlights, setHighlights] = useState([]);
+    const [highlights, setHighlights] = useState(() => {
+        const storedHighlights = localStorage.getItem('msit_highlights');
+        if (storedHighlights) return JSON.parse(storedHighlights);
+        const defaultHighlights = [
+            { id: 1, image: "/campus-lab.webp", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
+            { id: 2, image: "/campus-library.webp", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
+            { id: 3, image: "/campus-excellence.webp", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
+        ];
+        localStorage.setItem('msit_highlights', JSON.stringify(defaultHighlights));
+        return defaultHighlights;
+    });
     const [hQuote, setHQuote] = useState('');
     const [hSource, setHSource] = useState('');
     const [hImage, setHImage] = useState('');
 
-    
     const [status, setStatus] = useState(null);
-
-
-    // Initial default data if storage is empty
-    const defaultEvents = [
-        { id: 1, label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
-        { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
-        { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
-    ];
-
-    useEffect(() => {
-        // Load events from storage or use defaults
-        const storedEvents = localStorage.getItem('msit_events');
-        if (storedEvents) {
-            setEvents(JSON.parse(storedEvents));
-        } else {
-            setEvents(defaultEvents);
-            localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
-        }
-
-        // Load testimonials from storage
-        const storedTestimonials = localStorage.getItem('msit_testimonials');
-        if (storedTestimonials) {
-            setTestimonials(JSON.parse(storedTestimonials));
-        } else {
-            const defaultTestimonials = [
-                { id: 1, name: "Priya Sharma", year: "22", major: "Computer Science & Engineering", quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google.", company: "Google", image: "/priya-sharma.webp" },
-                { id: 2, name: "Rahul Verma", year: "23", major: "Information Technology", quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.", company: "Microsoft", image: "/rahul-verma.webp" },
-                { id: 3, name: "Ananya Iyer", year: "21", major: "Electronics & Communication", quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems.", company: "Apple", image: "/ananya-iyer.webp" }
-            ];
-            setTestimonials(defaultTestimonials);
-            localStorage.setItem('msit_testimonials', JSON.stringify(defaultTestimonials));
-        }
-
-        // Load highlights from storage
-        const storedHighlights = localStorage.getItem('msit_highlights');
-        if (storedHighlights) {
-            setHighlights(JSON.parse(storedHighlights));
-        } else {
-            const defaultHighlights = [
-                { id: 1, image: "/campus-lab.webp", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
-                { id: 2, image: "/campus-library.webp", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
-                { id: 3, image: "/campus-excellence.webp", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
-            ];
-            setHighlights(defaultHighlights);
-            localStorage.setItem('msit_highlights', JSON.stringify(defaultHighlights));
-        }
-    }, []);
 
 
 

@@ -5,7 +5,6 @@ import PageHero from '../components/PageHero';
 
 const Placements = () => {
     // Placement Statistics Management
-    const placementStats = []; // Initialized stats array
     const placementRecords = [
 
     // ...

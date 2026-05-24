@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-import { Search, Mail, Award, BookOpen, ChevronRight, X, TrendingUp, Search as Target, FileText, Download, Star, Briefcase, Linkedin } from 'lucide-react';
+import { Search, Mail, Award, BookOpen, ChevronRight, X, TrendingUp, Target, FileText, Download, Star, Briefcase, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { facultyMembers } from '../data/facultyData';
