@@ -517,11 +517,11 @@ const Home = () => {
                         onTouchEnd={handleTouchEnd}
                     >
 
-                        <div className="min-h-[450px] md:min-h-[350px] flex items-center justify-center relative z-10">
+                        <div className="min-h-[600px] sm:min-h-[540px] md:min-h-[350px] flex items-center justify-center relative z-10">
                             {testimonials.map((t, i) => (
                                 <div
                                     key={i}
-                                    className={`absolute inset-0 transition-all duration-1000 flex flex-col md:flex-row items-center justify-center gap-16 px-2 sm:px-4
+                                    className={`absolute inset-0 transition-all duration-1000 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-2 sm:px-4
                                     ${i === currentTestimonial ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-32 pointer-events-none -z-10'}`}
                                 >
                                     <div className="w-56 h-56 md:w-80 md:h-80 rounded-[40px] overflow-hidden shadow-card border-[12px] border-white shrink-0 transform -rotate-3 group-hover:rotate-0 transition-all duration-700 hover:scale-105">
@@ -536,11 +536,11 @@ const Home = () => {
 
                                     <div className="text-center md:text-left flex-grow max-w-xl relative">
                                         <div className="text-hero leading-none text-blue-600/10 absolute -top-10 -left-6 md:-left-10 font-serif z-0 select-none italic pointer-events-none">"</div>
-                                        <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed mb-8 md:mb-10 italic opacity-95">
+                                        <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed mb-6 md:mb-10 italic opacity-95">
                                             {t.quote}
                                         </p>
                                         <div className="font-bold text-2xl text-slate-900 mb-1 tracking-tight">{t.name} <span className="font-medium text-slate-500 text-lg ml-2">Class of '{t.year}</span></div>
-                                        <div className="text-blue-600 font-bold text-lg tracking-tight mb-6">{t.major}</div>
+                                        <div className="text-blue-600 font-bold text-lg tracking-tight mb-4 md:mb-6">{t.major}</div>
                                         <div className="inline-block px-5 py-2 bg-slate-900 text-white text-xs font-black uppercase tracking-[0.2em] rounded-lg shadow-card border border-white/10">{t.company}</div>
                                     </div>
                                 </div>
