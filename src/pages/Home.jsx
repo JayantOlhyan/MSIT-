@@ -297,20 +297,23 @@ const Home = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {filteredEvents.map((item, i) => (
-                            <a href={item.link} key={item.id || i} className={`bg-white rounded-xl shadow-card hover:shadow-card-hover border-l-4 ${item.color} p-8 flex flex-col justify-between group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
-                                <div>
-                                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-muted mb-4">{item.label}</span>
-                                    <h3 className="text-xl font-semibold text-title leading-snug mb-6 group-hover:text-primary transition-colors">{item.title}</h3>
-                                </div>
-                                <div className="flex justify-between items-center mt-auto pt-6 border-t border-slate-100">
-                                    <span className="text-sm font-medium text-muted">{item.date}</span>
-                                    <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                                        <ArrowRight className="w-4 h-4 text-muted group-hover:text-primary" />
+                        {filteredEvents.map((item, i) => {
+                            const itemLink = item.link && item.link !== '#' ? item.link : `/news-event/${item.id}`;
+                            return (
+                                <Link to={itemLink} key={item.id || i} className={`bg-white rounded-xl shadow-card hover:shadow-card-hover border-l-4 ${item.color} p-8 flex flex-col justify-between group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
+                                    <div>
+                                        <span className="inline-block text-xs font-bold uppercase tracking-widest text-muted mb-4">{item.label}</span>
+                                        <h3 className="text-xl font-semibold text-title leading-snug mb-6 group-hover:text-primary transition-colors">{item.title}</h3>
                                     </div>
-                                </div>
-                            </a>
-                        ))}
+                                    <div className="flex justify-between items-center mt-auto pt-6 border-t border-slate-100">
+                                        <span className="text-sm font-medium text-muted">{item.date}</span>
+                                        <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                                            <ArrowRight className="w-4 h-4 text-muted group-hover:text-primary" />
+                                        </div>
+                                    </div>
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

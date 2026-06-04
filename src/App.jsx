@@ -22,6 +22,7 @@ const Facilities = lazy(() => import('./pages/Facilities'));
 const FacultyStaff = lazy(() => import('./pages/FacultyStaff'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 const VirtualTour = lazy(() => import('./pages/VirtualTour'));
+const NewsDetail = lazy(() => import('./pages/NewsDetail'));
 
 const App = () => {
     return (
@@ -34,6 +35,7 @@ const App = () => {
                             <Route path="/search" element={<SearchPage />} />
                             <Route path="/placements" element={<Placements />} />
                             <Route path="/virtual-tour" element={<VirtualTour />} />
+                            <Route path="/news-event/:id" element={<NewsDetail />} />
                             <Route path="/academic-calendar" element={<AcademicCalendar />} />
                             <Route path="/syllabus" element={<Syllabus />} />
                             <Route path="/timetable" element={<TimeTable />} />

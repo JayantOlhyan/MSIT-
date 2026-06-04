@@ -242,21 +242,23 @@ const Header = () => {
                                             )}
                                         </button>
 
-                                        <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
-                                            <div className="bg-white shadow-card rounded-xl border border-slate-100 p-8 w-[550px]">
-                                                <div className="grid grid-cols-2 gap-x-10 gap-y-5">
+                                        <div className={`absolute top-full mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${
+                                            ['about', 'admission', 'academics'].includes(key) ? 'left-0' : 'right-0'
+                                        } ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
+                                            <div className="bg-white shadow-card rounded-xl border border-slate-100 p-6 w-80">
+                                                <div className="flex flex-col space-y-3.5">
                                                     {megaMenuData[key]?.map((link, i) => (
                                                         link.external ? (
-                                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-sm font-medium text-slate-600 hover:text-[#1e4a9b] hover:underline underline-offset-4 flex items-center group/link">
-                                                                {link.name}
-                                                                <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all shrink-0" />
+                                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors flex items-center justify-between group/link py-1">
+                                                                <span>{link.name}</span>
+                                                                <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all shrink-0 text-primary" />
                                                             </a>
                                                         ) : (
-                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className={`text-sm font-medium transition-all underline-offset-4 flex items-center group/link ${
-                                                                isPathActive(link.url) ? 'text-primary font-bold' : 'text-body hover:text-primary hover:underline'
+                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className={`text-sm font-semibold transition-all flex items-center justify-between group/link py-1 ${
+                                                                isPathActive(link.url) ? 'text-primary font-bold' : 'text-slate-600 hover:text-primary'
                                                             }`}>
-                                                                {link.name}
-                                                                <ArrowRight className={`w-3 h-3 ml-2 transition-all shrink-0 ${isPathActive(link.url) ? 'opacity-100 translate-x-1' : 'opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1'}`} />
+                                                                <span>{link.name}</span>
+                                                                <ArrowRight className={`w-3.5 h-3.5 transition-all shrink-0 text-primary ${isPathActive(link.url) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0'}`} />
                                                             </Link>
                                                         )
                                                     ))}

@@ -26,6 +26,21 @@ const AdminDashboard = () => {
     const [link, setLink] = useState('');
     const [type, setType] = useState('NEWS');
     
+    // Detailed News/Event fields
+    const [summary, setSummary] = useState('');
+    const [content, setContent] = useState('');
+    const [bgImage, setBgImage] = useState('');
+    
+    // PDF Attachments state
+    const [attachmentsList, setAttachmentsList] = useState([]);
+    const [attName, setAttName] = useState('');
+    const [attSize, setAttSize] = useState('');
+    
+    // Related Links state
+    const [relatedLinksList, setRelatedLinksList] = useState([]);
+    const [rLinkName, setRLinkName] = useState('');
+    const [rLinkUrl, setRLinkUrl] = useState('');
+    
     // Testimonials State
     const [testimonials, setTestimonials] = useState(() => {
         const storedTestimonials = localStorage.getItem('msit_testimonials');
@@ -121,7 +136,12 @@ const AdminDashboard = () => {
             title,
             date,
             link: link || "#",
-            color
+            color,
+            summary: summary || title,
+            content: content || `<p class="mb-6">${title}</p>`,
+            bgImage: bgImage || "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+            attachments: attachmentsList,
+            links: relatedLinksList
         };
 
         const updatedEvents = [newEvent, ...events];
@@ -131,7 +151,12 @@ const AdminDashboard = () => {
         setTitle('');
         setDate('');
         setLink('');
-        setStatus({ type: 'success', message: 'Event added successfully!' });
+        setSummary('');
+        setContent('');
+        setBgImage('');
+        setAttachmentsList([]);
+        setRelatedLinksList([]);
+        setStatus({ type: 'success', message: 'Event/Article published successfully!' });
         setTimeout(() => setStatus(null), 3000);
     };
 
@@ -343,7 +368,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Target Link URL (Optional)</label>
+                                <label className="text-sm font-medium text-slate-700">Target Link URL / External Redirection (Optional)</label>
                                 <input
                                     type="text"
                                     placeholder="https://..."
@@ -351,6 +376,141 @@ const AdminDashboard = () => {
                                     value={link}
                                     onChange={(e) => setLink(e.target.value)}
                                 />
+                            </div>
+
+                            <div className="space-y-2 md:col-span-2">
+                                <label className="text-sm font-medium text-slate-700">Background Image URL (Optional)</label>
+                                <input
+                                    type="text"
+                                    placeholder="https://images.unsplash.com/... or leave blank for default"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    value={bgImage}
+                                    onChange={(e) => setBgImage(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2 md:col-span-2">
+                                <label className="text-sm font-medium text-slate-700">Short Summary</label>
+                                <input
+                                    type="text"
+                                    placeholder="Brief 1-sentence summary of the news/event"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    value={summary}
+                                    onChange={(e) => setSummary(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2 md:col-span-2">
+                                <label className="text-sm font-medium text-slate-700">Full Article Content (HTML/Plain Text)</label>
+                                <textarea
+                                    rows="5"
+                                    placeholder="Enter full paragraphs, e.g. <p class='mb-4'>Paragraph content...</p>"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none font-mono text-xs"
+                                    value={content}
+                                    onChange={(e) => setContent(e.target.value)}
+                                />
+                            </div>
+
+                            {/* Dynamic PDF Attachment Manager */}
+                            <div className="p-4 bg-white rounded-xl border border-slate-200 md:col-span-2 space-y-4">
+                                <h3 className="text-sm font-bold text-slate-800">Add PDF Attachments</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <input 
+                                        type="text" 
+                                        placeholder="Document Name (e.g. Schedule.pdf)" 
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 outline-none"
+                                        value={attName} 
+                                        onChange={(e) => setAttName(e.target.value)}
+                                    />
+                                    <input 
+                                        type="text" 
+                                        placeholder="Size (e.g. 1.2 MB)" 
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 outline-none"
+                                        value={attSize} 
+                                        onChange={(e) => setAttSize(e.target.value)}
+                                    />
+                                    <button 
+                                        type="button"
+                                        onClick={() => {
+                                            if (attName.trim()) {
+                                                setAttachmentsList([...attachmentsList, { name: attName, size: attSize || '1.0 MB', url: '#' }]);
+                                                setAttName('');
+                                                setAttSize('');
+                                            }
+                                        }}
+                                        className="px-4 py-2 text-xs bg-slate-900 text-white font-bold rounded-lg hover:bg-slate-800 transition-colors"
+                                    >
+                                        Add Attachment
+                                    </button>
+                                </div>
+
+                                {attachmentsList.length > 0 && (
+                                    <div className="pt-2 space-y-1.5">
+                                        {attachmentsList.map((item, index) => (
+                                            <div key={index} className="flex justify-between items-center bg-slate-50 p-2 rounded border border-slate-100 text-xs">
+                                                <span className="font-semibold text-slate-700">{item.name} ({item.size})</span>
+                                                <button 
+                                                    type="button" 
+                                                    onClick={() => setAttachmentsList(attachmentsList.filter((_, i) => i !== index))}
+                                                    className="text-red-500 font-bold hover:underline"
+                                                >
+                                                    Remove
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Dynamic Related Links Manager */}
+                            <div className="p-4 bg-white rounded-xl border border-slate-200 md:col-span-2 space-y-4">
+                                <h3 className="text-sm font-bold text-slate-800">Add Related Links</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <input 
+                                        type="text" 
+                                        placeholder="Link Text (e.g. Registration Portal)" 
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 outline-none"
+                                        value={rLinkName} 
+                                        onChange={(e) => setRLinkName(e.target.value)}
+                                    />
+                                    <input 
+                                        type="text" 
+                                        placeholder="URL (e.g. https://...)" 
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 outline-none"
+                                        value={rLinkUrl} 
+                                        onChange={(e) => setRLinkUrl(e.target.value)}
+                                    />
+                                    <button 
+                                        type="button"
+                                        onClick={() => {
+                                            if (rLinkName.trim() && rLinkUrl.trim()) {
+                                                setRelatedLinksList([...relatedLinksList, { name: rLinkName, url: rLinkUrl }]);
+                                                setRLinkName('');
+                                                setRLinkUrl('');
+                                            }
+                                        }}
+                                        className="px-4 py-2 text-xs bg-slate-900 text-white font-bold rounded-lg hover:bg-slate-800 transition-colors"
+                                    >
+                                        Add Link
+                                    </button>
+                                </div>
+
+                                {relatedLinksList.length > 0 && (
+                                    <div className="pt-2 space-y-1.5">
+                                        {relatedLinksList.map((item, index) => (
+                                            <div key={index} className="flex justify-between items-center bg-slate-50 p-2 rounded border border-slate-100 text-xs">
+                                                <span className="font-semibold text-slate-700">{item.name} → {item.url}</span>
+                                                <button 
+                                                    type="button" 
+                                                    onClick={() => setRelatedLinksList(relatedLinksList.filter((_, i) => i !== index))}
+                                                    className="text-red-500 font-bold hover:underline"
+                                                >
+                                                    Remove
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
 
