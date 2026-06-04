@@ -102,12 +102,12 @@ const Footer = () => {
                         <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Follow Us</h3>
                         <div className="flex gap-4 mb-10">
                             {[
-                                { Icon: Facebook, label: "Follow MSIT on Facebook" },
-                                { Icon: Twitter, label: "Follow MSIT on Twitter" },
-                                { Icon: Linkedin, label: "Follow MSIT on LinkedIn" },
-                                { Icon: Instagram, label: "Follow MSIT on Instagram" }
-                            ].map(({ Icon, label }, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all hover:-translate-y-1 border border-slate-800" aria-label={label}>
+                                { Icon: Facebook, href: "https://www.facebook.com/msitnewdelhi/", label: "Follow MSIT on Facebook" },
+                                { Icon: Twitter, href: "https://x.com/msitnewdelhi?lang=en", label: "Follow MSIT on Twitter" },
+                                { Icon: Linkedin, href: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/posts/?feedView=all", label: "Follow MSIT on LinkedIn" },
+                                { Icon: Instagram, href: "https://www.instagram.com/msitnewdelhi/?hl=en", label: "Follow MSIT on Instagram" }
+                            ].map(({ Icon, href, label }, i) => (
+                                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all hover:-translate-y-1 border border-slate-800" aria-label={label}>
                                     <Icon className="w-5 h-5" />
                                 </a>
                             ))}

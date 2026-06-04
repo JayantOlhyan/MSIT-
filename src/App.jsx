@@ -21,6 +21,7 @@ const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
 const Facilities = lazy(() => import('./pages/Facilities'));
 const FacultyStaff = lazy(() => import('./pages/FacultyStaff'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
+const VirtualTour = lazy(() => import('./pages/VirtualTour'));
 
 const App = () => {
     return (
@@ -32,6 +33,7 @@ const App = () => {
                             <Route index element={<Home />} />
                             <Route path="/search" element={<SearchPage />} />
                             <Route path="/placements" element={<Placements />} />
+                            <Route path="/virtual-tour" element={<VirtualTour />} />
                             <Route path="/academic-calendar" element={<AcademicCalendar />} />
                             <Route path="/syllabus" element={<Syllabus />} />
                             <Route path="/timetable" element={<TimeTable />} />
