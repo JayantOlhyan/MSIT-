@@ -286,38 +286,40 @@ const Header = () => {
 
             {/* Mobile Nav Overlay (Smooth Sliding Drawer) */}
             <div className={`fixed inset-0 z-50 bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pt-24 pb-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
-                <div className="p-6 sm:p-8 flex flex-col space-y-4 max-w-lg mx-auto">
-                    {Object.entries(megaMenuData).map(([key, items], idx) => (
-                        <div key={idx} className="border-b border-slate-50 py-2">
-                            <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3 mt-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                            <div className="space-y-1">
-                                {items.map((link, i) => (
-                                    link.external ? (
-                                        <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">
-                                            {link.name}
-                                        </a>
-                                    ) : (
-                                        <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-lg ${
-                                            isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-medium text-body hover:text-title hover:bg-slate-50'
-                                        }`}>
-                                            {link.name}
-                                        </Link>
-                                    )
-                                ))}
+                <div className="p-6 sm:p-10 max-w-lg sm:max-w-4xl md:max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-8">
+                        {Object.entries(megaMenuData).map(([key, items], idx) => (
+                            <div key={idx} className="py-2">
+                                <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-900 border-b border-slate-100 pb-3 mb-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                                <div className="space-y-1">
+                                    {items.map((link, i) => (
+                                        link.external ? (
+                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                                {link.name}
+                                            </a>
+                                        ) : (
+                                            <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${
+                                                isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
+                                            }`}>
+                                                {link.name}
+                                            </Link>
+                                        )
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
 
-                    <div className="pt-10 space-y-4 pb-20">
+                    <div className="pt-12 grid sm:grid-cols-2 gap-4 pb-20">
                         <a 
                             href="https://ipu.admissions.nic.in/" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="block w-full py-5 text-center rounded-2xl bg-slate-900 text-white font-bold text-lg shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer"
+                            className="block w-full py-4 text-center rounded-2xl bg-slate-900 text-white font-bold text-base shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer"
                         >
                             Apply Now
                         </a>
-                        <button className="w-full py-5 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-lg hover:bg-slate-50 transition-all active:scale-95 cursor-pointer">Visit Campus</button>
+                        <button className="w-full py-4 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-base hover:bg-slate-50 transition-all active:scale-95 cursor-pointer">Visit Campus</button>
                     </div>
                 </div>
             </div>

@@ -139,6 +139,7 @@ const Footer = () => {
                         >
                             Accessibility
                         </button>
+                        <Link to="/team" className="hover:text-white transition-colors">Meet the Team</Link>
                         <Link to="/admin" className="hover:text-white transition-colors">Admin</Link>
                     </div>
                     <div className="flex items-center gap-2 text-slate-400">
