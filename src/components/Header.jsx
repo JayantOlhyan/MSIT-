@@ -334,7 +334,7 @@ const Header = () => {
                         >
                             Apply Now
                         </a>
-                        <button className="w-full py-4 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-base hover:bg-slate-50 transition-all active:scale-95 cursor-pointer">Visit Campus</button>
+                        <Link to="/virtual-tour" onClick={() => setIsMenuOpen(false)} className="w-full py-4 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-base hover:bg-slate-50 transition-all active:scale-95 cursor-pointer block">Visit Campus</Link>
                     </div>
                 </div>
             </div>
