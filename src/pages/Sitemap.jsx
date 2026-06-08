@@ -89,7 +89,10 @@ const Sitemap = () => {
                                             to={link.path} 
                                             className="group flex items-center justify-between text-body hover:text-primary transition-colors py-1"
                                         >
-                                            <span className="font-medium">{link.label}</span>
+                                            <span className="font-medium relative pb-1">
+                                                {link.label}
+                                                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
+                                            </span>
                                             <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                                         </Link>
                                     </li>
