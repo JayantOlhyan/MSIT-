@@ -49,7 +49,9 @@ export default defineConfig({
         '/internship-cell',
         '/student-portal',
         '/alumni-network',
-        '/society-ieee'
+        '/society-ieee',
+        '/team',
+        '/virtual-tour'
       ]
     })
   ],
