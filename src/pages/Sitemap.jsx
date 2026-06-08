@@ -12,8 +12,15 @@ const Sitemap = () => {
                 { label: "Home", path: "/" },
                 { label: "About MSIT", path: "/about" },
                 { label: "Vision & Mission", path: "/vision-mission" },
+                { label: "History & Legacy", path: "/history" },
+                { label: "Director's Message", path: "/fromdesk" },
+                { label: "Governing Body", path: "/govern" },
                 { label: "Administration", path: "/administration" },
+                { label: "Faculty & Staff", path: "/faculty" },
+                { label: "Campus Facilities", path: "/facilities" },
+                { label: "Virtual Tour", path: "/virtual-tour" },
                 { label: "Mandatory Disclosures", path: "/mandatory-disclosures" },
+                { label: "SMES Society", path: "/smes" },
                 { label: "Contact Us", path: "/contact" },
             ]
         },
@@ -28,17 +35,28 @@ const Sitemap = () => {
                 { label: "Academic Calendar", path: "/academic-calendar" },
                 { label: "Syllabus", path: "/syllabus" },
                 { label: "Time Table", path: "/timetable" },
+                { label: "Information Bulletin (Brochure)", path: "/brochure" },
+                { label: "Online Fee Payment", path: "/online-fee" },
             ]
         },
         {
             category: "Student Life & Placement",
             links: [
                 { label: "Placements Overview", path: "/placements" },
+                { label: "Internship Cell", path: "/internship-cell" },
                 { label: "Scholarships", path: "/scholarships" },
                 { label: "Societies & Clubs", path: "/society" },
+                { label: "IEEE Student Branch", path: "/society-ieee" },
+                { label: "Research & Publications", path: "/research" },
                 { label: "Events & News", path: "/events" },
                 { label: "Alumni Network", path: "/alumni-network" },
                 { label: "Student Portal", path: "/student-portal" },
+                { label: "Anti-Ragging Guidelines", path: "/antiragging" },
+                { label: "POSH Cell", path: "/posh" },
+                { label: "Disaster Management", path: "/disaster" },
+                { label: "Student Discipline", path: "/discipline" },
+                { label: "Search Portal", path: "/search" },
+                { label: "Meet the Team", path: "/team" },
             ]
         }
     ];
