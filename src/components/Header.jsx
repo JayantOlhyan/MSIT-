@@ -308,6 +308,24 @@ const Header = () => {
                                 </div>
                             </div>
                         ))}
+                        {/* Contact Section */}
+                        <div className="py-2">
+                            <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-900 border-b border-slate-100 pb-3 mb-4 px-2">Contact</div>
+                            <div className="space-y-1">
+                                <Link to="/faculty" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Faculty Directory
+                                </Link>
+                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Campus Mail
+                                </a>
+                                <Link to="/virtual-tour" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Campus Tour
+                                </Link>
+                                <a href="https://ipu.admissions.nic.in/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="pt-12 grid sm:grid-cols-2 gap-4 pb-20">
