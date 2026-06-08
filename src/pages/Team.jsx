@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
-import { Users, Code, Award, GraduationCap, X, Mail, Linkedin, Github, ExternalLink, Calendar, Star, FileText } from 'lucide-react';
+import { Users, Code, Award, GraduationCap, X, Mail, Linkedin, Github, ExternalLink, Calendar, Star, FileText, ChevronRight } from 'lucide-react';
+
 
 const Team = () => {
     const [selectedMember, setSelectedMember] = useState(null);
