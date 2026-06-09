@@ -136,28 +136,79 @@ export const searchIndex = {
         { name: "Dr. Shalu", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
     ],
     pages: [
-        { title: "About MSIT", url: "/about", keywords: "history, mission, vision, college, general" },
-        { title: "Placement Overview", url: "/placements", keywords: "jobs, salary, companies, recruit" },
-        { title: "Facilities & Campus", url: "/facilities", keywords: "hostel, library, lab, physical" },
-        { title: "Admission Guidance", url: "/admission", keywords: "apply, fees, process, intake" },
-        { title: "CSE Department", url: "/departments/cse", keywords: "computer science, engineering, tech" },
-        { title: "Contact Us", url: "/contact", keywords: "phone, email, map, address, help, contact, office" }
+        { title: "Home", url: "/", keywords: "home, main, mainpage, index, maharaja surajmal" },
+        { title: "About MSIT", url: "/about", keywords: "about, history, mission, vision, college, general, info" },
+        { title: "Vision & Mission", url: "/vision-mission", keywords: "vision, mission, goal, aim, objective" },
+        { title: "History & Legacy", url: "/history", keywords: "history, origin, legacy, smes, background" },
+        { title: "Director's Message", url: "/fromdesk", keywords: "director, desk, message, avanish srivastava" },
+        { title: "Governing Body", url: "/govern", keywords: "governing, body, committee, members, management" },
+        { title: "Administration", url: "/administration", keywords: "admin, administration, leadership, office, staff" },
+        { title: "Faculty & Staff Directory", url: "/faculty", keywords: "faculty, teachers, staff, directory, prof, assistant, associate" },
+        { title: "Campus Facilities", url: "/facilities", keywords: "hostel, library, lab, physical, canteen, sports, infrastructure, campus" },
+        { title: "Virtual Tour", url: "/virtual-tour", keywords: "tour, virtual, campus, map, entry, building, entry, 3d" },
+        { title: "Mandatory Disclosures", url: "/mandatory-disclosures", keywords: "mandatory, disclosures, aicte, approval, documents" },
+        { title: "SMES Society", url: "/smes", keywords: "smes, society, surajmal, education, trust" },
+        { title: "Contact Us", url: "/contact", keywords: "phone, email, map, address, help, contact, office, location" },
+        { title: "Computer Science & Engineering (CSE)", url: "/cse", keywords: "computer science, cse, engineering, programming, coding" },
+        { title: "Information Technology (IT)", url: "/it", keywords: "information technology, it, programming, database, networks" },
+        { title: "Electronics & Communication (ECE)", url: "/ece", keywords: "electronics, communication, ece, hardware, circuits, signal" },
+        { title: "Electrical & Electronics (EEE)", url: "/eee", keywords: "electrical, electronics, eee, power, machine, circuit" },
+        { title: "Applied Sciences (1st Year)", url: "/applied-sciences", keywords: "applied, sciences, physics, chemistry, maths, humanity, first year, 1st year" },
+        { title: "Academic Calendar", url: "/academic-calendar", keywords: "calendar, dates, exams, holidays, schedule, academic" },
+        { title: "Syllabus", url: "/syllabus", keywords: "syllabus, curriculum, course, subjects, study" },
+        { title: "Time Table", url: "/timetable", keywords: "timetable, schedule, classes, periods, timing" },
+        { title: "Information Bulletin (Brochure)", url: "/brochure", keywords: "brochure, bulletin, admissions, booklet, prospectus" },
+        { title: "Online Fee Payment", url: "/online-fee", keywords: "fees, payment, online, tuition, transaction, portal" },
+        { title: "Placements Overview", url: "/placements", keywords: "placements, jobs, salary, companies, recruit, package, package" },
+        { title: "Internship Cell", url: "/internship-cell", keywords: "internship, training, summer, stipend, cell" },
+        { title: "Scholarships", url: "/scholarships", keywords: "scholarships, aid, financial, grant, support" },
+        { title: "Societies & Clubs", url: "/society", keywords: "societies, clubs, techsoc, iosd, cultural, extracurricular, student life" },
+        { title: "IEEE Student Branch", url: "/society-ieee", keywords: "ieee, society, branch, research, networking" },
+        { title: "Research & Publications", url: "/research", keywords: "research, journals, papers, patents, projects, publications" },
+        { title: "Events & News", url: "/events", keywords: "events, news, updates, festivals, notices" },
+        { title: "Alumni Network", url: "/alumni-network", keywords: "alumni, meet, network, seniors, graduation" },
+        { title: "Student Login Portal", url: "/student-portal", keywords: "student, login, moodle, central, attendance, marks, portal" },
+        { title: "Anti-Ragging Guidelines", url: "/antiragging", keywords: "antiragging, ragging, policy, safety, discipline" },
+        { title: "POSH Cell (Women Safety)", url: "/posh", keywords: "posh, women, safety, harassment, complaint, committee" },
+        { title: "Disaster Management", url: "/disaster", keywords: "disaster, management, safety, emergency, drill" },
+        { title: "Student Discipline Committee", url: "/discipline", keywords: "discipline, rules, conduct, behavior, suspension" },
+        { title: "Meet the Core Team", url: "/team", keywords: "team, developers, project, creators, website, jayant, pawan, abhay" }
     ],
     qa: [
         {
             q: "Where is MSIT located?",
             a: "Maharaja Surajmal Institute of Technology is at C-4 Janakpuri, New Delhi. The campus is 2.5km from Janakpuri West Metro Station.",
-            keywords: "address, location, place, office"
+            keywords: "address, location, place, office, route, map"
         },
         {
             q: "How to contact the college?",
             a: "For immediate assistance, please contact the Administration Office at MSIT Janakpuri. Phone: +91 96673 44125 or Email: info@msit.in",
-            keywords: "phone, inquiry, help, call, contact"
+            keywords: "phone, inquiry, help, call, contact, mobile, mail"
         },
         {
             q: "What are the B.Tech programs offered?",
             a: "MSIT offers B.Tech in Computer Science (CSE), Information Technology (IT), Electronics & Communication (ECE), and Electrical & Electronics (EEE).",
-            keywords: "courses, branches, majors, btech"
+            keywords: "courses, branches, majors, btech, stream, degree"
+        },
+        {
+            q: "What is the highest placement package?",
+            a: "MSIT has a stellar placement record, with the highest package reaching over 50 LPA at top recruiters like Google, Microsoft, and Amazon. The average package is around 8-9 LPA.",
+            keywords: "placements, jobs, salary, package, highest, average, careers"
+        },
+        {
+            q: "How to pay college fees online?",
+            a: "Fees can be paid online through the Online Fee Payment portal at /online-fee using net banking, UPI, or debit/credit cards.",
+            keywords: "fee, online, payment, pay, banking, cost"
+        },
+        {
+            q: "Where can I find the exam syllabus?",
+            a: "The syllabus for all engineering courses is available at /syllabus. You can select your branch (CSE, IT, ECE, EEE) to download it.",
+            keywords: "syllabus, exam, curriculum, study, download, courses"
+        },
+        {
+            q: "What societies and clubs are active at MSIT?",
+            a: "MSIT has vibrant student societies including TechSoc, IOSD (Software), IEEE Student Branch, and cultural clubs for dance, music, and drama. Explore them at /society.",
+            keywords: "societies, clubs, technical, dance, music, extracurricular, active"
         }
     ]
 };
