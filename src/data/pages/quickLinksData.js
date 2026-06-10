@@ -242,6 +242,103 @@ export const quickLinksData = {
             { label: "Established", value: "2009" },
             { label: "R10 Rank", value: "#1" }
         ],
-        bulletPoints: ["Computer Society (CS)", "Power & Energy (PES)", "Robotics (RAS)", "Women in Engineering"]
+    },
+    "attendance": {
+        title: "Attendance Rules",
+        subtitle: "Official guidelines and criteria for academic attendance compliance at MSIT.",
+        seo_description: "Learn about the official B.Tech academic attendance requirements, relaxation criteria, medical provisions, and detention policies at Maharaja Surajmal Institute of Technology.",
+        category: "Quick Links",
+        heroImage: "/campus-hero.webp",
+        heroImageAlt: "MSIT campus bulletin board with official academic circulars and attendance guidelines",
+        content: `
+            <div class="space-y-16">
+                <!-- Introduction -->
+                <section>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        At Maharaja Surajmal Institute of Technology (MSIT), regular attendance is considered a fundamental aspect of academic discipline and learning. In compliance with the ordinances of <strong>Guru Gobind Singh Indraprastha University (GGSIPU)</strong>, students are required to maintain a high level of attendance in both lectures and practical labs to remain eligible for university examinations.
+                    </p>
+                </section>
+
+                <!-- Core Attendance Policy -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-8">Core Policy Ordinance</h3>
+                    <div class="p-6 bg-blue-50/50 border border-blue-100 rounded-3xl mb-8">
+                        <h4 class="font-extrabold text-blue-900 mb-3 flex items-center gap-2">
+                            <span>📌</span> The 75% Requirement
+                        </h4>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            Under GGSIPU Ordinance 11, every student is expected to attend <strong>not less than 75%</strong> of the total classes held in each subject (including lectures, tutorials, and practicals) in each semester. Falling below this threshold without approved reasons leads to direct disqualification from semester end-term examinations.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-red-500">⚠️</span> Detention Policy
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Students with attendance less than 75% in a semester will be placed on the Detained List. Detained students will not be allowed to sit for internal or external exams for those subjects.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-emerald-500">📊</span> Monthly Monitoring
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Attendance sheets are updated and published on notice boards and the student portal by the first week of every month to keep students informed.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Relaxation and Leaves -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-8">Relaxation & Leave Provisions</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        The institute allows a maximum relaxation of <strong>up to 10%</strong> (minimum threshold reduced to 65%) under special circumstances, subject to prior approval and genuine supporting documents:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-blue-600">🩺</span> Medical Grounds
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                In case of severe illness, hospitalization, or medical emergency, students must submit a formal application along with a valid Medical Certificate, prescription slips, and fitness certificate issued by a registered medical practitioner.
+                            </p>
+                            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full uppercase tracking-wider">Submit within 5 days of resuming classes</span>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-blue-600">🏆</span> Official Duty Leaves (OD)
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Students representing MSIT in university-approved sports matches, national hackathons, technical conferences, or official cultural festivals can apply for Duty Leaves. The leave must be recommended by the faculty coordinator and approved by the HOD.
+                            </p>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">Requires prior formal approval</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Procedures -->
+                <section class="p-8 bg-slate-900 rounded-3xl text-white">
+                    <h3 class="text-2xl font-bold mb-4">Procedure for Submitting Leave Applications</h3>
+                    <ol class="list-decimal list-inside space-y-4 text-slate-300 text-sm leading-relaxed mb-8">
+                        <li>Obtain the standard attendance leave application form from your respective Department office.</li>
+                        <li>Attach the required supporting credentials (original medical bills, certificates, or duty certificates).</li>
+                        <li>Get the application signed by your class mentor/counselor and submit it to the HOD's office for approval.</li>
+                        <li>Verify that the status is updated on the online student ERP portal once approved.</li>
+                    </ol>
+                    <div class="flex gap-4">
+                        <a href="/brochure" class="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-900 font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-slate-100 transition-all">
+                            View Information Bulletin
+                        </a>
+                    </div>
+                </section>
+            </div>
+        `,
+        stats: [
+            { label: "Required Minimum", value: "75%" },
+            { label: "Medical Buffer", value: "Up to 10%" },
+            { label: "Update Frequency", value: "Monthly" }
+        ],
+        bulletPoints: ["IP University Ordinance 11", "Medical Certificate Policy", "Official Duty Leaves (OD)", "Detained List Penalties"]
     }
 };

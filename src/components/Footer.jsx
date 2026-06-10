@@ -89,11 +89,11 @@ const Footer = () => {
                     {/* Col 3 */}
                     <div>
                         <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Resources</h3>
-                        <ul className="space-y-4">
-                            <li><Link to="/Brochure" className="text-slate-400 hover:text-white transition-colors">Information Bulletin</Link></li>
-                            <li><Link to="/academic-calendar" className="text-slate-400 hover:text-white transition-colors">Academic Calendar</Link></li>
-                            <li><Link to="/timetable" className="text-slate-400 hover:text-white transition-colors">Time Table</Link></li>
-                            <li><Link to="/sitemap" className="text-slate-400 hover:text-white transition-colors">Sitemap</Link></li>
+                        <ul className="space-y-5 font-bold text-sm">
+                            <li><Link to="/brochure" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Information Bulletin</Link></li>
+                            <li><Link to="/academic-calendar" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Academic Calendar</Link></li>
+                            <li><Link to="/timetable" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Time Table</Link></li>
+                            <li><Link to="/sitemap" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Sitemap</Link></li>
                         </ul>
                     </div>
 
@@ -126,8 +126,6 @@ const Footer = () => {
                 <div className="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold tracking-widest uppercase text-slate-400">
                     <div className="flex items-center gap-2">
                         <span>© 2026 MSIT New Delhi</span>
-                        <span className="text-slate-800">•</span>
-                        <span>Design by Jayant Olhyan</span>
                     </div>
                     <div className="flex gap-8">
                         <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
@@ -141,9 +139,6 @@ const Footer = () => {
                         </button>
                         <Link to="/team" className="hover:text-white transition-colors">Meet the Team</Link>
                         <Link to="/admin" className="hover:text-white transition-colors">Admin</Link>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-400">
-                        Made with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> in India
                     </div>
                 </div>
             </div>

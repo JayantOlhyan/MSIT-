@@ -108,10 +108,11 @@ const Header = () => {
         ],
         placements: [
             { name: "Careers & Placements", url: "/placements" },
-            { name: "Internship Cell", url: "/internship-cell" }
+            { name: "Internship Cell", url: "/internship-cell" },
+            { name: "Placement Cell: 011-65215944", url: "tel:01165215944", external: true }
         ],
         student: [
-            { name: "Student Login Portal", url: "https://msit.techtron.net/", external: true },
+            { name: "Student Login Portal", url: "/student-portal" },
             { name: "MSIT Central", url: "https://central.msit.in/", external: true },
             { name: "Moodle (LMS)", url: "http://moodle.msit.in/", external: true },
             { name: "Library Portal", url: "http://library.msit.in/", external: true },
@@ -316,6 +317,9 @@ const Header = () => {
                                                 </Link>
                                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
                                                     Campus Mail
+                                                </a>
+                                                <a href="tel:01165215941" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                                    Reception: 011-65215941
                                                 </a>
                                             </div>
                                         </div>

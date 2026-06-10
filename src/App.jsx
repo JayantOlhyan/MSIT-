@@ -24,6 +24,8 @@ const Sitemap = lazy(() => import('./pages/Sitemap'));
 const VirtualTour = lazy(() => import('./pages/VirtualTour'));
 const NewsDetail = lazy(() => import('./pages/NewsDetail'));
 const Team = lazy(() => import('./pages/Team'));
+const StudentPortal = lazy(() => import('./pages/StudentPortal'));
+
 
 const App = () => {
     return (
@@ -48,6 +50,7 @@ const App = () => {
                             <Route path="/facilities" element={<Facilities />} />
                             <Route path="/faculty" element={<FacultyStaff />} />
                             <Route path="/sitemap" element={<Sitemap />} />
+                            <Route path="/student-portal" element={<StudentPortal />} />
                             <Route path="/500" element={<ServerError />} />
                             <Route path="/:slug" element={<DynamicPage />} />
                             <Route path="*" element={<NotFound />} />
