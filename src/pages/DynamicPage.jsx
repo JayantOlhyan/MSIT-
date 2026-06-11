@@ -79,12 +79,21 @@ const DynamicPage = () => {
                                     <div className="bg-slate-900 p-8 rounded-2xl text-white shadow-card">
                                         <h4 className="text-lg font-semibold mb-6 flex items-center">Key Highlights</h4>
                                         <ul className="space-y-4">
-                                            {pageData.bulletPoints.map((point, i) => (
-                                                <li key={i} className="flex items-start text-slate-300 text-sm">
-                                                    <ArrowRight className="w-4 h-4 text-accent mr-3 mt-0.5 shrink-0" />
-                                                    {point}
-                                                </li>
-                                            ))}
+                                            {pageData.bulletPoints.map((point, i) => {
+                                                const isLink = typeof point === 'object' && point.url;
+                                                return (
+                                                    <li key={i} className="flex items-start text-slate-300 text-sm">
+                                                        <ArrowRight className="w-4 h-4 text-accent mr-3 mt-0.5 shrink-0" />
+                                                        {isLink ? (
+                                                            <Link to={point.url} className="hover:text-accent transition-colors">
+                                                                {point.label}
+                                                            </Link>
+                                                        ) : (
+                                                            typeof point === 'object' ? point.label : point
+                                                        )}
+                                                    </li>
+                                                );
+                                            })}
                                         </ul>
                                     </div>
                                 )}

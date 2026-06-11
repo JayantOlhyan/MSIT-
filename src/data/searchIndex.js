@@ -170,6 +170,9 @@ export const searchIndex = {
         { title: "Student Login Portal", url: "/student-portal", keywords: "student, login, moodle, central, attendance, marks, portal" },
         { title: "Anti-Ragging Guidelines", url: "/antiragging", keywords: "antiragging, ragging, policy, safety, discipline" },
         { title: "POSH Cell (Women Safety)", url: "/posh", keywords: "posh, women, safety, harassment, complaint, committee" },
+        { title: "POSH Act Guidelines", url: "/posh-guidelines", keywords: "posh, guidelines, rules, safety, harassment, act" },
+        { title: "Lodge a POSH Complaint", url: "/posh-complaint", keywords: "posh, complaint, lodge, report, harass, harassment, sexual, form" },
+        { title: "ICC Committee Members", url: "/posh-members", keywords: "posh, members, committee, icc, board, members, representatives" },
         { title: "Disaster Management", url: "/disaster", keywords: "disaster, management, safety, emergency, drill" },
         { title: "Student Discipline Committee", url: "/discipline", keywords: "discipline, rules, conduct, behavior, suspension" },
         { title: "Meet the Core Team", url: "/team", keywords: "team, developers, project, creators, website, jayant, pawan, abhay" }
