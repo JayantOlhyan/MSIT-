@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { User, Lock, Eye, EyeOff, GraduationCap, ArrowRight, ShieldCheck, Mail, Phone, BookOpen, Clock, Activity, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import SkeletonLoader from '../components/SkeletonLoader';
 
 const StudentPortal = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -11,6 +12,7 @@ const StudentPortal = () => {
     const [role, setRole] = useState('student');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const [dashboardLoading, setDashboardLoading] = useState(false);
 
     // Mock student data for successful login
     const studentData = {
@@ -51,8 +53,18 @@ const StudentPortal = () => {
         setTimeout(() => {
             setLoading(false);
             setIsLoggedIn(true);
+            setDashboardLoading(true);
         }, 1200);
     };
+
+    useEffect(() => {
+        if (isLoggedIn && dashboardLoading) {
+            const timer = setTimeout(() => {
+                setDashboardLoading(false);
+            }, 1500); // 1.5s simulated data loading time
+            return () => clearTimeout(timer);
+        }
+    }, [isLoggedIn, dashboardLoading]);
 
     const handleLogout = () => {
         setIsLoggedIn(false);
@@ -62,8 +74,11 @@ const StudentPortal = () => {
     };
 
     if (isLoggedIn) {
+        if (dashboardLoading) {
+            return <SkeletonLoader />;
+        }
         return (
-            <main className="min-h-screen bg-slate-900 text-slate-100 flex flex-col">
+            <main className="min-h-screen bg-slate-900 text-slate-100 flex flex-col animate-fade-in">
                 <SEO 
                     title="Student Dashboard - ERP" 
                     description="MSIT Central Student Dashboard. Access attendance records, academic stats, and announcements."

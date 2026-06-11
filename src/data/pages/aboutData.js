@@ -56,6 +56,27 @@ export const aboutData = {
                     </p>
                 </section>
 
+                <section class="border-t border-slate-100 pt-10">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center sm:text-left">Accreditations & Affiliations</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 items-stretch text-center">
+                        <div class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-white hover:shadow-card transition-all group">
+                            <img src="/aicte-logo.png" alt="AICTE Approved Badge" class="h-28 w-28 object-contain mb-6 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1">Approved By</h4>
+                            <p class="text-sm text-slate-500 font-semibold leading-relaxed">All India Council for Technical Education (AICTE)</p>
+                        </div>
+                        <div class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-white hover:shadow-card transition-all group">
+                            <img src="/ggsipu-logo.png" alt="GGSIPU Affiliation Seal" class="h-28 w-28 object-contain mb-6 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1">Affiliated To</h4>
+                            <p class="text-sm text-slate-500 font-semibold leading-relaxed">Guru Gobind Singh Indraprastha University (GGSIPU), Delhi</p>
+                        </div>
+                        <div class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-white hover:shadow-card transition-all group">
+                            <img src="/iso-logo.png" alt="ISO Certification Badge" class="h-28 w-28 object-contain mb-6 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1">ISO Certified</h4>
+                            <p class="text-sm text-slate-500 font-semibold leading-relaxed">ISO 9001:2015 Quality Management Certified Company</p>
+                        </div>
+                    </div>
+                </section>
+
                 <section>
                     <h3 class="text-2xl font-bold text-slate-900 mb-6">Teaching Methodology</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
