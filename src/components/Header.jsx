@@ -181,7 +181,7 @@ const Header = () => {
                                     href="https://ipu.admissions.nic.in/" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
+                                    className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap ${
                                         isTransparent 
                                             ? 'bg-white text-primary hover:bg-blue-50 hover:scale-105 active:scale-95' 
                                             : 'bg-primary text-white hover:bg-[#153a7a] hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10'
