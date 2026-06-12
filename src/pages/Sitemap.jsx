@@ -1,107 +1,189 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { Search, Globe, Shield, BookOpen, Award, Users, ChevronRight, X } from 'lucide-react';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
 
 const Sitemap = () => {
-    const siteLinks = [
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const siteCategories = [
         {
-            category: "Institutional",
+            title: "About MSIT",
+            icon: <Globe className="w-5 h-5 text-blue-600" />,
             links: [
-                { label: "Home", path: "/" },
+                { label: "Home / Welcome", path: "/" },
                 { label: "About MSIT", path: "/about" },
                 { label: "Vision & Mission", path: "/vision-mission" },
                 { label: "History & Legacy", path: "/history" },
-                { label: "Director's Message", path: "/fromdesk" },
+                { label: "SMES Society", path: "/smes" },
                 { label: "Governing Body", path: "/govern" },
                 { label: "Administration", path: "/administration" },
-                { label: "Faculty & Staff", path: "/faculty" },
-                { label: "Campus Facilities", path: "/facilities" },
-                { label: "Virtual Tour", path: "/virtual-tour" },
-                { label: "Mandatory Disclosures", path: "/mandatory-disclosures" },
-                { label: "SMES Society", path: "/smes" },
-                { label: "Contact Us", path: "/contact" },
+                { label: "Director's Message", path: "/fromdesk" },
+                { label: "Meet the Team", path: "/team" },
             ]
         },
         {
-            category: "Academics",
+            title: "Academics & Research",
+            icon: <BookOpen className="w-5 h-5 text-indigo-650" />,
             links: [
-                { label: "Computer Science & Engineering", path: "/cse" },
-                { label: "Information Technology", path: "/it" },
-                { label: "Electronics & Communication", path: "/ece" },
-                { label: "Electrical & Electronics", path: "/eee" },
+                { label: "Computer Science (CSE)", path: "/cse" },
+                { label: "Information Technology (IT)", path: "/it" },
+                { label: "Electronics & Comm. (ECE)", path: "/ece" },
+                { label: "Electrical Engineering (EEE)", path: "/eee" },
                 { label: "Applied Sciences (1st Year)", path: "/applied-sciences" },
                 { label: "Academic Calendar", path: "/academic-calendar" },
-                { label: "Syllabus", path: "/syllabus" },
+                { label: "Syllabus Index", path: "/syllabus" },
                 { label: "Time Table", path: "/timetable" },
-                { label: "Information Bulletin (Brochure)", path: "/brochure" },
-                { label: "Online Fee Payment", path: "/online-fee" },
+                { label: "Faculty & Staff Directory", path: "/faculty" },
+                { label: "Research & Publications", path: "/research" },
             ]
         },
         {
-            category: "Student Life & Placement",
+            title: "Admissions & Placements",
+            icon: <Award className="w-5 h-5 text-emerald-600" />,
             links: [
+                { label: "Information Brochure", path: "/brochure" },
+                { label: "Online Fee Payment", path: "/online-fee" },
+                { label: "Scholarships & Financial Aid", path: "/scholarships" },
                 { label: "Placements Overview", path: "/placements" },
                 { label: "Internship Cell", path: "/internship-cell" },
-                { label: "Scholarships", path: "/scholarships" },
-                { label: "Societies & Clubs", path: "/society" },
+                { label: "Mandatory Disclosures", path: "/mandatory-disclosures" },
+            ]
+        },
+        {
+            title: "Student Life & Campus",
+            icon: <Users className="w-5 h-5 text-purple-600" />,
+            links: [
+                { label: "Student Societies & Clubs", path: "/society" },
                 { label: "IEEE Student Branch", path: "/society-ieee" },
-                { label: "Research & Publications", path: "/research" },
-                { label: "Events & News", path: "/events" },
+                { label: "Events & Festivals", path: "/events" },
                 { label: "Alumni Network", path: "/alumni-network" },
-                { label: "Student Portal", path: "/student-portal" },
+                { label: "Campus Virtual Tour", path: "/virtual-tour" },
+                { label: "Campus Facilities", path: "/facilities" },
+            ]
+        },
+        {
+            title: "Support, Rules & Safety",
+            icon: <Shield className="w-5 h-5 text-rose-600" />,
+            links: [
+                { label: "Student ERP Portal", path: "/student-portal" },
+                { label: "Attendance Rules", path: "/attendance" },
                 { label: "Anti-Ragging Guidelines", path: "/antiragging" },
-                { label: "POSH Cell", path: "/posh" },
+                { label: "POSH Cell Main", path: "/posh" },
+                { label: "POSH Act Guidelines", path: "/posh-guidelines" },
+                { label: "Lodge POSH Complaint", path: "/posh-complaint" },
+                { label: "ICC POSH Committee", path: "/posh-members" },
                 { label: "Disaster Management", path: "/disaster" },
-                { label: "Student Discipline", path: "/discipline" },
-                { label: "Search Portal", path: "/search" },
-                { label: "Meet the Team", path: "/team" },
+                { label: "Student Discipline Committee", path: "/discipline" },
+                { label: "Contact Us", path: "/contact" },
+                { label: "Privacy Policy", path: "/privacy" },
+                { label: "Terms of Use", path: "/terms" },
             ]
         }
     ];
 
+    // Filter categories and links based on search query
+    const filteredCategories = siteCategories.map(cat => {
+        const matchingLinks = cat.links.filter(link =>
+            link.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            link.path.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        return { ...cat, links: matchingLinks };
+    }).filter(cat => cat.links.length > 0);
+
     return (
-        <main className="min-h-screen bg-slate-50">
+        <main className="min-h-screen bg-slate-50 text-slate-800 flex flex-col relative overflow-hidden">
             <SEO 
-                title="Sitemap" 
-                description="Explore the full structure and navigation of the Maharaja Surajmal Institute of Technology website. Find every department, academy resource, and institutional page." 
+                title="Sitemap - Maharaja Surajmal Institute of Technology" 
+                description="Explore all pages, sections, academic directories, student portals, and policy links of MSIT using our dynamic, Apple-style sitemap." 
                 canonicalPath="/sitemap"
             />
+
+            {/* Uniform PageHero component matching all other website inner pages */}
             <PageHero 
                 title="Website" 
                 accentTitle="Sitemap" 
-                description="A comprehensive index of all pages and resources available on the MSIT digital portal."
-                breadcrumbs={[{ label: 'Institutional' }, { label: 'Sitemap' }]}
+                description="Find directories, academic portals, administrative cells, societies, support documents, and legal rules using the directory layout."
+                breadcrumbs={[
+                    { label: 'Directory' },
+                    { label: 'Sitemap' }
+                ]}
+                heroImage="/campus-hero.webp"
+                heroImageAlt="Maharaja Surajmal Institute of Technology campus overview sitemap page"
             />
-            
-            <div className="max-w-7xl mx-auto px-6 py-20">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    {siteLinks.map((section, idx) => (
-                        <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-card border border-slate-100">
-                            <h2 className="text-xl font-bold text-title mb-6 pb-4 border-b border-slate-100">
-                                {section.category}
-                            </h2>
-                            <ul className="space-y-4">
-                                {section.links.map((link, lIdx) => (
-                                    <li key={lIdx}>
-                                        <Link 
-                                            to={link.path} 
-                                            className="group flex items-center justify-between text-body hover:text-primary transition-colors py-1"
-                                        >
-                                            <span className="font-medium relative pb-1">
-                                                {link.label}
-                                                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
-                                            </span>
-                                            <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
+
+            {/* Interactive Search Filter Bar */}
+            <section className="relative z-10 py-6 px-6 border-b border-slate-200 bg-white/80 backdrop-blur-sm shadow-sm">
+                <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">
+                        {searchQuery ? `Showing matches for "${searchQuery}"` : "Search directory index"}
+                    </span>
+                    <div className="relative w-full sm:max-w-xs">
+                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                            <Search className="w-4 h-4" />
                         </div>
-                    ))}
+                        <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="Filter sitemap..."
+                            className="block w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-850 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-all text-xs font-semibold focus:bg-white"
+                        />
+                        {searchQuery && (
+                            <button 
+                                onClick={() => setSearchQuery('')}
+                                className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600"
+                            >
+                                <X className="w-4 h-4" />
+                            </button>
+                        )}
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            {/* Apple Directory Grid Section */}
+            <section className="relative z-10 max-w-7xl w-full mx-auto p-6 sm:p-12 flex-1">
+                {filteredCategories.length === 0 ? (
+                    <div className="text-center py-20 bg-white border border-slate-200 rounded-[2.5rem] shadow-sm">
+                        <Search className="w-12 h-12 text-slate-300 mx-auto mb-4" />
+                        <h3 className="text-lg font-bold text-slate-800 mb-1">No matching links found</h3>
+                        <p className="text-slate-500 text-xs font-medium">Try searching another keyword (e.g., 'posh', 'cse', 'fee')</p>
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 xl:gap-12 items-start">
+                        {filteredCategories.map((category, idx) => (
+                            <div key={idx} className="space-y-6">
+                                {/* Category Header */}
+                                <div className="flex items-center gap-2.5 pb-3 border-b border-slate-200">
+                                    {category.icon}
+                                    <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+                                        {category.title}
+                                    </h2>
+                                </div>
+
+                                {/* Link Directory List - Optimized larger typography */}
+                                <ul className="space-y-3.5">
+                                    {category.links.map((link, lIdx) => (
+                                        <li key={lIdx}>
+                                            <Link 
+                                                to={link.path} 
+                                                className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 hover:text-blue-600 transition-colors py-0.5"
+                                            >
+                                                <span className="relative py-0.5">
+                                                    {link.label}
+                                                    <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-blue-600 group-hover:w-full transition-all duration-300" />
+                                                </span>
+                                                <ChevronRight className="w-3.5 h-3.5 text-slate-400 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all shrink-0" />
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </section>
         </main>
     );
 };
