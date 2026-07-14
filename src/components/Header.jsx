@@ -149,7 +149,7 @@ const Header = () => {
                         ? 'bg-transparent border-transparent' 
                         : 'bg-white border-slate-100 shadow-card text-title'
                 }`}>
-                    <div className="w-full max-w-[1536px] mx-auto flex justify-between items-center">
+                    <div className="w-full max-w-screen-2xl mx-auto flex justify-between items-center">
                         {/* Logo Area */}
                         <Link to="/" className="flex items-center gap-3 lg:gap-4 cursor-pointer select-none">
                             <img 
@@ -205,9 +205,9 @@ const Header = () => {
                                 className="w-10 h-10 relative focus:outline-none flex justify-center items-center group cursor-pointer"
                                 aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                             >
-                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
-                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
-                                <span className={`block w-6 h-[2px] rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
+                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
+                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
+                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
                             </button>
                         </div>
                     </div>
@@ -220,7 +220,7 @@ const Header = () => {
                             : 'bg-white shadow-card border-slate-100 py-1.5'
                     }`}
                 >
-                    <div className="w-full max-w-[1536px] mx-auto">
+                    <div className="w-full max-w-screen-2xl mx-auto">
                         <nav className="hidden xl:flex justify-center items-center space-x-10 text-sm">
                             {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements', 'Student Portal'].map((item, idx) => {
                                 const key = item.split(' ')[0].toLowerCase();

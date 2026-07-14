@@ -81,7 +81,7 @@ const AccessibilityModal = () => {
                                     </div>
                                     <div>
                                         <h3 className={`text-sm font-bold tracking-tight mb-0.5 ${settings[item.key] ? 'text-primary' : 'text-title'}`}>{item.label}</h3>
-                                        <p className="text-xs text-muted font-medium leading-relaxed max-w-[240px]">{item.desc}</p>
+                                        <p className="text-xs text-muted font-medium leading-relaxed sm:max-w-xs">{item.desc}</p>
                                     </div>
                                 </div>
                                 <button 

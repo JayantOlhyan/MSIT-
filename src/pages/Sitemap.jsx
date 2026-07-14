@@ -172,7 +172,7 @@ const Sitemap = () => {
                                             >
                                                 <span className="relative py-0.5">
                                                     {link.label}
-                                                    <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-blue-600 group-hover:w-full transition-all duration-300" />
+                                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300" />
                                                 </span>
                                                 <ChevronRight className="w-3.5 h-3.5 text-slate-400 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all shrink-0" />
                                             </Link>

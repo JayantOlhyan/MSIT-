@@ -19,8 +19,8 @@ const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle, hero
                 
                 {/* Opaque Bluish Background Effect & Gradient Overlays */}
                 <div className="absolute inset-0 z-10 pointer-events-none">
-                    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
-                    <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-900/15 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
+                    <div className="absolute top-0 left-0 w-[clamp(250px,40vw,500px)] h-[clamp(250px,40vw,500px)] bg-primary/20 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
+                    <div className="absolute bottom-0 right-0 w-[clamp(200px,35vw,400px)] h-[clamp(200px,35vw,400px)] bg-blue-900/15 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
                     <div className="absolute inset-0 bg-slate-950/20 backdrop-blur-[2px]"></div>
                 </div>

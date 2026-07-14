@@ -130,7 +130,7 @@ const VirtualTour = () => {
             <section className="py-20 max-w-7xl mx-auto px-6">
                 <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 mb-16 shadow-2xl relative overflow-hidden border border-white/5">
                     {/* Immersive Background Blur Decor */}
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+                    <div className="absolute top-0 right-0 w-[clamp(250px,40vw,500px)] h-[clamp(250px,40vw,500px)] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
                     
                     <div className="grid lg:grid-cols-12 gap-12 items-center relative z-10">
                         <div className="lg:col-span-5">

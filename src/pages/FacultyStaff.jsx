@@ -114,7 +114,7 @@ const FacultyStaff = () => {
             </div>
 
             {/* Premium Grid */}
-            <div className="max-w-7xl mx-auto px-6 py-16 min-h-[500px]">
+            <div className="max-w-7xl mx-auto px-6 py-16 min-h-[clamp(350px,50vh,500px)]">
                 {filteredFaculty.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredFaculty.map((faculty, idx) => (
@@ -203,7 +203,7 @@ const FacultyStaff = () => {
 
                         {/* Modal Header/Hero */}
                         <div className="bg-slate-900 pt-16 pb-20 sm:pb-24 px-6 sm:px-8 md:px-16 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-[80px]"></div>
+                            <div className="absolute top-0 right-0 w-[clamp(200px,30vw,400px)] h-[clamp(200px,30vw,400px)] bg-blue-500/20 rounded-full blur-[80px]"></div>
                             
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
                                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-card shrink-0 -mb-20 md:-mb-32 z-10 border-2 border-white/10">

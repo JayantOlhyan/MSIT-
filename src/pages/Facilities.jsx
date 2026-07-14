@@ -124,7 +124,7 @@ const Facilities = () => {
                             </div>
                         </div>
                         <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-card">
-                            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=1000" alt="Modern MSIT Central Library showing the spacious reading area and technical book collection" className="w-full h-[400px] object-cover" />
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=1000" alt="Modern MSIT Central Library showing the spacious reading area and technical book collection" className="w-full h-[clamp(250px,40vh,400px)] object-cover" />
                         </div>
                     </div>
                 )}

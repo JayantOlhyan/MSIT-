@@ -223,7 +223,7 @@ const Home = () => {
                 description="Maharaja Surajmal Institute of Technology (MSIT) is a premier engineering college in Delhi offering top-tier B.Tech programs, placements, and innovation." 
             />
             {/* HERO SECTION */}
-            <section className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center bg-slate-900 overflow-hidden">
+            <section className="relative w-full h-[100vh] min-h-[clamp(500px,80vh,700px)] flex items-center justify-center bg-slate-900 overflow-hidden">
                 {/* LCP Discovery - Hidden High Priority Image for CSS background */}
                 <img 
                     src="/campus-hero.webp" 
@@ -331,7 +331,7 @@ const Home = () => {
                                 <div 
                                     key={i} 
                                     data-index={i}
-                                    className="flex flex-col items-center text-center group min-w-[300px] sm:min-w-[340px] snap-center shrink-0"
+                                    className="flex flex-col items-center text-center group min-w-[clamp(260px,80vw,340px)] snap-center shrink-0"
                                 >
                                     <div className="transform group-hover:-translate-y-3 transition-transform duration-500 mb-8 flex items-center justify-center">
                                         <div className="p-4 rounded-2xl bg-slate-50/50 group-hover:bg-blue-50 transition-colors duration-500 shadow-sm border border-slate-100/50">
@@ -425,7 +425,7 @@ const Home = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="relative h-[600px] rounded-3xl overflow-hidden group shadow-card border border-white/5">
+                        <div className="relative h-[clamp(400px,60vh,600px)] rounded-3xl overflow-hidden group shadow-card border border-white/5">
                             {highlights.map((highlight, idx) => (
                                 <div
                                     key={idx}
@@ -520,7 +520,7 @@ const Home = () => {
                         onTouchEnd={handleTouchEnd}
                     >
 
-                        <div className="min-h-[600px] sm:min-h-[540px] md:min-h-[350px] flex items-center justify-center relative z-10">
+                        <div className="min-h-[clamp(350px,50vh,600px)] flex items-center justify-center relative z-10">
                             {testimonials.map((t, i) => (
                                 <div
                                     key={i}
@@ -570,8 +570,8 @@ const Home = () => {
             {/* CAMPUS VIRTUAL TOUR */}
             <section className="py-32 bg-slate-50 relative overflow-hidden flex flex-col items-center justify-center text-center">
                 <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-200 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
+                    <div className="absolute top-0 right-0 w-[clamp(250px,40vw,500px)] h-[clamp(250px,40vw,500px)] bg-blue-100 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+                    <div className="absolute bottom-0 left-0 w-[clamp(250px,40vw,500px)] h-[clamp(250px,40vw,500px)] bg-slate-200 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
                 </div>
                 
                 <div className="relative z-10 max-w-4xl mx-auto px-6">
