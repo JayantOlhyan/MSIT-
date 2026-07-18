@@ -162,3 +162,9 @@ h3, h4 { letter-spacing: -0.015em; }
     display: none;  /* Safari and Chrome */
   }
 }
+
+/* Opening Animation Layout Overrides */
+.intro-active #header-logo {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

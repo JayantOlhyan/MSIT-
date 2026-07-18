@@ -247,16 +247,18 @@ const Home = () => {
                 {/* Giant Centered Text */}
                 <div className="relative z-10 w-full px-6 flex flex-col items-center justify-center text-center -mt-16 sm:-mt-32 pointer-events-none">
                     <h1 
+                        id="hero-title"
                         className="font-serif font-black tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white/100 to-white/20 leading-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)] transition-all duration-1000 ease-out select-none uppercase"
                         style={{ fontSize: '26vw' }}
                     >
                         MSIT
                     </h1>
-                    <div className="h-1.5 w-24 sm:w-32 bg-white/40 mt-8 rounded-full blur-[0.5px]"></div>
+                    <div id="hero-divider" className="h-1.5 w-24 sm:w-32 bg-white/40 mt-8 rounded-full blur-[0.5px]"></div>
                 </div>
 
                 {/* Explore Banner at Bottom */}
                 <div 
+                    id="hero-banner"
                     className="absolute bottom-0 left-0 w-full bg-primary py-6 cursor-pointer hover:bg-primary/90 transition-all duration-500 z-20 flex justify-center items-center group/banner border-t border-white/5"
                     onClick={() => scrollToSection('news')}
                 >
