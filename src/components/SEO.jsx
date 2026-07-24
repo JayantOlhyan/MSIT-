@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ title, description, canonicalPath = "" }) => {
+const SEO = ({ title, description, canonicalPath = "", schema = null }) => {
     const siteTitle = "Maharaja Surajmal Institute of Technology (MSIT)";
     const fullTitle = (title && title !== "Home") ? `${title} | MSIT` : siteTitle;
     const baseUrl = "https://msit-website.netlify.app";
@@ -38,6 +38,13 @@ const SEO = ({ title, description, canonicalPath = "" }) => {
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content="https://msit-website.netlify.app/msit-logo.webp" />
+
+            {/* Structured Data */}
+            {schema && (
+                <script type="application/ld+json">
+                    {JSON.stringify(schema)}
+                </script>
+            )}
         </Helmet>
     );
 };

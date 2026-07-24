@@ -216,11 +216,32 @@ const Home = () => {
         ? events
         : events.filter(e => e.label.toLowerCase() === activeNewsTab || (activeNewsTab === 'stories' && e.label === 'STORY'));
 
+    const homeSchema = {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Maharaja Surajmal Institute of Technology",
+        "alternateName": "MSIT",
+        "url": "https://msit-website.netlify.app",
+        "logo": "https://msit-website.netlify.app/msit-logo.webp",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "C-4, Janakpuri",
+            "addressLocality": "New Delhi",
+            "addressRegion": "Delhi",
+            "postalCode": "110058",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/"
+        ]
+    };
+
     return (
         <main>
             <SEO 
                 title="Home" 
                 description="Maharaja Surajmal Institute of Technology (MSIT) is a premier engineering college in Delhi offering top-tier B.Tech programs, placements, and innovation." 
+                schema={homeSchema}
             />
             {/* HERO SECTION */}
             <section className="relative w-full h-[100vh] min-h-[clamp(500px,80vh,700px)] flex items-center justify-center bg-slate-900 overflow-hidden">

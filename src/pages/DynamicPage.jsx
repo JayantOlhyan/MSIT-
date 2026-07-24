@@ -21,12 +21,26 @@ const DynamicPage = () => {
         );
     }
 
+    const isDepartment = ['cse', 'it', 'ece', 'eee', 'applied-sciences'].includes(slug);
+    const courseSchema = isDepartment ? {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": pageData.title,
+        "description": pageData.seo_description || pageData.subtitle,
+        "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Maharaja Surajmal Institute of Technology",
+            "url": "https://msit-website.netlify.app"
+        }
+    } : null;
+
     return (
         <main className="min-h-screen bg-white">
             <SEO 
                 title={pageData.title} 
                 description={pageData.seo_description || pageData.subtitle} 
                 canonicalPath={`/${slug}`} 
+                schema={courseSchema}
             />
             <PageHero 
                 title={pageData.title.split(' ').slice(0, -1).join(' ')}
