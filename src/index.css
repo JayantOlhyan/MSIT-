@@ -168,3 +168,8 @@ h3, h4 { letter-spacing: -0.015em; }
   opacity: 0 !important;
   pointer-events: none !important;
 }
+
+#header-logo {
+  /* Prevent opacity from transitioning, avoiding a flash/pop during the logo handoff */
+  transition: transform 300ms ease, height 300ms ease, filter 300ms ease, brightness 300ms ease !important;
+}

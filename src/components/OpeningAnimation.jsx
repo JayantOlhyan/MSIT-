@@ -49,48 +49,48 @@ const OpeningAnimation = ({ onComplete }) => {
             yPercent: -100 
         });
 
-        // Phase 1: First Light (0.0s – 0.7s)
+        // Phase 1: First Light (0.0s – 0.4s)
         tl.to(glowRef.current, {
             opacity: 0.85,
             scaleX: 1.6,
             scaleY: 1.0,
-            duration: 0.7,
+            duration: 0.4,
             ease: 'power2.out'
         });
 
-        // Phase 2: MSIT Logo Reveal (0.7s – 1.9s)
+        // Phase 2: MSIT Logo Reveal (0.4s – 1.2s)
         tl.to(logoRef.current, {
             opacity: 1,
             scale: 1.015,
             y: 0,
             filter: 'blur(0px)',
-            duration: 1.2,
+            duration: 0.8,
             ease: 'cubic-bezier(0.22, 1, 0.36, 1)'
-        }, '-=0.15');
+        }, '-=0.1');
 
         tl.to(glowRef.current, {
             opacity: 1.0,
             scaleX: 2.1,
             scaleY: 1.4,
-            duration: 1.2,
+            duration: 0.8,
             ease: 'power2.out'
         }, '<');
 
-        // Phase 3: Logo Settle & Sweep (1.9s – 2.6s)
+        // Phase 3: Logo Settle & Sweep (1.2s – 1.7s)
         tl.to(logoRef.current, {
             scale: 1.0,
-            duration: 0.7,
+            duration: 0.5,
             ease: 'power2.inOut'
         });
 
         tl.to(sweepRef.current, {
             xPercent: 100,
             yPercent: 100,
-            duration: 0.65,
+            duration: 0.5,
             ease: 'power1.inOut'
         }, '<');
 
-        // Phase 4: Transition into Website (2.6s – 3.8s)
+        // Phase 4: Transition into Website (1.7s – 2.5s)
         tl.add(() => {
             const headerLogo = document.getElementById('header-logo');
             const introLogo = logoRef.current;
@@ -114,7 +114,7 @@ const OpeningAnimation = ({ onComplete }) => {
                     y: deltaY,
                     scale: scale,
                     transformOrigin: 'center center',
-                    duration: 1.15,
+                    duration: 0.75,
                     ease: 'power4.inOut'
                 });
             } else {
@@ -122,7 +122,7 @@ const OpeningAnimation = ({ onComplete }) => {
                 gsap.to(introLogo, {
                     opacity: 0,
                     scale: 0.95,
-                    duration: 1.15,
+                    duration: 0.75,
                     ease: 'power2.inOut'
                 });
             }
@@ -130,7 +130,7 @@ const OpeningAnimation = ({ onComplete }) => {
             // Fade out the overlay background
             gsap.to(overlayRef.current, {
                 opacity: 0,
-                duration: 1.15,
+                duration: 0.75,
                 ease: 'power2.inOut'
             });
 
@@ -139,14 +139,14 @@ const OpeningAnimation = ({ onComplete }) => {
                 opacity: 0,
                 scaleX: 2.8,
                 scaleY: 2.2,
-                duration: 0.95,
+                duration: 0.65,
                 ease: 'power2.inOut'
             });
 
             // Fade in the header layout
             gsap.fromTo('header', 
                 { opacity: 0 }, 
-                { opacity: 1, duration: 1.15, ease: 'power2.out' }
+                { opacity: 1, duration: 0.75, ease: 'power2.out' }
             );
 
             // Fade in home hero text and explore button with staggered reveal
@@ -157,13 +157,13 @@ const OpeningAnimation = ({ onComplete }) => {
                 const elements = [heroTitle, heroDivider, heroBanner].filter(Boolean);
                 gsap.fromTo(elements,
                     { opacity: 0, y: 25 },
-                    { opacity: 1, y: 0, duration: 1.15, stagger: 0.15, ease: 'power3.out' }
+                    { opacity: 1, y: 0, duration: 0.75, stagger: 0.1, ease: 'power3.out' }
                 );
             }
         });
 
         // Delay completion until transition is fully complete
-        tl.to({}, { duration: 1.2 });
+        tl.to({}, { duration: 0.8 });
     }, { scope: containerRef });
 
     return (
