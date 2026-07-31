@@ -266,11 +266,11 @@ const Home = () => {
                 </div>
 
                 {/* Giant Centered Text */}
-                <div className="relative z-10 w-full px-6 flex flex-col items-center justify-center text-center -mt-16 sm:-mt-32 pointer-events-none">
+                <div className="relative z-10 w-full px-6 flex flex-col items-center justify-center text-center -mt-[6vh] pointer-events-none">
                     <h1 
                         id="hero-title"
                         className="font-serif font-black tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white/100 to-white/20 leading-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)] transition-all duration-1000 ease-out select-none uppercase"
-                        style={{ fontSize: '26vw' }}
+                        style={{ fontSize: 'clamp(5rem, 24vw, 32vh)' }}
                     >
                         MSIT
                     </h1>
