@@ -112,7 +112,7 @@ const Header = () => {
             { name: "Placement Cell: 011-65215944", url: "tel:01165215944", external: true }
         ],
         student: [
-            { name: "Student Login Portal", url: "/student-portal" },
+            { name: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
             { name: "MSIT Central", url: "https://central.msit.in/", external: true },
             { name: "Moodle (LMS)", url: "http://moodle.msit.in/", external: true },
             { name: "Library Portal", url: "http://library.msit.in/", external: true },

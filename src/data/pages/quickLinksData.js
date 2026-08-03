@@ -1,17 +1,4 @@
 export const quickLinksData = {
-    "student-portal": {
-        title: "Student Portal (ERP)",
-        subtitle: "Your digital campus at Maharaja Surajmal Institute of Technology.",
-        seo_description: "Access the MSIT ERP portal. Stay connected with your campus at Maharaja Surajmal Institute of Technology for attendance, marks, and official notices.",
-        category: "Quick Links",
-        heroImage: "/campus-hero.webp",
-        heroImageAlt: "MSIT student ERP portal interface for centralized academic management",
-        content: `
-            <p className="mb-6">The centralized Enterprise Resource Planning (ERP) portal for MSIT students. Access your attendance records, internal marks, fee receipts, and official institutional notices all in one secure place.</p>
-        `,
-        stats: [],
-        bulletPoints: ["Login Help", "Reset Password"]
-    },
     "alumni-network": {
         title: "Alumni Network",
         subtitle: "A global community of innovators from Maharaja Surajmal Institute of Technology.",

@@ -67,7 +67,7 @@ const Sitemap = () => {
             title: "Support, Rules & Safety",
             icon: <Shield className="w-5 h-5 text-rose-600" />,
             links: [
-                { label: "Student ERP Portal", path: "/student-portal" },
+                { label: "Student Login Portal", path: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
                 { label: "Attendance Rules", path: "/attendance" },
                 { label: "Anti-Ragging Guidelines", path: "/antiragging" },
                 { label: "POSH Cell Main", path: "/posh" },
@@ -166,16 +166,31 @@ const Sitemap = () => {
                                 <ul className="space-y-3.5">
                                     {category.links.map((link, lIdx) => (
                                         <li key={lIdx}>
-                                            <Link 
-                                                to={link.path} 
-                                                className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 hover:text-blue-600 transition-colors py-0.5"
-                                            >
-                                                <span className="relative py-0.5">
-                                                    {link.label}
-                                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300" />
-                                                </span>
-                                                <ChevronRight className="w-3.5 h-3.5 text-slate-400 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all shrink-0" />
-                                            </Link>
+                                            {link.external ? (
+                                                <a 
+                                                    href={link.path} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 hover:text-blue-600 transition-colors py-0.5"
+                                                >
+                                                    <span className="relative py-0.5">
+                                                        {link.label}
+                                                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300" />
+                                                    </span>
+                                                    <ChevronRight className="w-3.5 h-3.5 text-slate-400 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all shrink-0" />
+                                                </a>
+                                            ) : (
+                                                <Link 
+                                                    to={link.path} 
+                                                    className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 hover:text-blue-600 transition-colors py-0.5"
+                                                >
+                                                    <span className="relative py-0.5">
+                                                        {link.label}
+                                                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300" />
+                                                    </span>
+                                                    <ChevronRight className="w-3.5 h-3.5 text-slate-400 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all shrink-0" />
+                                                </Link>
+                                            )}
                                         </li>
                                     ))}
                                 </ul>

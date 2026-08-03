@@ -167,7 +167,7 @@ export const searchIndex = {
         { title: "Research & Publications", url: "/research", keywords: "research, journals, papers, patents, projects, publications" },
         { title: "Events & News", url: "/events", keywords: "events, news, updates, festivals, notices" },
         { title: "Alumni Network", url: "/alumni-network", keywords: "alumni, meet, network, seniors, graduation" },
-        { title: "Student Login Portal", url: "/student-portal", keywords: "student, login, moodle, central, attendance, marks, portal" },
+        { title: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", keywords: "student, login, moodle, central, attendance, marks, portal" },
         { title: "Attendance Rules", url: "/attendance", keywords: "attendance, rules, policy, criteria, leave, medical, detention" },
         { title: "Privacy Policy", url: "/privacy", keywords: "privacy, policy, data, security, terms" },
         { title: "Terms of Use", url: "/terms", keywords: "terms, conditions, use, legal, agreement" },

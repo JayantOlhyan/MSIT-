@@ -110,10 +110,7 @@ const staticRoutes = {
         title: 'Sitemap - Maharaja Surajmal Institute of Technology',
         description: 'Explore all pages, sections, academic directories, student portals, and policy links of MSIT using our dynamic, Apple-style sitemap.'
     },
-    '/student-portal': {
-        title: 'Student ERP Login Portal',
-        description: 'Secure login portal to the Maharaja Surajmal Institute of Technology Student ERP/Central hub.'
-    },
+
     '/500': {
         title: '500 Server Error',
         description: 'The Maharaja Surajmal Institute of Technology server encountered an internal error. We are working to resolve it. Contact support if the issue persists.'

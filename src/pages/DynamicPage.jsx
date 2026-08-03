@@ -4,21 +4,14 @@ import { pagesData } from '../data/pagesData';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
 
+import NotFound from './NotFound';
+
 const DynamicPage = () => {
     const { slug } = useParams();
     const pageData = pagesData[slug];
 
     if (!pageData) {
-        return (
-            <main className="min-h-screen bg-surface flex flex-col items-center justify-center text-center p-6">
-                <LayoutDashboard className="w-20 h-20 text-slate-300 mb-6" />
-                <h1 className="text-5xl font-light text-title mb-4 tracking-tight">Page Not <span className="font-semibold text-primary">Found.</span></h1>
-                <p className="text-xl text-muted mb-8 font-light max-w-lg">The spectacular MSIT page you are looking for doesn't exist yet, or the URL might be incorrect.</p>
-                <Link to="/" className="px-8 py-3 bg-title text-white rounded-lg font-semibold hover:bg-body transition-colors">
-                    Return to Home
-                </Link>
-            </main>
-        );
+        return <NotFound />;
     }
 
     const isDepartment = ['cse', 'it', 'ece', 'eee', 'applied-sciences'].includes(slug);
