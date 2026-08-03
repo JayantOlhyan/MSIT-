@@ -11,6 +11,7 @@ const Header = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState({ faculty: [], pages: [], qa: [] });
     const location = useLocation();
+    const hoverTimeoutRef = React.useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -139,6 +140,20 @@ const Header = () => {
         return megaMenuData[categoryKey]?.some(link => isPathActive(link.url));
     };
 
+    const handleMouseEnter = (key) => {
+        if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+        hoverTimeoutRef.current = setTimeout(() => {
+            setActiveDropdown(key);
+        }, 200);
+    };
+
+    const handleMouseLeave = () => {
+        if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+        hoverTimeoutRef.current = setTimeout(() => {
+            setActiveDropdown(null);
+        }, 150);
+    };
+
     return (
         <>
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
@@ -229,8 +244,8 @@ const Header = () => {
                                     <div
                                         key={idx}
                                         className="relative group px-1 py-1 shrink-0"
-                                        onMouseEnter={() => setActiveDropdown(key)}
-                                        onMouseLeave={() => setActiveDropdown(null)}
+                                        onMouseEnter={() => handleMouseEnter(key)}
+                                        onMouseLeave={handleMouseLeave}
                                     >
                                         <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap relative py-1 ${
                                             isCategoryActive(key)

@@ -5,11 +5,7 @@ import PageHero from '../components/PageHero';
 
 const Brochure = () => {
     const brochures = [
-        { year: "2024 - 2025", link: "https://www.msit.in/media/2024/07/18/msit-information-bulletin-2024-25.pdf", highlight: true },
-        { year: "2023 - 2024", link: "https://www.msit.in/media/2023/08/22/information-bulletin2023-updated.pdf", highlight: false },
-        { year: "2022 - 2023", link: "https://www.msit.in/media/2023/05/05/information-bulletin-2022-nba.pdf", highlight: false },
-        { year: "2021 - 2022", link: "https://www.msit.in/media/2023/05/05/information-bulletin-2021-nba.pdf", highlight: false },
-        { year: "2020 - 2021", link: "https://www.msit.in/media/2023/05/05/information-bulletin-2020-final-nba.pdf", highlight: false }
+        { year: "2024 - 2025", link: "https://www.msit.in/media/2024/07/18/msit-information-bulletin-2024-25.pdf", highlight: true }
     ];
 
     return (

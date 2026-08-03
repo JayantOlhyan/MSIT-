@@ -144,11 +144,11 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold tracking-widest uppercase text-slate-400">
+                <div className="pt-12 pb-20 md:pb-0 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold tracking-widest uppercase text-slate-400">
                     <div className="flex items-center gap-2">
                         <span>© 2026 MSIT New Delhi</span>
                     </div>
-                    <div className="flex gap-8">
+                    <div className="flex flex-wrap justify-center gap-4 md:gap-8">
                         <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
                         <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
                         <button 

@@ -543,11 +543,11 @@ const Home = () => {
                         onTouchEnd={handleTouchEnd}
                     >
 
-                        <div className="min-h-[clamp(350px,50vh,600px)] flex items-center justify-center relative z-10">
+                        <div className="grid relative z-10 min-h-[400px]">
                             {testimonials.map((t, i) => (
                                 <div
                                     key={i}
-                                    className={`absolute inset-0 transition-all duration-1000 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-2 sm:px-4
+                                    className={`col-start-1 row-start-1 transition-all duration-1000 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-2 sm:px-4 py-8
                                     ${i === currentTestimonial ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-32 pointer-events-none -z-10'}`}
                                 >
                                     <div className="w-56 h-56 md:w-80 md:h-80 rounded-[40px] overflow-hidden shadow-card border-[12px] border-white shrink-0 transform -rotate-3 group-hover:rotate-0 transition-all duration-700 hover:scale-105">
