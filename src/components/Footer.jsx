@@ -1,14 +1,27 @@
-import React from 'react';
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Heart, MessageSquare, ExternalLink, ArrowRight, Users } from 'lucide-react';
+import React, { useState } from 'react';
+import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Heart, MessageSquare, ExternalLink, ArrowRight, Users, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAccessibility } from '../context/AccessibilityContext';
 
 const Footer = () => {
     const { setIsModalOpen } = useAccessibility();
+    const [expandedSections, setExpandedSections] = useState({
+        quickLinks: false,
+        resources: false,
+        followUs: false,
+    });
+
+    const toggleSection = (section) => {
+        setExpandedSections(prev => ({
+            ...prev,
+            [section]: !prev[section]
+        }));
+    };
+
     return (
         <footer className="bg-slate-950 pt-0 pb-12 border-t border-slate-900 text-slate-300">
             {/* Feedback & Join Us Banner */}
-            <div className="bg-gradient-to-r from-primary/30 to-blue-900/30 border-b border-slate-800 py-8 mb-20 shadow-inner">
+            <div className="bg-gradient-to-r from-primary/30 to-blue-900/30 border-b border-slate-800 py-6 sm:py-8 mb-12 lg:mb-20 shadow-inner">
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-800">
                     {/* Feedback Section */}
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 lg:pb-0 lg:pr-8">
@@ -49,7 +62,7 @@ const Footer = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 mb-10 lg:mb-20">
 
                     {/* Col 1 */}
                     <div className="lg:col-span-2 pr-4">
@@ -69,10 +82,10 @@ const Footer = () => {
                                 </span>
                             </div>
                         </Link>
-                        <p className="text-slate-300 font-medium leading-relaxed mb-10 max-w-sm">
+                        <p className="text-slate-300 font-medium leading-relaxed mb-6 lg:mb-10 max-w-sm">
                             Shaping tomorrow's engineers and innovators through exceptional academic rigor and profound industry immersion.
                         </p>
-                        <div className="space-y-6 text-sm font-bold text-slate-400">
+                        <div className="space-y-4 lg:space-y-6 text-sm font-bold text-slate-400">
                             <div className="flex items-start group">
                                 <MapPin className="w-5 h-5 mr-4 text-slate-700 shrink-0 mt-0.5 group-hover:text-primary transition-colors" />
                                 <a 
@@ -97,8 +110,14 @@ const Footer = () => {
 
                     {/* Col 2 */}
                     <div>
-                        <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Quick Links</h3>
-                        <ul className="space-y-5 font-bold text-sm">
+                        <h3 
+                            onClick={() => toggleSection('quickLinks')}
+                            className="text-white text-xs font-black uppercase tracking-[0.25em] mb-4 lg:mb-10 opacity-80 cursor-pointer lg:cursor-default flex items-center justify-between lg:block"
+                        >
+                            <span>Quick Links</span>
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 lg:hidden ${expandedSections.quickLinks ? 'rotate-180' : ''}`} />
+                        </h3>
+                        <ul className={`space-y-3 lg:space-y-5 font-bold text-sm transition-all duration-300 overflow-hidden ${expandedSections.quickLinks ? 'max-h-60 opacity-100 mb-6' : 'max-h-0 opacity-0 lg:max-h-none lg:opacity-100 lg:mb-0 pointer-events-none lg:pointer-events-auto'}`}>
                             <li><Link to="/about" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> About MSIT</Link></li>
                             <li><Link to="/online-fee" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Admissions 2026</Link></li>
                             <li><Link to="/cse" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Academic Programs</Link></li>
@@ -109,8 +128,14 @@ const Footer = () => {
 
                     {/* Col 3 */}
                     <div>
-                        <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Resources</h3>
-                        <ul className="space-y-5 font-bold text-sm">
+                        <h3 
+                            onClick={() => toggleSection('resources')}
+                            className="text-white text-xs font-black uppercase tracking-[0.25em] mb-4 lg:mb-10 opacity-80 cursor-pointer lg:cursor-default flex items-center justify-between lg:block"
+                        >
+                            <span>Resources</span>
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 lg:hidden ${expandedSections.resources ? 'rotate-180' : ''}`} />
+                        </h3>
+                        <ul className={`space-y-3 lg:space-y-5 font-bold text-sm transition-all duration-300 overflow-hidden ${expandedSections.resources ? 'max-h-60 opacity-100 mb-6' : 'max-h-0 opacity-0 lg:max-h-none lg:opacity-100 lg:mb-0 pointer-events-none lg:pointer-events-auto'}`}>
                             <li><Link to="/brochure" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Information Bulletin</Link></li>
                             <li><Link to="/academic-calendar" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Academic Calendar</Link></li>
                             <li><Link to="/timetable" className="hover:text-primary transition-all flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-800 group-hover:bg-primary transition-all"></span> Time Table</Link></li>
@@ -120,8 +145,15 @@ const Footer = () => {
 
                     {/* Col 4 */}
                     <div>
-                        <h3 className="text-white text-xs font-black uppercase tracking-[0.25em] mb-10 opacity-80">Follow Us</h3>
-                        <div className="flex gap-4 mb-10">
+                        <h3 
+                            onClick={() => toggleSection('followUs')}
+                            className="text-white text-xs font-black uppercase tracking-[0.25em] mb-4 lg:mb-10 opacity-80 cursor-pointer lg:cursor-default flex items-center justify-between lg:block"
+                        >
+                            <span>Follow Us</span>
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 lg:hidden ${expandedSections.followUs ? 'rotate-180' : ''}`} />
+                        </h3>
+                        <div className={`transition-all duration-300 overflow-hidden ${expandedSections.followUs ? 'max-h-[300px] opacity-100 mb-6' : 'max-h-0 opacity-0 lg:max-h-none lg:opacity-100 lg:mb-0 pointer-events-none lg:pointer-events-auto'}`}>
+                            <div className="flex gap-4 mb-6 lg:mb-10">
                             {[
                                 { Icon: Facebook, href: "https://www.facebook.com/msitnewdelhi/", label: "Follow MSIT on Facebook" },
                                 { Icon: Twitter, href: "https://x.com/msitnewdelhi?lang=en", label: "Follow MSIT on Twitter" },
@@ -138,6 +170,7 @@ const Footer = () => {
                             <div className="flex gap-2">
                                 <input type="email" placeholder="Email" className="bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs focus:border-primary outline-none w-full" />
                                 <button className="bg-primary p-2 rounded-lg text-white hover:bg-primary/80 transition-colors" aria-label="Subscribe to newsletter"><ArrowRight className="w-4 h-4" /></button>
+                            </div>
                             </div>
                         </div>
                     </div>
