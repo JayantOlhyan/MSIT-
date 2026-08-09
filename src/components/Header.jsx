@@ -159,10 +159,10 @@ const Header = () => {
         <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
             <header role="navigation" className={`${headerContainerClass} flex flex-col`}>
                 {/* Tier 1: Persistent Branding & Utility Bar (Transparent on Home, White on Scroll) */}
-                <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 border-b relative z-20 ${
+                <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 relative z-20 ${
                     isTransparent 
-                        ? 'bg-transparent border-transparent' 
-                        : 'bg-white border-slate-100 shadow-card text-title'
+                        ? 'bg-transparent' 
+                        : 'bg-white text-title'
                 }`}>
                     <div className="w-full max-w-screen-2xl mx-auto flex justify-between items-center">
                         {/* Logo Area */}
@@ -230,10 +230,10 @@ const Header = () => {
                 </div>
 
                 <div 
-                    className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 border-b transition-all duration-300 ${
+                    className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 ${
                         isTransparent 
-                            ? 'bg-transparent border-transparent py-3' 
-                            : 'bg-white shadow-card border-slate-100 py-1.5'
+                            ? 'bg-transparent py-3' 
+                            : 'bg-white py-1.5'
                     }`}
                 >
                     <div className="w-full max-w-screen-2xl mx-auto">
@@ -259,9 +259,9 @@ const Header = () => {
                                             )}
                                         </button>
 
-                                        <div className={`absolute top-full mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${
-                                            ['about', 'admission', 'academics'].includes(key) ? 'left-0' : 'right-0'
-                                        } ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
+                                        <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${
+                                            activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'
+                                        }`}>
                                             <div className="bg-white shadow-card rounded-xl border border-slate-100 p-6 w-80">
                                                 <div className="flex flex-col space-y-3.5">
                                                     {megaMenuData[key]?.map((link, i) => (
