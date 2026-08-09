@@ -106,13 +106,15 @@ const DynamicPage = () => {
                                 )}
 
                                 {/* Quick CTA */}
-                                <div className="p-8 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white transition-colors cursor-pointer group">
-                                    <h4 className="text-lg font-semibold text-title mb-2 group-hover:text-primary transition-colors">Questions?</h4>
-                                    <p className="text-sm text-muted font-light mb-4">Contact the MSIT administrative desk directly.</p>
-                                    <div className="text-primary font-medium text-sm flex items-center group-hover:translate-x-2 transition-transform">
-                                        Contact Us <ArrowRight className="w-4 h-4 ml-1" />
-                                    </div>
-                                </div>
+                                {slug !== 'contact' && (
+                                    <Link to="/contact" className="block p-8 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white transition-colors cursor-pointer group">
+                                        <h4 className="text-lg font-semibold text-title mb-2 group-hover:text-primary transition-colors">Questions?</h4>
+                                        <p className="text-sm text-muted font-light mb-4">Contact the MSIT administrative desk directly.</p>
+                                        <div className="text-primary font-medium text-sm flex items-center group-hover:translate-x-2 transition-transform">
+                                            Contact Us <ArrowRight className="w-4 h-4 ml-1" />
+                                        </div>
+                                    </Link>
+                                )}
                             </div>
                         </div>
 
