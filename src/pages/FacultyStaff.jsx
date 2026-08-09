@@ -99,8 +99,8 @@ const FacultyStaff = () => {
                                 onClick={() => setActiveDept(dept)}
                                 className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all whitespace-nowrap border-2 group ${
                                     activeDept === dept 
-                                    ? 'bg-slate-900 border-slate-900 text-white shadow-card shadow-slate-900/20' 
-                                    : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
+                                    ? 'bg-slate-900 border-slate-900 text-white shadow-md shadow-slate-900/30 focus:outline-none' 
+                                    : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50 focus:outline-none'
                                 }`}
                             >
                                 {dept}
