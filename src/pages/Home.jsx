@@ -311,7 +311,7 @@ const Home = () => {
                                 <button
                                     key={tab}
                                     onClick={() => setActiveNewsTab(tab)}
-                                    className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap active:scale-95 ${activeNewsTab === tab ? 'bg-slate-900 text-white shadow-card' : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-400'}`}
+                                    className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap active:scale-95 focus:outline-none ${activeNewsTab === tab ? 'bg-slate-900 text-white shadow-md shadow-slate-900/30' : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-400'}`}
                                 >
                                     {tab.charAt(0).toUpperCase() + tab.slice(1)}
                                 </button>
@@ -607,9 +607,9 @@ const Home = () => {
                     <h2 className="text-4xl md:text-6xl font-bold text-title tracking-tight mb-8">Engineering Campus Tour</h2>
                     <p className="text-xl text-muted font-medium max-w-2xl mx-auto mb-16 leading-relaxed">Take a fully immersive 360° virtual tour of our world-class laboratories, extensive libraries, and intelligent learning spaces.</p>
                     
-                    <button onClick={() => openLightbox('Virtual Tour Launch')} className="px-12 py-5 bg-title text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-body transition-all shadow-card hover:shadow-slate-300 active:scale-95">
+                    <Link to="/virtual-tour" className="inline-block px-12 py-5 bg-title text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-body transition-all shadow-card hover:shadow-slate-300 active:scale-95">
                         Start Exploration
-                    </button>
+                    </Link>
                     
                     <div className="mt-20 flex flex-wrap justify-center gap-6">
                         {['Main Block', 'AI Labs', 'Library', 'Sports Complex', 'Auditorium'].map((loc, i) => (
@@ -631,7 +631,7 @@ const Home = () => {
                         {lightboxImage === 'Virtual Tour Launch' ? (
                             <iframe
                                 className="absolute inset-0 w-full h-full"
-                                src="https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1&mute=0"
+                                src="https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1&mute=0"
                                 title="MSIT Virtual Tour"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
