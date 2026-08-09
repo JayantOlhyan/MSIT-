@@ -23,7 +23,7 @@ const VirtualTour = () => {
             description: 'The architectural heart of MSIT, housing the administrative office, principal office, dean office, and major lecture theatres with modern acoustic designs.',
             highlights: ['Central Reception', 'Deans & Administration Office', 'Main Seminar Hall', 'Smart Classrooms'],
             image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1',
+            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
             type: 'video'
         },
         {
@@ -33,7 +33,7 @@ const VirtualTour = () => {
             description: 'Equipped with state-of-the-art server racks, NVIDIA GPUs, and development terminals, these labs host advanced research in AI, Machine Learning, and Cryptography.',
             highlights: ['High-Performance Server Racks', 'NVIDIA GPU Workstations', 'IoT and Robotics Kits', 'Collaborative Innovation Zone'],
             image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1',
+            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
             type: 'video'
         },
         {
@@ -43,7 +43,7 @@ const VirtualTour = () => {
             description: 'A fully digitalized learning repository with book bank services, IEEE digital library access, individual reading cabins, and a resource archive.',
             highlights: ['50,000+ Print Volumes', 'IEEE & DELNET Digital Access', 'Spacious Reading Halls', 'Archival & Reference Sections'],
             image: 'https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1',
+            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
             type: 'video'
         },
         {
@@ -53,7 +53,7 @@ const VirtualTour = () => {
             description: 'A grand centrally-airconditioned facility hosting international conferences, national hackathons, cultural festivals, and corporate campus placements.',
             highlights: ['1,000+ Seating Capacity', 'State-of-the-Art Line Array Audio', 'Dual Laser Projector Setup', 'Spacious Backstage & Greenrooms'],
             image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1',
+            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
             type: 'video'
         },
         {
@@ -63,7 +63,7 @@ const VirtualTour = () => {
             description: 'Promoting a healthy mind in a healthy body, our sports arena is equipped for both indoor training sessions and outdoor competitive tournaments.',
             highlights: ['Football & Cricket Grounds', 'Lawn Tennis Courts', 'Indoor Badminton Courts', 'Fully Equipped Gym'],
             image: 'https://images.unsplash.com/photo-1544033527-b192daee1f5b?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1',
+            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
             type: 'video'
         },
         {
@@ -73,7 +73,7 @@ const VirtualTour = () => {
             description: 'Secure, Wi-Fi enabled boarding facilities providing single and double occupancy options with modern mess halls and recreation centers.',
             highlights: ['24/7 Power & Water Supply', 'High-Speed Wi-Fi Connectivity', 'Hygienic Dining & Mess', 'Recreation & Common Rooms'],
             image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1',
+            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
             type: 'video'
         }
     ];
@@ -142,7 +142,7 @@ const VirtualTour = () => {
                                 Take a structured, guided video tour of our campus architecture, laboratories, lecture halls, and student activity centers led by our student ambassadors.
                             </p>
                             <button 
-                                onClick={() => openTour({ type: 'video', url: 'https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1', title: 'MSIT Campus Guided Walkthrough' })}
+                                onClick={() => openTour({ type: 'video', url: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1', title: 'MSIT Campus Guided Walkthrough' })}
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-primary hover:bg-primary/95 text-white font-bold text-sm tracking-wider uppercase rounded-2xl transition-all shadow-lg active:scale-95 group"
                             >
                                 <Play className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" />
@@ -151,9 +151,9 @@ const VirtualTour = () => {
                         </div>
                         
                         <div className="lg:col-span-7">
-                            <div className="relative aspect-video rounded-2xl overflow-hidden group shadow-2xl border border-white/10 cursor-pointer" onClick={() => openTour({ type: 'video', url: 'https://www.youtube.com/embed/HdQpUwgujqI?autoplay=1', title: 'MSIT Campus Guided Walkthrough' })}>
+                            <div className="relative aspect-video rounded-2xl overflow-hidden group shadow-2xl border border-white/10 cursor-pointer" onClick={() => openTour({ type: 'video', url: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1', title: 'MSIT Campus Guided Walkthrough' })}>
                                 <img 
-                                    src="/campus-library.webp" 
+                                    src="https://img.youtube.com/vi/WY6dTTsE4cY/hqdefault.jpg" 
                                     alt="Virtual Tour Video Preview" 
                                     className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[6s] ease-out" 
                                 />
@@ -163,7 +163,7 @@ const VirtualTour = () => {
                                     </div>
                                 </div>
                                 <div className="absolute bottom-6 left-6 text-white bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg text-xs font-semibold tracking-wider uppercase border border-white/5">
-                                    Guided Video Tour • 3:45 Mins
+                                    Guided Video Tour • 5:33 Mins
                                 </div>
                             </div>
                         </div>
@@ -181,9 +181,9 @@ const VirtualTour = () => {
                             <button
                                 key={cat.id}
                                 onClick={() => setActiveCategory(cat.id)}
-                                className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap active:scale-95 shrink-0 ${
+                                className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap active:scale-95 shrink-0 focus:outline-none ${
                                     activeCategory === cat.id 
-                                        ? 'bg-slate-900 text-white shadow-md' 
+                                        ? 'bg-slate-900 text-white shadow-md shadow-slate-900/30' 
                                         : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-400 hover:text-slate-900'
                                 }`}
                             >
