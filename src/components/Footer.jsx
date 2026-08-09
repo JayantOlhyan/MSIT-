@@ -152,15 +152,15 @@ const Footer = () => {
                             <span>Follow Us</span>
                             <ChevronDown className={`w-4 h-4 transition-transform duration-300 lg:hidden ${expandedSections.followUs ? 'rotate-180' : ''}`} />
                         </h3>
-                        <div className={`transition-all duration-300 overflow-hidden ${expandedSections.followUs ? 'max-h-[300px] opacity-100 mb-6' : 'max-h-0 opacity-0 lg:max-h-none lg:opacity-100 lg:mb-0 pointer-events-none lg:pointer-events-auto'}`}>
+                        <div className={`transition-all duration-300 overflow-hidden lg:overflow-visible ${expandedSections.followUs ? 'max-h-[300px] opacity-100 mb-6' : 'max-h-0 opacity-0 lg:max-h-none lg:opacity-100 lg:mb-0 pointer-events-none lg:pointer-events-auto'}`}>
                             <div className="flex gap-4 mb-6 lg:mb-10">
                             {[
-                                { Icon: Facebook, href: "https://www.facebook.com/msitnewdelhi/", label: "Follow MSIT on Facebook" },
-                                { Icon: Twitter, href: "https://x.com/msitnewdelhi?lang=en", label: "Follow MSIT on Twitter" },
-                                { Icon: Linkedin, href: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/posts/?feedView=all", label: "Follow MSIT on LinkedIn" },
-                                { Icon: Instagram, href: "https://www.instagram.com/msitnewdelhi/?hl=en", label: "Follow MSIT on Instagram" }
-                            ].map(({ Icon, href, label }, i) => (
-                                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all hover:-translate-y-1 border border-slate-800" aria-label={label}>
+                                { Icon: Facebook, href: "https://www.facebook.com/msitnewdelhi/", label: "Follow MSIT on Facebook", hoverClass: "hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]" },
+                                { Icon: Twitter, href: "https://x.com/msitnewdelhi?lang=en", label: "Follow MSIT on Twitter", hoverClass: "hover:bg-[#15181C] hover:text-white hover:border-[#333]" },
+                                { Icon: Linkedin, href: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/posts/?feedView=all", label: "Follow MSIT on LinkedIn", hoverClass: "hover:bg-[#0077B5] hover:text-white hover:border-[#0077B5]" },
+                                { Icon: Instagram, href: "https://www.instagram.com/msitnewdelhi/?hl=en", label: "Follow MSIT on Instagram", hoverClass: "hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:border-transparent" }
+                            ].map(({ Icon, href, label, hoverClass }, i) => (
+                                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className={`w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center transition-all hover:-translate-y-1 border border-slate-800 ${hoverClass}`} aria-label={label}>
                                     <Icon className="w-5 h-5" />
                                 </a>
                             ))}
