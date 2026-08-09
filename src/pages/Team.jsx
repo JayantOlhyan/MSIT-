@@ -74,17 +74,17 @@ const Team = () => {
                 ]
             },
             {
-                id: 'pawan-sharma',
-                name: 'Pawan Sharma',
+                id: 'pawan-singh',
+                name: 'Pawan Singh',
                 role: 'Student Developer & Frontend Engineer',
-                dept: '1st Year, IT',
+                dept: '2nd Year, IT',
                 img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300', // Placeholder profile
                 bio: 'Frontend developer and logic designer focused on component modularity, search system optimization, and custom interactive dashboards.',
-                email: 'pawan.sharma@gmail.com',
-                linkedin: 'https://linkedin.com',
-                github: 'https://github.com',
+                email: 'pawansinghmahori@gmail.com',
+                linkedin: 'https://www.linkedin.com/in/pawansinghmahori/',
+                github: 'https://github.com/PawanSinghMahori',
                 qualifications: 'B.Tech IT (Batch of 2029)',
-                experience: '1st Year Student',
+                experience: '2nd Year Student',
                 contributions: [
                     'Developed Search indexing matching logic',
                     'Created dynamic components for Admin Dashboard',
@@ -92,17 +92,17 @@ const Team = () => {
                 ]
             },
             {
-                id: 'abhay-singh',
-                name: 'Abhay Singh',
+                id: 'abhay-mishra',
+                name: 'Abhay Mishra',
                 role: 'Student Developer & QA Specialist',
-                dept: '1st Year, IT',
+                dept: '2nd Year, IT',
                 img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300', // Placeholder profile
                 bio: 'Backend integration and quality assurance specialist. Works on ensuring structural semantics, web accessibility, and performance optimization.',
-                email: 'abhay.singh@gmail.com',
+                email: 'bravemishra2007@gmail.com',
                 linkedin: 'https://linkedin.com',
                 github: 'https://github.com',
                 qualifications: 'B.Tech IT (Batch of 2029)',
-                experience: '1st Year Student',
+                experience: '2nd Year Student',
                 contributions: [
                     'Audited accessibility compliance standards',
                     'Conducted performance testing on mobile layouts',
