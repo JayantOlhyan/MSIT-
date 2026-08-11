@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
-import { Users, Code, Award, GraduationCap, X, Mail, Linkedin, Github, ExternalLink, Calendar, Star, FileText, ChevronRight } from 'lucide-react';
+import { Users, Code, Award, GraduationCap, X, Mail, Linkedin, Github, ExternalLink, Calendar, Star, FileText, ChevronRight, Globe } from 'lucide-react';
 
 
 const Team = () => {
@@ -60,11 +60,11 @@ const Team = () => {
                 name: 'Jayant Olhyan',
                 role: 'Lead Full-Stack Developer & UI Architect',
                 dept: '1st Year, CSE',
-                img: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=300', // Placeholder profile
+                img: '/team/jayant-olhyan.webp',
                 bio: 'Passionate software engineer specializing in modern React frameworks, interactive motions, and responsive design systems. Responsible for frontend development and design alignment.',
                 email: 'jayantolhyan@gmail.com',
-                linkedin: 'https://linkedin.com',
-                github: 'https://github.com',
+                linkedin: 'https://www.linkedin.com/in/jayant-olhyan/',
+                github: 'https://github.com/JayantOlhyan',
                 qualifications: 'B.Tech CSE (Batch of 2029)',
                 experience: '1st Year Student',
                 contributions: [
@@ -76,19 +76,20 @@ const Team = () => {
             {
                 id: 'pawan-singh',
                 name: 'Pawan Singh',
-                role: 'Student Developer & Frontend Engineer',
-                dept: '2nd Year, IT',
-                img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300', // Placeholder profile
-                bio: 'Frontend developer and logic designer focused on component modularity, search system optimization, and custom interactive dashboards.',
+                role: 'Vice President & Head of Quality Assurance Department',
+                dept: 'IT - 1',
+                img: '/team/pawan-singh.webp',
+                bio: 'Vice President and Head of Quality Assurance Department. Responsible for quality assurance frameworks, performance optimization, structural testing, and cross-departmental coordination.',
                 email: 'pawansinghmahori@gmail.com',
+                portfolio: 'https://pawan-singh-portfolio.example.com', // Placeholder for portfolio website
                 linkedin: 'https://www.linkedin.com/in/pawansinghmahori/',
                 github: 'https://github.com/PawanSinghMahori',
-                qualifications: 'B.Tech IT (Batch of 2029)',
-                experience: '2nd Year Student',
+                qualifications: 'B.Tech IT - 1 (Batch of 2029)',
+                experience: 'Vice President & QA Head',
                 contributions: [
-                    'Developed Search indexing matching logic',
-                    'Created dynamic components for Admin Dashboard',
-                    'Integrated local storage synchronization systems'
+                    'Heads Quality Assurance & Testing Department',
+                    'Audits accessibility compliance and user experience standards',
+                    'Oversees quality metrics and cross-functional project deliverables'
                 ]
             },
             {
@@ -96,7 +97,7 @@ const Team = () => {
                 name: 'Abhay Mishra',
                 role: 'Student Developer & QA Specialist',
                 dept: '2nd Year, IT',
-                img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300', // Placeholder profile
+                img: '/team/abhay-mishra.webp',
                 bio: 'Backend integration and quality assurance specialist. Works on ensuring structural semantics, web accessibility, and performance optimization.',
                 email: 'bravemishra2007@gmail.com',
                 linkedin: 'https://linkedin.com',
@@ -282,6 +283,17 @@ const Team = () => {
                                 </a>
 
                                 <div className="flex gap-3">
+                                    {selectedMember.portfolio && (
+                                        <a 
+                                            href={selectedMember.portfolio} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="w-10 h-10 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl flex items-center justify-center transition-colors"
+                                            title="Portfolio Website"
+                                        >
+                                            <Globe className="w-4 h-4" />
+                                        </a>
+                                    )}
                                     {selectedMember.linkedin && (
                                         <a 
                                             href={selectedMember.linkedin} 
