@@ -95,19 +95,19 @@ const Team = () => {
             {
                 id: 'abhay-mishra',
                 name: 'Abhay Mishra',
-                role: 'Student Developer & QA Specialist',
+                role: 'Student Designer & Social Media Lead',
                 dept: '2nd Year, ECE',
                 img: '/team/abhay-mishra.webp',
-                bio: 'Backend integration and quality assurance specialist. Works on ensuring structural semantics, web accessibility, and performance optimization.',
+                bio: 'Student designer focused on UI/UX layout design and social media management. Creates visual assets, refines user experience flows, and manages online outreach.',
                 email: 'bravemishra2007@gmail.com',
                 linkedin: 'https://linkedin.com',
                 github: 'https://github.com',
-                qualifications: 'B.Tech IT (Batch of 2029)',
+                qualifications: 'B.Tech ECE (Batch of 2028)',
                 experience: '2nd Year Student',
                 contributions: [
-                    'Audited accessibility compliance standards',
-                    'Conducted performance testing on mobile layouts',
-                    'Drafted sitemap and routing navigation verification'
+                    'Designed UI/UX layouts and visual branding assets',
+                    'Managed social media campaigns and public outreach',
+                    'Collaborated on web interface aesthetics and user flows'
                 ]
             }
         ]
