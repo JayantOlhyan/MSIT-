@@ -7,11 +7,19 @@ const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
+    const [openMobileSections, setOpenMobileSections] = useState({});
     const [searchOpen, setSearchOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState({ faculty: [], pages: [], qa: [] });
     const location = useLocation();
     const hoverTimeoutRef = React.useRef(null);
+
+    const toggleMobileSection = (key) => {
+        setOpenMobileSections(prev => ({
+            ...prev,
+            [key]: !prev[key]
+        }));
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -187,9 +195,8 @@ const Header = () => {
                         </Link>
 
                         <div className={`hidden xl:flex items-center space-x-6 text-xs font-black uppercase tracking-[0.2em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-muted'}`}>
-                            <span className={isTransparent ? 'text-white/40' : 'text-slate-300'}>Contact:</span>
-                            <div className="flex space-x-6">
-
+                            <div className="flex items-center space-x-6">
+                                <span className={isTransparent ? 'text-white/40' : 'text-slate-400'}>Contact:</span>
                                 <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Faculty Directory</Link>
                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Mail</a>
                                 <Link to="/virtual-tour" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Tour</Link>
@@ -304,57 +311,70 @@ const Header = () => {
             {/* Mobile Nav Overlay (Smooth Sliding Drawer) */}
             <div className={`fixed inset-0 z-50 bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pt-24 pb-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
                 <div className="p-6 sm:p-10 max-w-lg sm:max-w-4xl md:max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-8">
-                        {Object.entries(megaMenuData).map(([key, items], idx) => (
-                            <div key={idx} className="py-2">
-                                <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-900 border-b border-slate-100 pb-3 mb-4 px-2">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                                <div className="space-y-1">
-                                    {items.map((link, i) => (
-                                        link.external ? (
-                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
-                                                {link.name}
-                                            </a>
-                                        ) : (
-                                            <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${
-                                                isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
-                                            }`}>
-                                                {link.name}
-                                            </Link>
-                                        )
-                                    ))}
-
-                                    {/* Nest Contact Section under Placements column to save space */}
-                                    {key === 'placements' && (
-                                        <div className="pt-6 mt-6 border-t border-slate-100">
-                                            <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-900 pb-3 mb-2 px-2">Contact</div>
-                                            <div className="space-y-1">
-                                                <Link to="/faculty" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
-                                                    Faculty Directory
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 sm:gap-y-8">
+                        {Object.entries(megaMenuData).map(([key, items], idx) => {
+                            const isExpanded = openMobileSections[key];
+                            return (
+                                <div key={idx} className="border-b border-slate-100 sm:border-none pb-2 sm:pb-0">
+                                    <button 
+                                        onClick={() => toggleMobileSection(key)}
+                                        className="w-full flex items-center justify-between text-xs font-black uppercase tracking-[0.25em] text-slate-900 border-b sm:border-b-0 border-slate-100 pb-3 sm:pb-3 mb-2 sm:mb-4 px-2 text-left cursor-pointer sm:cursor-default"
+                                    >
+                                        <span>{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                                        <ChevronDown className={`w-4 h-4 text-slate-500 transition-transform duration-300 sm:hidden ${isExpanded ? 'rotate-180 text-primary' : ''}`} />
+                                    </button>
+                                    <div className={`space-y-1 transition-all duration-300 overflow-hidden sm:max-h-none sm:opacity-100 sm:block ${
+                                        isExpanded ? 'max-h-[600px] opacity-100 mb-3' : 'max-h-0 opacity-0 sm:max-h-none sm:opacity-100'
+                                    }`}>
+                                        {items.map((link, i) => (
+                                            link.external ? (
+                                                <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                                    {link.name}
+                                                </a>
+                                            ) : (
+                                                <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${
+                                                    isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
+                                                }`}>
+                                                    {link.name}
                                                 </Link>
-                                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
-                                                    Campus Mail
-                                                </a>
-                                                <a href="tel:01165215941" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
-                                                    Reception: 011-65215941
-                                                </a>
-                                            </div>
-                                        </div>
-                                    )}
+                                            )
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
-                    <div className="pt-12 grid sm:grid-cols-2 gap-4 pb-20">
-                        <a 
-                            href="https://ipu.admissions.nic.in/" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="block w-full py-4 text-center rounded-2xl bg-slate-900 text-white font-bold text-base shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer"
-                        >
-                            Apply Now
-                        </a>
-                        <Link to="/virtual-tour" onClick={() => setIsMenuOpen(false)} className="w-full py-4 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-base hover:bg-slate-50 transition-all active:scale-95 cursor-pointer block">Visit Campus</Link>
+                    {/* Bottom Area with Contact Links & Action Buttons */}
+                    <div className="pt-8 mt-6 border-t border-slate-100 pb-20">
+                        {/* Contact Section */}
+                        <div className="mb-6">
+                            <div className="text-xs font-black uppercase tracking-[0.25em] text-slate-900 pb-3 mb-2 px-2">Contact</div>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-1">
+                                <Link to="/faculty" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Faculty Directory
+                                </Link>
+                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Campus Mail
+                                </a>
+                                <a href="tel:01165215941" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Reception: 011-65215941
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* CTA Buttons */}
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            <a 
+                                href="https://ipu.admissions.nic.in/" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="block w-full py-4 text-center rounded-2xl bg-slate-900 text-white font-bold text-base shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer"
+                            >
+                                Apply Now
+                            </a>
+                            <Link to="/virtual-tour" onClick={() => setIsMenuOpen(false)} className="w-full py-4 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-base hover:bg-slate-50 transition-all active:scale-95 cursor-pointer block">Visit Campus</Link>
+                        </div>
                     </div>
                 </div>
             </div>
