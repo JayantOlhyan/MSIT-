@@ -145,7 +145,7 @@ const Team = () => {
                             onClick={() => setSelectedMember(member)}
                             className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex gap-6 items-center"
                         >
-                            <div className="w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shrink-0">
+                            <div className="w-24 h-24 rounded-full overflow-hidden shrink-0">
                                 <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                             </div>
                             <div className="min-w-0">
@@ -178,7 +178,7 @@ const Team = () => {
                         >
                             <div>
                                 <div className="flex gap-4 items-center mb-6">
-                                    <div className="w-16 h-16 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shrink-0">
+                                    <div className="w-16 h-16 rounded-full overflow-hidden shrink-0">
                                         <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                                     </div>
                                     <div className="min-w-0">
@@ -226,7 +226,7 @@ const Team = () => {
                         <div className="bg-slate-900 text-white p-8 pt-12 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
                             <div className="flex gap-6 items-center relative z-10">
-                                <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
+                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
                                     <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="min-w-0">
