@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { Search, Mail, Award, BookOpen, ChevronRight, X, TrendingUp, Target, FileText, Download, Star, Briefcase, Linkedin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { facultyMembers } from '../data/facultyData';
 
@@ -9,6 +9,40 @@ const FacultyStaff = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [activeDept, setActiveDept] = useState('All');
     const [selectedFaculty, setSelectedFaculty] = useState(null);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    // Auto-open profile modal when navigating with ?id= URL parameter
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const facultyId = params.get('id');
+        if (facultyId) {
+            const found = facultyMembers.find(f => 
+                f.id === facultyId || 
+                f.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(facultyId.toLowerCase().replace(/[^a-z0-9]/g, ''))
+            );
+            if (found) {
+                setSelectedFaculty(found);
+                if (found.dept) {
+                    setActiveDept(found.dept);
+                }
+            }
+        }
+    }, [location.search]);
+
+    const handleOpenProfile = (faculty) => {
+        setSelectedFaculty(faculty);
+        if (faculty?.id) {
+            navigate(`/faculty?id=${faculty.id}`, { replace: true });
+        }
+    };
+
+    const handleCloseProfile = () => {
+        setSelectedFaculty(null);
+        if (location.search.includes('id=')) {
+            navigate('/faculty', { replace: true });
+        }
+    };
 
     // Prevent body scroll when modal is open
     useEffect(() => {
@@ -119,7 +153,7 @@ const FacultyStaff = () => {
                         {filteredFaculty.map((faculty, idx) => (
                             <div
                                 key={idx}
-                                onClick={() => setSelectedFaculty(faculty)}
+                                onClick={() => handleOpenProfile(faculty)}
                                 className="group bg-white rounded-[2rem] p-6 shadow-card hover:shadow-card-hover border border-slate-200 hover:border-blue-200 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 relative overflow-hidden flex flex-col h-full"
                             >
                                 {/* Decorative Glow */}
@@ -186,14 +220,14 @@ const FacultyStaff = () => {
                     {/* Backdrop */}
                     <div
                         className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"
-                        onClick={() => setSelectedFaculty(null)}
+                        onClick={handleCloseProfile}
                     ></div>
 
                     {/* Modal Content */}
-                    <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-card animate-scale-in border border-white/20">
+                    <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-[2.5rem] shadow-card animate-scale-in border border-white/20">
                         {/* Close Button */}
                         <button
-                            onClick={() => setSelectedFaculty(null)}
+                            onClick={handleCloseProfile}
                             className="absolute top-6 right-6 w-12 h-12 bg-white/20 backdrop-blur-xl border border-white/40 hover:bg-white/40 text-slate-800 rounded-full flex items-center justify-center z-20 transition-all shadow-card cursor-pointer"
                             aria-label="Close faculty profile"
                         >

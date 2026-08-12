@@ -72,10 +72,11 @@ const generatedPages = Array.from(pageMap.values());
  * Dynamically generated faculty index from facultyData.js
  */
 const generatedFaculty = facultyMembers.map(f => ({
+    id: f.id,
     name: f.name,
     role: f.role,
     dept: f.dept || "Faculty",
-    url: "/faculty",
+    url: `/faculty?id=${f.id}`,
     keywords: [
         f.name,
         f.role,
