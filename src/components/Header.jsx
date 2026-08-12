@@ -373,36 +373,95 @@ const Header = () => {
 
             {/* Search Modal */}
             {searchOpen && (
-                <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[100] flex items-start justify-center pt-24 px-4 animate-fade-in" onClick={toggleSearch}>
-                    <div className="bg-white rounded-3xl shadow-card w-full max-w-3xl overflow-hidden animate-slide-up relative" onClick={(e) => e.stopPropagation()}>
-                        <div className="p-6 border-b border-slate-100 flex items-center gap-4">
-                            <Search className="w-6 h-6 text-slate-400" />
+                <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[100] flex items-start justify-center pt-16 sm:pt-24 px-4 animate-fade-in" onClick={toggleSearch}>
+                    <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up relative border border-slate-100" onClick={(e) => e.stopPropagation()}>
+                        
+                        {/* Search Input Bar */}
+                        <div className="p-5 sm:p-6 border-b border-slate-100 flex items-center gap-4 bg-white relative z-10">
+                            <div className="w-10 h-10 rounded-xl bg-blue-50/80 flex items-center justify-center text-primary shrink-0">
+                                <Search className="w-5 h-5" />
+                            </div>
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => handleSearch(e.target.value)}
-                                placeholder="Search faculty, departments, or ask a question..."
-                                className="w-full text-xl font-light focus:outline-none text-slate-900 placeholder-slate-300 bg-transparent"
+                                placeholder="Search faculty, departments, courses, or fees..."
+                                className="w-full text-lg sm:text-xl font-normal focus:outline-none text-slate-900 placeholder-slate-400 bg-transparent"
                                 autoFocus
                             />
+                            {searchQuery && (
+                                <button 
+                                    onClick={() => handleSearch('')}
+                                    className="p-1 rounded-full text-slate-400 hover:text-slate-600 transition-colors shrink-0"
+                                    aria-label="Clear query"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            )}
+                            <button
+                                onClick={toggleSearch}
+                                className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all shrink-0 cursor-pointer"
+                                aria-label="Close search modal"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
                         </div>
 
-                        <div className="max-h-[60vh] overflow-y-auto p-4 custom-scrollbar">
+                        {/* Popular Suggestion Chips */}
+                        <div className="px-6 py-3 bg-slate-50/60 border-b border-slate-100 flex items-center gap-2 overflow-x-auto scrollbar-hide text-xs font-semibold">
+                            <span className="text-slate-400 font-bold uppercase tracking-wider text-[10px] shrink-0 mr-1">Try Searching:</span>
+                            {[
+                                { label: '👨‍🏫 Faculty Directory', query: 'Faculty' },
+                                { label: '💻 Computer Science', query: 'CSE' },
+                                { label: '💼 Placements', query: 'Placements' },
+                                { label: '📅 Academic Calendar', query: 'Calendar' },
+                                { label: '📜 Syllabus Index', query: 'Syllabus' },
+                                { label: '💳 Online Fee', query: 'Fee' }
+                            ].map((tag, idx) => (
+                                <button
+                                    key={idx}
+                                    onClick={() => handleSearch(tag.query)}
+                                    className="px-3 py-1.5 rounded-full bg-white border border-slate-200/80 text-slate-700 hover:text-primary hover:border-blue-300 hover:bg-blue-50/50 transition-all whitespace-nowrap shadow-2xs shrink-0 cursor-pointer"
+                                >
+                                    {tag.label}
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className="max-h-[60vh] overflow-y-auto p-5 sm:p-6 scrollbar-hide">
                             {!searchQuery && (
-                                <div className="p-4">
-                                    <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 px-2">Quick Access</h4>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div className="space-y-4">
+                                    <div className="flex items-center justify-between px-1 mb-2">
+                                        <h4 className="text-xs font-black uppercase tracking-widest text-slate-400 flex items-center gap-2">
+                                            <TrendingUp size={14} className="text-blue-500" /> Quick Access
+                                        </h4>
+                                        <span className="text-[11px] font-bold text-slate-400">Popular Portals</span>
+                                    </div>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                         {[
-                                            { name: 'Admissions 2026', icon: <Hash size={14} />, url: '/brochure' },
-                                            { name: 'Faculty Directory', icon: <User size={14} />, url: '/faculty' },
-                                            { name: 'Academic Calendar', icon: <Book size={14} />, url: '/academic-calendar' },
-                                            { name: 'Placements', icon: <TrendingUp size={14} />, url: '/placements' }
+                                            { name: 'Faculty & Staff Directory', desc: '125+ Expert Professors & HODs', icon: <User className="w-5 h-5 text-blue-600" />, bg: 'bg-blue-50', url: '/faculty' },
+                                            { name: 'Admissions 2026', desc: 'Information Bulletin & Seat Matrix', icon: <Hash className="w-5 h-5 text-emerald-600" />, bg: 'bg-emerald-50', url: '/brochure' },
+                                            { name: 'Placements Overview', desc: 'Recruiters, Salary Records & LPA', icon: <TrendingUp className="w-5 h-5 text-rose-600" />, bg: 'bg-rose-50', url: '/placements' },
+                                            { name: 'Academic Calendar', desc: 'Schedules, Exam Dates & Holidays', icon: <Book className="w-5 h-5 text-indigo-600" />, bg: 'bg-indigo-50', url: '/academic-calendar' },
+                                            { name: 'Online Fee Payment', desc: 'Pay Tuition Fees Securely Online', icon: <HelpCircle className="w-5 h-5 text-purple-600" />, bg: 'bg-purple-50', url: '/online-fee' },
+                                            { name: 'Campus Virtual Tour', desc: 'Explore MSIT Campus 3D Layout', icon: <Search className="w-5 h-5 text-amber-600" />, bg: 'bg-amber-50', url: '/virtual-tour' }
                                         ].map(item => (
-                                            <Link key={item.name} to={item.url} onClick={toggleSearch} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-colors group">
-                                                <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
-                                                    {item.icon}
+                                            <Link 
+                                                key={item.name} 
+                                                to={item.url} 
+                                                onClick={toggleSearch} 
+                                                className="flex items-center justify-between p-4 rounded-2xl bg-white border border-slate-200/70 hover:border-blue-300 hover:shadow-card hover:bg-blue-50/30 transition-all duration-300 group cursor-pointer"
+                                            >
+                                                <div className="flex items-center gap-3.5 min-w-0">
+                                                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${item.bg} group-hover:scale-105 transition-transform shrink-0 shadow-2xs`}>
+                                                        {item.icon}
+                                                    </div>
+                                                    <div className="min-w-0">
+                                                        <div className="text-sm font-bold text-slate-850 group-hover:text-primary transition-colors truncate">{item.name}</div>
+                                                        <div className="text-xs text-slate-400 font-medium truncate">{item.desc}</div>
+                                                    </div>
                                                 </div>
-                                                <span className="text-sm font-medium">{item.name}</span>
+                                                <ChevronRight size={16} className="text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0 ml-2" />
                                             </Link>
                                         ))}
                                     </div>
@@ -410,17 +469,20 @@ const Header = () => {
                             )}
 
                             {searchQuery && (
-                                <div className="space-y-6 p-2">
+                                <div className="space-y-6">
                                     {/* AI-Style Quick Answers */}
                                     {searchResults.qa.length > 0 && (
                                         <div>
-                                            <h4 className="text-xs font-bold uppercase tracking-widest text-blue-500 mb-3 px-2 flex items-center gap-2">
-                                                <MessageSquare size={12} /> Quick Answer
+                                            <h4 className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-3 px-1 flex items-center gap-2">
+                                                <MessageSquare size={14} className="text-blue-500" /> Quick Answer
                                             </h4>
                                             {searchResults.qa.map((qa, i) => (
-                                                <div key={i} className="p-4 bg-blue-50/50 rounded-2xl border border-blue-100/50 mb-2">
-                                                    <p className="text-xs font-semibold text-blue-900 mb-1">Q: {qa.q}</p>
-                                                    <p className="text-sm text-slate-700 leading-relaxed font-light">{qa.a}</p>
+                                                <div key={i} className="p-5 bg-gradient-to-r from-blue-50/80 to-indigo-50/50 rounded-2xl border border-blue-100 shadow-2xs mb-3">
+                                                    <p className="text-xs font-bold text-blue-950 mb-1.5 flex items-center gap-1.5">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                        {qa.q}
+                                                    </p>
+                                                    <p className="text-sm text-slate-700 leading-relaxed font-normal">{qa.a}</p>
                                                 </div>
                                             ))}
                                         </div>
@@ -429,20 +491,39 @@ const Header = () => {
                                     {/* Faculty Results */}
                                     {searchResults.faculty.length > 0 && (
                                         <div>
-                                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3 px-2">Faculty</h4>
-                                            <div className="space-y-1">
+                                            <div className="flex items-center justify-between mb-3 px-1">
+                                                <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500 flex items-center gap-2">
+                                                    <User size={14} className="text-slate-400" /> Faculty & Staff
+                                                </h4>
+                                                <span className="text-[11px] font-bold text-primary bg-blue-50 px-2 py-0.5 rounded-md">
+                                                    {searchResults.faculty.length} found
+                                                </span>
+                                            </div>
+                                            <div className="space-y-2">
                                                 {searchResults.faculty.map((f, i) => (
-                                                    <Link key={i} to={f.url} onClick={toggleSearch} className="flex items-center justify-between p-3 rounded-xl hover:bg-slate-50 transition-colors group">
-                                                        <div className="flex items-center gap-3">
-                                                            <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-blue-100 group-hover:text-blue-600">
-                                                                <User size={18} />
+                                                    <Link 
+                                                        key={i} 
+                                                        to={f.url} 
+                                                        onClick={toggleSearch} 
+                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 hover:shadow-card transition-all duration-300 group"
+                                                    >
+                                                        <div className="flex items-center gap-3.5">
+                                                            <div className="w-11 h-11 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shrink-0 group-hover:border-primary/40 transition-colors">
+                                                                <img 
+                                                                    src={f.img || '/faculty/staff-avatar.webp'} 
+                                                                    alt={f.name} 
+                                                                    className="w-full h-full object-cover" 
+                                                                    onError={(e) => { e.target.onerror = null; e.target.src = '/faculty/staff-avatar.webp'; }}
+                                                                />
                                                             </div>
                                                             <div>
-                                                                <div className="text-sm font-semibold text-slate-900 leading-none mb-1">{f.name}</div>
-                                                                <div className="text-xs text-slate-500">{f.role} • {f.dept}</div>
+                                                                <div className="text-sm font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight mb-0.5">{f.name}</div>
+                                                                <div className="text-xs text-slate-500 font-medium">
+                                                                    {f.role} • <span className="font-bold text-primary/80">{f.dept}</span>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <ArrowRight size={14} className="text-slate-300 group-hover:text-slate-900 group-hover:translate-x-1 transition-all" />
+                                                        <ChevronRight size={16} className="text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0" />
                                                     </Link>
                                                 ))}
                                             </div>
@@ -452,14 +533,29 @@ const Header = () => {
                                     {/* Page Results */}
                                     {searchResults.pages.length > 0 && (
                                         <div>
-                                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3 px-2">Pages & Navigation</h4>
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                                            <div className="flex items-center justify-between mb-3 px-1">
+                                                <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500 flex items-center gap-2">
+                                                    <Hash size={14} className="text-slate-400" /> Pages & Navigation
+                                                </h4>
+                                                <span className="text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
+                                                    {searchResults.pages.length} matches
+                                                </span>
+                                            </div>
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                                 {searchResults.pages.map((p, i) => (
-                                                    <Link key={i} to={p.url} onClick={toggleSearch} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-colors group">
-                                                        <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
-                                                            <Hash size={14} />
+                                                    <Link 
+                                                        key={i} 
+                                                        to={p.url} 
+                                                        onClick={toggleSearch} 
+                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 hover:shadow-card text-slate-700 hover:text-primary transition-all duration-300 group"
+                                                    >
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:text-primary transition-colors shrink-0">
+                                                                <Hash size={14} />
+                                                            </div>
+                                                            <span className="text-sm font-bold truncate">{p.title}</span>
                                                         </div>
-                                                        <span className="text-sm font-medium">{p.title}</span>
+                                                        <ChevronRight size={14} className="text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0" />
                                                     </Link>
                                                 ))}
                                             </div>
@@ -467,19 +563,30 @@ const Header = () => {
                                     )}
 
                                     {searchResults.faculty.length === 0 && searchResults.pages.length === 0 && searchResults.qa.length === 0 && (
-                                        <div className="text-center py-12">
-                                            <Search className="w-12 h-12 text-slate-100 mx-auto mb-4" />
-                                            <p className="text-slate-400 font-light italic">No results found for "{searchQuery}"</p>
+                                        <div className="text-center py-12 bg-slate-50/50 rounded-2xl border border-dashed border-slate-200">
+                                            <Search className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                                            <h3 className="text-base font-bold text-slate-800 mb-1">No matches found</h3>
+                                            <p className="text-slate-400 text-xs font-normal max-w-sm mx-auto">We couldn't find anything matching "{searchQuery}". Check for typos or try searching a department like 'CSE' or 'Placements'.</p>
                                         </div>
                                     )}
                                 </div>
                             )}
                         </div>
 
-                        <div className="p-4 bg-slate-50/50 border-t border-slate-100 flex justify-center">
-                            <div className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-4">
-                                <span className="flex items-center gap-1.5"><HelpCircle size={12} className="text-blue-400" /> Ask anything about MSIT</span>
+                        {/* Footer Bar */}
+                        <div className="p-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between px-6 text-xs text-slate-500">
+                            <div className="flex items-center gap-2 font-medium">
+                                <HelpCircle size={14} className="text-blue-500" />
+                                <span>Searching <strong>125+ Faculty</strong> &amp; <strong>37+ Pages</strong></span>
                             </div>
+                            <Link 
+                                to="/sitemap" 
+                                onClick={toggleSearch} 
+                                className="font-bold text-primary hover:underline flex items-center gap-1"
+                            >
+                                <span>Browse Full Sitemap</span>
+                                <ChevronRight size={14} />
+                            </Link>
                         </div>
                     </div>
                 </div>

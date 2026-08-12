@@ -76,6 +76,7 @@ const generatedFaculty = facultyMembers.map(f => ({
     name: f.name,
     role: f.role,
     dept: f.dept || "Faculty",
+    img: f.img,
     url: `/faculty?id=${f.id}`,
     keywords: [
         f.name,
