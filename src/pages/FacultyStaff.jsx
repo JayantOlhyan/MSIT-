@@ -216,43 +216,43 @@ const FacultyStaff = () => {
 
             {/* Premium Interactive Modal */}
             {selectedFaculty && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 sm:px-6 py-6 animate-fade-in">
+                <div className="fixed inset-0 z-[100] flex items-center justify-center px-3 sm:px-6 py-4 sm:py-6 animate-fade-in">
                     {/* Backdrop */}
                     <div
-                        className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"
+                        className="absolute inset-0 bg-slate-900/50 backdrop-blur-md"
                         onClick={handleCloseProfile}
                     ></div>
 
                     {/* Modal Content */}
-                    <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-[2.5rem] shadow-card animate-scale-in border border-white/20">
+                    <div className="relative bg-white w-full max-w-4xl max-h-[92vh] sm:max-h-[85vh] overflow-y-auto scrollbar-hide rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl animate-scale-in border border-white/20">
                         {/* Close Button */}
                         <button
                             onClick={handleCloseProfile}
-                            className="absolute top-6 right-6 w-12 h-12 bg-white/20 backdrop-blur-xl border border-white/40 hover:bg-white/40 text-slate-800 rounded-full flex items-center justify-center z-20 transition-all shadow-card cursor-pointer"
+                            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white rounded-full flex items-center justify-center z-30 transition-all shadow-card cursor-pointer"
                             aria-label="Close faculty profile"
                         >
-                            <X className="w-6 h-6" />
+                            <X className="w-5 h-5 sm:w-6 sm:h-6" />
                         </button>
 
                         {/* Modal Header/Hero */}
-                        <div className="bg-slate-900 pt-16 pb-20 sm:pb-24 px-6 sm:px-8 md:px-16 relative overflow-hidden">
+                        <div className="bg-slate-900 pt-10 sm:pt-16 pb-8 md:pb-28 px-5 sm:px-8 md:px-16 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-[clamp(200px,30vw,400px)] h-[clamp(200px,30vw,400px)] bg-blue-500/20 rounded-full blur-[80px]"></div>
 
-                            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
-                                <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-card shrink-0 -mb-20 md:-mb-32 z-10 border-2 border-white/10">
+                            <div className="flex flex-col md:flex-row items-center md:items-start gap-5 md:gap-8 relative z-10">
+                                <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-card shrink-0 md:-mb-36 z-10 border-2 border-white/10">
                                     <img src={selectedFaculty.img} alt={`High-resolution portrait of ${selectedFaculty.name}, ${selectedFaculty.role} at MSIT`} className="w-full h-full object-cover rounded-2xl" />
                                 </div>
                                 <div className="text-center md:text-left flex-1">
-                                    <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-widest rounded-lg mb-4">
+                                    <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-widest rounded-lg mb-3">
                                         {selectedFaculty.dept} Department
                                         {selectedFaculty.dept === 'Applied Sciences' && (
                                             <span className="ml-1 text-primary font-bold">(1st Year)</span>
                                         )}
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-2">
+                                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight mb-2">
                                         {selectedFaculty.name}
                                     </h2>
-                                    <p className="text-primary text-lg md:text-xl font-medium tracking-wide transition-colors">
+                                    <p className="text-blue-400 text-base sm:text-lg md:text-xl font-medium tracking-wide">
                                         {selectedFaculty.role}
                                     </p>
                                 </div>
@@ -260,7 +260,7 @@ const FacultyStaff = () => {
                         </div>
 
                         {/* Modal Body */}
-                        <div className="px-6 sm:px-8 md:px-16 pt-16 sm:pt-20 md:pt-16 pb-16 bg-[#f8fafc]">
+                        <div className="px-5 sm:px-8 md:px-16 pt-8 sm:pt-14 md:pt-20 pb-12 sm:pb-16 bg-[#f8fafc]">
                             {/* Bio */}
                             <p className="text-slate-600 text-lg leading-relaxed mb-12 font-light">
                                 {selectedFaculty.bio}
