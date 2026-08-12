@@ -385,9 +385,6 @@ const Header = () => {
                                 className="w-full text-xl font-light focus:outline-none text-slate-900 placeholder-slate-300 bg-transparent"
                                 autoFocus
                             />
-                            <div className="hidden sm:flex items-center gap-1 px-2 py-1 rounded bg-slate-100 text-xs font-bold text-slate-400 uppercase tracking-tighter">
-                                <span className="px-1 italic">esc</span> to close
-                            </div>
                         </div>
 
                         <div className="max-h-[60vh] overflow-y-auto p-4 custom-scrollbar">
