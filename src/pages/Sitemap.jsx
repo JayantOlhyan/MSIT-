@@ -94,16 +94,16 @@ const Sitemap = () => {
 
     return (
         <main className="min-h-screen bg-slate-50 text-slate-800 flex flex-col relative overflow-hidden">
-            <SEO 
-                title="Sitemap - Maharaja Surajmal Institute of Technology" 
-                description="Explore all pages, sections, academic directories, student portals, and policy links of MSIT using our dynamic, Apple-style sitemap." 
+            <SEO
+                title="Sitemap - Maharaja Surajmal Institute of Technology"
+                description="Explore all pages, sections, academic directories, student portals, and policy links of MSIT using our dynamic, Apple-style sitemap."
                 canonicalPath="/sitemap"
             />
 
             {/* Uniform PageHero component matching all other website inner pages */}
-            <PageHero 
-                title="Website" 
-                accentTitle="Sitemap" 
+            <PageHero
+                title="Website"
+                accentTitle="Sitemap"
                 description="Find directories, academic portals, administrative cells, societies, support documents, and legal rules using the directory layout."
                 breadcrumbs={[
                     { label: 'Directory' },
@@ -131,7 +131,7 @@ const Sitemap = () => {
                             className="block w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-850 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-all text-xs font-semibold focus:bg-white"
                         />
                         {searchQuery && (
-                            <button 
+                            <button
                                 onClick={() => setSearchQuery('')}
                                 className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600"
                             >
@@ -167,9 +167,9 @@ const Sitemap = () => {
                                     {category.links.map((link, lIdx) => (
                                         <li key={lIdx}>
                                             {link.external ? (
-                                                <a 
-                                                    href={link.path} 
-                                                    target="_blank" 
+                                                <a
+                                                    href={link.path}
+                                                    target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 hover:text-blue-600 transition-colors py-0.5"
                                                 >
@@ -180,8 +180,8 @@ const Sitemap = () => {
                                                     <ChevronRight className="w-3.5 h-3.5 text-slate-400 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all shrink-0" />
                                                 </a>
                                             ) : (
-                                                <Link 
-                                                    to={link.path} 
+                                                <Link
+                                                    to={link.path}
                                                     className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 hover:text-blue-600 transition-colors py-0.5"
                                                 >
                                                     <span className="relative py-0.5">

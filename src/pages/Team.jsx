@@ -213,7 +213,7 @@ const Team = () => {
                     ></div>
 
                     {/* Modal Card */}
-                    <div className="relative bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
+                    <div className="relative bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
                         {/* Close button */}
                         <button 
                             onClick={() => setSelectedMember(null)}

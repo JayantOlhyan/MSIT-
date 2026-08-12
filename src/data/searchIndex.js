@@ -1,220 +1,138 @@
+import { facultyMembers } from './facultyData.js';
+import { pagesData } from './pagesData.js';
+
+/**
+ * Static core routes for primary site navigation
+ */
+const staticPages = [
+    { title: "Home", url: "/", keywords: "home, main, mainpage, index, maharaja surajmal institute of technology, msit" },
+    { title: "Faculty & Staff Directory", url: "/faculty", keywords: "faculty, teachers, staff, directory, prof, assistant, associate, hod, dean, professors" },
+    { title: "Academic Calendar", url: "/academic-calendar", keywords: "calendar, dates, exams, holidays, schedule, academic, mid term, end term" },
+    { title: "Syllabus Index", url: "/syllabus", keywords: "syllabus, curriculum, course, subjects, study, btech, cse, it, ece, eee" },
+    { title: "Time Table", url: "/timetable", keywords: "timetable, schedule, classes, periods, timing, section, routine" },
+    { title: "Information Bulletin (Brochure)", url: "/brochure", keywords: "brochure, bulletin, admissions, booklet, prospectus, seat matrix, eligibility" },
+    { title: "Online Fee Payment", url: "/online-fee", keywords: "fees, payment, online, tuition, transaction, portal, bank, fee structure" },
+    { title: "Placements Overview", url: "/placements", keywords: "placements, jobs, salary, companies, recruit, package, highest package, average package" },
+    { title: "Internship Cell", url: "/internship-cell", keywords: "internship, training, summer, stipend, cell, industry training" },
+    { title: "Scholarships & Financial Aid", url: "/scholarships", keywords: "scholarships, aid, financial, grant, support, fee waiver, ews" },
+    { title: "Student Societies & Clubs", url: "/society", keywords: "societies, clubs, techsoc, iosd, cultural, extracurricular, student life, music, dance, drama" },
+    { title: "IEEE Student Branch", url: "/society-ieee", keywords: "ieee, society, branch, research, networking, student chapter" },
+    { title: "Research & Publications", url: "/research", keywords: "research, journals, papers, patents, projects, publications, scopus, ieee" },
+    { title: "Events & News", url: "/events", keywords: "events, news, updates, festivals, notices, hackathons, workshops" },
+    { title: "Alumni Network", url: "/alumni-network", keywords: "alumni, meet, network, seniors, graduation, passout" },
+    { title: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", keywords: "student, login, moodle, central, attendance, marks, portal, ggsipu" },
+    { title: "Attendance Rules", url: "/attendance", keywords: "attendance, rules, policy, criteria, leave, medical, detention, 75%" },
+    { title: "Privacy Policy", url: "/privacy", keywords: "privacy, policy, data, security, terms" },
+    { title: "Terms of Use", url: "/terms", keywords: "terms, conditions, use, legal, agreement" },
+    { title: "Anti-Ragging Guidelines", url: "/antiragging", keywords: "antiragging, ragging, policy, safety, discipline, helpline" },
+    { title: "POSH Cell (Women Safety)", url: "/posh", keywords: "posh, women, safety, harassment, complaint, committee" },
+    { title: "POSH Act Guidelines", url: "/posh-guidelines", keywords: "posh, guidelines, rules, safety, harassment, act" },
+    { title: "Lodge a POSH Complaint", url: "/posh-complaint", keywords: "posh, complaint, lodge, report, harass, harassment, sexual, form" },
+    { title: "ICC Committee Members", url: "/posh-members", keywords: "posh, members, committee, icc, board, members, representatives" },
+    { title: "Disaster Management", url: "/disaster", keywords: "disaster, management, safety, emergency, drill, fire safety" },
+    { title: "Student Discipline Committee", url: "/discipline", keywords: "discipline, rules, conduct, behavior, suspension, code of conduct" },
+    { title: "Meet the Core Team", url: "/team", keywords: "team, developers, project, creators, website, jayant, pawan, abhay" },
+    { title: "Website Sitemap", url: "/sitemap", keywords: "sitemap, directory, index, all pages, navigation" },
+    { title: "Global Search Portal", url: "/search", keywords: "search, find, query, search page, lookup, directory" }
+];
+
+/**
+ * Dynamically generated page index from pagesData
+ */
+const dynamicPages = Object.entries(pagesData).map(([slug, data]) => ({
+    title: data.title,
+    url: `/${slug}`,
+    keywords: [
+        data.title,
+        data.subtitle,
+        data.category,
+        data.seo_description,
+        ...(data.bulletPoints || [])
+    ].filter(Boolean).join(", ").toLowerCase()
+}));
+
+// Combine static & dynamic pages, deduplicating by URL
+const pageMap = new Map();
+[...staticPages, ...dynamicPages].forEach(page => {
+    if (!pageMap.has(page.url)) {
+        pageMap.set(page.url, page);
+    } else {
+        // Merge keywords if already exists
+        const existing = pageMap.get(page.url);
+        pageMap.set(page.url, {
+            ...existing,
+            keywords: `${existing.keywords}, ${page.keywords}`
+        });
+    }
+});
+
+const generatedPages = Array.from(pageMap.values());
+
+/**
+ * Dynamically generated faculty index from facultyData.js
+ */
+const generatedFaculty = facultyMembers.map(f => ({
+    name: f.name,
+    role: f.role,
+    dept: f.dept || "Faculty",
+    url: "/faculty",
+    keywords: [
+        f.name,
+        f.role,
+        f.dept,
+        f.email,
+        f.qual,
+        ...(f.goodAt || []),
+        f.bio
+    ].filter(Boolean).join(" ").toLowerCase()
+}));
+
+/**
+ * Curated Q&A entries
+ */
+export const qaData = [
+    {
+        q: "Where is MSIT located?",
+        a: "Maharaja Surajmal Institute of Technology is at C-4 Janakpuri, New Delhi. The campus is 2.5km from Janakpuri West Metro Station.",
+        keywords: "address, location, place, office, route, map, janakpuri, metro, new delhi"
+    },
+    {
+        q: "How to contact the college?",
+        a: "For immediate assistance, please contact the Administration Office at MSIT Janakpuri. Phone: +91 96673 44125 or Email: info@msit.in",
+        keywords: "phone, inquiry, help, call, contact, mobile, mail, email, address"
+    },
+    {
+        q: "What are the B.Tech programs offered?",
+        a: "MSIT offers B.Tech in Computer Science (CSE), Information Technology (IT), Electronics & Communication (ECE), and Electrical & Electronics (EEE).",
+        keywords: "courses, branches, majors, btech, stream, degree, cse, it, ece, eee, admissions"
+    },
+    {
+        q: "What is the highest placement package?",
+        a: "MSIT has a stellar placement record, with the highest package reaching over 50 LPA at top recruiters like Google, Microsoft, and Amazon. The average package is around 8-9 LPA.",
+        keywords: "placements, jobs, salary, package, highest, average, careers, lpa, recruiters, amazon, google, microsoft"
+    },
+    {
+        q: "How to pay college fees online?",
+        a: "Fees can be paid online through the Online Fee Payment portal at /online-fee using net banking, UPI, or debit/credit cards.",
+        keywords: "fee, online, payment, pay, banking, cost, tuition, upi, portal"
+    },
+    {
+        q: "Where can I find the exam syllabus?",
+        a: "The syllabus for all engineering courses is available at /syllabus. You can select your branch (CSE, IT, ECE, EEE) to download it.",
+        keywords: "syllabus, exam, curriculum, study, download, courses, subjects, ipu, ggsipu"
+    },
+    {
+        q: "What societies and clubs are active at MSIT?",
+        a: "MSIT has vibrant student societies including TechSoc, IOSD (Software), IEEE Student Branch, and cultural clubs for dance, music, and drama. Explore them at /society.",
+        keywords: "societies, clubs, technical, dance, music, extracurricular, active, techsoc, iosd, ieee"
+    }
+];
+
+/**
+ * Exported searchIndex object automatically kept up to date
+ */
 export const searchIndex = {
-    faculty: [
-        { name: "Prof. (Dr.) Avanish Kumar Srivastava", role: "Director", dept: "Administration", url: "/administration" },
-        { name: "Dr. Geetika Dhand", role: "Associate Professor & HOD", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Naveen Dahiya", role: "Professor & Dean Academics", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Koyel Datta Gupta", role: "Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Rinky Dwivedi", role: "Professor & HOD", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Naresh Kumar", role: "Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Priyanka Nandal", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Sandeep Kumar", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Kavita Sheoran", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Amita Yadav", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Savita Ahlawat", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Nishtha Jatana", role: "Associate Professor & HOD", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Vimal Gaur", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Sangeeta", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Sapna Malik", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Sonia Rathee", role: "Associate Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Vinita Rohilla", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Shaily Malik", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Shalu", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Pooja Kherwa", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Navdeep Bohra", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Ravi Choudhary", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Mr. Sushil Kumar", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Poonam Bansal", role: "Professor & HOD", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Anshul Pareek", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Neeti Sangwan", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Parul Chaudhary", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Swati Malik", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Gunjan Beniwal", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Dr. Vikrant Shokeen", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Sonica Upadhyay", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Jyoti", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Vaani Garg", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Kirti Dahiya", role: "Assistant Professor", dept: "CSE", url: "/faculty" },
-        { name: "Ms. Bhawna Bhardwaj", role: "Assistant Professor (Ad-hoc)", dept: "CSE", url: "/faculty" },
-        { name: "Mrs. Sabnam Kumari", role: "Assistant Professor (Ad-hoc)", dept: "CSE", url: "/faculty" },
-        { name: "Mr. Deepak Goyal", role: "Assistant Professor (Ad-hoc)", dept: "CSE", url: "/faculty" },
-        { name: "Prof. Prabhjot Kaur Sidhu", role: "Professor & HOD", dept: "IT", url: "/faculty" },
-        { name: "Prof. Tripti Sharma", role: "Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Anupama Kaushik", role: "Associate Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Sunesh Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Bharti Sharma", role: "Associate Professor", dept: "IT", url: "/faculty" },
-        { name: "Mr. Manoj Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Sonika Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Jyoti Khurana", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Deepshikha Yadav", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Meena Siwach", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Mr. Surender Singh", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Mr. Parveen Kumar", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Tripti Rathee", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Minakshi Tomer", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Sandeep Singh", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Ms. Mamta Devi", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Sitender Malik", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Saba Khanum", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Preeti Sehrawat", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Preeti Rathee", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Ms. Ashish Kumari", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Mr. Akshay Singh", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Priya Dalal", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Ms. Priyanka Kalkandha", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Ms. Nidhi Goel", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Ms. Indu Khatri", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Ms. Jyoti Sandhu", role: "Assistant Professor", dept: "IT", url: "/faculty" },
-        { name: "Dr. Archana Balyan", role: "Professor & HOD", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Neeru Rathee", role: "Associate Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Pardeep Sangwan", role: "Associate Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Puneet Azad", role: "Associate Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Sudesh Pahal", role: "Associate Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Meena Rao", role: "Associate Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Shaifali M. Arora", role: "Associate Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Richa Gupta", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Aman Kumari Dahiya", role: "Associate Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Dinesh Sheoran", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Mr. Deepak Goyal", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Deepti Deshwal", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Neelam Nehra", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Geetanjali Sharma", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Sakshi Rajput", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Nishtha", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Neetu (Sehrawat)", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Upma Singh", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Jasmine Chhikara", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Prinkle Talan", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Garima", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Vishakha Tomar", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Suman Lata", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Anjali Balyan", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Dr. Neelam Barak", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Himani", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Sonia Malik", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Ms. Neha (Nagar)", role: "Assistant Professor", dept: "ECE", url: "/faculty" },
-        { name: "Prof. (Dr.) Meena Tushir", role: "Professor & HOD", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Sunil Gupta", role: "Associate Professor", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Jyoti Jain", role: "Associate Professor", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Sonia Goel", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Ms. Annu Dagar", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Shilpam Malik", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Nidhi Gupta", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Rakhi Kamra", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Monu Malik", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Ms. Mamta Rani", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Mr. Sachit Rathee", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Ms. Nisha Singh", role: "Assistant Professor", dept: "EEE", url: "/faculty" },
-        { name: "Dr. Brijpal Singh", role: "Associate Professor & HOD", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Ajay Kumar Singh", role: "Associate Professor (Deputy Director)", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Man Singh Beniwal", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Ajay Gahlot", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Rekha Tripathi", role: "Associate Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Sobinder Singh", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Ajay Kumar", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Sumita Dabas", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Deeba Naqvi", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Surender", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Anju Ahlawat", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Mr. Rajbir Singh", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Mr. R. S. Rathee", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Jayesh Kumar", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Nidhi", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Ms. Reenu Kumari", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Narender Singh Malik", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Anju", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Jindagi Kumari", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Gitanjali", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Pooja Singh", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Rashmi Gupta", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Ms. Pooja Singh (Physics)", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Swati Chaudhary", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Rakesh Kumar", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Sachin Dhull", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Ms. Anisha", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Ms. Mansi", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Mr. J. S. Rathee", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" },
-        { name: "Dr. Shalu", role: "Assistant Professor", dept: "Applied Sciences", url: "/faculty" }
-    ],
-    pages: [
-        { title: "Home", url: "/", keywords: "home, main, mainpage, index, maharaja surajmal" },
-        { title: "About MSIT", url: "/about", keywords: "about, history, mission, vision, college, general, info" },
-        { title: "Vision & Mission", url: "/vision-mission", keywords: "vision, mission, goal, aim, objective" },
-        { title: "History & Legacy", url: "/history", keywords: "history, origin, legacy, smes, background" },
-        { title: "Director's Message", url: "/fromdesk", keywords: "director, desk, message, avanish srivastava" },
-        { title: "Governing Body", url: "/govern", keywords: "governing, body, committee, members, management" },
-        { title: "Administration", url: "/administration", keywords: "admin, administration, leadership, office, staff" },
-        { title: "Faculty & Staff Directory", url: "/faculty", keywords: "faculty, teachers, staff, directory, prof, assistant, associate" },
-        { title: "Campus Facilities", url: "/facilities", keywords: "hostel, library, lab, physical, canteen, sports, infrastructure, campus" },
-        { title: "Virtual Tour", url: "/virtual-tour", keywords: "tour, virtual, campus, map, entry, building, entry, 3d" },
-        { title: "Mandatory Disclosures", url: "/mandatory-disclosures", keywords: "mandatory, disclosures, aicte, approval, documents" },
-        { title: "SMES Society", url: "/smes", keywords: "smes, society, surajmal, education, trust" },
-        { title: "Contact Us", url: "/contact", keywords: "phone, email, map, address, help, contact, office, location" },
-        { title: "Computer Science & Engineering (CSE)", url: "/cse", keywords: "computer science, cse, engineering, programming, coding" },
-        { title: "Information Technology (IT)", url: "/it", keywords: "information technology, it, programming, database, networks" },
-        { title: "Electronics & Communication (ECE)", url: "/ece", keywords: "electronics, communication, ece, hardware, circuits, signal" },
-        { title: "Electrical & Electronics (EEE)", url: "/eee", keywords: "electrical, electronics, eee, power, machine, circuit" },
-        { title: "Applied Sciences (1st Year)", url: "/applied-sciences", keywords: "applied, sciences, physics, chemistry, maths, humanity, first year, 1st year" },
-        { title: "Academic Calendar", url: "/academic-calendar", keywords: "calendar, dates, exams, holidays, schedule, academic" },
-        { title: "Syllabus", url: "/syllabus", keywords: "syllabus, curriculum, course, subjects, study" },
-        { title: "Time Table", url: "/timetable", keywords: "timetable, schedule, classes, periods, timing" },
-        { title: "Information Bulletin (Brochure)", url: "/brochure", keywords: "brochure, bulletin, admissions, booklet, prospectus" },
-        { title: "Online Fee Payment", url: "/online-fee", keywords: "fees, payment, online, tuition, transaction, portal" },
-        { title: "Placements Overview", url: "/placements", keywords: "placements, jobs, salary, companies, recruit, package, package" },
-        { title: "Internship Cell", url: "/internship-cell", keywords: "internship, training, summer, stipend, cell" },
-        { title: "Scholarships", url: "/scholarships", keywords: "scholarships, aid, financial, grant, support" },
-        { title: "Societies & Clubs", url: "/society", keywords: "societies, clubs, techsoc, iosd, cultural, extracurricular, student life" },
-        { title: "IEEE Student Branch", url: "/society-ieee", keywords: "ieee, society, branch, research, networking" },
-        { title: "Research & Publications", url: "/research", keywords: "research, journals, papers, patents, projects, publications" },
-        { title: "Events & News", url: "/events", keywords: "events, news, updates, festivals, notices" },
-        { title: "Alumni Network", url: "/alumni-network", keywords: "alumni, meet, network, seniors, graduation" },
-        { title: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", keywords: "student, login, moodle, central, attendance, marks, portal" },
-        { title: "Attendance Rules", url: "/attendance", keywords: "attendance, rules, policy, criteria, leave, medical, detention" },
-        { title: "Privacy Policy", url: "/privacy", keywords: "privacy, policy, data, security, terms" },
-        { title: "Terms of Use", url: "/terms", keywords: "terms, conditions, use, legal, agreement" },
-        { title: "Anti-Ragging Guidelines", url: "/antiragging", keywords: "antiragging, ragging, policy, safety, discipline" },
-        { title: "POSH Cell (Women Safety)", url: "/posh", keywords: "posh, women, safety, harassment, complaint, committee" },
-        { title: "POSH Act Guidelines", url: "/posh-guidelines", keywords: "posh, guidelines, rules, safety, harassment, act" },
-        { title: "Lodge a POSH Complaint", url: "/posh-complaint", keywords: "posh, complaint, lodge, report, harass, harassment, sexual, form" },
-        { title: "ICC Committee Members", url: "/posh-members", keywords: "posh, members, committee, icc, board, members, representatives" },
-        { title: "Disaster Management", url: "/disaster", keywords: "disaster, management, safety, emergency, drill" },
-        { title: "Student Discipline Committee", url: "/discipline", keywords: "discipline, rules, conduct, behavior, suspension" },
-        { title: "Meet the Core Team", url: "/team", keywords: "team, developers, project, creators, website, jayant, pawan, abhay" }
-    ],
-    qa: [
-        {
-            q: "Where is MSIT located?",
-            a: "Maharaja Surajmal Institute of Technology is at C-4 Janakpuri, New Delhi. The campus is 2.5km from Janakpuri West Metro Station.",
-            keywords: "address, location, place, office, route, map"
-        },
-        {
-            q: "How to contact the college?",
-            a: "For immediate assistance, please contact the Administration Office at MSIT Janakpuri. Phone: +91 96673 44125 or Email: info@msit.in",
-            keywords: "phone, inquiry, help, call, contact, mobile, mail"
-        },
-        {
-            q: "What are the B.Tech programs offered?",
-            a: "MSIT offers B.Tech in Computer Science (CSE), Information Technology (IT), Electronics & Communication (ECE), and Electrical & Electronics (EEE).",
-            keywords: "courses, branches, majors, btech, stream, degree"
-        },
-        {
-            q: "What is the highest placement package?",
-            a: "MSIT has a stellar placement record, with the highest package reaching over 50 LPA at top recruiters like Google, Microsoft, and Amazon. The average package is around 8-9 LPA.",
-            keywords: "placements, jobs, salary, package, highest, average, careers"
-        },
-        {
-            q: "How to pay college fees online?",
-            a: "Fees can be paid online through the Online Fee Payment portal at /online-fee using net banking, UPI, or debit/credit cards.",
-            keywords: "fee, online, payment, pay, banking, cost"
-        },
-        {
-            q: "Where can I find the exam syllabus?",
-            a: "The syllabus for all engineering courses is available at /syllabus. You can select your branch (CSE, IT, ECE, EEE) to download it.",
-            keywords: "syllabus, exam, curriculum, study, download, courses"
-        },
-        {
-            q: "What societies and clubs are active at MSIT?",
-            a: "MSIT has vibrant student societies including TechSoc, IOSD (Software), IEEE Student Branch, and cultural clubs for dance, music, and drama. Explore them at /society.",
-            keywords: "societies, clubs, technical, dance, music, extracurricular, active"
-        }
-    ]
+    faculty: generatedFaculty,
+    pages: generatedPages,
+    qa: qaData
 };

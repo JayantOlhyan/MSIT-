@@ -15,7 +15,8 @@ const SearchPage = () => {
         ? searchIndex.faculty.filter(f => 
             f.name.toLowerCase().includes(lQuery) || 
             f.dept.toLowerCase().includes(lQuery) ||
-            f.role.toLowerCase().includes(lQuery)
+            f.role.toLowerCase().includes(lQuery) ||
+            (f.keywords && f.keywords.includes(lQuery))
           )
         : [];
 

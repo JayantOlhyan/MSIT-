@@ -59,19 +59,20 @@ const Header = () => {
 
         const lQuery = query.toLowerCase();
 
-        const facultyMatches = searchIndex.faculty.filter(f => 
-            f.name.toLowerCase().includes(lQuery) || 
+        const facultyMatches = searchIndex.faculty.filter(f =>
+            f.name.toLowerCase().includes(lQuery) ||
             f.dept.toLowerCase().includes(lQuery) ||
-            f.role.toLowerCase().includes(lQuery)
+            f.role.toLowerCase().includes(lQuery) ||
+            (f.keywords && f.keywords.includes(lQuery))
         );
 
-        const pageMatches = searchIndex.pages.filter(p => 
-            p.title.toLowerCase().includes(lQuery) || 
+        const pageMatches = searchIndex.pages.filter(p =>
+            p.title.toLowerCase().includes(lQuery) ||
             p.keywords.toLowerCase().includes(lQuery)
         );
 
-        const qaMatches = searchIndex.qa.filter(q => 
-            q.q.toLowerCase().includes(lQuery) || 
+        const qaMatches = searchIndex.qa.filter(q =>
+            q.q.toLowerCase().includes(lQuery) ||
             q.keywords.toLowerCase().includes(lQuery)
         );
 
@@ -164,27 +165,26 @@ const Header = () => {
 
     return (
         <>
-        <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
+            <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
             <header role="navigation" className={`${headerContainerClass} flex flex-col`}>
                 {/* Tier 1: Persistent Branding & Utility Bar (Transparent on Home, White on Scroll) */}
-                <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 relative z-20 ${
-                    isTransparent 
-                        ? 'bg-transparent' 
+                <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 relative z-20 ${isTransparent
+                        ? 'bg-transparent'
                         : 'bg-white text-title'
-                }`}>
+                    }`}>
                     <div className="w-full max-w-screen-2xl mx-auto flex justify-between items-center">
                         {/* Logo Area */}
                         <Link to="/" className="flex items-center gap-3 lg:gap-4 cursor-pointer select-none">
-                            <img 
+                            <img
                                 id="header-logo"
-                                src="/msit-logo.webp" 
-                                alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Main Campus Entrance" 
-                                className={`h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0 transition-all duration-300 ${isTransparent ? 'brightness-[1.2]' : ''}`} 
-                                loading="eager" 
-                                fetchpriority="high" 
+                                src="/msit-logo.webp"
+                                alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Main Campus Entrance"
+                                className={`h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0 transition-all duration-300 ${isTransparent ? 'brightness-[1.2]' : ''}`}
+                                loading="eager"
+                                fetchpriority="high"
                                 decoding="async"
                                 width="120"
-                                height="112" 
+                                height="112"
                             />
                             <div className="flex flex-col justify-center">
                                 <span className={`font-['Libre_Baskerville',serif] font-black text-sm md:text-base lg:text-xl tracking-tight leading-tight transition-colors duration-300 ${isTransparent ? 'text-white' : 'text-primary'}`}>
@@ -200,15 +200,14 @@ const Header = () => {
                                 <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Faculty Directory</Link>
                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Mail</a>
                                 <Link to="/virtual-tour" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Tour</Link>
-                                <a 
-                                    href="https://ipu.admissions.nic.in/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap ${
-                                        isTransparent 
-                                            ? 'bg-white text-primary hover:bg-blue-50 hover:scale-105 active:scale-95' 
+                                <a
+                                    href="https://ipu.admissions.nic.in/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap ${isTransparent
+                                            ? 'bg-white text-primary hover:bg-blue-50 hover:scale-105 active:scale-95'
                                             : 'bg-primary text-white hover:bg-[#153a7a] hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10'
-                                    }`}
+                                        }`}
                                 >
                                     Apply Now
                                 </a>
@@ -236,12 +235,11 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div 
-                    className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 ${
-                        isTransparent 
-                            ? 'bg-transparent py-3' 
+                <div
+                    className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 ${isTransparent
+                            ? 'bg-transparent py-3'
                             : 'bg-white py-1.5'
-                    }`}
+                        }`}
                 >
                     <div className="w-full max-w-screen-2xl mx-auto">
                         <nav className="hidden xl:flex justify-center items-center space-x-10 text-sm">
@@ -254,11 +252,10 @@ const Header = () => {
                                         onMouseEnter={() => handleMouseEnter(key)}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap relative py-1 ${
-                                            isCategoryActive(key)
+                                        <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap relative py-1 ${isCategoryActive(key)
                                                 ? (isTransparent ? 'text-white' : 'text-primary')
                                                 : (isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary')
-                                        }`}>
+                                            }`}>
                                             {item}
                                             <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isCategoryActive(key) ? (isTransparent ? 'text-white' : 'text-primary') : (isTransparent ? 'text-white/60' : 'text-slate-400')}`} />
                                             {isCategoryActive(key) && (
@@ -266,9 +263,8 @@ const Header = () => {
                                             )}
                                         </button>
 
-                                        <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${
-                                            activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'
-                                        }`}>
+                                        <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'
+                                            }`}>
                                             <div className="bg-white shadow-card rounded-xl border border-slate-100 p-6 w-80">
                                                 <div className="flex flex-col space-y-3.5">
                                                     {megaMenuData[key]?.map((link, i) => (
@@ -278,9 +274,8 @@ const Header = () => {
                                                                 <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all shrink-0 text-primary" />
                                                             </a>
                                                         ) : (
-                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className={`text-sm font-semibold transition-all flex items-center justify-between group/link py-1 ${
-                                                                isPathActive(link.url) ? 'text-primary font-bold' : 'text-slate-600 hover:text-primary'
-                                                            }`}>
+                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className={`text-sm font-semibold transition-all flex items-center justify-between group/link py-1 ${isPathActive(link.url) ? 'text-primary font-bold' : 'text-slate-600 hover:text-primary'
+                                                                }`}>
                                                                 <span>{link.name}</span>
                                                                 <ArrowRight className={`w-3.5 h-3.5 transition-all shrink-0 text-primary ${isPathActive(link.url) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0'}`} />
                                                             </Link>
@@ -292,16 +287,15 @@ const Header = () => {
                                     </div>
                                 );
                             })}
-                            <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${
-                                                                isPathActive('/contact')
-                                                                    ? (isTransparent ? 'text-white' : 'text-primary')
-                                                                    : (isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary')
-                                                            }`}>
-                                                                Contact
-                                                                {isPathActive('/contact') && (
-                                                                    <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-primary'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
-                                                                )}
-                                                            </Link>
+                            <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${isPathActive('/contact')
+                                    ? (isTransparent ? 'text-white' : 'text-primary')
+                                    : (isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary')
+                                }`}>
+                                Contact
+                                {isPathActive('/contact') && (
+                                    <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-primary'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
+                                )}
+                            </Link>
                         </nav>
                     </div>
                 </div>
@@ -309,32 +303,30 @@ const Header = () => {
 
 
             {/* Mobile Nav Overlay (Smooth Sliding Drawer) */}
-            <div className={`fixed inset-0 z-50 bg-white overflow-y-auto block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pt-24 pb-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+            <div className={`fixed inset-0 z-50 bg-white overflow-y-auto scrollbar-hide block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pt-24 pb-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
                 <div className="p-6 sm:p-10 max-w-lg sm:max-w-4xl md:max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 sm:gap-y-8">
                         {Object.entries(megaMenuData).map(([key, items], idx) => {
                             const isExpanded = openMobileSections[key];
                             return (
                                 <div key={idx} className="border-b border-slate-100 sm:border-none pb-2 sm:pb-0">
-                                    <button 
+                                    <button
                                         onClick={() => toggleMobileSection(key)}
                                         className="w-full flex items-center justify-between text-xs font-black uppercase tracking-[0.25em] text-slate-900 border-b sm:border-b-0 border-slate-100 pb-3 sm:pb-3 mb-2 sm:mb-4 px-2 text-left cursor-pointer sm:cursor-default"
                                     >
                                         <span>{key.replace(/([A-Z])/g, ' $1').trim()}</span>
                                         <ChevronDown className={`w-4 h-4 text-slate-500 transition-transform duration-300 sm:hidden ${isExpanded ? 'rotate-180 text-primary' : ''}`} />
                                     </button>
-                                    <div className={`space-y-1 transition-all duration-300 overflow-hidden sm:max-h-none sm:opacity-100 sm:block ${
-                                        isExpanded ? 'max-h-[600px] opacity-100 mb-3' : 'max-h-0 opacity-0 sm:max-h-none sm:opacity-100'
-                                    }`}>
+                                    <div className={`space-y-1 transition-all duration-300 overflow-hidden sm:max-h-none sm:opacity-100 sm:block ${isExpanded ? 'max-h-[600px] opacity-100 mb-3' : 'max-h-0 opacity-0 sm:max-h-none sm:opacity-100'
+                                        }`}>
                                         {items.map((link, i) => (
                                             link.external ? (
                                                 <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
                                                     {link.name}
                                                 </a>
                                             ) : (
-                                                <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${
-                                                    isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
-                                                }`}>
+                                                <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
+                                                    }`}>
                                                     {link.name}
                                                 </Link>
                                             )
@@ -365,10 +357,10 @@ const Header = () => {
 
                         {/* CTA Buttons */}
                         <div className="grid sm:grid-cols-2 gap-4">
-                            <a 
-                                href="https://ipu.admissions.nic.in/" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href="https://ipu.admissions.nic.in/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="block w-full py-4 text-center rounded-2xl bg-slate-900 text-white font-bold text-base shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer"
                             >
                                 Apply Now
@@ -488,8 +480,8 @@ const Header = () => {
                         </div>
 
                         <div className="p-4 bg-slate-50/50 border-t border-slate-100 flex justify-center">
-                         <div className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-4">
-                                <span className="flex items-center gap-1.5"><HelpCircle size={12} className="text-blue-400"/> Ask anything about MSIT</span>
+                            <div className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-4">
+                                <span className="flex items-center gap-1.5"><HelpCircle size={12} className="text-blue-400" /> Ask anything about MSIT</span>
                             </div>
                         </div>
                     </div>

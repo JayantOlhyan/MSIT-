@@ -23,11 +23,11 @@ const FacultyStaff = () => {
     const departments = ['All', 'Administration', 'CSE', 'IT', 'ECE', 'EEE', 'Applied Sciences'];
 
     const filteredFaculty = facultyMembers
-        .filter(f => 
+        .filter(f =>
             (activeDept === 'All' || f.dept === activeDept) &&
-            (f.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-             f.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
-             f.goodAt.some(trait => trait.toLowerCase().includes(searchQuery.toLowerCase())))
+            (f.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                f.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                f.goodAt.some(trait => trait.toLowerCase().includes(searchQuery.toLowerCase())))
         )
         .sort((a, b) => {
             // Sort by Director first
@@ -41,15 +41,15 @@ const FacultyStaff = () => {
 
     return (
         <main className="min-h-screen bg-surface">
-            <SEO 
-                title="Premium Faculty Directory" 
+            <SEO
+                title="Premium Faculty Directory"
                 description="Explore the comprehensive profiles, research strengths, and detailed metrics of the distinguished faculty at MSIT."
                 canonicalPath="/faculty"
             />
 
-            <PageHero 
-                title="Faculty &" 
-                accentTitle="Staff" 
+            <PageHero
+                title="Faculty &"
+                accentTitle="Staff"
                 description="Explore the minds shaping the future. Our directory provides unparalleled transparency into the expertise, research impact, and academic focus of our 130+ distinguished members."
                 breadcrumbs={[{ label: 'Directory' }, { label: 'Faculty & Staff' }]}
             />
@@ -83,25 +83,24 @@ const FacultyStaff = () => {
                 <div className="max-w-7xl mx-auto px-6 py-3 sm:py-4 flex flex-col md:flex-row gap-4 md:items-center justify-between">
                     <div className="relative w-full md:w-96 group">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted group-focus-within:text-primary transition-colors" />
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             placeholder="Search names, skills, or roles..."
                             className="w-full pl-12 pr-4 py-3 bg-surface border-2 border-transparent rounded-2xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-title font-medium placeholder-slate-400"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
                     </div>
-                    
+
                     <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide shrink-0">
                         {departments.map(dept => (
                             <button
                                 key={dept}
                                 onClick={() => setActiveDept(dept)}
-                                className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all whitespace-nowrap border-2 group ${
-                                    activeDept === dept 
-                                    ? 'bg-slate-900 border-slate-900 text-white shadow-md shadow-slate-900/30 focus:outline-none' 
-                                    : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50 focus:outline-none'
-                                }`}
+                                className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all whitespace-nowrap border-2 group ${activeDept === dept
+                                        ? 'bg-slate-900 border-slate-900 text-white shadow-md shadow-slate-900/30 focus:outline-none'
+                                        : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50 focus:outline-none'
+                                    }`}
                             >
                                 {dept}
                                 {dept === 'Applied Sciences' && (
@@ -118,8 +117,8 @@ const FacultyStaff = () => {
                 {filteredFaculty.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredFaculty.map((faculty, idx) => (
-                            <div 
-                                key={idx} 
+                            <div
+                                key={idx}
                                 onClick={() => setSelectedFaculty(faculty)}
                                 className="group bg-white rounded-[2rem] p-6 shadow-card hover:shadow-card-hover border border-slate-200 hover:border-blue-200 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 relative overflow-hidden flex flex-col h-full"
                             >
@@ -185,7 +184,7 @@ const FacultyStaff = () => {
             {selectedFaculty && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 sm:px-6 py-6 animate-fade-in">
                     {/* Backdrop */}
-                    <div 
+                    <div
                         className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"
                         onClick={() => setSelectedFaculty(null)}
                     ></div>
@@ -193,7 +192,7 @@ const FacultyStaff = () => {
                     {/* Modal Content */}
                     <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-card animate-scale-in border border-white/20">
                         {/* Close Button */}
-                        <button 
+                        <button
                             onClick={() => setSelectedFaculty(null)}
                             className="absolute top-6 right-6 w-12 h-12 bg-white/20 backdrop-blur-xl border border-white/40 hover:bg-white/40 text-slate-800 rounded-full flex items-center justify-center z-20 transition-all shadow-card cursor-pointer"
                             aria-label="Close faculty profile"
@@ -204,7 +203,7 @@ const FacultyStaff = () => {
                         {/* Modal Header/Hero */}
                         <div className="bg-slate-900 pt-16 pb-20 sm:pb-24 px-6 sm:px-8 md:px-16 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-[clamp(200px,30vw,400px)] h-[clamp(200px,30vw,400px)] bg-blue-500/20 rounded-full blur-[80px]"></div>
-                            
+
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
                                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-card shrink-0 -mb-20 md:-mb-32 z-10 border-2 border-white/10">
                                     <img src={selectedFaculty.img} alt={`High-resolution portrait of ${selectedFaculty.name}, ${selectedFaculty.role} at MSIT`} className="w-full h-full object-cover rounded-2xl" />
@@ -301,17 +300,17 @@ const FacultyStaff = () => {
                             </div>
 
                             {/* Actions */}
-                                <div className="flex flex-col sm:flex-row gap-4 items-center justify-between border-t border-slate-200 pt-8">
+                            <div className="flex flex-col sm:flex-row gap-4 items-center justify-between border-t border-slate-200 pt-8">
                                 <div className="flex flex-wrap gap-4 w-full sm:w-auto">
-                                    <a 
-                                        href={`mailto:${selectedFaculty.email}`} 
+                                    <a
+                                        href={`mailto:${selectedFaculty.email}`}
                                         className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-surface text-body font-bold hover:bg-slate-200 transition-colors"
                                     >
                                         <Mail className="w-5 h-5" />
                                         {selectedFaculty.email}
                                     </a>
                                     {selectedFaculty.linkedin && (
-                                        <a 
+                                        <a
                                             href={selectedFaculty.linkedin}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -322,9 +321,9 @@ const FacultyStaff = () => {
                                         </a>
                                     )}
                                 </div>
-                                
+
                                 {selectedFaculty.pdfLink !== "#" ? (
-                                    <a 
+                                    <a
                                         href={selectedFaculty.pdfLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -334,7 +333,7 @@ const FacultyStaff = () => {
                                         View Official Profile PDF
                                     </a>
                                 ) : (
-                                    <button 
+                                    <button
                                         disabled
                                         className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface text-muted font-bold cursor-not-allowed w-full sm:w-auto text-sm"
                                     >
