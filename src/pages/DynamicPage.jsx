@@ -74,11 +74,15 @@ const DynamicPage = () => {
 
                         {/* Main Typography Area */}
                         <div className="w-full lg:w-2/3 order-2 lg:order-1">
-                            <div 
-                                className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
-                                dangerouslySetInnerHTML={{ __html: pageData.content }}
-                                onClick={handleContentClick}
-                            ></div>
+                            {pageData.component ? (
+                                <pageData.component />
+                            ) : (
+                                <div 
+                                    className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
+                                    dangerouslySetInnerHTML={{ __html: pageData.content }}
+                                    onClick={handleContentClick}
+                                ></div>
+                            )}
                         </div>
 
                         {/* Interactive Sidebar */}
