@@ -125,6 +125,11 @@ const DynamicPage = () => {
                                     </div>
                                 )}
 
+                                {/* Custom Sidebar Content */}
+                                {pageData.sidebarHtml && (
+                                    <div dangerouslySetInnerHTML={{ __html: pageData.sidebarHtml }}></div>
+                                )}
+
                                 {/* Quick CTA */}
                                 {slug !== 'contact' && (
                                     <Link to="/contact" className="block p-8 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white transition-colors cursor-pointer group">
