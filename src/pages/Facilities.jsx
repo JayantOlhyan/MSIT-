@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-import { Beaker, Book, Home, Trophy, Activity, Server, Cpu, Database } from 'lucide-react';
+import { Beaker, Book, Home, Trophy, Activity, Server, Cpu, Database, BookOpen, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 
@@ -106,25 +106,63 @@ const Facilities = () => {
                 )}
 
                 {activeTab === 'library' && (
-                    <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
-                        <div className="order-2 md:order-1">
-                            <h3 className="text-3xl font-bold text-slate-900 mb-6">Central Library & Information Center</h3>
-                            <p className="text-slate-600 mb-6 leading-relaxed">
-                                Our library is an intellectual hub housing over 50,000+ volumes, 100+ national and international journals, and a dedicated Digital Library section with access to IEEE Explorer and DELNET.
+                    <div className="grid md:grid-cols-2 gap-12 items-start animate-fade-in">
+                        <div className="order-2 md:order-1 space-y-6">
+                            <div>
+                                <span className="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-2">Academic Core</span>
+                                <h3 className="text-3xl font-extrabold text-slate-900 leading-tight">Central Library & Information Center</h3>
+                            </div>
+                            <p className="text-slate-600 leading-relaxed font-light text-lg">
+                                Powered by the industry-standard <strong>Koha online OPAC catalog</strong>, MSIT Central Library acts as an intellectual nerve center. The facility manages a massive inventory of over 50,000+ volumes, 100+ national and international printed journals, and provides round-the-clock digital availability to students.
                             </p>
+                            
                             <div className="space-y-4">
-                                <div className="p-4 bg-blue-50 rounded-xl border border-blue-100">
-                                    <h4 className="font-bold text-blue-900 mb-1">Book Bank Facility</h4>
-                                    <p className="text-sm text-blue-700">Providing dedicated sets of textbooks to students for the entire semester.</p>
+                                <div className="p-5 bg-blue-50 rounded-2xl border border-blue-100 flex gap-4">
+                                    <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
+                                        <Book className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-blue-900 mb-1">Book Bank Facility</h4>
+                                        <p className="text-sm text-blue-700">Students are issued complete sets of textbooks for all syllabus courses, valid for the entire academic semester.</p>
+                                    </div>
                                 </div>
-                                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                    <h4 className="font-bold text-slate-900 mb-1">E-Resources</h4>
-                                    <p className="text-sm text-slate-600">Access to online journals, project reports, and a massive research database.</p>
+
+                                <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex gap-4">
+                                    <div className="w-10 h-10 bg-slate-200 rounded-xl flex items-center justify-center text-slate-600 shrink-0">
+                                        <Database className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-900 mb-1">Subscribed E-Resources</h4>
+                                        <p className="text-sm text-slate-600">Direct on-campus and remote authorization for major platforms including <strong>IEEE Xplore</strong>, <strong>SpringerNature</strong>, <strong>Sage</strong>, <strong>DELNET</strong>, and <strong>SCC Online</strong>.</p>
+                                    </div>
                                 </div>
+
+                                <div className="p-5 bg-emerald-50/50 rounded-2xl border border-emerald-100/50 flex gap-4">
+                                    <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 shrink-0">
+                                        <Server className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-emerald-900 mb-1">Digital Repositories & Modules</h4>
+                                        <p className="text-sm text-emerald-700">Access previous year's GGSIPU question papers, AICTE e-KUMBH books, Swayam, NPTEL course videos, and National Digital Library of India (NDLI).</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="pt-4">
+                                <a 
+                                    href="http://library.msit.in/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-md hover:shadow-lg transition-all"
+                                >
+                                    <BookOpen className="w-5 h-5" />
+                                    Launch OPAC Library Portal
+                                    <ArrowRight className="w-4 h-4" />
+                                </a>
                             </div>
                         </div>
                         <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-card">
-                            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=1000" alt="Modern MSIT Central Library showing the spacious reading area and technical book collection" className="w-full h-[clamp(250px,40vh,400px)] object-cover" />
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=1000" alt="Modern MSIT Central Library showing the spacious reading area and technical book collection" className="w-full h-[clamp(300px,50vh,500px)] object-cover" />
                         </div>
                     </div>
                 )}

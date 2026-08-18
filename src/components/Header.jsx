@@ -99,6 +99,7 @@ const Header = () => {
             { name: "Governing Body", url: "/govern" },
             { name: "From The Desk", url: "/fromdesk" },
             { name: "Campus & Facilities", url: "/facilities" },
+            { name: "Library Portal", url: "http://library.msit.in/", external: true },
             { name: "Surajmal Memorial Education Society", url: "/smes" }
         ],
         admission: [
@@ -140,7 +141,6 @@ const Header = () => {
             { name: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
             { name: "MSIT Central", url: "https://central.msit.in/", external: true },
             { name: "Moodle (LMS)", url: "http://moodle.msit.in/", external: true },
-            { name: "Library Portal", url: "http://library.msit.in/", external: true },
             { name: "NISP (Startup & Innovation)", url: "http://nisp.msit.in/", external: true },
             { name: "NPTEL Videos", url: "http://nptel.ac.in/", external: true },
             { name: "Grievance Portal", url: "http://grievance.msit.in", external: true },
@@ -212,9 +212,7 @@ const Header = () => {
 
                         <div className={`hidden xl:flex items-center space-x-6 text-xs font-black uppercase tracking-[0.2em] transition-colors duration-300 ${isTransparent ? 'text-white/80' : 'text-muted'}`}>
                             <div className="flex items-center space-x-6">
-                                <span className={isTransparent ? 'text-white/40' : 'text-slate-400'}>Contact:</span>
                                 <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Faculty Directory</Link>
-                                <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Mail</a>
                                 <Link to="/virtual-tour" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Tour</Link>
                                 <a
                                     href="https://ipu.admissions.nic.in/"
