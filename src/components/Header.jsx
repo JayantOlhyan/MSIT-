@@ -291,10 +291,10 @@ const Header = () => {
                                                                  <div key={i} className="group/sub w-full py-1 flex flex-col">
                                                                      <div className="flex items-center justify-between w-full py-1 cursor-pointer text-slate-600 hover:text-primary transition-colors">
                                                                          <span className={isAnySubActive ? 'text-primary font-bold' : 'font-semibold text-sm'}>{link.name}</span>
-                                                                         <ChevronDown className={`w-4 h-4 text-slate-400 group-hover/sub:text-primary transition-transform duration-300 group-hover/sub:rotate-180 ${isAnySubActive ? 'text-primary' : ''}`} />
+                                                                         <ChevronDown className={`w-4 h-4 text-slate-400 group-hover/sub:text-primary transition-transform duration-300 delay-200 group-hover/sub:rotate-180 ${isAnySubActive ? 'text-primary' : ''}`} />
                                                                      </div>
                                                                      
-                                                                     <div className="max-h-0 overflow-hidden opacity-0 transition-all duration-300 group-hover/sub:max-h-60 group-hover/sub:opacity-100 group-hover/sub:mt-1 group-hover/sub:mb-2 pl-4 border-l-2 border-slate-100/80 flex flex-col space-y-2.5">
+                                                                     <div className="max-h-0 overflow-hidden opacity-0 transition-all duration-300 delay-200 group-hover/sub:max-h-60 group-hover/sub:opacity-100 group-hover/sub:mt-1 group-hover/sub:mb-2 pl-4 border-l-2 border-slate-100/80 flex flex-col space-y-2.5">
                                                                          {link.subItems.map((sub, j) => (
                                                                              <Link
                                                                                  key={j}
