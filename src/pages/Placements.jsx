@@ -178,62 +178,6 @@ const Placements = () => {
                 </div>
             </div>
 
-            {/* Placement Committee Section */}
-            <section className="py-20 bg-white border-b border-slate-200">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-blue-600 font-bold tracking-[0.2em] text-xs uppercase mb-3 block">OUR TEAM</span>
-                        <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Placement Committee</h2>
-                        <p className="text-slate-500 text-base leading-relaxed">
-                            Placement Committee MSIT has been formed with a strong emphasis and aim to achieve the target of 100% placements of all the interested and eligible students. The Committee facilitates the students and coordinates during campus drives.
-                        </p>
-                    </div>
-
-                    {/* Committee Conveners */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-                        {committeeMembers.map((member, i) => {
-                            const details = getFacultyDetails(member.nameQuery);
-                            return (
-                                <div 
-                                    key={i} 
-                                    onClick={() => setSelectedMember(details)}
-                                    className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group text-center"
-                                >
-                                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-6 border-2 border-slate-100">
-                                        <img src={details.img} alt={details.name} className="w-full h-full object-cover" />
-                                    </div>
-                                    <span className="inline-block px-2.5 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-black uppercase tracking-wider rounded mb-2">{details.dept || member.branch}</span>
-                                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{details.name}</h3>
-                                    <p className="text-slate-500 text-sm mt-1">{member.committeeRole}</p>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    {/* Faculty Coordinators Subtitle */}
-                    <div className="text-center mb-10">
-                        <h3 className="text-2xl font-bold text-slate-900">Faculty Coordinators</h3>
-                    </div>
-
-                    {/* Faculty Coordinators Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                        {coordinators.map((coord, i) => {
-                            const details = getFacultyDetails(coord.nameQuery);
-                            return (
-                                <div 
-                                    key={i} 
-                                    onClick={() => setSelectedMember(details)}
-                                    className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all cursor-pointer group text-center"
-                                >
-                                    <h4 className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors text-sm sm:text-base">{coord.displayName || details.name}</h4>
-                                    <span className="inline-block mt-2 px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded">{coord.branch}</span>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-
             <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-16">
 
                 {/* Main Content Area */}
@@ -291,6 +235,58 @@ const Placements = () => {
                                         To maintain alignment with market expectations, students undergo compulsory industrial training, minor/major research projects, and attend corporate webinar series.
                                     </p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Placement Committee Section */}
+                    <div>
+                        <div className="flex items-center mb-8 pb-4 border-b border-slate-200">
+                            <Users className="w-8 h-8 text-blue-600 mr-4" />
+                            <h2 className="text-3xl font-bold text-slate-900">Placement Committee</h2>
+                        </div>
+                        <p className="text-slate-600 mb-8 font-light text-lg">
+                            Placement Committee MSIT has been formed with a strong emphasis and aim to achieve the target of 100% placements of all the interested and eligible students. The Committee facilitates the students and coordinates during campus drives.
+                        </p>
+
+                        {/* Committee Conveners */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            {committeeMembers.map((member, i) => {
+                                const details = getFacultyDetails(member.nameQuery);
+                                return (
+                                    <div 
+                                        key={i} 
+                                        onClick={() => setSelectedMember(details)}
+                                        className="bg-white rounded-3xl p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group text-center"
+                                    >
+                                        <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-2 border-slate-100">
+                                            <img src={details.img} alt={details.name} className="w-full h-full object-cover" />
+                                        </div>
+                                        <span className="inline-block px-2.5 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-black uppercase tracking-wider rounded mb-1">{details.dept || member.branch}</span>
+                                        <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate">{details.name}</h3>
+                                        <p className="text-slate-500 text-xs mt-0.5">{member.committeeRole}</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+
+                        {/* Faculty Coordinators */}
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
+                            <h4 className="font-bold text-slate-900 mb-6 text-center text-base">Faculty Coordinators</h4>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                {coordinators.map((coord, i) => {
+                                    const details = getFacultyDetails(coord.nameQuery);
+                                    return (
+                                        <div 
+                                            key={i} 
+                                            onClick={() => setSelectedMember(details)}
+                                            className="bg-slate-50 rounded-xl p-3 border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-sm transition-all cursor-pointer group text-center"
+                                        >
+                                            <h5 className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors text-xs sm:text-sm truncate">{coord.displayName || details.name}</h5>
+                                            <span className="inline-block mt-1 px-1.5 py-0.5 bg-slate-200 text-slate-600 text-[8px] font-bold uppercase rounded">{coord.branch}</span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
