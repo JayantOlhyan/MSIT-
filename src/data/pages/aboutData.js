@@ -212,117 +212,409 @@ export const aboutData = {
             <div class="space-y-12">
                 <!-- TOP LEADERSHIP GRID -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="p-6 rounded-3xl border border-slate-200/60 bg-linear-to-br from-amber-50/30 via-white to-white shadow-xs">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700">Chairman</span>
-                        <h4 class="text-xl font-bold text-slate-900 mt-1 mb-1">Sh. Kaptan Singh</h4>
-                        <p class="text-xs text-slate-500 font-medium">Governing Body Chairman, SMES</p>
-                    </div>
-                    <div class="p-6 rounded-3xl border border-slate-200/60 bg-linear-to-br from-blue-50/30 via-white to-white shadow-xs">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700">Member Secretary</span>
-                        <h4 class="text-xl font-bold text-slate-900 mt-1 mb-1">Prof. (Dr.) Avanish Kumar Srivastava</h4>
-                        <p class="text-xs text-slate-500 font-medium">Director, MSIT</p>
+                    <a href="/faculty?id=gb-chairman" class="group block p-6 rounded-3xl border border-slate-200/60 bg-linear-to-br from-amber-50/30 via-white to-white shadow-xs hover:border-amber-500/20 hover:shadow-md transition-all">
+                        <div class="flex justify-between items-start">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                    <img src="/kaptan-singh.jpg" alt="Sh. Kaptan Singh" class="w-full h-full object-cover" />
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700 block mb-1">Chairman</span>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">Sh. Kaptan Singh</h4>
+                                    <p class="text-xs text-slate-500 font-medium mt-1">Governing Body Chairman, SMES</p>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="/faculty?id=dir-1" class="group block p-6 rounded-3xl border border-slate-200/60 bg-linear-to-br from-blue-50/30 via-white to-white shadow-xs hover:border-blue-500/20 hover:shadow-md transition-all">
+                        <div class="flex justify-between items-start">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                    <img src="/faculty/avanish-kumar.webp" alt="Prof. (Dr.) Avanish Kumar Srivastava" class="w-full h-full object-cover" />
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700 block mb-1">Member Secretary</span>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">Prof. (Dr.) Avanish Kumar Srivastava</h4>
+                                    <p class="text-xs text-slate-500 font-medium mt-1">Director, MSIT</p>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Nominees of the Society -->
+                <div class="space-y-4 pt-6 border-t border-slate-100">
+                    <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-primary rounded-full"></span>
+                        Nominees of the Society
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <a href="/faculty?id=gb-esha" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Smt. Esha Jakhar" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Smt. Esha Jakhar</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Senior Vice President, SMES</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-ajit" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/ajit-singh.png" alt="Sh. Ajit Singh Chaudhary" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. Ajit Singh Chaudhary</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Secretary, SMES</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-rajpal" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/rajpal-singh.png" alt="Sh. Rajpal Singh Solanki" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. Rajpal Singh Solanki</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Treasurer, SMES</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-sanjeev" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Sh. Sanjeev Kumar" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. Sanjeev Kumar</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Society Nominee</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-ss" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Sh. S. S. Solanki" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. S. S. Solanki</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Society Nominee</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
-                <!-- CATEGORIES GRID -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
-                    
-                    <!-- Nominee of Society -->
-                    <div class="space-y-4">
-                        <h4 class="font-bold text-slate-950 flex items-center gap-2">
-                            <span class="w-1.5 h-4 bg-primary rounded-full"></span>
-                            Nominees of the Society
-                        </h4>
-                        <ul class="space-y-2 text-sm text-slate-600 pl-3">
-                            <li class="font-medium text-slate-800">Smt. Esha Jakhar</li>
-                            <li class="font-medium text-slate-800">Sh. Ajit Singh Chaudhary</li>
-                            <li class="font-medium text-slate-800">Sh. Rajpal Singh Solanki</li>
-                            <li class="font-medium text-slate-800">Sh. Sanjeev Kumar</li>
-                            <li class="font-medium text-slate-800">Sh. S. S. Solanki</li>
-                        </ul>
+                <!-- Educationists -->
+                <div class="space-y-4 pt-6 border-t border-slate-100">
+                    <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-emerald-600 rounded-full"></span>
+                        Educationists
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <a href="/faculty?id=gb-nirjar" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Prof. R.S. Nirjar" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Prof. R.S. Nirjar</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Former VC & Chairman AICTE</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-rana" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Sh. Tejbir Singh Rana" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. Tejbir Singh Rana</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Associate Professor, DU</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-vrat" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Prof. Prem Vrat" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Prof. Prem Vrat</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Former Director, IIT Roorkee</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-dabas" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Sh. B.D. Dabas" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. B.D. Dabas</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Educationist</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-shyam" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Sh. Shyam Singh" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. Shyam Singh</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Educationist</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
                     </div>
-
-                    <!-- Educationist -->
-                    <div class="space-y-4">
-                        <h4 class="font-bold text-slate-950 flex items-center gap-2">
-                            <span class="w-1.5 h-4 bg-emerald-600 rounded-full"></span>
-                            Educationists
-                        </h4>
-                        <ul class="space-y-2 text-sm text-slate-600 pl-3">
-                            <li class="font-medium text-slate-800">Prof. R.S. Nirjar</li>
-                            <li class="font-medium text-slate-800">Sh. Tejbir Singh Rana</li>
-                            <li class="font-medium text-slate-800">Prof. Prem Vrat</li>
-                            <li class="font-medium text-slate-800">Sh. B.D. Dabas</li>
-                            <li class="font-medium text-slate-800">Sh. Shyam Singh</li>
-                        </ul>
-                    </div>
-
-                    <!-- Representative of Industry -->
-                    <div class="space-y-4">
-                        <h4 class="font-bold text-slate-950 flex items-center gap-2">
-                            <span class="w-1.5 h-4 bg-purple-600 rounded-full"></span>
-                            Representatives of Industry
-                        </h4>
-                        <ul class="space-y-2 text-sm text-slate-600 pl-3">
-                            <li class="font-medium text-slate-800">Sh. Raj Singh Gahlot</li>
-                            <li class="font-medium text-slate-800">Sh. Subhash Chaudhary</li>
-                        </ul>
-                    </div>
-
-                    <!-- Teacher's Representative -->
-                    <div class="space-y-4">
-                        <h4 class="font-bold text-slate-950 flex items-center gap-2">
-                            <span class="w-1.5 h-4 bg-rose-600 rounded-full"></span>
-                            Teacher Representatives
-                        </h4>
-                        <ul class="space-y-2 text-sm text-slate-600 pl-3">
-                            <li class="font-medium text-slate-800">Prof. Man Singh Beniwal <span class="text-xs text-slate-400 font-normal">(Professor)</span></li>
-                            <li class="font-medium text-slate-800">Dr. Kavita Sheoran <span class="text-xs text-slate-400 font-normal">(Associate Professor)</span></li>
-                        </ul>
-                    </div>
-
                 </div>
 
-                <!-- ADVISORY BOARD SECTION -->
-                <div class="pt-8 border-t border-slate-100">
-                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <!-- Representatives of Industry -->
+                <div class="space-y-4 pt-6 border-t border-slate-100">
+                    <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-purple-600 rounded-full"></span>
+                        Representatives of Industry
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="/faculty?id=gb-gahlot" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Sh. Raj Singh Gahlot" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. Raj Singh Gahlot</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Industrialist & Engineer</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=gb-subhash" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Sh. Subhash Chaudhary" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Sh. Subhash Chaudhary</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Business Management</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Teacher Representatives -->
+                <div class="space-y-4 pt-6 border-t border-slate-100">
+                    <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-rose-600 rounded-full"></span>
+                        Teacher Representatives
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="/faculty?id=as-3" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/man-singh-beniwal.webp" alt="Prof. Man Singh Beniwal" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Prof. Man Singh Beniwal</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Professor, Physics</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=cse-8" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/kavita-sheoran.webp" alt="Dr. Kavita Sheoran" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Dr. Kavita Sheoran</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Associate Professor, CSE</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Advisory Board -->
+                <div class="space-y-4 pt-6 border-t border-slate-100">
+                    <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-indigo-650 rounded-full"></span>
                         Advisory Board
-                    </h3>
-                    <div class="overflow-x-auto rounded-2xl border border-slate-200/60 shadow-xs">
-                        <table class="w-full text-left border-collapse text-sm">
-                            <thead>
-                                <tr class="bg-slate-50 border-b border-slate-200">
-                                    <th class="p-4 font-bold text-slate-900">Name</th>
-                                    <th class="p-4 font-bold text-slate-900">Affiliation</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-100 bg-white">
-                                <tr>
-                                    <td class="p-4 font-semibold text-slate-900">Prof. A. Q. Ansari</td>
-                                    <td class="p-4 text-slate-600">Dept. of Electrical Engineering, Jamia Millia Islamia, New Delhi</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 font-semibold text-slate-900">Prof. Saroj Kaushik</td>
-                                    <td class="p-4 text-slate-600">Dept. of Computer Science & Engineering, IIT Delhi</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 font-semibold text-slate-900">Prof. S. D. Joshi</td>
-                                    <td class="p-4 text-slate-600">Dept. of Electrical Engineering, IIT Delhi</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 font-semibold text-slate-900">Dr. Rajendra Singh</td>
-                                    <td class="p-4 text-slate-600">Dept. of Physics, IIT Delhi</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 font-semibold text-slate-900">Mr. Arun Kudale</td>
-                                    <td class="p-4 text-slate-600">Managing Director, Kudale Instruments Pvt. Ltd., Pune</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 font-semibold text-slate-900">Prof. Vikram Kumar</td>
-                                    <td class="p-4 text-slate-600">Dept. of Physics, IIT Delhi</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="/faculty?id=adv-ansari" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Prof. A. Q. Ansari" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Prof. A. Q. Ansari</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Dept. of Electrical Engineering, Jamia Millia Islamia</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=adv-kaushik" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Prof. Saroj Kaushik" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Prof. Saroj Kaushik</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Dept. of Computer Science & Engineering, IIT Delhi</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=adv-joshi" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Prof. S. D. Joshi" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Prof. S. D. Joshi</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Dept. of Electrical Engineering, IIT Delhi</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=adv-singh" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Dr. Rajendra Singh" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Dr. Rajendra Singh</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Dept. of Physics, IIT Delhi</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=adv-kudale" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Mr. Arun Kudale" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Mr. Arun Kudale</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Managing Director, Kudale Instruments Pvt. Ltd.</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="/faculty?id=adv-kumar" class="group block p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-200/50 hover:border-primary/30 transition-all hover:shadow-md">
+                            <div class="flex items-center justify-between gap-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200 bg-slate-100 shrink-0">
+                                        <img src="/faculty/staff-avatar.webp" alt="Prof. Vikram Kumar" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <span class="block font-semibold text-slate-900 group-hover:text-primary transition-colors text-sm truncate">Prof. Vikram Kumar</span>
+                                        <span class="block text-[10px] text-slate-400 font-medium mt-0.5 truncate">Dept. of Physics, IIT Delhi</span>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-primary transition-all transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

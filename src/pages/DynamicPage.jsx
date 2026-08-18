@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, LayoutDashboard } from 'lucide-react';
 import { pagesData } from '../data/pagesData';
 import SEO from '../components/SEO';
@@ -9,6 +9,18 @@ import NotFound from './NotFound';
 const DynamicPage = () => {
     const { slug } = useParams();
     const pageData = pagesData[slug];
+    const navigate = useNavigate();
+
+    const handleContentClick = (e) => {
+        const anchor = e.target.closest('a');
+        if (anchor) {
+            const href = anchor.getAttribute('href');
+            if (href && href.startsWith('/') && !href.startsWith('//')) {
+                e.preventDefault();
+                navigate(href);
+            }
+        }
+    };
 
     if (!pageData) {
         return <NotFound />;
@@ -62,7 +74,11 @@ const DynamicPage = () => {
 
                         {/* Main Typography Area */}
                         <div className="w-full lg:w-2/3 order-2 lg:order-1">
-                            <div className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" dangerouslySetInnerHTML={{ __html: pageData.content }}></div>
+                            <div 
+                                className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
+                                dangerouslySetInnerHTML={{ __html: pageData.content }}
+                                onClick={handleContentClick}
+                            ></div>
                         </div>
 
                         {/* Interactive Sidebar */}

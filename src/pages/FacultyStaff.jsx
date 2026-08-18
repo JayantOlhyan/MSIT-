@@ -12,6 +12,8 @@ const FacultyStaff = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    const [cameWithId] = useState(() => new URLSearchParams(window.location.search).has('id'));
+
     // Auto-open profile modal when navigating with ?id= URL parameter
     useEffect(() => {
         const params = new URLSearchParams(location.search);
@@ -40,7 +42,11 @@ const FacultyStaff = () => {
     const handleCloseProfile = () => {
         setSelectedFaculty(null);
         if (location.search.includes('id=')) {
-            navigate('/faculty', { replace: true });
+            if (cameWithId) {
+                navigate(-1);
+            } else {
+                navigate('/faculty', { replace: true });
+            }
         }
     };
 
