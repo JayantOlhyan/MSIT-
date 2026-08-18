@@ -133,14 +133,14 @@ const Header = () => {
         ],
         placements: [
             { name: "Careers & Placements", url: "/placements" },
-            { name: "Internship Cell", url: "/internship-cell" }
+            { name: "Internship Cell", url: "/internship-cell" },
+            { name: "Placement Portal", url: "https://placement.msit.in/", external: true }
         ],
         student: [
             { name: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
             { name: "MSIT Central", url: "https://central.msit.in/", external: true },
             { name: "Moodle (LMS)", url: "http://moodle.msit.in/", external: true },
             { name: "Library Portal", url: "http://library.msit.in/", external: true },
-            { name: "Placement Portal", url: "https://placement.msit.in/", external: true },
             { name: "NISP (Startup & Innovation)", url: "http://nisp.msit.in/", external: true },
             { name: "NPTEL Videos", url: "http://nptel.ac.in/", external: true },
             { name: "Grievance Portal", url: "http://grievance.msit.in", external: true },
