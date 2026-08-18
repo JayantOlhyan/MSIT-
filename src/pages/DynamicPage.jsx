@@ -96,7 +96,7 @@ const DynamicPage = () => {
                                                                 {point.label}
                                                             </Link>
                                                         ) : (
-                                                            typeof point === 'object' ? point.label : point
+                                                            <span className="hover:text-accent transition-colors cursor-pointer w-full" dangerouslySetInnerHTML={{ __html: typeof point === 'object' ? point.label : point }}></span>
                                                         )}
                                                     </li>
                                                 );

@@ -61,14 +61,88 @@ export const admissionData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Official AICTE and NBA mandatory disclosure documents for MSIT institutional transparency",
         content: `
-            <p className="mb-6">In absolute compliance with the All India Council for Technical Education (AICTE), the University Grants Commission (UGC), and GGSIPU, MSIT publishes its mandatory disclosures for public review.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Regulatory Compliance</h3>
-            <p className="mb-6">These documents contain verified data regarding our faculty-student ratios, physical infrastructure, laboratory equipment, financial audits, and accreditation status.</p>
+            <p class="mb-6 leading-relaxed">In absolute compliance with the All India Council for Technical Education (AICTE), the University Grants Commission (UGC), and GGSIPU, MSIT publishes its mandatory disclosures for public review.</p>
+            
+            <!-- ACCREDITATION TABLES/CARDS -->
+            <div class="space-y-8 mt-8">
+                <!-- NBA CARD -->
+                <div class="p-6 md:p-8 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                        NBA Accreditation Status
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Programmes/Courses Accredited</span>
+                            <p class="text-slate-800 font-medium">CSE, IT, ECE, EEE (All eligible UG programmes)</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Status</span>
+                            <p class="text-slate-800 font-medium">Accredited</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Applied for Accreditation</span>
+                            <p class="text-slate-800 font-medium">None (All eligible programmes are fully accredited)</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Programmes Not Applied</span>
+                            <p class="text-slate-800 font-medium">None</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-100 flex">
+                        <a href="https://www.msit.in/media/uploads/2025/08/27/nba_2023_all_depts_merged.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white rounded-xl text-xs font-bold transition-all border border-blue-100/50 shadow-xs hover:shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            View NBA Certificates (PDF)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NAAC CARD -->
+                <div class="p-6 md:p-8 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+                        NAAC Accreditation Status
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Accreditation Grade</span>
+                            <p class="text-slate-800 font-medium">'A' Grade Status</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Effective Date</span>
+                            <p class="text-slate-800 font-medium">September 21, 2022</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-100 flex">
+                        <a href="https://www.msit.in/media/2022/12/23/naac.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white rounded-xl text-xs font-bold transition-all border border-emerald-100/50 shadow-xs hover:shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            View NAAC Certificate (PDF)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FULL DISCLOSURE CARD -->
+                <div class="p-8 rounded-3xl border border-slate-200/60 bg-slate-900 text-white shadow-card relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>
+                    <h3 class="text-xl font-bold mb-3">Full Mandatory Disclosure</h3>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">Download the complete, comprehensive Mandatory Disclosure document containing detailed institutional data, academic profiles, and audit reports.</p>
+                    <a href="https://www.msit.in/media/notices/mandatory-disclosure_PSXfseX.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 hover:bg-primary hover:text-white rounded-xl text-xs font-bold transition-all shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Download Full Document (PDF)
+                    </a>
+                </div>
+            </div>
         `,
         stats: [
-            { label: "AICTE Approved", value: "Yes" },
-            { label: "ISO Certified", value: "9001:2015" }
+            { label: "NAAC Grade", value: "A" },
+            { label: "NBA Accredited", value: "All UG" }
         ],
-        bulletPoints: ["AICTE Approval Letters", "NBA Accreditation Reports", "Audited Financial Statements"]
+        bulletPoints: ["NBA Certificates (All Depts)", "NAAC Grade A Document", "Full Disclosure PDF"]
     }
 };

@@ -7,16 +7,51 @@ export const aboutData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT main building facade, Janakpuri, New Delhi - Vision and Mission view",
         content: `
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">VISION</h3>
-            <p className="mb-6">To become one of the most admired centers of academic excellence in the field of Engineering & Technology for all-round professional development of students to enable them to meet the growing technological needs of the country.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">MISSION</h3>
-            <p className="mb-6">Developing new paradigm in imparting education in the fields of Engineering and Technology and to imbibe national values leading to student's empowerment, with a view to prepare them to meet the national and global challenges.</p>
+            <div class="space-y-8">
+                <!-- VISION CARD -->
+                <div class="relative overflow-hidden p-8 md:p-10 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs hover:shadow-md transition-all group">
+                    <div class="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl group-hover:bg-amber-500/10 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-100/60">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.242 7.758a1 1 0 010 1.414l-5.657 5.657a1 1 0 01-1.414 0l-1.414-1.414a1 1 0 010-1.414l5.657-5.657a1 1 0 011.414 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2M12 20v2M2 12h2M20 12h2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xs font-black uppercase tracking-widest text-amber-700 mb-3 mt-0">Vision</h3>
+                            <p class="text-base font-light leading-relaxed text-slate-700">
+                                To become one of the most admired centers of academic excellence in the field of Engineering & Technology for all-round professional development of students to enable them to meet the growing technological needs of the country.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MISSION CARD -->
+                <div class="relative overflow-hidden p-8 md:p-10 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs hover:shadow-md transition-all group">
+                    <div class="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100/60">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xs font-black uppercase tracking-widest text-blue-700 mb-3 mt-0">Mission</h3>
+                            <p class="text-base font-light leading-relaxed text-slate-700">
+                                Developing new paradigm in imparting education in the fields of Engineering and Technology and to imbibe national values leading to student's empowerment, with a view to prepare them to meet the national and global challenges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `,
         stats: [
             { label: "Global Alumni", value: "15,000+" },
             { label: "Research Centers", value: "4" }
         ],
-        bulletPoints: ["Ethical Leadership", "Technological Excellence", "Social Responsibility"]
+        bulletPoints: ["Technical Excellence", "National & Global Readiness", "Values-Driven Education"]
     },
     "history": {
         title: "History & Legacy",
@@ -190,15 +225,161 @@ export const aboutData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT President and Secretary's official desk area",
         content: `
-            <p className="mb-6"><strong>Message from the President:</strong> The foundation of socio-economic development of a country is the education of its youth. MSIT was established by Surajmal Memorial Education Society with the aim of creating centers of excellence without profit motives, strictly following AICTE standards.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">A Commitment to Quality</h3>
-            <p className="mb-6"><strong>Message from the Secretary:</strong> In times of arduous competition, we move forward with a vision of holistic development. We continuously upgrade our infrastructure, providing well-equipped Labs, an Enterprise Library, and excellent hostels to foster both professional and personal growth.</p>
+            <style>
+                .tab-content { display: none; }
+                #tab-pres:checked ~ .content-pres { display: block; animation: fadeIn 0.4s ease-in-out; }
+                #tab-sec:checked ~ .content-sec { display: block; animation: fadeIn 0.4s ease-in-out; }
+                #tab-treas:checked ~ .content-treas { display: block; animation: fadeIn 0.4s ease-in-out; }
+                #tab-dir:checked ~ .content-dir { display: block; animation: fadeIn 0.4s ease-in-out; }
+
+                #tab-pres:checked ~ .tab-headers label[for="tab-pres"],
+                #tab-sec:checked ~ .tab-headers label[for="tab-sec"],
+                #tab-treas:checked ~ .tab-headers label[for="tab-treas"],
+                #tab-dir:checked ~ .tab-headers label[for="tab-dir"] {
+                    border-color: #1d4ed8;
+                    color: #1d4ed8;
+                    background-color: #eff6ff;
+                }
+
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(6px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+            </style>
+
+            <div class="w-full">
+                <!-- Radio Inputs (hidden) -->
+                <input type="radio" name="desk-tabs" id="tab-pres" class="hidden" checked />
+                <input type="radio" name="desk-tabs" id="tab-sec" class="hidden" />
+                <input type="radio" name="desk-tabs" id="tab-treas" class="hidden" />
+                <input type="radio" name="desk-tabs" id="tab-dir" class="hidden" />
+
+                <!-- Tab Headers -->
+                <div class="tab-headers flex border-b border-slate-200 mb-10 overflow-x-auto gap-2 pb-px scrollbar-none">
+                    <label for="tab-pres" class="cursor-pointer px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
+                        President
+                    </label>
+                    <label for="tab-sec" class="cursor-pointer px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
+                        Secretary
+                    </label>
+                    <label for="tab-treas" class="cursor-pointer px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
+                        Treasurer
+                    </label>
+                    <label for="tab-dir" class="cursor-pointer px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
+                        Director
+                    </label>
+                </div>
+
+                <!-- Tab Content: President -->
+                <div class="tab-content content-pres">
+                    <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
+                        <div class="flex-1 text-slate-700 leading-relaxed text-base space-y-4 font-light">
+                            <p>The foundation of socio-economic development of a country is the education of its youth in general and technical education in particular. Technical education is an instrument which uses the tools of science and makes the natural resources available for the people at large. Therefore the institutes which are providing technical education to the Indian youth are playing important role in the development of this country.</p>
+                            <p>The history of development of technical education in India dates back to 1847 when the first engineering college, Thomson College of Engineering (which later became IIT Roorkee), was established by the British at Roorkee in Uttar Pradesh. The growth of technical institutes during British India was slow, but after independence socio-economic development became the priority program of our planners and leaders. Consequently, a large number of technical institutes have been started by the Central and State Govts including Indian Institutes of Technology, Indian Institutes of Information Technology and National Institutes of Technology. Besides this, a large number of Private Technical Institutes have been set up across the country.</p>
+                            <p>Unfortunately, profit motives of a number of private operators have adversely affected the quality of technical education rendering large number of graduating students from such institutions unemployable. Ours is also a non-government institute established and run by Surajmal Memorial Education Society which aims to create centers of excellence to educate and produce technically competent graduates to meet emerging requirements of the dynamics of the development market, government or private. The strategy of the Society to achieve this goal is reflected in the following aspects of its work culture:</p>
+                            <ol class="list-decimal pl-6 space-y-2 mt-4 text-slate-700 font-medium">
+                                <li>No profit making from this Institute.</li>
+                                <li>Strictly follow the standards and norms prescribed by AICTE & Affiliating University regarding infrastructure and faculty including their numbers, salary and other facilities.</li>
+                                <li>Appointment of qualified and competent faculty and provide environment for their development and academic growth as the Society considers that good teachers produce good students.</li>
+                                <li>Extra course inputs to students commensurate with market requirement, Inculcate discipline and moral values among students.</li>
+                                <li>Strong and effective mechanism for placement.</li>
+                                <li>Transparency in all aspects of working.</li>
+                            </ol>
+                            <p class="mt-4">This work culture has its own reward. Today, our 100% graduating students are getting placement in reputed companies of the country and they are earning name and fame by their competence and hard work. MSIT is now recognized as an important centre of technical education and is marching ahead to become one of the premier technical institutes of the country.</p>
+                            <div class="pt-6 border-t border-slate-100">
+                                <h4 class="text-lg font-bold text-slate-900">Kaptan Singh</h4>
+                                <p class="text-sm font-semibold text-primary">President,</p>
+                                <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-64 shrink-0 mx-auto md:mx-0">
+                            <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200/60 shadow-xs">
+                                <img src="/kaptan-singh.jpg" alt="Sh. Kaptan Singh, President SMES" class="w-full h-auto aspect-square object-cover rounded-2xl grayscale-30" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Secretary -->
+                <div class="tab-content content-sec">
+                    <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
+                        <div class="flex-1 text-slate-700 leading-relaxed text-base space-y-4 font-light">
+                            <p>It makes me very happy to get in touch with you through the website.</p>
+                            <p>In the times of arduous competition, we are moving forward with a vision of holistic development of our students as technical professionals who will not only contribute with their knowledge and skills to the field engineering but also add value to the social life at large with their educated and sensitive thoughts and action. We believe that proper education is related to the exposure to new techniques and methods and a conducive atmosphere, therefore we have made continuous effort towards upgrading our infrastructure and quality of education.</p>
+                            <p>We are proud to have well equipped Labs and seminar halls, a rich library, well built hostels, a sizable auditorium, to cater to the various pedagogical and accommodative requirements of our students. Our keenness on multifarious development of our faculty and students can be seen in our extensive organization of various academic and technical programs for them. Every year a number of faculty development programs are organized across departments for the professional growth of our teaching community. Besides, many expert lectures by distinguished academicians from IIT Delhi and other reputed technical organizations, are routinely arranged. A fundamental requirement of any good institute is a well developed Information System to ensure monitoring and evaluation of key indicators, and to provide information critical to all concerned.</p>
+                            <p>Our institute website aims at an easy access to all relevant information about the institute and I hope that the masses find the information included in the website useful.</p>
+                            <div class="pt-6 border-t border-slate-100">
+                                <h4 class="text-lg font-bold text-slate-900">Ajit Singh</h4>
+                                <p class="text-sm font-semibold text-primary">Secretary,</p>
+                                <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-64 shrink-0 mx-auto md:mx-0">
+                            <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200/60 shadow-xs">
+                                <img src="/ajit-singh.png" alt="Sh. Ajit Singh, Secretary SMES" class="w-full h-auto aspect-square object-cover rounded-2xl grayscale-30" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Treasurer -->
+                <div class="tab-content content-treas">
+                    <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
+                        <div class="flex-1 text-slate-700 leading-relaxed text-base space-y-4 font-light">
+                            <p>The new website is only a feather in the cap of the robust technical and communicative infrastructure of Maharaja Surajmal Institute of Technology. This website will serve as a strong medium to show case our attributes and achievements by virtue of which we enjoy a great reputation amongst the leading colleges and institutes affiliated to Guru Gobind Singh Indraprastha University.</p>
+                            <p>Maharaja Surajmal Institute of Technology has acquired and earned a coveted name and fame over a period of time and has become one of the most admired and preferred centre of academic excellence in the field of engineering and technology for all round integrated professional growth to match and meet the technological needs of the country. We aim to provide our students a composite and comprehensive technical education for a satisfying and professional career in life. To achieve this, we take care from the very beginning quality class room, teaching by trend, competent and qualified faculty members with exposure to the application of concepts through lab experiments, industrial visits and expert lectures of eminent personalities and experts in their field of specialization. Besides, we provide congenial atmosphere to the students for their all round enhancement of inter-personal communication skills.</p>
+                            <p>I am sure that the website will enable a better transmission of relevant information to the various stakeholders of the institute which will help in building up and strengthening the relationship among them and ensure success of our institute.</p>
+                            <div class="pt-6 border-t border-slate-100">
+                                <h4 class="text-lg font-bold text-slate-900">Rajpal Singh Solanki</h4>
+                                <p class="text-sm font-semibold text-primary">Treasurer,</p>
+                                <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-64 shrink-0 mx-auto md:mx-0">
+                            <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200/60 shadow-xs">
+                                <img src="/rajpal-singh.png" alt="Sh. Rajpal Singh Solanki, Treasurer SMES" class="w-full h-auto aspect-square object-cover rounded-2xl grayscale-30" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Director -->
+                <div class="tab-content content-dir">
+                    <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
+                        <div class="flex-1 text-slate-700 leading-relaxed text-base space-y-4 font-light">
+                            <p>Dear Students, Faculty Members, Alumni and Visitors,</p>
+                            <p>It gives me immense pleasure to welcome you to Maharaja Surajmal Institute of Technology (MSIT) — an institution that blends academic excellence with a culture of innovation, curiosity, and values.</p>
+                            <p>At MSIT, we believe that engineering education is not just about mastering concepts and technologies, but about shaping individuals who can think critically, solve real-world problems, and contribute meaningfully to society. Our commitment is to create an environment where every student feels encouraged to explore, question, experiment, and grow.</p>
+                            <p>Students are at the heart of everything we do. You are the driving force of this institution. I urge each one of you to take full advantage of the resources available around you — dedicated faculty, well-equipped laboratories, active student societies, innovation clubs, and strong industry linkages. Participate in projects, research, hackathons, internships, and community initiatives. These experiences will shape your technical abilities as well as your confidence, leadership, and character.</p>
+                            <p>To the faculty and staff: your dedication, mentorship, and unwavering support form the backbone of MSIT. Together, let us continue to create a learning ecosystem that is dynamic, collaborative, and aligned with emerging global needs.</p>
+                            <p>Our alumni remain an invaluable part of our journey. Your achievements inspire our students, and your continued engagement strengthens the MSIT community. I invite you to remain connected and contribute through guidance, collaboration, and industry-academia partnerships.</p>
+                            <p>As MSIT moves forward with a clear vision and renewed energy, let us collectively strive to reach greater heights — academically, professionally, and ethically. I encourage our students to dream big, work diligently, stay curious, and believe in their potential. The world needs engineers who are not only skilled, but also compassionate and forward-thinking; I am confident that MSIT students will continue to uphold this spirit.</p>
+                            <p>Wishing every student success, growth, and an enriching journey ahead at MSIT.</p>
+                            <div class="pt-6 border-t border-slate-100">
+                                <h4 class="text-lg font-bold text-slate-900">Prof. (Dr.) Avanish Kumar Srivastava</h4>
+                                <p class="text-sm font-semibold text-primary">Director,</p>
+                                <p class="text-xs text-slate-500 font-medium">Maharaja Surajmal Institute of Technology</p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-64 shrink-0 mx-auto md:mx-0">
+                            <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200/60 shadow-xs">
+                                <img src="/avanish-kumar-desk.png" alt="Prof. (Dr.) Avanish Kumar Srivastava, Director MSIT" class="w-full h-auto aspect-square object-cover rounded-2xl grayscale-30" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `,
         stats: [
-            { label: "Work Culture", value: "Non-Profit" },
-            { label: "Objective", value: "Holistic Development" }
+            { label: "Leadership Messages", value: "4" },
+            { label: "Governing Society", value: "SMES" }
         ],
-        bulletPoints: ["Sh. Kaptan Singh (President)", "Sh. Ajit Singh (Secretary)", "100% Placement Focus"]
+        bulletPoints: [
+            '<label for="tab-pres" class="cursor-pointer block w-full">President: Sh. Kaptan Singh</label>',
+            '<label for="tab-sec" class="cursor-pointer block w-full">Secretary: Sh. Ajit Singh</label>',
+            '<label for="tab-treas" class="cursor-pointer block w-full">Treasurer: Sh. Rajpal Singh Solanki</label>',
+            '<label for="tab-dir" class="cursor-pointer block w-full">Director: Prof. Dr. A. K. Srivastava</label>'
+        ]
     },
     "facilities": {
         title: "Campus & Facilities",
