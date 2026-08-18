@@ -1,23 +1,50 @@
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, LayoutDashboard } from 'lucide-react';
+import { ArrowRight, LayoutDashboard, X, Mail, Linkedin, Globe, Phone, FileText, Star } from 'lucide-react';
 import { pagesData } from '../data/pagesData';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
-
 import NotFound from './NotFound';
+import { facultyMembers } from '../data/facultyData';
 
 const DynamicPage = () => {
     const { slug } = useParams();
     const pageData = pagesData[slug];
     const navigate = useNavigate();
+    const [selectedMember, setSelectedMember] = useState(null);
+
+    // Prevent body scroll when modal is open
+    useEffect(() => {
+        if (selectedMember) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => { document.body.style.overflow = 'unset'; };
+    }, [selectedMember]);
 
     const handleContentClick = (e) => {
         const anchor = e.target.closest('a');
         if (anchor) {
             const href = anchor.getAttribute('href');
-            if (href && href.startsWith('/') && !href.startsWith('//')) {
-                e.preventDefault();
-                navigate(href);
+            if (href) {
+                if (href.startsWith('/faculty?id=')) {
+                    e.preventDefault();
+                    const urlParams = new URLSearchParams(href.split('?')[1]);
+                    const id = urlParams.get('id');
+                    const member = facultyMembers.find(f => f.id === id);
+                    if (member) {
+                        setSelectedMember({
+                            ...member,
+                            phone: member.phone || "011-65215944" // default office phone
+                        });
+                    }
+                    return;
+                }
+                if (href.startsWith('/') && !href.startsWith('//')) {
+                    e.preventDefault();
+                    navigate(href);
+                }
             }
         }
     };
@@ -146,6 +173,128 @@ const DynamicPage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Interactive Modal Popup */}
+            {selectedMember && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 animate-fade-in">
+                    {/* Backdrop */}
+                    <div 
+                        className="absolute inset-0 bg-slate-950/40 backdrop-blur-md animate-backdrop-fade"
+                        onClick={() => setSelectedMember(null)}
+                    ></div>
+
+                    {/* Modal Card */}
+                    <div className="relative bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
+                        {/* Close button */}
+                        <button 
+                            onClick={() => setSelectedMember(null)}
+                            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 hover:text-slate-900 transition-colors z-20"
+                        >
+                            <X className="w-5 h-5" />
+                        </button>
+
+                        {/* Top banner / image */}
+                        <div className="bg-slate-900 text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
+                            <div className="flex gap-4 sm:gap-6 items-center relative z-10">
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
+                                    <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                    <span className="inline-block px-2.5 py-1 bg-white/10 text-white text-[10px] font-black uppercase tracking-widest rounded mb-1.5 sm:mb-2 border border-white/5">{selectedMember.dept}</span>
+                                    <h3 className="text-xl sm:text-2xl font-black truncate">{selectedMember.name}</h3>
+                                    <p className="text-blue-300 text-xs sm:text-sm font-semibold line-clamp-2 mt-0.5">{selectedMember.role}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Details body */}
+                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]">
+                            {selectedMember.bio && (
+                                <div>
+                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
+                                        <FileText className="w-4 h-4 text-blue-500" /> Professional Bio
+                                    </h4>
+                                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-semibold">
+                                        {selectedMember.bio}
+                                    </p>
+                                </div>
+                            )}
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Qualification</div>
+                                    <div className="text-xs font-extrabold text-slate-800">{selectedMember.qual || selectedMember.qualifications || "N/A"}</div>
+                                </div>
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Experience / Status</div>
+                                    <div className="text-xs font-extrabold text-slate-800">{selectedMember.experience} Years</div>
+                                </div>
+                            </div>
+
+                            {selectedMember.goodAt && selectedMember.goodAt.length > 0 && (
+                                <div>
+                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-1.5 border-b border-slate-200 pb-2">
+                                        <Star className="w-4 h-4 text-emerald-500 fill-emerald-500" /> Key Focus Areas
+                                    </h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {selectedMember.goodAt.map((item, idx) => (
+                                            <span key={idx} className="px-2.5 py-1 bg-emerald-50 border border-emerald-100 rounded text-xs font-bold text-emerald-700">
+                                                {item}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            <div className="border-t border-slate-200 pt-6 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between">
+                                <div className="flex flex-col gap-2 shrink-0">
+                                    <a 
+                                        href={`mailto:${selectedMember.email}`}
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                    >
+                                        <Mail className="w-4 h-4 shrink-0" />
+                                        <span className="truncate text-left">{selectedMember.email}</span>
+                                    </a>
+
+                                    <a 
+                                        href={`tel:${selectedMember.phone}`}
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                    >
+                                        <Phone className="w-4 h-4 shrink-0" />
+                                        <span className="truncate text-left">{selectedMember.phone}</span>
+                                    </a>
+                                </div>
+
+                                <div className="flex gap-3 justify-end items-end">
+                                    {selectedMember.pdfLink && (
+                                        <a 
+                                            href={selectedMember.pdfLink} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="w-10 h-10 bg-slate-900 hover:bg-slate-800 text-white rounded-xl flex items-center justify-center transition-colors"
+                                            title="View Official Profile PDF"
+                                        >
+                                            <FileText className="w-4 h-4" />
+                                        </a>
+                                    )}
+                                    {selectedMember.linkedin && (
+                                        <a 
+                                            href={selectedMember.linkedin} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="w-10 h-10 bg-[#0077B5] hover:bg-[#005a8a] text-white rounded-xl flex items-center justify-center transition-colors"
+                                            title="LinkedIn Profile"
+                                        >
+                                            <Linkedin className="w-4 h-4" />
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </main >
     );
 };

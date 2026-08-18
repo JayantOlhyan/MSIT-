@@ -208,7 +208,7 @@ const Team = () => {
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 animate-fade-in">
                     {/* Backdrop */}
                     <div 
-                        className="absolute inset-0 bg-slate-950/40 backdrop-blur-md"
+                        className="absolute inset-0 bg-slate-950/40 backdrop-blur-md animate-backdrop-fade"
                         onClick={() => setSelectedMember(null)}
                     ></div>
 

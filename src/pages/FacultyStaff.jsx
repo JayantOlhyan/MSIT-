@@ -62,13 +62,38 @@ const FacultyStaff = () => {
 
     const departments = ['All', 'Administration', 'CSE', 'IT', 'ECE', 'EEE', 'Applied Sciences'];
 
+    const placementCommitteeNames = [
+        "Meena Rao", "Kavita Sheoran", "Parveen Kumar",
+        "Parul Chaudhary", "Shaily Malik", "Pooja Kherwa", "Gunjan",
+        "Sonika Malik", "Meena Siwach", "Minakshi Tomer", "Sakshi Rajput",
+        "Himani", "Suman Lata", "Rakhi Kamra", "Sachit Rathee"
+    ];
+    
+    const governingBodyIds = [
+        "gb-chairman", "gb-esha", "gb-ajit", "gb-rajpal"
+    ];
+
     const filteredFaculty = facultyMembers
-        .filter(f =>
-            (activeDept === 'All' || f.dept === activeDept) &&
-            (f.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                f.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                f.goodAt.some(trait => trait.toLowerCase().includes(searchQuery.toLowerCase())))
-        )
+        .filter(f => {
+            const matchesDept = activeDept === 'All' || f.dept === activeDept;
+            const query = searchQuery.toLowerCase();
+            if (!query) return matchesDept;
+
+            const isPlacementSearch = "placement".includes(query) || "placement cell".includes(query) || "placement committee".includes(query) || "convener".includes(query) || "coordinator".includes(query);
+            const isGovBodySearch = "governing".includes(query) || "governing body".includes(query) || "smes".includes(query) || "chairman".includes(query) || "secretary".includes(query) || "president".includes(query) || "treasurer".includes(query);
+            
+            const isInPlacementCommittee = isPlacementSearch && placementCommitteeNames.some(name => f.name.toLowerCase().includes(name.toLowerCase()));
+            const isInGovBody = isGovBodySearch && governingBodyIds.includes(f.id);
+
+            const matchesQuery = f.name.toLowerCase().includes(query) ||
+                f.role.toLowerCase().includes(query) ||
+                (f.bio && f.bio.toLowerCase().includes(query)) ||
+                (f.goodAt && f.goodAt.some(trait => trait.toLowerCase().includes(query))) ||
+                isInPlacementCommittee ||
+                isInGovBody;
+
+            return matchesDept && matchesQuery;
+        })
         .sort((a, b) => {
             // Sort by Director first
             if (a.role.includes('Director')) return -1;
@@ -225,7 +250,7 @@ const FacultyStaff = () => {
                 <div className="fixed inset-0 z-[100] flex items-center justify-center px-3 sm:px-6 py-4 sm:py-6 animate-fade-in">
                     {/* Backdrop */}
                     <div
-                        className="absolute inset-0 bg-slate-900/50 backdrop-blur-md"
+                        className="absolute inset-0 bg-slate-900/50 backdrop-blur-md animate-backdrop-fade"
                         onClick={handleCloseProfile}
                     ></div>
 
