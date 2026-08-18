@@ -21,6 +21,14 @@ const Header = () => {
         }));
     };
 
+    const [openMobileSubs, setOpenMobileSubs] = useState({});
+    const toggleMobileSub = (key) => {
+        setOpenMobileSubs(prev => ({
+            ...prev,
+            [key]: !prev[key]
+        }));
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 49);
@@ -100,10 +108,16 @@ const Header = () => {
             { name: "Mandatory Disclosures", url: "/mandatory-disclosures" }
         ],
         academics: [
-            { name: "Computer Science (CSE)", url: "/cse" },
-            { name: "Information Technology (IT)", url: "/it" },
-            { name: "Electronics & Comm. (ECE)", url: "/ece" },
-            { name: "Electrical Engineering (EEE)", url: "/eee" },
+            { 
+                name: "B.Tech Programmes", 
+                url: "#",
+                subItems: [
+                    { name: "Computer Science (CSE)", url: "/cse" },
+                    { name: "Information Technology (IT)", url: "/it" },
+                    { name: "Electronics & Comm. (ECE)", url: "/ece" },
+                    { name: "Electrical Engineering (EEE)", url: "/eee" }
+                ]
+            },
             { name: "Applied Sciences", url: "/applied-sciences" },
             { name: "Academic Calendar", url: "/academic-calendar" },
             { name: "Time Table & Syllabus", url: "/timetable" },
@@ -147,7 +161,9 @@ const Header = () => {
 
     const isPathActive = (path) => location.pathname === path;
     const isCategoryActive = (categoryKey) => {
-        return megaMenuData[categoryKey]?.some(link => isPathActive(link.url));
+        return megaMenuData[categoryKey]?.some(link => 
+            isPathActive(link.url) || (link.subItems && link.subItems.some(sub => isPathActive(sub.url)))
+        );
     };
 
     const handleMouseEnter = (key) => {
@@ -268,20 +284,45 @@ const Header = () => {
                                             }`}>
                                             <div className="bg-white shadow-card rounded-xl border border-slate-100 p-6 w-80">
                                                 <div className="flex flex-col space-y-3.5">
-                                                    {megaMenuData[key]?.map((link, i) => (
-                                                        link.external ? (
-                                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors flex items-center justify-between group/link py-1">
-                                                                <span>{link.name}</span>
-                                                                <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all shrink-0 text-primary" />
-                                                            </a>
-                                                        ) : (
-                                                            <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className={`text-sm font-semibold transition-all flex items-center justify-between group/link py-1 ${isPathActive(link.url) ? 'text-primary font-bold' : 'text-slate-600 hover:text-primary'
-                                                                }`}>
-                                                                <span>{link.name}</span>
-                                                                <ArrowRight className={`w-3.5 h-3.5 transition-all shrink-0 text-primary ${isPathActive(link.url) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0'}`} />
-                                                            </Link>
-                                                        )
-                                                    ))}
+                                                     {megaMenuData[key]?.map((link, i) => {
+                                                         if (link.subItems) {
+                                                             const isAnySubActive = link.subItems.some(sub => isPathActive(sub.url));
+                                                             return (
+                                                                 <div key={i} className="group/sub w-full py-1 flex flex-col">
+                                                                     <div className="flex items-center justify-between w-full py-1 cursor-pointer text-slate-600 hover:text-primary transition-colors">
+                                                                         <span className={isAnySubActive ? 'text-primary font-bold' : 'font-semibold text-sm'}>{link.name}</span>
+                                                                         <ChevronDown className={`w-4 h-4 text-slate-400 group-hover/sub:text-primary transition-transform duration-300 group-hover/sub:rotate-180 ${isAnySubActive ? 'text-primary' : ''}`} />
+                                                                     </div>
+                                                                     
+                                                                     <div className="max-h-0 overflow-hidden opacity-0 transition-all duration-300 group-hover/sub:max-h-60 group-hover/sub:opacity-100 group-hover/sub:mt-1 group-hover/sub:mb-2 pl-4 border-l-2 border-slate-100/80 flex flex-col space-y-2.5">
+                                                                         {link.subItems.map((sub, j) => (
+                                                                             <Link
+                                                                                 key={j}
+                                                                                 to={sub.url}
+                                                                                 onClick={() => setActiveDropdown(null)}
+                                                                                 className={`text-sm font-semibold transition-all flex items-center justify-between group/sublink py-1 ${isPathActive(sub.url) ? 'text-primary font-bold' : 'text-slate-655 hover:text-primary'}`}
+                                                                             >
+                                                                                 <span>{sub.name}</span>
+                                                                                 <ArrowRight className={`w-3.5 h-3.5 transition-all shrink-0 text-primary ${isPathActive(sub.url) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 group-hover/sublink:opacity-100 group-hover/sublink:translate-x-0'}`} />
+                                                                             </Link>
+                                                                         ))}
+                                                                     </div>
+                                                                 </div>
+                                                             );
+                                                         }
+                                                         return link.external ? (
+                                                             <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setActiveDropdown(null)} className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors flex items-center justify-between group/link py-1">
+                                                                 <span>{link.name}</span>
+                                                                 <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all shrink-0 text-primary" />
+                                                             </a>
+                                                         ) : (
+                                                             <Link key={i} to={link.url} onClick={() => setActiveDropdown(null)} className={`text-sm font-semibold transition-all flex items-center justify-between group/link py-1 ${isPathActive(link.url) ? 'text-primary font-bold' : 'text-slate-600 hover:text-primary'
+                                                                 }`}>
+                                                                 <span>{link.name}</span>
+                                                                 <ArrowRight className={`w-3.5 h-3.5 transition-all shrink-0 text-primary ${isPathActive(link.url) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0'}`} />
+                                                             </Link>
+                                                         );
+                                                     })}
                                                 </div>
                                             </div>
                                         </div>
@@ -320,18 +361,44 @@ const Header = () => {
                                     </button>
                                     <div className={`space-y-1 transition-all duration-300 overflow-hidden sm:max-h-none sm:opacity-100 sm:block ${isExpanded ? 'max-h-[600px] opacity-100 mb-3' : 'max-h-0 opacity-0 sm:max-h-none sm:opacity-100'
                                         }`}>
-                                        {items.map((link, i) => (
-                                            link.external ? (
-                                                <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
-                                                    {link.name}
-                                                </a>
-                                            ) : (
-                                                <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
-                                                    }`}>
-                                                    {link.name}
-                                                </Link>
-                                            )
-                                        ))}
+                                         {items.map((link, i) => {
+                                             if (link.subItems) {
+                                                 const isAnySubActive = link.subItems.some(sub => isPathActive(sub.url));
+                                                 return (
+                                                     <div key={i} className="w-full">
+                                                         <button
+                                                             onClick={() => toggleMobileSub(link.name)}
+                                                             className={`w-full flex items-center justify-between py-2 px-4 text-base font-semibold rounded-xl transition-colors cursor-pointer text-left ${isAnySubActive ? 'bg-blue-50/40 text-primary font-bold' : 'text-slate-600 hover:text-primary hover:bg-slate-50'}`}
+                                                         >
+                                                             <span>{link.name}</span>
+                                                             <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${openMobileSubs[link.name] ? 'rotate-180 text-primary' : ''}`} />
+                                                         </button>
+                                                         <div className={`pl-4 space-y-1 overflow-hidden transition-all duration-300 ${openMobileSubs[link.name] ? 'max-h-[300px] opacity-100 my-1' : 'max-h-0 opacity-0'}`}>
+                                                             {link.subItems.map((sub, j) => (
+                                                                 <Link
+                                                                     key={j}
+                                                                     to={sub.url}
+                                                                     onClick={() => setIsMenuOpen(false)}
+                                                                     className={`block w-full text-left py-2 px-4 text-sm transition-colors rounded-xl ${isPathActive(sub.url) ? 'bg-blue-50/80 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-500 hover:text-primary hover:bg-slate-50'}`}
+                                                                 >
+                                                                     {sub.name}
+                                                                 </Link>
+                                                             ))}
+                                                         </div>
+                                                     </div>
+                                                 );
+                                             }
+                                             return link.external ? (
+                                                 <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                                     {link.name}
+                                                 </a>
+                                             ) : (
+                                                 <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
+                                                     }`}>
+                                                     {link.name}
+                                                 </Link>
+                                             );
+                                         })}
                                     </div>
                                 </div>
                             );

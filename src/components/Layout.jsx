@@ -47,7 +47,7 @@ const Layout = () => {
     };
 
     return (
-        <div className="font-sans text-slate-700 w-full min-h-screen selection:bg-slate-200 selection:text-slate-900 bg-white flex flex-col overflow-x-hidden">
+        <div className="font-sans text-slate-700 w-full min-h-screen selection:bg-slate-200 selection:text-slate-900 bg-white flex flex-col">
             {isIntroActive && (
                 <OpeningAnimation onComplete={handleIntroComplete} />
             )}
