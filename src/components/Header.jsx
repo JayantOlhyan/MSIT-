@@ -274,9 +274,6 @@ const Header = () => {
                                             }`}>
                                             {item}
                                             <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isCategoryActive(key) ? (isTransparent ? 'text-white' : 'text-primary') : (isTransparent ? 'text-white/60' : 'text-slate-400')}`} />
-                                            {isCategoryActive(key) && (
-                                                <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-primary'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
-                                            )}
                                         </button>
 
                                         <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'
