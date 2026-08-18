@@ -7,9 +7,9 @@ export const admissionData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Cover of the official MSIT information brochure featuring campus life and academic highlights",
         content: `
-            <p className="mb-6">Discover why thousands of aspiring engineers choose MSIT every year. Our comprehensive information brochure outlines our academic philosophy, placement statistics, faculty profiles, and the vibrant campus life that awaits you.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Admissions 2026-27</h3>
-            <p className="mb-6">Admission to all B.Tech programs is strictly based on the Common Entrance Test (CET) conducted by GGSIPU or JEE Main scores. Read the brochure for detailed eligibility criteria and counseling procedures.</p>
+            <p class="mb-6">Discover why thousands of aspiring engineers choose MSIT every year. Our comprehensive information brochure outlines our academic philosophy, placement statistics, faculty profiles, and the vibrant campus life that awaits you.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Admissions 2026-27</h3>
+            <p class="mb-6">Admission to all B.Tech programs is strictly based on the Common Entrance Test (CET) conducted by GGSIPU or JEE Main scores. Read the brochure for detailed eligibility criteria and counseling procedures.</p>
         `,
         stats: [
             { label: "Intake", value: "480" },
@@ -25,9 +25,9 @@ export const admissionData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Secure MSIT online fee payment portal and digital transaction interface overview",
         content: `
-            <p className="mb-6">MSIT provides a fully encrypted, seamless online payment gateway for all academic fee transactions. Students can securely pay their tuition, hostel, and miscellaneous fees using Net Banking, UPI, or Credit/Debit Cards.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Payment Guidelines</h3>
-            <p className="mb-6">Ensure you have your 11-digit Enrollment Number ready. A digital receipt will be instantly generated and emailed to your registered campus mail address upon successful transaction.</p>
+            <p class="mb-6">MSIT provides a fully encrypted, seamless online payment gateway for all academic fee transactions. Students can securely pay their tuition, hostel, and miscellaneous fees using Net Banking, UPI, or Credit/Debit Cards.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Payment Guidelines</h3>
+            <p class="mb-6">Ensure you have your 11-digit Enrollment Number ready. A digital receipt will be instantly generated and emailed to your registered campus mail address upon successful transaction.</p>
         `,
         stats: [
             { label: "Gateway", value: "256-bit SSL" },

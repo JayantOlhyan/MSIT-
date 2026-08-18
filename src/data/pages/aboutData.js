@@ -61,11 +61,11 @@ export const aboutData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Historical view of the MSIT campus foundation, Janakpuri",
         content: `
-            <p className="mb-6">Surajmal Memorial Education Society was founded in 1972 at Janakpuri to emulate the great qualities of Maharaja Surajmal with an aim to impart quality education in rural as well as urban areas. Academic Programmes were started in various technical streams in 1982.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Foundation of MSIT</h3>
-            <p className="mb-6">Maharaja Surajmal Institute of Technology was established in 2001 with the approval of AICTE and is affiliated with Guru Gobind Singh Indraprastha University in Delhi for Providing B.Tech Degrees since 2000-01.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Maharaja Surajmal (1707-1763)</h3>
-            <p className="mb-6">Named after the visionary Maharaja Surajmal, who believed that humanity is the only religion of man, MSIT reflects a fusion of our heritage and contemporary insights. He dedicated his life to fighting social injustice and forging national integration.</p>
+            <p class="mb-6">Surajmal Memorial Education Society was founded in 1972 at Janakpuri to emulate the great qualities of Maharaja Surajmal with an aim to impart quality education in rural as well as urban areas. Academic Programmes were started in various technical streams in 1982.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Foundation of MSIT</h3>
+            <p class="mb-6">Maharaja Surajmal Institute of Technology was established in 2001 with the approval of AICTE and is affiliated with Guru Gobind Singh Indraprastha University in Delhi for Providing B.Tech Degrees since 2000-01.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Maharaja Surajmal (1707-1763)</h3>
+            <p class="mb-6">Named after the visionary Maharaja Surajmal, who believed that humanity is the only religion of man, MSIT reflects a fusion of our heritage and contemporary insights. He dedicated his life to fighting social injustice and forging national integration.</p>
         `,
         stats: [
             { label: "Founded In", value: "2001" },
@@ -189,9 +189,9 @@ export const aboutData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT Administrative Block and Director's Office entrance",
         content: `
-            <p className="mb-6">The leadership at MSIT is helmed by distinguished academicians and administrative experts dedicated to maintaining the highest standards of institutional governance. Under the leadership of our Director, Prof. (Dr.) Avanish Kumar Srivastava, the institute continuously strives for excellence.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Director's Office</h3>
-            <p className="mb-6">Prof. (Dr.) Avanish Kumar Srivastava leads MSIT with a focus on robust academic standards and dynamic professional development. Together with the administrative staff, they ensure a transparent, progressive, and student-centric campus environment.</p>
+            <p class="mb-6">The leadership at MSIT is helmed by distinguished academicians and administrative experts dedicated to maintaining the highest standards of institutional governance. Under the leadership of our Director, Prof. (Dr.) Avanish Kumar Srivastava, the institute continuously strives for excellence.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Director's Office</h3>
+            <p class="mb-6">Prof. (Dr.) Avanish Kumar Srivastava leads MSIT with a focus on robust academic standards and dynamic professional development. Together with the administrative staff, they ensure a transparent, progressive, and student-centric campus environment.</p>
         `,
         stats: [
             { label: "Leadership", value: "Director & Staff" },
@@ -797,11 +797,11 @@ export const aboutData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Campus facilities and modern academic infrastructure at MSIT",
         content: `
-            <p className="mb-6">MSIT operates on a beautiful 8-acre eco-friendly campus in Janakpuri, New Delhi. Originally in a four-storey building (6279 sq.m), it was shifted to a more spacious seven-storey building with a built-up area of 17,837 sq.m, acquiring impressive infrastructure and resources for high-quality engineering education.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">State-of-the-Art Resources</h3>
-            <p className="mb-6">The infrastructure consists of well-lit lecture halls, fully furnished labs, seminar halls, staff rooms, and a large playground. It includes six modern air-conditioned networked computer labs, an Enterprise Central Library, and high-speed radio-link internet access.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Hostel & Living</h3>
-            <p className="mb-6">The Maharaja Mahendra Pratap Hostel provides accommodation to around 200 boys and 100 girls in a spacious and elegant four-storey building with hygienic and nutritious food. A well-organized canteen with a 60-70 seating capacity is available on campus.</p>
+            <p class="mb-6">MSIT operates on a beautiful 8-acre eco-friendly campus in Janakpuri, New Delhi. Originally in a four-storey building (6279 sq.m), it was shifted to a more spacious seven-storey building with a built-up area of 17,837 sq.m, acquiring impressive infrastructure and resources for high-quality engineering education.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">State-of-the-Art Resources</h3>
+            <p class="mb-6">The infrastructure consists of well-lit lecture halls, fully furnished labs, seminar halls, staff rooms, and a large playground. It includes six modern air-conditioned networked computer labs, an Enterprise Central Library, and high-speed radio-link internet access.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Hostel & Living</h3>
+            <p class="mb-6">The Maharaja Mahendra Pratap Hostel provides accommodation to around 200 boys and 100 girls in a spacious and elegant four-storey building with hygienic and nutritious food. A well-organized canteen with a 60-70 seating capacity is available on campus.</p>
         `,
         stats: [
             { label: "Built-up Area", value: "17,837 sqm" },
@@ -817,9 +817,9 @@ export const aboutData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Surajmal Memorial Education Society flagship banner on campus",
         content: `
-            <p className="mb-6">The Surajmal Memorial Education Society (SMES) was established with a singular objective: to disseminate quality education and foster intellectual growth across the nation. MSIT is the flagship engineering institute of the SMES family.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">A Philanthropic Vision</h3>
-            <p className="mb-6">Driven by philanthropic ideals rather than commercial interests, the society ensures that premier education remains accessible, prioritizing infrastructure development and faculty excellence above all.</p>
+            <p class="mb-6">The Surajmal Memorial Education Society (SMES) was established with a singular objective: to disseminate quality education and foster intellectual growth across the nation. MSIT is the flagship engineering institute of the SMES family.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">A Philanthropic Vision</h3>
+            <p class="mb-6">Driven by philanthropic ideals rather than commercial interests, the society ensures that premier education remains accessible, prioritizing infrastructure development and faculty excellence above all.</p>
         `,
         stats: [
             { label: "Institutions", value: "4" },
