@@ -359,6 +359,8 @@ const Placements = () => {
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
             </div>
 
             {/* Interactive Modal Popup */}
