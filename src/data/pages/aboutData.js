@@ -207,15 +207,131 @@ export const aboutData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Governing Body meeting area at Mahogany Surajmal Institute",
         content: `
-            <p className="mb-6">The Governing Body of Maharaja Surajmal Institute of Technology consists of an esteemed assembly of educationists, industry representatives, and society nominees who steer the strategic direction of the institute.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Leadership Structure</h3>
-            <p className="mb-6">Chaired by Sh. Kaptan Singh, the board includes representatives like Smt. Esha Jakhar, industry veterans like Sh. Raj Singh Gahlot, and academic professionals such as Prof. R.S Nirjar. Their combined experience ensures that MSIT maintains its rigorous educational frameworks.</p>
+            <p class="mb-8 leading-relaxed">The Governing Body and Advisory Board of Maharaja Surajmal Institute of Technology consist of esteemed educationists, industry leaders, and representatives who steer the strategic growth and academic quality of the institute.</p>
+            
+            <div class="space-y-12">
+                <!-- TOP LEADERSHIP GRID -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-3xl border border-slate-200/60 bg-linear-to-br from-amber-50/30 via-white to-white shadow-xs">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700">Chairman</span>
+                        <h4 class="text-xl font-bold text-slate-900 mt-1 mb-1">Sh. Kaptan Singh</h4>
+                        <p class="text-xs text-slate-500 font-medium">Governing Body Chairman, SMES</p>
+                    </div>
+                    <div class="p-6 rounded-3xl border border-slate-200/60 bg-linear-to-br from-blue-50/30 via-white to-white shadow-xs">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700">Member Secretary</span>
+                        <h4 class="text-xl font-bold text-slate-900 mt-1 mb-1">Prof. (Dr.) Avanish Kumar Srivastava</h4>
+                        <p class="text-xs text-slate-500 font-medium">Director, MSIT</p>
+                    </div>
+                </div>
+
+                <!-- CATEGORIES GRID -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
+                    
+                    <!-- Nominee of Society -->
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-950 flex items-center gap-2">
+                            <span class="w-1.5 h-4 bg-primary rounded-full"></span>
+                            Nominees of the Society
+                        </h4>
+                        <ul class="space-y-2 text-sm text-slate-600 pl-3">
+                            <li class="font-medium text-slate-800">Smt. Esha Jakhar</li>
+                            <li class="font-medium text-slate-800">Sh. Ajit Singh Chaudhary</li>
+                            <li class="font-medium text-slate-800">Sh. Rajpal Singh Solanki</li>
+                            <li class="font-medium text-slate-800">Sh. Sanjeev Kumar</li>
+                            <li class="font-medium text-slate-800">Sh. S. S. Solanki</li>
+                        </ul>
+                    </div>
+
+                    <!-- Educationist -->
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-950 flex items-center gap-2">
+                            <span class="w-1.5 h-4 bg-emerald-600 rounded-full"></span>
+                            Educationists
+                        </h4>
+                        <ul class="space-y-2 text-sm text-slate-600 pl-3">
+                            <li class="font-medium text-slate-800">Prof. R.S. Nirjar</li>
+                            <li class="font-medium text-slate-800">Sh. Tejbir Singh Rana</li>
+                            <li class="font-medium text-slate-800">Prof. Prem Vrat</li>
+                            <li class="font-medium text-slate-800">Sh. B.D. Dabas</li>
+                            <li class="font-medium text-slate-800">Sh. Shyam Singh</li>
+                        </ul>
+                    </div>
+
+                    <!-- Representative of Industry -->
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-950 flex items-center gap-2">
+                            <span class="w-1.5 h-4 bg-purple-600 rounded-full"></span>
+                            Representatives of Industry
+                        </h4>
+                        <ul class="space-y-2 text-sm text-slate-600 pl-3">
+                            <li class="font-medium text-slate-800">Sh. Raj Singh Gahlot</li>
+                            <li class="font-medium text-slate-800">Sh. Subhash Chaudhary</li>
+                        </ul>
+                    </div>
+
+                    <!-- Teacher's Representative -->
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-950 flex items-center gap-2">
+                            <span class="w-1.5 h-4 bg-rose-600 rounded-full"></span>
+                            Teacher Representatives
+                        </h4>
+                        <ul class="space-y-2 text-sm text-slate-600 pl-3">
+                            <li class="font-medium text-slate-800">Prof. Man Singh Beniwal <span class="text-xs text-slate-400 font-normal">(Professor)</span></li>
+                            <li class="font-medium text-slate-800">Dr. Kavita Sheoran <span class="text-xs text-slate-400 font-normal">(Associate Professor)</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- ADVISORY BOARD SECTION -->
+                <div class="pt-8 border-t border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        Advisory Board
+                    </h3>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200/60 shadow-xs">
+                        <table class="w-full text-left border-collapse text-sm">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200">
+                                    <th class="p-4 font-bold text-slate-900">Name</th>
+                                    <th class="p-4 font-bold text-slate-900">Affiliation</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 bg-white">
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Prof. A. Q. Ansari</td>
+                                    <td class="p-4 text-slate-600">Dept. of Electrical Engineering, Jamia Millia Islamia, New Delhi</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Prof. Saroj Kaushik</td>
+                                    <td class="p-4 text-slate-600">Dept. of Computer Science & Engineering, IIT Delhi</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Prof. S. D. Joshi</td>
+                                    <td class="p-4 text-slate-600">Dept. of Electrical Engineering, IIT Delhi</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Dr. Rajendra Singh</td>
+                                    <td class="p-4 text-slate-600">Dept. of Physics, IIT Delhi</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Mr. Arun Kudale</td>
+                                    <td class="p-4 text-slate-600">Managing Director, Kudale Instruments Pvt. Ltd., Pune</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Prof. Vikram Kumar</td>
+                                    <td class="p-4 text-slate-600">Dept. of Physics, IIT Delhi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         `,
         stats: [
             { label: "Chairman", value: "Sh. Kaptan Singh" },
-            { label: "Advisors", value: "Multiple IIT/JMI Reps" }
+            { label: "Secretary", value: "Sh. Ajit Singh" }
         ],
-        bulletPoints: ["Society Nominees", "Educationists & Industry Reps", "Teacher's Representatives"]
+        bulletPoints: ["15 Governing Members", "6 Advisory Members", "IIT & JMI Affiliates"]
     },
     "fromdesk": {
         title: "From The Desk",

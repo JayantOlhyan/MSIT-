@@ -88,6 +88,7 @@ const Header = () => {
             { name: "About MSIT", url: "/about" },
             { name: "Vision & Mission", url: "/vision-mission" },
             { name: "History & Legacy", url: "/history" },
+            { name: "Governing Body", url: "/govern" },
             { name: "From The Desk", url: "/fromdesk" },
             { name: "Campus & Facilities", url: "/facilities" },
             { name: "Surajmal Memorial Education Society", url: "/smes" }
