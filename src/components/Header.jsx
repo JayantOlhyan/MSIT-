@@ -133,8 +133,7 @@ const Header = () => {
         ],
         placements: [
             { name: "Careers & Placements", url: "/placements" },
-            { name: "Internship Cell", url: "/internship-cell" },
-            { name: "Placement Cell: 011-65215944", url: "tel:01165215944", external: true }
+            { name: "Internship Cell", url: "/internship-cell" }
         ],
         student: [
             { name: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },

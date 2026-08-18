@@ -156,9 +156,14 @@ const Placements = () => {
                             <p className="text-sm text-slate-500 mb-4">
                                 The T&P cell actively bridges the gap between academia and industry.
                             </p>
-                            <a href="mailto:placements@msit.in" className="text-sm font-semibold text-blue-600 hover:underline">
-                                Contact Placement Cell &rarr;
-                            </a>
+                            <div className="flex flex-col space-y-2 px-1">
+                                <a href="tel:01165215944" className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-2">
+                                    <span>📞 Call: 011-65215944</span>
+                                </a>
+                                <a href="mailto:placements@msit.in" className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-2">
+                                    <span>✉️ Email: placements@msit.in</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
