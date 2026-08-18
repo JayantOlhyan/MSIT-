@@ -58,22 +58,56 @@ export const aboutData = {
 
                 <section class="border-t border-slate-100 pt-10">
                     <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center sm:text-left">Accreditations & Affiliations</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 items-stretch text-center">
-                        <div class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-white hover:shadow-card transition-all group">
-                            <img src="/aicte-logo.png" alt="AICTE Approved Badge" class="h-28 w-28 object-contain mb-6 group-hover:scale-105 transition-transform" />
-                            <h4 class="font-bold text-slate-900 mb-1">Approved By</h4>
-                            <p class="text-sm text-slate-500 font-semibold leading-relaxed">All India Council for Technical Education (AICTE)</p>
-                        </div>
-                        <div class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-white hover:shadow-card transition-all group">
-                            <img src="/ggsipu-logo.png" alt="GGSIPU Affiliation Seal" class="h-28 w-28 object-contain mb-6 group-hover:scale-105 transition-transform" />
-                            <h4 class="font-bold text-slate-900 mb-1">Affiliated To</h4>
-                            <p class="text-sm text-slate-500 font-semibold leading-relaxed">Guru Gobind Singh Indraprastha University (GGSIPU), Delhi</p>
-                        </div>
-                        <div class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-100 hover:bg-white hover:shadow-card transition-all group">
-                            <img src="/iso-logo.png" alt="ISO Certification Badge" class="h-28 w-28 object-contain mb-6 group-hover:scale-105 transition-transform" />
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                        
+                        <a href="https://msit.in/media/uploads/2026/04/07/aicte-eoa-merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-orange-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/aicte-logo.png" alt="AICTE Approved Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1">Approved by AICTE</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-orange-700 mb-2">Extension of Approval (2026)</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Official Extension of Approval for Maharaja Surajmal Institute of Technology.</p>
+                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View EOA Proof &rarr;</span>
+                        </a>
+
+                        <a href="https://msit.in/media/uploads/2025/09/09/merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/ggsipu-logo.png" alt="GGSIPU Affiliation Seal" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1">GGSIPU Affiliated</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">Primary Affiliating University</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Official affiliation letters and consolidated archives from GGSIPU.</p>
+                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View Affiliation Proof &rarr;</span>
+                        </a>
+
+                        <a href="https://msit.in/media/2022/12/23/naac.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-emerald-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/naac-logo.png" alt="NAAC Accredited Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1">NAAC Accredited</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">'A' Grade Status</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Accredited by the National Assessment and Accreditation Council.</p>
+                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View NAAC Proof &rarr;</span>
+                        </a>
+
+                        <a href="https://msit.in/media/uploads/2025/08/27/nba_2023_all_depts_merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/nba-logo.png" alt="NBA Accredited Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1">NBA Accredited</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">CSE, IT, ECE, EEE</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Specifically accredited B.Tech engineering departments.</p>
+                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View NBA Proof &rarr;</span>
+                        </a>
+
+                        <a href="https://msit.in/media/2024/07/04/doc-20240704-wa0028.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/iso-logo.png" alt="ISO Certification Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
                             <h4 class="font-bold text-slate-900 mb-1">ISO Certified</h4>
-                            <p class="text-sm text-slate-500 font-semibold leading-relaxed">ISO 9001:2015 Quality Management Certified Company</p>
-                        </div>
+                            <p class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">ISO 9001:2015</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Certified for international quality standards in higher education services.</p>
+                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View Certificate &rarr;</span>
+                        </a>
+
+                        <a href="https://msit.in/media/2024/09/25/aishe-2024-merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-purple-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/aishe-logo.png" alt="AISHE Listed Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1">AISHE Listed</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-purple-700 mb-2">MHRD Registered</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Listed under the All India Survey on Higher Education registry.</p>
+                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View AISHE Proof &rarr;</span>
+                        </a>
+
                     </div>
                 </section>
 
