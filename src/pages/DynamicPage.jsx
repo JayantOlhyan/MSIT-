@@ -6,12 +6,20 @@ import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
 import NotFound from './NotFound';
 import { facultyMembers } from '../data/facultyData';
+import FeePaymentPortal from '../components/FeePaymentPortal';
 
 const DynamicPage = () => {
     const { slug } = useParams();
     const pageData = pagesData[slug];
     const navigate = useNavigate();
     const [selectedMember, setSelectedMember] = useState(null);
+    const [activeFeeTab, setActiveFeeTab] = useState('pay');
+
+    useEffect(() => {
+        if (slug === 'online-fee') {
+            setActiveFeeTab('pay');
+        }
+    }, [slug]);
 
     // Prevent body scroll when modal is open
     useEffect(() => {
@@ -101,7 +109,9 @@ const DynamicPage = () => {
 
                         {/* Main Typography Area */}
                         <div className="w-full lg:w-2/3 order-2 lg:order-1">
-                            {pageData.component ? (
+                            {slug === 'online-fee' ? (
+                                <FeePaymentPortal activeTab={activeFeeTab} setActiveTab={setActiveFeeTab} />
+                            ) : pageData.component ? (
                                 <pageData.component />
                             ) : (
                                 <div 
@@ -135,15 +145,32 @@ const DynamicPage = () => {
                                         <ul className="space-y-4">
                                             {pageData.bulletPoints.map((point, i) => {
                                                 const isLink = typeof point === 'object' && point.url;
+                                                const labelText = typeof point === 'object' ? point.label : point;
+                                                const isActiveFeeTab = slug === 'online-fee' && (
+                                                    (labelText.includes('Payment') && activeFeeTab === 'pay') ||
+                                                    (labelText.includes('Receipt') && activeFeeTab === 'receipt') ||
+                                                    (labelText.includes('Refund') && activeFeeTab === 'refund')
+                                                );
+
                                                 return (
                                                     <li key={i} className="flex items-start text-slate-300 text-sm">
-                                                        <ArrowRight className="w-4 h-4 text-accent mr-3 mt-0.5 shrink-0" />
+                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-colors ${isActiveFeeTab ? 'text-accent' : 'text-slate-500'}`} />
                                                         {isLink ? (
                                                             <Link to={point.url} className="hover:text-accent transition-colors">
                                                                 {point.label}
                                                             </Link>
                                                         ) : (
-                                                            <span className="hover:text-accent transition-colors cursor-pointer w-full" dangerouslySetInnerHTML={{ __html: typeof point === 'object' ? point.label : point }}></span>
+                                                            <span 
+                                                                className={`hover:text-accent transition-colors cursor-pointer w-full ${isActiveFeeTab ? 'text-accent font-bold font-sans' : ''}`}
+                                                                dangerouslySetInnerHTML={{ __html: labelText }}
+                                                                onClick={() => {
+                                                                    if (slug === 'online-fee') {
+                                                                        if (labelText.includes('Payment')) setActiveFeeTab('pay');
+                                                                        else if (labelText.includes('Receipt')) setActiveFeeTab('receipt');
+                                                                        else if (labelText.includes('Refund')) setActiveFeeTab('refund');
+                                                                    }
+                                                                }}
+                                                            ></span>
                                                         )}
                                                     </li>
                                                 );
