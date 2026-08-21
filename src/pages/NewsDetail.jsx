@@ -86,6 +86,160 @@ const newsDb = {
             { name: "Read Placement Cell Alumni Interview", url: "/placements" },
             { name: "MSIT Alumni Association Network", url: "https://alumni.msit.in" }
         ]
+    },
+    "4": {
+        id: 4,
+        label: "STORY",
+        title: "Grand Finale of SIH 2025 Concludes: MSIT Declared Winner in Ministry of AYUSH Category",
+        date: "DEC 12, 2025",
+        color: "border-blue-600",
+        bgImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
+        summary: "MSIT Janakpuri secured top honors in the Ministry of AYUSH category at the Smart India Hackathon 2025 Grand Finale.",
+        content: `
+            <p class="mb-6">The Grand Finale of the Smart India Hackathon (SIH) 2025 concluded on 12 December 2025 at Galgotias University. In the Ministry of AYUSH category, Maharaja Surajmal Institute of Technology, Janakpuri, New Delhi, was declared a winner alongside Sri Krishna College of Engineering and Technology, Tamil Nadu.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Ministry Evaluation and AYUSH Solutions</h3>
+            <p class="mb-6">Project evaluations were conducted by official ministry assessment teams including Dr. Shalini Rai from the Ministry of AYUSH, evaluating original technology solutions based on originality, technological feasibility, and social impact.</p>
+        `,
+        attachments: [
+            { name: "SIH 2025 Official Winner Certificate.pdf", size: "1.2 MB", url: "#" }
+        ],
+        links: [
+            { name: "Smart India Hackathon Portal", url: "https://sih.gov.in" }
+        ]
+    },
+    "5": {
+        id: 5,
+        label: "EVENT",
+        title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)",
+        date: "NOV 19, 2026",
+        color: "border-emerald-500",
+        bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+        summary: "MSIT announced the 4th International Conference ICAIA-2026, technically approved by the IEEE Delhi Section.",
+        content: `
+            <p class="mb-6">Maharaja Surajmal Institute of Technology (MSIT), New Delhi, is organizing the 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026) on 19–20 November 2026.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">IEEE Delhi Section Technical Approval</h3>
+            <p class="mb-6">Technically approved by the IEEE Delhi Section, the conference brings together global academic researchers, industry experts, and practitioners to discuss computational intelligence models, deep learning architectures, and applied AI systems.</p>
+        `,
+        attachments: [
+            { name: "ICAIA 2026 Brochure & Paper Submissions.pdf", size: "3.4 MB", url: "#" }
+        ],
+        links: [
+            { name: "Conference Official Site", url: "https://icaia-msit.in/" }
+        ]
+    },
+    "6": {
+        id: 6,
+        label: "NEWS",
+        title: "Department of CSE Receives Grant from Petronet LNG Ltd. for Center of Excellence",
+        date: "AUG 15, 2025",
+        color: "border-purple-500",
+        bgImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+        summary: "Petronet LNG Ltd. awarded ₹30 lakh to MSIT's Department of CSE to establish a CoE in Computational Intelligence.",
+        content: `
+            <p class="mb-6">The Department of Computer Science & Engineering at Maharaja Surajmal Institute of Technology received a financial grant of ₹30 lakh from Petronet LNG Ltd.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Computational Intelligence Infrastructure</h3>
+            <p class="mb-6">The grant funding is explicitly designated to establish a Center of Excellence of Computational research and development, providing advanced computational infrastructure for AI and data science research.</p>
+        `,
+        attachments: [
+            { name: "Petronet Grant Approval Letter.pdf", size: "850 KB", url: "#" }
+        ],
+        links: [
+            { name: "MSIT Achievement Notice", url: "https://www.msit.in/achievement/3/" }
+        ]
+    },
+    "7": {
+        id: 7,
+        label: "EVENT",
+        title: "MSIT Conducts National Conference NCI-TIDE 2025",
+        date: "DEC 15, 2025",
+        color: "border-blue-600",
+        bgImage: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+        summary: "MSIT hosted the National Conference NCI-TIDE 2025 covering emerging technologies and interdisciplinary engineering.",
+        content: `
+            <p class="mb-6">Maharaja Surajmal Institute of Technology organized the National Conference on Integrating Technologies, Ideas and Disciplines for Engineering Innovation (NCI-TIDE 2025).</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Keynote Address and Sponsorship</h3>
+            <p class="mb-6">The event featured a keynote address by Dr. Prerna Gaur on Internet of Things (IoT) applications in automation and intelligent engineering systems, alongside peer-reviewed research paper sessions for journal publication. Corporate sponsorship support was provided by ECE department alumnus Varun Bansal through Elegance Spark Innovation.</p>
+        `,
+        attachments: [
+            { name: "NCI-TIDE 2025 Complete Report.pdf", size: "1.9 MB", url: "#" }
+        ],
+        links: [
+            { name: "Official Report PDF Link", url: "https://www.msit.in/media/uploads/2025/12/16/nci-tide2025-report.pdf" }
+        ]
+    },
+    "8": {
+        id: 8,
+        label: "EVENT",
+        title: "Placement Cell Conducts Placement Preparation Session with ION Alumni and Seniors",
+        date: "AUG 30, 2024",
+        color: "border-emerald-500",
+        bgImage: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200",
+        summary: "MSIT Placement Cell organized an interactive preparation session featuring CSE alumni and placed seniors working at ION.",
+        content: `
+            <p class="mb-6">The Placement Cell at MSIT conducted an interactive placement preparation session focused on recruitment strategies for fintech firm ION.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Alumni Mentorship and Guidance</h3>
+            <p class="mb-6">Featuring Saransh Kapoor, Sunidee Jaiswal (CSE 2021–2025), and alumnus Prasanjeet Parasar (CSE 2019–2023), the session provided technical guidance on resume grinding, stakeholder evaluation, case studies, and culture fit rounds conducted by global talent leaders.</p>
+        `,
+        attachments: [
+            { name: "ION Prep Session Report.pdf", size: "1.1 MB", url: "#" }
+        ],
+        links: [
+            { name: "Placement Cell Notice", url: "https://www.msit.in/media/2024/08/30/report-_placement-talk_ion.pdf" }
+        ]
+    },
+    "9": {
+        id: 9,
+        label: "EVENT",
+        title: "E-Cell MSIT Organizes Flagship E-Summit 2026",
+        date: "MAR 26, 2026",
+        color: "border-purple-500",
+        bgImage: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200",
+        summary: "E-Cell MSIT conducted its annual flagship E-Summit 2026 to foster student entrepreneurship.",
+        content: `
+            <p class="mb-6">The Entrepreneurship Cell (E-Cell) of MSIT hosted its annual flagship E-Summit 2026 on March 26–27, 2026.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Competitions & Venture Building</h3>
+            <p class="mb-6">The summit featured business plan competitions, startup pitch sessions, ideathons, and interactive guest lectures designed to nurture technical entrepreneurship and venture building among engineering students.</p>
+        `,
+        attachments: [],
+        links: [
+            { name: "MSIT Events Calendar", url: "https://www.msit.in/events" }
+        ]
+    },
+    "10": {
+        id: 10,
+        label: "EVENT",
+        title: "MSC MSIT Organizes HackMSIT 1.0 Hackathon",
+        date: "APR 10, 2026",
+        color: "border-blue-600",
+        bgImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
+        summary: "Microsoft Student Chapter at MSIT held HackMSIT 1.0 hackathon for student software developers.",
+        content: `
+            <p class="mb-6">The Microsoft Student Chapter (MSC) at Maharaja Surajmal Institute of Technology organized "HackMSIT 1.0" on April 10–11, 2026.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Developer Prototyping</h3>
+            <p class="mb-6">The two-day competitive hackathon brought together multidisciplinary student developer teams to build software solutions, work on open-source frameworks, and present technical prototypes to industry judges.</p>
+        `,
+        attachments: [],
+        links: [
+            { name: "MSIT Events Calendar", url: "https://www.msit.in/events" }
+        ]
+    },
+    "11": {
+        id: 11,
+        label: "STORY",
+        title: "Team 'Courtroom Cartel' Secures First Prize in Smart India Hackathon 2023",
+        date: "DEC 20, 2023",
+        color: "border-emerald-500",
+        bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1200",
+        summary: "Student team 'Courtroom Cartel' from MSIT won the first prize in Smart India Hackathon 2023.",
+        content: `
+            <p class="mb-6">Student developer team "Courtroom Cartel" representing Maharaja Surajmal Institute of Technology won the 1st prize in the national Smart India Hackathon (SIH) 2023 Grand Finale.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Competitions Highlights</h3>
+            <p class="mb-6">Additionally, fellow MSIT team "Semicolon" secured 2nd place in SIH 2023, showcasing the institution's strong competitive programming and problem-solving culture.</p>
+        `,
+        attachments: [],
+        links: [
+            { name: "MSIT Homepage", url: "https://msit.in/" }
+        ]
     }
 };
 

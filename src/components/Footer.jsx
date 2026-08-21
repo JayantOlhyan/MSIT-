@@ -176,6 +176,11 @@ const Footer = () => {
                     </div>
                 </div>
 
+                {/* Disambiguation Disclaimer */}
+                <div className="text-[11px] text-slate-500 font-light leading-relaxed border-t border-slate-900/50 pt-8 pb-4 text-center md:text-left select-none">
+                    <strong>Disclaimer:</strong> Maharaja Surajmal Institute of Technology (MSIT), Janakpuri, New Delhi is a B.Tech engineering institution affiliated with GGSIPU. It operates independently from its sister entity, Maharaja Surajmal Institute (MSI, offering BBA/BCA/B.Com), and Meghnad Saha Institute of Technology (MSIT), Kolkata.
+                </div>
+
                 {/* Bottom Bar */}
                 <div className="pt-12 pb-20 md:pb-0 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold tracking-widest uppercase text-slate-400">
                     <div className="flex items-center gap-2">

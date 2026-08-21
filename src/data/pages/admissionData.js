@@ -251,6 +251,24 @@ export const admissionData = {
                     </div>
                 </div>
 
+                <!-- NIRF RANKING CARD -->
+                <div class="p-6 md:p-8 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-650"></span>
+                        NIRF Ranking Status
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Engineering Category Rank Band</span>
+                            <p class="text-slate-800 font-extrabold text-base">Rank Band 201–300 (Official NIRF Filing)</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Classification Detail</span>
+                            <p class="text-slate-500 font-light leading-relaxed">MSIT Janakpuri participates strictly under the NIRF Engineering category. Commercial rankings stating Rank Band 101–150 or 151–200 misclassify engineering statistics with our non-engineering sister institution, Maharaja Surajmal Institute (MSI).</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- FULL DISCLOSURE CARD -->
                 <div class="p-8 rounded-3xl border border-slate-200/60 bg-slate-900 text-white shadow-card relative overflow-hidden group">
                     <div class="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>

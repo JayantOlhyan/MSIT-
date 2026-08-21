@@ -86,6 +86,42 @@ export const quickLinksData = {
                     </div>
                 </section>
 
+                <!-- Verified Case Studies -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-8">Alumni Success Case Studies</h3>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <div class="flex justify-between items-start gap-4 mb-3">
+                                <span class="px-2.5 py-0.5 bg-emerald-50 text-emerald-800 font-bold rounded text-[10px] uppercase tracking-wider border border-emerald-200">National Defense Achievement</span>
+                                <span class="text-xs font-bold text-slate-400">Batch: 2019–2023</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">Kartikay Arya</h4>
+                            <p class="text-xs text-blue-600 font-bold mb-3">B.Tech. Computer Science & Engineering (2nd Shift) | Indian Navy</p>
+                            <p class="text-sm text-slate-600 leading-relaxed font-light">Secured <strong>All India Rank 1 (AIR-1)</strong> in the SSC Navy examination upon graduating from MSIT.</p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <div class="flex justify-between items-start gap-4 mb-3">
+                                <span class="px-2.5 py-0.5 bg-blue-50 text-blue-800 font-bold rounded text-[10px] uppercase tracking-wider border border-blue-200">Entrepreneurship & Support</span>
+                                <span class="text-xs font-bold text-slate-400">Batch: 2015–2019</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">Varun Bansal</h4>
+                            <p class="text-xs text-blue-600 font-bold mb-3">B.Tech. Electronics & Communication Engineering | Elegance Spark Innovation</p>
+                            <p class="text-sm text-slate-600 leading-relaxed font-light">Founder of Elegance Spark Innovation. Sponsored the NCI-TIDE 2025 national conference at MSIT, officially noted as reflecting "the enduring bond between mentors and alumni."</p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <div class="flex justify-between items-start gap-4 mb-3">
+                                <span class="px-2.5 py-0.5 bg-purple-50 text-purple-800 font-bold rounded text-[10px] uppercase tracking-wider border border-purple-200">Fintech Engineering</span>
+                                <span class="text-xs font-bold text-slate-400">Batch: 2019–2023 / 2021–2025</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">Prasanjeet Parasar & Saransh Kapoor</h4>
+                            <p class="text-xs text-blue-600 font-bold mb-3">B.Tech. Computer Science & Engineering | ION</p>
+                            <p class="text-sm text-slate-600 leading-relaxed font-light">Leading software engineers at fintech firm ION. Actively mentor current students on resume grinding, stakeholder evaluations, and fintech culture rounds.</p>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Registration -->
                 <section class="p-8 bg-slate-900 rounded-3xl text-white">
                     <h3 class="text-2xl font-bold mb-4">Register as an Alumnus</h3>

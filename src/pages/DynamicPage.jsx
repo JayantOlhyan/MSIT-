@@ -7,6 +7,7 @@ import PageHero from '../components/PageHero';
 import NotFound from './NotFound';
 import { facultyMembers } from '../data/facultyData';
 import FeePaymentPortal from '../components/FeePaymentPortal';
+import EventsPortal from '../components/EventsPortal';
 
 const DynamicPage = () => {
     const { slug } = useParams();
@@ -14,10 +15,13 @@ const DynamicPage = () => {
     const navigate = useNavigate();
     const [selectedMember, setSelectedMember] = useState(null);
     const [activeFeeTab, setActiveFeeTab] = useState('pay');
+    const [activeEventTab, setActiveEventTab] = useState('avensis');
 
     useEffect(() => {
         if (slug === 'online-fee') {
             setActiveFeeTab('pay');
+        } else if (slug === 'events') {
+            setActiveEventTab('avensis');
         }
     }, [slug]);
 
@@ -111,6 +115,8 @@ const DynamicPage = () => {
                         <div className="w-full lg:w-2/3 order-2 lg:order-1">
                             {slug === 'online-fee' ? (
                                 <FeePaymentPortal activeTab={activeFeeTab} setActiveTab={setActiveFeeTab} />
+                            ) : slug === 'events' ? (
+                                <EventsPortal activeTab={activeEventTab} setActiveTab={setActiveEventTab} />
                             ) : pageData.component ? (
                                 <pageData.component />
                             ) : (
@@ -146,28 +152,41 @@ const DynamicPage = () => {
                                             {pageData.bulletPoints.map((point, i) => {
                                                 const isLink = typeof point === 'object' && point.url;
                                                 const labelText = typeof point === 'object' ? point.label : point;
+                                                
                                                 const isActiveFeeTab = slug === 'online-fee' && (
                                                     (labelText.includes('Payment') && activeFeeTab === 'pay') ||
                                                     (labelText.includes('Receipt') && activeFeeTab === 'receipt') ||
                                                     (labelText.includes('Refund') && activeFeeTab === 'refund')
                                                 );
+                                                
+                                                const isActiveEventTab = slug === 'events' && (
+                                                    (labelText.includes('Avensis') && activeEventTab === 'avensis') ||
+                                                    (labelText.includes('Genesis') && activeEventTab === 'genesis') ||
+                                                    (labelText.includes('Sports') && activeEventTab === 'sports')
+                                                );
+
+                                                const isActive = isActiveFeeTab || isActiveEventTab;
 
                                                 return (
                                                     <li key={i} className="flex items-start text-slate-300 text-sm">
-                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-colors ${isActiveFeeTab ? 'text-accent' : 'text-slate-500'}`} />
+                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-colors ${isActive ? 'text-accent' : 'text-slate-500'}`} />
                                                         {isLink ? (
                                                             <Link to={point.url} className="hover:text-accent transition-colors">
                                                                 {point.label}
                                                             </Link>
                                                         ) : (
                                                             <span 
-                                                                className={`hover:text-accent transition-colors cursor-pointer w-full ${isActiveFeeTab ? 'text-accent font-bold font-sans' : ''}`}
+                                                                className={`hover:text-accent transition-colors cursor-pointer w-full ${isActive ? 'text-accent font-bold font-sans' : ''}`}
                                                                 dangerouslySetInnerHTML={{ __html: labelText }}
                                                                 onClick={() => {
                                                                     if (slug === 'online-fee') {
                                                                         if (labelText.includes('Payment')) setActiveFeeTab('pay');
                                                                         else if (labelText.includes('Receipt')) setActiveFeeTab('receipt');
                                                                         else if (labelText.includes('Refund')) setActiveFeeTab('refund');
+                                                                    } else if (slug === 'events') {
+                                                                        if (labelText.includes('Avensis')) setActiveEventTab('avensis');
+                                                                        else if (labelText.includes('Genesis')) setActiveEventTab('genesis');
+                                                                        else if (labelText.includes('Sports')) setActiveEventTab('sports');
                                                                     }
                                                                 }}
                                                             ></span>

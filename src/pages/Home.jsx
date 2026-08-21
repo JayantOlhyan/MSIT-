@@ -24,7 +24,7 @@ const Home = () => {
     const [lightboxImage, setLightboxImage] = useState('');
 
     const [testimonials] = useState(() => {
-        const stored = localStorage.getItem('msit_testimonials');
+        const stored = localStorage.getItem('msit_testimonials_v2');
         if (stored) return JSON.parse(stored);
         const defaults = [
             {
@@ -53,9 +53,45 @@ const Home = () => {
                 quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
                 company: "Apple",
                 image: "/ananya-iyer.webp"
+            },
+            {
+                id: 4,
+                name: "Prasanjeet Parasar",
+                year: "23",
+                major: "Computer Science & Engineering",
+                quote: "In the Stakeholder Round, candidates are assessed not just on technical skills but also on how well they understand the company and their own profiles. Resumes need to be polished and error-free, tailored to highlight experiences and skills most relevant to the role.",
+                company: "ION",
+                image: "/prasanjeet-parasar.webp"
+            },
+            {
+                id: 5,
+                name: "Kartikay Arya",
+                year: "23",
+                major: "Computer Science & Engineering (2nd Shift)",
+                quote: "Secured All India Rank 1 (AIR-1) in the SSC Navy examination upon graduating from MSIT. The discipline and support of the faculty helped me prepare for my career in the armed forces.",
+                company: "Indian Navy",
+                image: "/kartikay-arya.webp"
+            },
+            {
+                id: 6,
+                name: "Varun Bansal",
+                year: "19",
+                major: "Electronics & Communication Engineering",
+                quote: "MSIT is more than a college; it is a community that shapes your future. Sponsoring NCI-TIDE 2025 is my way of giving back and maintaining the enduring bond between mentors and alumni.",
+                company: "Elegance Spark Innovation",
+                image: "/varun-bansal.webp"
+            },
+            {
+                id: 7,
+                name: "Saransh Kapoor",
+                year: "25",
+                major: "Computer Science & Engineering",
+                quote: "Keep your answers short, crisp, and polite during interview rounds. A combination of humility, confidence, and clear communication can make a lasting impression on interviewers.",
+                company: "ION",
+                image: "/saransh-kapoor.webp"
             }
         ];
-        localStorage.setItem('msit_testimonials', JSON.stringify(defaults));
+        localStorage.setItem('msit_testimonials_v2', JSON.stringify(defaults));
         return defaults;
     });
 
@@ -201,14 +237,22 @@ const Home = () => {
     ];
 
     const [events] = useState(() => {
-        const storedEvents = localStorage.getItem('msit_events');
+        const storedEvents = localStorage.getItem('msit_events_v2');
         if (storedEvents) return JSON.parse(storedEvents);
         const defaultEvents = [
             { id: 1, label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
             { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
-            { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
+            { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" },
+            { id: 4, label: "STORY", title: "Grand Finale of SIH 2025 Concludes: MSIT Declared Winner in Ministry of AYUSH Category", date: "DEC 12, 2025", link: "#", color: "border-blue-600" },
+            { id: 5, label: "EVENT", title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", date: "NOV 19, 2026", link: "#", color: "border-emerald-500" },
+            { id: 6, label: "NEWS", title: "Department of CSE Receives Grant from Petronet LNG Ltd. for Center of Excellence", date: "AUG 15, 2025", link: "#", color: "border-purple-500" },
+            { id: 7, label: "EVENT", title: "MSIT Conducts National Conference NCI-TIDE 2025", date: "DEC 15, 2025", link: "#", color: "border-blue-600" },
+            { id: 8, label: "EVENT", title: "Placement Cell Conducts Placement Preparation Session with ION Alumni and Seniors", date: "AUG 30, 2024", link: "#", color: "border-emerald-500" },
+            { id: 9, label: "EVENT", title: "E-Cell MSIT Organizes Flagship E-Summit 2026", date: "MAR 26, 2026", link: "#", color: "border-purple-500" },
+            { id: 10, label: "EVENT", title: "MSC MSIT Organizes HackMSIT 1.0 Hackathon", date: "APR 10, 2026", link: "#", color: "border-blue-600" },
+            { id: 11, label: "STORY", title: "Team 'Courtroom Cartel' Secures First Prize in Smart India Hackathon 2023", date: "DEC 20, 2023", link: "#", color: "border-emerald-500" }
         ];
-        localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
+        localStorage.setItem('msit_events_v2', JSON.stringify(defaultEvents));
         return defaultEvents;
     });
 
