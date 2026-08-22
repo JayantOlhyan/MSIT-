@@ -65,13 +65,24 @@ const DynamicPage = () => {
     if (slug === 'newsletters-magazines') {
         if (!pageData) return <NotFound />;
         return (
-            <main className="min-h-screen bg-white pt-28 sm:pt-36 lg:pt-40">
+            <main className="min-h-screen bg-white">
                 <SEO 
                     title={pageData.title} 
                     description={pageData.seo_description || pageData.subtitle} 
                     canonicalPath={`/${slug}`} 
                 />
-                <NewslettersMagazines />
+                <PageHero 
+                    title={pageData.title.split(' ').slice(0, -1).join(' ')}
+                    accentTitle={pageData.title.split(' ').pop()}
+                    description={pageData.subtitle}
+                    breadcrumbs={[
+                        { label: pageData.category || 'Student Life' },
+                        { label: pageData.title }
+                    ]}
+                />
+                <section className="bg-slate-50 border-b border-slate-100">
+                    <NewslettersMagazines />
+                </section>
             </main>
         );
     }

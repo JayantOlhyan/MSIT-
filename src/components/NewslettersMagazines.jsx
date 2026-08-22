@@ -244,53 +244,7 @@ const NewslettersMagazines = () => {
 
     return (
         <div className="w-full text-slate-800">
-            {/* Breadcrumb Section */}
-            <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500 border-b border-slate-100 select-none">
-                <a href="/" className="hover:text-blue-600 transition-colors">Home</a>
-                <ChevronRight className="w-3.5 h-3.5" />
-                <span className="text-slate-400">Student Life</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-                <span className="text-slate-900 font-bold">Newsletters & Magazines</span>
-            </nav>
-
-            {/* Custom Premium Hero Section */}
-            <section className="bg-slate-50 border-b border-slate-100 py-16 px-6 relative overflow-hidden select-none">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-                    <div className="space-y-4 max-w-xl text-center md:text-left">
-                        <span className="px-3 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-black uppercase tracking-widest rounded-full">
-                            Campus Publications
-                        </span>
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-none">
-                            Newsletters & Magazines
-                        </h1>
-                        <p className="text-sm sm:text-base text-slate-500 font-light leading-relaxed">
-                            Stay connected with the latest news, opportunities, achievements, events and publications from across MSIT. Subscribe to what interests you.
-                        </p>
-                    </div>
-
-                    {/* Creative SVG Illustration */}
-                    <div className="relative w-64 h-48 flex justify-center items-center shrink-0">
-                        <svg className="w-full h-full text-blue-600" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            {/* Document Stack Background */}
-                            <rect x="50" y="30" width="100" height="90" rx="6" fill="#1e3a8a" opacity="0.1" transform="rotate(-6 100 75)" />
-                            <rect x="50" y="30" width="100" height="90" rx="6" fill="#1e3a8a" opacity="0.25" transform="rotate(-3 100 75)" />
-                            
-                            {/* Main Document (Envelope) */}
-                            <rect x="50" y="30" width="100" height="90" rx="6" fill="#ffffff" stroke="#1e3a8a" strokeWidth="3" />
-                            <path d="M50 40L100 75L150 40" stroke="#1e3a8a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                            
-                            {/* Inner Letter Graphic */}
-                            <line x1="65" y1="90" x2="115" y2="90" stroke="#94a3b8" strokeWidth="3" strokeLinecap="round" />
-                            <line x1="65" y1="102" x2="135" y2="102" stroke="#94a3b8" strokeWidth="3" strokeLinecap="round" />
-                            <rect x="123" y="85" width="12" height="12" rx="2" fill="#3b82f6" />
-                        </svg>
-                        {/* Bell Badge */}
-                        <div className="absolute top-6 right-6 w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-bounce">
-                            <Bell className="w-5 h-5" />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Main Interactive Workspace Split */}
 
             {/* Main Interactive Workspace Split */}
             <section className="max-w-7xl mx-auto px-6 py-12">
