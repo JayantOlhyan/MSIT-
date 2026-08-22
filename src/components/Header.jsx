@@ -127,6 +127,7 @@ const Header = () => {
         life: [
             { name: "Student Societies", url: "/society" },
             { name: "Events & Festivals", url: "/events" },
+            { name: "Newsletters & Magazines", url: "/newsletters-magazines" },
             { name: "Anti-Ragging", url: "/antiragging" },
             { name: "Internal Complaint Committee", url: "/posh" },
             { name: "Disaster Management", url: "/disaster" },

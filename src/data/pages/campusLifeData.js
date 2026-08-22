@@ -339,5 +339,14 @@ export const campusLifeData = {
             { label: "Dress Code", value: "Professional" }
         ],
         bulletPoints: ["Campus Rules", "Sanctions & Warnings", "Attendance Policy"]
+    },
+    "newsletters-magazines": {
+        title: "Newsletters & Magazines",
+        subtitle: "Stay connected with the latest news, opportunities, achievements, events and publications from across MSIT. Subscribe to what interests you.",
+        seo_description: "Access official newsletters, research journals, bulletins, and magazines of Maharaja Surajmal Institute of Technology. Subscribe to updates and download issues.",
+        category: "Student Life",
+        heroImage: "/campus-hero.webp",
+        heroImageAlt: "MSIT Newsletters & Magazines",
+        content: ""
     }
 };

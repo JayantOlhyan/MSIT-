@@ -8,6 +8,7 @@ import NotFound from './NotFound';
 import { facultyMembers } from '../data/facultyData';
 import FeePaymentPortal from '../components/FeePaymentPortal';
 import EventsPortal from '../components/EventsPortal';
+import NewslettersMagazines from '../components/NewslettersMagazines';
 
 const DynamicPage = () => {
     const { slug } = useParams();
@@ -60,6 +61,20 @@ const DynamicPage = () => {
             }
         }
     };
+
+    if (slug === 'newsletters-magazines') {
+        if (!pageData) return <NotFound />;
+        return (
+            <main className="min-h-screen bg-white pt-28 sm:pt-36 lg:pt-40">
+                <SEO 
+                    title={pageData.title} 
+                    description={pageData.seo_description || pageData.subtitle} 
+                    canonicalPath={`/${slug}`} 
+                />
+                <NewslettersMagazines />
+            </main>
+        );
+    }
 
     if (!pageData) {
         return <NotFound />;
