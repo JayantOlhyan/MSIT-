@@ -116,7 +116,6 @@ const DynamicPage = () => {
                 accentTitle={pageData.title.split(' ').pop()}
                 description={pageData.subtitle}
                 breadcrumbs={[
-                    { label: pageData.category || 'MSIT' },
                     { 
                         label: pageData.title === 'Applied Sciences' ? (
                             <span>
