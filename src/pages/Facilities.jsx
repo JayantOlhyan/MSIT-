@@ -113,7 +113,7 @@ const Facilities = () => {
                                 <h3 className="text-3xl font-extrabold text-slate-900 leading-tight">Central Library & Information Center</h3>
                             </div>
                             <p className="text-slate-600 leading-relaxed font-light text-lg">
-                                Powered by the industry-standard <strong>Koha online OPAC catalog</strong>, MSIT Central Library acts as an intellectual nerve center. The facility manages a massive inventory of over 50,000+ volumes, 100+ national and international printed journals, and provides round-the-clock digital availability to students.
+                                Powered by the industry-standard <strong>Koha online OPAC catalog</strong>, MSIT Central Library acts as an intellectual nerve center. The facility manages a massive inventory of over 50,000+ volumes, 100+ national and international printed journals, and provides round-the-clock digital availability to students. It features fully air-conditioned quiet reading halls, dedicated collaboration zones for group study, and high-speed Wi-Fi access throughout the premises.
                             </p>
                             
                             <div className="space-y-4">
@@ -162,7 +162,7 @@ const Facilities = () => {
                             </div>
                         </div>
                         <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-card">
-                            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=1000" alt="Modern MSIT Central Library showing the spacious reading area and technical book collection" className="w-full h-[clamp(300px,50vh,500px)] object-cover" />
+                            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=1000" alt="Modern MSIT Central Library showing the spacious reading area and technical book collection" className="w-full h-[clamp(300px,50vh,500px)] object-cover" />
                         </div>
                     </div>
                 )}
