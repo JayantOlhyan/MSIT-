@@ -32,7 +32,7 @@ const Footer = () => {
                             <span className="text-white font-bold tracking-tight text-lg">Help us improve the MSIT experience.</span>
                         </div>
                         <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSdy7gs1NPTGYN_ryfaL9HLq1lqdnQWIKEQZQTCaLg5jltxP7A/viewform?usp=publish-editor"
+                            href="https://wds-bug-hunt.netlify.app/bug-hunt"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-card transition-all active:scale-95 whitespace-nowrap"
