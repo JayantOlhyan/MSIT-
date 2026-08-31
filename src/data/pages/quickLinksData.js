@@ -363,5 +363,151 @@ export const quickLinksData = {
             { label: "Update Frequency", value: "Monthly" }
         ],
         bulletPoints: ["IP University Ordinance 11", "Medical Certificate Policy", "Official Duty Leaves (OD)", "Detained List Penalties"]
+    },
+    "society-ndli": {
+        title: "MSIT NDLI Club",
+        subtitle: "Strength through Collaboration",
+        seo_description: "Learn about the MSIT NDLI Club, promoting digital literacy, lifelong learning, and knowledge sharing through the National Digital Library of India.",
+        category: "Student Societies",
+        heroImage: "/campus-hero.webp",
+        heroImageAlt: "MSIT NDLI Club events and resources",
+        content: `
+            <div class="space-y-16">
+                <!-- Introduction -->
+                <section>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        The National Digital Library of India (NDLI) is a digital initiative sponsored by the Ministry of Education, Government of India, and developed by IIT Kharagpur. The <strong>MSIT NDLI Club</strong> was established at Maharaja Surajmal Institute of Technology in April 2021 to promote digital learning and knowledge sharing.
+                    </p>
+                </section>
+
+                <!-- About the Society -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-8">About the Society</h3>
+                    <div class="prose prose-slate max-w-none text-sm text-slate-600 leading-relaxed space-y-4">
+                        <p>NDLI and NDLI Club are initiatives under the Ministry of Education, Government of India, through the National Mission on Education through Information and Communication Technology (NMEICT).</p>
+                        <p>MSIT is a member of both NDLI and NDLI Club. NDLI provides access to extensive digital learning resources, while the NDLI Club promotes their effective utilization through competitions, training sessions, workshops, and other learning activities.</p>
+                        <p>Students can participate in NDLI Club activities and generate event participation certificates through the NDLI Club platform.</p>
+                    </div>
+                </section>
+
+                <!-- Mission & Vision -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-8">Mission & Vision</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-emerald-600">🎯</span> Mission
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">To promote digital literacy, lifelong learning, and knowledge sharing by providing students easy access to NDLI resources and opportunities for learning beyond the regular curriculum. The Club aims to foster academic excellence, research, innovation, creativity, and professional skills.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-blue-600">🔭</span> Vision
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">To empower students with digital skills and easy access to learning and research resources. It serves as a central platform for registering and managing Institute events, promoting systematic event planning, documentation, transparency, and coordination.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Event Registration Process -->
+                <section class="p-8 bg-blue-50/50 border border-blue-100 rounded-3xl">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                        <span>📝</span> Event Registration Process
+                    </h3>
+                    <p class="text-slate-700 text-sm mb-6 leading-relaxed">
+                        All students, student societies, clubs, and event coordinators are hereby informed that <strong>all events/activities organized at MSIT are required to be registered through the MSIT NDLI Club</strong> for proper documentation, coordination, and creation of a digital repository.
+                    </p>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900 mb-4">Steps for Event Coordinators:</h4>
+                        <ol class="list-decimal list-inside space-y-3 text-sm text-slate-600 leading-relaxed">
+                            <li>Fill and submit the MSIT Event Application Form.</li>
+                            <li>Get it initially signed by the Director (MSIT).</li>
+                            <li>Submit the duly filled form to the concerned MSIT NDLI Club authorities (President & Vice President) for further processing.</li>
+                            <li>Provide the required event details (poster, date, time, venue, event description).</li>
+                            <li>Ensure that the event is registered <em>before</em> its commencement.</li>
+                            <li>Ensure to have a minimum of <strong>100 participants</strong> registered via the MSIT NDLI club.</li>
+                            <li>Finally, get it signed by the Director MSIT after the completion of the event along with the event report.</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Activities & Membership -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-8">Activities & Offerings</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3">Major Activities</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-slate-600 leading-relaxed">
+                                <li>Organizing workshops, seminars, and training programmes.</li>
+                                <li>Conducting physical and virtual events through the NDLI Club platform.</li>
+                                <li>Facilitating registration, documentation, and uploading of Institute events.</li>
+                                <li>Creating a digital repository of MSIT events.</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3">What Students Gain</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-slate-600 leading-relaxed">
+                                <li>Access to NDLI Digital Resources.</li>
+                                <li>Learning and skill development through activities.</li>
+                                <li>Participation Certificates for NDLI Club events.</li>
+                                <li>Academic and professional growth beyond the curriculum.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Achievements -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-purple-600 pl-4 mb-8">Achievements & Recognition</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-purple-50 border border-purple-100 rounded-xl flex items-start gap-3">
+                            <span class="text-purple-600 text-xl mt-0.5">🏆</span>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">NDLI Club Excellence Award (Nov 2025)</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed mt-1">Selected among the Top 11 Performing NDLI Clubs in India for 2024–2025. Received at the 4th International Symposium on Knowledge Engineering for Digital Library Design (KEDLD-2025) by IIT Kharagpur.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-purple-50 border border-purple-100 rounded-xl flex items-start gap-3">
+                            <span class="text-purple-600 text-xl mt-0.5">🏅</span>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Certificate of Appreciation (Aug 2023)</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed mt-1">Adjudged as One of the Best Performing NDLI Clubs in Delhi, India by IIT Kharagpur, Ministry of Education.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Leadership -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-slate-900 pl-4 mb-8">Contact & Leadership</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center p-4">
+                            <div class="text-sm font-bold text-slate-900">Dr. Reetu Verma & Dr. Nidhi Gupta</div>
+                            <div class="text-xs text-slate-500">Faculty Coordinators</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-sm font-bold text-slate-900">Ms. Disha</div>
+                            <div class="text-xs text-slate-500">President (Student)</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-xs text-slate-500 mb-1">Contact Details</div>
+                            <div class="text-sm font-bold text-blue-600 truncate">ndliclub@msit.in</div>
+                            <div class="text-xs font-bold text-slate-700 mt-1">9971079829</div>
+                            <div class="text-xs text-slate-500 mt-2">Maharaja Surajmal Central Library</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        `,
+        stats: [
+            { label: "Established", value: "2021" },
+            { label: "India Rank (2025)", value: "Top 11" }
+        ],
+        bulletPoints: [
+            "Event Registration Portal",
+            { label: "NDLI Resources", url: "https://ndl.iitkgp.ac.in/" },
+            "Participation Certificates",
+            "Skill Development Workshops"
+        ]
     }
 };
