@@ -18,6 +18,7 @@ const staticPages = [
     { title: "Student Societies & Clubs", url: "/society", keywords: "societies, clubs, techsoc, iosd, cultural, extracurricular, student life, music, dance, drama" },
     { title: "IEEE Student Branch", url: "/society-ieee", keywords: "ieee, society, branch, research, networking, student chapter" },
     { title: "NDLI Club", url: "/society-ndli", keywords: "ndli, club, library, digital library, event registration, national digital library, society, student chapter" },
+    { title: "GeekRoom MSIT", url: "/society-geekroom", keywords: "geekroom, geek room, hackathon, coding, tech community, web development, app development, ai, ml, society, techsoc" },
     { title: "Research & Publications", url: "/research", keywords: "research, journals, papers, patents, projects, publications, scopus, ieee" },
     { title: "Events & News", url: "/events", keywords: "events, news, updates, festivals, notices, hackathons, workshops" },
     { title: "Alumni Network", url: "/alumni-network", keywords: "alumni, meet, network, seniors, graduation, passout" },

@@ -36,10 +36,11 @@ export const campusLifeData = {
                             <h4 class="font-bold text-slate-900 mb-2">NISP & Startup Cell</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Fostering an ecosystem for student-led startups, innovation policy, and entrepreneurial mentorship.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
-                            <h4 class="font-bold text-slate-900 mb-2">Geek Room</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">A collaborative community for modern web development, open-source contribution, and tech trends.</p>
-                        </div>
+                        <a href="/society-geekroom" class="block p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow group">
+                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">GeekRoom MSIT</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">The founding chapter of one of India's largest student-led tech communities, bringing together developers through hackathons and workshops.</p>
+                            <div class="mt-4 text-xs font-semibold text-blue-600 flex items-center group-hover:translate-x-1 transition-transform">Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7"></path></svg></div>
+                        </a>
                         <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">TechSoc</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">MSIT's amateur technical society serving as an umbrella for various engineering projects and technical efforts.</p>

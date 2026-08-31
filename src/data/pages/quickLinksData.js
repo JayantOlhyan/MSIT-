@@ -509,5 +509,207 @@ export const quickLinksData = {
             "Participation Certificates",
             "Skill Development Workshops"
         ]
+    },
+    "society-geekroom": {
+        title: "GeekRoom MSIT",
+        subtitle: "Where Geeks Belong",
+        seo_description: "Geek Room MSIT is the founding chapter of one of India's largest student-led tech communities. Join us for hackathons, coding competitions, and workshops.",
+        category: "Technical Societies",
+        heroImage: "/campus-hero.webp",
+        heroImageAlt: "Geek Room MSIT hackathons and coding events",
+        content: `
+            <div class="space-y-16">
+                <!-- Introduction -->
+                <section>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Geek Room MSIT is the founding chapter of <strong>Geek Room</strong> — one of India's largest student-led tech communities — bringing together developers, designers, and innovators at Maharaja Surajmal Institute of Technology through hackathons, workshops, and hands-on tech events.
+                    </p>
+                </section>
+
+                <!-- About the Society -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-8">The Founding Legacy</h3>
+                    <div class="prose prose-slate max-w-none text-sm text-slate-600 leading-relaxed space-y-4">
+                        <p>Geek Room began in 2023 right here at MSIT, as a small WhatsApp group of like-minded tech enthusiasts started by three students — Manas, Arnav, and Pratham. What started as an informal circle of people who just wanted to build, learn, and geek out together has since grown into a nationwide community of over 50,000 members, with chapters across multiple colleges in India.</p>
+                        <p>As the original chapter, Geek Room MSIT carries that founding legacy forward on campus — organizing hackathons, coding competitions, tech talks, workshops, and networking sessions that give students real, hands-on exposure to the tech industry.</p>
+                        <p>The society is a space for anyone curious about technology, regardless of year or branch, to learn by doing, collaborate on projects, and build a portfolio and network that extends well beyond college.</p>
+                    </div>
+                </section>
+
+                <!-- Mission & Vision -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-8">Mission & Vision</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-emerald-600">🎯</span> Mission
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">To connect like-minded people in tech and give every student at MSIT a space to learn, build, and grow together — through hands-on events, real projects, and a community that has each other's back.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                <span class="text-blue-600">🔭</span> Vision
+                            </h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">To be the launchpad where every MSIT student's tech journey begins — carrying forward Geek Room's founding legacy of building India's largest, most impactful student tech community, one hackathon and one idea at a time.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recruitment & Membership -->
+                <section class="p-8 bg-blue-50/50 border border-blue-100 rounded-3xl">
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-4">
+                                <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                                Recruitment Open
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Think. Build. Create. Lead.</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                We're looking for students who are curious, passionate, and willing to learn, build, and contribute. Whether you're into DSA, Development, Emerging Technologies, Marketing & PR, or creative and interdisciplinary work, there's a place for you here.
+                            </p>
+                            <p class="text-sm text-slate-600 leading-relaxed font-semibold">
+                                No prior experience is required. What matters is your willingness to learn, take initiative, and contribute to the community. Open to First, Second, and Third-year students!
+                            </p>
+                        </div>
+                        <div class="w-full md:w-auto shrink-0 pt-4 md:pt-0 md:pl-8 md:border-l border-blue-100">
+                            <a href="https://forms.gle/4XZTPfbjwJhNuhzq9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activities & What You Learn -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-8">What We Do</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3">Major Activities</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-slate-600 leading-relaxed">
+                                <li>Technical workshops on AI/ML, Web, and App Dev.</li>
+                                <li>Career-guidance sessions mapping tech career tracks.</li>
+                                <li>High-quality hackathons and coding competitions.</li>
+                                <li>Networking sessions with seniors, alumni, and industry speakers.</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-card">
+                            <h4 class="font-bold text-slate-900 mb-3">What You Gain</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-slate-600 leading-relaxed">
+                                <li>Practical, project-based exposure to in-demand skills.</li>
+                                <li>Hackathon experience: building and pitching a project.</li>
+                                <li>Professional network spanning MSIT alumni and industry mentors.</li>
+                                <li>Clarity on career direction through tailored guidance sessions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Events & Achievements -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-purple-600 pl-4 mb-8">Events & Highlights</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-purple-50 border border-purple-100 rounded-xl">
+                            <h4 class="font-bold text-slate-900 text-sm mb-2 text-purple-700">Upcoming: GEEKROOM MEETUP</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">Stay tuned on our social media for the exact date, venue, and registration links for our next big meetup!</p>
+                        </div>
+                        
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col gap-3">
+                            <h4 class="font-bold text-slate-900 text-sm">Major Past Events</h4>
+                            <div class="space-y-3">
+                                <div>
+                                    <h5 class="text-xs font-bold text-slate-800">Geek Insights (April 2024)</h5>
+                                    <p class="text-xs text-slate-600 leading-relaxed">A career-guidance event at MSIT walking B.Tech students through tech career tracks: web development, app development, AI/ML, open-source, and DSA. Drew ~120 participants.</p>
+                                </div>
+                                <div>
+                                    <h5 class="text-xs font-bold text-slate-800">AI Basics Seminar for IT (Sept 2024)</h5>
+                                    <p class="text-xs text-slate-600 leading-relaxed">Run jointly with MSIT's IT Department, covering AI/ML/deep learning fundamentals and AI career pathways. Drew ~140 participants.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQs -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-orange-500 pl-4 mb-8">Frequently Asked Questions</h3>
+                    <div class="space-y-4">
+                        <details class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-slate-900">
+                                <span>What is Geek Room MSIT?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <p class="text-slate-600 mt-3 group-open:animate-fadeIn p-4 pt-0 text-sm leading-relaxed">
+                                The founding chapter of Geek Room, one of India's largest student-led tech communities, started at MSIT in 2023. It brings students together through hands-on events in coding, AI, and web/app development, and hackathons.
+                            </p>
+                        </details>
+                        <details class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-slate-900">
+                                <span>Who can join? Do I need to know how to code?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <p class="text-slate-600 mt-3 group-open:animate-fadeIn p-4 pt-0 text-sm leading-relaxed">
+                                Any MSIT student, from any year or branch can join. No prior coding experience needed! Several flagship events are built specifically to help students discover a tech track and build fundamentals from zero.
+                            </p>
+                        </details>
+                        <details class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-slate-900">
+                                <span>Is Geek Room MSIT connected to the larger Geek Room community?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <p class="text-slate-600 mt-3 group-open:animate-fadeIn p-4 pt-0 text-sm leading-relaxed">
+                                Yes. As the founding chapter, MSIT members get direct access to Geek Room's national network of 50,000+ members and its chapters at other colleges.
+                            </p>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Leadership & Contact -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-slate-900 pl-4 mb-8">Contact, Leadership & Alumni</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                        <div class="text-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-sm font-bold text-slate-900">Prof. Rinki Dwivedi</div>
+                            <div class="text-xs text-slate-500">Faculty Coordinator</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-sm font-bold text-slate-900">Jagriti Rai</div>
+                            <div class="text-xs text-slate-500">President (Student)</div>
+                        </div>
+                        <div class="text-center p-4 bg-blue-50 rounded-xl border border-blue-100 lg:col-span-2">
+                            <div class="text-xs text-slate-500 mb-1">Contact Us</div>
+                            <div class="text-sm font-bold text-blue-600">team@geekroom.in</div>
+                            <div class="text-xs font-bold text-slate-700 mt-1">9518844615</div>
+                            <div class="text-xs font-bold text-slate-700 mt-1"><a href="https://geekroom.co.in" target="_blank" class="hover:underline">geekroom.co.in</a></div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 rounded-xl border border-slate-100 p-6">
+                        <h4 class="font-bold text-slate-900 mb-4">Founders & Notable Alumni</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://linkedin.com/in/themanasai" target="_blank" class="inline-flex items-center px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-700 hover:border-blue-400 hover:text-blue-600 transition-colors">Manas Chopra</a>
+                            <a href="https://www.linkedin.com/in/akshay-kumar-sharma-37aa55256/" target="_blank" class="inline-flex items-center px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-700 hover:border-blue-400 hover:text-blue-600 transition-colors">Akshay Kumar Sharma</a>
+                            <a href="https://www.linkedin.com/in/pratham1908" target="_blank" class="inline-flex items-center px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-700 hover:border-blue-400 hover:text-blue-600 transition-colors">Pratham Batra</a>
+                            <a href="https://www.linkedin.com/in/arnav-gupta-437a66256" target="_blank" class="inline-flex items-center px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-700 hover:border-blue-400 hover:text-blue-600 transition-colors">Arnav Gupta</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        `,
+        stats: [
+            { label: "Established", value: "2023" },
+            { label: "Network Members", value: "50,000+" }
+        ],
+        bulletPoints: [
+            "Founding Chapter",
+            "Hackathons & Competitions",
+            { label: "Official Website", url: "https://geekroom.co.in" },
+            { label: "Instagram", url: "https://www.instagram.com/geekroom_msit/" }
+        ]
     }
 };
