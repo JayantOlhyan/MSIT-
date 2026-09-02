@@ -85,8 +85,12 @@ const SocietiesHubView = () => {
                         >
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between">
-                                    <div className="w-14 h-14 rounded-2xl bg-slate-900 text-white font-mono font-bold text-xl flex items-center justify-center border border-slate-800 shadow-md">
-                                        {society.logoSymbol}
+                                    <div className={`w-14 h-14 rounded-2xl text-xl flex items-center justify-center overflow-hidden ${society.logo ? 'bg-transparent' : 'bg-slate-900 text-white font-mono font-bold border border-slate-800 shadow-md'}`}>
+                                        {society.logo ? (
+                                            <img src={society.logo} alt={`${society.name} Logo`} className="w-full h-full object-contain" />
+                                        ) : (
+                                            society.logoSymbol
+                                        )}
                                     </div>
                                     <span className="px-3 py-1 bg-purple-50 text-purple-700 font-bold rounded-full text-xs border border-purple-100 uppercase tracking-wider">
                                         {society.category}
@@ -167,8 +171,12 @@ const SocietiesHubView = () => {
                         >
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between">
-                                    <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 font-mono font-black text-sm flex items-center justify-center border border-slate-200 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                                        {item.logoSymbol}
+                                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors overflow-hidden ${item.logo ? 'bg-transparent' : 'bg-slate-100 text-slate-800 font-mono font-black text-sm border border-slate-200 group-hover:bg-purple-600 group-hover:text-white'}`}>
+                                        {item.logo ? (
+                                            <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
+                                        ) : (
+                                            item.logoSymbol
+                                        )}
                                     </div>
                                     <span className="px-2.5 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded-md">
                                         {item.category}
