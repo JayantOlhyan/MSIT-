@@ -9,6 +9,9 @@ import { facultyMembers } from '../data/facultyData';
 import FeePaymentPortal from '../components/FeePaymentPortal';
 import EventsPortal from '../components/EventsPortal';
 import NewslettersMagazines from '../components/NewslettersMagazines';
+import SocietyDetailView from '../components/SocietyDetailView';
+import SocietiesHubView from '../components/SocietiesHubView';
+import { societiesData } from '../data/societiesData';
 
 const DynamicPage = () => {
     const { slug } = useParams();
@@ -61,6 +64,40 @@ const DynamicPage = () => {
             }
         }
     };
+
+    // Dedicated Full-Featured View for Individual Society Pages (e.g. GeekRoom, IEEE, NDLI)
+    if (societiesData[slug]) {
+        return <SocietyDetailView society={societiesData[slug]} />;
+    }
+
+    // Dedicated Redesigned View for the Student Societies Hub Directory (/society)
+    if (slug === 'society') {
+        return (
+            <main className="min-h-screen bg-slate-50">
+                <SEO 
+                    title="Student Societies & Chapters" 
+                    description="Explore 20+ vibrant technical, cultural, and academic student societies at Maharaja Surajmal Institute of Technology." 
+                    canonicalPath="/society" 
+                />
+                <PageHero 
+                    title="Student"
+                    accentTitle="Societies & Chapters"
+                    description="Technical innovation, performing arts, research groups, and community impact. Find your room and collaborate with 50,000+ peers."
+                    breadcrumbs={[
+                        { label: 'Campus Life' },
+                        { label: 'Student Societies' }
+                    ]}
+                    heroImage="/campus-hero.webp"
+                    heroImageAlt="Vibrant MSIT student societies and tech community"
+                />
+                <section className="py-16 sm:py-24 px-4 sm:px-8">
+                    <div className="max-w-7xl mx-auto">
+                        <SocietiesHubView />
+                    </div>
+                </section>
+            </main>
+        );
+    }
 
     if (slug === 'newsletters-magazines') {
         if (!pageData) return <NotFound />;
