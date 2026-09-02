@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Calendar, MapPin, Mail, Phone, ExternalLink, ArrowRight,
-    ChevronRight, ChevronLeft, Award, Trophy, Users, Sparkles,
+    ChevronRight, ChevronLeft, ChevronDown, Award, Trophy, Users, Sparkles,
     Code2, GraduationCap, Layers, Share2, Cpu, Medal, FolderGit2,
     Github, FileText, BookOpen, FileCode, Presentation, HelpCircle,
     ShieldCheck, CheckCircle2, Globe, Heart, MessageSquare, ArrowUpRight,
@@ -40,6 +40,7 @@ const SocietyDetailView = ({ society }) => {
     const [activeSection, setActiveSection] = useState('about');
     const [galleryTab, setGalleryTab] = useState('all');
     const [lightboxImage, setLightboxImage] = useState(null);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     // Navigation sections matching reference image left menu
     const navItems = [
@@ -149,14 +150,19 @@ const SocietyDetailView = ({ society }) => {
                         {/* Left: Logo Emblem & Main Info */}
                         <div className="lg:col-span-8 flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
                             {/* Monogram / Logo Box */}
-                            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-slate-900 border-2 border-slate-800 p-4 flex flex-col items-center justify-center shrink-0 shadow-2xl relative group">
-                                <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 tracking-wider font-mono">
-                                    {society.logoSymbol || "</>"}
-                                </div>
-                                <span className="text-xs font-black tracking-widest text-slate-300 mt-2">
-                                    {society.logoText || "MSI(T)"}
-                                </span>
-                                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-slate-900 animate-pulse"></div>
+                            <div className={`w-28 h-28 sm:w-36 sm:h-36 rounded-2xl flex flex-col items-center justify-center shrink-0 shadow-2xl relative group overflow-hidden ${society.logo ? 'bg-transparent' : 'bg-slate-900 border-2 border-slate-800 p-2 sm:p-4'}`}>
+                                {society.logo ? (
+                                    <img src={society.logo} alt={`${society.name} Logo`} className="w-full h-full object-contain rounded-xl" />
+                                ) : (
+                                    <>
+                                        <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 tracking-wider font-mono">
+                                            {society.logoSymbol || "</>"}
+                                        </div>
+                                        <span className="text-xs font-black tracking-widest text-slate-300 mt-2">
+                                            {society.logoText || "MSI(T)"}
+                                        </span>
+                                    </>
+                                )}
                             </div>
 
                             {/* Title, Badges & Actions */}
@@ -337,33 +343,53 @@ const SocietyDetailView = ({ society }) => {
                     {/* =========================================================
                         LEFT SIDEBAR: SECTION NAVIGATOR & PROMO CTA
                        ========================================================= */}
-                    <aside className="lg:col-span-3 sticky top-40 space-y-6">
+                    <aside className="lg:col-span-3 sticky top-40 z-30 lg:space-y-6">
                         
                         {/* Navigation Card */}
-                        <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-3 overflow-hidden">
-                            <div className="text-[11px] font-black uppercase tracking-wider text-slate-400 px-3 py-2">
+                        <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-3 overflow-hidden mb-6 lg:mb-0">
+                            {/* Mobile Toggle Button */}
+                            <button 
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                className="w-full flex items-center justify-between lg:hidden px-3 py-2 text-[11px] font-black uppercase tracking-wider text-slate-700"
+                            >
+                                <span>Jump to Section</span>
+                                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {/* Desktop Title (Hidden on Mobile) */}
+                            <div className="hidden lg:block text-[11px] font-black uppercase tracking-wider text-slate-400 px-3 py-2">
                                 Jump to Section
                             </div>
-                            <nav className="space-y-1">
-                                {navItems.map((item) => {
-                                    const IconComponent = item.icon;
-                                    const isActive = activeSection === item.id;
-                                    return (
-                                        <button
-                                            key={item.id}
-                                            onClick={() => scrollToSection(item.id)}
-                                            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all text-left cursor-pointer ${
-                                                isActive 
-                                                    ? 'bg-purple-50 text-purple-700 font-bold border-l-4 border-purple-600 shadow-sm' 
-                                                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-                                            }`}
-                                        >
-                                            <IconComponent className={`w-4 h-4 shrink-0 ${isActive ? 'text-purple-600' : 'text-slate-400'}`} />
-                                            <span>{item.label}</span>
-                                        </button>
-                                    );
-                                })}
-                            </nav>
+
+                            <div className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out lg:grid-rows-[1fr] lg:opacity-100 ${isMobileMenuOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                                <div className="overflow-hidden">
+                                    <div className="pt-2 mt-2 border-t border-slate-100 lg:border-none lg:mt-0 lg:pt-0">
+                                        <nav className="space-y-1">
+                                            {navItems.map((item) => {
+                                                const IconComponent = item.icon;
+                                                const isActive = activeSection === item.id;
+                                                return (
+                                                    <button
+                                                        key={item.id}
+                                                        onClick={() => {
+                                                            scrollToSection(item.id);
+                                                            setIsMobileMenuOpen(false); // Auto close on mobile
+                                                        }}
+                                                        className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all text-left cursor-pointer ${
+                                                            isActive 
+                                                                ? 'bg-purple-50 text-purple-700 font-bold border-l-4 border-purple-600 shadow-sm' 
+                                                                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                                        }`}
+                                                    >
+                                                        <IconComponent className={`w-4 h-4 shrink-0 ${isActive ? 'text-purple-600' : 'text-slate-400'}`} />
+                                                        <span>{item.label}</span>
+                                                    </button>
+                                                );
+                                            })}
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Sticky Join CTA Card (Matches reference bottom left card) */}
