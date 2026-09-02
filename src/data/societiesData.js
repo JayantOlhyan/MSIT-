@@ -22,6 +22,7 @@ export const societiesData = {
         joinUrl: "https://forms.gle/4XZTPfbjwJhNuhzq9",
         logoText: "MSI(T)",
         logoSymbol: "</>",
+        logo: "/geekroom-logo.jpg",
         socials: {
             instagram: "https://www.instagram.com/geekroom_msit/",
             linkedin: "https://www.linkedin.com/company/geekroommsit/",
@@ -509,6 +510,7 @@ export const allSocietiesList = [
         link: "/society-geekroom",
         badgeColor: "purple",
         logoSymbol: "</>",
+        logo: "/geekroom-logo.jpg",
         featured: true
     },
     {
