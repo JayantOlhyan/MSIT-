@@ -258,7 +258,7 @@ export const facultyMembers = [
         googleScholar: "https://scholar.google.com/citations?view_op=search_authors&mauthors=Prem%20Vrat",
         researchGate: "https://www.researchgate.net/search.Search.html?type=researcher&query=Prem%20Vrat",
         otherWebsites: [{"label": "Personal Webpage", "url": "https://msit.in/faculty/gb-vrat", "type": "website"}, {"label": "Google Scholar", "url": "https://scholar.google.com/citations?view_op=search_authors&mauthors=Prem%20Vrat", "type": "scholar"}, {"label": "ResearchGate", "url": "https://www.researchgate.net/search.Search.html?type=researcher&query=Prem%20Vrat", "type": "research"}, {"label": "LinkedIn Profile", "url": "https://www.linkedin.com/in/prem-vrat", "type": "linkedin"}],
-        img: "/faculty/staff-avatar.webp",
+        img: "/faculty/prem-vrat.webp",
         qual: "Ph.D. (IIT Delhi), Former Director IIT Roorkee",
         experience: "45+",
         publications: "300+",
