@@ -4,6 +4,7 @@ import Footer from './Footer';
 import BackToTop from './BackToTop';
 import { Outlet, useLocation } from 'react-router-dom';
 import OpeningAnimation from './OpeningAnimation';
+import AccessibilityModal from './AccessibilityModal';
 
 const Layout = () => {
     const { pathname } = useLocation();
@@ -56,7 +57,8 @@ const Layout = () => {
             </main>
             <Footer />
             <BackToTop />
-            </div>
+            <AccessibilityModal />
+        </div>
     );
 };
 

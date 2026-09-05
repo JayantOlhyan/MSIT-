@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import { AccessibilityProvider } from './context/AccessibilityContext';
 import Spinner from './components/Spinner';
 
 // Lazy load pages
@@ -24,10 +25,10 @@ const VirtualTour = lazy(() => import('./pages/VirtualTour'));
 const NewsDetail = lazy(() => import('./pages/NewsDetail'));
 const Team = lazy(() => import('./pages/Team'));
 
-
 const App = () => {
     return (
-                    <Router basename={import.meta.env.BASE_URL}>
+        <AccessibilityProvider>
+            <Router basename={import.meta.env.BASE_URL}>
                 <Suspense fallback={<Spinner />}>
                     <Routes>
                         <Route path="/" element={<Layout />}>
@@ -54,7 +55,8 @@ const App = () => {
                     </Routes>
                 </Suspense>
             </Router>
-            );
+        </AccessibilityProvider>
+    );
 };
 
 export default App;
