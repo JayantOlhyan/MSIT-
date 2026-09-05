@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useAccessibility } from '../context/AccessibilityContext';
 
 const OpeningAnimation = ({ onComplete }) => {
     const containerRef = useRef(null);
@@ -10,8 +9,7 @@ const OpeningAnimation = ({ onComplete }) => {
     const logoRef = useRef(null);
     const sweepRef = useRef(null);
 
-    const { settings } = useAccessibility();
-    const prefersReducedMotion = typeof window !== 'undefined' 
+        const prefersReducedMotion = typeof window !== 'undefined' 
         ? window.matchMedia('(prefers-reduced-motion: reduce)').matches 
         : false;
     const isReducedMotion = settings?.reducedMotion || prefersReducedMotion;

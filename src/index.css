@@ -75,14 +75,13 @@ html {
   overflow-x: hidden;
   scrollbar-gutter: stable; /* Prevent layout shift jitter during modal open/close */
   scroll-behavior: smooth;
-  /* Accessibility Focus Ring - Conditional */
-  &.acc-focus-ring *:focus-visible {
-    outline: 2px solid #2563eb;
-    outline-offset: 2px;
-  }
+  
 
   /* High Contrast Mode Overrides */
-  &.acc-high-contrast {
+  } /* end html */
+
+@media (prefers-contrast: more) {
+:root {
     --color-primary: #000000;
     --color-accent: #000000;
     --color-surface: #ffffff;
@@ -103,19 +102,19 @@ html {
       background-image: none !important;
     }
   }
+}
 
-  /* Reduced Motion Mode */
-  &.acc-reduced-motion {
+@media (prefers-reduced-motion: reduce) {
     * {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
-  }
+}
 
-  /* Engineered High-End Dark Mode (Targeted Overrides) */
-  &.acc-dark-mode {
+@media (prefers-color-scheme: dark) {
+  html {
     --color-primary: #3b82f6; 
     --color-accent: #f97316; 
     --color-surface: #1e293b; 
@@ -184,8 +183,6 @@ html {
       color: #a5b4fc !important;
     }
   }
-
-  background-color: #ffffff; 
 }
 
 body {

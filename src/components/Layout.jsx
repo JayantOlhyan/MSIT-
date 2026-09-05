@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import BackToTop from './BackToTop';
-import AccessibilityModal from './AccessibilityModal';
 import { Outlet, useLocation } from 'react-router-dom';
 import OpeningAnimation from './OpeningAnimation';
 
@@ -57,8 +56,7 @@ const Layout = () => {
             </main>
             <Footer />
             <BackToTop />
-            <AccessibilityModal />
-        </div>
+            </div>
     );
 };
 

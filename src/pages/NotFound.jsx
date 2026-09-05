@@ -17,7 +17,6 @@ import {
     ChevronRight,
     RefreshCw
 } from 'lucide-react';
-import { useAccessibility } from '../context/AccessibilityContext';
 import SEO from '../components/SEO';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -25,8 +24,7 @@ import { useGSAP } from '@gsap/react';
 const NotFound = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { settings } = useAccessibility();
-
+    
     // Canvas and Ref pointers
     const bgCanvasRef = useRef(null);
     const matrixCanvasRef = useRef(null);
@@ -48,7 +46,7 @@ const NotFound = () => {
 
     // GSAP animations
     useGSAP(() => {
-        if (settings.reducedMotion) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
@@ -167,12 +165,12 @@ const NotFound = () => {
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
             });
 
-            if (!settings.reducedMotion) {
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 animationFrameId = requestAnimationFrame(draw);
             }
         };
 
-        if (!settings.reducedMotion) {
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             draw();
         }
 
@@ -182,11 +180,11 @@ const NotFound = () => {
             document.removeEventListener('mouseleave', handleMouseLeave);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [settings.reducedMotion, settings.darkMode, settings.highContrast]);
+    }, [window.matchMedia('(prefers-reduced-motion: reduce)').matches, settings.darkMode, settings.highContrast]);
 
     // Matrix falling code animation logic
     useEffect(() => {
-        if (!isMatrixActive || settings.reducedMotion) return;
+        if (!isMatrixActive || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
         const canvas = matrixCanvasRef.current;
         if (!canvas) return;
@@ -229,7 +227,7 @@ const NotFound = () => {
             window.removeEventListener('resize', resizeMatrix);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [isMatrixActive, settings.reducedMotion]);
+    }, [isMatrixActive, window.matchMedia('(prefers-reduced-motion: reduce)').matches]);
 
     // Scroll terminal to bottom
     useEffect(() => {
@@ -304,7 +302,7 @@ const NotFound = () => {
                 }
                 break;
             case 'matrix':
-                if (settings.reducedMotion) {
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                     newLogs.push({ type: 'error', text: 'Command Blocked: Reduced motion is enabled. Turn it off in settings to view.' });
                 } else {
                     setIsMatrixActive(prev => !prev);

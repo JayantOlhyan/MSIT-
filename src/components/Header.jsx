@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp, Accessibility } from 'lucide-react';
+import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { searchIndex } from '../data/searchIndex';
-import { useAccessibility } from '../context/AccessibilityContext';
 
 const Header = () => {
-    const { setIsModalOpen } = useAccessibility();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
@@ -41,10 +39,6 @@ const Header = () => {
                 e.preventDefault();
                 setSearchOpen(true);
             }
-            if (e.altKey && (e.key === 'a' || e.key === 'A')) {
-                e.preventDefault();
-                setIsModalOpen(prev => !prev);
-            }
             if (e.key === 'Escape') {
                 setSearchOpen(false);
             }
@@ -56,7 +50,7 @@ const Header = () => {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [setIsModalOpen]);
+    }, []);
 
     const toggleSearch = () => {
         setSearchOpen(!searchOpen);
@@ -236,26 +230,11 @@ const Header = () => {
                             <button onClick={toggleSearch} className={`flex items-center gap-2 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`} aria-label="Search (Ctrl + K)">
                                 <Search className="w-4 h-4" /> <span>Search</span>
                             </button>
-                            <div className={`w-px h-3 mx-2 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
-                            <button 
-                                onClick={() => setIsModalOpen(true)} 
-                                className={`flex items-center gap-1.5 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`} 
-                                aria-label="Accessibility settings (Alt + A)"
-                                title="Accessibility Options (Alt + A)"
-                            >
-                                <Accessibility className="w-4 h-4" /> <span>Accessibility</span>
-                            </button>
+                            
                         </div>
 
                         <div className="xl:hidden flex items-center gap-2 shrink-0">
-                            <button 
-                                onClick={() => setIsModalOpen(true)} 
-                                className={`p-2 transition-colors ${isTransparent ? 'text-white' : 'text-slate-700'}`} 
-                                aria-label="Accessibility settings (Alt + A)"
-                                title="Accessibility Options (Alt + A)"
-                            >
-                                <Accessibility className="w-5 h-5" />
-                            </button>
+                            
                             <button onClick={toggleSearch} className={`p-2 transition-colors ${isTransparent ? 'text-white' : 'text-slate-700'}`} aria-label="Open global search overlay (Ctrl + K)">
                                 <Search className="w-5 h-5" />
                             </button>

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Heart, MessageSquare, ExternalLink, ArrowRight, Users, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useAccessibility } from '../context/AccessibilityContext';
 
 const Footer = () => {
-    const { setIsModalOpen } = useAccessibility();
     const [expandedSections, setExpandedSections] = useState({
         quickLinks: false,
         resources: false,
@@ -192,13 +190,6 @@ const Footer = () => {
                     <div className="flex flex-wrap justify-center gap-4 md:gap-8">
                         <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
                         <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
-                        <button 
-                            onClick={() => setIsModalOpen(true)}
-                            className="hover:text-white transition-colors cursor-pointer uppercase font-bold"
-                            aria-label="Open accessibility settings"
-                        >
-                            Accessibility
-                        </button>
                         <Link to="/team" className="hover:text-white transition-colors">Meet the Team</Link>
                         <Link to="/admin" className="hover:text-white transition-colors">Admin</Link>
                     </div>
