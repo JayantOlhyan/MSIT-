@@ -33,6 +33,10 @@ const DynamicPage = () => {
         }
     }
 
+    useEffect(() => {
+        setActiveHighlightIndex(null);
+    }, [slug]);
+
     // Prevent body scroll when modal is open
     useEffect(() => {
         if (selectedMember) {

@@ -930,9 +930,9 @@ export const aboutData = {
             { label: "Response Time", value: "< 24h" }
         ],
         bulletPoints: [
-            { label: "Anti-Ragging Helpline", detail: "Click here to learn more about anti-ragging helpline. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Hostel Warden Contact", detail: "Click here to learn more about hostel warden contact. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Grievance Portal", detail: "Click here to learn more about grievance portal. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "Anti-Ragging Helpline", detail: "National Anti-Ragging Helpline: 1800-180-5522. You can also contact the MSIT campus squad at antiragging@msit.in for immediate assistance." },
+            { label: "Hostel Warden Contact", detail: "For Maharaja Mahendra Pratap Hostel queries, contact the Chief Warden at warden@msit.in or call the hostel administration desk at +91 11-25528117." },
+            { label: "Grievance Portal", detail: "Students and staff can register their complaints and grievances online through our dedicated portal. All issues are addressed strictly within 48 hours." }
         ]
     }
 };
