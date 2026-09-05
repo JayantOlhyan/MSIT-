@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-import { Search, Mail, Award, BookOpen, ChevronRight, X, FileText, Download, Star, Briefcase, Linkedin } from 'lucide-react';
+import { Search, Mail, Award, BookOpen, ChevronRight, X, FileText, Download, Star, Briefcase, Linkedin, Globe, ExternalLink, Phone } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { facultyMembers } from '../data/facultyData';
@@ -240,7 +240,7 @@ const FacultyStaff = () => {
                                     {/* Brief highlight of Top Strength */}
                                     <div className="flex items-center gap-2 text-sm text-slate-600 bg-emerald-50 text-emerald-700 px-3 py-2 rounded-xl mb-6 truncate">
                                         <Star className="w-4 h-4 shrink-0 fill-emerald-500 text-emerald-500" />
-                                        <span className="truncate font-medium">{faculty.goodAt[0]}</span>
+                                        <span className="truncate font-medium">{(faculty.researchInterests || faculty.goodAt || [])[0] || "Academic Instruction"}</span>
                                     </div>
 
                                     <div className="flex items-center justify-between text-primary font-bold text-sm">
@@ -389,48 +389,103 @@ const FacultyStaff = () => {
                                 </div>
                             </div>
 
-                            {/* Actions */}
-                            <div className="flex flex-col sm:flex-row gap-4 items-center justify-between border-t border-slate-200 pt-8">
-                                <div className="flex flex-wrap gap-4 w-full sm:w-auto">
-                                    <a
-                                        href={`mailto:${selectedFaculty.email}`}
-                                        className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-surface text-body font-bold hover:bg-slate-200 transition-colors"
-                                    >
-                                        <Mail className="w-5 h-5" />
-                                        {selectedFaculty.email}
-                                    </a>
-                                    {selectedFaculty.linkedin && (
+                            {/* Actions & Profiles */}
+                            <div className="flex flex-col gap-6 border-t border-slate-200 pt-8">
+                                <div className="flex flex-wrap gap-4 items-center justify-between">
+                                    <div className="flex flex-wrap gap-3 w-full sm:w-auto">
                                         <a
-                                            href={selectedFaculty.linkedin}
+                                            href={`mailto:${selectedFaculty.email}`}
+                                            className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface text-body font-bold hover:bg-slate-200 transition-colors text-sm"
+                                        >
+                                            <Mail className="w-4 h-4 text-slate-600" />
+                                            {selectedFaculty.email}
+                                        </a>
+                                        {selectedFaculty.phone && (
+                                            <span className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface text-slate-700 font-medium text-sm">
+                                                <Phone className="w-4 h-4 text-blue-600" />
+                                                {selectedFaculty.phone}
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    {selectedFaculty.pdfLink !== "#" ? (
+                                        <a
+                                            href={selectedFaculty.pdfLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#0077B5] text-white font-bold hover:bg-[#005a8a] transition-colors"
+                                            className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 hover:shadow-card-hover hover:shadow-blue-500/30 transition-all w-full sm:w-auto text-sm"
                                         >
-                                            <Linkedin className="w-5 h-5" />
-                                            LinkedIn
+                                            <Download className="w-4 h-4" />
+                                            View Official Profile PDF
                                         </a>
+                                    ) : (
+                                        <button
+                                            disabled
+                                            className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-surface text-muted font-bold cursor-not-allowed w-full sm:w-auto text-sm"
+                                        >
+                                            <FileText className="w-4 h-4" />
+                                            PDF Profile Unavailable
+                                        </button>
                                     )}
                                 </div>
 
-                                {selectedFaculty.pdfLink !== "#" ? (
-                                    <a
-                                        href={selectedFaculty.pdfLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 hover:shadow-card-hover hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
-                                    >
-                                        <Download className="w-5 h-5" />
-                                        View Official Profile PDF
-                                    </a>
-                                ) : (
-                                    <button
-                                        disabled
-                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface text-muted font-bold cursor-not-allowed w-full sm:w-auto text-sm"
-                                    >
-                                        <FileText className="w-5 h-5" />
-                                        PDF Profile Unavailable
-                                    </button>
-                                )}
+                                {/* Online Profiles & Websites */}
+                                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-2">
+                                        <Globe className="w-4 h-4 text-blue-600" />
+                                        Profiles & Web Links
+                                    </span>
+                                    <div className="flex flex-wrap gap-2.5">
+                                        {selectedFaculty.linkedin && (
+                                            <a
+                                                href={selectedFaculty.linkedin}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0077B5] text-white text-xs font-bold hover:bg-[#005a8a] transition-all shadow-xs"
+                                                title="LinkedIn Profile"
+                                            >
+                                                <Linkedin className="w-3.5 h-3.5" />
+                                                LinkedIn
+                                            </a>
+                                        )}
+                                        {selectedFaculty.personalWebsite && (
+                                            <a
+                                                href={selectedFaculty.personalWebsite}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-primary hover:text-primary transition-all shadow-xs"
+                                                title="Personal Webpage"
+                                            >
+                                                <Globe className="w-3.5 h-3.5 text-blue-600" />
+                                                Personal Webpage
+                                            </a>
+                                        )}
+                                        {selectedFaculty.googleScholar && (
+                                            <a
+                                                href={selectedFaculty.googleScholar}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-amber-500 hover:text-amber-600 transition-all shadow-xs"
+                                                title="Google Scholar Profile"
+                                            >
+                                                <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+                                                Google Scholar
+                                            </a>
+                                        )}
+                                        {selectedFaculty.researchGate && (
+                                            <a
+                                                href={selectedFaculty.researchGate}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-xs"
+                                                title="ResearchGate Profile"
+                                            >
+                                                <ExternalLink className="w-3.5 h-3.5 text-emerald-600" />
+                                                ResearchGate
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
