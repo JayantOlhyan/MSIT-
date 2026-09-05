@@ -7,13 +7,197 @@ export const admissionData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Cover of the official MSIT information brochure featuring campus life and academic highlights",
         content: `
-            <p class="mb-6">Discover why thousands of aspiring engineers choose MSIT every year. Our comprehensive information brochure outlines our academic philosophy, placement statistics, faculty profiles, and the vibrant campus life that awaits you.</p>
-            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Admissions 2026-27</h3>
-            <p class="mb-6">Admission to all B.Tech programs is strictly based on the Common Entrance Test (CET) conducted by GGSIPU or JEE Main scores. Read the brochure for detailed eligibility criteria and counseling procedures.</p>
+            <div class="space-y-12">
+                <!-- Overview -->
+                <section>
+                    <p class="text-lg text-slate-700 leading-relaxed">
+                        Maharaja Surajmal Institute of Technology (MSIT), New Delhi is an 'A' Grade NAAC & NBA accredited premier engineering institution affiliated with Guru Gobind Singh Indraprastha University (GGSIPU), New Delhi and approved by AICTE, Ministry of Education, Govt. of India.
+                    </p>
+                </section>
+
+                <!-- Sanctioned Intake & Shifts Table -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-6">Approved Academic Programs & Shifts</h3>
+                    <p class="text-sm text-slate-600 mb-4">MSIT operates two dedicated academic shifts offering four-year B.Tech degree programs:</p>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm bg-white">
+                        <table class="w-full text-left text-sm text-slate-700">
+                            <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-700 border-b border-slate-200">
+                                <tr>
+                                    <th class="px-6 py-4 font-bold">Branch / Specialization</th>
+                                    <th class="px-6 py-4 font-bold">1st Shift (Morning: 8:00 AM - 2:30 PM)</th>
+                                    <th class="px-6 py-4 font-bold">2nd Shift (Evening: 12:30 PM - 7:00 PM)</th>
+                                    <th class="px-6 py-4 font-bold">Total Intake</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="hover:bg-blue-50/40 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-slate-900">Computer Science & Engineering (CSE)</td>
+                                    <td class="px-6 py-4 font-semibold text-blue-700">180 Seats</td>
+                                    <td class="px-6 py-4 font-semibold text-indigo-700">60 Seats</td>
+                                    <td class="px-6 py-4 font-extrabold text-slate-900">240</td>
+                                </tr>
+                                <tr class="hover:bg-blue-50/40 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-slate-900">Information Technology (IT)</td>
+                                    <td class="px-6 py-4 font-semibold text-blue-700">120 Seats</td>
+                                    <td class="px-6 py-4 font-semibold text-indigo-700">60 Seats</td>
+                                    <td class="px-6 py-4 font-extrabold text-slate-900">180</td>
+                                </tr>
+                                <tr class="hover:bg-blue-50/40 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-slate-900">Electronics & Communication Engineering (ECE)</td>
+                                    <td class="px-6 py-4 font-semibold text-blue-700">120 Seats</td>
+                                    <td class="px-6 py-4 font-semibold text-indigo-700">60 Seats</td>
+                                    <td class="px-6 py-4 font-extrabold text-slate-900">180</td>
+                                </tr>
+                                <tr class="hover:bg-blue-50/40 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-slate-900">Electrical & Electronics Engineering (EEE)</td>
+                                    <td class="px-6 py-4 font-semibold text-blue-700">60 Seats</td>
+                                    <td class="px-6 py-4 text-slate-400">N/A</td>
+                                    <td class="px-6 py-4 font-extrabold text-slate-900">60</td>
+                                </tr>
+                                <tr class="bg-slate-50 font-bold">
+                                    <td class="px-6 py-4 text-slate-900">Total Regular Sanctioned Intake</td>
+                                    <td class="px-6 py-4 text-blue-800">480 Seats</td>
+                                    <td class="px-6 py-4 text-indigo-800">180 Seats</td>
+                                    <td class="px-6 py-4 text-emerald-700 text-base font-black">660 Seats</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 p-4 rounded-xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 leading-relaxed font-medium">
+                        <strong>Lateral Entry (LE B.Tech):</strong> 10% supernumerary seats in the 2nd Year (3rd Semester) are reserved across branches for State Board Diploma holders and B.Sc. Graduates through GGSIPU CET Code 128 / 129.
+                    </div>
+                </section>
+
+                <!-- JEE Main Cut-offs Table -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-6">JEE Main Opening & Closing Cut-Off Ranks</h3>
+                    <p class="text-sm text-slate-600 mb-4">Admissions are governed strictly through centralized online counseling conducted by GGSIPU based on All India Common Rank List (CRL) in JEE Main (Paper 1):</p>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm bg-white">
+                        <table class="w-full text-left text-sm text-slate-700">
+                            <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-700 border-b border-slate-200">
+                                <tr>
+                                    <th class="px-5 py-3 font-bold">Branch & Shift</th>
+                                    <th class="px-5 py-3 font-bold">Delhi Region (85% Quota) Round 1</th>
+                                    <th class="px-5 py-3 font-bold">Delhi Region Closing (Round 3 / Spot)</th>
+                                    <th class="px-5 py-3 font-bold">Outside Delhi (15% Quota) Closing</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 font-mono text-xs">
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-5 py-3 font-bold text-slate-900 font-sans">CSE (1st Shift)</td>
+                                    <td class="px-5 py-3 text-slate-700">32,450 - 45,800</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">54,200</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">24,800</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-5 py-3 font-bold text-slate-900 font-sans">CSE (2nd Shift)</td>
+                                    <td class="px-5 py-3 text-slate-700">46,200 - 58,900</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">68,400</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">34,500</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-5 py-3 font-bold text-slate-900 font-sans">IT (1st Shift)</td>
+                                    <td class="px-5 py-3 text-slate-700">52,100 - 66,400</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">76,800</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">38,900</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-5 py-3 font-bold text-slate-900 font-sans">IT (2nd Shift)</td>
+                                    <td class="px-5 py-3 text-slate-700">67,800 - 79,500</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">89,200</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">46,700</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-5 py-3 font-bold text-slate-900 font-sans">ECE (1st Shift)</td>
+                                    <td class="px-5 py-3 text-slate-700">78,400 - 98,200</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">1,12,000</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">58,600</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-5 py-3 font-bold text-slate-900 font-sans">ECE (2nd Shift)</td>
+                                    <td class="px-5 py-3 text-slate-700">99,800 - 1,22,400</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">1,38,500</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">72,400</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-5 py-3 font-bold text-slate-900 font-sans">EEE (1st Shift)</td>
+                                    <td class="px-5 py-3 text-slate-700">1,18,000 - 1,48,000</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">1,78,000</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">89,500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Annual Fee Structure Table -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-6">Fee Structure Breakdown (Academic Year 2026–27)</h3>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm bg-white mb-6">
+                        <table class="w-full text-left text-sm text-slate-700">
+                            <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-700 border-b border-slate-200">
+                                <tr>
+                                    <th class="px-6 py-3 font-bold">Fee Component</th>
+                                    <th class="px-6 py-3 font-bold">1st Year Amount (INR)</th>
+                                    <th class="px-6 py-3 font-bold">Subsequent Years (INR)</th>
+                                    <th class="px-6 py-3 font-bold">Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr>
+                                    <td class="px-6 py-3 font-bold text-slate-900">Academic / Tuition Fee</td>
+                                    <td class="px-6 py-3 font-semibold">₹1,35,000/-</td>
+                                    <td class="px-6 py-3 font-semibold">₹1,35,000/-</td>
+                                    <td class="px-6 py-3 text-xs text-slate-500">As notified by State Fee Regulatory Committee</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-3 font-bold text-slate-900">University Charges</td>
+                                    <td class="px-6 py-3 font-semibold">₹20,000/-</td>
+                                    <td class="px-6 py-3 font-semibold">₹20,000/-</td>
+                                    <td class="px-6 py-3 text-xs text-slate-500">Remitted directly to GGSIPU</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-3 font-bold text-slate-900">Student Activity Fee</td>
+                                    <td class="px-6 py-3 font-semibold">₹2,000/-</td>
+                                    <td class="px-6 py-3 font-semibold">₹2,000/-</td>
+                                    <td class="px-6 py-3 text-xs text-slate-500">Societies, Technical fests, Sports & Library</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-3 font-bold text-slate-900">Security Deposit</td>
+                                    <td class="px-6 py-3 font-semibold">₹10,000/-</td>
+                                    <td class="px-6 py-3 text-slate-400">N/A</td>
+                                    <td class="px-6 py-3 text-xs text-slate-500">One-time, 100% Refundable after degree completion</td>
+                                </tr>
+                                <tr class="bg-blue-50/60 font-bold">
+                                    <td class="px-6 py-4 text-slate-900">Total Payable at Admission</td>
+                                    <td class="px-6 py-4 text-blue-700 text-base font-black">₹1,67,000/-</td>
+                                    <td class="px-6 py-4 text-slate-700 text-base font-bold">₹1,57,000/-</td>
+                                    <td class="px-6 py-4 text-xs font-semibold text-blue-900">Payable online via Net Banking / Cards / Demand Draft</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Management Quota Policy -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-purple-600 pl-4 mb-6">Management Quota Admission Schedule & Rules</h3>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4 text-sm text-slate-700 leading-relaxed">
+                        <p>In accordance with the <em>Delhi Professional Colleges or Institutions Act, 2007</em> and GGSIPU guidelines, 10% of sanctioned intake seats are allotted under Management Quota.</p>
+                        <ul class="list-disc pl-5 space-y-2 text-xs md:text-sm text-slate-600 font-medium">
+                            <li><strong>Merit Transparency:</strong> Admissions are conducted strictly on merit determined by JEE Main rank / qualifying 10+2 PCM percentage. Merit lists are displayed on the public notice board and college portal.</li>
+                            <li><strong>Zero Capitation:</strong> MSIT does not charge or accept any capitation fee or donation. Fees are identical to regular university quota.</li>
+                            <li><strong>Fee Refund Policy:</strong> In case of withdrawal, fee refunds follow strict AICTE and UGC guidelines with full refund minus processing fee (max ₹1,000) if surrendered prior to the last notified date.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
         `,
         stats: [
-            { label: "Intake", value: "480" },
-            { label: "Programs", value: "4 Core" }
+            { label: "Total Intake", value: "660" },
+            { label: "Shifts", value: "Morning & Evening" },
+            { label: "Affiliation", value: "GGSIPU" },
+            { label: "Accreditation", value: "NAAC 'A'" }
         ],
         bulletPoints: [
             { label: "Download PDF Brochure", detail: "Click here to learn more about download pdf brochure. This section provides comprehensive information and resources tailored to this topic." },
