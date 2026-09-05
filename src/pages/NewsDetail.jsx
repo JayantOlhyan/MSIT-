@@ -335,10 +335,9 @@ const NewsDetail = () => {
                                         <a 
                                             key={idx}
                                             href={file.url}
-                                            onClick={(e) => {
-                                                e.preventDefault();
-                                                alert(`Simulating download for: ${file.name}`);
-                                            }}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            download
                                             className="flex items-start gap-4 p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-2xl group transition-all"
                                         >
                                             <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-red-600 shrink-0">
