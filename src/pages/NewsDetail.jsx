@@ -8,23 +8,23 @@ const newsDb = {
     "1": {
         id: 1,
         label: "NEWS",
-        title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs",
+        title: "MSIT establishes state-of-the-art AICTE IDEA Lab & Advanced Research Facilities",
         date: "MAR 02, 2026",
         color: "border-blue-600",
-        bgImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
-        summary: "MSIT has been awarded a landmark $12 million grant from the Science and Engineering Research Board (SERB) to develop high-performance computing centers.",
+        bgImage: "/campus/main-academic-building.webp",
+        summary: "MSIT has established an AICTE IDEA Lab and advanced multidisciplinary research infrastructure backed by national science grants.",
         content: `
-            <p class="mb-6">Maharaja Surajmal Institute of Technology (MSIT), New Delhi has achieved a monumental milestone by securing a research grant of <strong>$12 Million (approx. ₹100 Crores)</strong>. The funding is joint-backed by the Department of Science and Technology (DST), India, and private quantum technology venture funds.</p>
+            <p class="mb-6">Maharaja Surajmal Institute of Technology (MSIT), New Delhi has achieved a significant milestone with the establishment of the <strong>AICTE IDEA (Idea Development, Evaluation & Application) Lab</strong> and high-performance computing clusters supported by national research bodies and research funding from the Department of Science and Technology (DST).</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Establishment of the Quantum & Advanced AI Center</h3>
-            <p class="mb-6">This grant will be directed entirely towards setting up a dedicated multi-story research laboratory within the MSIT campus. The center will house state-of-the-art server racks, room-temperature quantum computing experimental kits, and next-generation NVIDIA GPU servers.</p>
-            <p class="mb-6">Dr. Archana Balyan, Director of MSIT, stated: <em>"This grant is a testament to the high-caliber research conducted by our faculty members and students. With this facility, we aim to bridge the gap between academic theory and real-world industrial quantum systems."</em></p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Establishment of the Advanced Computing Research Lab</h3>
+            <p class="mb-6">The research grant and institutional funding are directed towards upgrading dedicated laboratory spaces within the MSIT 8-storey academic block. The center houses high-performance computing workstations, FPGA embedded systems, IoT test benches, and enterprise-grade GPU servers for deep learning models.</p>
+            <p class="mb-6">The Director of MSIT stated: <em>"This advanced facility is a testament to the high-caliber research conducted by our faculty members and students. With this setup, we aim to bridge the gap between academic theory and real-world industrial engineering systems."</em></p>
             
             <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Key Areas of Focus</h3>
             <ul class="list-disc pl-6 mb-6 space-y-2">
-                <li><strong>Quantum Cryptography:</strong> Securing network architectures against next-gen post-quantum cyber threats.</li>
-                <li><strong>Generative AI & LLMs:</strong> Training domain-specific language models for Indian regional languages and public sector applications.</li>
-                <li><strong>IoT & Autonomous Systems:</strong> Enhancing real-time hardware loop testing for drone swarms and electric vehicle drivetrains.</li>
+                <li><strong>Artificial Intelligence & Machine Learning:</strong> Training domain-specific neural models, computer vision, and speech processing for national mission applications.</li>
+                <li><strong>Cybersecurity & Applied Cryptography:</strong> Securing network architectures and modern IoT communication protocols.</li>
+                <li><strong>Embedded Systems & Robotics:</strong> Prototyping real-time embedded hardware loops, microcontrollers, and automation systems in the AICTE IDEA Lab.</li>
             </ul>
         `,
         attachments: [
@@ -42,7 +42,7 @@ const newsDb = {
         title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus",
         date: "FEB 28, 2026",
         color: "border-emerald-500",
-        bgImage: "https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/auditorium-cultural-fest.webp",
         summary: "MSIT has been selected as the official venue partner for the 2026 Global Web3 & Blockchain Summit, bringing together 2,000+ tech visionaries.",
         content: `
             <p class="mb-6">In a major victory for our student innovation clubs, the global organizing committee of the <strong>Web3 Developer Forum</strong> has chosen Maharaja Surajmal Institute of Technology as the anchor host venue for the upcoming **Global Web3 & Blockchain Summit 2026**.</p>
@@ -68,7 +68,7 @@ const newsDb = {
         title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple",
         date: "FEB 15, 2026",
         color: "border-purple-500",
-        bgImage: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/student-gathering-courtyard.webp",
         summary: "Five students from MSIT's 2025 batch have landed core engineering roles at Apple's Silicon Valley and Bengaluru teams.",
         content: `
             <p class="mb-6">Maharaja Surajmal Institute of Technology celebrates a spectacular milestone as five graduates from our Computer Science & Engineering (CSE) and Information Technology (IT) departments join Apple Inc. as core Software Development Engineers (SDE).</p>
@@ -93,7 +93,7 @@ const newsDb = {
         title: "Grand Finale of SIH 2025 Concludes: MSIT Declared Winner in Ministry of AYUSH Category",
         date: "DEC 12, 2025",
         color: "border-blue-600",
-        bgImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/campus-pathway-block.webp",
         summary: "MSIT Janakpuri secured top honors in the Ministry of AYUSH category at the Smart India Hackathon 2025 Grand Finale.",
         content: `
             <p class="mb-6">The Grand Finale of the Smart India Hackathon (SIH) 2025 concluded on 12 December 2025 at Galgotias University. In the Ministry of AYUSH category, Maharaja Surajmal Institute of Technology, Janakpuri, New Delhi, was declared a winner alongside Sri Krishna College of Engineering and Technology, Tamil Nadu.</p>
@@ -113,7 +113,7 @@ const newsDb = {
         title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)",
         date: "NOV 19, 2026",
         color: "border-emerald-500",
-        bgImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/main-academic-building.webp",
         summary: "MSIT announced the 4th International Conference ICAIA-2026, technically approved by the IEEE Delhi Section.",
         content: `
             <p class="mb-6">Maharaja Surajmal Institute of Technology (MSIT), New Delhi, is organizing the 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026) on 19–20 November 2026.</p>
@@ -133,7 +133,7 @@ const newsDb = {
         title: "Department of CSE Receives Grant from Petronet LNG Ltd. for Center of Excellence",
         date: "AUG 15, 2025",
         color: "border-purple-500",
-        bgImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/central-library-hall.webp",
         summary: "Petronet LNG Ltd. awarded ₹30 lakh to MSIT's Department of CSE to establish a CoE in Computational Intelligence.",
         content: `
             <p class="mb-6">The Department of Computer Science & Engineering at Maharaja Surajmal Institute of Technology received a financial grant of ₹30 lakh from Petronet LNG Ltd.</p>
@@ -153,7 +153,7 @@ const newsDb = {
         title: "MSIT Conducts National Conference NCI-TIDE 2025",
         date: "DEC 15, 2025",
         color: "border-blue-600",
-        bgImage: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/auditorium-cultural-fest.webp",
         summary: "MSIT hosted the National Conference NCI-TIDE 2025 covering emerging technologies and interdisciplinary engineering.",
         content: `
             <p class="mb-6">Maharaja Surajmal Institute of Technology organized the National Conference on Integrating Technologies, Ideas and Disciplines for Engineering Innovation (NCI-TIDE 2025).</p>
@@ -173,7 +173,7 @@ const newsDb = {
         title: "Placement Cell Conducts Placement Preparation Session with ION Alumni and Seniors",
         date: "AUG 30, 2024",
         color: "border-emerald-500",
-        bgImage: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/campus-canteen-kiosk.webp",
         summary: "MSIT Placement Cell organized an interactive preparation session featuring CSE alumni and placed seniors working at ION.",
         content: `
             <p class="mb-6">The Placement Cell at MSIT conducted an interactive placement preparation session focused on recruitment strategies for fintech firm ION.</p>
@@ -193,7 +193,7 @@ const newsDb = {
         title: "E-Cell MSIT Organizes Flagship E-Summit 2026",
         date: "MAR 26, 2026",
         color: "border-purple-500",
-        bgImage: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/ecell-noticeboard-entrance.webp",
         summary: "E-Cell MSIT conducted its annual flagship E-Summit 2026 to foster student entrepreneurship.",
         content: `
             <p class="mb-6">The Entrepreneurship Cell (E-Cell) of MSIT hosted its annual flagship E-Summit 2026 on March 26–27, 2026.</p>
@@ -211,7 +211,7 @@ const newsDb = {
         title: "MSC MSIT Organizes HackMSIT 1.0 Hackathon",
         date: "APR 10, 2026",
         color: "border-blue-600",
-        bgImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/sports-badminton-ground.webp",
         summary: "Microsoft Student Chapter at MSIT held HackMSIT 1.0 hackathon for student software developers.",
         content: `
             <p class="mb-6">The Microsoft Student Chapter (MSC) at Maharaja Surajmal Institute of Technology organized "HackMSIT 1.0" on April 10–11, 2026.</p>
@@ -229,7 +229,7 @@ const newsDb = {
         title: "Team 'Courtroom Cartel' Secures First Prize in Smart India Hackathon 2023",
         date: "DEC 20, 2023",
         color: "border-emerald-500",
-        bgImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1200",
+        bgImage: "/campus/campus-panoramic-field.webp",
         summary: "Student team 'Courtroom Cartel' from MSIT won the first prize in Smart India Hackathon 2023.",
         content: `
             <p class="mb-6">Student developer team "Courtroom Cartel" representing Maharaja Surajmal Institute of Technology won the 1st prize in the national Smart India Hackathon (SIH) 2023 Grand Finale.</p>
@@ -247,7 +247,7 @@ const NewsDetail = () => {
     const { id } = useParams();
     
     // Retrieve from local storage to allow admin-published news/events
-    const storedEvents = localStorage.getItem('msit_events');
+    const storedEvents = localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
     const localEventsList = storedEvents ? JSON.parse(storedEvents) : [];
     const localItem = localEventsList.find(e => String(e.id) === String(id));
     

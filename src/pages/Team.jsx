@@ -179,7 +179,15 @@ const Team = () => {
                             <div>
                                 <div className="flex gap-4 items-center mb-4 sm:mb-6">
                                     <div className="w-16 h-16 rounded-full overflow-hidden shrink-0">
-                                        <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+                                        <img 
+                                            src={member.img} 
+                                            alt={member.name} 
+                                            className="w-full h-full object-cover" 
+                                            onError={(e) => {
+                                                e.currentTarget.onerror = null;
+                                                e.currentTarget.src = '/faculty/default-avatar.webp';
+                                            }}
+                                        />
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <span className="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-black uppercase tracking-wider rounded mb-1">{member.dept}</span>
@@ -227,7 +235,15 @@ const Team = () => {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
                             <div className="flex gap-4 sm:gap-6 items-center relative z-10">
                                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
-                                    <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
+                                    <img 
+                                        src={selectedMember.img} 
+                                        alt={selectedMember.name} 
+                                        className="w-full h-full object-cover" 
+                                        onError={(e) => {
+                                            e.currentTarget.onerror = null;
+                                            e.currentTarget.src = '/faculty/default-avatar.webp';
+                                        }}
+                                    />
                                 </div>
                                 <div className="flex-1 min-w-0">
                                     <span className="inline-block px-2.5 py-1 bg-white/10 text-white text-[10px] font-black uppercase tracking-widest rounded mb-1.5 sm:mb-2 border border-white/5">{selectedMember.dept}</span>

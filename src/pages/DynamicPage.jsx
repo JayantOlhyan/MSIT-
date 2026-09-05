@@ -249,7 +249,7 @@ const DynamicPage = () => {
                                                         ) : (
                                                             <div className="flex flex-col w-full">
                                                                 <span 
-                                                                    className={`hover:text-accent transition-colors cursor-pointer w-full ${isActive ? 'text-accent font-bold font-sans' : ''}`}
+                                                                    className={`transition-colors w-full ${(detailText || slug === 'online-fee' || slug === 'events') ? 'hover:text-accent cursor-pointer' : 'cursor-default'} ${isActive ? 'text-accent font-bold font-sans' : ''}`}
                                                                     dangerouslySetInnerHTML={{ __html: labelText }}
                                                                     onClick={() => {
                                                                         if (slug === 'online-fee') {

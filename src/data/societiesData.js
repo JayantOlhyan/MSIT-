@@ -94,7 +94,7 @@ export const societiesData = {
                 {
                     title: "AI Workshop",
                     date: "Feb 2025",
-                    image: "/campus-hero.webp"
+                    image: "/campus/ecell-noticeboard-entrance.webp"
                 },
                 {
                     title: "Code Clash",
@@ -298,7 +298,7 @@ export const societiesData = {
                 location: "Main Auditorium, MSIT"
             },
             past: [
-                { title: "AVENSIS Tech Fest", date: "Feb 2025", image: "/campus-hero.webp" },
+                { title: "AVENSIS Tech Fest", date: "Feb 2025", image: "/campus/auditorium-cultural-fest.webp" },
                 { title: "IEEE Day Global Gala", date: "Oct 2024", image: "/campus-excellence.webp" },
                 { title: "RoboRace Grand Prix", date: "Nov 2024", image: "/campus-lab.webp" },
                 { title: "WiE Leadership Summit", date: "Sep 2024", image: "/campus-library.webp" }
@@ -347,7 +347,7 @@ export const societiesData = {
         },
         gallery: [
             { title: "Avensis Innovation Showcase", category: "events", image: "/campus-lab.webp" },
-            { title: "Annual IEEE Day Assembly", category: "society", image: "/campus-hero.webp" },
+            { title: "Annual IEEE Day Assembly", category: "society", image: "/campus/student-gathering-courtyard.webp" },
             { title: "Hardware Workshop Session", category: "events", image: "/campus-excellence.webp" },
             { title: "International Award Ceremony", category: "society", image: "/campus-library.webp" }
         ],
@@ -475,7 +475,7 @@ export const societiesData = {
         gallery: [
             { title: "IIT Kharagpur Award Presentation", category: "society", image: "/campus-excellence.webp" },
             { title: "Digital Literacy Orientation", category: "events", image: "/campus-library.webp" },
-            { title: "Student Reading Marathon", category: "events", image: "/campus-hero.webp" },
+            { title: "Student Reading Marathon", category: "events", image: "/campus/central-library-hall.webp" },
             { title: "Central Library Reading Hall", category: "society", image: "/campus-lab.webp" }
         ],
         faqs: [

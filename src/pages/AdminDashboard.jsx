@@ -146,7 +146,7 @@ const AdminDashboard = () => {
             color,
             summary: summary || title,
             content: content || `<p class="mb-6">${title}</p>`,
-            bgImage: bgImage || "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+            bgImage: bgImage || "/campus/main-academic-building.webp",
             attachments: attachmentsList,
             links: relatedLinksList
         };
@@ -389,7 +389,7 @@ const AdminDashboard = () => {
                                 <label className="text-sm font-medium text-slate-700">Background Image URL (Optional)</label>
                                 <input
                                     type="text"
-                                    placeholder="https://images.unsplash.com/... or leave blank for default"
+                                    placeholder="/campus/main-academic-building.webp or leave blank for default"
                                     className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={bgImage}
                                     onChange={(e) => setBgImage(e.target.value)}
