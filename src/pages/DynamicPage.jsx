@@ -21,15 +21,17 @@ const DynamicPage = () => {
     const [activeFeeTab, setActiveFeeTab] = useState('pay');
     const [activeEventTab, setActiveEventTab] = useState('avensis');
     const [activeHighlightIndex, setActiveHighlightIndex] = useState(null);
+    const [prevSlug, setPrevSlug] = useState(slug);
 
-    useEffect(() => {
+    if (prevSlug !== slug) {
+        setPrevSlug(slug);
         setActiveHighlightIndex(null);
         if (slug === 'online-fee') {
             setActiveFeeTab('pay');
         } else if (slug === 'events') {
             setActiveEventTab('avensis');
         }
-    }, [slug]);
+    }
 
     // Prevent body scroll when modal is open
     useEffect(() => {
