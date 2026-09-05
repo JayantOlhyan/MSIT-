@@ -33,10 +33,6 @@ const DynamicPage = () => {
         }
     }
 
-    useEffect(() => {
-        setActiveHighlightIndex(null);
-    }, [slug]);
-
     // Prevent body scroll when modal is open
     useEffect(() => {
         if (selectedMember) {
@@ -60,7 +56,7 @@ const DynamicPage = () => {
                     if (member) {
                         setSelectedMember({
                             ...member,
-                            phone: member.phone || "011-65215944" // default office phone
+                            phone: member.phone || "+91 11 6521 5944" // default office phone
                         });
                     }
                     return;
@@ -391,7 +387,7 @@ const DynamicPage = () => {
                                     </a>
 
                                     <a 
-                                        href={`tel:${selectedMember.phone}`}
+                                        href={`tel:${selectedMember.phone.replace(/\s+/g, '')}`}
                                         className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
                                     >
                                         <Phone className="w-4 h-4 shrink-0" />

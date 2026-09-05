@@ -77,7 +77,7 @@ const ServerError = () => {
                             </div>
                             <div>
                                 <p className="text-base font-medium text-slate-500">Call support</p>
-                                <p className="font-bold text-slate-900">+91 9667344125</p>
+                                <p className="font-bold text-slate-900">+91 96673 44125</p>
                             </div>
                         </a>
                     </div>

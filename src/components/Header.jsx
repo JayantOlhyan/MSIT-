@@ -411,8 +411,8 @@ const Header = () => {
                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
                                     Campus Mail
                                 </a>
-                                <a href="tel:01165215941" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
-                                    Reception: 011-65215941
+                                <a href="tel:+911165215941" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Reception: +91 11 6521 5941
                                 </a>
                             </div>
                         </div>

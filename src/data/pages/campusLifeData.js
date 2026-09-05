@@ -97,7 +97,7 @@ export const campusLifeData = {
             { label: "Flagship Events", value: "10+" }
         ],
         bulletPoints: [
-            { label: "Technical Hubs (IEEE, detail: "Click here to learn more about technical hubs (iee. This section provides comprehensive information and resources tailored to this topic." },GDSC)",
+            { label: "Technical Hubs (IEEE, GDSC)", detail: "Click here to learn more about technical hubs (IEEE, GDSC). This section provides comprehensive information and resources tailored to this topic." },
             { label: "Cultural Sub-wings", detail: "Click here to learn more about cultural sub-wings. This section provides comprehensive information and resources tailored to this topic." },
             { label: "Innovation & Startup Cell", detail: "Click here to learn more about innovation & startup cell. This section provides comprehensive information and resources tailored to this topic." },
             { label: "Environmental Initiatives", detail: "Click here to learn more about environmental initiatives. This section provides comprehensive information and resources tailored to this topic." }

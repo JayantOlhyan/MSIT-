@@ -22,7 +22,7 @@ const Placements = () => {
         const found = facultyMembers.find(f => f.name.toLowerCase().includes(nameQuery.toLowerCase()));
         return found ? {
             ...found,
-            phone: found.phone || "011-65215944" // Default T&P office number
+            phone: found.phone || "+91 11 6521 5944" // Default T&P office number
         } : {
             name: nameQuery,
             role: "Faculty Member",
@@ -351,7 +351,7 @@ const Placements = () => {
                                 The T&P cell actively bridges the gap between academia and industry.
                             </p>
                             <div className="flex flex-col space-y-2 px-1">
-                                <a href="tel:01165215944" className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-2">
+                                <a href="tel:+911165215944" className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-2">
                                     <span>📞 Call: 011-65215944</span>
                                 </a>
                                 <a href="mailto:placements@msit.in" className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-2">
@@ -447,7 +447,7 @@ const Placements = () => {
                                     </a>
 
                                     <a 
-                                        href={`tel:${selectedMember.phone}`}
+                                        href={`tel:${selectedMember.phone.replace(/\s+/g, '')}`}
                                         className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
                                     >
                                         <Phone className="w-4 h-4 shrink-0" />

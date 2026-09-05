@@ -103,7 +103,7 @@ export const aboutData = {
             { label: "Campus Area", value: "8 Acres" }
         ],
         bulletPoints: [
-            { label: "Foundation Stone Dec 12, detail: "Click here to learn more about foundation stone dec 1. This section provides comprehensive information and resources tailored to this topic." },1978",
+            { label: "Foundation Stone Dec 12, 1978", detail: "Click here to learn more about foundation stone dec 12, 1978. This section provides comprehensive information and resources tailored to this topic." },
             { label: "Affiliated to GGSIPU", detail: "Click here to learn more about affiliated to ggsipu. This section provides comprehensive information and resources tailored to this topic." },
             { label: "AICTE Approved Grade A", detail: "Click here to learn more about aicte approved grade a. This section provides comprehensive information and resources tailored to this topic." }
         ]
