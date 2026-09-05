@@ -237,9 +237,15 @@ const DynamicPage = () => {
                                                     <li key={i} className="flex items-start text-slate-300 text-sm">
                                                         <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-all duration-300 ${isActive ? 'text-accent' : 'text-slate-500'} ${activeHighlightIndex === i && detailText ? 'rotate-90' : ''}`} />
                                                         {isLink ? (
-                                                            <Link to={point.url} className="hover:text-accent transition-colors">
-                                                                {point.label}
-                                                            </Link>
+                                                            point.url.startsWith('http') ? (
+                                                                <a href={point.url} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                                                                    {point.label}
+                                                                </a>
+                                                            ) : (
+                                                                <Link to={point.url} className="hover:text-accent transition-colors">
+                                                                    {point.label}
+                                                                </Link>
+                                                            )
                                                         ) : (
                                                             <div className="flex flex-col w-full">
                                                                 <span 
