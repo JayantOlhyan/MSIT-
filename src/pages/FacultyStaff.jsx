@@ -376,7 +376,7 @@ const FacultyStaff = () => {
                                         <h3 className="text-xl font-bold text-blue-950">Courses Taught & Academic Domains</h3>
                                     </div>
                                     <ul className="space-y-4">
-                                        {(selectedFaculty.coursesTaught || (selectedFaculty.badAt && selectedFaculty.badAt.filter(t => t !== 'N/A').length > 0 ? selectedFaculty.badAt : null) || [
+                                        {(selectedFaculty.coursesTaught || [
                                             "Advanced Engineering Foundations",
                                             "Undergraduate Laboratory & Project Mentorship"
                                         ]).map((course, i) => (
