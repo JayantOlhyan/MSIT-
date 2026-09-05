@@ -18,7 +18,7 @@ const newsDb = {
             
             <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Establishment of the Advanced Computing Research Lab</h3>
             <p class="mb-6">The research grant and institutional funding are directed towards upgrading dedicated laboratory spaces within the MSIT 8-storey academic block. The center houses high-performance computing workstations, FPGA embedded systems, IoT test benches, and enterprise-grade GPU servers for deep learning models.</p>
-            <p class="mb-6">The Director of MSIT stated: <em>"This advanced facility is a testament to the high-caliber research conducted by our faculty members and students. With this setup, we aim to bridge the gap between academic theory and real-world industrial engineering systems."</em></p>
+            <p class="mb-6">Prof. (Dr.) Avanish Kumar Srivastava, Director of MSIT (former Director of CSIR-AMPRI and Stanford top 2% global scientist), stated: <em>"This advanced facility is a testament to the high-caliber research conducted by our faculty members and students. With this setup, we aim to bridge the gap between academic theory and real-world industrial engineering systems."</em></p>
             
             <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Key Areas of Focus</h3>
             <ul class="list-disc pl-6 mb-6 space-y-2">
@@ -65,19 +65,19 @@ const newsDb = {
     "3": {
         id: 3,
         label: "STORY",
-        title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple",
+        title: "MSIT Alumni community secures offers across Google, Microsoft, Amazon, and ION Trading with highest domestic package of ₹45+ LPA",
         date: "FEB 15, 2026",
         color: "border-purple-500",
         bgImage: "/campus/student-gathering-courtyard.webp",
-        summary: "Five students from MSIT's 2025 batch have landed core engineering roles at Apple's Silicon Valley and Bengaluru teams.",
+        summary: "MSIT graduates continue to excel across top-tier multinational product firms with standout placement packages and industry-leading compensation.",
         content: `
-            <p class="mb-6">Maharaja Surajmal Institute of Technology celebrates a spectacular milestone as five graduates from our Computer Science & Engineering (CSE) and Information Technology (IT) departments join Apple Inc. as core Software Development Engineers (SDE).</p>
+            <p class="mb-6">Maharaja Surajmal Institute of Technology celebrates a spectacular placement season with students from the Computer Science & Engineering (CSE) and Information Technology (IT) departments securing top-tier engineering roles at multinational technology leaders including Google, Microsoft, Amazon, Adobe, Postman, and ION Trading.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The Placement Journey</h3>
-            <p class="mb-6">The hiring process included multiple coding rounds, system design discussions, and executive interviews focusing on low-level optimization and performance-centric programming. All five graduates credited MSIT's focus on algorithmic problem solving, hardware labs, and mock hackathons for their successful recruitment.</p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Placement Milestones & CTC Highlights</h3>
+            <p class="mb-6">The graduating batches recorded an outstanding highest domestic package of <strong>₹45+ LPA</strong>, with over 750+ total offers extended by more than 120 visiting recruiters. MSIT's dedicated Training and Placement Cell facilitated comprehensive technical training modules, mock DSA interviews, and industry mentorship sessions throughout the recruitment drive.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Advice from the Winners</h3>
-            <p class="mb-6">One of the graduates, Priyanshu Singh, shared: <em>"Never neglect operating systems and computer architecture. Large tech organizations want engineers who understand how code behaves when mapped directly to memory and CPUs."</em></p>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Advice from Placed Alumni</h3>
+            <p class="mb-6">Alumni mentors shared: <em>"A strong foundation in Data Structures, System Design, Operating Systems, and hands-on open-source projects is the key differentiator for competitive product-company recruitment."</em></p>
         `,
         attachments: [
             { name: "Apple Placement Prep Kit & Sample Problems.pdf", size: "1.8 MB", url: "#" }

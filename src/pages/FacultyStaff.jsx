@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-import { Search, Mail, Award, BookOpen, ChevronRight, X, TrendingUp, Target, FileText, Download, Star, Briefcase, Linkedin } from 'lucide-react';
+import { Search, Mail, Award, BookOpen, ChevronRight, X, FileText, Download, Star, Briefcase, Linkedin } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { facultyMembers } from '../data/facultyData';
@@ -347,18 +347,18 @@ const FacultyStaff = () => {
                                 </div>
                             </div>
 
-                            {/* Strengths and Weaknesses */}
+                            {/* Research Interests & Courses Taught */}
                             <div className="grid md:grid-cols-2 gap-8 mb-12">
-                                {/* Good At */}
+                                {/* Research Interests & Specialization */}
                                 <div className="bg-emerald-50/50 rounded-3xl p-8 border border-emerald-100">
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
-                                            <TrendingUp className="w-5 h-5 text-emerald-600" />
+                                            <Award className="w-5 h-5 text-emerald-600" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-emerald-950">Strengths & Achievements</h3>
+                                        <h3 className="text-xl font-bold text-emerald-950">Research Interests & Specialization</h3>
                                     </div>
                                     <ul className="space-y-4">
-                                        {selectedFaculty.goodAt.map((trait, i) => (
+                                        {(selectedFaculty.researchInterests || selectedFaculty.goodAt || []).map((trait, i) => (
                                             <li key={i} className="flex items-start gap-3 text-emerald-800">
                                                 <Star className="w-5 h-5 shrink-0 text-emerald-500 fill-emerald-500 mt-0.5" />
                                                 <span className="font-medium leading-relaxed">{trait}</span>
@@ -367,19 +367,22 @@ const FacultyStaff = () => {
                                     </ul>
                                 </div>
 
-                                {/* Areas for Improvement / Observations - Softer Design */}
-                                <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200">
+                                {/* Courses Taught & Academic Domains */}
+                                <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100">
                                     <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-10 h-10 rounded-xl bg-slate-200 flex items-center justify-center">
-                                            <Target className="w-5 h-5 text-slate-600" />
+                                        <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
+                                            <BookOpen className="w-5 h-5 text-blue-600" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-slate-800">Academic Focus & Observations</h3>
+                                        <h3 className="text-xl font-bold text-blue-950">Courses Taught & Academic Domains</h3>
                                     </div>
                                     <ul className="space-y-4">
-                                        {selectedFaculty.badAt.map((trait, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-slate-600">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2.5 shrink-0"></div>
-                                                <span className="font-medium leading-relaxed italic">{trait}</span>
+                                        {(selectedFaculty.coursesTaught || (selectedFaculty.badAt && selectedFaculty.badAt.filter(t => t !== 'N/A').length > 0 ? selectedFaculty.badAt : null) || [
+                                            "Advanced Engineering Foundations",
+                                            "Undergraduate Laboratory & Project Mentorship"
+                                        ]).map((course, i) => (
+                                            <li key={i} className="flex items-start gap-3 text-slate-700">
+                                                <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></div>
+                                                <span className="font-medium leading-relaxed">{course}</span>
                                             </li>
                                         ))}
                                     </ul>

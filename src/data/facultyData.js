@@ -11,8 +11,8 @@ export const facultyMembers = [
         experience: "30+",
         publications: "460+",
         patents: "12",
-        goodAt: ["Nano-science & Technology", "Electron Microscopy", "Strategic Leadership", "Innovation Management"],
-        badAt: ["Extensive administrative responsibilities as Director MSIT", "Heavy focus on institutional growth and strategic leadership"],
+        researchInterests: ["Nano-science & Technology", "Electron Microscopy", "Strategic Leadership", "Innovation Management"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         pdfLink: "https://ampri.res.in/wp-content/uploads/2023/12/CV-of-Prof-AK-Srivastava-AMPRI-20231214.pdf",
         bio: "Prof. (Dr.) Avanish Kumar Srivastava is a distinguished scientist and academic leader with a Ph.D. from IISc Bangalore and M.Tech from IIT Kanpur. Former Director of CSIR-AMPRI and Acting Director of CSIR-NML, he is a Fellow of FNAE and consistently ranked among the top 2% of scientists globally by Stanford University. His pioneering work includes establishing high-resolution TEM facilities and developing indigenous Raman spectrometers."
     },
@@ -28,8 +28,8 @@ export const facultyMembers = [
         experience: "30+",
         publications: "0",
         patents: "0",
-        goodAt: ["Executive Governance", "Institutional Strategy", "Socio-economic Development"],
-        badAt: ["N/A"],
+        researchInterests: ["Executive Governance", "Institutional Strategy", "Socio-economic Development"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "President of Surajmal Memorial Education Society (SMES). Dedicated to the socio-economic development of the nation through top-tier technical and professional education."
     },
     {
@@ -44,8 +44,8 @@ export const facultyMembers = [
         experience: "15+",
         publications: "0",
         patents: "0",
-        goodAt: ["Organizational Governance", "Public Welfare", "Policy Formulation"],
-        badAt: ["N/A"],
+        researchInterests: ["Organizational Governance", "Public Welfare", "Policy Formulation"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Senior Vice President of Surajmal Memorial Education Society. Steers institutional policies to foster holistic student development and progressive administration."
     },
     {
@@ -60,8 +60,8 @@ export const facultyMembers = [
         experience: "25+",
         publications: "0",
         patents: "0",
-        goodAt: ["Administrative Leadership", "Academic Program Development", "Infrastructure Upgradation"],
-        badAt: ["N/A"],
+        researchInterests: ["Administrative Leadership", "Academic Program Development", "Infrastructure Upgradation"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Secretary of Surajmal Memorial Education Society. Actively promotes academic expansion, state-of-the-art infrastructure development, and national values in technical education."
     },
     {
@@ -76,8 +76,8 @@ export const facultyMembers = [
         experience: "25+",
         publications: "0",
         patents: "0",
-        goodAt: ["Financial Management", "Infrastructure Planning", "Resource Optimization"],
-        badAt: ["N/A"],
+        researchInterests: ["Financial Management", "Infrastructure Planning", "Resource Optimization"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Treasurer of Surajmal Memorial Education Society. Oversees financial health, funding strategies, and resource allocation to support world-class infrastructure and learning resources at MSIT."
     },
     {
@@ -92,8 +92,8 @@ export const facultyMembers = [
         experience: "15+",
         publications: "0",
         patents: "0",
-        goodAt: ["Strategic Operations", "Resource Governance"],
-        badAt: ["N/A"],
+        researchInterests: ["Strategic Operations", "Resource Governance"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Eminent member and nominee of the Surajmal Memorial Education Society, contributing to strategic decisions and operational excellence of the institute."
     },
     {
@@ -108,8 +108,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "0",
         patents: "0",
-        goodAt: ["Policy Implementation", "Institutional Planning"],
-        badAt: ["N/A"],
+        researchInterests: ["Policy Implementation", "Institutional Planning"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Governing Body member representing the society, specializing in administrative policy coordination and standard compliance."
     },
     {
@@ -124,8 +124,8 @@ export const facultyMembers = [
         experience: "40+",
         publications: "100+",
         patents: "0",
-        goodAt: ["Technical Education Policy", "Academic Standards", "University Administration"],
-        badAt: ["N/A"],
+        researchInterests: ["Technical Education Policy", "Academic Standards", "University Administration"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Distinguished academician, former Chairman of AICTE, and former Vice Chancellor. Guides MSIT on technical curriculum standards, regulatory compliance, and university alignments."
     },
     {
@@ -140,8 +140,8 @@ export const facultyMembers = [
         experience: "25+",
         publications: "35+",
         patents: "0",
-        goodAt: ["Geographic Studies", "Higher Education Administration", "Research Methodology"],
-        badAt: ["N/A"],
+        researchInterests: ["Geographic Studies", "Higher Education Administration", "Research Methodology"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Prominent educationist and associate professor at Delhi University. Brings rich academic perspective and research planning insights to the Governing Body."
     },
     {
@@ -156,8 +156,8 @@ export const facultyMembers = [
         experience: "45+",
         publications: "300+",
         patents: "5",
-        goodAt: ["Industrial Engineering", "Operations Research", "Institutional Benchmarking"],
-        badAt: ["N/A"],
+        researchInterests: ["Industrial Engineering", "Operations Research", "Institutional Benchmarking"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Distinguished academician, former Director of IIT Roorkee, founder-director of IIT UP, and former VC of UPTU. Guides MSIT's research ecosystem and quality benchmarks."
     },
     {
@@ -172,8 +172,8 @@ export const facultyMembers = [
         experience: "30+",
         publications: "0",
         patents: "0",
-        goodAt: ["School & College Education", "Academic Coordination"],
-        badAt: ["N/A"],
+        researchInterests: ["School & College Education", "Academic Coordination"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Eminent educationist contributing to secondary and higher technical education strategies for the SMES institutions."
     },
     {
@@ -188,8 +188,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "0",
         patents: "0",
-        goodAt: ["Curriculum Assessment", "Student Welfare Governance"],
-        badAt: ["N/A"],
+        researchInterests: ["Curriculum Assessment", "Student Welfare Governance"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Educationist with extensive experience in institutional policy, advising the board on student services and academic growth projects."
     },
     {
@@ -204,8 +204,8 @@ export const facultyMembers = [
         experience: "30+",
         publications: "0",
         patents: "2",
-        goodAt: ["Real Estate & Infrastructure Development", "Industrial Collaborations", "Project Execution"],
-        badAt: ["N/A"],
+        researchInterests: ["Real Estate & Infrastructure Development", "Industrial Collaborations", "Project Execution"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Eminent industrialist and infrastructure developer. Guides the institute on industry partnerships, infrastructure scaling, and career readiness."
     },
     {
@@ -220,8 +220,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "0",
         patents: "0",
-        goodAt: ["Enterprise Systems", "Industry-Academia Bridge", "CSR Initiatives"],
-        badAt: ["N/A"],
+        researchInterests: ["Enterprise Systems", "Industry-Academia Bridge", "CSR Initiatives"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Industry leader providing strategic input on entrepreneurial development, internship ecosystems, and corporate expectation alignment."
     },
     {
@@ -236,8 +236,8 @@ export const facultyMembers = [
         experience: "35+",
         publications: "150+",
         patents: "1",
-        goodAt: ["Electrical Engineering", "Control Systems", "Fuzzy Logic & Systems"],
-        badAt: ["N/A"],
+        researchInterests: ["Electrical Engineering", "Control Systems", "Fuzzy Logic & Systems"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Professor in the Department of Electrical Engineering at Jamia Millia Islamia, New Delhi. Renowned expert in fuzzy logic, system modeling, and electric drive controls."
     },
     {
@@ -252,8 +252,8 @@ export const facultyMembers = [
         experience: "40+",
         publications: "120+",
         patents: "0",
-        goodAt: ["Artificial Intelligence", "Natural Language Processing", "Compiler Design"],
-        badAt: ["N/A"],
+        researchInterests: ["Artificial Intelligence", "Natural Language Processing", "Compiler Design"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Former Professor in the Department of Computer Science & Engineering at IIT Delhi. Pioneer in AI and NLP education in India and author of leading computer science textbooks."
     },
     {
@@ -268,8 +268,8 @@ export const facultyMembers = [
         experience: "35+",
         publications: "180+",
         patents: "2",
-        goodAt: ["Signal Processing", "Statistical Signal Modeling", "Communication Engineering"],
-        badAt: ["N/A"],
+        researchInterests: ["Signal Processing", "Statistical Signal Modeling", "Communication Engineering"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Professor in the Department of Electrical Engineering at IIT Delhi. Research authority in digital signal processing, random processes, and wavelets."
     },
     {
@@ -284,8 +284,8 @@ export const facultyMembers = [
         experience: "25+",
         publications: "160+",
         patents: "3",
-        goodAt: ["Semiconductor Physics", "Gallium Nitride Devices", "Nano-materials"],
-        badAt: ["N/A"],
+        researchInterests: ["Semiconductor Physics", "Gallium Nitride Devices", "Nano-materials"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Professor in the Department of Physics at IIT Delhi. Leading researcher in wide bandgap semiconductors, thin films, and optoelectronic devices."
     },
     {
@@ -300,8 +300,8 @@ export const facultyMembers = [
         experience: "35+",
         publications: "5",
         patents: "4",
-        goodAt: ["Precision Metrology", "Industrial Instrument Design", "Entrepreneurship"],
-        badAt: ["N/A"],
+        researchInterests: ["Precision Metrology", "Industrial Instrument Design", "Entrepreneurship"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Managing Director of Kudale Instruments Pvt. Ltd., Pune. Pioneer in indigenous precision metrology instrument manufacturing in India."
     },
     {
@@ -316,8 +316,8 @@ export const facultyMembers = [
         experience: "45+",
         publications: "220+",
         patents: "6",
-        goodAt: ["Semiconductor Materials", "Solid State Devices", "Metrology Standards"],
-        badAt: ["N/A"],
+        researchInterests: ["Semiconductor Materials", "Solid State Devices", "Metrology Standards"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Former Director of the National Physical Laboratory (NPL) and Professor of Physics at IIT Delhi. Shanti Swarup Bhatnagar Awardee for engineering sciences."
     },
     {
@@ -332,8 +332,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Administration"],
-        badAt: ["N/A"],
+        researchInterests: ["Administration"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Managing administrative operations and providing essential support to the MSIT team."
     },
     {
@@ -348,8 +348,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Office Administration"],
-        badAt: ["N/A"],
+        researchInterests: ["Office Administration"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Providing key administrative support to ensure smooth departmental functions."
     },
     {
@@ -364,8 +364,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Administrative Support"],
-        badAt: ["N/A"],
+        researchInterests: ["Administrative Support"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Dedicated office assistant handling departmental coordination and staff support."
     },
     {
@@ -380,8 +380,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Support Operations"],
-        badAt: ["N/A"],
+        researchInterests: ["Support Operations"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Ensuring efficient operational support within the MSIT administrative department."
     },
     {
@@ -396,8 +396,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Technical Support"],
-        badAt: ["N/A"],
+        researchInterests: ["Technical Support"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Supporting the administrative team with technical coordination and office management."
     },
     {
@@ -412,8 +412,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Customer Service"],
-        badAt: ["N/A"],
+        researchInterests: ["Customer Service"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Handling front-desk operations and providing support to faculty and students."
     },
     {
@@ -428,8 +428,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Safe Driving"],
-        badAt: ["N/A"],
+        researchInterests: ["Safe Driving"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Expert driver ensuring safe and timely transportation for the MSIT institute."
     },
     {
@@ -444,8 +444,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Navigation"],
-        badAt: ["N/A"],
+        researchInterests: ["Navigation"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Reliable and skilled driver supporting the MSIT logistics and transport team."
     },
     {
@@ -460,8 +460,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Logistics Support"],
-        badAt: ["N/A"],
+        researchInterests: ["Logistics Support"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Committed driver ensuring professional transport services for MSIT staff."
     },
     {
@@ -476,8 +476,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Safe Logistics"],
-        badAt: ["N/A"],
+        researchInterests: ["Safe Logistics"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Providing dependable transportation and logistical support within the campus."
     },
     {
@@ -492,8 +492,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Library Management"],
-        badAt: ["N/A"],
+        researchInterests: ["Library Management"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Overseeing library resources and assisting students with research materials."
     },
     {
@@ -508,8 +508,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Resource Coordination"],
-        badAt: ["N/A"],
+        researchInterests: ["Resource Coordination"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Dedicated librarian ensuring easy access to academic journals and textbooks."
     },
     {
@@ -524,8 +524,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Financial Records"],
-        badAt: ["N/A"],
+        researchInterests: ["Financial Records"],
+        coursesTaught: ["Institutional Governance & Strategy", "Academic Policy & Accreditation Frameworks"],
         bio: "Assisting with financial administration and maintaining accurate departmental records."
     },
     {
@@ -540,8 +540,8 @@ export const facultyMembers = [
         experience: "N/A",
         publications: "0",
         patents: "0",
-        goodAt: ["Placement Portals", "Database Management"],
-        badAt: ["N/A"],
+        researchInterests: ["Placement Portals", "Database Management"],
+        coursesTaught: ["Research Leadership & Technology Incubation", "Undergraduate Mentorship & Industry Outreach"],
         bio: "Developing and maintaining technical systems for the MSIT Placement Cell."
     },
     {
@@ -556,8 +556,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "50+",
         patents: "9",
-        goodAt: ["Artificial Intelligence", "Machine Learning", "Wireless Sensor Networks", "Data Wrangling", "Excellence in Research Award (2023)"],
-        badAt: ["Significant administrative load as HOD CSE", "Balancing departmental oversight with extensive research output"],
+        researchInterests: ["Artificial Intelligence", "Machine Learning", "Wireless Sensor Networks", "Data Wrangling", "Excellence in Research Award (2023)"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-geetika-dhand.pdf",
         bio: "Dr. Geetika Dhand is an Associate Professor and the current HOD of the CSE Department at MSIT. With over 20 years of teching experience, she has made significant contributions to AI, Machine Learning, and Wireless Sensor Networks. She is a recipient of the 'Excellence in Research' award (2023) and has published several books and patents in the field of technology transfer."
     },
@@ -573,8 +573,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "34",
         patents: "2",
-        goodAt: ["Data Warehouse Design", "Federated Machine Learning", "Best Faculty Award (2016)", "Dean Academics Leadership", "Data Analytics"],
-        badAt: ["Significant administrative responsibilities as Dean Academics", "Overseeing institutional academic policy and compliance"],
+        researchInterests: ["Data Warehouse Design", "Federated Machine Learning", "Best Faculty Award (2016)", "Dean Academics Leadership", "Data Analytics"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/2024/10/09/naveen-detailed-profile.pdf",
         bio: "Dr. Naveen Dahiya is a Professor in the CSE Department and currently serves as the Dean (Academics) at MSIT. With extensive experience in academia and research since 2005, his expertise spans Data Warehouse Design and Federated Machine Learning. He is a recipient of the 'Best Faculty Award' (2016) and has multiple publications in high-impact SCIE journals."
     },
@@ -590,8 +590,8 @@ export const facultyMembers = [
         experience: "21+",
         publications: "36+",
         patents: "5",
-        goodAt: ["Wireless Communication", "Machine Learning", "IoT and Blockchain", "Gold Medalist (M.Tech)", "Excellence in Research Award (2022)"],
-        badAt: ["Heavy involvement in institutional committees (AICTE, NAAC, NBA)", "Balancing research with departmental leadership responsibilities"],
+        researchInterests: ["Wireless Communication", "Machine Learning", "IoT and Blockchain", "Gold Medalist (M.Tech)", "Excellence in Research Award (2022)"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/koyel-dg-name-of-faculty_main-profile-16jan2026.pdf",
         bio: "Dr. Koyel Datta Gupta is a Professor in the CSE Department at MSIT. She is an M.Tech Gold Medalist from Jadavpur University and earned her Ph.D. from Jamia Millia Islamia. With over 21 years of experience, her research focuses on Wireless Communication and Blockchain. She has received multiple 'Excellence in Research' awards and coordinates various high-level institutional cells including AICTE and Higher Study Cell."
     },
@@ -607,8 +607,8 @@ export const facultyMembers = [
         experience: "19+",
         publications: "20+",
         patents: "3",
-        goodAt: ["Software Engineering", "Agile Method Engineering", "Machine Learning", "IoT and Blockchain", "HOD CSE Leadership"],
-        badAt: ["Significant administrative load as HOD CSE", "Managing departmental infrastructure and academic schedules"],
+        researchInterests: ["Software Engineering", "Agile Method Engineering", "Machine Learning", "IoT and Blockchain", "HOD CSE Leadership"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/2024/10/09/rinky-dwivedi.pdf",
         bio: "Dr. Rinky Dwivedi is a Professor and the Head of Department (CSE) at MSIT. She holds a Ph.D. from DTU specializing in Agile Method Engineering. With over 19 years of teaching and research experience, her work focuses on Software Engineering and Soft Computing. She has received professional certifications like ISO Auditor and has guided numerous research projects in IoT."
     },
@@ -624,8 +624,8 @@ export const facultyMembers = [
         experience: "16+",
         publications: "13+",
         patents: "0",
-        goodAt: ["Web Technologies", "Information Retrieval", "Deepfake Detection", "Search Engine Optimization", "NSGA-III based Deep Learning"],
-        badAt: ["Common name profile conflicts on social research platforms", "Managing multiple high-level research data sets"],
+        researchInterests: ["Web Technologies", "Information Retrieval", "Deepfake Detection", "Search Engine Optimization", "NSGA-III based Deep Learning"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-naresh-kumar.pdf",
         bio: "Dr. Naresh Kumar is a Professor in the CSE Department at MSIT with over 16 years of academic experience. His research interests include Web Technologies, Information Retrieval, and Deep Learning applications such as COVID-19 screening and deepfake detection. He is an active member of ISTE and serves as the Convener of the SC/ST Cell at MSIT."
     },
@@ -641,8 +641,8 @@ export const facultyMembers = [
         experience: "21+",
         publications: "30+",
         patents: "4",
-        goodAt: ["Machine Learning", "Deep Learning", "Data Science", "GPU Computing (CUDA)", "IIT Delhi Research Fellowship"],
-        badAt: ["Significant focus on high-performance computing research", "Managing departmental technical labs and projects"],
+        researchInterests: ["Machine Learning", "Deep Learning", "Data Science", "GPU Computing (CUDA)", "IIT Delhi Research Fellowship"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-priyanka.pdf",
         bio: "Dr. Priyanka Nandal is an Associate Professor in the CSE Department at MSIT with 21 years of experience. She holds a Ph.D. from IIT Delhi and has a strong research background in Deep Learning and GPU Computing using CUDA. She has published over 30 research papers and holds 4 patents in areas including IoT-enabled robotics and edge computing."
     },
@@ -658,8 +658,8 @@ export const facultyMembers = [
         experience: "19+",
         publications: "45",
         patents: "5",
-        goodAt: ["Data Mining", "Image Processing", "Machine Learning", "IoT", "IBM TGMC Top Mentor (2013)", "Represented MSIT at ICCAD-24 Paris"],
-        badAt: ["Balancing intensive international research with domestic academic cycles", "Managing complex IoT and defense-related robotic hardware projects"],
+        researchInterests: ["Data Mining", "Image Processing", "Machine Learning", "IoT", "IBM TGMC Top Mentor (2013)", "Represented MSIT at ICCAD-24 Paris"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2024/10/29/sandeep-jaglan-detailed-cv.pdf",
         bio: "Dr. Sandeep Kumar is an Associate Professor in the CSE Department at MSIT with over 19 years of experience. He holds a Ph.D. from Maharshi Dayanand University and has a prolific research background with 45 publications and 5 patents. His expertise covers Data Mining, Image Processing, and IoT, and he recently represented MSIT at the ICCAD-24 conference in Paris, France."
     },
@@ -675,8 +675,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "40+",
         patents: "3+",
-        goodAt: ["Soft Computing", "Wireless Networking", "Machine Learning", "Algorithm Design", "Book Authoring"],
-        badAt: ["Managing extensive departmental committee work", "Balancing teaching loads with multi-patent filing cycles"],
+        researchInterests: ["Soft Computing", "Wireless Networking", "Machine Learning", "Algorithm Design", "Book Authoring"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-kavita-sheoran.pdf",
         bio: "Dr. Kavita Sheoran is an Associate Professor in the CSE Department at MSIT. With over 20 years of experience, her research interests include Soft Computing, Wireless Networking, and Machine Learning. She has published over 40 papers in indexed journals and has authored three books, contributing significantly to academic research and student mentorship."
     },
@@ -692,8 +692,8 @@ export const facultyMembers = [
         experience: "25+",
         publications: "30+",
         patents: "3",
-        goodAt: ["Wireless Sensor Networks (WSN)", "Green Computing", "Network Security", "Machine Learning", "National Award for Outstanding Academic Leader 2024"],
-        badAt: ["Significant administrative load as Convener of Institute-Industry Interaction Cell", "Managing hardware procurement and AMC for departmental labs"],
+        researchInterests: ["Wireless Sensor Networks (WSN)", "Green Computing", "Network Security", "Machine Learning", "National Award for Outstanding Academic Leader 2024"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-amita-yadav-website-resume.pdf",
         bio: "Dr. Amita Yadav is an Associate Professor in the CSE Department at MSIT with 25 years of extensive academic experience. She holds a Ph.D. and has received the 'National Award for Outstanding Academic Leader 2024'. Her research specializes in Green Computing and Wireless Sensor Networks, with over 30 publications and 3 patents. She also serves as the Convener of the Institute-Industry Interaction Cell."
     },
@@ -709,8 +709,8 @@ export const facultyMembers = [
         experience: "19+",
         publications: "20+",
         patents: "1+",
-        goodAt: ["Machine Learning", "Deep Learning", "Computer Vision", "Character Recognition", "Handwritten Character Analysis"],
-        badAt: ["Significant administrative load as NSS Program Officer", "Managing large-scale student cultural festivals (Anugoonj)"],
+        researchInterests: ["Machine Learning", "Deep Learning", "Computer Vision", "Character Recognition", "Handwritten Character Analysis"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/2024/10/09/savitaahlawat.pdf",
         bio: "Dr. Savita Ahlawat is an Associate Professor in the CSE Department at MSIT with over 19 years of experience. She holds a Ph.D. and specializes in Machine Learning and Computer Vision, with specific expertise in offline handwritten character recognition. She serves as the Program Officer of the NSS cell and is the In-charge of the Environmental and Humanitarian Society (Prakriti)."
     },
@@ -726,8 +726,8 @@ export const facultyMembers = [
         experience: "15+",
         publications: "40+",
         patents: "4",
-        goodAt: ["Software Testing", "Soft Computing", "Assistive Technologies", "Blockchain", "Research Excellence Award (2023)"],
-        badAt: ["Deep involvement in shift management and HOD responsibilities", "Managing large-scale AMC for computers and technical societies"],
+        researchInterests: ["Software Testing", "Soft Computing", "Assistive Technologies", "Blockchain", "Research Excellence Award (2023)"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2024/10/09/nishtha-jatana_main-profile.pdf",
         bio: "Dr. Nishtha Jatana is an Associate Professor and HOD (CSE 2nd Shift) at MSIT with over 15 years of experience. She holds a Ph.D. from USICT and specializes in Software Testing and Assistive Technologies for the visually impaired. She is a recipient of the 'Research Excellence Award (2023)' and serves as the Convener of TechSoc and IOSD."
     },
@@ -743,8 +743,8 @@ export const facultyMembers = [
         experience: "20",
         publications: "20+",
         patents: "1",
-        goodAt: ["Internet of Things (IoT)", "Artificial Intelligence", "Machine Learning", "DDoS Attack Detection", "Quantum Key Distribution"],
-        badAt: ["Significant administrative load as NBA/ISO Coordinator", "Managing complex departmental counseling and branch counseling awards"],
+        researchInterests: ["Internet of Things (IoT)", "Artificial Intelligence", "Machine Learning", "DDoS Attack Detection", "Quantum Key Distribution"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/2024/10/09/vimalgaur.pdf",
         bio: "Dr. Vimal Gaur is an Associate Professor in the CSE Department at MSIT with 20 years of academic experience. She holds a Ph.D. and has received the 'Certificate of Excellence in Research (2022)'. Her research focuses on IoT security, Machine Learning, and Quantum Key Distribution. She also serves as the ISO Certification Convener and has been a recipient of the IEEE 'Outstanding Service' award."
     },
@@ -760,8 +760,8 @@ export const facultyMembers = [
         experience: "16",
         publications: "50+",
         patents: "5",
-        goodAt: ["Software Reliability Modeling", "Soft Computing", "Optimization", "Machine Translation (English, Hindi, Sanskrit)", "Quality Research Excellence Award 2020"],
-        badAt: ["Significant focus on the intersection of diverse linguistic machine translation and software engineering", "Managing multi-domain patent lifecycles"],
+        researchInterests: ["Software Reliability Modeling", "Soft Computing", "Optimization", "Machine Translation (English, Hindi, Sanskrit)", "Quality Research Excellence Award 2020"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-sangeeta-detailed-profile.pdf",
         bio: "Dr. Sangeeta is an Associate Professor in the CSE Department at MSIT with 16 years of academic experience. She holds a Ph.D. from DTU and is a recipient of the 'Quality Research Excellence Award (2020)'. Her research expertise includes Software Reliability Modeling and NLP, with over 50 publications and 5 patents across IoT and Green Energy. She has also served as a session chair at international venues in Poland."
     },
@@ -777,8 +777,8 @@ export const facultyMembers = [
         experience: "19",
         publications: "30+",
         patents: "3",
-        goodAt: ["Mobile Security", "Machine Learning", "Cyber Security", "Malware Detection in Android", "Best Researcher Award 2022"],
-        badAt: ["Significant administrative load in departmental committees", "Balancing hardware-intensive robotics research with software simulation tasks"],
+        researchInterests: ["Mobile Security", "Machine Learning", "Cyber Security", "Malware Detection in Android", "Best Researcher Award 2022"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/2024/08/12/main-profile.pdf",
         bio: "Dr. Sapna Malik is an Associate Professor in the CSE Department at MSIT with 19 years of experience. She holds a Ph.D. and received the 'Best Researcher Award (2022)' from SMES. Her research is focused on Mobile Security and Machine Learning, specifically Android malware detection and IoT applications. She holds 3 patents and has published over 30 research papers."
     },
@@ -794,8 +794,8 @@ export const facultyMembers = [
         experience: "17+",
         publications: "50+",
         patents: "1",
-        goodAt: ["Database Management Systems", "Spatial and Temporal Databases", "Spatio-temporal distribution analytics", "Machine Learning", "GIS"],
-        badAt: ["Significant administrative load as active reviewer for multiple journals", "Balancing long-term database system research with curriculum-aligned lab management"],
+        researchInterests: ["Database Management Systems", "Spatial and Temporal Databases", "Spatio-temporal distribution analytics", "Machine Learning", "GIS"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2024/10/09/sonia-rathee.pdf",
         bio: "Dr. Sonia Rathee is an Associate Professor in the CSE Department at MSIT. Since 2007, she has contributed over 17 years of teaching and research experience. She holds a Ph.D. and specializes in Database Management Systems and Spatio-temporal Databases. With over 50 publications and a patent in ML-based image detection, her work often explores the intersection of AI and spatial data analytics."
     },
@@ -811,8 +811,8 @@ export const facultyMembers = [
         experience: "18",
         publications: "13+",
         patents: "0",
-        goodAt: ["Machine Learning", "Data Science", "Computer Vision", "Deep Learning", "Location-Based Advertising", "Geo-fencing"],
-        badAt: ["Significant administrative load as Suraj Sujan Magazine contributor", "Balancing long-term data science research with curriculum-aligned web development labs"],
+        researchInterests: ["Machine Learning", "Data Science", "Computer Vision", "Deep Learning", "Location-Based Advertising", "Geo-fencing"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-vinita-rohilla.pdf",
         bio: "Dr. Vinita Rohilla is an Assistant Professor in the CSE Department at MSIT with 18 years of experience. She holds a Ph.D. and specializes in Machine Learning and Computer Vision, with unique research in Location-Based Advertising and Geo-fencing. She has published over 13 research papers and has presented at various international IEEE and Springer conferences."
     },
@@ -828,8 +828,8 @@ export const facultyMembers = [
         experience: "18+",
         publications: "30+",
         patents: "4",
-        goodAt: ["Information Retrieval", "Semantic Similarity Measures", "Machine Learning", "Software Engineering", "Compiler Design"],
-        badAt: ["Significant administrative load as EBSB Cell Coordinator", "Managing multi-institutional patent collaborations for assistive technologies"],
+        researchInterests: ["Information Retrieval", "Semantic Similarity Measures", "Machine Learning", "Software Engineering", "Compiler Design"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/2024/10/09/shaily-malik.pdf",
         bio: "Dr. Shaily Malik is an Assistant Professor in the CSE Department at MSIT with over 18 years of academic experience. She holds a Ph.D. and specializes in Information Retrieval and Semantic Similarity Measures. She is the Coordinator of the EBSB Cell and has a strong research track record with 4 patents and numerous publications in SCI and Scopus indexed journals."
     },
@@ -845,8 +845,8 @@ export const facultyMembers = [
         experience: "17+",
         publications: "13+",
         patents: "1",
-        goodAt: ["Wireless Sensor Networks", "Swarm Intelligence", "Machine Learning", "IoT", "Speaker Recognition System"],
-        badAt: ["Significant administrative load as member of Time table committee", "Managing long-term sensor testbeds while balancing AI research"],
+        researchInterests: ["Wireless Sensor Networks", "Swarm Intelligence", "Machine Learning", "IoT", "Speaker Recognition System"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/2024/10/09/shalu.pdf",
         bio: "Dr. Shalu is an Assistant Professor in the CSE Department at MSIT with over 17 years of experience. She holds a Ph.D. from DCRUST and specializes in Wireless Sensor Networks and Swarm Intelligence. Her research is at the intersection of AI and IoT, with a patent in Speaker Recognition Systems. She has also served as a member of the college's Time Table Committee for three years."
     },
@@ -862,8 +862,8 @@ export const facultyMembers = [
         experience: "15+",
         publications: "20+",
         patents: "0",
-        goodAt: ["Topic Modeling", "Sentiment Analysis", "Machine Learning", "Data Mining", "Research Excellence Award (2022)"],
-        badAt: ["Significant focus on high-readership research analytics", "Balancing CS Chapter Advisor duties with intensive research supervision"],
+        researchInterests: ["Topic Modeling", "Sentiment Analysis", "Machine Learning", "Data Mining", "Research Excellence Award (2022)"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2023/10/07/dr-pooja-kherwa-detailed-profile.pdf",
         bio: "Dr. Pooja Kherwa is an Assistant Professor in the CSE Department at MSIT with 15+ years of experience. She holds a Ph.D. from GGSIPU and is the recipient of the 'Research Excellence Award (2022)'. Her research focuses on Topic Modeling and Sentiment Analysis, and she has been recognized as the 'most-read researcher' in her department multiple times on ResearchGate. She also serves as the CS Chapter Advisor."
     },
@@ -879,8 +879,8 @@ export const facultyMembers = [
         experience: "15+",
         publications: "3",
         patents: "1",
-        goodAt: ["Machine Learning", "Popularity Prediction", "Social Media Analytics", "Waste Management Systems (IoT)", "RRR Strategy"],
-        badAt: ["Significant administrative load in Examination Cell and Infrastructure Committee", "Managing hospitality for large-scale international conferences (ICAIA)"],
+        researchInterests: ["Machine Learning", "Popularity Prediction", "Social Media Analytics", "Waste Management Systems (IoT)", "RRR Strategy"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/2021/11/29/navdeep_TTDeLKN.pdf",
         bio: "Dr. Navdeep Bohra is an Assistant Professor in the CSE Department at MSIT with over 15 years of experience across academia and industry. He is currently pursuing his Ph.D. and specializes in Machine Learning and Popularity Prediction. He holds a granted patent for an IoT-based waste management system and has a strong background in departmental administrative roles, including the Examination Cell."
     },
@@ -896,8 +896,8 @@ export const facultyMembers = [
         experience: "16+",
         publications: "4",
         patents: "0",
-        goodAt: ["Control Systems", "Power Systems", "Machine Learning", "Energy Storage Optimization", "Research Excellence Award (2023)"],
-        badAt: ["Significant focus on power system modeling and controller tuning", "Balancing Ph.D. research with high-volume academic commitments"],
+        researchInterests: ["Control Systems", "Power Systems", "Machine Learning", "Energy Storage Optimization", "Research Excellence Award (2023)"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/2024/10/09/ravi-choudhary_main-profile.pdf",
         bio: "Dr. Ravi Choudhary is an Assistant Professor in the CSE Department at MSIT with 16 years of academic experience. He is currently pursuing his Ph.D. and holds an M.Tech. from NSIT Delhi. He was awarded the 'Research Excellence Award (2023)' by DTU for his SCI paper publications. His research interests include Power Systems, Intelligent Algorithms, and Machine Learning."
     },
@@ -913,8 +913,8 @@ export const facultyMembers = [
         experience: "16",
         publications: "3+",
         patents: "0",
-        goodAt: ["Image Processing", "Computer Vision", "Machine Learning", "Facial Emotion Recognition", "Image Encryption"],
-        badAt: ["Significant focus on hardware-software co-design for image analytics", "Managing long-term research projects in chaotic neural networks"],
+        researchInterests: ["Image Processing", "Computer Vision", "Machine Learning", "Facial Emotion Recognition", "Image Encryption"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/2024/10/09/sushil-kumar.pdf",
         bio: "Mr. Sushil Kumar is an Assistant Professor in the CSE Department at MSIT, where he has been a faculty member since January 2008. He holds an M.Tech. and is currently pursuing his Ph.D. His research expertise lies in Image Processing, Computer Vision, and Machine Learning, with a specific focus on facial emotion recognition and secure image encryption."
     },
@@ -930,8 +930,8 @@ export const facultyMembers = [
         experience: "25+",
         publications: "50+",
         patents: "3+",
-        goodAt: ["Speech Processing", "Natural Language Processing (NLP)", "Machine Learning", "Departmental Leadership (HOD CSE)", "Digital Image Processing"],
-        badAt: ["Significant administrative overhead as Head of Department", "Managing institute-level leadership roles while maintaining active research in NLP"],
+        researchInterests: ["Speech Processing", "Natural Language Processing (NLP)", "Machine Learning", "Departmental Leadership (HOD CSE)", "Digital Image Processing"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-poonam-detailed-profile.pdf",
         bio: "Dr. Poonam Bansal is a Professor and the Head of the Department (CSE) at MSIT. She holds a Ph.D. and has extensive experience in academia and research. Her primary expertise lies in Natural Language Processing (NLP) and Speech Processing, where she has published numerous research papers in international journals. She plays a pivotal leadership role at the institute, overseeing departmental growth and academic excellence."
     },
@@ -947,8 +947,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "30+",
         patents: "4",
-        goodAt: ["Human-Robot Interaction", "Computer Vision", "Machine Learning", "Innovation Ambassador (MHRD)", "IoT and WSN"],
-        badAt: ["Significant administrative load as IIC Content Coordinator and IEEE RAS Chapter Chair", "Managing high-volume NBA accreditation documentation while overseeing student startups"],
+        researchInterests: ["Human-Robot Interaction", "Computer Vision", "Machine Learning", "Innovation Ambassador (MHRD)", "IoT and WSN"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/dr-anshul-pareek_NmeoAP2.pdf",
         bio: "Dr. Anshul Pareek is an Assistant Professor in the CSE Department at MSIT with over 20 years of expertise. She holds a Ph.D. in Human-Robot Interfacing and is a certified 'Innovation Ambassador' by the MHRD. Her research spans AI, Computer Vision, and IoT, with four filed patents in healthcare and safety systems. She also serves as the Chapter Chair for IEEE RAS at MSIT."
     },
@@ -964,8 +964,8 @@ export const facultyMembers = [
         experience: "12+",
         publications: "11+",
         patents: "1",
-        goodAt: ["Databases", "Data Mining", "Machine Learning", "Video Popularity Forecast", "Deep Learning for Text Classification"],
-        badAt: ["Significant administrative load in departmental database management", "Managing high-volume intelligent analytics research while supervising student projects"],
+        researchInterests: ["Databases", "Data Mining", "Machine Learning", "Video Popularity Forecast", "Deep Learning for Text Classification"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/2024/10/09/neeti-sangwan_main-profile2024.pdf",
         bio: "Dr. Neeti Sangwan is an Assistant Professor in the CSE Department at MSIT with over 12 years of academic experience. She holds a Ph.D. and centers her research on Databases and Data Mining. She has published widely in SCIE and Scopus indexed journals, specifically in the areas of video popularity prediction and deep learning for text classification. She also holds a granted patent for an IoT-based waste management system."
     },
@@ -981,8 +981,8 @@ export const facultyMembers = [
         experience: "14",
         publications: "10+",
         patents: "4",
-        goodAt: ["Energy Harvesting", "Triboelectric Materials", "IoT in Healthcare", "Smart Energy Management", "Blockchain Applications"],
-        badAt: ["Significant administrative load as NAAC and NBA core member", "Managing Microsoft Learn Student Ambassador Chapter while overseeing multiple patents"],
+        researchInterests: ["Energy Harvesting", "Triboelectric Materials", "IoT in Healthcare", "Smart Energy Management", "Blockchain Applications"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/2024/10/09/parul.pdf",
         bio: "Dr. Parul Chaudhary is an Assistant Professor in the CSE Department at MSIT with over 14 years of research and teaching experience. She holds a Ph.D. from GGSIPU and is an expert in Energy Harvesting and IoT applications. A recipient of the 'Certificate of Excellence in Research (2023)', she has four patents to her credit and established the Microsoft Learn Student Ambassador Chapter at MSIT. Her research is at the forefront of piezoelectric materials and smart health systems."
     },
@@ -998,8 +998,8 @@ export const facultyMembers = [
         experience: "11+",
         publications: "9+",
         patents: "1",
-        goodAt: ["Digital Communication", "Sentiment Analysis (Tweepy)", "FPGA Implementation", "MIMO-OFDM Systems", "Information Security (AES/RSA)"],
-        badAt: ["Significant focus on high-speed hardware multipliers", "Managing complex MIMO-OFDM signal processing architectures"],
+        researchInterests: ["Digital Communication", "Sentiment Analysis (Tweepy)", "FPGA Implementation", "MIMO-OFDM Systems", "Information Security (AES/RSA)"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2024/10/09/swati-malik_main-profile.pdf",
         bio: "Ms. Swati Malik is an Assistant Professor in the CSE Department at MSIT with over 11 years of experience. She holds a Ph.D. and specializes in Digital Communication and Information Security. Her research includes real-time Sentiment Analysis and FPGA-based system design. She also holds a published patent for an 'Aluminium Louver'."
     },
@@ -1015,8 +1015,8 @@ export const facultyMembers = [
         experience: "9+",
         publications: "4+",
         patents: "1",
-        goodAt: ["IoT Gateways", "Fog Computing", "Quality of Service (QoS)", "Federated Learning", "Healthcare Monitoring Systems"],
-        badAt: ["Significant administrative load in Software Development and Placement cells", "Managing departmental ISO records and NBA documentation"],
+        researchInterests: ["IoT Gateways", "Fog Computing", "Quality of Service (QoS)", "Federated Learning", "Healthcare Monitoring Systems"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/2024/10/09/gunjan_main-profile.pdf",
         bio: "Ms. Gunjan Beniwal is an Assistant Professor in the CSE Department at MSIT with over 9 years of experience. She is currently pursuing her Ph.D. and has research expertise in Internet of Things (IoT), Fog Computing, and QoS monitoring. She is an active member of MSIT's Software Development and Placement cells and holds a patent in IoT-based healthcare monitoring."
     },
@@ -1032,8 +1032,8 @@ export const facultyMembers = [
         experience: "4+",
         publications: "4+",
         patents: "1",
-        goodAt: ["Machine Learning", "Image Processing", "Medical Image Analysis (Lung Cancer Detection)", "Blockchain Technology", "Biometric Sensing"],
-        badAt: ["Significant focus on high-impact conference representations (ICCAD Paris)", "Managing cross-disciplinary research in federated learning and IoT monitoring"],
+        researchInterests: ["Machine Learning", "Image Processing", "Medical Image Analysis (Lung Cancer Detection)", "Blockchain Technology", "Biometric Sensing"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/2021/11/29/vikrant-shokeen_main-profile-converted.pdf",
         bio: "Dr. Vikrant Shokeen is an Assistant Professor in the CSE Department at MSIT. He holds a Ph.D. and specializes in Machine Learning and Image Processing, with significant research in medical imaging for lung cancer detection. He recently represented MSIT at the international ICCAD conference in Paris (2024) and holds a patent for an IoT-based gas monitoring system."
     },
@@ -1049,8 +1049,8 @@ export const facultyMembers = [
         experience: "5+",
         publications: "6+",
         patents: "0",
-        goodAt: ["Big Data Analytics", "Neural Networks", "Image Processing", "2D-MoS2 Thin Films", "Data Analytics"],
-        badAt: ["Significant focus on high-impact research regarding 2D materials", "Managing academic load while pursuing advanced research in Neural Networks"],
+        researchInterests: ["Big Data Analytics", "Neural Networks", "Image Processing", "2D-MoS2 Thin Films", "Data Analytics"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/uploads/2026/03/06/sonica-upadhyay-detailed-profile.pdf",
         bio: "Ms. Sonica Upadhyay is an Assistant Professor in the CSE Department at MSIT with over 5 years of experience. She is currently pursuing her Ph.D. from Banasthali Vidyapith and holds an M.Tech. in Computer Science. Her research interests include Big Data Analytics, Neural Networks, and Image Processing, specifically focusing on 2D-MoS2 thin films."
     },
@@ -1066,8 +1066,8 @@ export const facultyMembers = [
         experience: "3+",
         publications: "4+",
         patents: "0",
-        goodAt: ["Machine Learning", "Deep Learning", "Image Processing", "Driver Drowsiness Detection", "Sign Language Recognition"],
-        badAt: ["Significant administrative load in institute website committee", "Managing high-volume research in Kotlin-based CNN applications"],
+        researchInterests: ["Machine Learning", "Deep Learning", "Image Processing", "Driver Drowsiness Detection", "Sign Language Recognition"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2024/10/09/jyoti.pdf",
         bio: "Ms. Jyoti is an Assistant Professor in the CSE Department at MSIT. She is currently pursuing her Ph.D. from NIT Delhi and holds an M.Tech. in Computer Science. Her research focus includes Machine Learning and Deep Learning, with specific projects in sign language recognition and driver drowsiness detection. She is also a member of the institute's Website Committee."
     },
@@ -1083,8 +1083,8 @@ export const facultyMembers = [
         experience: "2.5+",
         publications: "11+",
         patents: "1",
-        goodAt: ["Image Processing", "Machine Learning", "Video Summarization", "Face Recognition", "Pattern Recognition"],
-        badAt: ["Significant administrative load as Summer Training Coordinator and IIC Coordinator", "Managing high-volume research publications in serverless architecture and smart traffic systems"],
+        researchInterests: ["Image Processing", "Machine Learning", "Video Summarization", "Face Recognition", "Pattern Recognition"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/2024/10/09/vaani-full-profile.pdf",
         bio: "Ms. Vaani Garg is an Assistant Professor in the CSE Department at MSIT. She is currently pursuing her Ph.D. from DTU under a research scholarship. Her research expertise is in Image Processing, Machine Learning, and Video Summarization. She holds a patent for a 'Compact Electronic Single Braille Cell Display' and has been recognized for her work in pattern recognition."
     },
@@ -1100,8 +1100,8 @@ export const facultyMembers = [
         experience: "4",
         publications: "4+",
         patents: "0",
-        goodAt: ["Artificial Intelligence", "Data Science", "Web Optimization", "Deep Learning", "AgriTech Solutions"],
-        badAt: ["Significant focus on multithreaded server optimization", "Managing long-term research in hybrid software development methods"],
+        researchInterests: ["Artificial Intelligence", "Data Science", "Web Optimization", "Deep Learning", "AgriTech Solutions"],
+        coursesTaught: ["Computer Networks", "Software Engineering", "Cloud Computing & Big Data"],
         pdfLink: "https://www.msit.in/media/uploads/2026/03/06/kirti-detailed-profile.pdf",
         bio: "Ms. Kirti Dahiya is an Assistant Professor in the CSE Department at MSIT with 4 years of experience. She holds an M.Tech. and has a strong research focus on Artificial Intelligence and Data Science. She has contributed research papers to MSIT's Satyam Journal and International Journals, exploring topics like multithreaded servers and web performance optimization."
     },
@@ -1117,8 +1117,8 @@ export const facultyMembers = [
         experience: "10+",
         publications: "5+",
         patents: "1",
-        goodAt: ["Generative AI", "Machine Learning", "Deep Learning", "IoT", "Faculty Development Coordination"],
-        badAt: ["Significant administrative load as FDP Organiser for AICTE ATAL", "Managing high-volume research in educational technology and learning devices"],
+        researchInterests: ["Generative AI", "Machine Learning", "Deep Learning", "IoT", "Faculty Development Coordination"],
+        coursesTaught: ["Theory of Computation", "Object Oriented Programming", "Computer Architecture"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mrs-bhawna-bhardwaj_2MWOj2h.pdf",
         bio: "Ms. Bhawna Bhardwaj is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 10 years of experience. She is currently pursuing her Ph.D. in Information Technology from GGSIPU and holds an M.Tech. from C-DAC Noida. Her expertise lies in Machine Learning, Deep Learning, and Generative AI, and she holds a design patent for an 'Interactive Learning Device'."
     },
@@ -1134,8 +1134,8 @@ export const facultyMembers = [
         experience: "12+",
         publications: "40+",
         patents: "2",
-        goodAt: ["Natural Language Processing (NLP)", "Sanskrit Computational Processing", "Text-to-Speech Synthesis", "Machine Learning", "Data Analytics"],
-        badAt: ["Significant focus on word sense disambiguation and genetic algorithms", "Managing administrative duties for social and charitable trusts"],
+        researchInterests: ["Natural Language Processing (NLP)", "Sanskrit Computational Processing", "Text-to-Speech Synthesis", "Machine Learning", "Data Analytics"],
+        coursesTaught: ["Design & Analysis of Algorithms", "Operating Systems", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mrs-sabnam-kumari.pdf",
         bio: "Mrs. Sabnam Kumari is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 12 years of research and teaching experience. She has submitted her Ph.D. thesis at DCRUST, Murthal, and specializes in Natural Language Processing and Machine Learning. An author of the book 'Text-to-Speech Analytics', she is particularly recognized for her work in Sanskrit and Hindi language processing."
     },
@@ -1151,8 +1151,8 @@ export const facultyMembers = [
         experience: "21+",
         publications: "12+",
         patents: "0",
-        goodAt: ["Renewable Energy Resources", "Analog Electronics", "Microprocessors", "Wireless Sensor Networks", "Predictive Modeling"],
-        badAt: ["Significant administrative load in faculty development programs", "Managing high-volume curriculum for inter-polytechnic sports and technical coordination"],
+        researchInterests: ["Renewable Energy Resources", "Analog Electronics", "Microprocessors", "Wireless Sensor Networks", "Predictive Modeling"],
+        coursesTaught: ["Artificial Intelligence & Machine Learning", "Data Structures", "Compiler Design"],
         pdfLink: "https://www.msit.in/media/uploads/2026/02/17/mr-deepak-full-profile.pdf",
         bio: "Mr. Deepak Goyal is an Assistant Professor (Ad-hoc) in the CSE Department at MSIT with over 21 years of experience. He holds an M.Tech. from NSIT and is currently pursuing his Ph.D. A veteran educator, he specializes in Renewable Energy Resources, Analog Electronics, and Microprocessors. He has a long-standing career at MSIT and is actively involved in faculty development programs on universal human values."
     },
@@ -1168,8 +1168,8 @@ export const facultyMembers = [
         experience: "23+",
         publications: "70+",
         patents: "8",
-        goodAt: ["Medical Image Segmentation", "Soft Computing", "Machine Learning", "Fuzzy Systems", "IoT"],
-        badAt: ["Significant administrative load as HOD of IT Department", "Managing high-volume research publications and patent filings simultaneously"],
+        researchInterests: ["Medical Image Segmentation", "Soft Computing", "Machine Learning", "Fuzzy Systems", "IoT"],
+        coursesTaught: ["Data Structures & Algorithms", "Java & Python Programming", "Data Mining & Business Intelligence"],
         pdfLink: "https://www.msit.in/media/2024/08/03/resume_dr_prabhjot_kaur.pdf",
         bio: "Prof. (Dr.) Prabhjot Kaur Sidhu is a Professor and HOD of the IT Department at MSIT with over 23 years of experience. Ranked among the Top 2% of Researchers in the World by Stanford University (2020), she holds two PhDs and specializes in Medical Image Segmentation, Soft Computing, and Machine Learning. An extensively published academic, she has 8 patents and 3 books to her credit, and has served as HOD of the IT department multiple times."
     },
@@ -1185,8 +1185,8 @@ export const facultyMembers = [
         experience: "21+",
         publications: "75+",
         patents: "7",
-        goodAt: ["Wireless Sensor Networks (WSN)", "Compiler Design", "Soft Computing", "Artificial Intelligence", "Genetic Algorithms"],
-        badAt: ["Significant administrative load as former HOD of IT Department", "Managing high-volume research in network security and FPGA optimization"],
+        researchInterests: ["Wireless Sensor Networks (WSN)", "Compiler Design", "Soft Computing", "Artificial Intelligence", "Genetic Algorithms"],
+        coursesTaught: ["Mobile Application Development", "Operating Systems", "Internet of Things (IoT)"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-dr-tripti-sharma-it-faculty-msit.pdf",
         bio: "Prof. (Dr.) Tripti Sharma is a Professor in the IT Department at MSIT with over 21 years of academic experience. She holds two PhDs and is an expert in Wireless Sensor Networks (WSN) and Compiler Design. With over 75 research publications and multiple patents, she has been recognized as a 'Top 100 Educator' and received the Rashtriya Shiksha Gaurav Puruskar. She has also served as HOD of the IT department for several years."
     },
@@ -1202,8 +1202,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "30+",
         patents: "7",
-        goodAt: ["Software Cost Estimation", "Neural Networks", "Optimization Techniques", "Agile Methodologies", "AI in Clinical Domain"],
-        badAt: ["Significant administrative load as Best Branch Counselor and research coordinator", "Managing complex hybrid models for software development effort estimation while overseeing multiple patents"],
+        researchInterests: ["Software Cost Estimation", "Neural Networks", "Optimization Techniques", "Agile Methodologies", "AI in Clinical Domain"],
+        coursesTaught: ["Web Engineering & Full Stack", "Computer Networks", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2023/10/13/dranupama-kaushik_main-profile_update.pdf",
         bio: "Dr. Anupama Kaushik is an Associate Professor in the IT Department at MSIT with over 20 years of experience. Her expertise lies in Software Cost Estimation, Neural Networks, and Optimization Techniques. She holds two PhDs and is widely cited for her work in software development effort estimation. She holds 7 patents (1 granted) and has authored several book chapters on software cost optimization and machine learning."
     },
@@ -1219,8 +1219,8 @@ export const facultyMembers = [
         experience: "11+",
         publications: "4+",
         patents: "0",
-        goodAt: ["Digital Image Security", "Spiking Neural Networks", "Artificial Intelligence", "Image Processing", "Digital Watermarking"],
-        badAt: ["Significant focus on GA-based optimized image watermarking", "Managing academic load while maintaining research output in specialized Neural network fields"],
+        researchInterests: ["Digital Image Security", "Spiking Neural Networks", "Artificial Intelligence", "Image Processing", "Digital Watermarking"],
+        coursesTaught: ["Cloud Computing & Virtualization", "Software Engineering", "Information Security & Cryptography"],
         pdfLink: "https://www.msit.in/media/2021/12/01/sunesh_main-profile.pdf",
         bio: "Dr. Sunesh Malik is an Assistant Professor in the IT Department at MSIT with over 11 years of experience in the IT domain. She holds a Ph.D. and specializes in Digital Image Security and Spiking Neural Networks. Her research focus includes advanced image processing and digital watermarking techniques, and she is an active scholar in the field of Artificial Intelligence."
     },
@@ -1236,8 +1236,8 @@ export const facultyMembers = [
         experience: "13+",
         publications: "8+",
         patents: "2",
-        goodAt: ["Recommendation Systems", "Optimization Techniques", "Text Summarization", "Deep Learning", "Kubernetes Cluster Benchmarking"],
-        badAt: ["Significant administrative load as HOD of IT (2nd Shift)", "Managing complex multi-disciplinary research in EEG signal classification and Arduino-based neural states"],
+        researchInterests: ["Recommendation Systems", "Optimization Techniques", "Text Summarization", "Deep Learning", "Kubernetes Cluster Benchmarking"],
+        coursesTaught: ["Data Structures & Algorithms", "Java & Python Programming", "Data Mining & Business Intelligence"],
         pdfLink: "https://www.msit.in/media/2021/12/01/bharti_main-profile.pdf",
         bio: "Dr. Bharti Sharma is an Associate Professor in the IT Department at MSIT with over 13 years of experience. She holds a Ph.D. from GGSIPU and specializes in Recommendation Systems and Deep Learning. Currently serving as HOD of the IT (2nd shift), she has published several high-impact papers in SCIE journals and holds two patents in IoT-based healthcare and AI traffic management."
     },
@@ -1253,8 +1253,8 @@ export const facultyMembers = [
         experience: "17+",
         publications: "8+",
         patents: "1",
-        goodAt: ["Cloud Computing", "Fault Tolerance", "Workflow Scheduling", "Blockchain for Authentication", "Routing Protocols"],
-        badAt: ["Significant administrative load in ISO and placement coordination", "Managing social contribution through various NGOs and non-government trusts"],
+        researchInterests: ["Cloud Computing", "Fault Tolerance", "Workflow Scheduling", "Blockchain for Authentication", "Routing Protocols"],
+        coursesTaught: ["Mobile Application Development", "Operating Systems", "Internet of Things (IoT)"],
         pdfLink: "https://www.msit.in/media/2021/12/01/manojmalik_main-profile.pdf",
         bio: "Mr. Manoj Malik is an Assistant Professor in the IT Department at MSIT with over 17 years of experience. He holds an M.Tech. and specializes in Cloud Computing and Fault Tolerance. His research includes workflow scheduling and blockchain-based authentication. He holds a patent for process execution optimization and is actively involved in social initiatives through various NGOs."
     },
@@ -1270,8 +1270,8 @@ export const facultyMembers = [
         experience: "18+",
         publications: "20+",
         patents: "3",
-        goodAt: ["Ontology Engineering", "Semantic Web", "Knowledge Representation", "Neuro-Symbolic AI", "Deep Learning for IoT"],
-        badAt: ["Significant administrative load as ISO In-charge and Placement Faculty Coordinator", "Managing high-volume research in racial & gender inequities on social media and music recommendation systems"],
+        researchInterests: ["Ontology Engineering", "Semantic Web", "Knowledge Representation", "Neuro-Symbolic AI", "Deep Learning for IoT"],
+        coursesTaught: ["Web Engineering & Full Stack", "Computer Networks", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/uploads/2025/10/04/sonika-malik_main-profile.pdf",
         bio: "Dr. Sonika Malik is an Assistant Professor in the IT Department at MSIT with over 18 years of experience. She holds a Ph.D. from NIT Kurukshetra and is an expert in Ontology Engineering and the Semantic Web. Her research spans from Neuro-Symbolic AI to blockchained voting systems. She holds three patents in IoT and deep learning and has been recognized with MSIT's Research Excellence Award."
     },
@@ -1287,8 +1287,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "20+",
         patents: "1",
-        goodAt: ["Data Mining", "Machine Learning (GANs)", "Augmented Reality", "Image Segmentation", "Cyber Security (Game Theory)"],
-        badAt: ["Significant administrative load as Summer Training Incharge and ISO Incharge", "Managing complex research in driver-drowsiness detection and Indian sign language recognition"],
+        researchInterests: ["Data Mining", "Machine Learning (GANs)", "Augmented Reality", "Image Segmentation", "Cyber Security (Game Theory)"],
+        coursesTaught: ["Cloud Computing & Virtualization", "Software Engineering", "Information Security & Cryptography"],
         pdfLink: "https://www.msit.in/media/2021/11/24/jyoti-khurana_main-profile.pdf",
         bio: "Dr. Jyoti Khurana is an Assistant Professor in the IT Department at MSIT with 15 years of teaching experience. She is currently pursuing her Ph.D. from GGSIPU and specializes in Machine Learning and Augmented Reality. A recipient of several 'Excellence in Research' awards, she holds a patent for an intelligent image retrieval model and has published extensively on deep learning and image segmentation."
     },
@@ -1304,8 +1304,8 @@ export const facultyMembers = [
         experience: "12+",
         publications: "3+",
         patents: "1",
-        goodAt: ["Renewable Energy Harvesting", "Embedded Systems", "Microprocessors", "Circuit Designing", "Triboelectric Sensors"],
-        badAt: ["Significant administrative load from multiple prize-winning projects", "Managing complex research in thermoelectric materials and SMPS testing standards"],
+        researchInterests: ["Renewable Energy Harvesting", "Embedded Systems", "Microprocessors", "Circuit Designing", "Triboelectric Sensors"],
+        coursesTaught: ["Data Structures & Algorithms", "Java & Python Programming", "Data Mining & Business Intelligence"],
         pdfLink: "https://www.msit.in/media/2022/07/23/deepshikha-yadav_main-profile.pdf",
         bio: "Dr. Deepshikha Yadav is an Assistant Professor in the IT Department at MSIT with over 12 years of experience. She is currently pursuing her Ph.D. from GGSIPU and specializes in Renewable Energy Resources and Embedded Systems. Her award-winning research includes low-cost triboelectric sensors and solar energy harvesting, and she holds a patent for a Wi-Fi based home automation system."
     },
@@ -1321,8 +1321,8 @@ export const facultyMembers = [
         experience: "14+",
         publications: "3+",
         patents: "0",
-        goodAt: ["Data Warehousing", "Data Mining", "Machine Learning", "Deep Learning", "Image Segmentation"],
-        badAt: ["Significant administrative load from long-standing teaching career", "Managing complex meta-analysis of statistical techniques and transition strategies for IPv6"],
+        researchInterests: ["Data Warehousing", "Data Mining", "Machine Learning", "Deep Learning", "Image Segmentation"],
+        coursesTaught: ["Mobile Application Development", "Operating Systems", "Internet of Things (IoT)"],
         pdfLink: "https://www.msit.in/media/2021/11/24/meena-siwach_main-profile.pdf",
         bio: "Dr. Meena Siwach is an Assistant Professor in the IT Department at MSIT with over 14 years of teaching experience. She holds an M.Tech. (IT) and specializes in Data Warehousing and Data Mining. Her research contributions include papers on statistical techniques in ICAIA and transition strategies for networking, and she has been recognized with an Appreciation Certificate for her consistent performance."
     },
@@ -1338,8 +1338,8 @@ export const facultyMembers = [
         experience: "16+",
         publications: "12+",
         patents: "0",
-        goodAt: ["Machine Learning", "Web-Spam Detection", "Data Mining", "PageRank Optimization", "Feature Selection"],
-        badAt: ["Significant administrative load from MODROB coordination and M.Tech. supervision", "Managing extensive research in coupling/cohesion and software reconstruction"],
+        researchInterests: ["Machine Learning", "Web-Spam Detection", "Data Mining", "PageRank Optimization", "Feature Selection"],
+        coursesTaught: ["Web Engineering & Full Stack", "Computer Networks", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2021/11/24/surender-singh_main-profile.pdf",
         bio: "Mr. Surender Singh is an Assistant Professor in the IT Department at MSIT with over 16 years of experience. He holds an M.Tech. and specializes in Machine Learning and Web Mining. A co-coordinator for two AICTE MODROB projects, he has supervised multiple M.Tech. students and has published extensively on PageRank optimization and feature selection techniques."
     },
@@ -1355,8 +1355,8 @@ export const facultyMembers = [
         experience: "14+",
         publications: "3+",
         patents: "0",
-        goodAt: ["Wireless Communication", "Sensor Networks", "VANETs", "Intelligent Transportation Systems", "Placement Coordination"],
-        badAt: ["Significant administrative load as Placement Co-convener and IEEE Advisor", "Managing high-volume advisory roles for MTT-S and RAS chapters simultaneously"],
+        researchInterests: ["Wireless Communication", "Sensor Networks", "VANETs", "Intelligent Transportation Systems", "Placement Coordination"],
+        coursesTaught: ["Cloud Computing & Virtualization", "Software Engineering", "Information Security & Cryptography"],
         pdfLink: "https://www.msit.in/media/2021/11/13/parveen-kumar_main-profile.pdf",
         bio: "Mr. Parveen Kumar is an Assistant Professor in the IT Department at MSIT with over 14 years of experience. He serves as the Placement Co-convener and has been an advisor for IEEE MTT-S and RAS chapters. His expertise lies in Wireless Communication and Sensor Networks, with a research focus on Vehicular Ad-hoc Networks (VANET) and Intelligent Transportation Systems."
     },
@@ -1372,8 +1372,8 @@ export const facultyMembers = [
         experience: "10",
         publications: "3+",
         patents: "1",
-        goodAt: ["Blockchain Technology", "Identity and Access Management", "Information Security", "Secure Data Sharing", "Self-Sovereign Identity"],
-        badAt: ["Significant administrative load from IPR and Software Renewal Committee duties", "Managing high-volume research in decentralized identity while overseeing Australian patent implementation"],
+        researchInterests: ["Blockchain Technology", "Identity and Access Management", "Information Security", "Secure Data Sharing", "Self-Sovereign Identity"],
+        coursesTaught: ["Data Structures & Algorithms", "Java & Python Programming", "Data Mining & Business Intelligence"],
         pdfLink: "https://www.msit.in/media/2022/07/15/tripti-rathee2s_main-profile.pdf",
         bio: "Dr. Tripti Rathee is an Assistant Professor in the IT Department at MSIT with 10 years of experience. She holds a Ph.D. and is an expert in Blockchain Technology and Identity Management. Her research on secure identity management using blockchain has been published in high-impact SCIE journals (IF 13), and she holds an Australian patent for a blockchain-based data verification system."
     },
@@ -1389,8 +1389,8 @@ export const facultyMembers = [
         experience: "10+",
         publications: "6+",
         patents: "0",
-        goodAt: ["Text Summarization", "Deep Learning", "Natural Language Processing (NLP)", "Machine Learning", "Fuzzy Logic"],
-        badAt: ["Significant administrative load from Media Cell and NBA coordination", "Managing complex research in ensembled approach for multi-document extractive text summarization"],
+        researchInterests: ["Text Summarization", "Deep Learning", "Natural Language Processing (NLP)", "Machine Learning", "Fuzzy Logic"],
+        coursesTaught: ["Mobile Application Development", "Operating Systems", "Internet of Things (IoT)"],
         pdfLink: "https://www.msit.in/media/2021/12/01/minakshi-tomer_main.pdf",
         bio: "Dr. Minakshi Tomer is an Assistant Professor in the IT Department at MSIT with 10 years of academic experience. She holds a M.Tech. (IT) and specializes in Natural Language Processing and Deep Learning. Her research focus includes ensembled approaches for text summarization using fuzzy logic and LSTM networks, and she has been recognized for her coordination of major inter-college competitions."
     },
@@ -1406,8 +1406,8 @@ export const facultyMembers = [
         experience: "10",
         publications: "3+",
         patents: "0",
-        goodAt: ["Digital Signal Processing (DSP)", "Adaptive System Identification", "Optimization Algorithms", "Bio-inspired Computing", "Neural Network Filters"],
-        badAt: ["Managing complex research in adaptive infinite impulse response systems", "Significant focus on teacher-learner based optimization for digital differentiators"],
+        researchInterests: ["Digital Signal Processing (DSP)", "Adaptive System Identification", "Optimization Algorithms", "Bio-inspired Computing", "Neural Network Filters"],
+        coursesTaught: ["Web Engineering & Full Stack", "Computer Networks", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2021/11/24/sandeepsingh_main-profile.pdf",
         bio: "Dr. Sandeep Singh is an Assistant Professor in the IT Department at MSIT with 10 years of experience. He is currently pursuing his Ph.D. and specializes in Digital Signal Processing (DSP). His research involves adaptive IIR system identification using bio-inspired optimization algorithms like teacher-learner based optimization and dragonfly algorithms, with core publications in SCI journals."
     },
@@ -1423,8 +1423,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "10+",
         patents: "1",
-        goodAt: ["Machine Learning in Healthcare", "IoT for Healthcare", "Visual Cryptography", "Software Quality Assurance", "Digital Enveloping"],
-        badAt: ["Significant administrative load from ISO and project coordination", "Managing research in obstruction evasion robots while overseeing healthcare IoT implementations"],
+        researchInterests: ["Machine Learning in Healthcare", "IoT for Healthcare", "Visual Cryptography", "Software Quality Assurance", "Digital Enveloping"],
+        coursesTaught: ["Cloud Computing & Virtualization", "Software Engineering", "Information Security & Cryptography"],
         pdfLink: "https://www.msit.in/media/2021/11/24/mamta-gahlan_main-profile.pdf",
         bio: "Ms. Mamta Devi is an Assistant Professor in the IT Department at MSIT with 15 years of experience. She is currently pursuing her Ph.D. and specializes in Machine Learning and IoT applications for healthcare. Her research explores visual cryptography and software quality assurance, and she holds a patent for an IoT-enabled obstruction evasion robot."
     },
@@ -1440,8 +1440,8 @@ export const facultyMembers = [
         experience: "10+",
         publications: "20+",
         patents: "6",
-        goodAt: ["Natural Language Processing (NLP)", "Machine Translation (Sanskrit)", "Software Reliability", "Neural Machine Translation", "Universal Networking Language (UNL)"],
-        badAt: ["Significant administrative load from NIRF team and Media Cell coordination", "Managing high-volume research in e-commerce quality and encrypted steganography simultaneously"],
+        researchInterests: ["Natural Language Processing (NLP)", "Machine Translation (Sanskrit)", "Software Reliability", "Neural Machine Translation", "Universal Networking Language (UNL)"],
+        coursesTaught: ["Data Structures & Algorithms", "Java & Python Programming", "Data Mining & Business Intelligence"],
         pdfLink: "https://www.msit.in/media/2022/11/29/dr-sitender-resume.pdf",
         bio: "Dr. Sitender Malik is an Assistant Professor in the IT Department at MSIT. He holds a Ph.D. from Thapar Institute of Engineering and Technology and specializes in Natural Language Processing and Machine Translation. His award-winning research includes six patents and two books, with a core focus on Sanskrit-to-English translation and software reliability models."
     },
@@ -1457,8 +1457,8 @@ export const facultyMembers = [
         experience: "10+",
         publications: "12+",
         patents: "1",
-        goodAt: ["Blockchain Technology", "Information Security", "Lattice-based Signatures", "Wireless Networks", "Sensitive Data Protection"],
-        badAt: ["Significant administrative load from outstanding contribution recognition", "Managing complex vulnerability assessments for cryptocurrency wallets while overseeing IoT patent implementation"],
+        researchInterests: ["Blockchain Technology", "Information Security", "Lattice-based Signatures", "Wireless Networks", "Sensitive Data Protection"],
+        coursesTaught: ["Mobile Application Development", "Operating Systems", "Internet of Things (IoT)"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-ms-saba-khanum-msit-it-faculty.pdf",
         bio: "Dr. Saba Khanum is an Assistant Professor in the IT Department at MSIT with over 10 years of experience. She is currently pursuing her Ph.D. from Jamia Millia Islamia and is an expert in Blockchain and Information Security. A recipient of a 'Best Paper Award' in 2023, she has published extensively on lattice-based signatures and sensitive data protection in blockchain applications."
     },
@@ -1474,8 +1474,8 @@ export const facultyMembers = [
         experience: "10",
         publications: "4+",
         patents: "0",
-        goodAt: ["Wireless Communication", "Vehicular Networking (VANETs)", "Machine Learning", "SDTMRP Routing", "Image Colorization"],
-        badAt: ["Significant administrative load as Life Time Member of ISTE New Delhi", "Managing complex performance evaluation of machine learning algorithms in SD-VANET environments"],
+        researchInterests: ["Wireless Communication", "Vehicular Networking (VANETs)", "Machine Learning", "SDTMRP Routing", "Image Colorization"],
+        coursesTaught: ["Web Engineering & Full Stack", "Computer Networks", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-preeti-sehrawat-it-faculty-msit.pdf",
         bio: "Dr. Preeti Sehrawat is an Assistant Professor in the IT Department at MSIT with 10 years of experience. She is currently pursuing her Ph.D. and specializes in Wireless Communication and Vehicular Networking (VANETs). Her latest research, published in high-impact journals, focuses on machine learning algorithms for efficient multimedia transmission in SD-VANET systems."
     },
@@ -1491,8 +1491,8 @@ export const facultyMembers = [
         experience: "7",
         publications: "4+",
         patents: "0",
-        goodAt: ["Semantic Web", "Ontology Design", "Semantic Similarity", "IWD Optimization", "ECG Signal Denoising"],
-        badAt: ["Significant administrative load as ISO coordinator and Firewall Committee member", "Managing complex research in ontology merging while overseeing college magazine coordination"],
+        researchInterests: ["Semantic Web", "Ontology Design", "Semantic Similarity", "IWD Optimization", "ECG Signal Denoising"],
+        coursesTaught: ["Cloud Computing & Virtualization", "Software Engineering", "Information Security & Cryptography"],
         pdfLink: "https://www.msit.in/media/2021/11/24/preeti-rathee_main-profile.pdf",
         bio: "Dr. Preeti Rathee is an Assistant Professor in the IT Department at MSIT with 7 years of teaching experience. She completed her Ph.D. from GGSIPU in 2023 and specializes in the Semantic Web and Explainable AI (XAI). Her research focus includes ontology merging and semantic similarity measures using advanced optimization algorithms like Ant Colony Optimization."
     },
@@ -1508,8 +1508,8 @@ export const facultyMembers = [
         experience: "7",
         publications: "6+",
         patents: "1",
-        goodAt: ["Data Science", "IoT", "Image Steganography", "Software Quality Assurance", "Test Case Reduction"],
-        badAt: ["Significant administrative load from patent management", "Managing complex research in system orientation and automatic test case generation"],
+        researchInterests: ["Data Science", "IoT", "Image Steganography", "Software Quality Assurance", "Test Case Reduction"],
+        coursesTaught: ["Data Structures & Algorithms", "Java & Python Programming", "Data Mining & Business Intelligence"],
         pdfLink: "https://www.msit.in/media/2021/11/24/ashish_main-profile.pdf",
         bio: "Ms. Ashish Kumari is an Assistant Professor in the IT Department at MSIT with 7 years of experience. She holds an M.Tech. and is currently pursuing her Ph.D. from DTU. Her research specializes in Data Science and IoT, specifically focusing on steganography and automated testing, for which she holds a patent in IoT-based intelligent waste management systems."
     },
@@ -1525,8 +1525,8 @@ export const facultyMembers = [
         experience: "2+",
         publications: "2+",
         patents: "0",
-        goodAt: ["Machine Learning", "Deep Learning", "Medical Imaging", "Vessel Segmentation", "Data Wrangling"],
-        badAt: ["Significant administrative load as Proctor and Committee member", "Managing high-volume research in blockchain projects while overseeing environmental management duties"],
+        researchInterests: ["Machine Learning", "Deep Learning", "Medical Imaging", "Vessel Segmentation", "Data Wrangling"],
+        coursesTaught: ["Mobile Application Development", "Operating Systems", "Internet of Things (IoT)"],
         pdfLink: "https://www.msit.in/media/2021/11/24/akshay-singh_main-profile.pdf",
         bio: "Mr. Akshay Singh is an Assistant Professor in the IT Department at MSIT. He holds an M.Tech. from USICT (GGSIPU) and is a three-time GATE qualifier. With previous experience as a J.R.F. at AIIMS Delhi and Associate Consultant at Oodles Technologies, his research focuses on deep learning applications in medical imaging and automated diagnostic systems."
     },
@@ -1542,8 +1542,8 @@ export const facultyMembers = [
         experience: "11+",
         publications: "12+",
         patents: "3",
-        goodAt: ["Internet of Things", "Cloud Computing", "Healthcare Analytics", "Explainable AI (XAI)", "Blockchain"],
-        badAt: ["Significant administrative load from GDSC advising and farewell organizing", "Managing complex research in LPWAN technologies while overseeing multiple smart grid patents"],
+        researchInterests: ["Internet of Things", "Cloud Computing", "Healthcare Analytics", "Explainable AI (XAI)", "Blockchain"],
+        coursesTaught: ["Web Engineering & Full Stack", "Computer Networks", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-dr-priya-dalal-it-faculty-msit.pdf",
         bio: "Dr. Priya Dalal is an Assistant Professor in the IT Department at MSIT with over 11 years of experience. She holds a Ph.D. and specializes in IoT and Cloud Computing. An active researcher with three patents and a book on Data Science, her work focuses on integrated healthcare models and AI-driven systems for emerging vehicle technologies."
     },
@@ -1559,8 +1559,8 @@ export const facultyMembers = [
         experience: "5+",
         publications: "3+",
         patents: "0",
-        goodAt: ["Cloud Computing", "Sensor Networks", "Routing Protocols (PEGASIS)", "Web Security (SQLi)", "Online Education"],
-        badAt: ["Significant administrative load as Proctor and Mentor", "Managing high-volume online platform content reviews while overseeing R&D team duties"],
+        researchInterests: ["Cloud Computing", "Sensor Networks", "Routing Protocols (PEGASIS)", "Web Security (SQLi)", "Online Education"],
+        coursesTaught: ["Cloud Computing & Virtualization", "Software Engineering", "Information Security & Cryptography"],
         pdfLink: "https://www.msit.in/media/2022/05/09/priyankak_cv_msit.pdf",
         bio: "Ms. Priyanka Kalkandha is an Assistant Professor in the IT Department at MSIT with 5 years of teaching experience. She holds an M.Tech. from BIT Mesra and is a three-time NTA NET qualifier. Her expertise lies in energy-efficient routing protocols for sensor networks and web security, with previous experience as an educator and content reviewer for major platforms like Unacademy."
     },
@@ -1576,8 +1576,8 @@ export const facultyMembers = [
         experience: "12.5+",
         publications: "2+",
         patents: "0",
-        goodAt: ["Data Mining", "Internet of Things (IoT)", "Biometric Techniques", "Cyber Security", "Deep Learning"],
-        badAt: ["Significant administrative load from technical training and proctor duties", "Managing complex research in ubiquitous computing while overseeing software certifications"],
+        researchInterests: ["Data Mining", "Internet of Things (IoT)", "Biometric Techniques", "Cyber Security", "Deep Learning"],
+        coursesTaught: ["Data Structures & Algorithms", "Java & Python Programming", "Data Mining & Business Intelligence"],
         pdfLink: "https://www.msit.in/media/2023/10/14/detailed-profile-nidhi-goel-it-faculty-msit.pdf",
         bio: "Ms. Nidhi Goel is an Assistant Professor in the IT Department at MSIT with over 12 years of academic experience. She holds an M.Tech. (CSE) and MCA, and is currently pursuing her Ph.D. from GGSIPU. Her research expertise includes Data Mining and IoT, and she has been recognized for her outstanding academic record including a first position in her MCA at the university level."
     },
@@ -1593,8 +1593,8 @@ export const facultyMembers = [
         experience: "9",
         publications: "2+",
         patents: "0",
-        goodAt: ["Machine Learning", "Operating Systems", "Ethical Hacking", "Data Security", "Intelligent System Design"],
-        badAt: ["Managing significant research load in ethical hacking alongside ad-hoc professor duties", "Coordinating high-volume data security projects while pursuing Ph.D. at DTU"],
+        researchInterests: ["Machine Learning", "Operating Systems", "Ethical Hacking", "Data Security", "Intelligent System Design"],
+        coursesTaught: ["Mobile Application Development", "Operating Systems", "Internet of Things (IoT)"],
         pdfLink: "https://www.msit.in/media/2024/10/09/indu_main-profile-1.pdf",
         bio: "Ms. Indu Khatri is an Assistant Professor in the IT Department at MSIT. She is currently pursuing her Ph.D. from Delhi Technological University (DTU) and has 9 years of experience in higher education. Her research specializes in Machine Learning and Operating Systems, with specific interests in ethical hacking and data security protection."
     },
@@ -1610,8 +1610,8 @@ export const facultyMembers = [
         experience: "2+",
         publications: "1+",
         patents: "0",
-        goodAt: ["Mobile Networks", "MANETs", "Congestion Control", "Wireless Sensor Networks", "Admission Management"],
-        badAt: ["Significant administrative load as Proctor and Mentor", "Managing complex research in bottleneck flow control while overseeing college counselling sessions"],
+        researchInterests: ["Mobile Networks", "MANETs", "Congestion Control", "Wireless Sensor Networks", "Admission Management"],
+        coursesTaught: ["Web Engineering & Full Stack", "Computer Networks", "Database Management Systems"],
         pdfLink: "https://www.msit.in/media/uploads/2025/10/06/detailedprofilejyotisandhu.pdf",
         bio: "Ms. Jyoti Sandhu is an Assistant Professor in the IT Department at MSIT. She holds an M.Tech. from Kurukshetra University and specializes in Mobile Networks and Congestion Control in MANETs. Her research focuses on bandwidth utilization in wireless sensors, and she actively contributes to department administration as a proctor for second-year students."
     },
@@ -1627,8 +1627,8 @@ export const facultyMembers = [
         experience: "32+",
         publications: "50+",
         patents: "2",
-        goodAt: ["Speech Signal Processing", "Speech Synthesis", "Wireless Communication", "MIMO-OFDM Systems", "Machine Learning"],
-        badAt: ["Significant administrative load as Professor & HOD", "Managing complex research in automatic phonetic segmentation while overseeing departmental coordination"],
+        researchInterests: ["Speech Signal Processing", "Speech Synthesis", "Wireless Communication", "MIMO-OFDM Systems", "Machine Learning"],
+        coursesTaught: ["Analog & Digital Communication", "Electromagnetic Field Theory", "Embedded Systems"],
         pdfLink: "https://www.msit.in/media/2021/11/12/archana_main-profile-1_D5w1Mww.pdf",
         bio: "Dr. Archana Balyan is the Professor and Head of Department (HOD) for ECE at MSIT with over 32 years of academic and administrative experience. She holds a Ph.D. from GGSIPU and an M.E. from DTU. Her research expertise includes wireless communication, MIMO-OFDM systems, and speech signal processing, specifically focusing on Hindi speech synthesis using HMM models."
     },
@@ -1644,8 +1644,8 @@ export const facultyMembers = [
         experience: "15+",
         publications: "20+",
         patents: "1",
-        goodAt: ["VLSI Design", "Nano-electronics", "Signal Processing", "Image Processing", "Emotion Recognition"],
-        badAt: ["Significant administrative load from innovation cell mentorship", "Managing complex research in FinFET and TFET technologies while overseeing ECell activities"],
+        researchInterests: ["VLSI Design", "Nano-electronics", "Signal Processing", "Image Processing", "Emotion Recognition"],
+        coursesTaught: ["Antenna & Wave Propagation", "Signals & Systems", "Wireless Communication Networks"],
         pdfLink: "https://www.msit.in/media/2021/11/13/neeru-rathee.pdf",
         bio: "Dr. Neeru Rathee is an Associate Professor in the ECE Department at MSIT. She specializes in VLSI Design, Low Power Electronics, and Nano-electronics, with significant research in FinFET and TFET technologies. An award-winning academic with multiple mentorship and research excellence honors, she has authored two books and a patent on ML-based big data processing."
     },
@@ -1661,8 +1661,8 @@ export const facultyMembers = [
         experience: "18+",
         publications: "15+",
         patents: "3",
-        goodAt: ["Speech Processing", "Renewable Energy", "Machine Learning", "Microstrip Patch Antenna", "Admission Counselling"],
-        badAt: ["Significant administrative load as Head of ECE-2nd Shift", "Managing high-volume research in neural networks for unsupervised deep learning while overseeing multiple institute committees"],
+        researchInterests: ["Speech Processing", "Renewable Energy", "Machine Learning", "Microstrip Patch Antenna", "Admission Counselling"],
+        coursesTaught: ["Control Systems Engineering", "Digital Electronic Circuits", "Optical Communication"],
         pdfLink: "https://www.msit.in/media/2021/11/24/pardeep-sangwan_main-profile.pdf",
         bio: "Dr. Pardeep Sangwan is an Associate Professor and Head of Department (ECE-2nd Shift) at MSIT. With over 18 years of experience at the institute, he holds a Ph.D. from UTU Dehradun and an M.Tech. from NIT Kurukshetra. His research focuses on speech processing and renewable energy, and he holds three patents for devices ranging from medical gloves to microstrip antennas."
     },
@@ -1678,8 +1678,8 @@ export const facultyMembers = [
         experience: "20+",
         publications: "15+",
         patents: "1",
-        goodAt: ["Energy Harvesting", "Self-Powered Systems", "Electronic Circuit Design", "Piezoelectricity", "Academic Administration"],
-        badAt: ["Significant administrative load as Dean Academics and former HOD", "Managing complex research in triboelectric nanogenerators while overseeing AICTE approvals and JAC convenorship"],
+        researchInterests: ["Energy Harvesting", "Self-Powered Systems", "Electronic Circuit Design", "Piezoelectricity", "Academic Administration"],
+        coursesTaught: ["Digital Signal Processing", "Microprocessors & Microcontrollers", "VLSI Design"],
         pdfLink: "https://www.msit.in/media/2021/11/02/dr-puneet-azad.pdf",
         bio: "Dr. Puneet Azad is an Associate Professor and the Dean Academics at MSIT, where he has served since 2002. He holds a Ph.D. from Gautam Buddha University and an M.E. from Delhi College of Engineering. An expert in energy harvesting and self-powered IoT systems, his research has been published on the cover of leading journals like the Bulletin of Materials Science."
     },
@@ -1695,8 +1695,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "7+",
         patents: "1",
-        goodAt: ["Communication Systems", "Machine Learning", "Wireless Networks", "Vehicular Networks", "Image Colorization"],
-        badAt: ["Significant administrative load from innovation cell mentorship", "Managing complex research in dynamic handover decisions while overseeing MHRD innovation ambassador duties"],
+        researchInterests: ["Communication Systems", "Machine Learning", "Wireless Networks", "Vehicular Networks", "Image Colorization"],
+        coursesTaught: ["Analog & Digital Communication", "Electromagnetic Field Theory", "Embedded Systems"],
         pdfLink: "https://www.msit.in/media/2021/11/13/sudeshpahal_main-profile.pdf",
         bio: "Dr. Sudesh Pahal is an Associate Professor in the ECE Department at MSIT with 15 years of experience. She holds a Ph.D. and specializes in Communication Systems and Machine Learning. An active researcher with a patent in ML-based big data processing, her work includes predictive handover mechanisms in next-generation wireless networks and image colorization using deep CNNs."
     },
@@ -1712,8 +1712,8 @@ export const facultyMembers = [
         experience: "16+",
         publications: "10+",
         patents: "2",
-        goodAt: ["Wireless communication", "MANETs", "Artificial Intelligence", "Digital Electronics", "Placement Management"],
-        badAt: ["Significant administrative load as Placement Convener", "Managing complex research in energy-efficient routing while overseeing student career progression"],
+        researchInterests: ["Wireless communication", "MANETs", "Artificial Intelligence", "Digital Electronics", "Placement Management"],
+        coursesTaught: ["Antenna & Wave Propagation", "Signals & Systems", "Wireless Communication Networks"],
         pdfLink: "https://www.msit.in/media/2021/11/13/meena-rao_main-profile.pdf",
         bio: "Dr. Meena Rao is an Associate Professor and the Placement Convener in the ECE Department at MSIT, with over 16 years of experience. She holds a Ph.D. and specializes in Wireless Communication and MANETs. Her research on energy-efficient routing protocols and AI-driven healthcare rescue systems has been published in several SCIE and SCOPUS indexed journals."
     },
@@ -1729,8 +1729,8 @@ export const facultyMembers = [
         experience: "19",
         publications: "22+",
         patents: "1",
-        goodAt: ["Image Processing", "Video Processing", "Embedded Systems", "Artificial Intelligence", "Digital Watermarking"],
-        badAt: ["Significant administrative load from lab management", "Managing complex research in zero motion prejudgment while overseeing department-wide ISO standardization for lab manuals"],
+        researchInterests: ["Image Processing", "Video Processing", "Embedded Systems", "Artificial Intelligence", "Digital Watermarking"],
+        coursesTaught: ["Control Systems Engineering", "Digital Electronic Circuits", "Optical Communication"],
         pdfLink: "https://www.msit.in/media/2021/11/13/shaifali.pdf",
         bio: "Dr. Shaifali M. Arora is an Associate Professor in the ECE Department at MSIT with 19 years of academic experience. She holds a Ph.D. and specializes in Image and Video Processing and Embedded Systems. An accomplished author with three books and a patent in IoT healthcare, she has made significant contributions to the department, including setting up the Digital Image Processing Lab."
     },
@@ -1746,8 +1746,8 @@ export const facultyMembers = [
         experience: "17",
         publications: "11+",
         patents: "1",
-        goodAt: ["Antenna Design", "Embedded Systems", "Signal Processing", "Analog Electronics", "Reconfigurable Resonators"],
-        badAt: ["Significant administrative load from research lab management", "Managing complex research in superstrate embedded hybrid MHD antennas while overseeing ISRO regional coordination"],
+        researchInterests: ["Antenna Design", "Embedded Systems", "Signal Processing", "Analog Electronics", "Reconfigurable Resonators"],
+        coursesTaught: ["Digital Signal Processing", "Microprocessors & Microcontrollers", "VLSI Design"],
         pdfLink: "https://www.msit.in/media/2021/11/13/dr-richa-gupta_-main-profile.pdf",
         bio: "Dr. Richa Gupta is an Assistant Professor in the ECE Department at MSIT with 17 years of experience. She holds a Ph.D. and specializes in Antenna Design and Embedded Systems. Her research, published in top-tier journals like Optik and Frequenz, focuses on reconfigurable resonators and neural fuzzy interfaces. She also spearheaded the creation of the AWP-PCB research lab in collaboration with IEEE."
     },
@@ -1763,8 +1763,8 @@ export const facultyMembers = [
         experience: "16+",
         publications: "45+",
         patents: "3",
-        goodAt: ["Artificial Intelligence", "IOT based applications", "Microwave Waveguides", "Antenna Designing", "Academic Administration"],
-        badAt: ["Significant administrative load as BOG Faculty Representative", "Managing complex research in millennial-wave waveguides while overseeing department-wide media cell branding"],
+        researchInterests: ["Artificial Intelligence", "IOT based applications", "Microwave Waveguides", "Antenna Designing", "Academic Administration"],
+        coursesTaught: ["Analog & Digital Communication", "Electromagnetic Field Theory", "Embedded Systems"],
         pdfLink: "https://www.msit.in/media/2024/07/30/dr-aman-dahiya_detailed_-profile-july-24.pdf",
         bio: "Dr. Aman Kumari Dahiya is an Associate Professor in the ECE Department at MSIT with over 16 years of experience. She holds a Ph.D. in Microwave Engineering and an M.B.A. Her versatile research spans AI-driven healthcare, IOT applications, and reconfigurable antennas, earning her multiple Research Excellence Awards. She has served as a Faculty Representative on the Board of Governors."
     },
@@ -1780,8 +1780,8 @@ export const facultyMembers = [
         experience: "21",
         publications: "13+",
         patents: "1",
-        goodAt: ["Speech Recognition", "Artificial Intelligence", "Renewable Energy", "Digital Communication", "Waste Management"],
-        badAt: ["Significant administrative load from administrative coordination", "Managing high-volume research in tensor factorization while overseeing industry-informed project competitions"],
+        researchInterests: ["Speech Recognition", "Artificial Intelligence", "Renewable Energy", "Digital Communication", "Waste Management"],
+        coursesTaught: ["Antenna & Wave Propagation", "Signals & Systems", "Wireless Communication Networks"],
         pdfLink: "https://www.msit.in/media/2023/10/07/long-resume-dinesh-sheoran.pdf",
         bio: "Dr. Dinesh Sheoran is an Assistant Professor in the ECE Department at MSIT with 21 years of experience across industry and academia. He holds a Ph.D. and an MBA, specializing in Speech Recognition and Artificial Intelligence. He is a patent holder for an IOT-based waste management system and has a strong research portfolio in digital communication and sensor networks."
     },
@@ -1797,8 +1797,8 @@ export const facultyMembers = [
         experience: "21",
         publications: "0+",
         patents: "0",
-        goodAt: ["Analog Electronics", "Microprocessors", "Microcontrollers", "Renewable Energy Resources"],
-        badAt: ["Significant administrative load from institute-level duties", "Managing high-volume teaching hours while pursuing Ph.D. at IFTM University"],
+        researchInterests: ["Analog Electronics", "Microprocessors", "Microcontrollers", "Renewable Energy Resources"],
+        coursesTaught: ["Control Systems Engineering", "Digital Electronic Circuits", "Optical Communication"],
         pdfLink: "https://www.msit.in/media/2021/11/12/deepak-goyal_main-profile.pdf",
         bio: "Mr. Deepak Goyal is an Assistant Professor in the ECE Department at MSIT. With 21 years of teaching experience, he specializes in Analog Electronics, Microprocessors, and Renewable Energy. He holds an M.Tech. from NSIT and is currently pursuing his Ph.D. from IFTM University."
     },
@@ -1814,8 +1814,8 @@ export const facultyMembers = [
         experience: "14+",
         publications: "6+",
         patents: "2",
-        goodAt: ["Machine Learning", "Artificial Intelligence", "Speech Processing", "VLSI Design", "Embedded Systems"],
-        badAt: ["Significant administrative load from research review", "Managing complex research in language identification while reviewing for various high-impact Springer and IEEE journals"],
+        researchInterests: ["Machine Learning", "Artificial Intelligence", "Speech Processing", "VLSI Design", "Embedded Systems"],
+        coursesTaught: ["Digital Signal Processing", "Microprocessors & Microcontrollers", "VLSI Design"],
         pdfLink: "https://www.msit.in/media/2021/11/13/deepti-deshwal_main-profile.pdf",
         bio: "Dr. Deepti Deshwal is an Assistant Professor in the ECE Department at MSIT with over 14 years of experience. She holds a Ph.D. and specializes in Machine Learning and Speech Processing. Her research on language identification systems and sanitizing devices has been published in journals like Applied Acoustics and Energy Research & Social Science."
     },
@@ -1831,8 +1831,8 @@ export const facultyMembers = [
         experience: "13",
         publications: "4+",
         patents: "0",
-        goodAt: ["Artificial Intelligence", "Machine learning", "Speech Recognition", "Speaker Recognition", "Information Theory"],
-        badAt: ["Significant administrative load from social media coordination", "Managing complex research in pattern classification while overseeing B.Tech projects in embedded systems"],
+        researchInterests: ["Artificial Intelligence", "Machine learning", "Speech Recognition", "Speaker Recognition", "Information Theory"],
+        coursesTaught: ["Analog & Digital Communication", "Electromagnetic Field Theory", "Embedded Systems"],
         pdfLink: "https://www.msit.in/media/2021/11/13/neelam-nehra_main-profile.pdf",
         bio: "Ms. Neelam Nehra is an Assistant Professor in the ECE Department at MSIT with over 13 years of teaching experience. She specializes in Information Theory, Coding, and Speaker Recognition. Currently pursuing her Ph.D., her research on pattern classification in speaker recognition has been published in journals such as IJSRD and MSIT Satyam."
     },
@@ -1848,8 +1848,8 @@ export const facultyMembers = [
         experience: "14",
         publications: "20+",
         patents: "1",
-        goodAt: ["Digital Signal Processing", "Wireless Communication", "Biomedical Signal Processing", "Low Power VLSI", "Industry Interaction"],
-        badAt: ["Significant administrative load as III Cell In-charge", "Managing complex research in EEG-based screening while overseeing student internships and training programs"],
+        researchInterests: ["Digital Signal Processing", "Wireless Communication", "Biomedical Signal Processing", "Low Power VLSI", "Industry Interaction"],
+        coursesTaught: ["Antenna & Wave Propagation", "Signals & Systems", "Wireless Communication Networks"],
         pdfLink: "https://www.msit.in/media/2021/11/13/geetanjali-sharma_main-profile.pdf",
         bio: "Dr. Geetanjali Sharma is an Assistant Professor in the ECE Department at MSIT with 14 years of experience. She specializes in Digital Signal Processing and Wireless Communication. An active researcher with over 20 papers and a patent in user monitoring devices, she also manages the Institute Industry Interaction cell (III Cell) and the Electronic Devices Lab."
     },
@@ -1865,8 +1865,8 @@ export const facultyMembers = [
         experience: "10+",
         publications: "12 Journals",
         patents: "0",
-        goodAt: ["VLSI Design", "Optical Networks", "Wireless Communication", "Neural Networking", "ISO Internal Audit"],
-        badAt: ["Significant administrative load as SATYAM Editor", "Managing complex research in mobility management while overseeing department-wide industrial visits and PTMs"],
+        researchInterests: ["VLSI Design", "Optical Networks", "Wireless Communication", "Neural Networking", "ISO Internal Audit"],
+        coursesTaught: ["Control Systems Engineering", "Digital Electronic Circuits", "Optical Communication"],
         pdfLink: "https://www.msit.in/media/2022/12/02/sakshi-rajput.pdf",
         bio: "Dr. Sakshi Rajput is an Assistant Professor in the ECE Department at MSIT, where she has served since 2012. She holds a Ph.D. and specializes in Optical Networks and VLSI Design. An academic standout, she was a University Topper during her M.Tech. Her leadership profile includes serving as the Editor of MSIT’s research journal, SATYAM, and as an ISO Certified Internal Auditor."
     },
@@ -1882,8 +1882,8 @@ export const facultyMembers = [
         experience: "8",
         publications: "1+",
         patents: "0",
-        goodAt: ["MIMO Antennas", "5G communication", "Dielectric Resonator Antenna", "Electronic Devices", "Circuit Analysis"],
-        badAt: ["Significant administrative load as NAAC Committee member", "Managing research in equivalent RLC circuit modelling while overseeing HULT Prize mentoring"],
+        researchInterests: ["MIMO Antennas", "5G communication", "Dielectric Resonator Antenna", "Electronic Devices", "Circuit Analysis"],
+        coursesTaught: ["Digital Signal Processing", "Microprocessors & Microcontrollers", "VLSI Design"],
         pdfLink: "https://www.msit.in/media/2021/11/13/nishtha_main-profile.pdf",
         bio: "Dr. Nishtha is an Assistant Professor in the ECE Department at MSIT with 8 years of experience. She specializes in Electronic Devices and Circuit Analysis, with a research focus on MIMO Antennas and 5G communications. She actively contributes to the institute's quality assurance as a member of the NAAC and HULT Prize committees."
     },
@@ -1899,8 +1899,8 @@ export const facultyMembers = [
         experience: "9+",
         publications: "2+",
         patents: "0",
-        goodAt: ["RF & Microwave Engineering", "Dielectric Resonator Antennas", "Microstrip Antennas", "Wideband Antennas", "Academic Research"],
-        badAt: ["Significant administrative load from research coordination", "Managing complex research in inhomogeneous circularly polarized antennas while overseeing B.Tech thesis evaluations"],
+        researchInterests: ["RF & Microwave Engineering", "Dielectric Resonator Antennas", "Microstrip Antennas", "Wideband Antennas", "Academic Research"],
+        coursesTaught: ["Analog & Digital Communication", "Electromagnetic Field Theory", "Embedded Systems"],
         pdfLink: "https://www.msit.in/media/2021/11/24/neetu_main-profile.pdf",
         bio: "Dr. Neetu (Sehrawat) is an Assistant Professor in the ECE Department at MSIT with over 9 years of experience. She holds a Ph.D. and specializes in RF & Microwave Engineering, specifically Dielectric Resonator Antennas (DRA). A gold medalist in her M.Tech and a three-time GATE qualifier, her research on inhomogeneous circularly polarized antennas has been published in leading computational electronics journals."
     },
@@ -1916,8 +1916,8 @@ export const facultyMembers = [
         experience: "9+",
         publications: "15+",
         patents: "0",
-        goodAt: ["Renewable Energy", "Intelligent Forecasting", "Power Electronics", "Smart Grids", "Machine Learning"],
-        badAt: ["Significant administrative load from energy systems optimization", "Managing complex research in wind and solar power prediction while overseeing department-wide instrumentation labs"],
+        researchInterests: ["Renewable Energy", "Intelligent Forecasting", "Power Electronics", "Smart Grids", "Machine Learning"],
+        coursesTaught: ["Antenna & Wave Propagation", "Signals & Systems", "Wireless Communication Networks"],
         pdfLink: "https://www.msit.in/media/2021/11/24/upma-singh_main-profile.pdf",
         bio: "Dr. Upma Singh is an Assistant Professor in the ECE Department at MSIT with over 9 years of academic experience. She is currently pursuing her Ph.D. and specializes in Instrumentation, Control, and Renewable Energy. Her research focuses on machine learning-based forecasting for wind power production and smart grid optimization, with publications in high-impact journals like Energies."
     },
@@ -1933,8 +1933,8 @@ export const facultyMembers = [
         experience: "Former industry professional at Cadence Design Systems",
         publications: "5+",
         patents: "0",
-        goodAt: ["Biomedical Engineering", "Deep Learning", "VLSI Design", "Analog Electronics", "Embedded Systems"],
-        badAt: ["Significant administrative load from medical automation research", "Managing complex research in pancreatic cancer detection while overseeing industrial partnership coordination"],
+        researchInterests: ["Biomedical Engineering", "Deep Learning", "VLSI Design", "Analog Electronics", "Embedded Systems"],
+        coursesTaught: ["Control Systems Engineering", "Digital Electronic Circuits", "Optical Communication"],
         pdfLink: "https://www.msit.in/faculty/ece",
         bio: "Ms. Jasmine Chhikara is an Assistant Professor in the ECE Department at MSIT. She holds an M.Tech. in VLSI Design and is currently pursuing her Ph.D. with a research focus on Deep Learning in Biomedical Engineering, specifically pancreatic cancer detection. Her professional background includes significant industrial experience at Cadence Design Systems."
     },
@@ -1950,8 +1950,8 @@ export const facultyMembers = [
         experience: "10+",
         publications: "5+",
         patents: "0",
-        goodAt: ["Wireless Communication", "VLSI Design", "Signal Processing", "Event Coordination"],
-        badAt: ["Significant administrative load from event management", "Managing high-volume research in signal processing while overseeing institute-wide cultural and technical fests"],
+        researchInterests: ["Wireless Communication", "VLSI Design", "Signal Processing", "Event Coordination"],
+        coursesTaught: ["Digital Signal Processing", "Microprocessors & Microcontrollers", "VLSI Design"],
         pdfLink: "https://www.msit.in/faculty/ece",
         bio: "Ms. Prinkle Talan is an Assistant Professor in the ECE Department at MSIT with over 10 years of experience. She holds an M.Tech. in Signal Processing and specializes in Wireless Communication and VLSI Design. Beyond academics, she is actively involved in coordinating the institute's cultural and technical events."
     },
@@ -1967,8 +1967,8 @@ export const facultyMembers = [
         experience: "6",
         publications: "2+",
         patents: "0",
-        goodAt: ["Digital System Design", "CMOS Digital Circuits", "Biomedical Signal Processing", "Emotion Recognition", "Multiplier Topologies"],
-        badAt: ["Significant administrative load from lab standardization", "Managing high-volume research in EEG-based emotion identification while overseeing department-wide exam coordination"],
+        researchInterests: ["Digital System Design", "CMOS Digital Circuits", "Biomedical Signal Processing", "Emotion Recognition", "Multiplier Topologies"],
+        coursesTaught: ["Analog & Digital Communication", "Electromagnetic Field Theory", "Embedded Systems"],
         pdfLink: "https://www.msit.in/media/2021/11/24/garima_main-profile.pdf",
         bio: "Ms. Garima is an Assistant Professor in the ECE Department at MSIT with 6 years of experience. She holds an M.Tech. from GGSIPU and specializes in Digital System Design and CMOS Digital Circuits. Her research interests include biomedical signal processing, specifically EEG-based emotion identification and optimized multiplier topologies."
     },
@@ -1984,8 +1984,8 @@ export const facultyMembers = [
         experience: "6",
         publications: "2+",
         patents: "0",
-        goodAt: ["SIW Antenna Technology", "5G Antennas", "Wireless Sensor Networks", "Semiconducting Materials", "Academic Excellence"],
-        badAt: ["Significant administrative load from JAC committee duties", "Managing complex research in micellar nano cavities while overseeing department-wide ISO surveillance audits"],
+        researchInterests: ["SIW Antenna Technology", "5G Antennas", "Wireless Sensor Networks", "Semiconducting Materials", "Academic Excellence"],
+        coursesTaught: ["Antenna & Wave Propagation", "Signals & Systems", "Wireless Communication Networks"],
         pdfLink: "https://www.msit.in/media/2021/11/13/vishakha-tomar_main-profile.pdf",
         bio: "Ms. Vishakha Tomar is an Assistant Professor in the ECE Department at MSIT with 6 years of experience. She is currently pursuing her Ph.D. and specializes in SIW Antenna Technology and 5G communications. A gold medalist during her M.Tech at JIIT, her research on connectivity-aware protocols for sensor networks has been presented at several international conferences."
     },
@@ -2001,8 +2001,8 @@ export const facultyMembers = [
         experience: "10",
         publications: "3+",
         patents: "0",
-        goodAt: ["Speech Recognition", "Emotion Recognition", "Embedded Systems", "Microcontrollers", "Deep Learning"],
-        badAt: ["Significant administrative load from institute level assignments", "Managing complex research in multi-area power system control while overseeing department-wide project evaluations"],
+        researchInterests: ["Speech Recognition", "Emotion Recognition", "Embedded Systems", "Microcontrollers", "Deep Learning"],
+        coursesTaught: ["Control Systems Engineering", "Digital Electronic Circuits", "Optical Communication"],
         pdfLink: "https://www.msit.in/media/2021/11/24/suman-lata_main-profile.pdf",
         bio: "Dr. Suman Lata is an Assistant Professor in the ECE Department at MSIT with 10 years of experience. She holds a Ph.D. and specializes in Speech Recognition and Deep Learning. Her research explorations include multi-area power system control and non-conventional transistors like TFETs, with multiple publications in recognized journals."
     },
@@ -2018,8 +2018,8 @@ export const facultyMembers = [
         experience: "3",
         publications: "1+",
         patents: "0",
-        goodAt: ["Digital Communication", "Wireless Networks", "VLSI Design", "Antenna Engineering", "Microwaves"],
-        badAt: ["Significant administrative load from academic committee duties", "Managing research in digital multiplier implementation while overseeing student projects in signal processing"],
+        researchInterests: ["Digital Communication", "Wireless Networks", "VLSI Design", "Antenna Engineering", "Microwaves"],
+        coursesTaught: ["Digital Signal Processing", "Microprocessors & Microcontrollers", "VLSI Design"],
         pdfLink: "https://www.msit.in/media/2021/11/24/anjali-baliyan_main-profile.pdf",
         bio: "Ms. Anjali Balyan is an Assistant Professor in the ECE Department at MSIT with 3 years of experience. She is currently pursuing her Ph.D. and specializes in Digital Communication and Wireless Networks. Her research focuses on VLSI design optimization and antenna engineering, and she is an active member of the department's academic committee."
     },
@@ -2035,8 +2035,8 @@ export const facultyMembers = [
         experience: "8 months",
         publications: "10+",
         patents: "0",
-        goodAt: ["Optical Microscopy", "Digital Holography", "Mechatronics", "Image Processing", "Wireless Sensor Networks"],
-        badAt: ["Significant administrative load from research publication coordination", "Managing high-precision research in automated depth-of-focus microscopy while overseeing department-wide instrumentation setup"],
+        researchInterests: ["Optical Microscopy", "Digital Holography", "Mechatronics", "Image Processing", "Wireless Sensor Networks"],
+        coursesTaught: ["Analog & Digital Communication", "Electromagnetic Field Theory", "Embedded Systems"],
         pdfLink: "https://www.msit.in/media/2021/11/24/neelam_faculty-profile.pdf",
         bio: "Dr. Neelam Barak is an Assistant Professor in the ECE Department at MSIT. She holds a Ph.D. and specializes in Optical Microscopy and Digital Holography. Her research, published in journals like Micron and the Journal of Optics, focuses on automated depth-of-focus microscopy and two-dimensional mapping using single ultrasonic sensors."
     },
@@ -2052,8 +2052,8 @@ export const facultyMembers = [
         experience: "12",
         publications: "3+",
         patents: "0",
-        goodAt: ["Speech Processing", "Wireless Communication", "Embedded Systems", "Microprocessors", "VLSI Design"],
-        badAt: ["Significant administrative load from technical workshop coordination", "Managing research in smart railway track fault detection while overseeing department-wide practical implementation of circuits"],
+        researchInterests: ["Speech Processing", "Wireless Communication", "Embedded Systems", "Microprocessors", "VLSI Design"],
+        coursesTaught: ["Antenna & Wave Propagation", "Signals & Systems", "Wireless Communication Networks"],
         pdfLink: "https://www.msit.in/media/2022/07/08/himani_main-profile.pdf",
         bio: "Ms. Himani is an Assistant Professor in the ECE Department at MSIT with 12 years of academic experience. She holds an M.Tech. and specializes in Speech Processing and Wireless Communication. She has contributed to various technical workshops at MSIT and has published research on IOT-based railway track fault detection and smart water management."
     },
@@ -2069,8 +2069,8 @@ export const facultyMembers = [
         experience: "7",
         publications: "2+",
         patents: "0",
-        goodAt: ["Image Processing", "Machine Learning", "Deep Learning", "Speaker Identification", "Network Analysis"],
-        badAt: ["Significant administrative load from intelligent systems research", "Managing complex research in blocking artifacts reduction while overseeing department-wide speaker recognition projects"],
+        researchInterests: ["Image Processing", "Machine Learning", "Deep Learning", "Speaker Identification", "Network Analysis"],
+        coursesTaught: ["Control Systems Engineering", "Digital Electronic Circuits", "Optical Communication"],
         pdfLink: "https://www.msit.in/media/2022/07/07/soniamalik_main-profile-1.pdf",
         bio: "Ms. Sonia Malik is an Assistant Professor in the ECE Department at MSIT with 7 years of experience. She holds an M.Tech. and specializes in Image Processing and Speaker Identification. Her research focuses on signal adaptive weighted sum techniques for reduction of compression artifacts, and she is actively involved in developing AI-driven human-centric systems."
     },
@@ -2086,8 +2086,8 @@ export const facultyMembers = [
         experience: "1.5",
         publications: "1+",
         patents: "0",
-        goodAt: ["Communication Systems", "Digital Electronics", "VLSI Design", "VANET", "Network Security"],
-        badAt: ["Significant administrative load from high-speed data research", "Managing research in network optimization while overseeing department-wide MATLAB labs and microwave experiments"],
+        researchInterests: ["Communication Systems", "Digital Electronics", "VLSI Design", "VANET", "Network Security"],
+        coursesTaught: ["Digital Signal Processing", "Microprocessors & Microcontrollers", "VLSI Design"],
         pdfLink: "https://www.msit.in/media/2022/07/08/neha-main-profile.pdf",
         bio: "Ms. Neha (Nagar) is an Assistant Professor in the ECE Department at MSIT. She holds an M.Tech. from GGSIPU and specializes in Communication Systems and Digital Electronics. Her research, supported by tools like HFSS and Xilinx ISE, covers high-speed data transmission, network security protocols, and vehicular ad-hoc networks (VANET)."
     },
@@ -2103,8 +2103,8 @@ export const facultyMembers = [
         experience: "25",
         publications: "50+",
         patents: "0",
-        goodAt: ["Artificial Intelligence", "Fuzzy Systems", "Soft Computing", "Neural Networks", "Instrumentation and Control"],
-        badAt: ["Significant administrative load from HOD responsibilities", "Managing institute-wide technical festivals like Avensis while coordinating GGSIPU academic audits"],
+        researchInterests: ["Artificial Intelligence", "Fuzzy Systems", "Soft Computing", "Neural Networks", "Instrumentation and Control"],
+        coursesTaught: ["Power Electronics & Converters", "Renewable Energy Systems", "Circuit Theory & Network Analysis"],
         pdfLink: "https://www.msit.in/media/2021/11/24/meena-tushir_main-profile.pdf",
         bio: "Prof. (Dr.) Meena Tushir is a senior Professor and the Head of Department (HOD) of EEE at MSIT with over 25 years of teaching experience. She specializes in Instrumentation and Control, Fuzzy Logic, Soft Computing, and AI. A life member of ISTE and IAENG, her research on kernelized hybrid c-means clustering models has been widely published and presented at prestigious international conferences like IEEE-FUZZ in London."
     },
@@ -2120,8 +2120,8 @@ export const facultyMembers = [
         experience: "19",
         publications: "15+",
         patents: "0",
-        goodAt: ["Power Systems", "IEC 61850", "Substation Automation", "Renewable Energy", "Microgrids"],
-        badAt: ["Significant administrative load from research excellence coordination", "Managing substation communication architecture projects while overseeing department-wide power quality investigation"],
+        researchInterests: ["Power Systems", "IEC 61850", "Substation Automation", "Renewable Energy", "Microgrids"],
+        coursesTaught: ["Microcontroller Applications", "High Voltage Engineering", "Instrumentation & Measurement"],
         pdfLink: "https://www.msit.in/media/2021/12/10/sunil-gupta_main-profile-converted.pdf",
         bio: "Dr. Sunil Gupta is an Associate Professor in the EEE Department at MSIT with 19 years of experience. He specializes in Power Systems, specifically focusing on IEC 61850 Substation Automation Systems, Renewable Energy, and Microgrids. He received the MSIT Certificate of Excellence in Research in 2020 and has a significant publication record in high-impact journals like Taylor & Francis and Springer."
     },
@@ -2137,8 +2137,8 @@ export const facultyMembers = [
         experience: "30",
         publications: "35+",
         patents: "0",
-        goodAt: ["Power System Optimization", "Swarm Intelligence", "Artificial Intelligence", "Electrical Machines", "PSO Algorithms"],
-        badAt: ["Significant administrative load from exam coordination as Deputy Superintendent", "Managing complex research in quantum technology for 6G while overseeing lab development for Electrical Science"],
+        researchInterests: ["Power System Optimization", "Swarm Intelligence", "Artificial Intelligence", "Electrical Machines", "PSO Algorithms"],
+        coursesTaught: ["Electric Drives & Traction", "Smart Grid Technologies", "Electromagnetic Fields"],
         pdfLink: "https://www.msit.in/media/2024/12/10/final-resume-jyoti.pdf",
         bio: "Dr. Jyoti Jain is an Associate Professor in the EEE Department at MSIT with over 30 years of experience. She holds a Ph.D. and specializes in Power System Optimization and Swarm Intelligence. An IEEE Senior Member and Outstanding Engineer Award recipient (2020), she has significantly contributed to the institute by setting up Electrical Machines laboratories and serving as a chapter advisor for IEEE PES MSIT."
     },
@@ -2154,8 +2154,8 @@ export const facultyMembers = [
         experience: "20",
         publications: "7+",
         patents: "0",
-        goodAt: ["Control Systems", "Fuzzy Clustering", "Data Analytics", "Machine Learning", "Incomplete Data Handling"],
-        badAt: ["Significant administrative load from doctoral research", "Managing iterative fuzzy clustering projects while overseeing department-wide ubiquitous computing applications"],
+        researchInterests: ["Control Systems", "Fuzzy Clustering", "Data Analytics", "Machine Learning", "Incomplete Data Handling"],
+        coursesTaught: ["Power Systems Analysis", "Electrical Machines & Drives", "Control Systems Engineering"],
         pdfLink: "https://www.msit.in/media/2021/11/24/soniagoel_main-profile.pdf",
         bio: "Dr. Sonia Goel is an Assistant Professor in the EEE Department at MSIT with 20 years of experience. She is currently pursuing her Ph.D. and specializes in Control Systems and Fuzzy Clustering Techniques. Her research, published in journals like Recent Advances in Electrical & Electronic Engineering, focuses on innovative approaches for missing data handling and imputation-based fuzzy modeling for ubiquitous computing."
     },
@@ -2171,8 +2171,8 @@ export const facultyMembers = [
         experience: "12",
         publications: "3+",
         patents: "0",
-        goodAt: ["Renewable Energy", "Microgrid", "Microgrid Protection", "Islanding Detection", "Hybrid AC/DC Microgrid"],
-        badAt: ["Significant administrative load from time table committee as coordinator", "Managing complex research in islanding detection while overseeing department-wide write-off audits"],
+        researchInterests: ["Renewable Energy", "Microgrid", "Microgrid Protection", "Islanding Detection", "Hybrid AC/DC Microgrid"],
+        coursesTaught: ["Power Electronics & Converters", "Renewable Energy Systems", "Circuit Theory & Network Analysis"],
         pdfLink: "https://www.msit.in/media/2021/11/24/annu-dagar_main-profile.pdf",
         bio: "Ms. Annu Dagar is an Assistant Professor in the EEE Department at MSIT with 12 years of experience. She is currently pursuing her Ph.D. and specializes in Renewable Energy and Microgrid Protection. Her research on islanding detection methods and hybrid AC/DC microgrids has been published in high-impact journals like Renewable and Sustainable Energy Reviews (Impact Factor 14.982)."
     },
@@ -2188,8 +2188,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "5+",
         patents: "0",
-        goodAt: ["Power System", "Renewable Energy Sources", "Intelligent Control Techniques", "Load Frequency Control", "Hybrid Power Systems"],
-        badAt: ["Significant administrative load from technical event coordination", "Managing frequency excursion mitigation research while overseeing department-wide power system simulation labs"],
+        researchInterests: ["Power System", "Renewable Energy Sources", "Intelligent Control Techniques", "Load Frequency Control", "Hybrid Power Systems"],
+        coursesTaught: ["Microcontroller Applications", "High Voltage Engineering", "Instrumentation & Measurement"],
         pdfLink: "https://www.msit.in/media/2021/11/24/shilpam-malik_main-profile.pdf",
         bio: "Dr. Shilpam Malik is an Assistant Professor in the EEE Department at MSIT with 15 years of teaching experience. She is currently pursuing her Ph.D. and specializes in Power Systems, Renewable Energy Sources, and Intelligent Control Techniques. Her research on SSA tuned PI-TDF control schemes for hybrid power systems has been published in Smart Science, and she is a lifetime member of ISTE."
     },
@@ -2205,8 +2205,8 @@ export const facultyMembers = [
         experience: "21",
         publications: "12+",
         patents: "3",
-        goodAt: ["Power System Operation and Control", "Renewable Energy", "Battery Energy Sources", "JAYA Algorithm", "PSO Algorithms"],
-        badAt: ["Significant administrative load from conveyer of library committee", "Managing high-speed data research for IoT-based passenger counting while overseeing department-wide ISO surveillance audits"],
+        researchInterests: ["Power System Operation and Control", "Renewable Energy", "Battery Energy Sources", "JAYA Algorithm", "PSO Algorithms"],
+        coursesTaught: ["Electric Drives & Traction", "Smart Grid Technologies", "Electromagnetic Fields"],
         pdfLink: "https://www.msit.in/media/2023/10/04/nidhi-gupta_main-profile_oct23.pdf",
         bio: "Dr. Nidhi Gupta is an Assistant Professor in the EEE Department at MSIT with over 21 years of experience. She holds a Ph.D. from DTU and specializes in Power System Operation and Control, Renewable Energy, and Battery Energy Sources. An active researcher with 3 published patents, she has received the MSIT Research Excellence Award (2022) and has served as the conveyer of the institute's library committee."
     },
@@ -2222,8 +2222,8 @@ export const facultyMembers = [
         experience: "19",
         publications: "12+",
         patents: "0",
-        goodAt: ["Cloud Computing", "IoT", "Information Security", "Power Engineering", "Wireless Sensor Networks"],
-        badAt: ["Significant administrative load from placement coordination", "Managing research in trust-based neural networks while overseeing department-wide JAC committee assignments"],
+        researchInterests: ["Cloud Computing", "IoT", "Information Security", "Power Engineering", "Wireless Sensor Networks"],
+        coursesTaught: ["Power Systems Analysis", "Electrical Machines & Drives", "Control Systems Engineering"],
         pdfLink: "https://www.msit.in/media/2023/05/04/rakhi-kamra_main-profile_2023.pdf",
         bio: "Dr. Rakhi Kamra is an Assistant Professor in the EEE Department at MSIT with 19 years of experience. She holds a Ph.D. and specializes in Cloud Computing, IoT, and Information Security. Her research, published in journals such as the International Journal of Communication Networks and Distributed Systems, focuses on building trust-aware frameworks for wireless sensor networks and vehicular ad-hoc networks."
     },
@@ -2239,8 +2239,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "7+",
         patents: "0",
-        goodAt: ["Renewable Energy", "Control System", "Power System", "DC-DC Converters", "Artificial Neural Networks (ANN)"],
-        badAt: ["Significant administrative load from research publication coordination", "Managing optimization of DC-DC converters for off-grid lighting projects while overseeing department-wide MATLAB labs"],
+        researchInterests: ["Renewable Energy", "Control System", "Power System", "DC-DC Converters", "Artificial Neural Networks (ANN)"],
+        coursesTaught: ["Power Electronics & Converters", "Renewable Energy Systems", "Circuit Theory & Network Analysis"],
         pdfLink: "https://www.msit.in/media/2021/11/24/monu-malik_main-profile.pdf",
         bio: "Dr. Monu Malik is an Assistant Professor in the EEE Department at MSIT with 15 years of experience. He holds a Ph.D. and specializes in Renewable Energy, Control Systems, and Power Systems. His research, published in journals such as JARDCS, focuses on the optimization of DC-DC boost converters using Artificial Neural Networks (ANN) and solar energy applications in battery charging and rail transport."
     },
@@ -2256,8 +2256,8 @@ export const facultyMembers = [
         experience: "10",
         publications: "3+",
         patents: "0",
-        goodAt: ["Computer Vision", "Machine learning", "Deep-learning", "Embedded Systems", "Artificial Intelligence", "Mathematical Imaging"],
-        badAt: ["Significant administrative load from research in chaos theory", "Managing microexpression analysis projects while overseeing department-wide solar electric bus research"],
+        researchInterests: ["Computer Vision", "Machine learning", "Deep-learning", "Embedded Systems", "Artificial Intelligence", "Mathematical Imaging"],
+        coursesTaught: ["Microcontroller Applications", "High Voltage Engineering", "Instrumentation & Measurement"],
         pdfLink: "https://www.msit.in/media/2021/11/24/mamta-rani_main-profile.pdf",
         bio: "Ms. Mamta Rani is an Assistant Professor in the EEE Department at MSIT with 10 years of experience. She is currently pursuing her Ph.D. and specializes in Computer Vision, Machine Learning, and Artificial Intelligence. Her research, which includes microexpression analysis and solar electric transport systems, has been presented at international conferences like the 3rd International Conference on Computing Informatics and Networks."
     },
@@ -2273,8 +2273,8 @@ export const facultyMembers = [
         experience: "5",
         publications: "4+",
         patents: "0",
-        goodAt: ["Electric Vehicle", "Reliability", "Optimization", "Renewable Energy", "Wireless Power Transfer"],
-        badAt: ["Significant administrative load from placement coordination", "Managing research in MIMO-OFDM systems while overseeing department-wide disaster committee assignments"],
+        researchInterests: ["Electric Vehicle", "Reliability", "Optimization", "Renewable Energy", "Wireless Power Transfer"],
+        coursesTaught: ["Electric Drives & Traction", "Smart Grid Technologies", "Electromagnetic Fields"],
         pdfLink: "https://www.msit.in/media/2021/11/24/sachit-rathee_main-profile.pdf",
         bio: "Mr. Sachit Rathee is an Assistant Professor in the EEE Department at MSIT with 5 years of experience. He is currently pursuing his Ph.D. and specializes in Electric Vehicle infrastructure, Reliability, and Optimization. His research on inductive power transfer and MIMO-OFDM systems has been published in journals such as IJREAT and IJETR, and he serves as a placement coordinator for the department."
     },
@@ -2290,8 +2290,8 @@ export const facultyMembers = [
         experience: "5",
         publications: "7+",
         patents: "0",
-        goodAt: ["Automatic generation control", "Deregulated power system", "Optimal power flow", "Power frequency balance", "Wireless Sensor Networks"],
-        badAt: ["Significant administrative load from AICTE PARAKH coordination", "Managing research in subsynchronous resonance while overseeing department-wide AC-DC link simulation labs"],
+        researchInterests: ["Automatic generation control", "Deregulated power system", "Optimal power flow", "Power frequency balance", "Wireless Sensor Networks"],
+        coursesTaught: ["Power Systems Analysis", "Electrical Machines & Drives", "Control Systems Engineering"],
         pdfLink: "https://www.msit.in/media/2022/12/21/detailed-profile.pdf",
         bio: "Ms. Nisha Singh is an Assistant Professor in the EEE Department at MSIT with over 5 years of experience. She holds an M.Tech. in Power Systems and specializes in Automatic Generation Control in deregulated power systems and Optimal Power Flow. Her research, published in journals such as Recent Advances in Electrical & Electronic Engineering, focuses on subsynchronous resonance and power frequency balance in interconnected systems."
     },
@@ -2307,8 +2307,8 @@ export const facultyMembers = [
         experience: "29",
         publications: "15+",
         patents: "0",
-        goodAt: ["Characterization of Polymers", "Material Science", "Physics", "Industrial Engineering", "Submerged Arc Welding"],
-        badAt: ["Significant administrative load as HOD of Applied Sciences department", "Managing complex industrial engineering research while overseeing foundational physics courses for first-year students"],
+        researchInterests: ["Characterization of Polymers", "Material Science", "Physics", "Industrial Engineering", "Submerged Arc Welding"],
+        coursesTaught: ["Engineering Physics (Optics, Waves & Quantum)", "Electromagnetic Theory & Mechanics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/brijpal-singh_main-profile.pdf",
         bio: "Dr. Brijpal Singh is an Associate Professor and Head of Applied Sciences at MSIT. He holds a Ph.D. in Physics and has over 22 years of experience. His research focuses on the Characterization of Polymers and Material Science."
     },
@@ -2324,8 +2324,8 @@ export const facultyMembers = [
         experience: "25",
         publications: "20+",
         patents: "0",
-        goodAt: ["Liquid Crystals", "Condensed Matter Physics", "Physics", "Uranium Concentration", "Governing Body Representation"],
-        badAt: ["Significant administrative load as Deputy Director and HOD of Applied Science", "Managing high-volume physics research projects while overseeing foundational courses and teacher representation in the Governing Body"],
+        researchInterests: ["Liquid Crystals", "Condensed Matter Physics", "Physics", "Uranium Concentration", "Governing Body Representation"],
+        coursesTaught: ["Engineering Chemistry & Materials Science", "Polymer Chemistry & Nanotechnology"],
         pdfLink: "https://www.msit.in/media/2021/12/08/aks_main-profile.pdf",
         bio: "Dr. Ajay Kumar Singh is an Associate Professor of Physics at MSIT. His research interests include Liquid Crystals and Condensed Matter Physics. He has published numerous papers in international journals of repute."
     },
@@ -2341,8 +2341,8 @@ export const facultyMembers = [
         experience: "25",
         publications: "15+",
         patents: "0",
-        goodAt: ["Experimental Nuclear Physics", "Radiation Physics", "Physics", "Approximation Theory", "Mathematics"],
-        badAt: ["Significant administrative load from nuclear physics research lab compliance", "Managing radiation safety protocols while overseeing foundational physics courses for first-year students"],
+        researchInterests: ["Experimental Nuclear Physics", "Radiation Physics", "Physics", "Approximation Theory", "Mathematics"],
+        coursesTaught: ["Technical Communication & Ethics", "Environmental Science & Disaster Management"],
         pdfLink: "https://www.msit.in/media/2021/11/15/drmansingh.pdf",
         bio: "Dr. Man Singh Beniwal is an Associate Professor of Physics at MSIT. He specializes in Experimental Nuclear Physics and Radiation Physics, with over two decades of academic contribution to the institute."
     },
@@ -2358,8 +2358,8 @@ export const facultyMembers = [
         experience: "20",
         publications: "15+",
         patents: "0",
-        goodAt: ["Environmental Chemistry", "Analytical Chemistry", "Chemistry", "Water Quality Analysis", "Plasma Physics"],
-        badAt: ["Significant administrative load from water quality analysis laboratory management", "Managing soil analysis research while overseeing high-volume foundational chemistry courses for first-year engineering students"],
+        researchInterests: ["Environmental Chemistry", "Analytical Chemistry", "Chemistry", "Water Quality Analysis", "Plasma Physics"],
+        coursesTaught: ["Applied Mathematics (Linear Algebra & Calculus)", "Discrete Mathematics & Statistics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/ajaygahlot_main-profile.pdf",
         bio: "Dr. Ajay Gahlot is an Associate Professor of Chemistry at MSIT. His expertise lies in Environmental Chemistry and Analytical Chemistry, focusing on water quality and soil analysis."
     },
@@ -2375,8 +2375,8 @@ export const facultyMembers = [
         experience: "25",
         publications: "15+",
         patents: "0",
-        goodAt: ["Organic Synthesis", "Medicinal Chemistry", "Chemistry", "Bioactive Compounds", "Environmental Studies"],
-        badAt: ["Significant administrative load from medicinal chemistry research lab coordination", "Managing high-volume organic synthesis projects while overseeing foundational chemistry and environmental studies for the institute"],
+        researchInterests: ["Organic Synthesis", "Medicinal Chemistry", "Chemistry", "Bioactive Compounds", "Environmental Studies"],
+        coursesTaught: ["Engineering Physics (Optics, Waves & Quantum)", "Electromagnetic Theory & Mechanics"],
         pdfLink: "https://www.msit.in/media/uploads/2025/04/28/c-v-of-rekha-tripathi.pdf",
         bio: "Dr. Rekha Tripathi is an Associate Professor of Chemistry at MSIT. Her research focus is Organic Synthesis and Medicinal Chemistry. She has a deep interest in the development of bioactive compounds."
     },
@@ -2392,8 +2392,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "10+",
         patents: "0",
-        goodAt: ["Theoretical Condensed Matter Physics", "Electronic Properties", "Transport Properties", "Low-dimensional Systems", "Physics"],
-        badAt: ["Significant administrative load from condensed matter physics research lab simulation management", "Managing electronic property research while overseeing foundational physics courses for multiple engineering departments"],
+        researchInterests: ["Theoretical Condensed Matter Physics", "Electronic Properties", "Transport Properties", "Low-dimensional Systems", "Physics"],
+        coursesTaught: ["Engineering Chemistry & Materials Science", "Polymer Chemistry & Nanotechnology"],
         pdfLink: "https://www.msit.in/media/2021/12/08/drsobinder-singh_main-profile.pdf",
         bio: "Dr. Sobinder Singh is an Assistant Professor of Physics at MSIT. He specializes in Theoretical Condensed Matter Physics, specifically investigating the electronic and transport properties of low-dimensional systems."
     },
@@ -2409,8 +2409,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Complex Analysis", "Special Functions", "Mathematics", "Engineering Mathematics", "Research Methodologies"],
-        badAt: ["Significant administrative load from mathematics research coordination", "Managing complex analysis simulations while overseeing foundational engineering mathematics courses for a large student body"],
+        researchInterests: ["Complex Analysis", "Special Functions", "Mathematics", "Engineering Mathematics", "Research Methodologies"],
+        coursesTaught: ["Technical Communication & Ethics", "Environmental Science & Disaster Management"],
         pdfLink: "https://www.msit.in/media/2021/11/15/drajay-katha.pdf",
         bio: "Dr. Ajay Kumar is an Assistant Professor of Mathematics at MSIT. His research interests include Complex Analysis and Special Functions. He has over 15 years of teaching experience in engineering mathematics."
     },
@@ -2426,8 +2426,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "10+",
         patents: "0",
-        goodAt: ["Information Theory", "Mathematical Modeling", "Entropy-based Measures", "Communication Theory", "Mathematics"],
-        badAt: ["Significant administrative load from information theory research lab simulation coordination", "Managing entropy-based communication models while overseeing foundational mathematics courses for the institute"],
+        researchInterests: ["Information Theory", "Mathematical Modeling", "Entropy-based Measures", "Communication Theory", "Mathematics"],
+        coursesTaught: ["Applied Mathematics (Linear Algebra & Calculus)", "Discrete Mathematics & Statistics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/drsumita-dabas.pdf",
         bio: "Dr. Sumita Dabas is an Assistant Professor of Mathematics at MSIT. She focuses on Information Theory and Mathematical Modeling, particularly entropy-based measures in communication."
     },
@@ -2443,8 +2443,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "10+",
         patents: "0",
-        goodAt: ["Applied Linguistics", "Communication Skills", "English Literature", "Personality Development", "Soft Skills Training"],
-        badAt: ["Significant administrative load from personality development program coordination", "Managing soft skills training modules while overseeing foundational English courses for the institute"],
+        researchInterests: ["Applied Linguistics", "Communication Skills", "English Literature", "Personality Development", "Soft Skills Training"],
+        coursesTaught: ["Engineering Physics (Optics, Waves & Quantum)", "Electromagnetic Theory & Mechanics"],
         pdfLink: "https://www.msit.in/media/2023/11/09/deebafacultymsit2023.pdf",
         bio: "Dr. Deeba Naqvi is an Assistant Professor of English (Humanities) at MSIT. Her expertise is in Applied Linguistics and Communication Skills. She coordinates the institute's personality development programs."
     },
@@ -2460,8 +2460,8 @@ export const facultyMembers = [
         experience: "18",
         publications: "10+",
         patents: "0",
-        goodAt: ["Magnetic Materials", "Ferrites", "Nanoparticles", "Structural Properties", "Physics"],
-        badAt: ["Significant administrative load from magnetic materials research lab safety", "Managing nanoparticle structural analysis while overseeing foundational physics courses for nearly two decades"],
+        researchInterests: ["Magnetic Materials", "Ferrites", "Nanoparticles", "Structural Properties", "Physics"],
+        coursesTaught: ["Engineering Chemistry & Materials Science", "Polymer Chemistry & Nanotechnology"],
         pdfLink: "https://www.msit.in/media/2025/02/14/dr-surender-applied-sciences-m-main-profile.pdf",
         bio: "Dr. Surender is an Assistant Professor of Physics at MSIT. His research area includes Magnetic Materials and Ferrites. He is involved in the study of structural and magnetic properties of nanoparticles."
     },
@@ -2477,8 +2477,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "17+",
         patents: "0",
-        goodAt: ["Inorganic Chemistry", "Coordination Compounds", "Metal Complexes", "Therapeutic Potential", "Chemistry"],
-        badAt: ["Significant administrative load from coordination chemistry research lab management", "Managing metal complex synthesis projects while overseeing foundational chemistry courses for first-year engineering students"],
+        researchInterests: ["Inorganic Chemistry", "Coordination Compounds", "Metal Complexes", "Therapeutic Potential", "Chemistry"],
+        coursesTaught: ["Technical Communication & Ethics", "Environmental Science & Disaster Management"],
         pdfLink: "https://www.msit.in/media/2021/12/14/anju-rathee-ahlawat_main-profile-converted-converted-compressed.pdf",
         bio: "Dr. Anju Ahlawat is an Assistant Professor of Chemistry at MSIT. She specializes in Inorganic Chemistry and Coordination Compounds. Her research involves the synthesis of metal complexes with therapeutic potential."
     },
@@ -2494,8 +2494,8 @@ export const facultyMembers = [
         experience: "20",
         publications: "5+",
         patents: "0",
-        goodAt: ["Differential Equations", "Numerical Analysis", "Engineering Mathematics", "Applied Mathematics", "Mathematics"],
-        badAt: ["Significant administrative load from mathematics department examination coordination", "Managing high-volume numerical analysis labs while overseeing foundational engineering mathematics for multiple departments"],
+        researchInterests: ["Differential Equations", "Numerical Analysis", "Engineering Mathematics", "Applied Mathematics", "Mathematics"],
+        coursesTaught: ["Applied Mathematics (Linear Algebra & Calculus)", "Discrete Mathematics & Statistics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/rajbir-singh.pdf",
         bio: "Mr. Rajbir Singh is an Assistant Professor of Mathematics at MSIT. He has extensive experience in teaching Differential Equations and Numerical Analysis to engineering students."
     },
@@ -2511,8 +2511,8 @@ export const facultyMembers = [
         experience: "30",
         publications: "5+",
         patents: "0",
-        goodAt: ["Discrete Mathematics", "Linear Algebra", "Computer Science Engineering", "Engineering Mathematics", "Mathematics"],
-        badAt: ["Significant administrative load from department-wide linear algebra curriculum development", "Managing veteran-level academic leadership while overseeing high-volume foundational mathematics for CSE departments"],
+        researchInterests: ["Discrete Mathematics", "Linear Algebra", "Computer Science Engineering", "Engineering Mathematics", "Mathematics"],
+        coursesTaught: ["Engineering Physics (Optics, Waves & Quantum)", "Electromagnetic Theory & Mechanics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/r-s-rahtee_main-profile.pdf",
         bio: "Mr. R. S. Rathee is an Assistant Professor of Mathematics at MSIT. A veteran in the department, he focuses on Discrete Mathematics and Linear Algebra for Computer Science engineering curricula."
     },
@@ -2528,8 +2528,8 @@ export const facultyMembers = [
         experience: "12",
         publications: "15+",
         patents: "0",
-        goodAt: ["Computational Chemistry", "Nano-catalysis", "Molecular Modeling", "Chemical Reactions", "Chemistry"],
-        badAt: ["Significant administrative load from computational chemistry research lab optimization", "Managing nano-catalysis simulations while overseeing foundational chemistry courses for first-year engineering students"],
+        researchInterests: ["Computational Chemistry", "Nano-catalysis", "Molecular Modeling", "Chemical Reactions", "Chemistry"],
+        coursesTaught: ["Engineering Chemistry & Materials Science", "Polymer Chemistry & Nanotechnology"],
         pdfLink: "https://www.msit.in/media/uploads/2025/12/29/jayesh-kumar_main-profile-27-dec.pdf",
         bio: "Dr. Jayesh Kumar is an Assistant Professor of Chemistry at MSIT. His research interests include Computational Chemistry and Nano-catalysis. He works on modeling chemical reactions at the molecular level."
     },
@@ -2545,8 +2545,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Optoelectronics", "Thin Film Technology", "High-efficiency Solar Cells", "Physics", "Semiconductor Devices"],
-        badAt: ["Significant administrative load from optoelectronics research lab facility management", "Managing thin film deposition research while overseeing foundational physics courses for multiple engineering departments"],
+        researchInterests: ["Optoelectronics", "Thin Film Technology", "High-efficiency Solar Cells", "Physics", "Semiconductor Devices"],
+        coursesTaught: ["Technical Communication & Ethics", "Environmental Science & Disaster Management"],
         pdfLink: "https://www.msit.in/media/2025/02/14/nidhi_main-profile.pdf",
         bio: "Dr. Nidhi is an Assistant Professor of Physics at MSIT. She specializes in Optoelectronics and Thin Film technology, focusing on the development of high-efficiency solar cells."
     },
@@ -2562,8 +2562,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "5+",
         patents: "0",
-        goodAt: ["ELT (English Language Teaching)", "Professional Communication", "Placement Preparation", "Soft Skills", "English"],
-        badAt: ["Significant administrative load from placement preparation coordination", "Managing soft skills modules while overseeing foundational English courses for first-year engineering students"],
+        researchInterests: ["ELT (English Language Teaching)", "Professional Communication", "Placement Preparation", "Soft Skills", "English"],
+        coursesTaught: ["Applied Mathematics (Linear Algebra & Calculus)", "Discrete Mathematics & Statistics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/ms-reenu-kumari.pdf",
         bio: "Ms. Reenu Kumari is an Assistant Professor of English at MSIT. She focuses on ELT (English Language Teaching) and professional communication, aiding students in placement preparation and soft skills."
     },
@@ -2579,8 +2579,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Fluid Dynamics", "Heat Transfer", "Porous Media Convection", "Mathematical Simulations", "Mathematics"],
-        badAt: ["Significant administrative load from fluid dynamics research lab coordination", "Managing heat transfer simulations while overseeing foundational mathematics courses for engineering students"],
+        researchInterests: ["Fluid Dynamics", "Heat Transfer", "Porous Media Convection", "Mathematical Simulations", "Mathematics"],
+        coursesTaught: ["Engineering Physics (Optics, Waves & Quantum)", "Electromagnetic Theory & Mechanics"],
         pdfLink: "https://www.msit.in/media/2024/10/05/dr-narender-singh_detailed-profile_2024.pdf",
         bio: "Dr. Narender Singh Malik is an Assistant Professor of Mathematics at MSIT. His research focus is on Fluid Dynamics and Heat Transfer. He explores mathematical simulations of convection in porous media."
     },
@@ -2596,8 +2596,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Semiconductor Physics", "Nano-materials", "Sensing", "Environmental Remediation", "Physics"],
-        badAt: ["Significant administrative load from nano-materials research lab instrument calibration", "Managing environmental remediation research while overseeing foundational physics courses for first-year engineering students"],
+        researchInterests: ["Semiconductor Physics", "Nano-materials", "Sensing", "Environmental Remediation", "Physics"],
+        coursesTaught: ["Engineering Chemistry & Materials Science", "Polymer Chemistry & Nanotechnology"],
         pdfLink: "https://www.msit.in/media/2021/11/15/dr-anju_main-profile.pdf",
         bio: "Dr. Anju is an Assistant Professor of Physics at MSIT. She specializes in Semiconductor Physics and Nano-materials, specifically for sensing and environmental remediation."
     },
@@ -2613,8 +2613,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Reliability Engineering", "Fuzzy Sets", "Life Expectancy Modeling", "Failure Rate Analysis", "Mathematics"],
-        badAt: ["Significant administrative load from reliability research lab data analysis", "Managing complex system failure rate simulations while overseeing foundational mathematics courses for engineering students"],
+        researchInterests: ["Reliability Engineering", "Fuzzy Sets", "Life Expectancy Modeling", "Failure Rate Analysis", "Mathematics"],
+        coursesTaught: ["Technical Communication & Ethics", "Environmental Science & Disaster Management"],
         pdfLink: "https://www.msit.in/media/2021/11/02/dr-jindagi.pdf",
         bio: "Dr. Jindagi Kumari is an Assistant Professor of Mathematics at MSIT. Her expertise lies in Reliability Engineering and Fuzzy Sets, modeling the life expectancy and failure rates of complex systems."
     },
@@ -2630,8 +2630,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Polymer Chemistry", "Nano-composites", "Sustainable Materials", "Industrial Applications", "Chemistry"],
-        badAt: ["Significant administrative load from polymer chemistry research lab safety and hazardous waste management", "Managing nano-composite synthesis projects while overseeing foundational chemistry courses for first-year engineering students"],
+        researchInterests: ["Polymer Chemistry", "Nano-composites", "Sustainable Materials", "Industrial Applications", "Chemistry"],
+        coursesTaught: ["Applied Mathematics (Linear Algebra & Calculus)", "Discrete Mathematics & Statistics"],
         pdfLink: "https://www.msit.in/media/2021/12/08/gitanjali_main-profile.pdf",
         bio: "Dr. Gitanjali is an Assistant Professor of Chemistry at MSIT. She specializes in Polymer Chemistry and Nano-composites. Her work focuses on the synthesis of sustainable materials for industrial applications."
     },
@@ -2647,8 +2647,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Inventory Control", "Supply Chain Management", "Mathematical Optimization", "Operations Research", "Mathematics"],
-        badAt: ["Significant administrative load from supply chain management research data collection", "Managing optimization simulations while overseeing foundational mathematics courses for engineering students"],
+        researchInterests: ["Inventory Control", "Supply Chain Management", "Mathematical Optimization", "Operations Research", "Mathematics"],
+        coursesTaught: ["Engineering Physics (Optics, Waves & Quantum)", "Electromagnetic Theory & Mechanics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/pooja-singh_main-profile_CuCKxy5.pdf",
         bio: "Dr. Pooja Singh is an Assistant Professor of Mathematics at MSIT. Her research area includes Inventory Control and Supply Chain Management using mathematical optimization techniques."
     },
@@ -2664,8 +2664,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Fixed Point Theory", "Functional Analysis", "Mathematical Frameworks", "Theoretical Mathematics", "Mathematics"],
-        badAt: ["Significant administrative load from theoretical mathematics research coordination", "Managing complex functional analysis applications while overseeing foundational engineering mathematics courses for the institute"],
+        researchInterests: ["Fixed Point Theory", "Functional Analysis", "Mathematical Frameworks", "Theoretical Mathematics", "Mathematics"],
+        coursesTaught: ["Engineering Chemistry & Materials Science", "Polymer Chemistry & Nanotechnology"],
         pdfLink: "https://www.msit.in/media/2024/10/05/dr-rashmi-gupta.pdf",
         bio: "Dr. Rashmi Gupta is an Assistant Professor of Mathematics at MSIT. She works on Fixed Point Theory and Functional Analysis, contributing to the fundamental theoretical frameworks of engineering mathematics."
     },
@@ -2681,8 +2681,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "5+",
         patents: "0",
-        goodAt: ["Holography", "Speckle Interferometry", "Non-destructive Testing", "Material Characterization", "Physics"],
-        badAt: ["Significant administrative load from holography research lab darkroom maintenance", "Managing speckle interferometry simulations while overseeing foundational physics courses for first-year engineering students"],
+        researchInterests: ["Holography", "Speckle Interferometry", "Non-destructive Testing", "Material Characterization", "Physics"],
+        coursesTaught: ["Technical Communication & Ethics", "Environmental Science & Disaster Management"],
         pdfLink: "https://www.msit.in/media/2021/11/15/pooja-singh_main-profile.pdf",
         bio: "Ms. Pooja Singh is an Assistant Professor of Physics at MSIT. She is involved in the study of Holography and Speckle Interferometry for non-destructive testing of materials."
     },
@@ -2698,8 +2698,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "10+",
         patents: "0",
-        goodAt: ["Indian Writing in English", "Cultural Studies", "Ethics and Human Values", "Engineering Education", "English"],
-        badAt: ["Significant administrative load from Indian writing research symposiums", "Managing ethics and human values modules while overseeing foundational English courses for the institute"],
+        researchInterests: ["Indian Writing in English", "Cultural Studies", "Ethics and Human Values", "Engineering Education", "English"],
+        coursesTaught: ["Applied Mathematics (Linear Algebra & Calculus)", "Discrete Mathematics & Statistics"],
         pdfLink: "https://www.msit.in/media/2021/12/08/dr-swati-chaudhary_main-profile.pdf",
         bio: "Dr. Swati Chaudhary is an Assistant Professor of English at MSIT. Her research involves Indian Writing in English and Cultural Studies. She emphasizes the role of ethics and human values in engineering education."
     },
@@ -2715,8 +2715,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Queueing Theory", "Stochastic Processes", "Telecommunications Modeling", "Traffic Flow Analysis", "Mathematics"],
-        badAt: ["Significant administrative load from stochastic process research data modeling", "Managing queueing theory simulations while overseeing foundational mathematics courses for engineering students"],
+        researchInterests: ["Queueing Theory", "Stochastic Processes", "Telecommunications Modeling", "Traffic Flow Analysis", "Mathematics"],
+        coursesTaught: ["Engineering Physics (Optics, Waves & Quantum)", "Electromagnetic Theory & Mechanics"],
         pdfLink: "https://msit.in/faculty/rakesh-kumar",
         bio: "Dr. Rakesh Kumar is an Assistant Professor of Mathematics at MSIT. He specializes in Queueing Theory and Stochastic Processes, applied to telecommunications and traffic flow modeling."
     },
@@ -2732,8 +2732,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Condensed Matter Physics", "Material Science", "Functional Materials", "Thin Films", "Physics"],
-        badAt: ["Significant administrative load from material science research lab furnace maintenance", "Managing thin film characterization while overseeing foundational physics courses for first-year engineering students"],
+        researchInterests: ["Condensed Matter Physics", "Material Science", "Functional Materials", "Thin Films", "Physics"],
+        coursesTaught: ["Engineering Chemistry & Materials Science", "Polymer Chemistry & Nanotechnology"],
         pdfLink: "https://www.msit.in/media/2021/12/08/sachin-dhull_main-profile.pdf",
         bio: "Dr. Sachin Dhull is an Assistant Professor of Physics at MSIT. He specializes in Condensed Matter Physics and Material Science, specifically the development of advanced functional materials."
     },
@@ -2749,8 +2749,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "5+",
         patents: "0",
-        goodAt: ["English Language Teaching", "Technical Communication", "Industrial Requirements", "Soft Skills", "English"],
-        badAt: ["Significant administrative load from technical communication curriculum development", "Managing ELT workshops while overseeing foundational English courses for the institute"],
+        researchInterests: ["English Language Teaching", "Technical Communication", "Industrial Requirements", "Soft Skills", "English"],
+        coursesTaught: ["Technical Communication & Ethics", "Environmental Science & Disaster Management"],
         pdfLink: "https://www.msit.in/media/2023/05/04/anisha-detailed-profile.pdf",
         bio: "Ms. Anisha is an Assistant Professor of English at MSIT. Her research focus is on English Language Teaching (ELT) and Technical Communication, bridging the gap between academic knowledge and industrial requirements."
     },
@@ -2766,8 +2766,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "5+",
         patents: "0",
-        goodAt: ["Advanced Calculus", "Linear Algebra", "Engineering Mathematics", "Applied Mathematics", "Mathematics"],
-        badAt: ["Significant administrative load from calculus department assessment moderation", "Managing high-volume linear algebra labs while overseeing foundational engineering mathematics for first-year students"],
+        researchInterests: ["Advanced Calculus", "Linear Algebra", "Engineering Mathematics", "Applied Mathematics", "Mathematics"],
+        coursesTaught: ["Applied Mathematics (Linear Algebra & Calculus)", "Discrete Mathematics & Statistics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/ms-mansi-detailed-profile.pdf",
         bio: "Ms. Mansi is an Assistant Professor of Mathematics at MSIT. She specializes in Advanced Calculus and Linear Algebra, ensuring a strong mathematical foundation for first-year engineering students."
     },
@@ -2783,8 +2783,8 @@ export const facultyMembers = [
         experience: "20",
         publications: "5+",
         patents: "0",
-        goodAt: ["Manufacturing Technology", "Workshop Practice", "Mechanical Engineering", "Hands-on Training", "Engineering Graphics"],
-        badAt: ["Significant administrative load from central workshop facility coordination and safety compliance", "Managing machine shop operations while overseeing foundational manufacturing processes for multiple engineering streams"],
+        researchInterests: ["Manufacturing Technology", "Workshop Practice", "Mechanical Engineering", "Hands-on Training", "Engineering Graphics"],
+        coursesTaught: ["Engineering Physics (Optics, Waves & Quantum)", "Electromagnetic Theory & Mechanics"],
         pdfLink: "https://www.msit.in/media/2021/11/15/j-s-rathee-detailed-profile.pdf",
         bio: "Mr. J. S. Rathee is an Assistant Professor of Mechanical Engineering at MSIT. He specializes in Manufacturing Technology and Workshop Practice, providing hands-on training to engineering students."
     },
@@ -2800,8 +2800,8 @@ export const facultyMembers = [
         experience: "15",
         publications: "12+",
         patents: "0",
-        goodAt: ["Algebra", "Cryptography", "Secure Communication", "Digital Protocols", "Mathematics"],
-        badAt: ["Significant administrative load from cryptography research lab security audits", "Managing complex algebraic protocols while overseeing foundational mathematics courses for the institute"],
+        researchInterests: ["Algebra", "Cryptography", "Secure Communication", "Digital Protocols", "Mathematics"],
+        coursesTaught: ["Engineering Chemistry & Materials Science", "Polymer Chemistry & Nanotechnology"],
         pdfLink: "https://www.msit.in/media/2021/12/10/shalu_main-profile.pdf",
         bio: "Dr. Shalu is an Assistant Professor of Mathematics at MSIT. Her expertise lies in Algebra and Cryptography, focusing on secure communication protocols for digital environments."
     }

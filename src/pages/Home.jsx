@@ -193,14 +193,14 @@ const Home = () => {
     // Campus Highlights state 
     const [currentHighlight, setCurrentHighlight] = useState(0);
     const [highlights] = useState(() => {
-        const stored = localStorage.getItem('msit_highlights');
+        const stored = localStorage.getItem('msit_highlights_v2') || localStorage.getItem('msit_highlights');
         if (stored) return JSON.parse(stored);
         const defaults = [
-            { id: 1, image: "/campus/main-academic-building.webp", quote: "NAAC Accredited Grade 'A' Institute with state-of-the-art engineering laboratories and innovation culture.", source: "National Assessment and Accreditation Council (NAAC)" },
-            { id: 2, image: "/campus/central-library-hall.webp", quote: "Over 65,000+ volumes, IEEE digital access, and dedicated quiet study spaces for undergraduate scholars.", source: "MSIT Central Library & Research Board" },
-            { id: 3, image: "/campus/student-gathering-courtyard.webp", quote: "Ranked consistently among North India's top engineering colleges with outstanding placement records.", source: "Times Engineering Institute Survey" }
+            { id: 1, image: "/campus/main-academic-building.webp", quote: "Ranked among the Top Engineering Colleges in Delhi-NCR by NIRF / Times Engineering Survey.", source: "Times Engineering Ranking" },
+            { id: 2, image: "/campus/central-library-hall.webp", quote: "Accredited with 'A' Grade for institutional quality and academic governance.", source: "National Assessment and Accreditation Council (NAAC)" },
+            { id: 3, image: "/campus/student-gathering-courtyard.webp", quote: "B.Tech programs in CSE, IT, ECE, and EEE accredited for outcome-based education.", source: "National Board of Accreditation (NBA)" }
         ];
-        localStorage.setItem('msit_highlights', JSON.stringify(defaults));
+        localStorage.setItem('msit_highlights_v2', JSON.stringify(defaults));
         return defaults;
     });
 
@@ -352,12 +352,12 @@ const Home = () => {
         const storedEvents = localStorage.getItem('msit_events_v2');
         if (storedEvents) return JSON.parse(storedEvents);
         const defaultEvents = [
-            { id: 1, label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
+            { id: 1, label: "NEWS", title: "Department of CSE receives CSR Research Grant from Petronet LNG Ltd. for AI Center of Excellence", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
             { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
-            { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" },
+            { id: 3, label: "STORY", title: "MSIT Alumni community secures offers across Google, Microsoft, Amazon, and ION Trading with highest domestic package of ₹45+ LPA", date: "FEB 15, 2026", link: "#", color: "border-purple-500" },
             { id: 4, label: "STORY", title: "Grand Finale of SIH 2025 Concludes: MSIT Declared Winner in Ministry of AYUSH Category", date: "DEC 12, 2025", link: "#", color: "border-blue-600" },
             { id: 5, label: "EVENT", title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", date: "NOV 19, 2026", link: "#", color: "border-emerald-500" },
-            { id: 6, label: "NEWS", title: "Department of CSE Receives Grant from Petronet LNG Ltd. for Center of Excellence", date: "AUG 15, 2025", link: "#", color: "border-purple-500" },
+            { id: 6, label: "NEWS", title: "MSIT establishes state-of-the-art AICTE IDEA Lab & Advanced Multidisciplinary Research Facilities", date: "AUG 15, 2025", link: "#", color: "border-purple-500" },
             { id: 7, label: "EVENT", title: "MSIT Conducts National Conference NCI-TIDE 2025", date: "DEC 15, 2025", link: "#", color: "border-blue-600" },
             { id: 8, label: "EVENT", title: "Placement Cell Conducts Placement Preparation Session with ION Alumni and Seniors", date: "AUG 30, 2024", link: "#", color: "border-emerald-500" },
             { id: 9, label: "EVENT", title: "E-Cell MSIT Organizes Flagship E-Summit 2026", date: "MAR 26, 2026", link: "#", color: "border-purple-500" },
@@ -814,37 +814,17 @@ const Home = () => {
                                     </div>
                                 </div>
                             ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* CAMPUS VIRTUAL TOUR */}
-            <section className="py-32 bg-slate-50 relative overflow-hidden flex flex-col items-center justify-center text-center">
-                <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[clamp(250px,40vw,500px)] h-[clamp(250px,40vw,500px)] bg-blue-100 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
-                    <div className="absolute bottom-0 left-0 w-[clamp(250px,40vw,500px)] h-[clamp(250px,40vw,500px)] bg-slate-200 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
-                </div>
-                
-                <div className="relative z-10 max-w-4xl mx-auto px-6">
-                    <div className="w-28 h-28 bg-white rounded-full shadow-card flex items-center justify-center mx-auto mb-12 cursor-pointer hover:scale-110 active:scale-95 transition-all duration-500 group border border-slate-100" onClick={() => openLightbox('Virtual Tour Launch')}>
-                        <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-card group-hover:bg-primary/90 transition-colors">
-                            <Play className="w-8 h-8 text-white ml-1.5" />
-                        </div>
-                    </div>
-                    <span className="text-primary font-black tracking-[0.25em] text-xs uppercase mb-4 block">Immersive Experience</span>
-                    <h2 className="text-4xl md:text-6xl font-bold text-title tracking-tight mb-8">Engineering Campus Tour</h2>
-                    <p className="text-xl text-muted font-medium max-w-2xl mx-auto mb-16 leading-relaxed">Take a fully immersive tour of our 8-storey academic block, reading halls, fests, and recreational grounds.</p>
+                                        </div>
                     
-                    <Link to="/virtual-tour" className="inline-block px-12 py-5 bg-title text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-body transition-all shadow-card hover:shadow-slate-300 active:scale-95">
-                        Start Full Virtual Tour (13 Views)
-                    </Link>
-                    
-                    <div className="mt-20 flex flex-wrap justify-center gap-3">
-                        {['Main Academic Building', 'Central Library', 'Centenary Auditorium', 'Sports Arena', 'Student Courtyard', 'Maharaja Surajmal Statue', 'Main Entrance Gate'].map((loc, i) => (
-                            <button key={i} type="button" className="px-5 py-2.5 bg-white border border-slate-200 rounded-2xl text-xs font-bold uppercase tracking-widest text-muted shadow-card hover:border-primary hover:text-primary cursor-pointer transition-all hover:shadow-card-hover active:scale-95" onClick={() => openLightbox(loc)}>
-                                {loc}
-                            </button>
-                        ))}
+                    {/* Integrated Campus Tour CTA */}
+                    <div className="mt-16 flex flex-col items-center justify-center text-center p-8 md:p-12 bg-slate-50 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full blur-[80px] opacity-60 pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-3 relative z-10">Want to explore every corner?</h3>
+                        <p className="text-slate-600 mb-8 max-w-lg relative z-10">Take a fully immersive virtual tour of our 8-storey academic block, reading halls, and recreational grounds.</p>
+                        <Link to="/virtual-tour" className="relative z-10 inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold text-sm tracking-wider uppercase rounded-xl shadow-md hover:bg-blue-700 hover:shadow-lg transition-all active:scale-95">
+                            <Play className="w-4 h-4" />
+                            Start Virtual Tour
+                        </Link>
                     </div>
                 </div>
             </section>
