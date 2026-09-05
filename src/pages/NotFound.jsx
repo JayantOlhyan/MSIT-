@@ -109,8 +109,8 @@ const NotFound = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             // Set styles based on accessibility/theme settings
-            const isDark = settings.darkMode;
-            const isHighContrast = settings.highContrast;
+            const isDark = typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const isHighContrast = typeof window !== 'undefined' && window.matchMedia('(prefers-contrast: more)').matches;
 
             if (isHighContrast) {
                 // Keep background blank in high contrast mode to maximize readability
@@ -180,7 +180,7 @@ const NotFound = () => {
             document.removeEventListener('mouseleave', handleMouseLeave);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [window.matchMedia('(prefers-reduced-motion: reduce)').matches, settings.darkMode, settings.highContrast]);
+    }, []);
 
     // Matrix falling code animation logic
     useEffect(() => {
@@ -227,7 +227,7 @@ const NotFound = () => {
             window.removeEventListener('resize', resizeMatrix);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [isMatrixActive, window.matchMedia('(prefers-reduced-motion: reduce)').matches]);
+    }, [isMatrixActive]);
 
     // Scroll terminal to bottom
     useEffect(() => {

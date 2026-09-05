@@ -9,10 +9,9 @@ const OpeningAnimation = ({ onComplete }) => {
     const logoRef = useRef(null);
     const sweepRef = useRef(null);
 
-        const prefersReducedMotion = typeof window !== 'undefined' 
+    const isReducedMotion = typeof window !== 'undefined' 
         ? window.matchMedia('(prefers-reduced-motion: reduce)').matches 
         : false;
-    const isReducedMotion = settings?.reducedMotion || prefersReducedMotion;
 
     useGSAP(() => {
         if (isReducedMotion) {
