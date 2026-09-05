@@ -152,16 +152,80 @@ export const academicData = {
         ]
     },
     "academic-calendar": {
-        title: "Academic Calendar",
-        subtitle: "Plan your semester with precision at Maharaja Surajmal Institute of Technology.",
-        seo_description: "View the official academic calendar for Maharaja Surajmal Institute of Technology. Stay updated on semester dates, exams, and holidays for the 2026-27 session.",
+        title: "Academic Calendar & Examination Guidelines",
+        subtitle: "Official semester datesheets, internal evaluation weightage, and university exam ordinances at MSIT.",
+        seo_description: "View official MSIT academic calendar, GGSIPU datesheets, internal examination weightage rules, and attendance requirements.",
         category: "Academics",
         heroImage: "/campus-hero.webp",
-        heroImageAlt: "MSIT academic block overview for the official semester calendar",
+        heroImageAlt: "MSIT academic block overview for official semester calendar",
         content: `
-            <p class="mb-6">The MSIT academic calendar dictates the rhythm of the institution. It contains crucial dates for semester commencements, mid-term examinations, end-term practicals, holidays, and cultural festivals.</p>
-            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Adherence & Discipline</h3>
-            <p class="mb-6">Strict adherence to the academic calendar ensures syllabus completion and provides students with adequate time for exam preparation and participation in extracurricular activities.</p>
+            <div class="space-y-12">
+                <section>
+                    <p class="text-lg text-slate-700 leading-relaxed">
+                        The academic calendar of Maharaja Surajmal Institute of Technology aligns rigorously with Guru Gobind Singh Indraprastha University (GGSIPU) regulations, orchestrating a structured academic cycle across lecture semesters, internal evaluations, and university end-term examinations.
+                    </p>
+                </section>
+
+                <!-- Examination & Evaluation Weightage -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-6">Examination Scheme & Weightage Rules</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-lg uppercase tracking-wider">Theory Courses (100 Marks Total)</span>
+                            <ul class="mt-4 space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between border-b border-slate-200 pb-2">
+                                    <span class="font-semibold">Internal Continuous Assessment:</span>
+                                    <span class="font-extrabold text-blue-700">25 Marks</span>
+                                </li>
+                                <li class="text-xs text-slate-500 pl-2">
+                                    • Mid-Term / Minor Examination: <strong>15 Marks</strong><br>
+                                    • Class Assignments, Quizzes & Regularity: <strong>10 Marks</strong>
+                                </li>
+                                <li class="flex justify-between pt-2">
+                                    <span class="font-semibold">University End-Term Theory Exam:</span>
+                                    <span class="font-extrabold text-indigo-700">75 Marks</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-lg uppercase tracking-wider">Practical Labs (100 Marks Total)</span>
+                            <ul class="mt-4 space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between border-b border-slate-200 pb-2">
+                                    <span class="font-semibold">Internal Lab Performance:</span>
+                                    <span class="font-extrabold text-emerald-700">40 Marks</span>
+                                </li>
+                                <li class="text-xs text-slate-500 pl-2">
+                                    • Day-to-day Lab Journal & Execution: <strong>20 Marks</strong><br>
+                                    • Internal Lab Viva & Quiz: <strong>20 Marks</strong>
+                                </li>
+                                <li class="flex justify-between pt-2">
+                                    <span class="font-semibold">External Practical / Viva Voce:</span>
+                                    <span class="font-extrabold text-teal-700">60 Marks</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Datesheets, Re-Evaluation & Ordinance 11 -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-amber-600 pl-4 mb-6">University Regulations & Key Datesheets</h3>
+                    <div class="space-y-4">
+                        <div class="p-5 bg-amber-50/70 border border-amber-200 rounded-2xl">
+                            <h4 class="font-bold text-amber-950 text-base mb-2">📌 GGSIPU Ordinance 11 (Mandatory Attendance Requirement)</h4>
+                            <p class="text-sm text-amber-900 leading-relaxed">
+                                Students must secure <strong>not less than 75% attendance</strong> in every individual subject. Candidates falling below this statutory limit will be placed on the official detention list and prohibited from appearing in external semester examinations.
+                            </p>
+                        </div>
+                        <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <h4 class="font-bold text-slate-900 text-base mb-2">📄 Re-Checking & Re-Evaluation Notification Procedure</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Following publication of university results, students may apply for re-checking of answer scripts or inspection/certified copies within 15 days by submitting prescribed GGSIPU Examination Division forms alongside the requisite challan fee.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         `,
         stats: [
             { label: "Current Sem", value: "Even (Jan-May)" },
@@ -196,16 +260,104 @@ export const academicData = {
         ]
     },
     "research": {
-        title: "Research & Innovation",
-        subtitle: "Pushing the boundaries of knowledge at Maharaja Surajmal Institute of Technology.",
-        seo_description: "Explore research and innovation at Maharaja Surajmal Institute of Technology. Learn about our student publications, patents, and cutting-edge labs in AI.",
+        title: "Research & Innovation Ecosystem",
+        subtitle: "Advancing frontier computing, funded research projects, and intellectual property at MSIT.",
+        seo_description: "Explore funded research grants, patents, IEEE conferences, and Innovation Council initiatives at Maharaja Surajmal Institute of Technology.",
         category: "Academics",
-        heroImage: "/campus-hero.webp",
-        heroImageAlt: "Researchers working on AI and quantum computing projects at MSIT innovation cell",
+        heroImage: "/campus/main-academic-building.webp",
+        heroImageAlt: "MSIT Advanced Computing Research Laboratories",
         content: `
-            <p class="mb-6">At MSIT, research isn't just for faculty. We encourage undergraduate students to publish papers, file patents, and present at international conferences. Our innovation cells provide the funding and mentorship required to turn ideas into reality.</p>
-            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Areas of Focus</h3>
-            <p class="mb-6">Our primary research clusters focus on Artificial Intelligence, Machine Learning, Blockchain, V2X Communication, and Renewable Energy grids. We actively collaborate with industry partners for applied research.</p>
+            <div class="space-y-12">
+                <section>
+                    <p class="text-lg text-slate-700 leading-relaxed">
+                        Maharaja Surajmal Institute of Technology fosters an intensive research and development ecosystem under the mentorship of Director Prof. (Dr.) Avanish Kumar Srivastava (former Director CSIR-AMPRI and Stanford-ranked top 2% global scientist), driving industrial innovation and multidisciplinary patents.
+                    </p>
+                </section>
+
+                <!-- Sponsored Research Projects -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-6">Sponsored Research Grants & Centers of Excellence</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-2.5 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded-lg">Corporate CSR Grant</span>
+                                <span class="text-sm font-extrabold text-purple-700">₹30,00,000/-</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base mb-2">Center of Excellence in Computational Intelligence</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Funded by <strong>Petronet LNG Ltd.</strong>, this CoE in the Department of CSE is equipped with state-of-the-art multi-GPU deep learning servers, high-performance compute clusters, and cloud-assisted AI prototyping environments.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-lg">AICTE National Scheme</span>
+                                <span class="text-sm font-extrabold text-blue-700">₹1,10,00,000/-</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-base mb-2">AICTE IDEA Lab Prototyping Infrastructure</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                The Idea Development, Evaluation & Application (IDEA) Lab provides 3D printers, laser cutters, embedded hardware workstations, and FPGA development kits to nurture hands-on product creation across all undergraduate departments.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Patents Table -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-6">Published & Granted Patents (Selected Portfolio)</h3>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm bg-white">
+                        <table class="w-full text-left text-sm text-slate-700">
+                            <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-700 border-b border-slate-200">
+                                <tr>
+                                    <th class="px-5 py-3 font-bold">Patent Title</th>
+                                    <th class="px-5 py-3 font-bold">Filing / Grant Authority</th>
+                                    <th class="px-5 py-3 font-bold">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-xs">
+                                <tr>
+                                    <td class="px-5 py-3 font-semibold text-slate-900">IoT-Enabled Real-Time Soil Nitrogen & Moisture Telemetry Probe</td>
+                                    <td class="px-5 py-3 text-slate-600">Indian Patent Office (Govt. of India)</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">Granted</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-5 py-3 font-semibold text-slate-900">Low-Power Embedded Hardware Loop for Indic Speech Synthesis</td>
+                                    <td class="px-5 py-3 text-slate-600">Indian Patent Office (Govt. of India)</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">Published</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-5 py-3 font-semibold text-slate-900">Autonomous Swarm Drone Navigation Protocol for Precision Agriculture</td>
+                                    <td class="px-5 py-3 text-slate-600">Indian Patent Office (Govt. of India)</td>
+                                    <td class="px-5 py-3 font-bold text-blue-700">Published</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-5 py-3 font-semibold text-slate-900">Nanocomposite Photocatalyst Device for Industrial Effluent Purification</td>
+                                    <td class="px-5 py-3 text-slate-600">Indian Patent Office (Govt. of India)</td>
+                                    <td class="px-5 py-3 font-bold text-emerald-700">Granted</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Conferences & IIC Rating -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-6">Conferences, IEEE Proceedings & Innovation Council</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            <h4 class="font-bold text-slate-900 mb-2">IEEE Technically-Approved Conferences</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                                MSIT convenes the biennial <strong>International Conference on Artificial Intelligence and Applications (ICAIA)</strong>, approved by IEEE Delhi Section, alongside national conference <strong>NCI-TIDE</strong>, with peer-reviewed proceedings indexed in Scopus and IEEE Xplore.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            <h4 class="font-bold text-slate-900 mb-2">MoE Institutional Innovation Council (IIC)</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                                Awarded high star ratings by the Ministry of Education (MoE) Innovation Cell. MSIT implements the <strong>National Innovation and Startup Policy (NISP)</strong>, providing patent filing incentives, pre-incubation grants, and student IP ownership.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         `,
         stats: [
             { label: "Publications", value: "500+" },
