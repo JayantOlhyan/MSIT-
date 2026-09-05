@@ -260,7 +260,15 @@ const Placements = () => {
                                         className="bg-white rounded-3xl p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group text-center"
                                     >
                                         <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-2 border-slate-100">
-                                            <img src={details.img} alt={details.name} className="w-full h-full object-cover" />
+                                            <img 
+                                                src={details.img} 
+                                                alt={details.name} 
+                                                className="w-full h-full object-cover" 
+                                                onError={(e) => {
+                                                    e.currentTarget.onerror = null;
+                                                    e.currentTarget.src = '/faculty/default-avatar.svg';
+                                                }}
+                                            />
                                         </div>
                                         <span className="inline-block px-2.5 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-black uppercase tracking-wider rounded mb-1">{details.dept || member.branch}</span>
                                         <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate">{details.name}</h3>
@@ -387,7 +395,15 @@ const Placements = () => {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
                             <div className="flex gap-4 sm:gap-6 items-center relative z-10">
                                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
-                                    <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
+                                    <img 
+                                        src={selectedMember.img} 
+                                        alt={selectedMember.name} 
+                                        className="w-full h-full object-cover" 
+                                        onError={(e) => {
+                                            e.currentTarget.onerror = null;
+                                            e.currentTarget.src = '/faculty/default-avatar.svg';
+                                        }}
+                                    />
                                 </div>
                                 <div className="flex-1 min-w-0">
                                     <span className="inline-block px-2.5 py-1 bg-white/10 text-white text-[10px] font-black uppercase tracking-widest rounded mb-1.5 sm:mb-2 border border-white/5">{selectedMember.dept}</span>
