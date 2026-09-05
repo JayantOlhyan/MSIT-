@@ -23,6 +23,7 @@ const DynamicPage = () => {
     const [activeHighlightIndex, setActiveHighlightIndex] = useState(null);
 
     useEffect(() => {
+        setActiveHighlightIndex(null);
         if (slug === 'online-fee') {
             setActiveFeeTab('pay');
         } else if (slug === 'events') {
@@ -232,7 +233,7 @@ const DynamicPage = () => {
 
                                                 return (
                                                     <li key={i} className="flex items-start text-slate-300 text-sm">
-                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-all duration-300 ${isActive ? 'rotate-90 text-accent' : 'text-slate-500'}`} />
+                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-all duration-300 ${isActive ? 'text-accent' : 'text-slate-500'} ${activeHighlightIndex === i && detailText ? 'rotate-90' : ''}`} />
                                                         {isLink ? (
                                                             <Link to={point.url} className="hover:text-accent transition-colors">
                                                                 {point.label}
