@@ -11,13 +11,14 @@ const AdminDashboard = () => {
 
     // Dashboard State
     const [events, setEvents] = useState(() => {
-        const storedEvents = localStorage.getItem('msit_events');
+        const storedEvents = localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
         if (storedEvents) return JSON.parse(storedEvents);
         const defaultEvents = [
             { id: 1, label: "NEWS", title: "MSIT receives $12M grant to establish cutting-edge AI & Quantum Labs", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
             { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
             { id: 3, label: "STORY", title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
         ];
+        localStorage.setItem('msit_events_v2', JSON.stringify(defaultEvents));
         localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
         return defaultEvents;
     });
@@ -43,13 +44,14 @@ const AdminDashboard = () => {
     
     // Testimonials State
     const [testimonials, setTestimonials] = useState(() => {
-        const storedTestimonials = localStorage.getItem('msit_testimonials');
+        const storedTestimonials = localStorage.getItem('msit_testimonials_v2') || localStorage.getItem('msit_testimonials');
         if (storedTestimonials) return JSON.parse(storedTestimonials);
         const defaultTestimonials = [
             { id: 1, name: "Priya Sharma", year: "22", major: "Computer Science & Engineering", quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google.", company: "Google", image: "/priya-sharma.webp" },
             { id: 2, name: "Rahul Verma", year: "23", major: "Information Technology", quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.", company: "Microsoft", image: "/rahul-verma.webp" },
             { id: 3, name: "Ananya Iyer", year: "21", major: "Electronics & Communication", quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems.", company: "Apple", image: "/ananya-iyer.webp" }
         ];
+        localStorage.setItem('msit_testimonials_v2', JSON.stringify(defaultTestimonials));
         localStorage.setItem('msit_testimonials', JSON.stringify(defaultTestimonials));
         return defaultTestimonials;
     });
@@ -65,9 +67,9 @@ const AdminDashboard = () => {
         const storedHighlights = localStorage.getItem('msit_highlights');
         if (storedHighlights) return JSON.parse(storedHighlights);
         const defaultHighlights = [
-            { id: 1, image: "/campus-lab.webp", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
-            { id: 2, image: "/campus-library.webp", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
-            { id: 3, image: "/campus-excellence.webp", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
+            { id: 1, image: "/campus/main-academic-building.webp", quote: "NAAC Accredited Grade 'A' Institute with state-of-the-art labs and innovation culture.", source: "NAAC Peer Review" },
+            { id: 2, image: "/campus/central-library-hall.webp", quote: "Over 65,000+ volumes, IEEE digital access, and dedicated research facilities for scholars.", source: "MSIT Central Library" },
+            { id: 3, image: "/campus/student-gathering-courtyard.webp", quote: "Consistently ranked among the top engineering colleges with outstanding placement records.", source: "Times Engineering Survey" }
         ];
         localStorage.setItem('msit_highlights', JSON.stringify(defaultHighlights));
         return defaultHighlights;
@@ -82,8 +84,11 @@ const AdminDashboard = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        if (adminId === 'msit admin' && password === 'admin982') {
+        const validId = import.meta.env.VITE_ADMIN_ID || 'msit admin';
+        const validPass = import.meta.env.VITE_ADMIN_PASS || 'admin982';
+        if (adminId.trim().toLowerCase() === validId.trim().toLowerCase() && password === validPass) {
             setIsLoggedIn(true);
+            sessionStorage.setItem('msit_admin_auth', 'true');
             setLoginError('');
         } else {
             setLoginError('Invalid Admin ID or Password.');
@@ -99,11 +104,13 @@ const AdminDashboard = () => {
 
     const saveEvents = (newEvents) => {
         setEvents(newEvents);
+        localStorage.setItem('msit_events_v2', JSON.stringify(newEvents));
         localStorage.setItem('msit_events', JSON.stringify(newEvents));
     };
 
     const saveTestimonials = (newTestimonials) => {
         setTestimonials(newTestimonials);
+        localStorage.setItem('msit_testimonials_v2', JSON.stringify(newTestimonials));
         localStorage.setItem('msit_testimonials', JSON.stringify(newTestimonials));
     };
 

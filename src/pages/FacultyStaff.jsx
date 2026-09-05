@@ -8,14 +8,26 @@ import { facultyMembers } from '../data/facultyData';
 const FacultyStaff = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [activeDept, setActiveDept] = useState('All');
-    const [selectedFaculty, setSelectedFaculty] = useState(null);
     const location = useLocation();
     const navigate = useNavigate();
 
+    const [selectedFaculty, setSelectedFaculty] = useState(() => {
+        const params = new URLSearchParams(window.location.search);
+        const facultyId = params.get('id');
+        if (facultyId) {
+            return facultyMembers.find(f => 
+                f.id === facultyId || 
+                f.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(facultyId.toLowerCase().replace(/[^a-z0-9]/g, ''))
+            ) || null;
+        }
+        return null;
+    });
+    const [prevSearch, setPrevSearch] = useState(location.search);
+
     const [cameWithId] = useState(() => new URLSearchParams(window.location.search).has('id'));
 
-    // Auto-open profile modal when navigating with ?id= URL parameter
-    useEffect(() => {
+    if (prevSearch !== location.search) {
+        setPrevSearch(location.search);
         const params = new URLSearchParams(location.search);
         const facultyId = params.get('id');
         if (facultyId) {
@@ -30,7 +42,7 @@ const FacultyStaff = () => {
                 }
             }
         }
-    }, [location.search]);
+    }
 
     const handleOpenProfile = (faculty) => {
         setSelectedFaculty(faculty);
@@ -192,7 +204,12 @@ const FacultyStaff = () => {
 
                                 <div className="flex items-start gap-5 relative z-10 mb-6">
                                     <div className="w-20 h-20 rounded-2xl overflow-hidden bg-surface shrink-0 shadow-inner p-1 border border-slate-200 group-hover:border-primary/30 transition-colors duration-500">
-                                        <img src={faculty.img} alt={`${faculty.name}, ${faculty.role} in the ${faculty.dept} department at MSIT`} className="w-full h-full object-cover rounded-xl" />
+                                        <img 
+                                            src={faculty.img} 
+                                            alt={`${faculty.name}, ${faculty.role} in the ${faculty.dept} department at MSIT`} 
+                                            onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/faculty/default-avatar.webp'; }}
+                                            className="w-full h-full object-cover rounded-xl" 
+                                        />
                                     </div>
                                     <div className="group/dept">
                                         <span className="inline-block px-2.5 py-1 bg-surface text-muted text-xs uppercase tracking-bolder font-bold rounded-lg mb-2 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
@@ -271,7 +288,12 @@ const FacultyStaff = () => {
 
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-5 md:gap-8 relative z-10">
                                 <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-card shrink-0 md:-mb-36 z-10 border-2 border-white/10">
-                                    <img src={selectedFaculty.img} alt={`High-resolution portrait of ${selectedFaculty.name}, ${selectedFaculty.role} at MSIT`} className="w-full h-full object-cover rounded-2xl" />
+                                    <img 
+                                        src={selectedFaculty.img} 
+                                        alt={`High-resolution portrait of ${selectedFaculty.name}, ${selectedFaculty.role} at MSIT`} 
+                                        onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/faculty/default-avatar.webp'; }}
+                                        className="w-full h-full object-cover rounded-2xl" 
+                                    />
                                 </div>
                                 <div className="text-center md:text-left flex-1">
                                     <div className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-widest rounded-lg mb-3">

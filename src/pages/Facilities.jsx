@@ -46,7 +46,7 @@ const Facilities = () => {
                 accentTitle="Campus Facilities" 
                 description="MSIT provides a state-of-the-art environment designed to foster innovation, research, and holistic student development."
                 breadcrumbs={[{ label: 'Facilities' }]}
-                heroImage="/campus-hero.webp"
+                heroImage="/campus/campus-pathway-block.webp"
                 heroImageAlt="Modern academic infrastructure and lab facilities at the MSIT Janakpuri campus"
             />
 
@@ -161,25 +161,91 @@ const Facilities = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-card">
-                            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=1000" alt="Modern MSIT Central Library showing the spacious reading area and technical book collection" className="w-full h-[clamp(300px,50vh,500px)] object-cover" />
+                        <div className="order-1 md:order-2 rounded-3xl overflow-hidden shadow-card border border-slate-100">
+                            <img src="/campus/central-library-hall.webp" alt="Authentic MSIT Central Library reading hall with students and book banks" className="w-full h-[clamp(300px,50vh,500px)] object-cover" />
                         </div>
                     </div>
                 )}
 
                 {activeTab === 'hostel' && (
-                    <div className="bg-slate-950 text-white rounded-3xl p-12 relative overflow-hidden animate-fade-in">
-                        <div className="max-w-xl relative z-10">
-                            <h3 className="text-3xl font-bold mb-6">Campus Accommodation</h3>
-                            <p className="text-slate-400 mb-8 leading-relaxed">
-                                Separate hostels for boys and girls provide a "home away from home" experience with 24/7 security, high-speed Wi-Fi, and nutritious dining facilities.
-                            </p>
-                            <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> 24/7 Power Backup</li>
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> RO Drinking Water</li>
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Sports Courts</li>
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Hygienic Mess</li>
-                            </ul>
+                    <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
+                        <div className="bg-slate-950 text-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-card">
+                            <div className="relative z-10">
+                                <span className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2 block">Residential Living</span>
+                                <h3 className="text-3xl font-bold mb-6">Campus Accommodation & Hostels</h3>
+                                <p className="text-slate-400 mb-8 leading-relaxed">
+                                    Separate hostels for boys and girls provide a safe, secure, and disciplined "home away from home" experience with round-the-clock security, high-speed Wi-Fi, and well-maintained dining halls.
+                                </p>
+                                <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
+                                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> 24/7 Power Backup</li>
+                                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> RO Drinking Water</li>
+                                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Sports & Rec Room</li>
+                                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Hygienic Dining Mess</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="rounded-3xl overflow-hidden shadow-card border border-slate-100">
+                            <img src="/campus/campus-pathway-block.webp" alt="MSIT Campus Blocks and Residential Pathways" className="w-full h-[clamp(300px,45vh,450px)] object-cover" />
+                        </div>
+                    </div>
+                )}
+
+                {activeTab === 'sports' && (
+                    <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
+                        <div className="space-y-6">
+                            <div>
+                                <span className="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Athletics & Physical Education</span>
+                                <h3 className="text-3xl font-bold text-slate-900 mb-4">Outdoor Sports Grounds & Courts</h3>
+                                <p className="text-slate-600 leading-relaxed">
+                                    MSIT boasts expansive outdoor sports facilities dedicated to badminton, volleyball, football, basketball, and cricket net practice. The institute regularly organizes intramural tournaments and hosts the annual GGSIPU sports meet contingent.
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <h4 className="font-bold text-slate-900 text-sm">Outdoor Badminton Courts</h4>
+                                    <p className="text-xs text-slate-500 mt-1">Dedicated courts with night lighting for competitive matches.</p>
+                                </div>
+                                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <h4 className="font-bold text-slate-900 text-sm">SPHURTI Sports Fest</h4>
+                                    <p className="text-xs text-slate-500 mt-1">Annual multi-sport championship attracting thousands of students.</p>
+                                </div>
+                                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <h4 className="font-bold text-slate-900 text-sm">Tree-Shaded Kiosk</h4>
+                                    <p className="text-xs text-slate-500 mt-1">Refreshment zones directly adjacent to sports grounds.</p>
+                                </div>
+                                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                    <h4 className="font-bold text-slate-900 text-sm">Athletic Coaching</h4>
+                                    <p className="text-xs text-slate-500 mt-1">Expert sports mentors and physical training officers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="rounded-3xl overflow-hidden shadow-card border border-slate-100">
+                            <img src="/campus/sports-badminton-ground.webp" alt="MSIT Outdoor Badminton and Sports Grounds overlooking the academic block" className="w-full h-[clamp(300px,45vh,450px)] object-cover" />
+                        </div>
+                    </div>
+                )}
+
+                {activeTab === 'medical' && (
+                    <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
+                        <div className="space-y-6">
+                            <div>
+                                <span className="text-emerald-600 text-xs font-bold uppercase tracking-widest mb-2 block">Student Wellness</span>
+                                <h3 className="text-3xl font-bold text-slate-900 mb-4">On-Campus Medical & Health Center</h3>
+                                <p className="text-slate-600 leading-relaxed">
+                                    The health and well-being of our students and staff is paramount. MSIT provides an on-campus first-aid health center staffed with visiting doctors and round-the-clock emergency response tie-ups with Janakpuri super-speciality hospitals.
+                                </p>
+                            </div>
+                            <div className="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                                <h4 className="font-bold text-emerald-950 mb-1">Key Healthcare Features</h4>
+                                <ul className="text-sm text-emerald-800 space-y-2 mt-2">
+                                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span> Regular doctor visits & health checkups</li>
+                                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span> Free essential medicines and first-aid supplies</li>
+                                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span> Wheelchair accessible campus and emergency stretcher service</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="rounded-3xl overflow-hidden shadow-card border border-slate-100">
+                            <img src="/campus/campus-side-avenue.webp" alt="Clean and serene MSIT campus avenue with manicured gardens" className="w-full h-[clamp(300px,45vh,450px)] object-cover" />
                         </div>
                     </div>
                 )}

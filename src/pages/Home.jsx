@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Check, Award, ArrowRight, Play, X, Mail, Globe, ChevronDown,
-    Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink, Building2
+    Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink, Building2, Camera
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -14,6 +14,100 @@ const stats = [
     { icon: <TrendingUp />, value: "150+", label: "EXPERT FACULTY" }
 ];
 
+const CAMPUS_GALLERY = [
+    {
+        id: 'main-block',
+        title: '8-Storey Main Academic Building',
+        category: 'Academics',
+        image: '/campus/main-academic-building.webp',
+        desc: 'The iconic 8-storey red brick academic centerpiece of MSIT and its expansive green lawns.'
+    },
+    {
+        id: 'main-gate',
+        title: 'Institute Main Entrance Gate',
+        category: 'Campus',
+        image: '/campus/msit-main-gate.webp',
+        desc: 'Security-guarded grand entrance on C-4 Janakpuri with palm-lined boulevard.'
+    },
+    {
+        id: 'central-library',
+        title: 'Central Library Reading Hall',
+        category: 'Academics',
+        image: '/campus/central-library-hall.webp',
+        desc: 'Spacious reading hall with over 65,000+ volumes, IEEE digital access, and quiet study carrels.'
+    },
+    {
+        id: 'auditorium',
+        title: 'Auditorium & Cultural Stage',
+        category: 'Campus Life',
+        image: '/campus/auditorium-cultural-fest.webp',
+        desc: 'MSIT Auditorium during Genesis & Avensis fests, decorated with dancer silhouettes and banners.'
+    },
+    {
+        id: 'sports-ground',
+        title: 'Outdoor Sports & Badminton Arena',
+        category: 'Sports',
+        image: '/campus/sports-badminton-ground.webp',
+        desc: 'Outdoor courts with badminton nets and athletic facilities overlooking the campus block.'
+    },
+    {
+        id: 'student-courtyard',
+        title: 'Student Plaza & Courtyard Gathering',
+        category: 'Campus Life',
+        image: '/campus/student-gathering-courtyard.webp',
+        desc: 'Vibrant outdoor student gathering in the courtyard with classic red brick balustrades.'
+    },
+    {
+        id: 'surajmal-statue',
+        title: 'Maharaja Surajmal Memorial Statue',
+        category: 'Heritage',
+        image: '/campus/maharaja-surajmal-statue.webp',
+        desc: 'Commemorative bronze bust of Bharatpur ruler Maharaja Surajmal (1707–1763).'
+    },
+    {
+        id: 'foundation-stone',
+        title: 'Historic Foundation Stone (1978)',
+        category: 'Heritage',
+        image: '/campus/foundation-stone-plaque.webp',
+        desc: 'Plaque commemorating the stone laid by President Neelam Sanjiva Reddy & Chaudhary Charan Singh.'
+    },
+    {
+        id: 'pathway-block',
+        title: 'Academic Block Walkway & Arches',
+        category: 'Academics',
+        image: '/campus/campus-pathway-block.webp',
+        desc: 'Interlocking brick walkways connecting department wings under tree shade.'
+    },
+    {
+        id: 'canteen-kiosk',
+        title: 'Tree-Shaded Canteen & Food Kiosk',
+        category: 'Campus Life',
+        image: '/campus/campus-canteen-kiosk.webp',
+        desc: 'Outdoor student cafeteria and refreshment kiosk shaded by lush green trees.'
+    },
+    {
+        id: 'ecell-foyer',
+        title: 'Student Innovation & E-Cell Foyer',
+        category: 'Campus Life',
+        image: '/campus/ecell-noticeboard-entrance.webp',
+        desc: 'Academic entrance steps featuring E-Cell E-Summit notice board and student activity bulletins.'
+    },
+    {
+        id: 'panoramic-field',
+        title: 'Panoramic Sports Field & Dual Blocks',
+        category: 'Campus',
+        image: '/campus/campus-panoramic-field.webp',
+        desc: 'Wide panoramic perspective across the sports grounds capturing both institute buildings.'
+    },
+    {
+        id: 'side-avenue',
+        title: 'Landscaped Avenue & Greenery',
+        category: 'Campus',
+        image: '/campus/campus-side-avenue.webp',
+        desc: 'Clean concrete avenue lined with manicured hedges and flowering shrubs.'
+    }
+];
+
 const Home = () => {
     const [activeNewsTab, setActiveNewsTab] = useState('all');
     // ... rest of state
@@ -21,7 +115,8 @@ const Home = () => {
     const [activeStatIndex, setActiveStatIndex] = useState(0);
     const statsContainerRef = useRef(null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
-    const [lightboxImage, setLightboxImage] = useState('');
+    const [lightboxImage, setLightboxImage] = useState(null);
+    const [galleryFilter, setGalleryFilter] = useState('All');
 
     const [testimonials] = useState(() => {
         const stored = localStorage.getItem('msit_testimonials_v2');
@@ -101,9 +196,9 @@ const Home = () => {
         const stored = localStorage.getItem('msit_highlights');
         if (stored) return JSON.parse(stored);
         const defaults = [
-            { id: 1, image: "/campus-lab.webp", quote: "The facilities here rival those of top Silicon Valley tech companies.", source: "TechCrunch University Review" },
-            { id: 2, image: "/campus-library.webp", quote: "Innovation is at the heart of MSIT's curriculum, fostering a true research spirit.", source: "MIT Technology Review" },
-            { id: 3, image: "/campus-excellence.webp", quote: "A breeding ground for the next generation of global technology leaders.", source: "Forbes Education" }
+            { id: 1, image: "/campus/main-academic-building.webp", quote: "NAAC Accredited Grade 'A' Institute with state-of-the-art engineering laboratories and innovation culture.", source: "National Assessment and Accreditation Council (NAAC)" },
+            { id: 2, image: "/campus/central-library-hall.webp", quote: "Over 65,000+ volumes, IEEE digital access, and dedicated quiet study spaces for undergraduate scholars.", source: "MSIT Central Library & Research Board" },
+            { id: 3, image: "/campus/student-gathering-courtyard.webp", quote: "Ranked consistently among North India's top engineering colleges with outstanding placement records.", source: "Times Engineering Institute Survey" }
         ];
         localStorage.setItem('msit_highlights', JSON.stringify(defaults));
         return defaults;
@@ -195,8 +290,25 @@ const Home = () => {
         }
     };
 
-    const openLightbox = (imageLabel) => {
-        setLightboxImage(imageLabel);
+    const openLightbox = (target) => {
+        if (typeof target === 'string') {
+            if (target === 'Virtual Tour Launch') {
+                setLightboxImage({ type: 'video', title: 'MSIT Virtual Tour Video Walkthrough', url: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1&mute=0' });
+            } else {
+                const found = CAMPUS_GALLERY.find(g => 
+                    g.title.toLowerCase().includes(target.toLowerCase()) || 
+                    g.id.toLowerCase().includes(target.toLowerCase()) ||
+                    target.toLowerCase().includes(g.id.replace('-', ' '))
+                );
+                if (found) {
+                    setLightboxImage({ type: 'image', title: found.title, image: found.image, desc: found.desc });
+                } else {
+                    setLightboxImage({ type: 'image', title: target, image: '/campus/main-academic-building.webp', desc: 'MSIT Campus Facility' });
+                }
+            }
+        } else {
+            setLightboxImage(target);
+        }
         setLightboxOpen(true);
     };
 
@@ -291,8 +403,8 @@ const Home = () => {
             <section className="relative w-full h-[100vh] min-h-[clamp(500px,80vh,700px)] flex items-center justify-center bg-slate-900 overflow-hidden">
                 {/* LCP Discovery - Hidden High Priority Image for CSS background */}
                 <img 
-                    src="/campus-hero.webp" 
-                    alt="Campus Hero LCP Discovery" 
+                    src="/campus/main-academic-building.webp" 
+                    alt="MSIT Main 8-Storey Academic Building" 
                     className="sr-only" 
                     fetchpriority="high" 
                     loading="eager" 
@@ -302,7 +414,7 @@ const Home = () => {
                 <div className="absolute inset-0 z-0 group overflow-hidden">
                     <div
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[20s] ease-out group-hover:scale-105"
-                        style={{ backgroundImage: "url('/campus-hero.webp')" }}
+                        style={{ backgroundImage: "url('/campus/main-academic-building.webp')" }}
                     ></div>
                     {/* Dark gradient overlays */}
                     <div className="absolute inset-0 bg-slate-950/40 mix-blend-multiply"></div>
@@ -634,6 +746,78 @@ const Home = () => {
             </section>
 
 
+            {/* CAMPUS PHOTOGRAPHIC SHOWCASE */}
+            <section className="py-28 bg-white relative overflow-hidden border-t border-slate-100">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                        <div>
+                            <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-3">
+                                <Camera className="w-4 h-4" />
+                                <span>Authentic Campus Photography</span>
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-extrabold text-title tracking-tight">
+                                MSIT Through The Lens
+                            </h2>
+                            <p className="text-muted text-base max-w-2xl mt-3">
+                                Explore genuine snapshots of our 8-acre Janakpuri campus — from our 8-storey academic block and central library to student festivals, historic memorials, and sports arenas.
+                            </p>
+                        </div>
+
+                        {/* Category filter pills */}
+                        <div className="flex flex-wrap gap-2">
+                            {['All', 'Academics', 'Campus Life', 'Heritage', 'Sports'].map((cat) => (
+                                <button
+                                    key={cat}
+                                    type="button"
+                                    onClick={() => setGalleryFilter(cat)}
+                                    className={`px-4 py-2 rounded-xl text-xs font-bold tracking-wider uppercase transition-all ${
+                                        galleryFilter === cat
+                                            ? 'bg-primary text-white shadow-md shadow-blue-500/20'
+                                            : 'bg-slate-100 hover:bg-slate-200 text-slate-600'
+                                    }`}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Gallery Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        {CAMPUS_GALLERY
+                            .filter(item => galleryFilter === 'All' || item.category === galleryFilter)
+                            .map((item) => (
+                                <div
+                                    key={item.id}
+                                    onClick={() => openLightbox({ type: 'image', title: item.title, image: item.image, desc: item.desc })}
+                                    className="group relative bg-slate-900 rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover border border-slate-100 cursor-pointer transition-all duration-500 hover:-translate-y-1.5"
+                                >
+                                    <div className="aspect-[4/3] overflow-hidden bg-slate-800">
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            loading="lazy"
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                        />
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+                                    <div className="absolute bottom-0 inset-x-0 p-4 text-white">
+                                        <span className="inline-block px-2 py-0.5 bg-white/20 backdrop-blur-md rounded text-[10px] font-bold uppercase tracking-wider mb-1.5">
+                                            {item.category}
+                                        </span>
+                                        <h3 className="text-sm font-bold leading-tight group-hover:text-blue-300 transition-colors line-clamp-1">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-xs text-slate-300 line-clamp-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CAMPUS VIRTUAL TOUR */}
             <section className="py-32 bg-slate-50 relative overflow-hidden flex flex-col items-center justify-center text-center">
                 <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
@@ -649,17 +833,17 @@ const Home = () => {
                     </div>
                     <span className="text-primary font-black tracking-[0.25em] text-xs uppercase mb-4 block">Immersive Experience</span>
                     <h2 className="text-4xl md:text-6xl font-bold text-title tracking-tight mb-8">Engineering Campus Tour</h2>
-                    <p className="text-xl text-muted font-medium max-w-2xl mx-auto mb-16 leading-relaxed">Take a fully immersive 360° virtual tour of our world-class laboratories, extensive libraries, and intelligent learning spaces.</p>
+                    <p className="text-xl text-muted font-medium max-w-2xl mx-auto mb-16 leading-relaxed">Take a fully immersive tour of our 8-storey academic block, reading halls, fests, and recreational grounds.</p>
                     
                     <Link to="/virtual-tour" className="inline-block px-12 py-5 bg-title text-white font-bold text-sm tracking-[0.2em] uppercase rounded-2xl hover:bg-body transition-all shadow-card hover:shadow-slate-300 active:scale-95">
-                        Start Exploration
+                        Start Full Virtual Tour (13 Views)
                     </Link>
                     
-                    <div className="mt-20 flex flex-wrap justify-center gap-6">
-                        {['Main Block', 'AI Labs', 'Library', 'Sports Complex', 'Auditorium'].map((loc, i) => (
-                            <span key={i} className="px-6 py-3 bg-white border border-slate-200 rounded-2xl text-xs font-bold uppercase tracking-widest text-muted shadow-card hover:border-primary hover:text-primary cursor-pointer transition-all hover:shadow-card-hover active:scale-95" onClick={() => openLightbox(loc)}>
+                    <div className="mt-20 flex flex-wrap justify-center gap-3">
+                        {['Main Academic Building', 'Central Library', 'Centenary Auditorium', 'Sports Arena', 'Student Courtyard', 'Maharaja Surajmal Statue', 'Main Entrance Gate'].map((loc, i) => (
+                            <button key={i} type="button" className="px-5 py-2.5 bg-white border border-slate-200 rounded-2xl text-xs font-bold uppercase tracking-widest text-muted shadow-card hover:border-primary hover:text-primary cursor-pointer transition-all hover:shadow-card-hover active:scale-95" onClick={() => openLightbox(loc)}>
                                 {loc}
-                            </span>
+                            </button>
                         ))}
                     </div>
                 </div>
@@ -668,24 +852,36 @@ const Home = () => {
             {/* Lightbox Modal (for Tour/Images) */}
             {lightboxOpen && (
                 <div className="fixed inset-0 bg-slate-900/95 z-[100] flex flex-col items-center justify-center p-4 lg:p-12 animate-fade-in" onClick={() => setLightboxOpen(false)}>
-                    <button className="absolute top-6 right-6 p-2 text-white/50 hover:text-white rounded-full transition-colors z-50 bg-black/50">
-                        <X className="w-8 h-8" />
+                    <button className="absolute top-6 right-6 p-2.5 text-white/60 hover:text-white rounded-full transition-colors z-50 bg-black/60 border border-white/10 shadow-lg" onClick={() => setLightboxOpen(false)}>
+                        <X className="w-7 h-7" />
                     </button>
-                    <div className="w-full max-w-6xl aspect-video bg-black rounded-xl border border-slate-700 shadow-card flex items-center justify-center flex-col overflow-hidden relative animate-slide-up" onClick={(e) => e.stopPropagation()}>
-                        {lightboxImage === 'Virtual Tour Launch' ? (
-                            <iframe
-                                className="absolute inset-0 w-full h-full"
-                                src="https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1&mute=0"
-                                title="MSIT Virtual Tour"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                    <div className="w-full max-w-5xl flex items-center justify-center bg-black/85 rounded-3xl border border-slate-700 shadow-2xl flex-col overflow-hidden relative animate-slide-up p-3 md:p-6" onClick={(e) => e.stopPropagation()}>
+                        {lightboxImage?.type === 'video' ? (
+                            <div className="w-full aspect-video">
+                                <iframe
+                                    className="w-full h-full rounded-2xl"
+                                    src={lightboxImage.url}
+                                    title={lightboxImage.title}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
                         ) : (
-                            <>
-                                <Play className="w-16 h-16 text-white/20 mb-4" />
-                                <div className="text-white text-xl font-light tracking-widest">{lightboxImage} Viewer Placeholder</div>
-                            </>
+                            <div className="flex flex-col items-center w-full">
+                                <img
+                                    src={lightboxImage?.image || '/campus/main-academic-building.webp'}
+                                    alt={lightboxImage?.title || 'MSIT Campus Photograph'}
+                                    className="max-h-[70vh] w-auto max-w-full object-contain rounded-2xl shadow-2xl mb-4"
+                                />
+                                <div className="text-center px-4 pb-2">
+                                    <div className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-[10px] font-extrabold uppercase tracking-widest rounded-md mb-2 border border-blue-400/20">
+                                        Authentic MSIT Campus
+                                    </div>
+                                    <h3 className="text-white text-xl md:text-2xl font-bold tracking-tight mb-1">{lightboxImage?.title}</h3>
+                                    <p className="text-slate-300 text-sm max-w-2xl leading-relaxed">{lightboxImage?.desc}</p>
+                                </div>
+                            </div>
                         )}
                     </div>
                 </div>

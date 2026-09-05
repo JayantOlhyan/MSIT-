@@ -36,28 +36,29 @@ const renderIcon = (iconName, className = "w-5 h-5") => {
     return <IconComponent className={className} />;
 };
 
+// Navigation sections matching reference image left menu
+const NAV_ITEMS = [
+    { id: 'about', label: 'About', icon: BookOpen },
+    { id: 'objectives', label: 'Objectives', icon: Award },
+    { id: 'activities', label: 'Activities', icon: Layers },
+    { id: 'events', label: 'Events', icon: Calendar },
+    { id: 'achievements', label: 'Achievements', icon: Trophy },
+    { id: 'projects', label: 'Projects & Research', icon: FolderGit2 },
+    { id: 'people', label: 'People', icon: Users },
+    { id: 'gallery', label: 'Media Gallery', icon: Sparkles },
+    { id: 'resources', label: 'Resources', icon: FileText },
+    { id: 'announcements', label: 'Announcements', icon: Bell },
+    { id: 'recruitment', label: 'Recruitment', icon: GraduationCap },
+    { id: 'faq', label: 'FAQ', icon: HelpCircle },
+    { id: 'connect', label: 'Connect', icon: Share2 }
+];
+
 const SocietyDetailView = ({ society }) => {
     const [activeSection, setActiveSection] = useState('about');
     const [galleryTab, setGalleryTab] = useState('all');
     const [lightboxImage, setLightboxImage] = useState(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-    // Navigation sections matching reference image left menu
-    const navItems = [
-        { id: 'about', label: 'About', icon: BookOpen },
-        { id: 'objectives', label: 'Objectives', icon: Award },
-        { id: 'activities', label: 'Activities', icon: Layers },
-        { id: 'events', label: 'Events', icon: Calendar },
-        { id: 'achievements', label: 'Achievements', icon: Trophy },
-        { id: 'projects', label: 'Projects & Research', icon: FolderGit2 },
-        { id: 'people', label: 'People', icon: Users },
-        { id: 'gallery', label: 'Media Gallery', icon: Sparkles },
-        { id: 'resources', label: 'Resources', icon: FileText },
-        { id: 'announcements', label: 'Announcements', icon: Bell },
-        { id: 'recruitment', label: 'Recruitment', icon: GraduationCap },
-        { id: 'faq', label: 'FAQ', icon: HelpCircle },
-        { id: 'connect', label: 'Connect', icon: Share2 }
-    ];
+    const navItems = NAV_ITEMS;
 
     const scrollToSection = (id) => {
         setActiveSection(id);
@@ -77,7 +78,7 @@ const SocietyDetailView = ({ society }) => {
             const triggerLine = 140; 
             
             const candidates = [];
-            for (const item of navItems) {
+            for (const item of NAV_ITEMS) {
                 const element = document.getElementById(item.id);
                 if (element) {
                     const rect = element.getBoundingClientRect();
@@ -101,7 +102,7 @@ const SocietyDetailView = ({ society }) => {
                     return rowIds[0];
                 });
             } else {
-                setActiveSection(navItems[0].id);
+                setActiveSection(NAV_ITEMS[0].id);
             }
         };
 

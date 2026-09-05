@@ -71,9 +71,9 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Advanced networking and server infrastructure at the MSIT Information Technology department",
         content: `
-            <p className="mb-6">The Information Technology department at MSIT is a vibrant hub of innovation. We focus heavily on network infrastructure, cloud engineering, cybersecurity, and data analytics, preparing students to lead the digital transformation of modern industries.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Core Competencies</h3>
-            <p className="mb-6">Our curriculum bridges the gap between software development and systems engineering. Students deploy live applications, configure secure networks, and analyze massive datasets in our advanced IT laboratories.</p>
+            <p class="mb-6">The Information Technology department at MSIT is a vibrant hub of innovation. We focus heavily on network infrastructure, cloud engineering, cybersecurity, and data analytics, preparing students to lead the digital transformation of modern industries.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Core Competencies</h3>
+            <p class="mb-6">Our curriculum bridges the gap between software development and systems engineering. Students deploy live applications, configure secure networks, and analyze massive datasets in our advanced IT laboratories.</p>
         `,
         stats: [
             { label: "Intake", value: "120" },
@@ -93,9 +93,9 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Modern VLSI design and signal processing equipment in the MSIT ECE lab",
         content: `
-            <p className="mb-6">The ECE department designs the hardware that runs the software. From microprocessors and VLSI design to satellite communication and IoT, our students build the physical layer of the digital revolution.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Hardware Innovation</h3>
-            <p className="mb-6">Equipped with oscilloscopes, spectrum analyzers, and industry-grade simulation software, the ECE labs provide hands-on experience in circuit design, signal processing, and embedded systems architecture.</p>
+            <p class="mb-6">The ECE department designs the hardware that runs the software. From microprocessors and VLSI design to satellite communication and IoT, our students build the physical layer of the digital revolution.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Hardware Innovation</h3>
+            <p class="mb-6">Equipped with oscilloscopes, spectrum analyzers, and industry-grade simulation software, the ECE labs provide hands-on experience in circuit design, signal processing, and embedded systems architecture.</p>
         `,
         stats: [
             { label: "Intake", value: "120" },
@@ -115,9 +115,9 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Sustainable power systems and industrial control units in the MSIT Electrical laboratory",
         content: `
-            <p className="mb-6">The EEE department addresses the world's growing energy and automation needs. We teach the fundamentals of power generation, renewable energy systems, robotics, and advanced control systems.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Power & Control</h3>
-            <p className="mb-6">Students work with massive industrial motors, design smart grid interfaces, and program robotic arms, merging heavy electrical engineering with precise electronic control.</p>
+            <p class="mb-6">The EEE department addresses the world's growing energy and automation needs. We teach the fundamentals of power generation, renewable energy systems, robotics, and advanced control systems.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Power & Control</h3>
+            <p class="mb-6">Students work with massive industrial motors, design smart grid interfaces, and program robotic arms, merging heavy electrical engineering with precise electronic control.</p>
         `,
         stats: [
             { label: "Intake", value: "60" },
@@ -137,9 +137,9 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Applied Sciences lab at MSIT where first-year students perform physics experiments",
         content: `
-            <p className="mb-6">Before you can engineer, you must understand the universe. The Applied Sciences department imparts rigorous training in Engineering Mathematics, Applied Physics, and Applied Chemistry during the critical first year.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">First-Year Foundation</h3>
-            <p className="mb-6">Our highly experienced faculty ensure a smooth transition from high school to university, building analytical thinking muscles and deep scientific comprehension that serves as the foundation for the next three years.</p>
+            <p class="mb-6">Before you can engineer, you must understand the universe. The Applied Sciences department imparts rigorous training in Engineering Mathematics, Applied Physics, and Applied Chemistry during the critical first year.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">First-Year Foundation</h3>
+            <p class="mb-6">Our highly experienced faculty ensure a smooth transition from high school to university, building analytical thinking muscles and deep scientific comprehension that serves as the foundation for the next three years.</p>
         `,
         stats: [
             { label: "Faculty", value: "25+" },
@@ -159,9 +159,9 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "MSIT academic block overview for the official semester calendar",
         content: `
-            <p className="mb-6">The MSIT academic calendar dictates the rhythm of the institution. It contains crucial dates for semester commencements, mid-term examinations, end-term practicals, holidays, and cultural festivals.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Adherence & Discipline</h3>
-            <p className="mb-6">Strict adherence to the academic calendar ensures syllabus completion and provides students with adequate time for exam preparation and participation in extracurricular activities.</p>
+            <p class="mb-6">The MSIT academic calendar dictates the rhythm of the institution. It contains crucial dates for semester commencements, mid-term examinations, end-term practicals, holidays, and cultural festivals.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Adherence & Discipline</h3>
+            <p class="mb-6">Strict adherence to the academic calendar ensures syllabus completion and provides students with adequate time for exam preparation and participation in extracurricular activities.</p>
         `,
         stats: [
             { label: "Current Sem", value: "Even (Jan-May)" },
@@ -177,9 +177,9 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Students in a technical lecture hall at MSIT following the semester syllabus",
         content: `
-            <p className="mb-6">Access official GGSIPU syllabi for all departments and branches. The syllabus outlines learning objectives, textbooks, unit breakdowns, and evaluation schemes for every subject.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Class Schedules</h3>
-            <p className="mb-6">Department-wise timetables are updated at the start of every semester to ensure an optimal balance of lectures, tutorials, and intensive laboratory sessions.</p>
+            <p class="mb-6">Access official GGSIPU syllabi for all departments and branches. The syllabus outlines learning objectives, textbooks, unit breakdowns, and evaluation schemes for every subject.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Class Schedules</h3>
+            <p class="mb-6">Department-wise timetables are updated at the start of every semester to ensure an optimal balance of lectures, tutorials, and intensive laboratory sessions.</p>
         `,
         stats: [
             { label: "Updated", value: "Start of Sem" },
@@ -195,9 +195,9 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Researchers working on AI and quantum computing projects at MSIT innovation cell",
         content: `
-            <p className="mb-6">At MSIT, research isn't just for faculty. We encourage undergraduate students to publish papers, file patents, and present at international conferences. Our innovation cells provide the funding and mentorship required to turn ideas into reality.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Areas of Focus</h3>
-            <p className="mb-6">Our primary research clusters focus on Artificial Intelligence, Machine Learning, Blockchain, V2X Communication, and Renewable Energy grids. We actively collaborate with industry partners for applied research.</p>
+            <p class="mb-6">At MSIT, research isn't just for faculty. We encourage undergraduate students to publish papers, file patents, and present at international conferences. Our innovation cells provide the funding and mentorship required to turn ideas into reality.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Areas of Focus</h3>
+            <p class="mb-6">Our primary research clusters focus on Artificial Intelligence, Machine Learning, Blockchain, V2X Communication, and Renewable Energy grids. We actively collaborate with industry partners for applied research.</p>
         `,
         stats: [
             { label: "Publications", value: "500+" },

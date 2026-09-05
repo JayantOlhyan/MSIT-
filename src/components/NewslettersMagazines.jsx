@@ -611,7 +611,7 @@ const NewslettersMagazines = () => {
                                     </p>
                                 </div>
 
-                                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-655 font-light leading-relaxed">
+                                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-600 font-light leading-relaxed">
                                     Your selected publications will be delivered regularly to:<br />
                                     <strong className="text-slate-800 font-bold">{checkoutEmail}</strong>
                                 </div>

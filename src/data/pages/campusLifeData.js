@@ -103,12 +103,32 @@ export const campusLifeData = {
         subtitle: "The pulse of the campus at Maharaja Surajmal Institute of Technology.",
         seo_description: "Experience the energy of Maharaja Surajmal Institute of Technology's annual fests. Learn about Avensis and Genesis, our flagship tech and cultural celebrations.",
         category: "Campus Life",
-        heroImage: "/campus-hero.webp",
+        heroImage: "/campus/auditorium-cultural-fest.webp",
         heroImageAlt: "Celebrity performance and energized crowd at MSIT's annual Avensis technical festival",
         content: `
-            <p className="mb-6">The MSIT campus is always buzzing with activity. We host international tech symposiums, rigorous hackathons, alumni meets, and our massive annual cultural and technical festivals.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Avensis & Genesis</h3>
-            <p className="mb-6">Our flagship festivals attract thousands of participants from across Delhi NCR. They feature battle of bands, coding marathons, robotics wars, and celebrity performances, making for unforgettable memories.</p>
+            <div class="space-y-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-200/70">
+                    <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                        <img src="/campus/auditorium-cultural-fest.webp" alt="MSIT Centenary Auditorium decorated for Genesis Cultural Fest" class="w-full h-auto object-cover" />
+                    </div>
+                    <div>
+                        <span class="text-purple-600 text-xs font-bold uppercase tracking-widest block mb-2">Cultural Extravaganza</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Genesis & Cultural Celebrations</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3">The MSIT Centenary Auditorium comes alive during our annual cultural festival <strong>Genesis</strong>. Adorned with festive bunting and dance silhouettes, it hosts classical and contemporary performances, street plays, and music bands from across Delhi NCR.</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-200/70">
+                    <div class="order-2 md:order-1">
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest block mb-2">Vibrant Campus Life</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Avensis & Tech Symposiums</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3">From 36-hour hackathons and robotics showdowns to live project expos, <strong>Avensis</strong> is MSIT's flagship technical festival attracting over 10,000 students every year.</p>
+                    </div>
+                    <div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                        <img src="/campus/student-gathering-courtyard.webp" alt="Students gathering in courtyard during fest at MSIT" class="w-full h-auto object-cover" />
+                    </div>
+                </div>
+            </div>
         `,
         stats: [
             { label: "Annual Fests", value: "2 Major" },
@@ -124,9 +144,9 @@ export const campusLifeData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Informational posters and security desks at MSIT ensuring a safe environment for new students",
         content: `
-            <p className="mb-6">MSIT enforces a strict ZERO TOLERANCE policy towards any form of ragging. We pride ourselves on cultivating a safe, welcoming, and intellectually stimulating environment for all incoming freshers.</p>
-            <h3 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Vigilance & Support</h3>
-            <p className="mb-6">Our anti-ragging squad conducts regular patrols and sudden inspections. Anonymous reporting mechanisms are available 24/7, and severe disciplinary action, including expulsion, is taken against offenders.</p>
+            <p class="mb-6">MSIT enforces a strict ZERO TOLERANCE policy towards any form of ragging. We pride ourselves on cultivating a safe, welcoming, and intellectually stimulating environment for all incoming freshers.</p>
+            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Vigilance & Support</h3>
+            <p class="mb-6">Our anti-ragging squad conducts regular patrols and sudden inspections. Anonymous reporting mechanisms are available 24/7, and severe disciplinary action, including expulsion, is taken against offenders.</p>
         `,
         stats: [
             { label: "Ragging Cases", value: "0" },

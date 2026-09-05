@@ -140,7 +140,6 @@ const Header = () => {
         ],
         student: [
             { name: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
-            { name: "MSIT Central", url: "https://central.msit.in/", external: true },
             { name: "Moodle (LMS)", url: "http://moodle.msit.in/", external: true },
             { name: "NISP (Startup & Innovation)", url: "http://nisp.msit.in/", external: true },
             { name: "NPTEL Videos", url: "http://nptel.ac.in/", external: true },
@@ -295,7 +294,7 @@ const Header = () => {
                                                                                  key={j}
                                                                                  to={sub.url}
                                                                                  onClick={() => setActiveDropdown(null)}
-                                                                                 className={`text-sm font-semibold transition-all flex items-center justify-between group/sublink py-1 ${isPathActive(sub.url) ? 'text-primary font-bold' : 'text-slate-655 hover:text-primary'}`}
+                                                                                 className={`text-sm font-semibold transition-all flex items-center justify-between group/sublink py-1 ${isPathActive(sub.url) ? 'text-primary font-bold' : 'text-slate-600 hover:text-primary'}`}
                                                                              >
                                                                                  <span>{sub.name}</span>
                                                                                  <ArrowRight className={`w-3.5 h-3.5 transition-all shrink-0 text-primary ${isPathActive(sub.url) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 group-hover/sublink:opacity-100 group-hover/sublink:translate-x-0'}`} />

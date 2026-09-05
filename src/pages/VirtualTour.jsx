@@ -12,78 +12,149 @@ const VirtualTour = () => {
         { value: "8+", label: "Academic Blocks" },
         { value: "45+", label: "Smart Laboratories" },
         { value: "50,000+", label: "Library Volumes" },
+        { value: "13", label: "Authentic Campus Views" },
         { value: "8.5", label: "Acres Lush Campus" }
     ];
 
     const tourLocations = [
         {
-            id: 'main-block',
-            title: 'Administrative & Main Block',
-            category: 'academic',
-            description: 'The architectural heart of MSIT, housing the administrative office, principal office, dean office, and major lecture theatres with modern acoustic designs.',
-            highlights: ['Central Reception', 'Deans & Administration Office', 'Main Seminar Hall', 'Smart Classrooms'],
-            image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
-            type: 'video'
+            id: 'main-gate',
+            title: 'Institute Main Entrance & Gate',
+            category: 'facilities',
+            description: 'The monumental red-brick entrance gate of Maharaja Surajmal Group of Institutions on C-4 Janakpuri, guarded 24/7 with lush palm-lined boulevard access.',
+            highlights: ['Guarded Security Booths', 'MSI & MSIT Dual Gateways', 'Palm-Lined Boulevard', 'Urban Metro Connectivity'],
+            image: '/campus/msit-main-gate.webp',
+            panoramaUrl: '/campus/msit-main-gate.webp',
+            type: 'image'
         },
         {
-            id: 'ai-labs',
-            title: 'Quantum & Advanced AI Labs',
-            category: 'laboratories',
-            description: 'Equipped with state-of-the-art server racks, NVIDIA GPUs, and development terminals, these labs host advanced research in AI, Machine Learning, and Cryptography.',
-            highlights: ['High-Performance Server Racks', 'NVIDIA GPU Workstations', 'IoT and Robotics Kits', 'Collaborative Innovation Zone'],
-            image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
-            type: 'video'
+            id: 'main-block',
+            title: '8-Storey Main Academic Building',
+            category: 'academic',
+            description: 'The signature 8-storey red-brick architectural centerpiece of MSIT, housing high-tech engineering departments, Dean offices, and auditoriums across expansive front lawns.',
+            highlights: ['8 Modern Multi-Storey Floors', 'Smart Lecture Theatres', 'Lush Front Garden & Lawns', 'Elevator & Wi-Fi Enabled'],
+            image: '/campus/main-academic-building.webp',
+            panoramaUrl: '/campus/main-academic-building.webp',
+            type: 'image'
         },
         {
             id: 'library',
             title: 'Central Library & Reading Hall',
-            category: 'facilities',
-            description: 'A fully digitalized learning repository with book bank services, IEEE digital library access, individual reading cabins, and a resource archive.',
-            highlights: ['50,000+ Print Volumes', 'IEEE & DELNET Digital Access', 'Spacious Reading Halls', 'Archival & Reference Sections'],
-            image: 'https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
-            type: 'video'
+            category: 'academic',
+            description: 'The spacious MSIT Central Library reading hall featuring over 65,000+ volumes, IEEE digital access, DELNET databases, and quiet study carrels.',
+            highlights: ['65,000+ Physical Volumes', 'IEEE & DELNET Digital Access', 'Spacious Reading Hall', 'Book Bank Facility'],
+            image: '/campus/central-library-hall.webp',
+            panoramaUrl: '/campus/central-library-hall.webp',
+            type: 'image'
         },
         {
             id: 'auditorium',
-            title: 'Centenary Auditorium',
+            title: 'Auditorium & Cultural Arena',
             category: 'facilities',
-            description: 'A grand centrally-airconditioned facility hosting international conferences, national hackathons, cultural festivals, and corporate campus placements.',
-            highlights: ['1,000+ Seating Capacity', 'State-of-the-Art Line Array Audio', 'Dual Laser Projector Setup', 'Spacious Backstage & Greenrooms'],
-            image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
-            type: 'video'
+            description: 'The institute grand red-brick auditorium during annual cultural fests (Avensis & Genesis), decorated with banners and dance cutouts, hosting cultural performances and summits.',
+            highlights: ['Centrally Air-Conditioned', 'Acoustic Stage & Sound Setup', 'Annual Cultural Fest Stage', 'Green Rooms & Gallery'],
+            image: '/campus/auditorium-cultural-fest.webp',
+            panoramaUrl: '/campus/auditorium-cultural-fest.webp',
+            type: 'image'
         },
         {
             id: 'sports-complex',
-            title: 'Multi-Sport Gymnasium & Complex',
+            title: 'Outdoor Sports Arena & Courts',
             category: 'sports',
-            description: 'Promoting a healthy mind in a healthy body, our sports arena is equipped for both indoor training sessions and outdoor competitive tournaments.',
-            highlights: ['Football & Cricket Grounds', 'Lawn Tennis Courts', 'Indoor Badminton Courts', 'Fully Equipped Gym'],
-            image: 'https://images.unsplash.com/photo-1544033527-b192daee1f5b?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
-            type: 'video'
+            description: 'MSIT dedicated outdoor courts with badminton, volleyball, cricket nets, and track events overlooking the multi-storey campus block.',
+            highlights: ['Outdoor Badminton Courts', 'Volleyball & Basketball Arena', 'Annual Sports Fest (SPHURTI)', 'Intramural Tournaments'],
+            image: '/campus/sports-badminton-ground.webp',
+            panoramaUrl: '/campus/sports-badminton-ground.webp',
+            type: 'image'
         },
         {
-            id: 'hostel',
-            title: 'Student Residence (Hostels)',
+            id: 'courtyard',
+            title: 'Student Courtyard & Activity Plaza',
             category: 'facilities',
-            description: 'Secure, Wi-Fi enabled boarding facilities providing single and double occupancy options with modern mess halls and recreation centers.',
-            highlights: ['24/7 Power & Water Supply', 'High-Speed Wi-Fi Connectivity', 'Hygienic Dining & Mess', 'Recreation & Common Rooms'],
-            image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=800',
-            panoramaUrl: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1',
-            type: 'video'
+            description: 'The vibrant outdoor student plaza enclosed by classical brick balustrades and manicured hedges where students assemble for discussions, events, and celebrations.',
+            highlights: ['Open-Air Courtyard', 'Pergola & Garden Seating', 'Student Fest Celebrations', 'Green Landscaped Hedges'],
+            image: '/campus/student-gathering-courtyard.webp',
+            panoramaUrl: '/campus/student-gathering-courtyard.webp',
+            type: 'image'
+        },
+        {
+            id: 'surajmal-statue',
+            title: 'Maharaja Surajmal Memorial Statue',
+            category: 'heritage',
+            description: 'Commemorative bronze bust honoring Bharatpur ruler Maharaja Surajmal (1707–1763), embodying bravery, wisdom, and selfless service for all young engineers.',
+            highlights: ['Bronze Sculpted Bust', 'Commemorative Pedestal (1707–1763)', 'Central Campus Courtyard', 'Annual Founders Honors'],
+            image: '/campus/maharaja-surajmal-statue.webp',
+            panoramaUrl: '/campus/maharaja-surajmal-statue.webp',
+            type: 'image'
+        },
+        {
+            id: 'foundation-stone',
+            title: 'Historic Foundation Stone (1978)',
+            category: 'heritage',
+            description: 'The historical foundation plaque laid on Tuesday, 12 December 1978 by Shri Neelam Sanjiva Reddy (President of India) and presided by Chaudhary Charan Singh.',
+            highlights: ['Laid by President of India', 'Presided by Chaudhary Charan Singh', 'Foundation Date: 12 Dec 1978', 'Legacy of 45+ Years'],
+            image: '/campus/foundation-stone-plaque.webp',
+            panoramaUrl: '/campus/foundation-stone-plaque.webp',
+            type: 'image'
+        },
+        {
+            id: 'campus-pathway',
+            title: 'Academic Corridor & Arched Wings',
+            category: 'academic',
+            description: 'Paved interlocking brick walkways connecting department buildings, framed by red brick arches, flowering trees, and shaded study spots.',
+            highlights: ['Interlocking Brick Paving', 'Classic Arched Architecture', 'Inter-Department Walkways', 'Shaded Tree Canopy'],
+            image: '/campus/campus-pathway-block.webp',
+            panoramaUrl: '/campus/campus-pathway-block.webp',
+            type: 'image'
+        },
+        {
+            id: 'canteen-kiosk',
+            title: 'Tree-Shaded Canteen & Food Kiosk',
+            category: 'facilities',
+            description: 'The lively campus kiosk and food corner surrounded by lush green trees, offering wholesome meals, tea, cold drinks, and snacks.',
+            highlights: ['Shaded by Neem & Peepal Trees', 'Fresh Snacks & Meals', 'Social Gathering Hub', 'Pocket-Friendly Dining'],
+            image: '/campus/campus-canteen-kiosk.webp',
+            panoramaUrl: '/campus/campus-canteen-kiosk.webp',
+            type: 'image'
+        },
+        {
+            id: 'ecell-entrance',
+            title: 'Student Innovation & E-Cell Foyer',
+            category: 'academic',
+            description: 'Academic block entrance steps with student notice boards highlighting the annual E-Summit, Hackathons, and startup incubation initiatives.',
+            highlights: ['E-Cell E-Summit Headquarters', 'Notice & Circular Boards', 'Main Staircase & Foyer', 'Innovation Hub Access'],
+            image: '/campus/ecell-noticeboard-entrance.webp',
+            panoramaUrl: '/campus/ecell-noticeboard-entrance.webp',
+            type: 'image'
+        },
+        {
+            id: 'panoramic-field',
+            title: 'Panoramic Sports Field & Dual Blocks',
+            category: 'facilities',
+            description: 'Expansive panoramic vista capturing both campus blocks, open athletic grounds, and clear Delhi skyline.',
+            highlights: ['Dual Institute Blocks', 'Large Cricket & Athletic Field', 'Spacious Campus Layout', 'Serene Green Environment'],
+            image: '/campus/campus-panoramic-field.webp',
+            panoramaUrl: '/campus/campus-panoramic-field.webp',
+            type: 'image'
+        },
+        {
+            id: 'side-avenue',
+            title: 'Landscaped Avenues & Greenery',
+            category: 'facilities',
+            description: 'Clean concrete campus avenue featuring manicured hedges, tricolor painted curbs, and dense flowering trees.',
+            highlights: ['Manicured Green Hedges', 'Tricolor Paved Borders', 'Clean Eco-Friendly Campus', 'Pedestrian Walkways'],
+            image: '/campus/campus-side-avenue.webp',
+            panoramaUrl: '/campus/campus-side-avenue.webp',
+            type: 'image'
         }
     ];
 
     const categories = [
-        { id: 'all', label: 'All Locations' },
+        { id: 'all', label: 'All Campus Views (13)' },
         { id: 'academic', label: 'Academic & Blocks' },
-        { id: 'laboratories', label: 'Laboratories' },
-        { id: 'facilities', label: 'Student Facilities' },
-        { id: 'sports', label: 'Sports Arena' }
+        { id: 'facilities', label: 'Campus & Facilities' },
+        { id: 'sports', label: 'Sports & Courts' },
+        { id: 'heritage', label: 'Heritage & History' }
     ];
 
     const filteredLocations = activeCategory === 'all'
@@ -99,17 +170,17 @@ const VirtualTour = () => {
         <main className="min-h-screen bg-slate-50">
             <SEO 
                 title="Virtual Campus Tour" 
-                description="Experience Maharaja Surajmal Institute of Technology from anywhere in the world. Take our immersive 360° virtual tour of blocks, labs, and facilities."
+                description="Experience Maharaja Surajmal Institute of Technology from anywhere in the world. Take our immersive virtual tour of blocks, labs, grounds, and heritage memorials."
                 canonicalPath="/virtual-tour"
             />
 
             <PageHero 
-                title="360° Immersive" 
-                accentTitle="Virtual Tour" 
-                description="Step inside MSIT's vibrant Delhi campus. Explore classrooms, laboratories, recreational facilities, and grounds via high-definition virtual experiences."
+                title="Explore MSIT" 
+                accentTitle="Campus Tour" 
+                description="Step inside MSIT's vibrant Delhi campus. Explore real academic blocks, laboratories, central library, sports grounds, and historic memorials through authentic photography."
                 breadcrumbs={[{ label: 'Virtual Tour' }]}
-                heroImage="/campus-hero.webp"
-                heroImageAlt="Interactive virtual 360 tour of MSIT campus blocks and facilities"
+                heroImage="/campus/main-academic-building.webp"
+                heroImageAlt="Authentic virtual tour of MSIT 8-storey academic block and campus grounds"
             />
 
             {/* Quick Stats Banner */}
@@ -263,21 +334,31 @@ const VirtualTour = () => {
                 </div>
             </section>
 
-            {/* Lightbox / Video Viewer */}
+            {/* Lightbox / Video & Image Viewer */}
             {lightboxOpen && (
                 <div className="fixed inset-0 bg-slate-950/95 z-[100] flex flex-col items-center justify-center p-4 lg:p-12 animate-fade-in" onClick={() => setLightboxOpen(false)}>
                     <button className="absolute top-6 right-6 p-2.5 text-white/60 hover:text-white rounded-full transition-colors z-50 bg-black/40 hover:bg-black/60 border border-white/10 shadow-lg">
                         <X className="w-7 h-7" />
                     </button>
-                    <div className="w-full max-w-5xl aspect-video bg-black rounded-3xl border border-white/10 shadow-2xl overflow-hidden relative animate-slide-up" onClick={(e) => e.stopPropagation()}>
-                        <iframe
-                            className="absolute inset-0 w-full h-full"
-                            src={lightboxMedia.url}
-                            title={lightboxMedia.title}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
+                    <div className="w-full max-w-5xl flex items-center justify-center bg-black/70 rounded-3xl border border-white/10 shadow-2xl overflow-hidden relative animate-slide-up p-2" onClick={(e) => e.stopPropagation()}>
+                        {lightboxMedia.type === 'image' ? (
+                            <img
+                                src={lightboxMedia.url}
+                                alt={lightboxMedia.title}
+                                className="max-h-[75vh] w-auto max-w-full object-contain rounded-2xl shadow-2xl mx-auto"
+                            />
+                        ) : (
+                            <div className="w-full aspect-video">
+                                <iframe
+                                    className="w-full h-full"
+                                    src={lightboxMedia.url}
+                                    title={lightboxMedia.title}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        )}
                     </div>
                     <div className="mt-4 text-white text-base font-semibold tracking-wider uppercase drop-shadow-md">
                         {lightboxMedia.title}

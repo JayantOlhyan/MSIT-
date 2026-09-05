@@ -49,7 +49,7 @@ const dynamicPages = Object.entries(pagesData).map(([slug, data]) => ({
         data.subtitle,
         data.category,
         data.seo_description,
-        ...(data.bulletPoints || [])
+        ...(data.bulletPoints || []).map(b => (typeof b === 'string' ? b : `${b.label || ''} ${b.detail || ''}`))
     ].filter(Boolean).join(", ").toLowerCase()
 }));
 
