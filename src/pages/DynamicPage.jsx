@@ -20,6 +20,7 @@ const DynamicPage = () => {
     const [selectedMember, setSelectedMember] = useState(null);
     const [activeFeeTab, setActiveFeeTab] = useState('pay');
     const [activeEventTab, setActiveEventTab] = useState('avensis');
+    const [activeHighlightIndex, setActiveHighlightIndex] = useState(null);
 
     useEffect(() => {
         if (slug === 'online-fee') {
@@ -213,6 +214,7 @@ const DynamicPage = () => {
                                             {pageData.bulletPoints.map((point, i) => {
                                                 const isLink = typeof point === 'object' && point.url;
                                                 const labelText = typeof point === 'object' ? point.label : point;
+                                                const detailText = typeof point === 'object' ? point.detail : null;
                                                 
                                                 const isActiveFeeTab = slug === 'online-fee' && (
                                                     (labelText.includes('Payment') && activeFeeTab === 'pay') ||
@@ -226,31 +228,40 @@ const DynamicPage = () => {
                                                     (labelText.includes('Sports') && activeEventTab === 'sports')
                                                 );
 
-                                                const isActive = isActiveFeeTab || isActiveEventTab;
+                                                const isActive = isActiveFeeTab || isActiveEventTab || activeHighlightIndex === i;
 
                                                 return (
                                                     <li key={i} className="flex items-start text-slate-300 text-sm">
-                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-colors ${isActive ? 'text-accent' : 'text-slate-500'}`} />
+                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-all duration-300 ${isActive ? 'rotate-90 text-accent' : 'text-slate-500'}`} />
                                                         {isLink ? (
                                                             <Link to={point.url} className="hover:text-accent transition-colors">
                                                                 {point.label}
                                                             </Link>
                                                         ) : (
-                                                            <span 
-                                                                className={`hover:text-accent transition-colors cursor-pointer w-full ${isActive ? 'text-accent font-bold font-sans' : ''}`}
-                                                                dangerouslySetInnerHTML={{ __html: labelText }}
-                                                                onClick={() => {
-                                                                    if (slug === 'online-fee') {
-                                                                        if (labelText.includes('Payment')) setActiveFeeTab('pay');
-                                                                        else if (labelText.includes('Receipt')) setActiveFeeTab('receipt');
-                                                                        else if (labelText.includes('Refund')) setActiveFeeTab('refund');
-                                                                    } else if (slug === 'events') {
-                                                                        if (labelText.includes('Avensis')) setActiveEventTab('avensis');
-                                                                        else if (labelText.includes('Genesis')) setActiveEventTab('genesis');
-                                                                        else if (labelText.includes('Sports')) setActiveEventTab('sports');
-                                                                    }
-                                                                }}
-                                                            ></span>
+                                                            <div className="flex flex-col w-full">
+                                                                <span 
+                                                                    className={`hover:text-accent transition-colors cursor-pointer w-full ${isActive ? 'text-accent font-bold font-sans' : ''}`}
+                                                                    dangerouslySetInnerHTML={{ __html: labelText }}
+                                                                    onClick={() => {
+                                                                        if (slug === 'online-fee') {
+                                                                            if (labelText.includes('Payment')) setActiveFeeTab('pay');
+                                                                            else if (labelText.includes('Receipt')) setActiveFeeTab('receipt');
+                                                                            else if (labelText.includes('Refund')) setActiveFeeTab('refund');
+                                                                        } else if (slug === 'events') {
+                                                                            if (labelText.includes('Avensis')) setActiveEventTab('avensis');
+                                                                            else if (labelText.includes('Genesis')) setActiveEventTab('genesis');
+                                                                            else if (labelText.includes('Sports')) setActiveEventTab('sports');
+                                                                        } else if (detailText) {
+                                                                            setActiveHighlightIndex(activeHighlightIndex === i ? null : i);
+                                                                        }
+                                                                    }}
+                                                                ></span>
+                                                                {detailText && activeHighlightIndex === i && (
+                                                                    <div className="mt-2 text-slate-400 text-xs leading-relaxed animate-fade-in">
+                                                                        {detailText}
+                                                                    </div>
+                                                                )}
+                                                            </div>
                                                         )}
                                                     </li>
                                                 );
