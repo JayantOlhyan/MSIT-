@@ -19,7 +19,7 @@ const CAMPUS_GALLERY = [
         id: 'main-block',
         title: '8-Storey Main Academic Building',
         category: 'Academics',
-        image: '/campus/main-academic-building.webp',
+        image: '/campus-hero.webp',
         desc: 'The iconic 8-storey red brick academic centerpiece of MSIT and its expansive green lawns.'
     },
     {
@@ -196,7 +196,7 @@ const Home = () => {
         const stored = localStorage.getItem('msit_highlights_v2') || localStorage.getItem('msit_highlights');
         if (stored) return JSON.parse(stored);
         const defaults = [
-            { id: 1, image: "/campus/main-academic-building.webp", quote: "Ranked among the Top Engineering Colleges in Delhi-NCR by NIRF / Times Engineering Survey.", source: "Times Engineering Ranking" },
+            { id: 1, image: "/campus-hero.webp", quote: "Ranked among the Top Engineering Colleges in Delhi-NCR by NIRF / Times Engineering Survey.", source: "Times Engineering Ranking" },
             { id: 2, image: "/campus/central-library-hall.webp", quote: "Accredited with 'A' Grade for institutional quality and academic governance.", source: "National Assessment and Accreditation Council (NAAC)" },
             { id: 3, image: "/campus/student-gathering-courtyard.webp", quote: "B.Tech programs in CSE, IT, ECE, and EEE accredited for outcome-based education.", source: "National Board of Accreditation (NBA)" }
         ];
@@ -303,7 +303,7 @@ const Home = () => {
                 if (found) {
                     setLightboxImage({ type: 'image', title: found.title, image: found.image, desc: found.desc });
                 } else {
-                    setLightboxImage({ type: 'image', title: target, image: '/campus/main-academic-building.webp', desc: 'MSIT Campus Facility' });
+                    setLightboxImage({ type: 'image', title: target, image: '/campus-hero.webp', desc: 'MSIT Campus Facility' });
                 }
             }
         } else {
@@ -403,7 +403,7 @@ const Home = () => {
             <section className="relative w-full h-[100vh] min-h-[clamp(500px,80vh,700px)] flex items-center justify-center bg-slate-900 overflow-hidden">
                 {/* LCP Discovery - Hidden High Priority Image for CSS background */}
                 <img 
-                    src="/campus/main-academic-building.webp" 
+                    src="/campus-hero.webp" 
                     alt="MSIT Main 8-Storey Academic Building" 
                     className="sr-only" 
                     fetchpriority="high" 
@@ -414,7 +414,7 @@ const Home = () => {
                 <div className="absolute inset-0 z-0 group overflow-hidden">
                     <div
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[20s] ease-out group-hover:scale-105"
-                        style={{ backgroundImage: "url('/campus/main-academic-building.webp')" }}
+                        style={{ backgroundImage: "url('/campus-hero.webp')" }}
                     ></div>
                     {/* Dark gradient overlays */}
                     <div className="absolute inset-0 bg-slate-950/40 mix-blend-multiply"></div>
@@ -713,6 +713,10 @@ const Home = () => {
                                             className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" 
                                             loading="lazy"
                                             decoding="async"
+                                            onError={(e) => {
+                                                e.currentTarget.onerror = null;
+                                                e.currentTarget.src = '/faculty/default-avatar.svg';
+                                            }}
                                         />
                                     </div>
 
@@ -798,6 +802,10 @@ const Home = () => {
                                             alt={item.title}
                                             loading="lazy"
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                            onError={(e) => {
+                                                e.currentTarget.onerror = null;
+                                                e.currentTarget.src = '/campus-hero.webp';
+                                            }}
                                         />
                                     </div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
@@ -850,7 +858,7 @@ const Home = () => {
                         ) : (
                             <div className="flex flex-col items-center w-full">
                                 <img
-                                    src={lightboxImage?.image || '/campus/main-academic-building.webp'}
+                                    src={lightboxImage?.image || '/campus-hero.webp'}
                                     alt={lightboxImage?.title || 'MSIT Campus Photograph'}
                                     className="max-h-[70vh] w-auto max-w-full object-contain rounded-2xl shadow-2xl mb-4"
                                 />
