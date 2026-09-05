@@ -1,0 +1,1 @@
+sed -i '' -e 's/const \[activeEventTab, setActiveEventTab\] = useState('\''avensis'\'');/const \[activeEventTab, setActiveEventTab\] = useState('\''avensis'\'');\n    const [activeHighlightIndex, setActiveHighlightIndex] = useState(null);/g' src/pages/DynamicPage.jsx
