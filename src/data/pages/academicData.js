@@ -56,7 +56,12 @@ export const academicData = {
             { label: "Intake", value: "240" },
             { label: "NBA Status", value: "Accredited" }
         ],
-        bulletPoints: ["Analytical Excellence", "Ethical Innovation", "Professional Leadership", "State-of-the-Art Labs"]
+        bulletPoints: [
+            { label: "Analytical Excellence", detail: "Deep insight into mathematical, scientific, and analytical skills required for lifelong learning and problem-solving." },
+            { label: "Ethical Innovation", detail: "Promoting technological innovation coupled with ethical practices and a strong commitment to society." },
+            { label: "Professional Leadership", detail: "Equipping students with technical knowledge and team spirit to pursue successful professional careers." },
+            { label: "State-of-the-Art Labs", detail: "Computing hubs equipped with high-performance systems and environments for AI, OS, and Data Analytics." }
+        ]
     },
     "it": {
         title: "Information Technology (IT)",
@@ -74,7 +79,11 @@ export const academicData = {
             { label: "Intake", value: "120" },
             { label: "NBA Status", value: "Accredited" }
         ],
-        bulletPoints: ["Cloud & DevOps Labs", "Cybersecurity Research", "Full-Stack Development"]
+        bulletPoints: [
+            { label: "Cloud & DevOps Labs", detail: "State-of-the-art labs equipped with modern DevOps pipelines and cloud infrastructure for hands-on learning." },
+            { label: "Cybersecurity Research", detail: "Advanced research facilities focusing on network security, ethical hacking, and cryptography protocols." },
+            { label: "Full-Stack Development", detail: "Comprehensive training in modern web technologies including scalable database architectures and UI/UX." }
+        ]
     },
     "ece": {
         title: "Electronics & Communication (ECE)",
@@ -92,7 +101,11 @@ export const academicData = {
             { label: "Intake", value: "120" },
             { label: "NBA Status", value: "Accredited" }
         ],
-        bulletPoints: ["VLSI Design Lab", "IoT & Embedded Systems", "Digital Signal Processing"]
+        bulletPoints: [
+            { label: "VLSI Design Lab", detail: "Hands-on experience in circuit design, microprocessor architecture, and VLSI applications." },
+            { label: "IoT & Embedded Systems", detail: "Building the physical layer of the digital revolution with sensors, microcontrollers, and IoT protocols." },
+            { label: "Digital Signal Processing", detail: "Advanced simulation software and hardware tools for communication systems and signal processing." }
+        ]
     },
     "eee": {
         title: "Electrical & Electronics (EEE)",
@@ -110,7 +123,11 @@ export const academicData = {
             { label: "Intake", value: "60" },
             { label: "NBA Status", value: "Accredited" }
         ],
-        bulletPoints: ["Renewable Energy Research", "Power Systems Lab", "Robotics & Automation"]
+        bulletPoints: [
+            { label: "Renewable Energy Research", detail: "Exploring sustainable power generation and smart grid interfaces for a greener future." },
+            { label: "Power Systems Lab", detail: "Working with industrial motors, heavy electrical engineering equipment, and precise control mechanisms." },
+            { label: "Robotics & Automation", detail: "Programming robotic arms and developing advanced control systems for modern automation needs." }
+        ]
     },
     "applied-sciences": {
         title: "Applied Sciences",
@@ -128,7 +145,11 @@ export const academicData = {
             { label: "Faculty", value: "25+" },
             { label: "Focus", value: "First Year B.Tech" }
         ],
-        bulletPoints: ["Engineering Mathematics", "Applied Physics Labs", "Professional Communication"]
+        bulletPoints: [
+            { label: "Engineering Mathematics", detail: "Rigorous training in foundational mathematics to build strong analytical thinking muscles." },
+            { label: "Applied Physics Labs", detail: "Deep scientific comprehension through hands-on experiments and foundational physics principles." },
+            { label: "Professional Communication", detail: "Developing effective communication and presentation skills essential for future engineering careers." }
+        ]
     },
     "academic-calendar": {
         title: "Academic Calendar",
