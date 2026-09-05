@@ -67,20 +67,21 @@ const FeePaymentPortal = ({ activeTab, setActiveTab }) => {
     const [receiptResults, setReceiptResults] = useState(null);
     const [viewingReceipt, setViewingReceipt] = useState(null);
 
-    // Auto-update amount when fee type changes
-    useEffect(() => {
-        const selectedFee = FEE_TYPES.find(f => f.id === formData.feeType);
-        if (selectedFee) {
-            setFormData(prev => ({ ...prev, customAmount: selectedFee.amount.toString() }));
-        }
-    }, [formData.feeType]);
-
     // Handle Active Tab Sync from Parent
     const currentTab = activeTab || 'pay';
 
     const handleFormChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        if (name === 'feeType') {
+            const selectedFee = FEE_TYPES.find(f => f.id === value);
+            setFormData(prev => ({
+                ...prev,
+                feeType: value,
+                customAmount: selectedFee ? selectedFee.amount.toString() : prev.customAmount
+            }));
+        } else {
+            setFormData(prev => ({ ...prev, [name]: value }));
+        }
     };
 
     const handleInfoSubmit = (e) => {
