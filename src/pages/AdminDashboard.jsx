@@ -706,7 +706,7 @@ const AdminDashboard = () => {
                                 <label className="text-sm font-medium text-slate-700">Source Name</label>
                                 <input
                                     type="text"
-                                    placeholder="e.g. MIT Technology Review"
+                                    placeholder="e.g. Times Engineering Survey / NAAC"
                                     required
                                     className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={hSource}
