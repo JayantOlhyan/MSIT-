@@ -260,7 +260,9 @@ const DynamicPage = () => {
                                                                             if (labelText.includes('Avensis')) setActiveEventTab('avensis');
                                                                             else if (labelText.includes('Genesis')) setActiveEventTab('genesis');
                                                                             else if (labelText.includes('Sports')) setActiveEventTab('sports');
-                                                                        } else if (detailText) {
+                                                                        }
+                                                                        
+                                                                        if (detailText) {
                                                                             setActiveHighlightIndex(activeHighlightIndex === i ? null : i);
                                                                         }
                                                                     }}

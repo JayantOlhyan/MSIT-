@@ -15,7 +15,11 @@ export const placementData = {
             { label: "Highest Package", value: "₹1.2Cr" },
             { label: "Top Recruiters", value: "Google, MS, Amazon" }
         ],
-        bulletPoints: ["Placement Statistics 2024", "Top Recruiters", "Placement Policy"]
+        bulletPoints: [
+            { label: "Placement Statistics 2024", detail: "Click here to learn more about placement statistics 2024. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Top Recruiters", detail: "Click here to learn more about top recruiters. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Placement Policy", detail: "Click here to learn more about placement policy. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "internship-cell": {
         title: "Internship Cell",

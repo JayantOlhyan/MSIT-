@@ -136,7 +136,12 @@ export const quickLinksData = {
             { label: "Global Alumni", value: "15,000+" },
             { label: "Top Tech Hires", value: "2,000+" }
         ],
-        bulletPoints: ["Mentorship Program", "Annual Homecoming", "Digital Directory", "Job Referral Hub"]
+        bulletPoints: [
+            { label: "Mentorship Program", detail: "Click here to learn more about mentorship program. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Annual Homecoming", detail: "Click here to learn more about annual homecoming. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Digital Directory", detail: "Click here to learn more about digital directory. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Job Referral Hub", detail: "Click here to learn more about job referral hub. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "society-ieee": {
         title: "IEEE MSIT",
@@ -362,7 +367,12 @@ export const quickLinksData = {
             { label: "Medical Buffer", value: "Up to 10%" },
             { label: "Update Frequency", value: "Monthly" }
         ],
-        bulletPoints: ["IP University Ordinance 11", "Medical Certificate Policy", "Official Duty Leaves (OD)", "Detained List Penalties"]
+        bulletPoints: [
+            { label: "IP University Ordinance 11", detail: "Click here to learn more about ip university ordinance 11. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Medical Certificate Policy", detail: "Click here to learn more about medical certificate policy. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Official Duty Leaves (OD)", detail: "Click here to learn more about official duty leaves (od). This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Detained List Penalties", detail: "Click here to learn more about detained list penalties. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "society-ndli": {
         title: "MSIT NDLI Club",

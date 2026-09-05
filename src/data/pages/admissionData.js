@@ -15,7 +15,11 @@ export const admissionData = {
             { label: "Intake", value: "480" },
             { label: "Programs", value: "4 Core" }
         ],
-        bulletPoints: ["Download PDF Brochure", "Admission Requirements", "Counseling Walkthrough"]
+        bulletPoints: [
+            { label: "Download PDF Brochure", detail: "Click here to learn more about download pdf brochure. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Admission Requirements", detail: "Click here to learn more about admission requirements. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Counseling Walkthrough", detail: "Click here to learn more about counseling walkthrough. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "online-fee": {
         title: "Online Fee Payment",
@@ -33,7 +37,11 @@ export const admissionData = {
             { label: "Gateway", value: "256-bit SSL" },
             { label: "Support", value: "24/7" }
         ],
-        bulletPoints: ["Tuition Fee Payment", "Generate Receipt", "Refund Policy"]
+        bulletPoints: [
+            { label: "Tuition Fee Payment", detail: "Click here to learn more about tuition fee payment. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Generate Receipt", detail: "Click here to learn more about generate receipt. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Refund Policy", detail: "Click here to learn more about refund policy. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "scholarships": {
         title: "Scholarships & Financial Aid",
@@ -177,7 +185,11 @@ export const admissionData = {
             { label: "Annual Dispersal", value: "₹2.5 Cr+" },
             { label: "Beneficiaries", value: "400+" }
         ],
-        bulletPoints: ["Merit Scholarships", "EWS Financial Aid", "Government Schemes (NSP)"]
+        bulletPoints: [
+            { label: "Merit Scholarships", detail: "Click here to learn more about merit scholarships. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "EWS Financial Aid", detail: "Click here to learn more about ews financial aid. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Government Schemes (NSP)", detail: "Click here to learn more about government schemes (nsp). This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "mandatory-disclosures": {
         title: "Mandatory Disclosures",
@@ -287,6 +299,10 @@ export const admissionData = {
             { label: "NAAC Grade", value: "A" },
             { label: "NBA Accredited", value: "All UG" }
         ],
-        bulletPoints: ["NBA Certificates (All Depts)", "NAAC Grade A Document", "Full Disclosure PDF"]
+        bulletPoints: [
+            { label: "NBA Certificates (All Depts)", detail: "Click here to learn more about nba certificates (all depts). This section provides comprehensive information and resources tailored to this topic." },
+            { label: "NAAC Grade A Document", detail: "Click here to learn more about naac grade a document. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Full Disclosure PDF", detail: "Click here to learn more about full disclosure pdf. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     }
 };

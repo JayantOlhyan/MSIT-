@@ -167,7 +167,11 @@ export const academicData = {
             { label: "Current Sem", value: "Even (Jan-May)" },
             { label: "Working Days", value: "90+" }
         ],
-        bulletPoints: ["Download PDF Calendar", "Exam Schedules", "List of Holidays"]
+        bulletPoints: [
+            { label: "Download PDF Calendar", detail: "Click here to learn more about download pdf calendar. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Exam Schedules", detail: "Click here to learn more about exam schedules. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "List of Holidays", detail: "Click here to learn more about list of holidays. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "timetable": {
         title: "Time Table & Syllabus",
@@ -185,7 +189,11 @@ export const academicData = {
             { label: "Updated", value: "Start of Sem" },
             { label: "Format", value: "GGSIPU Pattern" }
         ],
-        bulletPoints: ["B.Tech Syllabus (All Branches)", "Section-wise Timetables", "Lab Batches"]
+        bulletPoints: [
+            { label: "B.Tech Syllabus (All Branches)", detail: "Click here to learn more about b.tech syllabus (all branches). This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Section-wise Timetables", detail: "Click here to learn more about section-wise timetables. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Lab Batches", detail: "Click here to learn more about lab batches. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "research": {
         title: "Research & Innovation",
@@ -203,6 +211,10 @@ export const academicData = {
             { label: "Publications", value: "500+" },
             { label: "Patents Filed", value: "25+" }
         ],
-        bulletPoints: ["Conference Proceedings", "Funded Projects", "Undergraduate Research"]
+        bulletPoints: [
+            { label: "Conference Proceedings", detail: "Click here to learn more about conference proceedings. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Funded Projects", detail: "Click here to learn more about funded projects. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Undergraduate Research", detail: "Click here to learn more about undergraduate research. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     }
 };

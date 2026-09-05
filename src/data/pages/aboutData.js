@@ -51,7 +51,11 @@ export const aboutData = {
             { label: "Global Alumni", value: "15,000+" },
             { label: "Research Centers", value: "4" }
         ],
-        bulletPoints: ["Technical Excellence", "National & Global Readiness", "Values-Driven Education"]
+        bulletPoints: [
+            { label: "Technical Excellence", detail: "Click here to learn more about technical excellence. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "National & Global Readiness", detail: "Click here to learn more about national & global readiness. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Values-Driven Education", detail: "Click here to learn more about values-driven education. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "history": {
         title: "History & Legacy",
@@ -98,7 +102,11 @@ export const aboutData = {
             { label: "B.Tech Inception", value: "2001" },
             { label: "Campus Area", value: "8 Acres" }
         ],
-        bulletPoints: ["Foundation Stone Dec 12, 1978", "Affiliated to GGSIPU", "AICTE Approved Grade A"]
+        bulletPoints: [
+            { label: "Foundation Stone Dec 12, detail: "Click here to learn more about foundation stone dec 1. This section provides comprehensive information and resources tailored to this topic." },1978",
+            { label: "Affiliated to GGSIPU", detail: "Click here to learn more about affiliated to ggsipu. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "AICTE Approved Grade A", detail: "Click here to learn more about aicte approved grade a. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "about": {
         title: "Defining Excellence",
@@ -206,7 +214,12 @@ export const aboutData = {
             { label: "University Rank", value: "#1" },
             { label: "Built-up Area", value: "17,837 sqm" }
         ],
-        bulletPoints: ["NBA Accredited", "AICTE Approved", "8-Acre Green Campus", "University Toppers"]
+        bulletPoints: [
+            { label: "NBA Accredited", detail: "Click here to learn more about nba accredited. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "AICTE Approved", detail: "Click here to learn more about aicte approved. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "8-Acre Green Campus", detail: "Click here to learn more about 8-acre green campus. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "University Toppers", detail: "Click here to learn more about university toppers. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "administration": {
         title: "Administration",
@@ -224,7 +237,11 @@ export const aboutData = {
             { label: "Leadership", value: "Director & Staff" },
             { label: "Focus", value: "Student-Centric" }
         ],
-        bulletPoints: ["Director: Prof. Dr. A. K. Srivastava", "Administrative Stability", "Academic Excellence"]
+        bulletPoints: [
+            { label: "Director: Prof. Dr. A. K. Srivastava", detail: "Click here to learn more about director: prof. dr. a. k. srivastava. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Administrative Stability", detail: "Click here to learn more about administrative stability. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Academic Excellence", detail: "Click here to learn more about academic excellence. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "govern": {
         title: "Governing Body",
@@ -650,7 +667,11 @@ export const aboutData = {
             { label: "Chairman", value: "Sh. Kaptan Singh" },
             { label: "Secretary", value: "Sh. Ajit Singh" }
         ],
-        bulletPoints: ["15 Governing Members", "6 Advisory Members", "IIT & JMI Affiliates"]
+        bulletPoints: [
+            { label: "15 Governing Members", detail: "Click here to learn more about 15 governing members. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "6 Advisory Members", detail: "Click here to learn more about 6 advisory members. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "IIT & JMI Affiliates", detail: "Click here to learn more about iit & jmi affiliates. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "fromdesk": {
         title: "From The Desk",
@@ -810,10 +831,10 @@ export const aboutData = {
             { label: "Governing Society", value: "SMES" }
         ],
         bulletPoints: [
-            '<label for="tab-pres" class="cursor-pointer block w-full">President: Sh. Kaptan Singh</label>',
-            '<label for="tab-sec" class="cursor-pointer block w-full">Secretary: Sh. Ajit Singh</label>',
-            '<label for="tab-treas" class="cursor-pointer block w-full">Treasurer: Sh. Rajpal Singh Solanki</label>',
-            '<label for="tab-dir" class="cursor-pointer block w-full">Director: Prof. Dr. A. K. Srivastava</label>'
+            { label: '<label for="tab-pres" class="cursor-pointer block w-full">President: Sh. Kaptan Singh</label>', detail: "Click here to learn more about president: sh. kaptan singh. This section provides comprehensive information and resources tailored to this topic." },
+            { label: '<label for="tab-sec" class="cursor-pointer block w-full">Secretary: Sh. Ajit Singh</label>', detail: "Click here to learn more about secretary: sh. ajit singh. This section provides comprehensive information and resources tailored to this topic." },
+            { label: '<label for="tab-treas" class="cursor-pointer block w-full">Treasurer: Sh. Rajpal Singh Solanki</label>', detail: "Click here to learn more about treasurer: sh. rajpal singh solanki. This section provides comprehensive information and resources tailored to this topic." },
+            { label: '<label for="tab-dir" class="cursor-pointer block w-full">Director: Prof. Dr. A. K. Srivastava</label>', detail: "Click here to learn more about director: prof. dr. a. k. srivastava. This section provides comprehensive information and resources tailored to this topic." }
         ]
     },
     "facilities": {
@@ -834,7 +855,12 @@ export const aboutData = {
             { label: "Built-up Area", value: "17,837 sqm" },
             { label: "Campus Size", value: "8 Acres" }
         ],
-        bulletPoints: ["Central Library", "Maharaja Mahendra Pratap Hostel", "Advanced Computing Hubs", "Sports & Medical"]
+        bulletPoints: [
+            { label: "Central Library", detail: "Click here to learn more about central library. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Maharaja Mahendra Pratap Hostel", detail: "Click here to learn more about maharaja mahendra pratap hostel. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Advanced Computing Hubs", detail: "Click here to learn more about advanced computing hubs. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Sports & Medical", detail: "Click here to learn more about sports & medical. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "smes": {
         title: "Surajmal Memorial Education Society",
@@ -852,7 +878,11 @@ export const aboutData = {
             { label: "Institutions", value: "4" },
             { label: "Total Students", value: "8,000+" }
         ],
-        bulletPoints: ["Educational Trust", "Philanthropic Initiatives", "Community Outreach"]
+        bulletPoints: [
+            { label: "Educational Trust", detail: "Click here to learn more about educational trust. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Philanthropic Initiatives", detail: "Click here to learn more about philanthropic initiatives. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Community Outreach", detail: "Click here to learn more about community outreach. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "contact": {
         title: "Get in Touch",
@@ -899,6 +929,10 @@ export const aboutData = {
             { label: "Admin Staff", value: "45+" },
             { label: "Response Time", value: "< 24h" }
         ],
-        bulletPoints: ["Anti-Ragging Helpline", "Hostel Warden Contact", "Grievance Portal"]
+        bulletPoints: [
+            { label: "Anti-Ragging Helpline", detail: "Click here to learn more about anti-ragging helpline. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Hostel Warden Contact", detail: "Click here to learn more about hostel warden contact. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Grievance Portal", detail: "Click here to learn more about grievance portal. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     }
 };

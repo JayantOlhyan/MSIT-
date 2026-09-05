@@ -96,7 +96,12 @@ export const campusLifeData = {
             { label: "Active Societies", value: "22" },
             { label: "Flagship Events", value: "10+" }
         ],
-        bulletPoints: ["Technical Hubs (IEEE, GDSC)", "Cultural Sub-wings", "Innovation & Startup Cell", "Environmental Initiatives"]
+        bulletPoints: [
+            { label: "Technical Hubs (IEEE, detail: "Click here to learn more about technical hubs (iee. This section provides comprehensive information and resources tailored to this topic." },GDSC)",
+            { label: "Cultural Sub-wings", detail: "Click here to learn more about cultural sub-wings. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Innovation & Startup Cell", detail: "Click here to learn more about innovation & startup cell. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Environmental Initiatives", detail: "Click here to learn more about environmental initiatives. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "events": {
         title: "Events & Festivals",
@@ -134,7 +139,11 @@ export const campusLifeData = {
             { label: "Annual Fests", value: "2 Major" },
             { label: "Footfall", value: "10,000+" }
         ],
-        bulletPoints: ["Avensis (Tech Fest)", "Genesis (Cultural Fest)", "Sports Meet"]
+        bulletPoints: [
+            { label: "Avensis (Tech Fest)", detail: "Click here to learn more about avensis (tech fest). This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Genesis (Cultural Fest)", detail: "Click here to learn more about genesis (cultural fest). This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Sports Meet", detail: "Click here to learn more about sports meet. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "antiragging": {
         title: "Anti-Ragging Committee",
@@ -152,7 +161,11 @@ export const campusLifeData = {
             { label: "Ragging Cases", value: "0" },
             { label: "Helpline", value: "24/7 Active" }
         ],
-        bulletPoints: ["UGC Anti-Ragging Mandate", "Online Affidavit Submission", "Squad Contact Info"]
+        bulletPoints: [
+            { label: "UGC Anti-Ragging Mandate", detail: "Click here to learn more about ugc anti-ragging mandate. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Online Affidavit Submission", detail: "Click here to learn more about online affidavit submission. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Squad Contact Info", detail: "Click here to learn more about squad contact info. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "posh": {
         title: "Internal Complaint Committee (POSH)",
@@ -346,7 +359,11 @@ export const campusLifeData = {
             { label: "Mock Drills", value: "Bi-Annual" },
             { label: "First Aid Kits", value: "Every Floor" }
         ],
-        bulletPoints: ["Evacuation Plan", "Emergency Contacts", "Safety Workshops"]
+        bulletPoints: [
+            { label: "Evacuation Plan", detail: "Click here to learn more about evacuation plan. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Emergency Contacts", detail: "Click here to learn more about emergency contacts. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Safety Workshops", detail: "Click here to learn more about safety workshops. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "discipline": {
         title: "Discipline Committee",
@@ -364,7 +381,11 @@ export const campusLifeData = {
             { label: "Attendance Req.", value: "75% Min" },
             { label: "Dress Code", value: "Professional" }
         ],
-        bulletPoints: ["Campus Rules", "Sanctions & Warnings", "Attendance Policy"]
+        bulletPoints: [
+            { label: "Campus Rules", detail: "Click here to learn more about campus rules. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Sanctions & Warnings", detail: "Click here to learn more about sanctions & warnings. This section provides comprehensive information and resources tailored to this topic." },
+            { label: "Attendance Policy", detail: "Click here to learn more about attendance policy. This section provides comprehensive information and resources tailored to this topic." }
+        ]
     },
     "newsletters-magazines": {
         title: "Newsletters & Magazines",
