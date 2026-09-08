@@ -72,17 +72,13 @@ const FacultyStaff = () => {
         return () => { document.body.style.overflow = 'unset'; };
     }, [selectedFaculty]);
 
-    const departments = ['All', 'Administration', 'CSE', 'IT', 'ECE', 'EEE', 'Applied Sciences'];
+    const departments = ['All', 'Governing Body', 'Administration', 'CSE', 'IT', 'ECE', 'EEE', 'Applied Sciences'];
 
     const placementCommitteeNames = [
         "Meena Rao", "Kavita Sheoran", "Parveen Kumar",
         "Parul Chaudhary", "Shaily Malik", "Pooja Kherwa", "Gunjan",
         "Sonika Malik", "Meena Siwach", "Minakshi Tomer", "Sakshi Rajput",
         "Himani", "Suman Lata", "Rakhi Kamra", "Sachit Rathee"
-    ];
-    
-    const governingBodyIds = [
-        "gb-chairman", "gb-esha", "gb-ajit", "gb-rajpal"
     ];
 
     const filteredFaculty = facultyMembers
@@ -95,7 +91,7 @@ const FacultyStaff = () => {
             const isGovBodySearch = "governing".includes(query) || "governing body".includes(query) || "smes".includes(query) || "chairman".includes(query) || "secretary".includes(query) || "president".includes(query) || "treasurer".includes(query);
             
             const isInPlacementCommittee = isPlacementSearch && placementCommitteeNames.some(name => f.name.toLowerCase().includes(name.toLowerCase()));
-            const isInGovBody = isGovBodySearch && governingBodyIds.includes(f.id);
+            const isInGovBody = isGovBodySearch && (f.dept === 'Governing Body' || f.id?.startsWith('gb-') || f.id?.startsWith('adv-'));
 
             const matchesQuery = f.name.toLowerCase().includes(query) ||
                 f.role.toLowerCase().includes(query) ||
@@ -107,10 +103,18 @@ const FacultyStaff = () => {
             return matchesDept && matchesQuery;
         })
         .sort((a, b) => {
-            // Sort by Director first
+            // Sort Director first
             if (a.role.includes('Director')) return -1;
             if (b.role.includes('Director')) return 1;
-            // Then by type (faculty before staff if I had faculty type, but here they are all together)
+
+            // Sort Chairman of Governing Body next
+            if (a.role.includes('Chairman, Governing Body')) return -1;
+            if (b.role.includes('Chairman, Governing Body')) return 1;
+
+            // Sort Governing Body members together
+            if (a.dept === 'Governing Body' && b.dept !== 'Governing Body') return -1;
+            if (a.dept !== 'Governing Body' && b.dept === 'Governing Body') return 1;
+
             if (a.type === 'staff' && !b.type) return 1;
             if (!a.type && b.type === 'staff') return -1;
             return 0;
@@ -212,7 +216,11 @@ const FacultyStaff = () => {
                                         />
                                     </div>
                                     <div className="group/dept">
-                                        <span className="inline-block px-2.5 py-1 bg-surface text-muted text-xs uppercase tracking-bolder font-bold rounded-lg mb-2 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+                                        <span className={`inline-block px-2.5 py-1 text-xs uppercase tracking-bolder font-bold rounded-lg mb-2 transition-colors ${
+                                            faculty.dept === 'Governing Body'
+                                                ? 'bg-purple-50 text-purple-700 border border-purple-200'
+                                                : 'bg-surface text-muted group-hover:bg-primary/10 group-hover:text-primary'
+                                        }`}>
                                             {faculty.dept}
                                             {faculty.dept === 'Applied Sciences' && (
                                                 <span className="ml-1 font-bold text-primary/70">(1st Year)</span>
