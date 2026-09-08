@@ -27,12 +27,9 @@ const staticPages = [
     { title: "Privacy Policy", url: "/privacy", keywords: "privacy, policy, data, security, terms" },
     { title: "Terms of Use", url: "/terms", keywords: "terms, conditions, use, legal, agreement" },
     { title: "Anti-Ragging Guidelines", url: "/antiragging", keywords: "antiragging, ragging, policy, safety, discipline, helpline" },
-    { title: "POSH Cell (Women Safety)", url: "/posh", keywords: "posh, women, safety, harassment, complaint, committee" },
-    { title: "POSH Act Guidelines", url: "/posh-guidelines", keywords: "posh, guidelines, rules, safety, harassment, act" },
-    { title: "Lodge a POSH Complaint", url: "/posh-complaint", keywords: "posh, complaint, lodge, report, harass, harassment, sexual, form" },
-    { title: "ICC Committee Members", url: "/posh-members", keywords: "posh, members, committee, icc, board, members, representatives" },
     { title: "Disaster Management", url: "/disaster", keywords: "disaster, management, safety, emergency, drill, fire safety" },
     { title: "Student Discipline Committee", url: "/discipline", keywords: "discipline, rules, conduct, behavior, suspension, code of conduct" },
+    { title: "Student Grievance Redressal Committee (SGRC)", url: "/student-grievance", keywords: "grievance, sgrc, complaint, academic, marks, fee, harassment, ombudsman, aicte" },
     { title: "Meet the Core Team", url: "/team", keywords: "team, developers, project, creators, website, jayant, pawan, abhay" },
     { title: "Website Sitemap", url: "/sitemap", keywords: "sitemap, directory, index, all pages, navigation" },
     { title: "Global Search Portal", url: "/search", keywords: "search, find, query, search page, lookup, directory" }
