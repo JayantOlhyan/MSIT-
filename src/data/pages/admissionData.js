@@ -207,24 +207,22 @@ export const admissionData = {
     },
     "online-fee": {
         title: "Online Fee Payment",
-        subtitle: "Secure, instant, and transparent fee portal for Maharaja Surajmal Institute of Technology.",
-        seo_description: "Easily pay academic fees online at Maharaja Surajmal Institute of Technology. Our secure portal supports UPI, Net Banking, and Cards for tuition and hostel fees.",
+        subtitle: "Official fee payment portal & annual fee breakdown for Maharaja Surajmal Institute of Technology.",
+        seo_description: "Pay academic fees online at Maharaja Surajmal Institute of Technology via the official Octopod portal. View detailed annual fee breakdown and official notices.",
         category: "Admissions",
         heroImage: "/campus-hero.webp",
-        heroImageAlt: "Secure MSIT online fee payment portal and digital transaction interface overview",
+        heroImageAlt: "Official MSIT online fee payment portal and digital transaction interface overview",
         content: `
-            <p class="mb-6">MSIT provides a fully encrypted, seamless online payment gateway for all academic fee transactions. Students can securely pay their tuition, hostel, and miscellaneous fees using Net Banking, UPI, or Credit/Debit Cards.</p>
-            <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Payment Guidelines</h3>
-            <p class="mb-6">Ensure you have your 11-digit Enrollment Number ready. A digital receipt will be instantly generated and emailed to your registered campus mail address upon successful transaction.</p>
+            <p class="mb-6">MSIT provides direct access to the official Octopod fee payment portal for all academic fee transactions. Students can securely pay their tuition, annual academic, and hostel fees using Net Banking, UPI, or Credit/Debit Cards.</p>
         `,
         stats: [
-            { label: "Gateway", value: "256-bit SSL" },
-            { label: "Support", value: "24/7" }
+            { label: "Gateway", value: "Octopod Portal" },
+            { label: "Affiliation", value: "GGSIPU" }
         ],
         bulletPoints: [
-            { label: "Tuition Fee Payment", detail: "Click here to learn more about tuition fee payment. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Generate Receipt", detail: "Click here to learn more about generate receipt. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Refund Policy", detail: "Click here to learn more about refund policy. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "Proceed to Official Fee Portal", url: "https://octopod.co.in/student/admission/81a9421f2cfc48f2e5f5278efa47382b" },
+            { label: "Download Official Fee Notice PDF", url: "https://www.msit.in/media/news/fee-submission-notice-for-the-academic-year-2026-27.pdf" },
+            { label: "Fee Refund & Surrender Policy", url: "https://www.msit.in/media/notices/delhi-professional-colleges-institutions-act-2007.pdf" }
         ]
     },
     "scholarships": {

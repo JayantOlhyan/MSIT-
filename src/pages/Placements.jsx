@@ -83,21 +83,21 @@ const Placements = () => {
     ];
 
     const topRecruiters = [
-        { name: "Google", category: "Product" },
-        { name: "Microsoft", category: "Product" },
-        { name: "Amazon", category: "Product" },
-        { name: "Adobe", category: "Product" },
-        { name: "Samsung R&D", category: "Product" },
-        { name: "Postman", category: "Product" },
-        { name: "ZS Associates", category: "Consulting" },
-        { name: "ION Trading", category: "Fintech" },
-        { name: "Josh Technologies", category: "Product" },
-        { name: "TCS", category: "Services" },
-        { name: "Infosys", category: "Services" },
-        { name: "Wipro", category: "Services" },
-        { name: "Accenture", category: "Services" },
-        { name: "Cognizant", category: "Services" },
-        { name: "IBM", category: "Services" }
+        { name: "Google", category: "Product", logo: "/logos/recruiters/google.svg" },
+        { name: "Microsoft", category: "Product", logo: "/logos/recruiters/microsoft.svg" },
+        { name: "Amazon", category: "Product", logo: "/logos/recruiters/amazon.svg" },
+        { name: "Adobe", category: "Product", logo: "/logos/recruiters/adobe.svg" },
+        { name: "Samsung R&D", category: "Product", logo: "/logos/recruiters/samsung.svg" },
+        { name: "Postman", category: "Product", logo: "/logos/recruiters/postman.svg" },
+        { name: "ZS Associates", category: "Consulting", logo: "/logos/recruiters/zs.png" },
+        { name: "ION Trading", category: "Fintech", logo: "/logos/recruiters/ion.png" },
+        { name: "Josh Technologies", category: "Product", logo: "/logos/recruiters/josh.png" },
+        { name: "TCS", category: "Services", logo: "/logos/recruiters/tcs.svg" },
+        { name: "Infosys", category: "Services", logo: "/logos/recruiters/infosys.svg" },
+        { name: "Wipro", category: "Services", logo: "/logos/recruiters/wipro.svg" },
+        { name: "Accenture", category: "Services", logo: "/logos/recruiters/accenture.svg" },
+        { name: "Cognizant", category: "Services", logo: "/logos/recruiters/cognizant.svg" },
+        { name: "IBM", category: "Services", logo: "/logos/recruiters/ibm.svg" }
     ];
 
     const trainingPrograms = [
@@ -172,11 +172,21 @@ const Placements = () => {
                         <Building2 className="w-8 h-8 text-blue-600 mr-4" />
                         <h2 className="text-3xl font-bold text-slate-900">Industry Giants Scouting at MSIT</h2>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
                         {topRecruiters.map((company, index) => (
-                            <div key={index} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center justify-center text-center group hover:border-blue-200 hover:shadow-md transition-all">
-                                <span className="text-base font-extrabold text-slate-800 group-hover:text-blue-600 transition-colors uppercase tracking-wider">{company.name}</span>
-                                <div className="mt-2 text-[10px] text-slate-400 font-bold tracking-widest uppercase">{company.category}</div>
+                            <div key={index} className="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col items-center justify-between text-center group hover:border-blue-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300 min-h-[145px]">
+                                <div className="h-14 w-full flex items-center justify-center p-1 group-hover:scale-105 transition-transform duration-300">
+                                    <img 
+                                        src={company.logo} 
+                                        alt={`${company.name} logo`} 
+                                        className="max-h-12 max-w-[130px] object-contain filter drop-shadow-sm" 
+                                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                    />
+                                </div>
+                                <div className="w-full pt-1">
+                                    <span className="text-xs font-extrabold text-slate-800 group-hover:text-blue-600 transition-colors uppercase tracking-wider block">{company.name}</span>
+                                    <div className="mt-1 text-[10px] text-slate-400 font-bold tracking-widest uppercase">{company.category}</div>
+                                </div>
                             </div>
                         ))}
                     </div>

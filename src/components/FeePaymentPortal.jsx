@@ -11,7 +11,8 @@ import {
     Loader2, 
     ArrowLeft, 
     ArrowRight,
-    Sparkles
+    Sparkles,
+    ExternalLink
 } from 'lucide-react';
 
 const DEPARTMENTS = [
@@ -43,7 +44,7 @@ const MOCK_RECEIPTS_DB = {
 
 const FeePaymentPortal = ({ activeTab, setActiveTab }) => {
     // Payment Tab States
-    const [step, setStep] = useState(1); // 1: Info, 2: Gateway, 3: Processing, 4: Success
+    const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         enrollmentNo: '',
         studentName: '',
@@ -54,13 +55,6 @@ const FeePaymentPortal = ({ activeTab, setActiveTab }) => {
         customAmount: '120000',
         paymentMethod: 'card'
     });
-    
-    // Gateway States
-    const [cardData, setCardData] = useState({ number: '', expiry: '', cvv: '', name: '' });
-    const [upiId, setUpiId] = useState('');
-    const [selectedBank, setSelectedBank] = useState('HDFC');
-    const [processingMsg, setProcessingMsg] = useState('Initiating payment gateway...');
-    const [successDetails, setSuccessDetails] = useState(null);
 
     // Receipt Tab States
     const [receiptSearchNo, setReceiptSearchNo] = useState('');
@@ -69,88 +63,6 @@ const FeePaymentPortal = ({ activeTab, setActiveTab }) => {
 
     // Handle Active Tab Sync from Parent
     const currentTab = activeTab || 'pay';
-
-    const handleFormChange = (e) => {
-        const { name, value } = e.target;
-        if (name === 'feeType') {
-            const selectedFee = FEE_TYPES.find(f => f.id === value);
-            setFormData(prev => ({
-                ...prev,
-                feeType: value,
-                customAmount: selectedFee ? selectedFee.amount.toString() : prev.customAmount
-            }));
-        } else {
-            setFormData(prev => ({ ...prev, [name]: value }));
-        }
-    };
-
-    const handleInfoSubmit = (e) => {
-        e.preventDefault();
-        // Validation: Enrollment Number should be exactly 11 digits
-        if (!/^\d{11}$/.test(formData.enrollmentNo)) {
-            alert("Enrollment number must be exactly 11 digits.");
-            return;
-        }
-        setStep(2);
-    };
-
-    const triggerPaymentSimulation = () => {
-        setStep(3);
-        setProcessingMsg('Connecting to secure banking host...');
-        
-        setTimeout(() => {
-            setProcessingMsg('Verifying enrollment and transaction credentials...');
-        }, 1200);
-
-        setTimeout(() => {
-            setProcessingMsg('Authorizing payment and generating digital token...');
-        }, 2400);
-
-        setTimeout(() => {
-            const transactionId = `TXN-${Date.now().toString().slice(-8)}-${Math.floor(1000 + Math.random() * 9000)}`;
-            const today = new Date().toISOString().split('T')[0];
-            const finalAmount = parseInt(formData.customAmount);
-            
-            const newTxn = {
-                id: transactionId,
-                date: today,
-                type: FEE_TYPES.find(f => f.id === formData.feeType)?.name || formData.feeType,
-                term: formData.semester,
-                amount: finalAmount,
-                status: "SUCCESS",
-                enrollmentNo: formData.enrollmentNo,
-                studentName: formData.studentName,
-                department: DEPARTMENTS.find(d => d.code === formData.department)?.name || formData.department,
-                email: formData.email,
-                paymentMethod: formData.paymentMethod.toUpperCase()
-            };
-
-            // Save to mock database dynamically so it can be generated in tab 2
-            if (!MOCK_RECEIPTS_DB[formData.enrollmentNo]) {
-                MOCK_RECEIPTS_DB[formData.enrollmentNo] = [];
-            }
-            MOCK_RECEIPTS_DB[formData.enrollmentNo].unshift(newTxn);
-
-            setSuccessDetails(newTxn);
-            setStep(4);
-        }, 4000);
-    };
-
-    const handlePaymentSubmit = (e) => {
-        e.preventDefault();
-        if (formData.paymentMethod === 'card') {
-            if (!cardData.number || !cardData.expiry || !cardData.cvv || !cardData.name) {
-                alert("Please fill in all card details.");
-                return;
-            }
-        } else if (formData.paymentMethod === 'upi') {
-            if (!upiId.includes('@')) {
-                alert("Please enter a valid UPI ID (e.g. name@bank).");
-                return;
-            }
-        }
-        triggerPaymentSimulation();
-    };
 
     const handleReceiptSearch = (e) => {
         e.preventDefault();
@@ -181,7 +93,7 @@ const FeePaymentPortal = ({ activeTab, setActiveTab }) => {
                     }`}
                 >
                     <CreditCard className="w-4 h-4" />
-                    Pay Tuition Fees
+                    Pay Academic Fees
                 </button>
                 <button 
                     type="button"
@@ -209,379 +121,141 @@ const FeePaymentPortal = ({ activeTab, setActiveTab }) => {
                 </button>
             </div>
 
-            {/* TAB 1: PAY TUITION FEES */}
+            {/* TAB 1: OFFICIAL FEE DETAILS & DIRECT PAYMENT LINK */}
             {currentTab === 'pay' && (
-                <div className="bg-slate-50/50 rounded-3xl border border-slate-200/60 p-6 md:p-10 shadow-xs transition-all duration-300 print:hidden">
-                    {/* STEP 1: INFO FORM */}
-                    {step === 1 && (
-                        <div>
-                            <div className="flex items-center gap-2 mb-6">
-                                <Sparkles className="w-5 h-5 text-blue-500" />
-                                <h3 className="text-xl font-bold text-slate-900">Student & Fee Details</h3>
-                            </div>
-                            <form onSubmit={handleInfoSubmit} className="space-y-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Enrollment Number (11 Digits)</label>
-                                        <input 
-                                            type="text" 
-                                            name="enrollmentNo"
-                                            value={formData.enrollmentNo}
-                                            onChange={handleFormChange}
-                                            required
-                                            placeholder="e.g. 00115002720"
-                                            className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 bg-white text-slate-800 text-sm font-medium"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Student Full Name</label>
-                                        <input 
-                                            type="text" 
-                                            name="studentName"
-                                            value={formData.studentName}
-                                            onChange={handleFormChange}
-                                            required
-                                            placeholder="Enter student name"
-                                            className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 bg-white text-slate-800 text-sm font-medium"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Email Address</label>
-                                        <input 
-                                            type="email" 
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleFormChange}
-                                            required
-                                            placeholder="campus@student.msit.in"
-                                            className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 bg-white text-slate-800 text-sm font-medium"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Department / Branch</label>
-                                        <select 
-                                            name="department"
-                                            value={formData.department}
-                                            onChange={handleFormChange}
-                                            className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all bg-white text-slate-800 text-sm font-medium"
-                                        >
-                                            {DEPARTMENTS.map(dept => (
-                                                <option key={dept.code} value={dept.code}>{dept.name}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Current Semester</label>
-                                        <select 
-                                            name="semester"
-                                            value={formData.semester}
-                                            onChange={handleFormChange}
-                                            className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all bg-white text-slate-800 text-sm font-medium"
-                                        >
-                                            {[...Array(8)].map((_, i) => (
-                                                <option key={i} value={`Semester ${i + 1}`}>Semester {i + 1}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Fee Category</label>
-                                        <select 
-                                            name="feeType"
-                                            value={formData.feeType}
-                                            onChange={handleFormChange}
-                                            className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all bg-white text-slate-800 text-sm font-medium"
-                                        >
-                                            {FEE_TYPES.map(fee => (
-                                                <option key={fee.id} value={fee.id}>{fee.name}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Amount to Pay (INR)</label>
-                                    <div className="relative">
-                                        <span className="absolute left-4 top-3 text-slate-500 font-semibold">₹</span>
-                                        <input 
-                                            type="text" 
-                                            name="customAmount"
-                                            value={formData.customAmount}
-                                            onChange={handleFormChange}
-                                            required
-                                            className="w-full pl-8 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all bg-slate-100 text-slate-800 text-sm font-bold cursor-not-allowed"
-                                            readOnly
-                                        />
-                                    </div>
-                                    <p className="text-[10px] text-slate-500 mt-2 font-medium">Standard GGSIPU pre-determined fee structure for {formData.semester}.</p>
-                                </div>
-
-                                <button 
-                                    type="submit" 
-                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-md flex justify-center items-center gap-2 mt-4 cursor-pointer text-sm"
+                <div className="space-y-8 print:hidden">
+                    {/* Hero Direct Action Banner */}
+                    <div className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 p-8 rounded-3xl text-white shadow-lg relative overflow-hidden">
+                        <div className="absolute right-0 top-0 opacity-10 w-96 h-96 rounded-full border-[40px] border-white select-none pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
+                        <div className="relative z-10 max-w-2xl">
+                            <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-bold rounded-full border border-blue-400/30 uppercase tracking-wider mb-4 inline-block">
+                                Official Online Payment Portal
+                            </span>
+                            <h3 className="text-2xl sm:text-3xl font-extrabold mb-3 text-white">
+                                Pay Annual Academic Fees Online
+                            </h3>
+                            <p className="text-slate-300 text-sm font-light leading-relaxed mb-6">
+                                MSIT students can securely pay their annual academic, tuition, and hostel fees directly through the official Octopod fee payment portal.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <a 
+                                    href="https://octopod.co.in/student/admission/81a9421f2cfc48f2e5f5278efa47382b" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2 group cursor-pointer"
                                 >
-                                    Proceed to Payment
-                                    <ArrowRight className="w-4 h-4" />
-                                </button>
-                            </form>
-                        </div>
-                    )}
-
-                    {/* STEP 2: GATEWAY/METHOD SELECT */}
-                    {step === 2 && (
-                        <div>
-                            <div className="flex items-center gap-2 mb-6">
-                                <button type="button" onClick={() => setStep(1)} className="p-1 hover:bg-slate-200 rounded-lg transition-colors mr-2">
-                                    <ArrowLeft className="w-4 h-4 text-slate-600" />
-                                </button>
-                                <ShieldCheck className="w-5 h-5 text-emerald-500" />
-                                <h3 className="text-xl font-bold text-slate-900">Secure Payment Gateway</h3>
-                            </div>
-
-                            <div className="bg-blue-50 border border-blue-100 p-4 rounded-xl mb-6 flex justify-between items-center text-xs">
-                                <div>
-                                    <span className="text-slate-500 font-medium">Enrollment No:</span> <strong className="text-slate-700">{formData.enrollmentNo}</strong>
-                                    <span className="mx-2 font-medium text-slate-400">|</span>
-                                    <span className="text-slate-500 font-medium">Payee:</span> <strong className="text-slate-700">{formData.studentName}</strong>
-                                </div>
-                                <div className="text-right">
-                                    <span className="text-slate-500 font-medium">Total:</span> <strong className="text-blue-700 text-sm font-extrabold">₹{parseInt(formData.customAmount).toLocaleString('en-IN')}</strong>
-                                </div>
-                            </div>
-
-                            <form onSubmit={handlePaymentSubmit} className="space-y-6">
-                                <div className="grid grid-cols-3 gap-3">
-                                    <button 
-                                        type="button"
-                                        onClick={() => setFormData(prev => ({ ...prev, paymentMethod: 'card' }))}
-                                        className={`p-4 rounded-xl border flex flex-col items-center gap-2 transition-all cursor-pointer ${
-                                            formData.paymentMethod === 'card' 
-                                                ? 'border-blue-600 bg-blue-50/50 text-blue-600 shadow-xs' 
-                                                : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
-                                        }`}
-                                    >
-                                        <CreditCard className="w-5 h-5" />
-                                        <span className="text-xs font-bold">Card</span>
-                                    </button>
-                                    <button 
-                                        type="button"
-                                        onClick={() => setFormData(prev => ({ ...prev, paymentMethod: 'upi' }))}
-                                        className={`p-4 rounded-xl border flex flex-col items-center gap-2 transition-all cursor-pointer ${
-                                            formData.paymentMethod === 'upi' 
-                                                ? 'border-blue-600 bg-blue-50/50 text-blue-600 shadow-xs' 
-                                                : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
-                                        }`}
-                                    >
-                                        <Sparkles className="w-5 h-5" />
-                                        <span className="text-xs font-bold">UPI</span>
-                                    </button>
-                                    <button 
-                                        type="button"
-                                        onClick={() => setFormData(prev => ({ ...prev, paymentMethod: 'netbanking' }))}
-                                        className={`p-4 rounded-xl border flex flex-col items-center gap-2 transition-all cursor-pointer ${
-                                            formData.paymentMethod === 'netbanking' 
-                                                ? 'border-blue-600 bg-blue-50/50 text-blue-600 shadow-xs' 
-                                                : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
-                                        }`}
-                                    >
-                                        <Landmark className="w-5 h-5" />
-                                        <span className="text-xs font-bold">Net Banking</span>
-                                    </button>
-                                </div>
-
-                                {/* CARD DETAILS */}
-                                {formData.paymentMethod === 'card' && (
-                                    <div className="space-y-4 border border-slate-200 bg-white p-6 rounded-2xl">
-                                        <div>
-                                            <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Card Number</label>
-                                            <input 
-                                                type="text" 
-                                                placeholder="4532 •••• •••• 9812"
-                                                maxLength={16}
-                                                required
-                                                value={cardData.number}
-                                                onChange={e => setCardData({...cardData, number: e.target.value.replace(/\D/g, '')})}
-                                                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 bg-white text-slate-800 text-sm font-medium"
-                                            />
-                                        </div>
-                                        <div className="grid grid-cols-2 gap-4">
-                                            <div>
-                                                <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Expiry Date</label>
-                                                <input 
-                                                    type="text" 
-                                                    placeholder="MM/YY"
-                                                    maxLength={5}
-                                                    required
-                                                    value={cardData.expiry}
-                                                    onChange={e => setCardData({...cardData, expiry: e.target.value})}
-                                                    className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 bg-white text-slate-800 text-sm font-medium"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">CVV</label>
-                                                <input 
-                                                    type="password" 
-                                                    placeholder="•••"
-                                                    maxLength={3}
-                                                    required
-                                                    value={cardData.cvv}
-                                                    onChange={e => setCardData({...cardData, cvv: e.target.value.replace(/\D/g, '')})}
-                                                    className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 bg-white text-slate-800 text-sm font-medium"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Cardholder Name</label>
-                                            <input 
-                                                type="text" 
-                                                placeholder="Name as on Card"
-                                                required
-                                                value={cardData.name}
-                                                onChange={e => setCardData({...cardData, name: e.target.value})}
-                                                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 bg-white text-slate-800 text-sm font-medium"
-                                            />
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* UPI DETAILS */}
-                                {formData.paymentMethod === 'upi' && (
-                                    <div className="space-y-4 border border-slate-200 bg-white p-6 rounded-2xl">
-                                        <div>
-                                            <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">UPI ID (VPA)</label>
-                                            <input 
-                                                type="text" 
-                                                placeholder="studentname@okicici"
-                                                required
-                                                value={upiId}
-                                                onChange={e => setUpiId(e.target.value)}
-                                                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 bg-white text-slate-800 text-sm font-medium"
-                                            />
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* NET BANKING */}
-                                {formData.paymentMethod === 'netbanking' && (
-                                    <div className="space-y-4 border border-slate-200 bg-white p-6 rounded-2xl">
-                                        <div>
-                                            <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Select Bank</label>
-                                            <select 
-                                                value={selectedBank}
-                                                onChange={e => setSelectedBank(e.target.value)}
-                                                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-800 text-sm font-medium"
-                                            >
-                                                <option value="HDFC">HDFC Bank</option>
-                                                <option value="ICICI">ICICI Bank</option>
-                                                <option value="SBI">State Bank of India</option>
-                                                <option value="AXIS">Axis Bank</option>
-                                                <option value="PNB">Punjab National Bank</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                )}
-
-                                <button 
-                                    type="submit" 
-                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-md flex justify-center items-center gap-2 cursor-pointer text-sm"
+                                    <span>Proceed to Official Octopod Fee Portal</span>
+                                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                                </a>
+                                <a 
+                                    href="https://www.msit.in/media/news/fee-submission-notice-for-the-academic-year-2026-27.pdf" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl text-sm transition-all border border-white/20 flex items-center justify-center gap-2 cursor-pointer"
                                 >
-                                    Authorize Payment (₹{parseInt(formData.customAmount).toLocaleString('en-IN')})
-                                </button>
-                            </form>
-                        </div>
-                    )}
-
-                    {/* STEP 3: TRANSACTION SIMULATION LOADER */}
-                    {step === 3 && (
-                        <div className="flex flex-col items-center justify-center py-16 text-center">
-                            <Loader2 className="w-12 h-12 text-blue-600 animate-spin mb-6" />
-                            <h4 className="text-lg font-bold text-slate-900 mb-2">Processing Secure Transaction</h4>
-                            <p className="text-sm text-slate-500 font-light max-w-sm mb-4">Please do not refresh the page or click back.</p>
-                            <div className="px-4 py-2 bg-slate-100 rounded-full border border-slate-200">
-                                <span className="text-xs font-bold text-slate-600">{processingMsg}</span>
+                                    <Download className="w-4 h-4" />
+                                    <span>Official Fee Notice PDF</span>
+                                </a>
                             </div>
                         </div>
-                    )}
+                    </div>
 
-                    {/* STEP 4: SUCCESS SUMMARY */}
-                    {step === 4 && successDetails && (
-                        <div className="text-center py-6">
-                            <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
-                                <CheckCircle className="w-10 h-10" />
-                            </div>
-                            <h3 className="text-2xl font-black text-slate-900 mb-2">Payment Successful!</h3>
-                            <p className="text-sm text-slate-500 font-light mb-8 max-w-md mx-auto">Your payment has been processed securely. An official receipt has been generated and dispatched to your email address.</p>
-                            
-                            <div className="max-w-md mx-auto bg-white border border-slate-200 p-6 rounded-2xl text-left text-xs mb-8 space-y-3">
-                                <div className="flex justify-between pb-2 border-b border-slate-100 font-bold text-slate-400 uppercase tracking-wider">
-                                    <span>Detail</span>
-                                    <span>Value</span>
+                    {/* Official Batch-wise Fee Breakdown Cards */}
+                    <div className="space-y-6">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-4">
+                            <h4 className="text-xl font-extrabold text-slate-900 flex items-center gap-2">
+                                <Sparkles className="w-5 h-5 text-blue-600" />
+                                Annual Fee Structure & Amounts Required
+                            </h4>
+                            <span className="text-xs text-slate-500 font-medium">As per GGSIPU & SFRC Notifications (AY 2026–27)</span>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            {/* 1st Year */}
+                            <div className="bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all">
+                                <div className="flex justify-between items-start mb-3">
+                                    <div>
+                                        <span className="px-2.5 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-extrabold rounded-md uppercase tracking-wider">Fresh Admission</span>
+                                        <h5 className="text-lg font-bold text-slate-900 mt-1">B.Tech 1st Year</h5>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-2xl font-black text-blue-700">₹1,67,000</div>
+                                        <div className="text-[10px] text-slate-400 uppercase font-bold">Total Annual Fee</div>
+                                    </div>
                                 </div>
-                                <div className="flex justify-between">
-                                    <span className="text-slate-500">Student Name:</span>
-                                    <strong className="text-slate-800">{successDetails.studentName}</strong>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-slate-500">Enrollment No:</span>
-                                    <strong className="text-slate-800">{successDetails.enrollmentNo}</strong>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-slate-500">Branch:</span>
-                                    <strong className="text-slate-800">{successDetails.department}</strong>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-slate-500">Payment Category:</span>
-                                    <strong className="text-slate-800">{successDetails.type} ({successDetails.term})</strong>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-slate-500">Transaction ID:</span>
-                                    <strong className="text-blue-600 font-mono">{successDetails.id}</strong>
-                                </div>
-                                <div className="flex justify-between border-t border-slate-100 pt-3">
-                                    <span className="text-slate-600 font-bold">Total Paid:</span>
-                                    <strong className="text-blue-600 text-sm font-extrabold">₹{successDetails.amount.toLocaleString('en-IN')}</strong>
+                                <div className="text-xs text-slate-600 space-y-1.5 pt-3 border-t border-slate-100 font-medium">
+                                    <div className="flex justify-between"><span>Academic Tuition Fee:</span> <span className="font-bold text-slate-800">₹1,35,000</span></div>
+                                    <div className="flex justify-between"><span>University Charges (GGSIPU):</span> <span className="font-bold text-slate-800">₹20,000</span></div>
+                                    <div className="flex justify-between"><span>Student Activity Fee:</span> <span className="font-bold text-slate-800">₹2,000</span></div>
+                                    <div className="flex justify-between"><span>Security Deposit (Refundable):</span> <span className="font-bold text-slate-800">₹10,000</span></div>
                                 </div>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <button 
-                                    type="button"
-                                    onClick={() => {
-                                        setViewingReceipt(successDetails);
-                                        setActiveTab('receipt');
-                                    }}
-                                    className="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs transition-colors cursor-pointer flex items-center justify-center gap-2"
-                                >
-                                    <Receipt className="w-4 h-4" />
-                                    View Detailed Receipt
-                                </button>
-                                <button 
-                                    type="button"
-                                    onClick={() => {
-                                        setStep(1);
-                                        setFormData({
-                                            enrollmentNo: '',
-                                            studentName: '',
-                                            email: '',
-                                            department: 'cse',
-                                            semester: 'Semester 1',
-                                            feeType: 'tuition',
-                                            customAmount: '120000',
-                                            paymentMethod: 'card'
-                                        });
-                                    }}
-                                    className="px-6 py-3 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold rounded-xl text-xs transition-colors cursor-pointer"
-                                >
-                                    Make Another Payment
-                                </button>
+                            {/* 2nd Year */}
+                            <div className="bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all">
+                                <div className="flex justify-between items-start mb-3">
+                                    <div>
+                                        <span className="px-2.5 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-extrabold rounded-md uppercase tracking-wider">Batch 2025–29</span>
+                                        <h5 className="text-lg font-bold text-slate-900 mt-1">B.Tech 2nd Year</h5>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-2xl font-black text-indigo-700">₹1,59,560</div>
+                                        <div className="text-[10px] text-slate-400 uppercase font-bold">Total Annual Fee</div>
+                                    </div>
+                                </div>
+                                <div className="text-xs text-slate-600 space-y-1.5 pt-3 border-t border-slate-100 font-medium">
+                                    <div className="flex justify-between"><span>Program Tuition Fee:</span> <span className="font-bold text-slate-800">₹1,35,960</span></div>
+                                    <div className="flex justify-between"><span>University Charges:</span> <span className="font-bold text-slate-800">₹20,000</span></div>
+                                    <div className="flex justify-between"><span>Exam Fee & Charges:</span> <span className="font-bold text-slate-800">₹3,000</span></div>
+                                    <div className="flex justify-between"><span>Innovation & Insurance:</span> <span className="font-bold text-slate-800">₹600</span></div>
+                                </div>
+                            </div>
+
+                            {/* 3rd Year */}
+                            <div className="bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all">
+                                <div className="flex justify-between items-start mb-3">
+                                    <div>
+                                        <span className="px-2.5 py-0.5 bg-purple-50 text-purple-700 text-[10px] font-extrabold rounded-md uppercase tracking-wider">Batch 2024–28</span>
+                                        <h5 className="text-lg font-bold text-slate-900 mt-1">B.Tech 3rd Year</h5>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-2xl font-black text-purple-700">₹1,65,100</div>
+                                        <div className="text-[10px] text-slate-400 uppercase font-bold">Total Annual Fee</div>
+                                    </div>
+                                </div>
+                                <div className="text-xs text-slate-600 space-y-1.5 pt-3 border-t border-slate-100 font-medium">
+                                    <div className="flex justify-between"><span>Program Tuition Fee:</span> <span className="font-bold text-slate-800">₹1,39,500</span></div>
+                                    <div className="flex justify-between"><span>University Charges:</span> <span className="font-bold text-slate-800">₹20,000</span></div>
+                                    <div className="flex justify-between"><span>Exam & Innovation Charges:</span> <span className="font-bold text-slate-800">₹3,600</span></div>
+                                    <div className="flex justify-between"><span>Placement Grooming Training:</span> <span className="font-bold text-slate-800">₹2,000</span></div>
+                                </div>
+                            </div>
+
+                            {/* 4th Year */}
+                            <div className="bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all">
+                                <div className="flex justify-between items-start mb-3">
+                                    <div>
+                                        <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-extrabold rounded-md uppercase tracking-wider">Batch 2023–27</span>
+                                        <h5 className="text-lg font-bold text-slate-900 mt-1">B.Tech 4th Year</h5>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-2xl font-black text-emerald-700">₹1,53,000</div>
+                                        <div className="text-[10px] text-slate-400 uppercase font-bold">Total Annual Fee</div>
+                                    </div>
+                                </div>
+                                <div className="text-xs text-slate-600 space-y-1.5 pt-3 border-t border-slate-100 font-medium">
+                                    <div className="flex justify-between"><span>Program Tuition Fee:</span> <span className="font-bold text-slate-800">₹1,32,900</span></div>
+                                    <div className="flex justify-between"><span>University Charges:</span> <span className="font-bold text-slate-800">₹20,000</span></div>
+                                    <div className="flex justify-between"><span>Group Insurance & Charges:</span> <span className="font-bold text-slate-800">₹100</span></div>
+                                </div>
                             </div>
                         </div>
-                    )}
+
+                        {/* Additional info notice */}
+                        <div className="p-5 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 leading-relaxed font-medium">
+                            <strong>Official Payment Guidelines:</strong> Annual fees can be paid online via Net Banking, Debit/Credit Card, UPI through the Octopod link above, or via Demand Draft favoring <em>"Maharaja Surajmal Institute of Technology"</em> payable at New Delhi.
+                        </div>
+                    </div>
                 </div>
             )}
 

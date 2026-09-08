@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Heart, MessageSquare, ExternalLink, ArrowRight, Users, ChevronDown } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAccessibility } from '../context/AccessibilityContext';
 
@@ -19,47 +19,8 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-slate-950 pt-0 pb-12 border-t border-slate-900 text-slate-300">
-            {/* Feedback & Join Us Banner */}
-            <div className="bg-gradient-to-r from-primary/30 to-blue-900/30 border-b border-slate-800 py-6 sm:py-8 mb-12 lg:mb-20 shadow-inner">
-                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-800">
-                    {/* Feedback Section */}
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 lg:pb-0 lg:pr-8">
-                        <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                <MessageSquare className="w-5 h-5 text-primary" />
-                            </div>
-                            <span className="text-white font-bold tracking-tight text-lg">Help us improve the MSIT experience.</span>
-                        </div>
-                        <a
-                            href="https://wds-bug-hunt.netlify.app/bug-hunt"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-card transition-all active:scale-95 whitespace-nowrap"
-                        >
-                            Give Feedback 📝
-                        </a>
-                    </div>
+        <footer className="bg-slate-950 pt-12 lg:pt-16 pb-12 border-t border-slate-900 text-slate-300">
 
-                    {/* Join Us Section */}
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-6 lg:pt-0 lg:pl-8">
-                        <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
-                                <Users className="w-5 h-5 text-emerald-500" />
-                            </div>
-                            <span className="text-white font-bold tracking-tight text-lg">Interested in working with us? Join our team.</span>
-                        </div>
-                        <a
-                            href="https://forms.gle/YvfaWYkXzr2RKBW86"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-card transition-all active:scale-95 whitespace-nowrap"
-                        >
-                            Join Us 🚀
-                        </a>
-                    </div>
-                </div>
-            </div>
 
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 mb-10 lg:mb-20">
