@@ -35,7 +35,7 @@ Legacy institutional websites often suffer from slow page loads, poor accessibil
 
 ### Experimental / Mocked
 - **Administrative CMS**: The admin dashboard is fully functional but stores data purely in the browser's `localStorage`.
-- **Forms & Complaints**: Forms (like POSH complaints) simulate submission via frontend alerts without actual backend transmission.
+- **Forms & Complaints**: Forms (like Grievance complaints) simulate submission via frontend alerts without actual backend transmission.
 
 ## Architecture
 
@@ -209,7 +209,7 @@ npm run build
 ## Known Limitations
 
 - **No Persistence Across Devices**: Because the CMS relies on `localStorage`, any news or events added via the Admin Dashboard will only be visible on the specific browser where they were created. Clearing browser data will delete them.
-- **No Backend**: Forms (Contact, POSH complaints) do not actually send emails or store data. They rely on dummy JavaScript `alert()` functions.
+- **No Backend**: Forms (Contact, Grievance complaints) do not actually send emails or store data. They rely on dummy JavaScript `alert()` functions.
 - **Missing Tests**: No unit or integration tests exist.
 - **SEO Static Limits**: While `prerender.js` injects basic tags, deep dynamic pages rely heavily on client-side React rendering, which may still struggle with older search engine crawlers.
 
