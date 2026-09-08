@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
-    Check, Award, ArrowRight, Play, X, Mail, Globe, ChevronDown,
+    Check, Award, ArrowRight, Play, X, Mail, Globe, ChevronDown, ChevronLeft, ChevronRight, Search, Clock,
     Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink, Building2, Camera
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -110,6 +110,7 @@ const CAMPUS_GALLERY = [
 
 const Home = () => {
     const [activeNewsTab, setActiveNewsTab] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
     // ... rest of state
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
     const [activeStatIndex, setActiveStatIndex] = useState(0);
@@ -193,14 +194,54 @@ const Home = () => {
     // Campus Highlights state 
     const [currentHighlight, setCurrentHighlight] = useState(0);
     const [highlights] = useState(() => {
-        const stored = localStorage.getItem('msit_highlights_v2') || localStorage.getItem('msit_highlights');
-        if (stored) return JSON.parse(stored);
+        const stored = localStorage.getItem('msit_highlights_v3') || localStorage.getItem('msit_highlights_v2') || localStorage.getItem('msit_highlights');
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            if (parsed.length >= 3) return parsed;
+        }
         const defaults = [
-            { id: 1, image: "/campus-hero.webp", quote: "Ranked among the Top Engineering Colleges in Delhi-NCR by NIRF / Times Engineering Survey.", source: "Times Engineering Ranking" },
-            { id: 2, image: "/campus/central-library-hall.webp", quote: "Accredited with 'A' Grade for institutional quality and academic governance.", source: "National Assessment and Accreditation Council (NAAC)" },
-            { id: 3, image: "/campus/student-gathering-courtyard.webp", quote: "B.Tech programs in CSE, IT, ECE, and EEE accredited for outcome-based education.", source: "National Board of Accreditation (NBA)" }
+            { 
+                id: 1, 
+                image: "/campus-hero.webp", 
+                quote: "A breeding ground for the next generation of global technology leaders.", 
+                source: "Times Engineering Survey",
+                tag: "01 / 05",
+                link: "/about"
+            },
+            { 
+                id: 2, 
+                image: "/campus/central-library-hall.webp", 
+                quote: "State-of-the-art digital learning centers and research labs rivaling top tech institutes.", 
+                source: "NAAC 'A' Grade Accreditation",
+                tag: "02 / 05",
+                link: "/facilities"
+            },
+            { 
+                id: 3, 
+                image: "/campus/student-gathering-courtyard.webp", 
+                quote: "Vibrant innovation ecosystem supporting 20+ active technical and cultural chapters.", 
+                source: "NBA Accredited Programs",
+                tag: "03 / 05",
+                link: "/society"
+            },
+            { 
+                id: 4, 
+                image: "/campus/auditorium-cultural-fest.webp", 
+                quote: "Centenary Auditorium & event hubs hosting annual hackathons and cultural festivals.", 
+                source: "Avensis Tech Summit",
+                tag: "04 / 05",
+                link: "/events"
+            },
+            { 
+                id: 5, 
+                image: "/campus/sports-ground-aerial.webp", 
+                quote: "Fostering entrepreneurial mindsets through NISP startup grants and incubation support.", 
+                source: "MSIT Innovation Cell",
+                tag: "05 / 05",
+                link: "/research"
+            }
         ];
-        localStorage.setItem('msit_highlights_v2', JSON.stringify(defaults));
+        localStorage.setItem('msit_highlights_v3', JSON.stringify(defaults));
         return defaults;
     });
 
@@ -348,29 +389,223 @@ const Home = () => {
         }
     ];
 
+    const parseEventDate = (dateStr) => {
+        if (!dateStr) return 0;
+        const time = Date.parse(dateStr);
+        return isNaN(time) ? 0 : time;
+    };
+
+    const getCategoryRank = (label) => {
+        const l = (label || '').toUpperCase();
+        if (l === 'NEWS') return 1;
+        if (l === 'EVENT') return 2;
+        if (l === 'STORY') return 3;
+        return 4;
+    };
+
+    const TAG_DOMAINS = {
+        NEWS: {
+            borderColor: 'border-blue-600',
+            badgeClass: 'bg-blue-50 text-blue-700 border-blue-200/80',
+            dotClass: 'bg-blue-600',
+            hoverText: 'group-hover:text-blue-600',
+            hoverArrow: 'group-hover:bg-blue-600 group-hover:text-white',
+            shadowGlow: 'hover:shadow-blue-500/10'
+        },
+        EVENT: {
+            borderColor: 'border-emerald-500',
+            badgeClass: 'bg-emerald-50 text-emerald-700 border-emerald-200/80',
+            dotClass: 'bg-emerald-500',
+            hoverText: 'group-hover:text-emerald-600',
+            hoverArrow: 'group-hover:bg-emerald-600 group-hover:text-white',
+            shadowGlow: 'hover:shadow-emerald-500/10'
+        },
+        STORY: {
+            borderColor: 'border-purple-600',
+            badgeClass: 'bg-purple-50 text-purple-700 border-purple-200/80',
+            dotClass: 'bg-purple-600',
+            hoverText: 'group-hover:text-purple-600',
+            hoverArrow: 'group-hover:bg-purple-600 group-hover:text-white',
+            shadowGlow: 'hover:shadow-purple-500/10'
+        }
+    };
+
     const [events] = useState(() => {
-        const storedEvents = localStorage.getItem('msit_events_v2');
-        if (storedEvents) return JSON.parse(storedEvents);
         const defaultEvents = [
-            { id: 1, label: "NEWS", title: "Department of CSE receives CSR Research Grant from Petronet LNG Ltd. for AI Center of Excellence", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
-            { id: 2, label: "EVENT", title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
-            { id: 3, label: "STORY", title: "MSIT Alumni community secures offers across Google, Microsoft, Amazon, and ION Trading with highest domestic package of ₹45+ LPA", date: "FEB 15, 2026", link: "#", color: "border-purple-500" },
-            { id: 4, label: "STORY", title: "Grand Finale of SIH 2025 Concludes: MSIT Declared Winner in Ministry of AYUSH Category", date: "DEC 12, 2025", link: "#", color: "border-blue-600" },
-            { id: 5, label: "EVENT", title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", date: "NOV 19, 2026", link: "#", color: "border-emerald-500" },
-            { id: 6, label: "NEWS", title: "MSIT establishes state-of-the-art AICTE IDEA Lab & Advanced Multidisciplinary Research Facilities", date: "AUG 15, 2025", link: "#", color: "border-purple-500" },
-            { id: 7, label: "EVENT", title: "MSIT Conducts National Conference NCI-TIDE 2025", date: "DEC 15, 2025", link: "#", color: "border-blue-600" },
-            { id: 8, label: "EVENT", title: "Placement Cell Conducts Placement Preparation Session with ION Alumni and Seniors", date: "AUG 30, 2024", link: "#", color: "border-emerald-500" },
-            { id: 9, label: "EVENT", title: "E-Cell MSIT Organizes Flagship E-Summit 2026", date: "MAR 26, 2026", link: "#", color: "border-purple-500" },
-            { id: 10, label: "EVENT", title: "MSC MSIT Organizes HackMSIT 1.0 Hackathon", date: "APR 10, 2026", link: "#", color: "border-blue-600" },
-            { id: 11, label: "STORY", title: "Team 'Courtroom Cartel' Secures First Prize in Smart India Hackathon 2023", date: "DEC 20, 2023", link: "#", color: "border-emerald-500" }
+            { 
+                id: 10, 
+                label: "EVENT", 
+                title: "MSC MSIT Organizes HackMSIT 1.0 Hackathon", 
+                summary: "36-hour non-stop student hackathon with 500+ participants building open-source projects, AI prototypes, and developer tools.",
+                date: "APR 10, 2026", 
+                readTime: "5 MIN READ",
+                image: "/campus/student-gathering-courtyard.webp",
+                link: "#", 
+                color: "border-emerald-500" 
+            },
+            { 
+                id: 9, 
+                label: "EVENT", 
+                title: "E-Cell MSIT Organizes Flagship E-Summit 2026", 
+                summary: "Annual entrepreneurship summit featuring startup pitch competitions, VC investor panels, and tech founder keynotes.",
+                date: "MAR 26, 2026", 
+                readTime: "4 MIN READ",
+                image: "/campus/ecell-noticeboard-entrance.webp",
+                link: "#", 
+                color: "border-emerald-500" 
+            },
+            { 
+                id: 1, 
+                label: "NEWS", 
+                title: "Department of CSE receives CSR Research Grant from Petronet LNG Ltd. for AI Center of Excellence", 
+                summary: "The new research grant will drive interdisciplinary AI research, high-performance computing, and industry collaboration at MSIT.",
+                date: "MAR 02, 2026", 
+                readTime: "5 MIN READ",
+                image: "/campus/main-academic-building.webp",
+                link: "#", 
+                color: "border-blue-600" 
+            },
+            { 
+                id: 2, 
+                label: "EVENT", 
+                title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", 
+                summary: "Industry pioneers, Web3 developers, and blockchain innovators gather at MSIT for keynotes and hands-on developer workshops.",
+                date: "FEB 28, 2026", 
+                readTime: "3 MIN READ",
+                image: "/campus/auditorium-cultural-fest.webp",
+                link: "#", 
+                color: "border-emerald-500" 
+            },
+            { 
+                id: 3, 
+                label: "STORY", 
+                title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", 
+                summary: "Inside the journey of five MSIT computer science graduates who landed software engineering roles at Apple's global headquarters.",
+                date: "FEB 15, 2026", 
+                readTime: "7 MIN READ",
+                image: "/campus-excellence.webp",
+                link: "#", 
+                color: "border-purple-600" 
+            },
+            { 
+                id: 7, 
+                label: "EVENT", 
+                title: "MSIT Conducts National Conference NCI-TIDE 2025", 
+                summary: "National conference bringing together academia and industry leaders on technological innovations in digital engineering.",
+                date: "DEC 15, 2025", 
+                readTime: "4 MIN READ",
+                image: "/campus/campus-pathway-block.webp",
+                link: "#", 
+                color: "border-emerald-500" 
+            },
+            { 
+                id: 4, 
+                label: "STORY", 
+                title: "Grand Finale of SIH 2025 Concludes: MSIT Declared Winner in Ministry of AYUSH Category", 
+                summary: "MSIT student developers bag the top prize of ₹1 Lakh at the Smart India Hackathon for their AI-driven healthcare solution.",
+                date: "DEC 12, 2025", 
+                readTime: "4 MIN READ",
+                image: "/campus/foundation-stone-plaque.webp",
+                link: "#", 
+                color: "border-purple-600" 
+            },
+            { 
+                id: 5, 
+                label: "EVENT", 
+                title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", 
+                summary: "Global researchers submit papers on deep learning, NLP, and intelligent robotics ahead of the flagship conference.",
+                date: "NOV 19, 2025", 
+                readTime: "5 MIN READ",
+                image: "/campus/central-library-hall.webp",
+                link: "#", 
+                color: "border-emerald-500" 
+            },
+            { 
+                id: 6, 
+                label: "NEWS", 
+                title: "MSIT establishes state-of-the-art AICTE IDEA Lab & Advanced Multidisciplinary Research Facilities", 
+                summary: "A national milestone for MSIT with new 3D printing, rapid prototyping, and high-performance GPU computing clusters.",
+                date: "AUG 15, 2025", 
+                readTime: "6 MIN READ",
+                image: "/campus-lab.webp",
+                link: "#", 
+                color: "border-blue-600" 
+            },
+            { 
+                id: 8, 
+                label: "EVENT", 
+                title: "Placement Cell Conducts Placement Preparation Session with ION Alumni and Seniors", 
+                summary: "Interactive placement guidance and mock technical interviews organized for 3rd and 4th year B.Tech students.",
+                date: "AUG 30, 2024", 
+                readTime: "3 MIN READ",
+                image: "/campus/campus-side-avenue.webp",
+                link: "#", 
+                color: "border-emerald-500" 
+            },
+            { 
+                id: 11, 
+                label: "STORY", 
+                title: "Team 'Courtroom Cartel' Secures First Prize in Smart India Hackathon 2023", 
+                summary: "A look back at MSIT's victorious SIH team building legal-tech automation for government departments.",
+                date: "DEC 20, 2023", 
+                readTime: "6 MIN READ",
+                image: "/campus/maharaja-surajmal-statue.webp",
+                link: "#", 
+                color: "border-purple-600" 
+            }
         ];
+
+        const storedEvents = localStorage.getItem('msit_events_v2');
+        if (storedEvents) {
+            try {
+                const parsed = JSON.parse(storedEvents);
+                return parsed.map(item => {
+                    const def = defaultEvents.find(d => d.id === item.id) || {};
+                    return {
+                        ...def,
+                        ...item,
+                        image: item.image || def.image || '/campus/main-academic-building.webp',
+                        summary: item.summary || def.summary || item.title,
+                        readTime: item.readTime || def.readTime || '4 MIN READ'
+                    };
+                });
+            } catch (err) {
+                // fallback to defaultEvents if parsing fails
+            }
+        }
         localStorage.setItem('msit_events_v2', JSON.stringify(defaultEvents));
         return defaultEvents;
     });
 
-    const filteredEvents = activeNewsTab === 'all'
-        ? events
-        : events.filter(e => e.label.toLowerCase() === activeNewsTab || (activeNewsTab === 'stories' && e.label === 'STORY'));
+    const sortedEvents = [...events].sort((a, b) => {
+        const timeA = parseEventDate(a.date);
+        const timeB = parseEventDate(b.date);
+        
+        if (timeA !== timeB) {
+            return timeB - timeA;
+        }
+        
+        return getCategoryRank(a.label) - getCategoryRank(b.label);
+    });
+
+    const searchedEvents = sortedEvents.filter(item => {
+        const matchesTab = activeNewsTab === 'all' 
+            || item.label.toLowerCase() === activeNewsTab 
+            || (activeNewsTab === 'stories' && item.label === 'STORY');
+        
+        const q = searchQuery.toLowerCase().trim();
+        const matchesSearch = !q || (
+            (item.title && item.title.toLowerCase().includes(q)) ||
+            (item.summary && item.summary.toLowerCase().includes(q)) ||
+            (item.label && item.label.toLowerCase().includes(q)) ||
+            (item.date && item.date.toLowerCase().includes(q))
+        );
+
+        return matchesTab && matchesSearch;
+    });
+
+    const heroStory = searchedEvents.length > 0 ? searchedEvents[0] : null;
+    const gridStories = searchedEvents.length > 1 ? searchedEvents.slice(1) : [];
 
     const homeSchema = {
         "@context": "https://schema.org",
@@ -456,44 +691,176 @@ const Home = () => {
             </div>
 
             {/* NEWS, EVENTS & STORIES */}
-            <section id="news" className="py-20 bg-slate-50">
+            <section id="news" className="py-24 bg-slate-50 border-t border-slate-200/60">
                 <div className="max-w-7xl mx-auto px-6">
+                    {/* Header with Title, Subtitle, Filter Pills, and Search Bar */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8">
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-light text-slate-900 tracking-tight leading-tight">News, Events, and Stories</h2>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-slate-900 tracking-tight leading-tight">
+                                News, Events <span className="italic font-normal text-slate-700">and Stories</span>
+                            </h2>
+                            <p className="text-slate-500 text-sm md:text-base mt-2 font-medium">
+                                Updates, achievements and experiences from the MSIT community.
+                            </p>
                         </div>
-                        <div className="flex gap-2 sm:gap-4 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide w-full md:w-auto">
-                            {['all', 'news', 'events', 'stories'].map(tab => (
-                                <button
-                                    key={tab}
-                                    onClick={() => setActiveNewsTab(tab)}
-                                    className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap active:scale-95 focus:outline-none ${activeNewsTab === tab ? 'bg-slate-900 text-white shadow-md shadow-slate-900/30' : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-400'}`}
-                                >
-                                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                                </button>
-                            ))}
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto">
+                            {/* Tab Filters */}
+                            <div className="flex items-center gap-1 bg-white p-1.5 rounded-full border border-slate-200 shadow-sm overflow-x-auto scrollbar-hide">
+                                {['all', 'news', 'events', 'stories'].map(tab => (
+                                    <button
+                                        key={tab}
+                                        onClick={() => setActiveNewsTab(tab)}
+                                        className={`px-4 sm:px-5 py-1.5 rounded-full text-xs font-bold transition-all duration-300 whitespace-nowrap active:scale-95 ${
+                                            activeNewsTab === tab
+                                                ? 'bg-slate-900 text-white shadow-md shadow-slate-900/20'
+                                                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                                        }`}
+                                    >
+                                        {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                                    </button>
+                                ))}
+                            </div>
+                            {/* Search Input */}
+                            <div className="relative shrink-0 w-full sm:w-64">
+                                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                                <input
+                                    type="text"
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    placeholder="Search stories..."
+                                    className="w-full pl-9 pr-4 py-2 bg-white rounded-full text-xs font-semibold text-slate-800 placeholder-slate-400 border border-slate-200 focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-900/10 transition-all shadow-sm"
+                                />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {filteredEvents.map((item, i) => {
-                            const itemLink = item.link && item.link !== '#' ? item.link : `/news-event/${item.id}`;
-                            return (
-                                <Link to={itemLink} key={item.id || i} className={`bg-white rounded-xl shadow-card hover:shadow-card-hover border-l-4 ${item.color} p-8 flex flex-col justify-between group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
-                                    <div>
-                                        <span className="inline-block text-xs font-bold uppercase tracking-widest text-muted mb-4">{item.label}</span>
-                                        <h3 className="text-xl font-semibold text-title leading-snug mb-6 group-hover:text-primary transition-colors">{item.title}</h3>
-                                    </div>
-                                    <div className="flex justify-between items-center mt-auto pt-6 border-t border-slate-100">
-                                        <span className="text-sm font-medium text-muted">{item.date}</span>
-                                        <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                                            <ArrowRight className="w-4 h-4 text-muted group-hover:text-primary" />
+                    {searchedEvents.length === 0 ? (
+                        <div className="text-center py-16 bg-white rounded-3xl border border-slate-200 shadow-sm">
+                            <p className="text-slate-500 font-semibold text-base">No stories match your filter or search query.</p>
+                            <button 
+                                onClick={() => { setActiveNewsTab('all'); setSearchQuery(''); }}
+                                className="mt-4 px-6 py-2 bg-slate-900 text-white rounded-full text-xs font-bold hover:bg-slate-800 transition-colors"
+                            >
+                                Reset Filters
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="space-y-8">
+                            {/* TOP HERO FEATURED COVER CARD */}
+                            {heroStory && (
+                                <Link 
+                                    to={heroStory.link && heroStory.link !== '#' ? heroStory.link : `/news-event/${heroStory.id}`}
+                                    className="group relative block w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer min-h-[380px] sm:min-h-[420px] border border-slate-200/50"
+                                >
+                                    {/* Cover Background Image */}
+                                    <div 
+                                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                                        style={{ backgroundImage: `url('${heroStory.image}')` }}
+                                    ></div>
+
+                                    {/* Dark Gradient Overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30"></div>
+
+                                    {/* Content Overlay */}
+                                    <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between min-h-[380px] sm:min-h-[420px]">
+                                        <div>
+                                            <span className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-white/95 backdrop-blur-md shadow-md ${
+                                                heroStory.label === 'NEWS' ? 'text-blue-700' :
+                                                heroStory.label === 'EVENT' ? 'text-emerald-700' : 'text-purple-700'
+                                            }`}>
+                                                <span className={`w-2 h-2 rounded-full animate-pulse ${
+                                                    heroStory.label === 'NEWS' ? 'bg-blue-600' :
+                                                    heroStory.label === 'EVENT' ? 'bg-emerald-600' : 'bg-purple-600'
+                                                }`}></span>
+                                                {heroStory.label}
+                                            </span>
+                                        </div>
+
+                                        <div className="max-w-3xl mt-auto">
+                                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4 tracking-tight group-hover:text-blue-200 transition-colors drop-shadow-md">
+                                                {heroStory.title}
+                                            </h3>
+                                            <p className="text-slate-200 text-sm sm:text-base line-clamp-2 md:line-clamp-3 leading-relaxed mb-8 opacity-90 font-medium">
+                                                {heroStory.summary}
+                                            </p>
+
+                                            <div className="flex justify-between items-center pt-6 border-t border-white/20">
+                                                <div className="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-300 tracking-wider uppercase">
+                                                    <span>{heroStory.date}</span>
+                                                    <span className="w-1 h-1 rounded-full bg-slate-400"></span>
+                                                    <span className="text-blue-300 font-semibold">{heroStory.readTime}</span>
+                                                </div>
+                                                <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-slate-900 transition-all shadow-lg">
+                                                    <ArrowRight className="w-5 h-5 text-white group-hover:text-slate-900 transition-colors" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </Link>
-                            );
-                        })}
-                    </div>
+                            )}
+
+                            {/* GRID OF CARDS BELOW */}
+                            {gridStories.length > 0 && (
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {gridStories.map((item, i) => {
+                                        const itemLink = item.link && item.link !== '#' ? item.link : `/news-event/${item.id}`;
+                                        const domainKey = (item.label || 'NEWS').toUpperCase();
+                                        const domain = TAG_DOMAINS[domainKey] || TAG_DOMAINS.NEWS;
+
+                                        return (
+                                            <Link 
+                                                to={itemLink} 
+                                                key={item.id || i} 
+                                                className={`bg-white rounded-2xl shadow-sm hover:shadow-xl border-l-4 ${domain.borderColor} border-y border-r border-slate-200/80 group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between ${domain.shadowGlow}`}
+                                            >
+                                                {/* Image Banner */}
+                                                <div className="relative h-44 overflow-hidden bg-slate-100">
+                                                    <img 
+                                                        src={item.image} 
+                                                        alt={item.title} 
+                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                                        onError={(e) => {
+                                                            e.currentTarget.onerror = null;
+                                                            e.currentTarget.src = '/campus/main-academic-building.webp';
+                                                        }}
+                                                    />
+                                                    <div className="absolute top-4 left-4 z-10">
+                                                        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider border shadow-sm ${domain.badgeClass}`}>
+                                                            <span className={`w-1.5 h-1.5 rounded-full ${domain.dotClass}`}></span>
+                                                            {item.label}
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                {/* Text Content */}
+                                                <div className="p-6 flex-grow flex flex-col justify-between">
+                                                    <div>
+                                                        <h3 className={`text-lg font-bold text-slate-900 leading-snug mb-3 ${domain.hoverText} transition-colors line-clamp-2`}>
+                                                            {item.title}
+                                                        </h3>
+                                                        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6 font-medium">
+                                                            {item.summary}
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="flex justify-between items-center pt-4 border-t border-slate-100 mt-auto">
+                                                        <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                                                            <span>{item.date}</span>
+                                                            <span>•</span>
+                                                            <span className="text-slate-600 font-semibold">{item.readTime}</span>
+                                                        </div>
+                                                        <div className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center ${domain.hoverArrow} transition-colors`}>
+                                                            <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-current transition-colors" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -576,69 +943,198 @@ const Home = () => {
                 <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
             </section>
 
-            {/* THE MSIT DIFFERENCE */}
-            <section className="py-24 bg-slate-900 text-white">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        <div>
-                            <span className="text-blue-400 font-black tracking-[0.2em] text-xs uppercase mb-4 block">The MSIT Advantage</span>
-                            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
-                                Education that <br /><span className="text-blue-400 underline decoration-blue-500/30 underline-offset-8">Transcends Boundaries.</span>
-                            </h2>
-                            <p className="text-lg text-slate-300 font-medium leading-relaxed mb-12 opacity-90">
+            {/* THE MSIT ADVANTAGE - ELEGANT CARD STACK SECTION */}
+            <section className="py-24 bg-[#FBF9F5] text-slate-900 border-y border-stone-200/80 relative overflow-hidden">
+                {/* Decorative diagonal accent matching inspiration background */}
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F3EEE5]/60 -skew-x-12 transform translate-x-24 pointer-events-none -z-0"></div>
+
+                {/* Upper right tracked cap watermark */}
+                <div className="absolute top-12 right-12 text-[11px] font-black uppercase tracking-[0.3em] text-stone-400 hidden xl:block pointer-events-none select-none">
+                    PEOPLE &bull; IDEAS &bull; IMPACT
+                </div>
+
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+                        {/* Left Column: Heading & Key Feature List */}
+                        <div className="lg:col-span-5 space-y-8">
+                            <div>
+                                <span className="text-[#8C6B45] font-black tracking-[0.25em] text-xs uppercase mb-3 block">
+                                    THE MSIT ADVANTAGE
+                                </span>
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.15]">
+                                    Education that <br />
+                                    <span className="font-serif italic font-normal text-[#9E7B56]">Transcends</span> <br />
+                                    Boundaries.
+                                </h2>
+                            </div>
+
+                            <p className="text-slate-600 text-base leading-relaxed font-medium">
                                 MSIT stands at the intersection of rigorous academic theory and practical, industry-driven application. We don't just teach engineering; we cultivate the mindset required to solve the complex challenges of tomorrow.
                             </p>
-                            <div className="space-y-10">
+
+                            <div className="space-y-6 pt-2">
                                 {[
-                                    { icon: <Target className="w-6 h-6 text-emerald-400" />, title: "Industry-Aligned Curriculum", desc: "Syllabus constantly updated in collaboration with tech giants." },
-                                    { icon: <Lightbulb className="w-6 h-6 text-accent" />, title: "Innovation Ecosystem", desc: "Access to incubation centers, maker spaces, and heavy research funding." },
-                                    { icon: <Globe className="w-6 h-6 text-primary/80" />, title: "Global Perspective", desc: "Exchange programs and international hackathon participation." }
+                                    {
+                                        icon: <Target className="w-5 h-5 text-[#8C6B45]" />,
+                                        title: "Industry-Aligned Curriculum",
+                                        desc: "Syllabus constantly updated in collaboration with tech giants."
+                                    },
+                                    {
+                                        icon: <Lightbulb className="w-5 h-5 text-[#8C6B45]" />,
+                                        title: "Innovation Ecosystem",
+                                        desc: "Access to incubation centers, maker spaces, and heavy research funding."
+                                    },
+                                    {
+                                        icon: <Globe className="w-5 h-5 text-[#8C6B45]" />,
+                                        title: "Global Perspective",
+                                        desc: "Exchange programs and international hackathon participation."
+                                    }
                                 ].map((feature, i) => (
-                                    <div key={i} className="flex items-start gap-6">
-                                        <div className="mt-1 p-2.5 bg-slate-800 rounded-xl border border-white/5 shadow-inner">{feature.icon}</div>
+                                    <div key={i} className="flex items-start gap-4">
+                                        <div className="mt-1 w-11 h-11 rounded-2xl bg-[#F2ECE1] border border-[#E4D9C8] flex items-center justify-center shrink-0 shadow-sm">
+                                            {feature.icon}
+                                        </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2 tracking-tight">{feature.title}</h3>
-                                            <p className="text-slate-400 font-medium text-sm leading-relaxed">{feature.desc}</p>
+                                            <h3 className="text-lg font-bold text-slate-900 tracking-tight">{feature.title}</h3>
+                                            <p className="text-slate-500 font-medium text-xs md:text-sm leading-relaxed mt-0.5">{feature.desc}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="relative h-[clamp(400px,60vh,600px)] rounded-3xl overflow-hidden group shadow-card border border-white/5">
-                            {highlights.map((highlight, idx) => (
-                                <div
-                                    key={idx}
-                                    className={`absolute inset-0 transition-all duration-1000 ease-in-out transform ${
-                                        idx === currentHighlight ? 'opacity-100 scale-100' : 'opacity-0 scale-105 pointer-events-none'
-                                    }`}
-                                >
-                                    <div 
-                                        className="absolute inset-0 bg-slate-800 bg-cover bg-center transition-transform duration-[12s] ease-linear" 
-                                        style={{ backgroundImage: `url('${highlight.image}')`, transform: idx === currentHighlight ? 'scale(1.15)' : 'scale(1)' }}
-                                    ></div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-90"></div>
-                                    
-                                    <div className="absolute bottom-12 left-8 right-8 animate-slide-up">
-                                        <div className="bg-black/20 backdrop-blur-xl p-8 rounded-2xl border border-white/10 shadow-card">
-                                            <div className="text-2xl md:text-3xl font-bold text-white mb-6 leading-relaxed">{highlight.quote}</div>
-                                            <div className="text-xs font-black tracking-[0.25em] text-blue-400 uppercase">— {highlight.source}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
 
-                            {/* Carousel Navigation Dots */}
-                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-                                {highlights.map((_, i) => (
+                        {/* Right Column: 3D Stacked Overlapping Cards Carousel */}
+                        <div className="lg:col-span-7 flex flex-col items-center lg:items-end">
+                            {/* Card Stack Container */}
+                            <div className="relative w-full max-w-[520px] h-[480px] sm:h-[520px] flex items-center justify-start">
+                                {highlights.map((highlight, idx) => {
+                                    const total = highlights.length;
+                                    const offset = (idx - currentHighlight + total) % total;
+                                    const isFront = offset === 0;
+
+                                    let transformStyle = '';
+                                    let zIndex = 0;
+                                    let opacity = 0;
+
+                                    if (offset === 0) {
+                                        transformStyle = 'translateX(0px) scale(1)';
+                                        zIndex = 30;
+                                        opacity = 1;
+                                    } else if (offset === 1) {
+                                        transformStyle = 'translateX(40px) scale(0.92)';
+                                        zIndex = 20;
+                                        opacity = 0.9;
+                                    } else if (offset === 2) {
+                                        transformStyle = 'translateX(80px) scale(0.84)';
+                                        zIndex = 10;
+                                        opacity = 0.75;
+                                    } else if (offset === 3) {
+                                        transformStyle = 'translateX(120px) scale(0.76)';
+                                        zIndex = 5;
+                                        opacity = 0.5;
+                                    } else {
+                                        transformStyle = 'translateX(160px) scale(0.68)';
+                                        zIndex = 0;
+                                        opacity = 0;
+                                    }
+
+                                    return (
+                                        <div
+                                            key={highlight.id || idx}
+                                            onClick={() => !isFront && setCurrentHighlight(idx)}
+                                            style={{
+                                                transform: transformStyle,
+                                                zIndex,
+                                                opacity
+                                            }}
+                                            className={`absolute left-0 top-0 w-[280px] sm:w-[340px] md:w-[370px] h-[440px] sm:h-[480px] rounded-[2.2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-out border border-stone-200/60 bg-stone-950 ${
+                                                !isFront ? 'cursor-pointer hover:brightness-110' : ''
+                                            }`}
+                                        >
+                                            {/* Card Image */}
+                                            <div
+                                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out"
+                                                style={{ backgroundImage: `url('${highlight.image}')` }}
+                                            />
+
+                                            {/* Gradient Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent" />
+
+                                            {/* Content Overlay */}
+                                            <div className="absolute inset-0 p-7 sm:p-8 flex flex-col justify-between z-10 text-white">
+                                                {/* Counter / Tag */}
+                                                <div className="flex items-center gap-3">
+                                                    <span className="text-xs font-mono font-bold tracking-widest text-stone-200 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
+                                                        {highlight.tag || `0${idx + 1} / 0${total}`}
+                                                    </span>
+                                                    <div className="h-px bg-white/30 flex-1"></div>
+                                                </div>
+
+                                                {/* Quote & CTA */}
+                                                <div>
+                                                    <p className="text-lg sm:text-xl md:text-2xl font-semibold leading-snug text-white mb-6 drop-shadow-md">
+                                                        "{highlight.quote}"
+                                                    </p>
+
+                                                    <Link
+                                                        to={highlight.link || "/about"}
+                                                        className="inline-flex items-center gap-3 bg-white/15 hover:bg-white/25 backdrop-blur-xl border border-white/30 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white transition-all group/btn shadow-lg"
+                                                    >
+                                                        <span className="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-md group-hover/btn:scale-110 transition-transform">
+                                                            <ArrowRight className="w-3.5 h-3.5" />
+                                                        </span>
+                                                        <span>Explore Our Campus</span>
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+
+                            {/* Stack Navigation & Annotations Below */}
+                            <div className="w-full max-w-[520px] flex items-center justify-between mt-6 px-2">
+                                {/* Prev / Next Arrows & Pagination Dots */}
+                                <div className="flex items-center gap-4">
                                     <button
-                                        key={i}
-                                        onClick={() => setCurrentHighlight(i)}
-                                        className={`group relative py-4 px-1 rounded-full transition-all duration-500`}
-                                        aria-label={`Go to slide ${i + 1}`}
+                                        onClick={() => setCurrentHighlight((prev) => (prev - 1 + highlights.length) % highlights.length)}
+                                        className="w-10 h-10 rounded-full bg-white border border-stone-200 shadow-sm flex items-center justify-center text-slate-700 hover:bg-stone-50 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                                        aria-label="Previous card"
                                     >
-                                        <div className={`h-2 rounded-full transition-all duration-500 ${i === currentHighlight ? 'bg-white w-8 shadow-card' : 'bg-white/20 group-hover:bg-white/40 w-2.5'}`}></div>
+                                        <ChevronLeft className="w-5 h-5" />
                                     </button>
-                                ))}
+
+                                    {/* Pagination Dots */}
+                                    <div className="flex items-center gap-2">
+                                        {highlights.map((_, i) => (
+                                            <button
+                                                key={i}
+                                                onClick={() => setCurrentHighlight(i)}
+                                                className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
+                                                    i === currentHighlight ? 'bg-slate-900 w-6' : 'bg-stone-300 hover:bg-stone-400 w-2'
+                                                }`}
+                                                aria-label={`Go to slide ${i + 1}`}
+                                            />
+                                        ))}
+                                    </div>
+
+                                    <button
+                                        onClick={() => setCurrentHighlight((prev) => (prev + 1) % highlights.length)}
+                                        className="w-10 h-10 rounded-full bg-white border border-stone-200 shadow-sm flex items-center justify-center text-slate-700 hover:bg-stone-50 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                                        aria-label="Next card"
+                                    >
+                                        <ChevronRight className="w-5 h-5" />
+                                    </button>
+                                </div>
+
+                                {/* Handwritten Style Annotation */}
+                                <div className="hidden sm:flex items-center gap-2 text-stone-500 font-serif italic text-sm">
+                                    <span>More Than Engineering</span>
+                                    <svg className="w-8 h-4 text-stone-400 transform rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
 
