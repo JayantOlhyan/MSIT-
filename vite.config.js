@@ -66,7 +66,6 @@ export default defineConfig(({ mode }) => {
           '/society',
           '/events',
           '/antiragging',
-          '/posh',
           '/disaster',
           '/discipline',
           '/placements',
