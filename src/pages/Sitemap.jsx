@@ -70,12 +70,9 @@ const Sitemap = () => {
                 { label: "Student Login Portal", path: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
                 { label: "Attendance Rules", path: "/attendance" },
                 { label: "Anti-Ragging Guidelines", path: "/antiragging" },
-                { label: "POSH Cell Main", path: "/posh" },
-                { label: "POSH Act Guidelines", path: "/posh-guidelines" },
-                { label: "Lodge POSH Complaint", path: "/posh-complaint" },
-                { label: "ICC POSH Committee", path: "/posh-members" },
                 { label: "Disaster Management", path: "/disaster" },
                 { label: "Student Discipline Committee", path: "/discipline" },
+                { label: "Student Grievance Cell (SGRC)", path: "/student-grievance" },
                 { label: "Contact Us", path: "/contact" },
                 { label: "Privacy Policy", path: "/privacy" },
                 { label: "Terms of Use", path: "/terms" },
@@ -148,7 +145,7 @@ const Sitemap = () => {
                     <div className="text-center py-20 bg-white border border-slate-200 rounded-[2.5rem] shadow-sm">
                         <Search className="w-12 h-12 text-slate-300 mx-auto mb-4" />
                         <h3 className="text-lg font-bold text-slate-800 mb-1">No matching links found</h3>
-                        <p className="text-slate-500 text-xs font-medium">Try searching another keyword (e.g., 'posh', 'cse', 'fee')</p>
+                        <p className="text-slate-500 text-xs font-medium">Try searching another keyword (e.g., 'ragging', 'cse', 'fee')</p>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 xl:gap-12 items-start">
