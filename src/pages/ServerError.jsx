@@ -61,23 +61,23 @@ const ServerError = () => {
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                        <a href="mailto:support@msit.in" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors group">
+                        <a href="mailto:director@msit.in" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors group">
                             <div className="mt-1 w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
                                 <Mail className="w-5 h-5 text-blue-600 group-hover:text-white" />
                             </div>
                             <div>
                                 <p className="text-base font-medium text-slate-500">Email us at</p>
-                                <p className="font-bold text-slate-900">support@msit.in</p>
+                                <p className="font-bold text-slate-900">director@msit.in</p>
                             </div>
                         </a>
                         
-                        <a href="tel:+919667344125" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors group">
+                        <a href="tel:01145037193" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors group">
                             <div className="mt-1 w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center group-hover:bg-emerald-600 transition-colors">
                                 <Phone className="w-5 h-5 text-emerald-600 group-hover:text-white" />
                             </div>
                             <div>
                                 <p className="text-base font-medium text-slate-500">Call support</p>
-                                <p className="font-bold text-slate-900">+91 96673 44125</p>
+                                <p className="font-bold text-slate-900">011-45037193</p>
                             </div>
                         </a>
                     </div>

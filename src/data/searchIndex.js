@@ -99,7 +99,7 @@ export const qaData = [
     },
     {
         q: "How to contact the college?",
-        a: "For immediate assistance, please contact the Administration Office at MSIT Janakpuri. Phone: +91 96673 44125 or Email: info@msit.in",
+        a: "For immediate assistance, please contact the Administration Office at MSIT Janakpuri. Phone: 011-45037193 or Email: director@msit.in",
         keywords: "phone, inquiry, help, call, contact, mobile, mail, email, address"
     },
     {
