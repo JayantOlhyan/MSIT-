@@ -349,7 +349,119 @@ export const admissionData = {
                 </div>
             </div>
 
-            <!-- SECTION 4: DOCUMENT DOWNLOADS -->
+            <!-- SECTION 4: SCHOLARSHIP COMMITTEE & FACULTY LEADERSHIP -->
+            <div class="space-y-6 mb-12">
+                <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+                    <span class="w-1.5 h-5 bg-primary rounded-full"></span>
+                    Scholarship Committee & Faculty Leadership
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed font-light">
+                    The MSIT Scholarship & Financial Aid Committee oversees student welfare schemes, reviews applications, verifies state/central portal submissions, and coordinates institutional financial aid disbursals.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Head & Convener -->
+                    <div class="p-6 bg-slate-50/80 rounded-3xl border border-slate-200 hover:border-blue-300 hover:bg-white hover:shadow-md transition-all">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-100 border border-blue-200 flex items-center justify-center shrink-0 text-blue-700 font-extrabold text-lg">
+                                PA
+                            </div>
+                            <div class="space-y-1">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-blue-100 text-blue-800">
+                                    Convener & Academic Head
+                                </span>
+                                <h4 class="text-lg font-bold text-slate-900">Dr. Puneet Azad</h4>
+                                <p class="text-xs font-semibold text-blue-600">Dean Academics & Associate Professor (ECE Dept)</p>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light pt-1">
+                                    Heads institutional scholarship verification, Merit-cum-Means (MCM) approval, NSP & Delhi Govt portal Nodal Desk, and overall student financial assistance schemes.
+                                </p>
+                                <div class="pt-2 flex flex-wrap gap-2 text-xs font-medium text-slate-700">
+                                    <a href="mailto:puneet.azad@msit.in" class="inline-flex items-center gap-1 px-3 py-1 bg-white border border-slate-200 rounded-lg hover:text-blue-600 hover:border-blue-300 transition-colors">
+                                        ✉️ puneet.azad@msit.in
+                                    </a>
+                                    <a href="/faculty?id=ece-4" class="inline-flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+                                        👤 View Faculty Profile
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Co-Coordinator / Industry Scholarships -->
+                    <div class="p-6 bg-slate-50/80 rounded-3xl border border-slate-200 hover:border-emerald-300 hover:bg-white hover:shadow-md transition-all">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-emerald-100 border border-emerald-200 flex items-center justify-center shrink-0 text-emerald-700 font-extrabold text-lg">
+                                SM
+                            </div>
+                            <div class="space-y-1">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-emerald-100 text-emerald-800">
+                                    Industry & Corporate Scholarship Incharge
+                                </span>
+                                <h4 class="text-lg font-bold text-slate-900">Dr. Sunesh Malik</h4>
+                                <p class="text-xs font-semibold text-emerald-600">Associate Professor & HOD (IT Department)</p>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light pt-1">
+                                    Coordinates corporate and industry-sponsored scholarships (such as Optum Scholarship) and departmental scholarship allocations for IT & CS students.
+                                </p>
+                                <div class="pt-2 flex flex-wrap gap-2 text-xs font-medium text-slate-700">
+                                    <a href="mailto:suneshmalik@msit.in" class="inline-flex items-center gap-1 px-3 py-1 bg-white border border-slate-200 rounded-lg hover:text-emerald-600 hover:border-emerald-300 transition-colors">
+                                        ✉️ suneshmalik@msit.in
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SC/ST & Social Welfare Cell Convener -->
+                    <div class="p-6 bg-slate-50/80 rounded-3xl border border-slate-200 hover:border-purple-300 hover:bg-white hover:shadow-md transition-all">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-purple-100 border border-purple-200 flex items-center justify-center shrink-0 text-purple-700 font-extrabold text-lg">
+                                NK
+                            </div>
+                            <div class="space-y-1">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-purple-100 text-purple-800">
+                                    SC/ST Welfare Cell Convener
+                                </span>
+                                <h4 class="text-lg font-bold text-slate-900">Prof. Naresh Kumar</h4>
+                                <p class="text-xs font-semibold text-purple-600">Professor & Social Welfare Convener</p>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light pt-1">
+                                    Handles Post-Matric SC/ST/OBC category scholarship verification, social welfare grants, and state welfare portal approvals.
+                                </p>
+                                <div class="pt-2 flex flex-wrap gap-2 text-xs font-medium text-slate-700">
+                                    <a href="mailto:nareshkumar@msit.in" class="inline-flex items-center gap-1 px-3 py-1 bg-white border border-slate-200 rounded-lg hover:text-purple-600 hover:border-purple-300 transition-colors">
+                                        ✉️ nareshkumar@msit.in
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nodal Administrative Desk -->
+                    <div class="p-6 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-card">
+                        <div class="space-y-2">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-400/30">
+                                Institutional Nodal Desk
+                            </span>
+                            <h4 class="text-lg font-bold">MSIT Scholarship & Verification Desk</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed font-light">
+                                For physical document verification, portal approval stamps, e-District Delhi / NSP queries, and official receipt collection.
+                            </p>
+                            <div class="pt-3 space-y-1.5 text-xs text-slate-300 font-medium">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-blue-400">📍</span> Ground Floor, Main Academic Building, MSIT
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-blue-400">📞</span> Office Landline: 011-45037193 / 011-25552556
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-blue-400">✉️</span> Desk Email: director@msit.in
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 5: DOCUMENT DOWNLOADS -->
             <div class="mt-8 p-6 bg-blue-50/20 border border-blue-100 rounded-3xl">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
@@ -370,9 +482,10 @@ export const admissionData = {
             { label: "Beneficiaries", value: "400+" }
         ],
         bulletPoints: [
-            { label: "Merit Scholarships", detail: "Click here to learn more about merit scholarships. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "EWS Financial Aid", detail: "Click here to learn more about ews financial aid. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Government Schemes (NSP)", detail: "Click here to learn more about government schemes (nsp). This section provides comprehensive information and resources tailored to this topic." }
+            { label: "Convener: Dr. Puneet Azad", detail: "Dr. Puneet Azad (Dean Academics & Associate Professor, ECE) heads the MSIT Scholarship & Financial Aid Committee." },
+            { label: "Merit Scholarships & MCM", detail: "Delhi State Government MCM Linked Financial Assistance Scheme." },
+            { label: "EWS Financial Aid & DSW", detail: "GGSIPU Economically Weaker Section Financial Assistance Scheme." },
+            { label: "AICTE Pragati & Saksham", detail: "AICTE National Portal Scholarships for Girls and Specially-Abled Students." }
         ]
     },
     "mandatory-disclosures": {
@@ -465,6 +578,55 @@ export const admissionData = {
                     </div>
                 </div>
 
+                <!-- FINANCIAL AUDIT REPORTS & BALANCE SHEETS CARD -->
+                <div class="p-6 md:p-8 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                        Institutional Financial Audit Reports & Balance Sheets
+                    </h3>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed font-light">
+                        Surajmal Memorial Education Society and MSIT publish annual audited financial statements, balance sheets, and chartered accountant audit reports in absolute compliance with regulatory mandates.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- 2023-24 -->
+                        <a href="https://www.msit.in/media/notices/mandatory-disclosure_PSXfseX.pdf" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-50 hover:bg-purple-50/60 border border-slate-200 hover:border-purple-200 transition-all flex flex-col justify-between group">
+                            <div>
+                                <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[10px] font-extrabold rounded-md uppercase tracking-wider">FY 2023–24</span>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-purple-700 mt-2">Audited Balance Sheet</h4>
+                                <p class="text-xs text-slate-500 mt-1 font-light">As at 31st March 2024</p>
+                            </div>
+                            <div class="mt-4 flex items-center text-xs font-bold text-purple-700 group-hover:translate-x-1 transition-transform">
+                                Download PDF &rarr;
+                            </div>
+                        </a>
+
+                        <!-- 2022-23 -->
+                        <a href="https://www.msit.in/media/uploads/2023/11/16/nba_2023_all_depts.pdf" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-50 hover:bg-purple-50/60 border border-slate-200 hover:border-purple-200 transition-all flex flex-col justify-between group">
+                            <div>
+                                <span class="px-2 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-extrabold rounded-md uppercase tracking-wider">FY 2022–23</span>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-purple-700 mt-2">Audited Financial Statement</h4>
+                                <p class="text-xs text-slate-500 mt-1 font-light">As at 31st March 2023</p>
+                            </div>
+                            <div class="mt-4 flex items-center text-xs font-bold text-purple-700 group-hover:translate-x-1 transition-transform">
+                                Download PDF &rarr;
+                            </div>
+                        </a>
+
+                        <!-- 2021-22 & Archives -->
+                        <a href="https://www.msit.in/media/notices/mandatory-disclosure_PSXfseX.pdf" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-50 hover:bg-purple-50/60 border border-slate-200 hover:border-purple-200 transition-all flex flex-col justify-between group">
+                            <div>
+                                <span class="px-2 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-extrabold rounded-md uppercase tracking-wider">FY 2021–22 & Archives</span>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-purple-700 mt-2">Audit Report Archive</h4>
+                                <p class="text-xs text-slate-500 mt-1 font-light">Historical Statements & Filings</p>
+                            </div>
+                            <div class="mt-4 flex items-center text-xs font-bold text-purple-700 group-hover:translate-x-1 transition-transform">
+                                Download PDF &rarr;
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- FULL DISCLOSURE CARD -->
                 <div class="p-8 rounded-3xl border border-slate-200/60 bg-slate-900 text-white shadow-card relative overflow-hidden group">
                     <div class="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>
@@ -484,9 +646,10 @@ export const admissionData = {
             { label: "NBA Accredited", value: "All UG" }
         ],
         bulletPoints: [
-            { label: "NBA Certificates (All Depts)", detail: "Click here to learn more about nba certificates (all depts). This section provides comprehensive information and resources tailored to this topic." },
-            { label: "NAAC Grade A Document", detail: "Click here to learn more about naac grade a document. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Full Disclosure PDF", detail: "Click here to learn more about full disclosure pdf. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "NBA Certificates (All Depts)", detail: "Official NBA Accreditation documents for CSE, IT, ECE, and EEE programs." },
+            { label: "NAAC Grade A Document", detail: "Official NAAC Grade 'A' institutional accreditation certificate." },
+            { label: "Financial Audit Reports & Balance Sheets", detail: "Annual audited financial statements, balance sheets, and chartered accountant audit reports." },
+            { label: "Full Disclosure PDF", detail: "Comprehensive AICTE Mandatory Disclosure filing." }
         ]
     }
 };
