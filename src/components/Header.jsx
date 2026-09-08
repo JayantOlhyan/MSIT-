@@ -129,9 +129,9 @@ const Header = () => {
             { name: "Events & Festivals", url: "/events" },
             { name: "Newsletters & Magazines", url: "/newsletters-magazines" },
             { name: "Anti-Ragging", url: "/antiragging" },
-            { name: "Internal Complaint Committee", url: "/posh" },
             { name: "Disaster Management", url: "/disaster" },
-            { name: "Discipline Committee", url: "/discipline" }
+            { name: "Discipline Committee", url: "/discipline" },
+            { name: "Student Grievance Cell", url: "/student-grievance" }
         ],
         placements: [
             { name: "Careers & Placements", url: "/placements" },
@@ -143,7 +143,7 @@ const Header = () => {
             { name: "Moodle (LMS)", url: "http://moodle.msit.in/", external: true },
             { name: "NISP (Startup & Innovation)", url: "http://nisp.msit.in/", external: true },
             { name: "NPTEL Videos", url: "http://nptel.ac.in/", external: true },
-            { name: "Grievance Portal", url: "http://grievance.msit.in", external: true },
+            { name: "Student Grievance Cell (SGRC)", url: "/student-grievance" },
             { name: "Higher Studies Form", url: "https://docs.google.com/forms/d/e/1FAIpQLSfQa8YcM9Pq4kN10V8TJ_KDw8cdGphCi6b6QNw66bWfm7RkvQ/viewform?usp=sf_link", external: true },
             { name: "Attendance Rules", url: "/attendance" }
         ]
