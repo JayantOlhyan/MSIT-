@@ -13,6 +13,8 @@ import SocietyDetailView from '../components/SocietyDetailView';
 import SocietiesHubView from '../components/SocietiesHubView';
 import { societiesData } from '../data/societiesData';
 
+import DepartmentLabsSection from '../components/DepartmentLabsSection';
+
 const DynamicPage = () => {
     const { slug } = useParams();
     const pageData = pagesData[slug];
@@ -178,7 +180,16 @@ const DynamicPage = () => {
 
                         {/* Main Typography Area */}
                         <div className="w-full lg:w-2/3 order-2 lg:order-1">
-                            {slug === 'online-fee' ? (
+                            {isDepartment ? (
+                                <div>
+                                    <div 
+                                        className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
+                                        dangerouslySetInnerHTML={{ __html: pageData.content }}
+                                        onClick={handleContentClick}
+                                    ></div>
+                                    <DepartmentLabsSection deptKey={slug === 'applied-sciences' ? 'as' : slug} />
+                                </div>
+                            ) : slug === 'online-fee' ? (
                                 <FeePaymentPortal activeTab={activeFeeTab} setActiveTab={setActiveFeeTab} />
                             ) : slug === 'events' ? (
                                 <EventsPortal activeTab={activeEventTab} setActiveTab={setActiveEventTab} />
