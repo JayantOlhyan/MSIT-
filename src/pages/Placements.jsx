@@ -39,6 +39,11 @@ const Placements = () => {
         };
     };
 
+    const placementDirectors = [
+        { nameQuery: "Harish Singh Rawat", committeeRole: "Director – Training & Placement (T&P)", branch: "Overall Head - T&P Department" },
+        { nameQuery: "Mandeep Singh", committeeRole: "Director (Placements)", branch: "Corporate Relations & Placement Director" }
+    ];
+
     const committeeMembers = [
         { nameQuery: "Meena Rao", committeeRole: "Convener", branch: "ECE" },
         { nameQuery: "Kavita Sheoran", committeeRole: "Co-convener", branch: "CSE" },
@@ -249,7 +254,50 @@ const Placements = () => {
                             Placement Committee MSIT has been formed with a strong emphasis and aim to achieve the target of 100% placements of all the interested and eligible students. The Committee facilitates the students and coordinates during campus drives.
                         </p>
 
+                        {/* Directorate Leadership */}
+                        <div className="mb-10">
+                            <h3 className="text-xs font-black uppercase tracking-widest text-blue-600 mb-4 flex items-center gap-2">
+                                <Star className="w-4 h-4 fill-blue-600 text-blue-600" /> Training & Placement Directorate Leadership
+                            </h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {placementDirectors.map((director, i) => {
+                                    const details = getFacultyDetails(director.nameQuery);
+                                    return (
+                                        <div 
+                                            key={i} 
+                                            onClick={() => setSelectedMember(details)}
+                                            className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-6 border border-slate-700 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+                                        >
+                                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
+                                            <div className="flex items-center gap-5 relative z-10">
+                                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-md shrink-0">
+                                                    <img 
+                                                        src={details.img} 
+                                                        alt={details.name} 
+                                                        className="w-full h-full object-cover" 
+                                                        onError={(e) => {
+                                                            e.currentTarget.onerror = null;
+                                                            e.currentTarget.src = '/faculty/default-avatar.svg';
+                                                        }}
+                                                    />
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <span className="inline-block px-2.5 py-0.5 bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-wider rounded border border-blue-400/30 mb-1.5">{director.branch}</span>
+                                                    <h3 className="text-lg font-extrabold text-white group-hover:text-blue-300 transition-colors truncate">{details.name}</h3>
+                                                    <p className="text-slate-300 text-xs font-medium mt-0.5">{director.committeeRole}</p>
+                                                    <div className="mt-3 flex items-center text-xs text-blue-400 font-semibold group-hover:translate-x-1 transition-transform">
+                                                        View Profile & Details &rarr;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
                         {/* Committee Conveners */}
+                        <h3 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">Committee Conveners</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                             {committeeMembers.map((member, i) => {
                                 const details = getFacultyDetails(member.nameQuery);
