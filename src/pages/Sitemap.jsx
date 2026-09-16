@@ -56,7 +56,12 @@ const Sitemap = () => {
             icon: <Users className="w-5 h-5 text-purple-600" />,
             links: [
                 { label: "Student Societies & Clubs", path: "/society" },
+                { label: "GeekRoom MSIT", path: "/society-geekroom" },
                 { label: "IEEE Student Branch", path: "/society-ieee" },
+                { label: "MSIT NDLI Club", path: "/society-ndli" },
+                { label: "eCell & Incubation Cell", path: "/society-ecell" },
+                { label: "Unnat Bharat Abhiyan (UBA)", path: "/society-uba" },
+                { label: "SPARK Research Hub", path: "/society-spark" },
                 { label: "Events & Festivals", path: "/events" },
                 { label: "Alumni Network", path: "/alumni-network" },
                 { label: "Campus Virtual Tour", path: "/virtual-tour" },
