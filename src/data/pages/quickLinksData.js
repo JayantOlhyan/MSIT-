@@ -721,5 +721,86 @@ export const quickLinksData = {
             { label: "Official Website", url: "https://geekroom.co.in" },
             { label: "Instagram", url: "https://www.instagram.com/geekroom_msit/" }
         ]
+    },
+    "society-ecell": {
+        title: "eCell & Incubation Cell MSIT",
+        subtitle: "Fostering innovation, student startups, and entrepreneurial leadership at MSIT.",
+        seo_description: "Explore eCell and Incubation Cell at MSIT. Learn about campus startups, incubator facilities in Lab 218, pitch competitions, and startup mentorship.",
+        category: "Student Societies",
+        heroImage: "/campus/ecell-noticeboard-entrance.webp",
+        heroImageAlt: "eCell MSIT noticeboard and incubation cell entrance",
+        content: `
+            <div class="space-y-12">
+                <section>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Established in 2014, <strong>eCell & Incubation Cell MSIT</strong> is the premier entrepreneurial hub at Maharaja Surajmal Institute of Technology, operating under the National Innovation and Startup Policy (NISP) framework.
+                    </p>
+                </section>
+            </div>
+        `,
+        stats: [
+            { label: "Established", value: "2014" },
+            { label: "MoU Partners", value: "20+" }
+        ],
+        bulletPoints: [
+            "Startup Incubation (Lab 218)",
+            "Envisage Entrepreneurship Fest",
+            "Hult Prize MSIT Chapter",
+            { label: "NISP Portal", url: "https://nisp.msit.in" }
+        ]
+    },
+    "society-uba": {
+        title: "Unnat Bharat Abhiyan (UBA) Cell MSIT",
+        subtitle: "Transforming Rural India Through Knowledge and Innovation.",
+        seo_description: "Learn about Unnat Bharat Abhiyan Cell at MSIT. Discover social initiatives, village development plans, and community outreach across adopted villages.",
+        category: "Student Societies",
+        heroImage: "/campus/student-gathering-courtyard.webp",
+        heroImageAlt: "UBA MSIT student volunteers gathered in campus courtyard",
+        content: `
+            <div class="space-y-12">
+                <section>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        The <strong>Unnat Bharat Abhiyan (UBA) Cell</strong> at MSIT is a flagship initiative under the Ministry of Education, connecting higher education with rural community development across 5 adopted villages.
+                    </p>
+                </section>
+            </div>
+        `,
+        stats: [
+            { label: "Established", value: "2018" },
+            { label: "Adopted Villages", value: "5" }
+        ],
+        bulletPoints: [
+            "Village Baseline Surveys",
+            "Rural Technical Interventions",
+            "Gram Sabha Engagement",
+            { label: "UBA National Portal", url: "https://unnatbharatabhiyan.gov.in" }
+        ]
+    },
+    "society-spark": {
+        title: "SPARK Research Hub MSIT",
+        subtitle: "Student Platform for Advancement, Research & Knowledge.",
+        seo_description: "Discover SPARK, the student research and think tank hub at MSIT. Learn about research mentorship, IEEE and Scopus paper publishing, and grant guidance.",
+        category: "Student Societies",
+        heroImage: "/campus-lab.webp",
+        heroImageAlt: "Students working on research and engineering experiments in laboratory",
+        content: `
+            <div class="space-y-12">
+                <section>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Founded in 2025, <strong>SPARK (Student Platform for Advancement, Research & Knowledge)</strong> is MSIT's dedicated research think tank promoting student paper publishing, grant writing, and academic innovation.
+                    </p>
+                </section>
+            </div>
+        `,
+        stats: [
+            { label: "Established", value: "2025" },
+            { label: "Indexed Papers", value: "30+" }
+        ],
+        bulletPoints: [
+            "Research Mentorship & Labs",
+            "LaTeX & Paper Writing Workshops",
+            "Scopus & IEEE Indexing",
+            "Research Travel Grants"
+        ]
     }
 };
