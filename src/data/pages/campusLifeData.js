@@ -32,10 +32,11 @@ export const campusLifeData = {
                             <h4 class="font-bold text-slate-900 mb-2">E-yantra (Robotics)</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">For the hardware enthusiasts. Building autonomous rovers, drones, and competing in national robotics challenges.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
-                            <h4 class="font-bold text-slate-900 mb-2">NISP & Startup Cell</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">Fostering an ecosystem for student-led startups, innovation policy, and entrepreneurial mentorship.</p>
-                        </div>
+                        <a href="/society-ecell" class="block p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow group">
+                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">eCell & Incubation Cell</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Fostering an ecosystem for student-led startups, incubation in Lab 218, and venture capital mentorship.</p>
+                            <div class="mt-4 text-xs font-semibold text-amber-600 flex items-center group-hover:translate-x-1 transition-transform">Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7"></path></svg></div>
+                        </a>
                         <a href="/society-geekroom" class="block p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow group">
                             <h4 class="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">GeekRoom MSIT</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">The founding chapter of one of India's largest student-led tech communities, bringing together developers through hackathons and workshops.</p>
@@ -74,19 +75,25 @@ export const campusLifeData = {
                 <!-- Social & Academic -->
                 <section>
                     <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-8">Social Responsibility & Academic Knowledge</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         <a href="/society-ndli" class="block p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow group">
                             <h4 class="font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">NDLI Club</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Promoting digital literacy, lifelong learning, and central platform for MSIT event registration.</p>
                             <div class="mt-4 text-xs font-semibold text-emerald-600 flex items-center group-hover:translate-x-1 transition-transform">Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7"></path></svg></div>
                         </a>
+                        <a href="/society-uba" class="block p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow group">
+                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">UBA MSIT</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Unnat Bharat Abhiyan cell driving rural surveys, sustainable technology, and outreach across 5 adopted villages.</p>
+                            <div class="mt-4 text-xs font-semibold text-emerald-600 flex items-center group-hover:translate-x-1 transition-transform">Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7"></path></svg></div>
+                        </a>
+                        <a href="/society-spark" class="block p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow group">
+                            <h4 class="font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">SPARK Hub</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Student Platform for Advancement, Research & Knowledge. Student think tank promoting IEEE/Scopus publications.</p>
+                            <div class="mt-4 text-xs font-semibold text-indigo-600 flex items-center group-hover:translate-x-1 transition-transform">Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7"></path></svg></div>
+                        </a>
                         <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
                             <h4 class="font-bold text-slate-900 mb-2">NSS & Prakriti</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">Dedicated to community service and environmental sustainability. Organizing blood donation camps and eco-drives.</p>
-                        </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-card-hover transition-shadow">
-                            <h4 class="font-bold text-slate-900 mb-2">SPARK</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">The Society for Promotion of Academic and Research Knowledge. Bridging the gap between syllabus and industry research.</p>
                         </div>
                     </div>
                 </section>
