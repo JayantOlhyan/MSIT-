@@ -48,16 +48,16 @@ const AccessibilityModal = () => {
             />
 
             {/* Modal Content */}
-            <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden animate-in zoom-in-95 slide-in-from-bottom-5 duration-500">
+            <div className="relative bg-white dark:bg-[#131c31] border border-slate-100 dark:border-white/10 rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden animate-in zoom-in-95 slide-in-from-bottom-5 duration-500">
                 {/* Header */}
-                <div className="p-6 border-b border-slate-100 flex items-center justify-between">
+                <div className="p-6 border-b border-slate-100 dark:border-white/10 flex items-center justify-between">
                     <div>
-                        <h2 id="acc-title" className="text-xl font-black text-slate-900 tracking-tight">Accessibility Settings</h2>
-                        <p className="text-sm text-slate-500 font-medium">Customize your browsing experience</p>
+                        <h2 id="acc-title" className="text-xl font-black text-slate-900 dark:text-white tracking-tight">Accessibility Settings</h2>
+                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Customize your browsing experience</p>
                     </div>
                     <button 
                         onClick={() => setIsModalOpen(false)}
-                        className="p-2 rounded-xl hover:bg-slate-100 text-slate-400 transition-colors"
+                        className="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 dark:text-slate-300 transition-colors cursor-pointer"
                         aria-label="Close settings"
                     >
                         <X className="w-6 h-6" />
@@ -72,21 +72,21 @@ const AccessibilityModal = () => {
                             <div 
                                 key={item.key}
                                 className={`p-4 rounded-2xl border transition-all duration-300 flex items-start justify-between gap-4 ${
-                                    settings[item.key] ? 'bg-primary/5 border-primary/20 ring-1 ring-primary/10' : 'bg-surface border-slate-100'
+                                    settings[item.key] ? 'bg-primary/5 dark:bg-blue-500/10 border-primary/30 dark:border-blue-500/30 ring-1 ring-primary/20' : 'bg-surface dark:bg-[#182238] border-slate-100 dark:border-white/10'
                                 }`}
                             >
                                 <div className="flex gap-4">
-                                    <div className={`p-2 rounded-xl transition-colors ${settings[item.key] ? 'bg-primary text-white' : 'bg-slate-200 text-muted'}`}>
+                                    <div className={`p-2 rounded-xl transition-colors ${settings[item.key] ? 'bg-primary dark:bg-blue-600 text-white' : 'bg-slate-200 dark:bg-slate-700 text-muted dark:text-slate-300'}`}>
                                         <item.icon className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <h3 className={`text-sm font-bold tracking-tight mb-0.5 ${settings[item.key] ? 'text-primary' : 'text-title'}`}>{item.label}</h3>
-                                        <p className="text-xs text-muted font-medium leading-relaxed sm:max-w-xs">{item.desc}</p>
+                                        <h3 className={`text-sm font-bold tracking-tight mb-0.5 ${settings[item.key] ? 'text-primary dark:text-blue-400' : 'text-title dark:text-white'}`}>{item.label}</h3>
+                                        <p className="text-xs text-muted dark:text-slate-400 font-medium leading-relaxed sm:max-w-xs">{item.desc}</p>
                                     </div>
                                 </div>
                                 <button 
                                     onClick={() => toggleSetting(item.key)}
-                                    className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 focus:outline-none ${settings[item.key] ? 'bg-primary' : 'bg-slate-200'}`}
+                                    className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 focus:outline-none ${settings[item.key] ? 'bg-primary dark:bg-blue-600' : 'bg-slate-200 dark:bg-slate-700'}`}
                                     aria-pressed={settings[item.key]}
                                 >
                                     <span 
@@ -98,12 +98,12 @@ const AccessibilityModal = () => {
                     </div>
 
                     {/* Font Scaling Slider */}
-                    <div className="p-4 rounded-2xl bg-surface border border-slate-100">
+                    <div className="p-4 rounded-2xl bg-surface dark:bg-[#182238] border border-slate-100 dark:border-white/10">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 rounded-xl bg-slate-200 text-muted">
+                            <div className="p-2 rounded-xl bg-slate-200 dark:bg-slate-700 text-muted dark:text-slate-300">
                                 <Type className="w-5 h-5" />
                             </div>
-                            <h3 className="text-sm font-bold text-title tracking-tight">Text Scaling</h3>
+                            <h3 className="text-sm font-bold text-title dark:text-white tracking-tight">Text Scaling</h3>
                         </div>
                         <div className="px-2">
                             <input 
@@ -112,21 +112,21 @@ const AccessibilityModal = () => {
                                 max="150" 
                                 value={settings.textScaling}
                                 onChange={(e) => setTextScaling(parseInt(e.target.value))}
-                                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary mb-2"
+                                className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary mb-2"
                             />
                             <div className="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-400">
                                 <span>Default (100%)</span>
-                                <span className="text-primary">Current: {settings.textScaling}%</span>
+                                <span className="text-primary dark:text-blue-400">Current: {settings.textScaling}%</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Footer */}
-                <div className="p-6 bg-surface border-t border-slate-100 flex justify-end gap-3">
+                <div className="p-6 bg-surface dark:bg-[#0e1629] border-t border-slate-100 dark:border-white/10 flex justify-end gap-3">
                     <button 
                         onClick={() => setIsModalOpen(false)}
-                        className="px-6 py-2.5 bg-title text-white text-xs font-black uppercase tracking-widest rounded-xl shadow-lg hover:bg-body transition-all active:scale-95 flex items-center gap-2"
+                        className="px-6 py-2.5 bg-title dark:bg-primary dark:hover:bg-blue-600 text-white text-xs font-black uppercase tracking-widest rounded-xl shadow-lg hover:bg-body transition-all active:scale-95 flex items-center gap-2 cursor-pointer"
                     >
                         Save Preferences <Check className="w-3.5 h-3.5" />
                     </button>
