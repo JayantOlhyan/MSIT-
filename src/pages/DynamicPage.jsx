@@ -79,7 +79,7 @@ const DynamicPage = () => {
     // Dedicated Redesigned View for the Student Societies Hub Directory (/society)
     if (slug === 'society') {
         return (
-            <main className="min-h-screen bg-slate-50">
+            <main className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] transition-colors duration-300">
                 <SEO 
                     title="Student Societies & Chapters" 
                     description="Explore 20+ vibrant technical, cultural, and academic student societies at Maharaja Surajmal Institute of Technology." 
@@ -108,7 +108,7 @@ const DynamicPage = () => {
     if (slug === 'newsletters-magazines') {
         if (!pageData) return <NotFound />;
         return (
-            <main className="min-h-screen bg-white">
+            <main className="min-h-screen bg-white dark:bg-[#0a0f1d] transition-colors duration-300">
                 <SEO 
                     title={pageData.title} 
                     description={pageData.seo_description || pageData.subtitle} 
@@ -122,7 +122,7 @@ const DynamicPage = () => {
                         { label: pageData.title }
                     ]}
                 />
-                <section className="bg-slate-50 border-b border-slate-100">
+                <section className="bg-slate-50 dark:bg-[#0a0f1d] border-b border-slate-100 dark:border-white/10 transition-colors">
                     <NewslettersMagazines />
                 </section>
             </main>
@@ -147,7 +147,7 @@ const DynamicPage = () => {
     } : null;
 
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-white dark:bg-[#0a0f1d] transition-colors duration-300">
             <SEO 
                 title={pageData.title} 
                 description={pageData.seo_description || pageData.subtitle} 
@@ -174,7 +174,7 @@ const DynamicPage = () => {
             />
 
             {/* MAIN CONTENT LAYOUT */}
-            <section className="py-24 bg-white relative">
+            <section className="py-24 bg-white dark:bg-[#0a0f1d] relative transition-colors">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
 
@@ -183,7 +183,7 @@ const DynamicPage = () => {
                             {isDepartment ? (
                                 <div>
                                     <div 
-                                        className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
+                                        className="prose prose-lg prose-slate dark:prose-invert max-w-none font-light leading-loose text-body dark:text-slate-300" 
                                         dangerouslySetInnerHTML={{ __html: pageData.content }}
                                         onClick={handleContentClick}
                                     ></div>
@@ -197,7 +197,7 @@ const DynamicPage = () => {
                                 <pageData.component />
                             ) : (
                                 <div 
-                                    className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
+                                    className="prose prose-lg prose-slate dark:prose-invert max-w-none font-light leading-loose text-body dark:text-slate-300" 
                                     dangerouslySetInnerHTML={{ __html: pageData.content }}
                                     onClick={handleContentClick}
                                 ></div>
@@ -212,9 +212,9 @@ const DynamicPage = () => {
                                 {pageData.stats && pageData.stats.length > 0 && (
                                     <div className="grid grid-cols-2 gap-4">
                                         {pageData.stats.map((stat, i) => (
-                                            <div key={i} className="bg-surface p-6 rounded-2xl border border-slate-100 shadow-card">
-                                                <div className="text-2xl font-bold text-title mb-1">{stat.value}</div>
-                                                <div className="text-xs font-bold uppercase tracking-widest text-muted">{stat.label}</div>
+                                            <div key={i} className="bg-surface dark:bg-[#131c31] p-6 rounded-2xl border border-slate-100 dark:border-white/10 shadow-card">
+                                                <div className="text-2xl font-bold text-title dark:text-white mb-1">{stat.value}</div>
+                                                <div className="text-xs font-bold uppercase tracking-widest text-muted dark:text-slate-400">{stat.label}</div>
                                             </div>
                                         ))}
                                     </div>
@@ -222,7 +222,7 @@ const DynamicPage = () => {
 
                                 {/* Key Highlights */}
                                 {pageData.bulletPoints && pageData.bulletPoints.length > 0 && (
-                                    <div className="bg-slate-900 p-8 rounded-2xl text-white shadow-card">
+                                    <div className="bg-slate-900 dark:bg-[#131c31] p-8 rounded-2xl text-white shadow-card border border-transparent dark:border-white/10">
                                         <h4 className="text-lg font-semibold mb-6 flex items-center">Key Highlights</h4>
                                         <ul className="space-y-4">
                                             {pageData.bulletPoints.map((point, i) => {
@@ -246,7 +246,7 @@ const DynamicPage = () => {
 
                                                 return (
                                                     <li key={i} className="flex items-start text-slate-300 text-sm">
-                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-all duration-300 ${isActive ? 'text-accent' : 'text-slate-500'} ${activeHighlightIndex === i && detailText ? 'rotate-90' : ''}`} />
+                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-all duration-300 ${isActive ? 'text-accent' : 'text-slate-500 dark:text-slate-400'} ${activeHighlightIndex === i && detailText ? 'rotate-90' : ''}`} />
                                                         {isLink ? (
                                                             point.url.startsWith('http') ? (
                                                                 <a href={point.url} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
@@ -299,10 +299,10 @@ const DynamicPage = () => {
 
                                 {/* Quick CTA */}
                                 {slug !== 'contact' && (
-                                    <Link to="/contact" className="block p-8 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white transition-colors cursor-pointer group">
-                                        <h4 className="text-lg font-semibold text-title mb-2 group-hover:text-primary transition-colors">Questions?</h4>
-                                        <p className="text-sm text-muted font-light mb-4">Contact the MSIT administrative desk directly.</p>
-                                        <div className="text-primary font-medium text-sm flex items-center group-hover:translate-x-2 transition-transform">
+                                    <Link to="/contact" className="block p-8 rounded-2xl border-2 border-slate-100 dark:border-white/10 hover:border-blue-100 dark:hover:border-blue-500/30 bg-white dark:bg-[#131c31] transition-colors cursor-pointer group">
+                                        <h4 className="text-lg font-semibold text-title dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Questions?</h4>
+                                        <p className="text-sm text-muted dark:text-slate-400 font-light mb-4">Contact the MSIT administrative desk directly.</p>
+                                        <div className="text-primary dark:text-blue-400 font-medium text-sm flex items-center group-hover:translate-x-2 transition-transform">
                                             Contact Us <ArrowRight className="w-4 h-4 ml-1" />
                                         </div>
                                     </Link>
@@ -319,22 +319,22 @@ const DynamicPage = () => {
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 animate-fade-in">
                     {/* Backdrop */}
                     <div 
-                        className="absolute inset-0 bg-slate-950/40 backdrop-blur-md animate-backdrop-fade"
+                        className="absolute inset-0 bg-slate-950/70 backdrop-blur-md animate-backdrop-fade"
                         onClick={() => setSelectedMember(null)}
                     ></div>
 
                     {/* Modal Card */}
-                    <div className="relative bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
+                    <div className="relative bg-white dark:bg-[#131c31] w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 dark:border-white/10 animate-scale-in">
                         {/* Close button */}
                         <button 
                             onClick={() => setSelectedMember(null)}
-                            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 hover:text-slate-900 transition-colors z-20"
+                            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white transition-colors z-20"
                         >
                             <X className="w-5 h-5" />
                         </button>
 
                         {/* Top banner / image */}
-                        <div className="bg-slate-900 text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
+                        <div className="bg-slate-900 dark:bg-[#070b16] text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
                             <div className="flex gap-4 sm:gap-6 items-center relative z-10">
                                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
@@ -349,37 +349,37 @@ const DynamicPage = () => {
                         </div>
 
                         {/* Details body */}
-                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]">
+                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc] dark:bg-[#0a0f1d]">
                             {selectedMember.bio && (
                                 <div>
                                     <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
                                         <FileText className="w-4 h-4 text-blue-500" /> Professional Bio
                                     </h4>
-                                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-semibold">
+                                    <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed font-semibold">
                                         {selectedMember.bio}
                                     </p>
                                 </div>
                             )}
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <div className="bg-white dark:bg-[#131c31] p-3.5 sm:p-4 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm">
                                     <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Qualification</div>
-                                    <div className="text-xs font-extrabold text-slate-800">{selectedMember.qual || selectedMember.qualifications || "N/A"}</div>
+                                    <div className="text-xs font-extrabold text-slate-800 dark:text-white">{selectedMember.qual || selectedMember.qualifications || "N/A"}</div>
                                 </div>
-                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <div className="bg-white dark:bg-[#131c31] p-3.5 sm:p-4 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm">
                                     <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Experience / Status</div>
-                                    <div className="text-xs font-extrabold text-slate-800">{selectedMember.experience} Years</div>
+                                    <div className="text-xs font-extrabold text-slate-800 dark:text-white">{selectedMember.experience} Years</div>
                                 </div>
                             </div>
 
                             {selectedMember.goodAt && selectedMember.goodAt.length > 0 && (
                                 <div>
-                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-1.5 border-b border-slate-200 pb-2">
+                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-1.5 border-b border-slate-200 dark:border-white/10 pb-2">
                                         <Star className="w-4 h-4 text-emerald-500 fill-emerald-500" /> Key Focus Areas
                                     </h4>
                                     <div className="flex flex-wrap gap-2">
                                         {selectedMember.goodAt.map((item, idx) => (
-                                            <span key={idx} className="px-2.5 py-1 bg-emerald-50 border border-emerald-100 rounded text-xs font-bold text-emerald-700">
+                                            <span key={idx} className="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-800/40 rounded text-xs font-bold text-emerald-700 dark:text-emerald-300">
                                                 {item}
                                             </span>
                                         ))}
@@ -387,11 +387,11 @@ const DynamicPage = () => {
                                 </div>
                             )}
 
-                            <div className="border-t border-slate-200 pt-6 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between">
+                            <div className="border-t border-slate-200 dark:border-white/10 pt-6 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between">
                                 <div className="flex flex-col gap-2 shrink-0">
                                     <a 
                                         href={`mailto:${selectedMember.email}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white dark:bg-[#18233c] hover:bg-slate-100 dark:hover:bg-[#202e4e] border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors truncate"
                                     >
                                         <Mail className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.email}</span>
@@ -399,7 +399,7 @@ const DynamicPage = () => {
 
                                     <a 
                                         href={`tel:${selectedMember.phone.replace(/\s+/g, '')}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white dark:bg-[#18233c] hover:bg-slate-100 dark:hover:bg-[#202e4e] border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors truncate"
                                     >
                                         <Phone className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.phone}</span>
@@ -412,7 +412,7 @@ const DynamicPage = () => {
                                             href={selectedMember.pdfLink} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="w-10 h-10 bg-slate-900 hover:bg-slate-800 text-white rounded-xl flex items-center justify-center transition-colors"
+                                            className="w-10 h-10 bg-slate-900 dark:bg-[#1e293b] hover:bg-slate-800 dark:hover:bg-[#283548] text-white rounded-xl flex items-center justify-center transition-colors"
                                             title="View Official Profile PDF"
                                         >
                                             <FileText className="w-4 h-4" />
