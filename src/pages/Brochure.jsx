@@ -67,7 +67,7 @@ const Brochure = () => {
     ];
 
     return (
-        <main className="min-h-screen bg-slate-50/50">
+        <main className="min-h-screen bg-slate-50/50 dark:bg-[#0a0f1d] transition-colors duration-300">
             <SEO 
                 title="Information Brochure" 
                 description="Download the official MSIT admission brochure for the current session and view archived older information bulletins." 
@@ -82,8 +82,8 @@ const Brochure = () => {
             <div className="max-w-4xl mx-auto px-6 py-12 space-y-8">
 
                 {/* Latest Brochure Featured Section */}
-                <div className="bg-white border-2 border-blue-600/30 rounded-3xl p-6 sm:p-8 shadow-card hover:shadow-lg transition-all relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-48 h-48 bg-blue-50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+                <div className="bg-white dark:bg-[#131c31] border-2 border-blue-600/30 dark:border-blue-500/40 rounded-3xl p-6 sm:p-8 shadow-card hover:shadow-lg transition-all relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-blue-50 dark:bg-blue-900/15 rounded-full blur-3xl -z-10 pointer-events-none"></div>
                     
                     <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
                         <div className="flex items-center gap-2">
@@ -91,38 +91,38 @@ const Brochure = () => {
                                 <Sparkles className="w-3.5 h-3.5 mr-1 animate-pulse" />
                                 Latest Release
                             </span>
-                            <span className="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full border border-slate-200">
+                            <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold rounded-full border border-slate-200 dark:border-slate-700">
                                 Session {latestBrochure.year}
                             </span>
                         </div>
-                        <span className="text-xs text-slate-500 font-medium flex items-center">
-                            <ShieldCheck className="w-4 h-4 mr-1 text-emerald-600" /> Official GGSIPU Affiliated Document
+                        <span className="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center">
+                            <ShieldCheck className="w-4 h-4 mr-1 text-emerald-600 dark:text-emerald-400" /> Official GGSIPU Affiliated Document
                         </span>
                     </div>
 
                     <div className="mb-6">
-                        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
+                        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
                             {latestBrochure.title}
                         </h2>
-                        <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
+                        <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed font-light">
                             {latestBrochure.description}
                         </p>
                     </div>
 
                     {/* Features List */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 bg-slate-50/80 p-4 rounded-2xl border border-slate-100">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 bg-slate-50/80 dark:bg-[#0c1322] p-4 rounded-2xl border border-slate-100 dark:border-slate-800/80">
                         {latestBrochure.features.map((feat, idx) => (
-                            <div key={idx} className="flex items-center text-xs sm:text-sm text-slate-700 font-medium">
-                                <BookOpen className="w-4 h-4 mr-2 text-blue-600 shrink-0" />
+                            <div key={idx} className="flex items-center text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                                <BookOpen className="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400 shrink-0" />
                                 {feat}
                             </div>
                         ))}
                     </div>
 
                     {/* Download CTA for Latest */}
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-4 border-t border-slate-100">
-                        <div className="flex items-center text-xs text-slate-500 font-medium">
-                            <FileText className="w-4 h-4 mr-1.5 text-slate-400" />
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                        <div className="flex items-center text-xs text-slate-500 dark:text-slate-400 font-medium">
+                            <FileText className="w-4 h-4 mr-1.5 text-slate-400 dark:text-slate-500" />
                             Format: PDF | High Resolution Official Copy
                         </div>
                         <a
@@ -141,18 +141,18 @@ const Brochure = () => {
                 <div className="flex flex-col items-center justify-center pt-2">
                     <button
                         onClick={() => setShowOlder(!showOlder)}
-                        className="inline-flex items-center justify-center px-6 py-3.5 bg-white hover:bg-slate-50 text-slate-800 font-bold rounded-2xl border border-slate-300 hover:border-slate-400 shadow-sm hover:shadow-md transition-all duration-300 text-sm gap-2 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                        className="inline-flex items-center justify-center px-6 py-3.5 bg-white dark:bg-[#131c31] hover:bg-slate-50 dark:hover:bg-[#18233c] text-slate-800 dark:text-white font-bold rounded-2xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 shadow-sm hover:shadow-md transition-all duration-300 text-sm gap-2 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500/20"
                         aria-expanded={showOlder}
                     >
-                        <CalendarDays className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
+                        <CalendarDays className="w-4 h-4 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform" />
                         <span>{showOlder ? "Hide Older Brochures" : "View Older Brochures"}</span>
-                        <span className="px-2 py-0.5 bg-slate-100 group-hover:bg-blue-50 text-slate-600 group-hover:text-blue-700 text-xs font-extrabold rounded-full border border-slate-200">
+                        <span className="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 group-hover:bg-blue-50 dark:group-hover:bg-blue-950/50 text-slate-600 dark:text-slate-300 group-hover:text-blue-700 dark:group-hover:text-blue-300 text-xs font-extrabold rounded-full border border-slate-200 dark:border-slate-700">
                             {olderBrochures.length} Archives
                         </span>
                         {showOlder ? (
-                            <ChevronUp className="w-4 h-4 text-slate-500 group-hover:translate-y-[-2px] transition-transform" />
+                            <ChevronUp className="w-4 h-4 text-slate-500 dark:text-slate-400 group-hover:translate-y-[-2px] transition-transform" />
                         ) : (
-                            <ChevronDown className="w-4 h-4 text-slate-500 group-hover:translate-y-[2px] transition-transform" />
+                            <ChevronDown className="w-4 h-4 text-slate-500 dark:text-slate-400 group-hover:translate-y-[2px] transition-transform" />
                         )}
                     </button>
                     <p className="text-xs text-slate-400 mt-2 font-medium">
@@ -162,37 +162,37 @@ const Brochure = () => {
 
                 {/* Older Brochures List (Toggled) */}
                 {showOlder && (
-                    <div className="bg-white border border-slate-200 rounded-3xl shadow-card overflow-hidden animate-fade-in">
-                        <div className="px-6 py-4 bg-slate-50/80 border-b border-slate-200 flex items-center justify-between">
-                            <h3 className="font-bold text-slate-800 flex items-center text-sm sm:text-base">
-                                <Clock className="w-4 h-4 mr-2 text-slate-500" />
+                    <div className="bg-white dark:bg-[#131c31] border border-slate-200 dark:border-slate-800 rounded-3xl shadow-card overflow-hidden animate-fade-in">
+                        <div className="px-6 py-4 bg-slate-50/80 dark:bg-[#0c1322] border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <h3 className="font-bold text-slate-800 dark:text-white flex items-center text-sm sm:text-base">
+                                <Clock className="w-4 h-4 mr-2 text-slate-500 dark:text-slate-400" />
                                 Archived Information Bulletins
                             </h3>
-                            <span className="text-xs text-slate-500 font-medium">Past Sessions</span>
+                            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Past Sessions</span>
                         </div>
 
-                        <div className="divide-y divide-slate-100">
+                        <div className="divide-y divide-slate-100 dark:divide-slate-800/80">
                             {olderBrochures.map((brochure, index) => (
-                                <div key={index} className="p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between hover:bg-slate-50/70 transition-colors group gap-4">
+                                <div key={index} className="p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between hover:bg-slate-50/70 dark:hover:bg-white/[0.02] transition-colors group gap-4">
                                     <div>
                                         <div className="flex items-center gap-3 mb-1">
-                                            <h4 className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                                            <h4 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                                 {brochure.year}
                                             </h4>
-                                            <span className="px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-semibold rounded-md border border-slate-200">
+                                            <span className="px-2.5 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold rounded-md border border-slate-200 dark:border-slate-700">
                                                 Archived
                                             </span>
                                         </div>
-                                        <p className="text-slate-800 font-semibold text-sm mb-1">{brochure.title}</p>
-                                        <p className="text-slate-500 font-medium text-xs">{brochure.description}</p>
+                                        <p className="text-slate-800 dark:text-slate-200 font-semibold text-sm mb-1">{brochure.title}</p>
+                                        <p className="text-slate-500 dark:text-slate-400 font-medium text-xs">{brochure.description}</p>
                                     </div>
                                     <a
                                         href={brochure.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-full sm:w-auto px-5 py-2.5 bg-white hover:bg-slate-100 text-slate-700 font-semibold rounded-xl border border-slate-300 hover:border-slate-400 flex items-center justify-center transition-all text-xs shrink-0 shadow-xs"
+                                        className="w-full sm:w-auto px-5 py-2.5 bg-white dark:bg-[#18233c] hover:bg-slate-100 dark:hover:bg-[#223255] text-slate-700 dark:text-slate-200 font-semibold rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 flex items-center justify-center transition-all text-xs shrink-0 shadow-xs"
                                     >
-                                        <Download className="w-4 h-4 mr-2 text-slate-500" />
+                                        <Download className="w-4 h-4 mr-2 text-slate-500 dark:text-slate-400" />
                                         Download PDF
                                     </a>
                                 </div>
@@ -202,8 +202,8 @@ const Brochure = () => {
                 )}
 
                 {/* Additional Note */}
-                <div className="p-6 bg-blue-50/60 border border-blue-100 rounded-2xl text-center">
-                    <p className="text-blue-900 text-xs sm:text-sm leading-relaxed">
+                <div className="p-6 bg-blue-50/60 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40 rounded-2xl text-center">
+                    <p className="text-blue-900 dark:text-blue-200 text-xs sm:text-sm leading-relaxed">
                         <strong>Note:</strong> Information bulletins contain historical guidelines, fee rules, and admission criteria approved by GGSIPU for their respective academic years. For current year admissions, please refer to the latest release above.
                     </p>
                 </div>
