@@ -33,14 +33,14 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
     return (
         <div className="w-full">
             {/* Header sub-tabs within the component (hidden when printing) */}
-            <div className="flex border-b border-slate-200 mb-8 select-none print:hidden">
+            <div className="flex border-b border-slate-200 dark:border-slate-800 mb-8 select-none print:hidden">
                 <button 
                     type="button"
                     onClick={() => setActiveTab('avensis')}
                     className={`flex-1 py-4 text-center text-sm font-semibold border-b-2 transition-all flex justify-center items-center gap-2 cursor-pointer ${
                         currentTab === 'avensis' 
-                            ? 'border-blue-600 text-blue-600' 
-                            : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                            ? 'border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400' 
+                            : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:border-slate-300 dark:hover:border-slate-700'
                     }`}
                 >
                     <Sparkles className="w-4 h-4" />
@@ -51,8 +51,8 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                     onClick={() => setActiveTab('genesis')}
                     className={`flex-1 py-4 text-center text-sm font-semibold border-b-2 transition-all flex justify-center items-center gap-2 cursor-pointer ${
                         currentTab === 'genesis' 
-                            ? 'border-blue-600 text-blue-600' 
-                            : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                            ? 'border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400' 
+                            : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:border-slate-300 dark:hover:border-slate-700'
                     }`}
                 >
                     <Users className="w-4 h-4" />
@@ -63,8 +63,8 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                     onClick={() => setActiveTab('sports')}
                     className={`flex-1 py-4 text-center text-sm font-semibold border-b-2 transition-all flex justify-center items-center gap-2 cursor-pointer ${
                         currentTab === 'sports' 
-                            ? 'border-blue-600 text-blue-600' 
-                            : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                            ? 'border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400' 
+                            : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:border-slate-300 dark:hover:border-slate-700'
                     }`}
                 >
                     <Trophy className="w-4 h-4" />
@@ -92,51 +92,51 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
 
                     {/* SUB-EVENTS IN TECH FEST */}
                     <div className="space-y-6">
-                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2">Flagship Technical Events</h4>
+                        <h4 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest border-b border-slate-100 dark:border-slate-800 pb-2">Flagship Technical Events</h4>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Event 1: National Coding Contest */}
-                            <div className="bg-slate-50 border border-slate-200/60 p-6 rounded-2xl flex flex-col justify-between hover:bg-white hover:shadow-md transition-all">
+                            <div className="bg-slate-50 dark:bg-[#131c31] border border-slate-200/60 dark:border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:bg-white dark:hover:bg-[#18233c] hover:shadow-md transition-all">
                                 <div>
-                                    <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                                    <div className="w-10 h-10 bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center mb-4">
                                         <Globe className="w-5 h-5" />
                                     </div>
-                                    <h5 className="font-bold text-slate-900 mb-2">National Coding Contest</h5>
-                                    <p className="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                                    <h5 className="font-bold text-slate-900 dark:text-white mb-2">National Coding Contest</h5>
+                                    <p className="text-xs text-slate-500 dark:text-slate-300 font-light leading-relaxed mb-4">
                                         Test your algorithmic problem-solving and speed programming skills under tight clock constraints. Compete in C++, Java, or Python.
                                     </p>
                                 </div>
-                                <span className="text-[10px] font-bold text-slate-400 mt-2">Registration opens Oct 1st</span>
+                                <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 mt-2">Registration opens Oct 1st</span>
                             </div>
 
                             {/* Event 2: HackMSIT 1.0 */}
-                            <div className="bg-slate-50 border border-slate-200/60 p-6 rounded-2xl flex flex-col justify-between hover:bg-white hover:shadow-md transition-all">
+                            <div className="bg-slate-50 dark:bg-[#131c31] border border-slate-200/60 dark:border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:bg-white dark:hover:bg-[#18233c] hover:shadow-md transition-all">
                                 <div>
-                                    <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                                    <div className="w-10 h-10 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center mb-4">
                                         <Users className="w-5 h-5" />
                                     </div>
-                                    <h5 className="font-bold text-slate-900 mb-2">HackMSIT 1.0 Hackathon</h5>
-                                    <p className="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                                    <h5 className="font-bold text-slate-900 dark:text-white mb-2">HackMSIT 1.0 Hackathon</h5>
+                                    <p className="text-xs text-slate-500 dark:text-slate-300 font-light leading-relaxed mb-4">
                                         Organized by the Microsoft Student Chapter. A 24-hour hackathon bringing developer teams to build software prototypes on open-source frameworks.
                                     </p>
                                 </div>
-                                <span className="text-[10px] font-bold text-slate-400 mt-2">Registration opens Oct 1st</span>
+                                <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 mt-2">Registration opens Oct 1st</span>
                             </div>
                         </div>
 
                         {/* ICAIA 2026 notice card */}
-                        <div className="p-6 bg-slate-50/50 rounded-2xl border border-slate-200/50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-6">
+                        <div className="p-6 bg-slate-50/50 dark:bg-[#131c31] rounded-2xl border border-slate-200/50 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-6">
                             <div>
-                                <h5 className="text-sm font-bold text-slate-800 flex items-center gap-1.5">
+                                <h5 className="text-sm font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
                                     <Award className="w-4 h-4 text-yellow-500" /> ICAIA 2026 IEEE Conference
                                 </h5>
-                                <p className="text-xs text-slate-500 font-light mt-1">MSIT hosts the 4th International Conference on Artificial Intelligence and Applications on 19–20 November 2026.</p>
+                                <p className="text-xs text-slate-500 dark:text-slate-300 font-light mt-1">MSIT hosts the 4th International Conference on Artificial Intelligence and Applications on 19–20 November 2026.</p>
                             </div>
                             <a 
                                 href="https://icaia-msit.in/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="px-4 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold rounded-lg text-xs transition-all shrink-0 cursor-pointer"
+                                className="px-4 py-2 bg-white dark:bg-[#18233c] hover:bg-slate-50 dark:hover:bg-[#202d4a] border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-bold rounded-lg text-xs transition-all shrink-0 cursor-pointer"
                             >
                                 Conference Site
                             </a>
@@ -164,20 +164,20 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/60">
-                            <span className="text-[10px] font-black text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Music</span>
-                            <h5 className="font-bold text-slate-800 mt-2.5 mb-1.5">Battle of Bands</h5>
-                            <p className="text-xs text-slate-500 font-light leading-relaxed">Rock bands from campuses across the country clash on the main stage for the top honors.</p>
+                        <div className="bg-slate-50 dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200/60 dark:border-slate-800">
+                            <span className="text-[10px] font-black text-purple-600 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/40 px-2 py-0.5 rounded">Music</span>
+                            <h5 className="font-bold text-slate-800 dark:text-white mt-2.5 mb-1.5">Battle of Bands</h5>
+                            <p className="text-xs text-slate-500 dark:text-slate-300 font-light leading-relaxed">Rock bands from campuses across the country clash on the main stage for the top honors.</p>
                         </div>
-                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/60">
-                            <span className="text-[10px] font-black text-pink-600 bg-pink-50 px-2 py-0.5 rounded">Fashion</span>
-                            <h5 className="font-bold text-slate-800 mt-2.5 mb-1.5">Glamour Walk</h5>
-                            <p className="text-xs text-slate-500 font-light leading-relaxed">The flagship fashion event exhibiting curated themes, styling, and design choreographies.</p>
+                        <div className="bg-slate-50 dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200/60 dark:border-slate-800">
+                            <span className="text-[10px] font-black text-pink-600 dark:text-pink-300 bg-pink-50 dark:bg-pink-950/40 px-2 py-0.5 rounded">Fashion</span>
+                            <h5 className="font-bold text-slate-800 dark:text-white mt-2.5 mb-1.5">Glamour Walk</h5>
+                            <p className="text-xs text-slate-500 dark:text-slate-300 font-light leading-relaxed">The flagship fashion event exhibiting curated themes, styling, and design choreographies.</p>
                         </div>
-                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/60">
-                            <span className="text-[10px] font-black text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Theatre</span>
-                            <h5 className="font-bold text-slate-800 mt-2.5 mb-1.5">Nukkad Natak</h5>
-                            <p className="text-xs text-slate-500 font-light leading-relaxed">High-energy street plays conveying crucial social messages and cultural commentaries.</p>
+                        <div className="bg-slate-50 dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200/60 dark:border-slate-800">
+                            <span className="text-[10px] font-black text-amber-600 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 px-2 py-0.5 rounded">Theatre</span>
+                            <h5 className="font-bold text-slate-800 dark:text-white mt-2.5 mb-1.5">Nukkad Natak</h5>
+                            <p className="text-xs text-slate-500 dark:text-slate-300 font-light leading-relaxed">High-energy street plays conveying crucial social messages and cultural commentaries.</p>
                         </div>
                     </div>
                 </div>
@@ -202,8 +202,8 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                     </div>
 
                     {!sportsRegistered ? (
-                        <div className="bg-slate-50/50 rounded-3xl border border-slate-200/60 p-6 sm:p-8 shadow-xs">
-                            <h4 className="text-sm font-bold text-slate-900 mb-4">Sports Registration Form</h4>
+                        <div className="bg-slate-50/50 dark:bg-[#131c31] rounded-3xl border border-slate-200/60 dark:border-slate-800 p-6 sm:p-8 shadow-xs">
+                            <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-4">Sports Registration Form</h4>
                             <form onSubmit={handleSportsSubmit} className="space-y-4">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <input 
@@ -212,7 +212,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                                         value={sportsForm.name}
                                         onChange={e => setSportsForm({...sportsForm, name: e.target.value})}
                                         placeholder="Full Name"
-                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-855 text-xs font-semibold"
+                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white dark:bg-[#0c1322] text-slate-855 dark:text-white text-xs font-semibold"
                                     />
                                     <input 
                                         type="text" 
@@ -220,7 +220,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                                         value={sportsForm.enrollmentNo}
                                         onChange={e => setSportsForm({...sportsForm, enrollmentNo: e.target.value})}
                                         placeholder="Enrollment Number (11 Digits)"
-                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-855 text-xs font-semibold"
+                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white dark:bg-[#0c1322] text-slate-855 dark:text-white text-xs font-semibold"
                                     />
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -230,12 +230,12 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                                         value={sportsForm.email}
                                         onChange={e => setSportsForm({...sportsForm, email: e.target.value})}
                                         placeholder="Email Address"
-                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-855 text-xs font-semibold"
+                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white dark:bg-[#0c1322] text-slate-855 dark:text-white text-xs font-semibold"
                                     />
                                     <select 
                                         value={sportsForm.sport}
                                         onChange={e => setSportsForm({...sportsForm, sport: e.target.value})}
-                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-855 text-xs font-semibold"
+                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white dark:bg-[#0c1322] text-slate-855 dark:text-white text-xs font-semibold"
                                     >
                                         <option value="athletics">Track & Field (100m/200m/400m)</option>
                                         <option value="basketball">Basketball</option>
@@ -253,11 +253,11 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                             </form>
                         </div>
                     ) : (
-                        <div className="bg-emerald-50 border border-emerald-100 p-6 rounded-2xl flex items-start gap-4">
-                            <CheckCircle className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                        <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-100 dark:border-emerald-900/40 p-6 rounded-2xl flex items-start gap-4">
+                            <CheckCircle className="w-6 h-6 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                             <div>
-                                <h5 className="font-bold text-emerald-800 text-sm">Sports Registration Received</h5>
-                                <p className="text-xs text-emerald-700 mt-1 leading-relaxed">
+                                <h5 className="font-bold text-emerald-800 dark:text-emerald-200 text-sm">Sports Registration Received</h5>
+                                <p className="text-xs text-emerald-700 dark:text-emerald-300 mt-1 leading-relaxed">
                                     Hey {sportsForm.name}, your application for {sportsForm.sport.toUpperCase()} has been submitted. Check-ins begin at 8:30 AM at the sports arena.
                                 </p>
                             </div>
