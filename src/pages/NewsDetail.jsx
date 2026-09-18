@@ -255,9 +255,9 @@ const NewsDetail = () => {
 
     if (!item) {
         return (
-            <main className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6 text-center">
-                <h1 className="text-4xl font-bold text-slate-900 mb-4">Post Not Found</h1>
-                <p className="text-slate-500 mb-6">The news article or event story you are looking for does not exist.</p>
+            <main className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] flex flex-col items-center justify-center p-6 text-center">
+                <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Post Not Found</h1>
+                <p className="text-slate-500 dark:text-slate-400 mb-6">The news article or event story you are looking for does not exist.</p>
                 <Link to="/" className="px-6 py-3 bg-primary text-white font-bold rounded-xl transition-all shadow-md">
                     Back to Home
                 </Link>
@@ -266,7 +266,7 @@ const NewsDetail = () => {
     }
 
     return (
-        <main className="min-h-screen bg-slate-50">
+        <main className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] transition-colors duration-300">
             <SEO 
                 title={item.title} 
                 description={item.summary} 
@@ -290,9 +290,9 @@ const NewsDetail = () => {
                     
                     {/* Main Content Area */}
                     <div className="w-full lg:w-2/3">
-                        <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm">
+                        <div className="bg-white dark:bg-[#131c31] rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-white/10 shadow-sm">
                             {/* Meta Bar */}
-                            <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-500 mb-8 border-b border-slate-100 pb-6">
+                            <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-500 dark:text-slate-400 mb-8 border-b border-slate-100 dark:border-white/10 pb-6">
                                 <span className="flex items-center gap-2">
                                     <Calendar className="w-4 h-4 text-primary" />
                                     {item.date}
@@ -302,20 +302,20 @@ const NewsDetail = () => {
                                     {item.label}
                                 </span>
                                 <div className="ml-auto flex gap-4">
-                                    <button onClick={() => window.print()} className="hover:text-primary transition-colors flex items-center gap-1.5" aria-label="Print article">
+                                    <button onClick={() => window.print()} className="hover:text-primary transition-colors flex items-center gap-1.5 cursor-pointer" aria-label="Print article">
                                         <Printer className="w-4 h-4" /> Print
                                     </button>
                                 </div>
                             </div>
 
                             {/* Heading */}
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-8">
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight mb-8">
                                 {item.title}
                             </h2>
 
                             {/* HTML Content */}
                             <article 
-                                className="prose prose-slate prose-lg max-w-none text-slate-600 leading-relaxed font-medium"
+                                className="prose prose-slate dark:prose-invert prose-lg max-w-none text-slate-600 dark:text-slate-300 leading-relaxed font-medium [&_h3]:dark:text-white [&_strong]:dark:text-white"
                                 dangerouslySetInnerHTML={{ __html: item.content }}
                             />
                         </div>
@@ -325,8 +325,8 @@ const NewsDetail = () => {
                     <div className="w-full lg:w-1/3 space-y-8">
                         {/* Attachments Section */}
                         {item.attachments && item.attachments.length > 0 && (
-                            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
-                                <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
+                            <div className="bg-white dark:bg-[#131c31] rounded-3xl p-8 border border-slate-200 dark:border-white/10 shadow-sm">
+                                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2 border-b border-slate-100 dark:border-white/10 pb-4">
                                     <FileText className="w-5 h-5 text-primary" />
                                     Official Attachments (PDFs)
                                 </h3>
@@ -338,13 +338,13 @@ const NewsDetail = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             download
-                                            className="flex items-start gap-4 p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-2xl group transition-all"
+                                            className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-[#18233c] hover:bg-blue-50/50 dark:hover:bg-blue-950/40 border border-slate-200 dark:border-white/10 rounded-2xl group transition-all"
                                         >
-                                            <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-red-600 shrink-0">
+                                            <div className="w-10 h-10 rounded-xl bg-red-100 dark:bg-red-950/50 flex items-center justify-center text-red-600 dark:text-red-400 shrink-0">
                                                 <Download className="w-5 h-5" />
                                             </div>
                                             <div className="flex-grow min-w-0">
-                                                <div className="text-sm font-semibold text-slate-800 truncate group-hover:text-primary transition-colors">{file.name}</div>
+                                                <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 truncate group-hover:text-primary transition-colors">{file.name}</div>
                                                 <div className="text-xs font-bold text-slate-400 mt-1 uppercase tracking-wider">{file.size}</div>
                                             </div>
                                         </a>
@@ -355,8 +355,8 @@ const NewsDetail = () => {
 
                         {/* Resource Links Section */}
                         {item.links && item.links.length > 0 && (
-                            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
-                                <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
+                            <div className="bg-white dark:bg-[#131c31] rounded-3xl p-8 border border-slate-200 dark:border-white/10 shadow-sm">
+                                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2 border-b border-slate-100 dark:border-white/10 pb-4">
                                     <Link2 className="w-5 h-5 text-primary" />
                                     Related Resources
                                 </h3>
@@ -368,7 +368,7 @@ const NewsDetail = () => {
                                                 href={link.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-3.5 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl group transition-all text-sm font-semibold text-slate-700 hover:text-primary"
+                                                className="flex items-center justify-between p-3.5 bg-slate-50 dark:bg-[#18233c] hover:bg-blue-50/50 dark:hover:bg-blue-950/40 border border-slate-200 dark:border-white/10 rounded-xl group transition-all text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-blue-400"
                                             >
                                                 <span>{link.name}</span>
                                                 <Link2 className="w-4 h-4 text-slate-400 group-hover:text-primary" />
@@ -377,7 +377,7 @@ const NewsDetail = () => {
                                             <Link 
                                                 key={idx}
                                                 to={link.url}
-                                                className="flex items-center justify-between p-3.5 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl group transition-all text-sm font-semibold text-slate-700 hover:text-primary"
+                                                className="flex items-center justify-between p-3.5 bg-slate-50 dark:bg-[#18233c] hover:bg-blue-50/50 dark:hover:bg-blue-950/40 border border-slate-200 dark:border-white/10 rounded-xl group transition-all text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-blue-400"
                                             >
                                                 <span>{link.name}</span>
                                                 <Link2 className="w-4 h-4 text-slate-400 group-hover:text-primary" />
@@ -389,7 +389,7 @@ const NewsDetail = () => {
                         )}
 
                         {/* Back To Home CTA */}
-                        <div className="p-8 rounded-3xl bg-slate-900 text-white shadow-sm flex flex-col justify-between h-48">
+                        <div className="p-8 rounded-3xl bg-slate-900 dark:bg-[#18233c] border border-transparent dark:border-white/10 text-white shadow-sm flex flex-col justify-between h-48">
                             <div>
                                 <h4 className="text-lg font-bold mb-2">Back to Newsroom</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed font-semibold">Want to read other college updates or look up active events?</p>
