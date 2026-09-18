@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Check, Award, ArrowRight, Play, X, Mail, Globe, ChevronDown, ChevronLeft, ChevronRight, Search, Clock,
-    Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink, Building2, Camera
+    Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink, Building2, Camera,
+    Code2, Network, Cpu, Zap, CheckCircle2
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -111,6 +112,7 @@ const CAMPUS_GALLERY = [
 const Home = () => {
     const [activeNewsTab, setActiveNewsTab] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
+    const [showAllNews, setShowAllNews] = useState(false);
     // ... rest of state
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
     const [activeStatIndex, setActiveStatIndex] = useState(0);
@@ -291,6 +293,10 @@ const Home = () => {
     }, [testimonials.length]);
 
     useEffect(() => {
+        setShowAllNews(false);
+    }, [activeNewsTab, searchQuery]);
+
+    useEffect(() => {
         const container = statsContainerRef.current;
         if (!container) return;
 
@@ -357,34 +363,78 @@ const Home = () => {
     const departments = [
         {
             name: "Computer Science & Engineering",
+            shortName: "CSE",
             code: "CSE",
-            students: 240,
-            icon: "💻",
-            desc: "Master software architecture, artificial intelligence, and scalable systems.",
+            degree: "4-Year B.Tech",
+            intake: 240,
+            shifts: "180 Morning + 60 Evening",
+            est: "2001",
+            icon: Code2,
+            theme: {
+                iconBg: "bg-blue-50 text-blue-700 border-blue-200/80 group-hover:bg-blue-600 group-hover:text-white",
+                accentBorder: "group-hover:border-blue-500/40",
+                hoverText: "group-hover:text-blue-600",
+                pill: "bg-blue-50/80 text-blue-700 border-blue-200/60"
+            },
+            desc: "Advanced engineering in AI/ML, cloud computing, distributed systems, high-performance computing, and scalable software architecture.",
+            specializations: ["AI & Machine Learning", "Cloud Systems", "Full-Stack Software"],
             accredited: true
         },
         {
             name: "Information Technology",
+            shortName: "IT",
             code: "IT",
-            students: 120,
-            icon: "🌐",
-            desc: "Focus on network security, cloud infrastructure, and data analytics.",
+            degree: "4-Year B.Tech",
+            intake: 180,
+            shifts: "120 Morning + 60 Evening",
+            est: "2001",
+            icon: Network,
+            theme: {
+                iconBg: "bg-teal-50 text-teal-700 border-teal-200/80 group-hover:bg-teal-600 group-hover:text-white",
+                accentBorder: "group-hover:border-teal-500/40",
+                hoverText: "group-hover:text-teal-600",
+                pill: "bg-teal-50/80 text-teal-700 border-teal-200/60"
+            },
+            desc: "Specialized in enterprise networking, cloud architecture, cybersecurity, applied data science, and modern web application frameworks.",
+            specializations: ["Cloud Infrastructure", "Cybersecurity", "Data Analytics"],
             accredited: true
         },
         {
             name: "Electronics & Communication",
+            shortName: "ECE",
             code: "ECE",
-            students: 120,
-            icon: "🛰️",
-            desc: "Pioneer the hardware of tomorrow with embedded systems and VLSI design.",
+            degree: "4-Year B.Tech",
+            intake: 180,
+            shifts: "120 Morning + 60 Evening",
+            est: "2001",
+            icon: Cpu,
+            theme: {
+                iconBg: "bg-indigo-50 text-indigo-700 border-indigo-200/80 group-hover:bg-indigo-600 group-hover:text-white",
+                accentBorder: "group-hover:border-indigo-500/40",
+                hoverText: "group-hover:text-indigo-600",
+                pill: "bg-indigo-50/80 text-indigo-700 border-indigo-200/60"
+            },
+            desc: "Pioneering semiconductor microelectronics, VLSI circuit design, embedded IoT architectures, wireless communications, and signal processing.",
+            specializations: ["VLSI & Chip Design", "Embedded IoT Systems", "Wireless Communications"],
             accredited: true
         },
         {
             name: "Electrical & Electronics",
+            shortName: "EEE",
             code: "EEE",
-            students: 60,
-            icon: "⚡",
-            desc: "Innovate sustainable power systems, control engineering, and robotics.",
+            degree: "4-Year B.Tech",
+            intake: 60,
+            shifts: "60 Morning Shift",
+            est: "2003",
+            icon: Zap,
+            theme: {
+                iconBg: "bg-amber-50 text-amber-700 border-amber-200/80 group-hover:bg-amber-600 group-hover:text-white",
+                accentBorder: "group-hover:border-amber-500/40",
+                hoverText: "group-hover:text-amber-600",
+                pill: "bg-amber-50/80 text-amber-700 border-amber-200/60"
+            },
+            desc: "Rigorous training across renewable energy systems, smart power grids, industrial power electronics, electric vehicle drives, and robotics.",
+            specializations: ["Smart Grids & Renewables", "Industrial Automation", "EV Drives & Control"],
             accredited: true
         }
     ];
@@ -514,7 +564,7 @@ const Home = () => {
                 label: "EVENT", 
                 title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", 
                 summary: "Global researchers submit papers on deep learning, NLP, and intelligent robotics ahead of the flagship conference.",
-                date: "NOV 19, 2025", 
+                date: "NOV 19, 2026", 
                 readTime: "5 MIN READ",
                 image: "/campus/central-library-hall.webp",
                 link: "#", 
@@ -564,6 +614,7 @@ const Home = () => {
                     return {
                         ...def,
                         ...item,
+                        date: item.id === 5 && (!item.date || item.date.includes('2025')) ? 'NOV 19, 2026' : (item.date || def.date),
                         image: item.image || def.image || '/campus/main-academic-building.webp',
                         summary: item.summary || def.summary || item.title,
                         readTime: item.readTime || def.readTime || '4 MIN READ'
@@ -606,6 +657,7 @@ const Home = () => {
 
     const heroStory = searchedEvents.length > 0 ? searchedEvents[0] : null;
     const gridStories = searchedEvents.length > 1 ? searchedEvents.slice(1) : [];
+    const displayedGridStories = showAllNews ? gridStories : gridStories.slice(0, 3);
 
     const homeSchema = {
         "@context": "https://schema.org",
@@ -800,9 +852,9 @@ const Home = () => {
                             )}
 
                             {/* GRID OF CARDS BELOW */}
-                            {gridStories.length > 0 && (
+                            {displayedGridStories.length > 0 && (
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {gridStories.map((item, i) => {
+                                    {displayedGridStories.map((item, i) => {
                                         const itemLink = item.link && item.link !== '#' ? item.link : `/news-event/${item.id}`;
                                         const domainKey = (item.label || 'NEWS').toUpperCase();
                                         const domain = TAG_DOMAINS[domainKey] || TAG_DOMAINS.NEWS;
@@ -857,6 +909,34 @@ const Home = () => {
                                             </Link>
                                         );
                                     })}
+                                </div>
+                            )}
+
+                            {/* VIEW MORE / SHOW LESS BUTTON */}
+                            {gridStories.length > 3 && (
+                                <div className="mt-10 flex justify-center">
+                                    <button
+                                        onClick={() => {
+                                            if (showAllNews) {
+                                                setShowAllNews(false);
+                                                const newsSection = document.getElementById('news');
+                                                if (newsSection) {
+                                                    newsSection.scrollIntoView({ behavior: 'smooth' });
+                                                }
+                                            } else {
+                                                setShowAllNews(true);
+                                            }
+                                        }}
+                                        className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-800 bg-white hover:bg-slate-900 hover:text-white border border-slate-200/90 hover:border-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 active:scale-95 cursor-pointer"
+                                        aria-expanded={showAllNews}
+                                    >
+                                        <span>{showAllNews ? 'Show Less' : 'View More'}</span>
+                                        <ChevronDown 
+                                            className={`w-4 h-4 text-slate-500 group-hover:text-white transition-transform duration-300 ${
+                                                showAllNews ? 'rotate-180 text-white' : 'group-hover:translate-y-0.5'
+                                            }`} 
+                                        />
+                                    </button>
                                 </div>
                             )}
                         </div>
@@ -1143,41 +1223,122 @@ const Home = () => {
             </section>
 
             {/* ACADEMIC PROGRAMS */}
-            <section id="programs" className="py-24 bg-slate-50 border-y border-slate-200">
+            <section id="programs" className="py-20 bg-slate-50/80 border-y border-slate-200/80">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center max-w-3xl mx-auto mb-20">
-                        <span className="text-blue-600 font-black tracking-[0.25em] text-xs uppercase mb-4 block">Academics</span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-8">Technical Specializations</h2>
-                        <p className="text-xl text-slate-500 font-medium leading-relaxed">Choose from our NBA accredited, highly specialized programs designed to create leaders in technology.</p>
+                    {/* Section Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-14">
+                        <span className="text-blue-700 font-extrabold tracking-[0.25em] text-xs uppercase mb-3 block">
+                            Academic Disciplines
+                        </span>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
+                            Undergraduate Engineering Programs
+                        </h2>
+                        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Four-year B.Tech degree programs affiliated with Guru Gobind Singh Indraprastha University (GGSIPU), approved by AICTE, and accredited by the National Board of Accreditation (NBA).
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {departments.map((dept, i) => (
-                            <Link to={`/${dept.code.toLowerCase()}`} key={i} className="bg-white rounded-3xl p-10 border border-slate-200 hover:shadow-card-hover transition-all duration-500 group cursor-pointer relative overflow-hidden block">
-                                <div className="absolute -top-6 -right-6 text-8xl font-black text-slate-100/50 group-hover:text-primary/10 transition-all duration-700 select-none group-hover:scale-110 group-hover:-rotate-12 pointer-events-none -z-10 tracking-tighter">
-                                    {dept.code}
-                                </div>
-                                <div className="absolute top-0 right-0 w-48 h-48 bg-surface/50 rounded-bl-full -z-20 transition-transform group-hover:scale-125 duration-700"></div>
-                                <div className="flex justify-between items-start mb-10">
-                                    <div className="text-5xl bg-surface w-24 h-24 rounded-2xl flex items-center justify-center group-hover:bg-blue-50 transition-all duration-500 shadow-inner group-hover:rotate-3">
-                                        <span className="grayscale group-hover:grayscale-0 transition-all duration-500" role="img" aria-label={`${dept.name} department icon`}>{dept.icon}</span>
+                    {/* 2x2 Programs Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                        {departments.map((dept, i) => {
+                            const IconComponent = dept.icon;
+                            return (
+                                <Link 
+                                    to={`/${dept.code.toLowerCase()}`} 
+                                    key={i} 
+                                    className={`bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 ${dept.theme.accentBorder} transition-all duration-300 group cursor-pointer flex flex-col justify-between relative overflow-hidden`}
+                                >
+                                    {/* Top Metadata Row */}
+                                    <div>
+                                        <div className="flex items-center justify-between gap-4 mb-5">
+                                            <div className="flex items-center gap-3">
+                                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 shadow-2xs border ${dept.theme.iconBg}`}>
+                                                    <IconComponent className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                                                </div>
+                                                <div>
+                                                    <span className="text-xs font-mono font-black text-slate-400 tracking-wider block">
+                                                        {dept.code}
+                                                    </span>
+                                                    <span className="text-[11px] font-semibold text-slate-500">
+                                                        Est. {dept.est}
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            {dept.accredited && (
+                                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/70 shadow-2xs">
+                                                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                                                    NBA Accredited
+                                                </span>
+                                            )}
+                                        </div>
+
+                                        {/* Program Name & Tagline */}
+                                        <div className="mb-3">
+                                            <h3 className={`text-xl sm:text-2xl font-bold text-slate-900 tracking-tight ${dept.theme.hoverText} transition-colors`}>
+                                                {dept.name}
+                                            </h3>
+                                            <p className="text-xs font-semibold text-slate-500 mt-1">
+                                                {dept.degree} • {dept.tagline}
+                                            </p>
+                                        </div>
+
+                                        {/* Description */}
+                                        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-5 font-normal">
+                                            {dept.desc}
+                                        </p>
+
+                                        {/* Specializations / Domains */}
+                                        <div className="flex flex-wrap gap-1.5 mb-6">
+                                            {dept.specializations.map((spec, sIdx) => (
+                                                <span 
+                                                    key={sIdx} 
+                                                    className="px-2.5 py-1 bg-slate-100/90 text-slate-700 rounded-md text-[11px] font-medium border border-slate-200/70"
+                                                >
+                                                    {spec}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
-                                    <div className="text-right">
-                                        {dept.accredited && <div className="text-xs font-black uppercase tracking-[0.2em] text-emerald-800 mt-2 bg-emerald-50/90 px-2 py-0.5 rounded inline-block border border-emerald-100/50">NBA Accredited</div>}
+
+                                    {/* Bottom Card Footer with Official Intake & Action */}
+                                    <div className="flex items-center justify-between border-t border-slate-100 pt-4 mt-auto">
+                                        <div className="flex items-center gap-2">
+                                            <Users className="w-4 h-4 text-slate-400" />
+                                            <div>
+                                                <span className="text-xs font-bold text-slate-800 tracking-wide block leading-tight">
+                                                    {dept.intake} Sanctioned Seats
+                                                </span>
+                                                <span className="text-[11px] text-slate-400 font-medium block leading-tight">
+                                                    {dept.shifts}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="inline-flex items-center text-xs font-bold text-slate-900 group-hover:text-blue-700 transition-colors uppercase tracking-wider gap-1.5">
+                                            <span>Full Details</span>
+                                            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+                                        </div>
                                     </div>
-                                </div>
-                                <h3 className="text-3xl font-bold text-title mb-4 tracking-tight group-hover:text-primary transition-colors">{dept.name}</h3>
-                                <p className="text-muted font-medium mb-10 leading-relaxed text-sm">{dept.desc}</p>
-                                <div className="flex items-center justify-between border-t border-slate-100 pt-8">
-                                    <div className="flex items-center text-xs font-black text-slate-600 uppercase tracking-widest leading-none">
-                                        <Users className="w-4 h-4 mr-2.5 text-primary" /> {dept.students} Slots / Batch
-                                    </div>
-                                    <div className="text-primary font-black text-xs uppercase tracking-widest flex items-center group-hover:translate-x-3 transition-transform">
-                                        Full Details <ArrowRight className="w-4 h-4 ml-2" />
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
+                                </Link>
+                            );
+                        })}
+                    </div>
+
+                    {/* Institution Summary & Foundation Department Banner */}
+                    <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div className="flex items-start sm:items-center gap-3 text-xs sm:text-sm text-slate-600 font-medium">
+                            <div className="w-2 h-2 rounded-full bg-emerald-500 shrink-0 mt-1 sm:mt-0 animate-pulse"></div>
+                            <span>
+                                <strong className="text-slate-900 font-bold">Total Approved B.Tech Intake: 660 Seats</strong> across 1st & 2nd Shifts. Admissions governed by GGSIPU via JEE Main.
+                            </span>
+                        </div>
+                        <Link 
+                            to="/applied-sciences" 
+                            className="text-xs font-bold text-blue-700 hover:text-blue-900 transition-colors inline-flex items-center gap-1.5 shrink-0 uppercase tracking-wider hover:underline"
+                        >
+                            <span>Applied Sciences Foundation (1st Year)</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
                     </div>
                 </div>
             </section>
