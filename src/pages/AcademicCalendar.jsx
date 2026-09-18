@@ -17,7 +17,7 @@ const AcademicCalendar = () => {
     ];
 
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-white dark:bg-[#0a0f1d] transition-colors duration-300">
             <SEO 
                 title="Academic Calendar" 
                 description="Stay updated with the MSIT academic calendar. Find critical dates for semester starts, examinations, and holidays." 
@@ -40,29 +40,29 @@ const AcademicCalendar = () => {
                             href={cal.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:border-blue-300 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between group"
+                            className="bg-white dark:bg-[#131c31] rounded-xl p-6 border border-slate-200 dark:border-white/10 shadow-card hover:shadow-card-hover hover:border-blue-300 dark:hover:border-blue-500/30 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between group"
                         >
                             <div className="flex items-center mb-4 sm:mb-0">
-                                <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center mr-5 group-hover:bg-blue-50 transition-colors shrink-0">
-                                    <Clock className="w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                                <div className="w-12 h-12 rounded-full bg-slate-50 dark:bg-[#18233c] flex items-center justify-center mr-5 group-hover:bg-blue-50 dark:group-hover:bg-blue-950/50 transition-colors shrink-0">
+                                    <Clock className="w-6 h-6 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
                                 </div>
                                 <div>
                                     <div className="flex items-center gap-3 mb-1">
-                                        <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                                        <h3 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                             {cal.period}
                                         </h3>
                                         {cal.isNew && (
-                                            <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider rounded border border-emerald-200">
+                                            <span className="px-2 py-0.5 bg-emerald-100 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider rounded border border-emerald-200 dark:border-emerald-800/40">
                                                 Latest
                                             </span>
                                         )}
                                     </div>
-                                    <p className="text-sm text-slate-500 font-medium">Official Schedule PDF Download</p>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Official Schedule PDF Download</p>
                                 </div>
                             </div>
 
                             <div className="sm:ml-4 w-full sm:w-auto">
-                                <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto px-5 py-2.5 bg-slate-50 text-slate-700 font-semibold rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors border border-slate-200 group-hover:border-blue-600">
+                                <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto px-5 py-2.5 bg-slate-50 dark:bg-white/10 text-slate-700 dark:text-slate-200 font-semibold rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors border border-slate-200 dark:border-white/10 group-hover:border-blue-600">
                                     <Download className="w-4 h-4 mr-2" />
                                     Download
                                 </div>
@@ -71,8 +71,8 @@ const AcademicCalendar = () => {
                     ))}
                 </div>
 
-                <div className="mt-12 p-6 bg-blue-50 border border-blue-100 rounded-xl text-center">
-                    <p className="text-blue-800 text-sm">
+                <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-800/40 rounded-xl text-center">
+                    <p className="text-blue-800 dark:text-blue-300 text-sm">
                         <strong>Note:</strong> The academic calendar is subject to change based on guidelines from Guru Gobind Singh Indraprastha University (GGSIPU). Please check back regularly for updates.
                     </p>
                 </div>
