@@ -115,74 +115,190 @@ html {
     }
   }
 
-  /* Engineered High-End Dark Mode (Targeted Overrides) */
-  &.acc-dark-mode {
+  /* Engineered High-End Dark Mode (Multi-Tiered Surface & Hierarchy System) */
+  &.acc-dark-mode,
+  &.dark {
     --color-primary: #3b82f6; 
-    --color-accent: #f97316; 
-    --color-surface: #1e293b; 
+    --color-accent: #f59e0b; 
+    --color-surface: #111a2e; 
     --color-title: #f8fafc; 
     --color-body: #cbd5e1; 
     --color-muted: #94a3b8; 
+    --shadow-card: 0 4px 24px -2px rgba(0, 0, 0, 0.6), 0 2px 8px -1px rgba(0, 0, 0, 0.5);
+    --shadow-card-hover: 0 12px 36px -4px rgba(0, 0, 0, 0.8), 0 4px 12px -2px rgba(0, 0, 0, 0.6);
     
-    background-color: #0f172a;
+    background-color: #0a0f1d;
     color: #cbd5e1;
     
     body {
-      background-color: #0f172a;
+      background-color: #0a0f1d;
       color: #cbd5e1;
     }
 
-    /* 1. Convert Light Backgrounds to Deep Blue/Slate */
-    .bg-white, .bg-slate-50, .bg-surface {
-      background-color: #0f172a !important;
+    /* 1. Base Canvas / Page-level Backgrounds */
+    .bg-surface, .bg-slate-50, .bg-zinc-50, .bg-gray-50, .bg-stone-50 {
+      background-color: #0a0f1d !important;
     }
 
-    /* 2. Keep Inherently Dark Sections Dark */
-    .bg-slate-900, .bg-slate-950 {
-      background-color: #020617 !important;
+    /* 2. Custom Cream & Neutral Section Backgrounds (e.g., The MSIT Advantage) */
+    .bg-\[\#FBF9F5\], .bg-\[\#f8fafc\], .bg-\[\#F3EEE5\], .bg-\[\#F3EEE5\]\/60 {
+      background-color: #0e1629 !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    .bg-stone-100, .bg-stone-200 {
+      background-color: #141e33 !important;
     }
 
-    /* 3. Invert Dark Text Headings/Paragraphs */
-    .text-slate-900, .text-slate-800, .text-slate-700, .text-title {
+    /* 3. Primary Card Surfaces (Elevation Level 1) */
+    .bg-white {
+      background-color: #131c31 !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    /* Frosted Translucent Header & Glass Overlays */
+    .bg-white\/95, .bg-white\/90, .bg-white\/85, .bg-white\/80 {
+      background-color: rgba(13, 21, 39, 0.92) !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+      backdrop-filter: blur(14px) !important;
+      -webkit-backdrop-filter: blur(14px) !important;
+    }
+
+    /* 4. Second-Level / Nested Inset Surfaces (Elevation Level 2) */
+    .bg-slate-100 {
+      background-color: #18233c !important;
+      border-color: rgba(255, 255, 255, 0.06) !important;
+    }
+    .bg-slate-200 {
+      background-color: #1e2d4d !important;
+      border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* 5. Keep Inherently Deep Midnight Sections Rich */
+    .bg-slate-900 {
+      background-color: #070b16 !important;
+    }
+    .bg-slate-950 {
+      background-color: #04070e !important;
+    }
+
+    /* 6. Typography & Text Contrasts */
+    .text-slate-900, .text-slate-850, .text-slate-800, .text-slate-700, .text-title {
       color: #f8fafc !important;
     }
-
-    /* 4. Soften Muted Texts */
-    .text-slate-600, .text-slate-500, .text-muted {
+    .text-slate-600, .text-body {
+      color: #cbd5e1 !important;
+    }
+    .text-slate-500, .text-slate-400, .text-muted {
       color: #94a3b8 !important;
     }
 
-    /* 5. Subdue Light Borders */
-    .border-slate-100, .border-slate-200 {
-      border-color: #1e293b !important;
+    /* Hardcoded Heritage Gold / Warm Brand Accents */
+    .text-\[\#8C6B45\], .text-\[\#9E7B56\] {
+      color: #f59e0b !important;
+    }
+    .text-\[\#B45309\] {
+      color: #fbbf24 !important;
+    }
+    .bg-\[\#8C6B45\] {
+      background-color: #d97706 !important;
     }
 
-    /* 6. Override Tinted Backgrounds to Dark Slate Equivalents */
-    .bg-blue-50, .bg-blue-50\/50, .bg-blue-50\/70,
-    .bg-emerald-50, .bg-emerald-50\/50, .bg-emerald-50\/70,
-    .bg-amber-50, .bg-amber-50\/50, .bg-amber-50\/70,
-    .bg-purple-50, .bg-purple-50\/50, .bg-purple-50\/70,
-    .bg-indigo-50, .bg-indigo-50\/50, .bg-indigo-50\/70,
-    .bg-red-50, .bg-red-50\/50, .bg-rose-50, .bg-teal-50 {
-      background-color: #1e293b !important;
-      border-color: #334155 !important;
+    /* 7. Borders, Dividers & Outlines */
+    .border-slate-100, .border-slate-200, .border-slate-300, 
+    .border-stone-100, .border-stone-200, .border-stone-200\/80, .border-stone-300 {
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+    .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+      border-color: rgba(255, 255, 255, 0.08) !important;
     }
 
-    /* 7. Ensure colored texts on tinted cards remain legible in dark mode */
-    .text-emerald-950, .text-emerald-900, .text-emerald-800 {
+    /* 8. Tinted Badges & Pill Tags */
+    .bg-blue-50, .bg-blue-50\/40, .bg-blue-50\/50, .bg-blue-50\/70, .bg-blue-50\/80 {
+      background-color: rgba(59, 130, 246, 0.14) !important;
+      border-color: rgba(59, 130, 246, 0.28) !important;
+    }
+    .bg-emerald-50, .bg-emerald-50\/50, .bg-emerald-50\/70, .bg-emerald-100 {
+      background-color: rgba(16, 185, 129, 0.14) !important;
+      border-color: rgba(16, 185, 129, 0.28) !important;
+    }
+    .bg-amber-50, .bg-amber-50\/50, .bg-amber-50\/70, .bg-amber-100 {
+      background-color: rgba(245, 158, 11, 0.14) !important;
+      border-color: rgba(245, 158, 11, 0.28) !important;
+    }
+    .bg-purple-50, .bg-purple-50\/50, .bg-purple-50\/70, .bg-purple-100 {
+      background-color: rgba(168, 85, 247, 0.14) !important;
+      border-color: rgba(168, 85, 247, 0.28) !important;
+    }
+    .bg-indigo-50, .bg-indigo-50\/50, .bg-indigo-50\/70, .bg-indigo-100 {
+      background-color: rgba(99, 102, 241, 0.14) !important;
+      border-color: rgba(99, 102, 241, 0.28) !important;
+    }
+    .bg-rose-50, .bg-rose-50\/50, .bg-red-50, .bg-red-50\/50 {
+      background-color: rgba(244, 63, 94, 0.14) !important;
+      border-color: rgba(244, 63, 94, 0.28) !important;
+    }
+    .bg-teal-50, .bg-teal-50\/50 {
+      background-color: rgba(20, 184, 166, 0.14) !important;
+      border-color: rgba(20, 184, 166, 0.28) !important;
+    }
+
+    /* 9. Colored Text On Tinted Cards */
+    .text-emerald-950, .text-emerald-900, .text-emerald-800, .text-emerald-700, .text-emerald-600 {
       color: #6ee7b7 !important;
     }
-    .text-blue-950, .text-blue-900, .text-blue-800 {
+    .text-blue-950, .text-blue-900, .text-blue-800, .text-blue-700, .text-blue-600 {
       color: #93c5fd !important;
     }
-    .text-amber-950, .text-amber-900, .text-amber-800, .text-amber-700 {
+    .text-amber-950, .text-amber-900, .text-amber-800, .text-amber-700, .text-amber-600 {
       color: #fcd34d !important;
     }
-    .text-purple-950, .text-purple-900, .text-purple-800 {
+    .text-purple-950, .text-purple-900, .text-purple-800, .text-purple-700, .text-purple-600 {
       color: #d8b4fe !important;
     }
-    .text-indigo-950, .text-indigo-900, .text-indigo-800 {
+    .text-indigo-950, .text-indigo-900, .text-indigo-800, .text-indigo-700, .text-indigo-600 {
       color: #a5b4fc !important;
+    }
+    .text-rose-950, .text-rose-900, .text-rose-800, .text-rose-700, .text-rose-600, .text-red-700 {
+      color: #fda4af !important;
+    }
+    .text-teal-950, .text-teal-900, .text-teal-800, .text-teal-700 {
+      color: #5eead4 !important;
+    }
+
+    /* 10. Forms, Search, & Inputs */
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]),
+    textarea,
+    select {
+      background-color: #162036 !important;
+      color: #f8fafc !important;
+      border-color: rgba(255, 255, 255, 0.12) !important;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #64748b !important;
+    }
+
+    /* 11. Tables & Data Grids */
+    table th {
+      background-color: #18233c !important;
+      color: #f8fafc !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    table td {
+      border-color: rgba(255, 255, 255, 0.06) !important;
+      color: #cbd5e1 !important;
+    }
+    table tr:nth-child(even) td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    /* 12. Recruiter & Partner Logos Contrast Preservation */
+    .recruiter-logo-badge,
+    .partner-logo-container {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border-radius: 0.75rem !important;
+      padding: 0.5rem 0.75rem !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
     }
   }
 
