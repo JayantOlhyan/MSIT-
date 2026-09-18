@@ -117,7 +117,7 @@ const SocietyDetailView = ({ society }) => {
         : society.gallery.filter(item => item.category === galleryTab);
 
     return (
-        <div className="bg-slate-50 min-h-screen text-slate-800 font-sans">
+        <div className="bg-slate-50 dark:bg-[#0a0f1d] min-h-screen text-slate-800 dark:text-slate-200 font-sans">
             <SEO 
                 title={`${society.name} | MSIT Student Societies`}
                 description={society.overview || society.tagline}
@@ -151,7 +151,7 @@ const SocietyDetailView = ({ society }) => {
                         {/* Left: Logo Emblem & Main Info */}
                         <div className="lg:col-span-8 flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
                             {/* Monogram / Logo Box */}
-                            <div className={`w-28 h-28 sm:w-36 sm:h-36 rounded-2xl flex flex-col items-center justify-center shrink-0 shadow-2xl relative group overflow-hidden ${society.logo ? 'bg-transparent' : 'bg-slate-900 border-2 border-slate-800 p-2 sm:p-4'}`}>
+                            <div className={`w-28 h-28 sm:w-36 sm:h-36 rounded-2xl flex flex-col items-center justify-center shrink-0 shadow-2xl relative group overflow-hidden ${society.logo ? 'bg-white/95 dark:bg-white/90 p-2' : 'bg-slate-900 border-2 border-slate-800 p-2 sm:p-4'}`}>
                                 {society.logo ? (
                                     <img src={society.logo} alt={`${society.name} Logo`} className="w-full h-full object-contain rounded-xl" />
                                 ) : (
@@ -277,59 +277,59 @@ const SocietyDetailView = ({ society }) => {
             {/* =========================================================
                 QUICK STATS STRIP (Pill / Cards bar below hero)
                ========================================================= */}
-            <div className="bg-white border-b border-slate-200 py-4 px-4 sm:px-8 shadow-sm">
-                <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+            <div className="bg-white dark:bg-[#0c1322] border-b border-slate-200 dark:border-slate-800 py-4 px-4 sm:px-8 shadow-sm">
+                <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-slate-800">
                     <div className="flex items-center gap-3 px-2 py-1">
-                        <Calendar className="w-5 h-5 text-indigo-600 shrink-0" />
+                        <Calendar className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0" />
                         <div>
-                            <div className="text-[10px] uppercase font-bold text-slate-400">Established</div>
-                            <div className="text-xs font-bold text-slate-900">{society.established}</div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Established</div>
+                            <div className="text-xs font-bold text-slate-900 dark:text-white">{society.established}</div>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-3 px-2 py-1">
-                        <Layers className="w-5 h-5 text-blue-600 shrink-0" />
+                        <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
                         <div>
-                            <div className="text-[10px] uppercase font-bold text-slate-400">Department / Branch</div>
-                            <div className="text-xs font-bold text-slate-900 truncate">{society.department}</div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Department / Branch</div>
+                            <div className="text-xs font-bold text-slate-900 dark:text-white truncate">{society.department}</div>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-3 px-2 py-1">
-                        <Mail className="w-5 h-5 text-purple-600 shrink-0" />
+                        <Mail className="w-5 h-5 text-purple-600 dark:text-purple-400 shrink-0" />
                         <div className="overflow-hidden">
-                            <div className="text-[10px] uppercase font-bold text-slate-400">Society Email</div>
-                            <div className="text-xs font-bold text-slate-900 truncate">{society.email}</div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Society Email</div>
+                            <div className="text-xs font-bold text-slate-900 dark:text-white truncate">{society.email}</div>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-3 px-2 py-1">
-                        <Users className="w-5 h-5 text-indigo-600 shrink-0" />
+                        <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0" />
                         <div>
-                            <div className="text-[10px] uppercase font-bold text-slate-400">Student Coordinator</div>
-                            <div className="text-xs font-bold text-slate-900 truncate">
+                            <div className="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Student Coordinator</div>
+                            <div className="text-xs font-bold text-slate-900 dark:text-white truncate">
                                 {society.people?.student?.name}
-                                <span className="block text-[10px] text-slate-500 font-normal">President</span>
+                                <span className="block text-[10px] text-slate-500 dark:text-slate-400 font-normal">President</span>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-3 px-2 py-1">
-                        <GraduationCap className="w-5 h-5 text-emerald-600 shrink-0" />
+                        <GraduationCap className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                         <div>
-                            <div className="text-[10px] uppercase font-bold text-slate-400">Faculty Coordinator</div>
-                            <div className="text-xs font-bold text-slate-900 truncate">
+                            <div className="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Faculty Coordinator</div>
+                            <div className="text-xs font-bold text-slate-900 dark:text-white truncate">
                                 {society.people?.faculty?.name}
-                                <span className="block text-[10px] text-slate-500 font-normal">{society.people?.faculty?.designation}</span>
+                                <span className="block text-[10px] text-slate-500 dark:text-slate-400 font-normal">{society.people?.faculty?.designation}</span>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex items-center gap-3 px-2 py-1">
-                        <Award className="w-5 h-5 text-purple-600 shrink-0" />
+                        <Award className="w-5 h-5 text-purple-600 dark:text-purple-400 shrink-0" />
                         <div>
-                            <div className="text-[10px] uppercase font-bold text-slate-400">Membership</div>
-                            <div className="text-xs font-bold text-slate-900">{society.membership}</div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">Membership</div>
+                            <div className="text-xs font-bold text-slate-900 dark:text-white">{society.membership}</div>
                         </div>
                     </div>
                 </div>
@@ -347,24 +347,24 @@ const SocietyDetailView = ({ society }) => {
                     <aside className="lg:col-span-3 sticky top-40 z-30 lg:space-y-6">
                         
                         {/* Navigation Card */}
-                        <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-3 overflow-hidden mb-6 lg:mb-0">
+                        <div className="bg-white dark:bg-[#131c31] rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm p-3 overflow-hidden mb-6 lg:mb-0">
                             {/* Mobile Toggle Button */}
                             <button 
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="w-full flex items-center justify-between lg:hidden px-3 py-2 text-[11px] font-black uppercase tracking-wider text-slate-700"
+                                className="w-full flex items-center justify-between lg:hidden px-3 py-2 text-[11px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-300"
                             >
                                 <span>Jump to Section</span>
                                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-180' : ''}`} />
                             </button>
                             
                             {/* Desktop Title (Hidden on Mobile) */}
-                            <div className="hidden lg:block text-[11px] font-black uppercase tracking-wider text-slate-400 px-3 py-2">
+                            <div className="hidden lg:block text-[11px] font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 px-3 py-2">
                                 Jump to Section
                             </div>
 
                             <div className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out lg:grid-rows-[1fr] lg:opacity-100 ${isMobileMenuOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                                 <div className="overflow-hidden">
-                                    <div className="pt-2 mt-2 border-t border-slate-100 lg:border-none lg:mt-0 lg:pt-0">
+                                    <div className="pt-2 mt-2 border-t border-slate-100 dark:border-slate-800 lg:border-none lg:mt-0 lg:pt-0">
                                         <nav className="space-y-1">
                                             {navItems.map((item) => {
                                                 const IconComponent = item.icon;
@@ -378,11 +378,11 @@ const SocietyDetailView = ({ society }) => {
                                                         }}
                                                         className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all text-left cursor-pointer ${
                                                             isActive 
-                                                                ? 'bg-purple-50 text-purple-700 font-bold border-l-4 border-purple-600 shadow-sm' 
-                                                                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                                                ? 'bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 font-bold border-l-4 border-purple-600 shadow-sm' 
+                                                                : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#18233c] hover:text-slate-900 dark:hover:text-white'
                                                         }`}
                                                     >
-                                                        <IconComponent className={`w-4 h-4 shrink-0 ${isActive ? 'text-purple-600' : 'text-slate-400'}`} />
+                                                        <IconComponent className={`w-4 h-4 shrink-0 ${isActive ? 'text-purple-600 dark:text-purple-400' : 'text-slate-400'}`} />
                                                         <span>{item.label}</span>
                                                     </button>
                                                 );
@@ -421,8 +421,8 @@ const SocietyDetailView = ({ society }) => {
 
                         {/* SECTION: ABOUT THIS SOCIETY */}
                         <section id="about" className="space-y-6">
-                            <div className="flex items-center gap-2 border-b border-slate-200 pb-3">
-                                <span className="text-xs font-black uppercase tracking-widest text-slate-900">
+                            <div className="flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+                                <span className="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white">
                                     ABOUT THIS SOCIETY
                                 </span>
                             </div>
@@ -432,13 +432,13 @@ const SocietyDetailView = ({ society }) => {
                                 <div className="md:col-span-8 space-y-6">
                                     
                                     {/* Detailed Story Box */}
-                                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative pl-8">
+                                    <div className="bg-white dark:bg-[#131c31] p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative pl-8">
                                         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-purple-600 to-indigo-600 rounded-l-2xl"></div>
-                                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-700 mb-2">
+                                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-700 dark:text-purple-400 mb-2">
                                             <Sparkles className="w-4 h-4" />
                                             <span>Detailed About</span>
                                         </div>
-                                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                                             {society.detailedAbout}
                                         </p>
                                     </div>
@@ -447,38 +447,38 @@ const SocietyDetailView = ({ society }) => {
                                     <div className="space-y-4">
                                         
                                         {/* Mission */}
-                                        <div id="mission" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
-                                            <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                                        <div id="mission" className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 flex items-center justify-center shrink-0">
                                                 <Award className="w-5 h-5" />
                                             </div>
                                             <div className="space-y-1">
-                                                <h4 className="text-sm font-bold text-slate-900">Mission</h4>
-                                                <p className="text-xs text-slate-600 leading-relaxed">
+                                                <h4 className="text-sm font-bold text-slate-900 dark:text-white">Mission</h4>
+                                                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                                                     {society.mission}
                                                 </p>
                                             </div>
                                         </div>
 
                                         {/* Vision */}
-                                        <div id="vision" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
-                                            <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                                        <div id="vision" className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                                            <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 flex items-center justify-center shrink-0">
                                                 <GraduationCap className="w-5 h-5" />
                                             </div>
                                             <div className="space-y-1">
-                                                <h4 className="text-sm font-bold text-slate-900">Vision</h4>
-                                                <p className="text-xs text-slate-600 leading-relaxed">
+                                                <h4 className="text-sm font-bold text-slate-900 dark:text-white">Vision</h4>
+                                                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                                                     {society.vision}
                                                 </p>
                                             </div>
                                         </div>
 
                                         {/* Objectives */}
-                                        <div id="objectives" className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                                            <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
-                                                <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                                        <div id="objectives" className="bg-white dark:bg-[#131c31] p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+                                            <div className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white">
+                                                <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                                                 <span>Objectives</span>
                                             </div>
-                                            <ul className="space-y-2.5 text-xs text-slate-600 pl-1">
+                                            <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 pl-1">
                                                 {society.objectives?.map((obj, i) => (
                                                     <li key={i} className="flex items-start gap-2.5">
                                                         <span className="w-1.5 h-1.5 rounded-full bg-purple-600 mt-1.5 shrink-0"></span>
@@ -495,7 +495,7 @@ const SocietyDetailView = ({ society }) => {
                                 <div className="md:col-span-4 space-y-6">
                                     
                                     {/* Team/Event Photo */}
-                                    <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900 group">
+                                    <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm bg-slate-900 group">
                                         <img 
                                             src={society.heroImage} 
                                             alt={society.name} 
@@ -507,74 +507,74 @@ const SocietyDetailView = ({ society }) => {
                                     </div>
 
                                     {/* Quick Links Card */}
-                                    <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2 text-xs">
-                                        <div className="font-bold text-slate-900 mb-2">Quick Links</div>
-                                        <button onClick={() => scrollToSection('events')} className="w-full flex items-center gap-2 text-slate-600 hover:text-purple-600 py-1 transition-colors">
+                                    <div className="bg-white dark:bg-[#131c31] p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-2 text-xs">
+                                        <div className="font-bold text-slate-900 dark:text-white mb-2">Quick Links</div>
+                                        <button onClick={() => scrollToSection('events')} className="w-full flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 py-1 transition-colors">
                                             <Calendar className="w-3.5 h-3.5 text-slate-400" />
                                             <span>Upcoming Events</span>
                                         </button>
-                                        <button onClick={() => scrollToSection('achievements')} className="w-full flex items-center gap-2 text-slate-600 hover:text-purple-600 py-1 transition-colors">
+                                        <button onClick={() => scrollToSection('achievements')} className="w-full flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 py-1 transition-colors">
                                             <Trophy className="w-3.5 h-3.5 text-slate-400" />
                                             <span>Achievements</span>
                                         </button>
-                                        <button onClick={() => scrollToSection('projects')} className="w-full flex items-center gap-2 text-slate-600 hover:text-purple-600 py-1 transition-colors">
+                                        <button onClick={() => scrollToSection('projects')} className="w-full flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 py-1 transition-colors">
                                             <FolderGit2 className="w-3.5 h-3.5 text-slate-400" />
                                             <span>Projects</span>
                                         </button>
-                                        <button onClick={() => scrollToSection('resources')} className="w-full flex items-center gap-2 text-slate-600 hover:text-purple-600 py-1 transition-colors">
+                                        <button onClick={() => scrollToSection('resources')} className="w-full flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 py-1 transition-colors">
                                             <BookOpen className="w-3.5 h-3.5 text-slate-400" />
                                             <span>Resources</span>
                                         </button>
-                                        <a href={society.joinUrl} target="_blank" rel="noopener noreferrer" className="w-full flex items-center gap-2 text-purple-700 font-semibold py-1 hover:underline">
-                                            <Users className="w-3.5 h-3.5 text-purple-600" />
+                                        <a href={society.joinUrl} target="_blank" rel="noopener noreferrer" className="w-full flex items-center gap-2 text-purple-700 dark:text-purple-400 font-semibold py-1 hover:underline">
+                                            <Users className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
                                             <span>Join Team</span>
                                         </a>
                                     </div>
 
                                     {/* Society At A Glance Table */}
-                                    <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-xs space-y-2.5">
-                                        <div className="font-bold text-slate-900 border-b border-slate-100 pb-2">
+                                    <div className="bg-white dark:bg-[#131c31] p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm text-xs space-y-2.5">
+                                        <div className="font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-850 pb-2">
                                             Society At A Glance
                                         </div>
-                                        <div className="flex justify-between py-1 border-b border-slate-50">
-                                            <span className="text-slate-400">Category</span>
-                                            <span className="font-bold text-slate-800">{society.category}</span>
+                                        <div className="flex justify-between py-1 border-b border-slate-50 dark:border-slate-800/60">
+                                            <span className="text-slate-400 dark:text-slate-500">Category</span>
+                                            <span className="font-bold text-slate-800 dark:text-slate-200">{society.category}</span>
                                         </div>
-                                        <div className="flex justify-between py-1 border-b border-slate-50">
-                                            <span className="text-slate-400">Short Name</span>
-                                            <span className="font-bold text-slate-800">{society.shortName}</span>
+                                        <div className="flex justify-between py-1 border-b border-slate-50 dark:border-slate-800/60">
+                                            <span className="text-slate-400 dark:text-slate-500">Short Name</span>
+                                            <span className="font-bold text-slate-800 dark:text-slate-200">{society.shortName}</span>
                                         </div>
-                                        <div className="flex justify-between py-1 border-b border-slate-50">
-                                            <span className="text-slate-400">Established</span>
-                                            <span className="font-bold text-slate-800">{society.established}</span>
+                                        <div className="flex justify-between py-1 border-b border-slate-50 dark:border-slate-800/60">
+                                            <span className="text-slate-400 dark:text-slate-500">Established</span>
+                                            <span className="font-bold text-slate-800 dark:text-slate-200">{society.established}</span>
                                         </div>
-                                        <div className="flex justify-between py-1 border-b border-slate-50">
-                                            <span className="text-slate-400">Office / Room</span>
-                                            <span className="font-bold text-slate-800">{society.location}</span>
+                                        <div className="flex justify-between py-1 border-b border-slate-50 dark:border-slate-800/60">
+                                            <span className="text-slate-400 dark:text-slate-500">Office / Room</span>
+                                            <span className="font-bold text-slate-800 dark:text-slate-200">{society.location}</span>
                                         </div>
-                                        <div className="flex justify-between py-1 border-b border-slate-50">
-                                            <span className="text-slate-400">Membership</span>
-                                            <span className="font-bold text-emerald-600">{society.membership}</span>
+                                        <div className="flex justify-between py-1 border-b border-slate-50 dark:border-slate-800/60">
+                                            <span className="text-slate-400 dark:text-slate-500">Membership</span>
+                                            <span className="font-bold text-emerald-600 dark:text-emerald-400">{society.membership}</span>
                                         </div>
                                         {society.website && (
-                                            <div className="flex justify-between py-1 border-b border-slate-50">
-                                                <span className="text-slate-400">Website</span>
-                                                <a href={society.website} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600 hover:underline flex items-center gap-1">
+                                            <div className="flex justify-between py-1 border-b border-slate-50 dark:border-slate-800/60">
+                                                <span className="text-slate-400 dark:text-slate-500">Website</span>
+                                                <a href={society.website} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
                                                     <span>geekroom.in</span>
                                                     <ArrowUpRight className="w-3 h-3" />
                                                 </a>
                                             </div>
                                         )}
                                         <div className="flex items-center justify-between pt-2">
-                                            <span className="text-slate-400">Social</span>
-                                            <div className="flex gap-2 text-slate-500">
+                                            <span className="text-slate-400 dark:text-slate-500">Social</span>
+                                            <div className="flex gap-2 text-slate-500 dark:text-slate-400">
                                                 {society.socials?.instagram && (
                                                     <a href={society.socials.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 transition-colors">
                                                         <Globe className="w-4 h-4" />
                                                     </a>
                                                 )}
                                                 {society.socials?.linkedin && (
-                                                    <a href={society.socials.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors">
+                                                    <a href={society.socials.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
                                                         <Share2 className="w-4 h-4" />
                                                     </a>
                                                 )}
@@ -593,8 +593,8 @@ const SocietyDetailView = ({ society }) => {
 
                         {/* SECTION: WHAT WE DO (Activities Carousel / Multi-card Strip) */}
                         <section id="activities" className="space-y-6">
-                            <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                                <span className="text-xs font-black uppercase tracking-widest text-slate-900">
+                            <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                                <span className="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white">
                                     WHAT WE DO
                                 </span>
                             </div>
@@ -603,15 +603,15 @@ const SocietyDetailView = ({ society }) => {
                                 {society.whatWeDo?.map((item, i) => (
                                     <div 
                                         key={i} 
-                                        className="bg-white p-4 rounded-2xl border border-slate-200 hover:border-purple-300 hover:shadow-md transition-all text-center flex flex-col items-center justify-between group cursor-pointer"
+                                        className="bg-white dark:bg-[#131c31] p-4 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-purple-300 dark:hover:border-purple-500/50 hover:shadow-md transition-all text-center flex flex-col items-center justify-between group cursor-pointer"
                                     >
-                                        <div className="w-10 h-10 rounded-xl bg-purple-50 group-hover:bg-purple-600 group-hover:text-white text-purple-600 flex items-center justify-center mb-3 transition-colors">
+                                        <div className="w-10 h-10 rounded-xl bg-purple-50 dark:bg-[#18233c] group-hover:bg-purple-600 group-hover:text-white text-purple-600 dark:text-purple-400 flex items-center justify-center mb-3 transition-colors">
                                             {renderIcon(item.icon, "w-5 h-5")}
                                         </div>
-                                        <div className="text-xs font-bold text-slate-900 mb-1">
+                                        <div className="text-xs font-bold text-slate-900 dark:text-white mb-1">
                                             {item.title}
                                         </div>
-                                        <p className="text-[11px] text-slate-500 leading-tight">
+                                        <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">
                                             {item.desc}
                                         </p>
                                     </div>
@@ -621,11 +621,11 @@ const SocietyDetailView = ({ society }) => {
 
                         {/* SECTION: EVENTS (Upcoming Featured + Past Grid) */}
                         <section id="events" className="space-y-6">
-                            <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                                <span className="text-xs font-black uppercase tracking-widest text-slate-900">
+                            <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                                <span className="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white">
                                     EVENTS
                                 </span>
-                                <Link to="/events" className="text-xs font-bold text-blue-600 hover:underline flex items-center gap-1">
+                                <Link to="/events" className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
                                     <span>View All Events</span>
                                     <ArrowRight className="w-3 h-3" />
                                 </Link>
@@ -693,24 +693,24 @@ const SocietyDetailView = ({ society }) => {
                                 {/* Past Events Grid */}
                                 <div className="md:col-span-6 flex flex-col justify-between">
                                     <div className="flex items-center justify-between mb-2">
-                                        <span className="text-xs font-bold text-slate-700">Past Events</span>
-                                        <Link to="/events" className="text-[11px] font-semibold text-blue-600 hover:underline">
+                                        <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Past Events</span>
+                                        <Link to="/events" className="text-[11px] font-semibold text-blue-600 dark:text-blue-400 hover:underline">
                                             View Gallery →
                                         </Link>
                                     </div>
                                     <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-3">
                                         {society.events?.past?.map((evt, i) => (
-                                            <div key={i} className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm group">
+                                            <div key={i} className="bg-white dark:bg-[#131c31] rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm group">
                                                 <img 
                                                     src={evt.image} 
                                                     alt={evt.title} 
                                                     className="w-full h-20 object-cover group-hover:scale-105 transition-transform duration-300"
                                                 />
                                                 <div className="p-2.5">
-                                                    <div className="text-[11px] font-bold text-slate-900 truncate">
+                                                    <div className="text-[11px] font-bold text-slate-900 dark:text-white truncate">
                                                         {evt.title}
                                                     </div>
-                                                    <div className="text-[10px] text-slate-400 font-medium">
+                                                    <div className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
                                                         {evt.date}
                                                     </div>
                                                 </div>
@@ -727,23 +727,23 @@ const SocietyDetailView = ({ society }) => {
                             
                             {/* Column 1: Achievements */}
                             <section id="achievements" className="space-y-4">
-                                <div className="flex items-center justify-between border-b border-slate-200 pb-2">
-                                    <span className="text-xs font-black uppercase tracking-wider text-slate-900">
+                                <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+                                    <span className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
                                         ACHIEVEMENTS
                                     </span>
-                                    <span className="text-[11px] font-bold text-blue-600 hover:underline cursor-pointer">
+                                    <span className="text-[11px] font-bold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
                                         View All →
                                     </span>
                                 </div>
                                 <div className="space-y-3">
                                     {society.achievements?.map((ach, i) => (
-                                        <div key={i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                                            <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                                        <div key={i} className="bg-white dark:bg-[#131c31] p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-3">
+                                            <div className="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
                                                 {renderIcon(ach.icon, "w-4 h-4")}
                                             </div>
                                             <div>
-                                                <h4 className="text-xs font-bold text-slate-900">{ach.title}</h4>
-                                                <p className="text-[11px] text-slate-500 leading-tight mt-0.5">{ach.desc}</p>
+                                                <h4 className="text-xs font-bold text-slate-900 dark:text-white">{ach.title}</h4>
+                                                <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight mt-0.5">{ach.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -752,23 +752,23 @@ const SocietyDetailView = ({ society }) => {
 
                             {/* Column 2: Projects & Research */}
                             <section id="projects" className="space-y-4">
-                                <div className="flex items-center justify-between border-b border-slate-200 pb-2">
-                                    <span className="text-xs font-black uppercase tracking-wider text-slate-900">
+                                <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+                                    <span className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
                                         PROJECTS & RESEARCH
                                     </span>
-                                    <span className="text-[11px] font-bold text-blue-600 hover:underline cursor-pointer">
+                                    <span className="text-[11px] font-bold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
                                         View All →
                                     </span>
                                 </div>
                                 <div className="space-y-3">
                                     {society.projects?.map((proj, i) => (
-                                        <div key={i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                                            <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                                        <div key={i} className="bg-white dark:bg-[#131c31] p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-3">
+                                            <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
                                                 {renderIcon(proj.icon, "w-4 h-4")}
                                             </div>
                                             <div>
-                                                <h4 className="text-xs font-bold text-slate-900">{proj.title}</h4>
-                                                <p className="text-[11px] text-slate-500 leading-tight mt-0.5">{proj.desc}</p>
+                                                <h4 className="text-xs font-bold text-slate-900 dark:text-white">{proj.title}</h4>
+                                                <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight mt-0.5">{proj.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -777,23 +777,23 @@ const SocietyDetailView = ({ society }) => {
 
                             {/* Column 3: Resources */}
                             <section id="resources" className="space-y-4">
-                                <div className="flex items-center justify-between border-b border-slate-200 pb-2">
-                                    <span className="text-xs font-black uppercase tracking-wider text-slate-900">
+                                <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+                                    <span className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
                                         RESOURCES
                                     </span>
-                                    <span className="text-[11px] font-bold text-blue-600 hover:underline cursor-pointer">
+                                    <span className="text-[11px] font-bold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
                                         View All →
                                     </span>
                                 </div>
                                 <div className="space-y-3">
                                     {society.resources?.map((res, i) => (
-                                        <div key={i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
-                                            <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+                                        <div key={i} className="bg-white dark:bg-[#131c31] p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-3">
+                                            <div className="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
                                                 {renderIcon(res.icon, "w-4 h-4")}
                                             </div>
                                             <div>
-                                                <h4 className="text-xs font-bold text-slate-900">{res.title}</h4>
-                                                <p className="text-[11px] text-slate-500 leading-tight mt-0.5">{res.desc}</p>
+                                                <h4 className="text-xs font-bold text-slate-900 dark:text-white">{res.title}</h4>
+                                                <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight mt-0.5">{res.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -804,11 +804,11 @@ const SocietyDetailView = ({ society }) => {
 
                         {/* SECTION: PEOPLE & TEAM (Faculty, Student, Core Team) */}
                         <section id="people" className="space-y-6">
-                            <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                                <span className="text-xs font-black uppercase tracking-widest text-slate-900">
+                            <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                                <span className="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white">
                                     PEOPLE
                                 </span>
-                                <Link to="/faculty" className="text-xs font-bold text-blue-600 hover:underline flex items-center gap-1">
+                                <Link to="/faculty" className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
                                     <span>View All</span>
                                     <ArrowRight className="w-3 h-3" />
                                 </Link>
@@ -817,40 +817,40 @@ const SocietyDetailView = ({ society }) => {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 
                                 {/* Faculty Coordinator Card */}
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                                <div className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-4">
                                     <img 
                                         src={society.people?.faculty?.image || "/faculty/rinky-dwivedi.webp"} 
                                         alt={society.people?.faculty?.name} 
-                                        className="w-14 h-14 rounded-full object-cover border-2 border-purple-100 shrink-0"
+                                        className="w-14 h-14 rounded-full object-cover border-2 border-purple-100 dark:border-purple-900/60 shrink-0"
                                     />
                                     <div>
-                                        <h4 className="text-sm font-bold text-slate-900">{society.people?.faculty?.name}</h4>
-                                        <div className="text-xs text-slate-500">{society.people?.faculty?.role}</div>
-                                        <div className="text-[11px] font-semibold text-purple-700">{society.people?.faculty?.designation}</div>
+                                        <h4 className="text-sm font-bold text-slate-900 dark:text-white">{society.people?.faculty?.name}</h4>
+                                        <div className="text-xs text-slate-500 dark:text-slate-400">{society.people?.faculty?.role}</div>
+                                        <div className="text-[11px] font-semibold text-purple-700 dark:text-purple-400">{society.people?.faculty?.designation}</div>
                                     </div>
                                 </div>
 
                                 {/* Student Coordinator Card */}
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                                <div className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-4">
                                     <img 
                                         src={society.people?.student?.image || "/ananya-iyer.webp"} 
                                         alt={society.people?.student?.name} 
-                                        className="w-14 h-14 rounded-full object-cover border-2 border-blue-100 shrink-0"
+                                        className="w-14 h-14 rounded-full object-cover border-2 border-blue-100 dark:border-blue-900/60 shrink-0"
                                     />
                                     <div>
-                                        <h4 className="text-sm font-bold text-slate-900">{society.people?.student?.name}</h4>
-                                        <div className="text-xs text-slate-500">{society.people?.student?.role}</div>
-                                        <div className="text-[11px] font-semibold text-blue-700">{society.people?.student?.department}</div>
+                                        <h4 className="text-sm font-bold text-slate-900 dark:text-white">{society.people?.student?.name}</h4>
+                                        <div className="text-xs text-slate-500 dark:text-slate-400">{society.people?.student?.role}</div>
+                                        <div className="text-[11px] font-semibold text-blue-700 dark:text-blue-400">{society.people?.student?.department}</div>
                                     </div>
                                 </div>
 
                                 {/* Core Team Card */}
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
                                     <div className="flex items-center gap-2 mb-2">
-                                        <Users className="w-4 h-4 text-purple-600" />
-                                        <div className="text-xs font-bold text-slate-900">Core Team</div>
+                                        <Users className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                                        <div className="text-xs font-bold text-slate-900 dark:text-white">Core Team</div>
                                     </div>
-                                    <p className="text-[11px] text-slate-500 mb-3">
+                                    <p className="text-[11px] text-slate-500 dark:text-slate-400 mb-3">
                                         Meet our amazing core team members and leads
                                     </p>
                                     <div className="flex items-center">
@@ -860,11 +860,11 @@ const SocietyDetailView = ({ society }) => {
                                                     key={i} 
                                                     src={member.image} 
                                                     alt={member.name} 
-                                                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" 
+                                                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-[#131c31] object-cover" 
                                                 />
                                             ))}
                                         </div>
-                                        <span className="ml-3 text-[11px] font-bold text-slate-600">
+                                        <span className="ml-3 text-[11px] font-bold text-slate-600 dark:text-slate-300">
                                             {society.people?.coreTeamCount || "+ More"}
                                         </span>
                                     </div>
@@ -875,8 +875,8 @@ const SocietyDetailView = ({ society }) => {
 
                         {/* SECTION: GALLERY & MEDIA */}
                         <section id="gallery" className="space-y-6">
-                            <div className="flex items-center justify-between border-b border-slate-200 pb-3 flex-wrap gap-4">
-                                <span className="text-xs font-black uppercase tracking-widest text-slate-900">
+                            <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 flex-wrap gap-4">
+                                <span className="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white">
                                     GALLERY & MEDIA
                                 </span>
                                 
@@ -893,7 +893,7 @@ const SocietyDetailView = ({ society }) => {
                                             className={`px-3 py-1 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
                                                 galleryTab === tab.id
                                                     ? 'bg-purple-600 text-white shadow-sm'
-                                                    : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                                                    : 'bg-white dark:bg-[#131c31] text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#18233c] border border-slate-200 dark:border-slate-800'
                                             }`}
                                         >
                                             {tab.label}
@@ -908,7 +908,7 @@ const SocietyDetailView = ({ society }) => {
                                     <div 
                                         key={i} 
                                         onClick={() => setLightboxImage(item.image)}
-                                        className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative group cursor-pointer aspect-video bg-slate-900"
+                                        className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm relative group cursor-pointer aspect-video bg-slate-900"
                                     >
                                         <img 
                                             src={item.image} 
@@ -927,7 +927,7 @@ const SocietyDetailView = ({ society }) => {
                             <div className="text-center pt-2">
                                 <Link
                                     to="/virtual-tour"
-                                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-all shadow-md active:scale-95"
+                                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-slate-900 dark:bg-purple-600 hover:bg-slate-800 dark:hover:bg-purple-500 text-white rounded-xl text-xs font-bold transition-all shadow-md active:scale-95"
                                 >
                                     <span>View Full Gallery</span>
                                     <ArrowRight className="w-4 h-4" />
@@ -939,20 +939,20 @@ const SocietyDetailView = ({ society }) => {
                         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             
                             {/* Announcements */}
-                            <div id="announcements" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div id="announcements" className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
                                 <div>
-                                    <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                                    <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-3">
                                         <Bell className="w-5 h-5" />
                                     </div>
-                                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">
+                                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-1">
                                         Announcements
                                     </h4>
-                                    <p className="text-[11px] text-slate-500 leading-normal">
+                                    <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-normal">
                                         Latest notices, schedules, and important information.
                                     </p>
                                 </div>
                                 <div className="mt-4">
-                                    <button onClick={() => scrollToSection('events')} className="text-xs font-bold text-blue-600 hover:underline flex items-center gap-1">
+                                    <button onClick={() => scrollToSection('events')} className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
                                         <span>View All</span>
                                         <ArrowRight className="w-3 h-3" />
                                     </button>
@@ -960,15 +960,15 @@ const SocietyDetailView = ({ society }) => {
                             </div>
 
                             {/* Recruitment */}
-                            <div id="recruitment" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div id="recruitment" className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
                                 <div>
-                                    <div className="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-3">
+                                    <div className="w-9 h-9 rounded-xl bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-3">
                                         <GraduationCap className="w-5 h-5" />
                                     </div>
-                                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">
+                                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-1">
                                         Recruitment
                                     </h4>
-                                    <p className="text-[11px] text-slate-500 leading-normal">
+                                    <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-normal">
                                         Join our passionate team and be a part of the journey!
                                     </p>
                                 </div>
@@ -977,7 +977,7 @@ const SocietyDetailView = ({ society }) => {
                                         href={society.recruitment?.formUrl || society.joinUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-xs font-bold text-purple-600 hover:underline flex items-center gap-1"
+                                        className="text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1"
                                     >
                                         <span>Apply Now</span>
                                         <ArrowRight className="w-3 h-3" />
@@ -986,15 +986,15 @@ const SocietyDetailView = ({ society }) => {
                             </div>
 
                             {/* FAQ */}
-                            <div id="faq" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div id="faq" className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
                                 <div>
-                                    <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+                                    <div className="w-9 h-9 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
                                         <HelpCircle className="w-5 h-5" />
                                     </div>
-                                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">
+                                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-1">
                                         FAQ
                                     </h4>
-                                    <p className="text-[11px] text-slate-500 leading-normal">
+                                    <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-normal">
                                         Frequently asked questions and detailed answers.
                                     </p>
                                 </div>
@@ -1004,7 +1004,7 @@ const SocietyDetailView = ({ society }) => {
                                             const faqEl = document.getElementById('faq-accordion');
                                             if (faqEl) faqEl.scrollIntoView({ behavior: 'smooth' });
                                         }}
-                                        className="text-xs font-bold text-emerald-600 hover:underline flex items-center gap-1"
+                                        className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
                                     >
                                         <span>View FAQ</span>
                                         <ArrowRight className="w-3 h-3" />
@@ -1013,39 +1013,39 @@ const SocietyDetailView = ({ society }) => {
                             </div>
 
                             {/* Connect With Us */}
-                            <div id="connect" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div id="connect" className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
                                 <div>
-                                    <div className="w-9 h-9 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center mb-3">
+                                    <div className="w-9 h-9 rounded-xl bg-pink-50 dark:bg-pink-950/50 text-pink-600 dark:text-pink-400 flex items-center justify-center mb-3">
                                         <Share2 className="w-5 h-5" />
                                     </div>
-                                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-2">
+                                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-2">
                                         Connect With Us
                                     </h4>
                                     <div className="flex gap-2.5">
                                         {society.socials?.instagram && (
-                                            <a href={society.socials.instagram} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-pink-100 hover:text-pink-600 flex items-center justify-center text-slate-600 transition-colors">
+                                            <a href={society.socials.instagram} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 dark:bg-[#18233c] hover:bg-pink-100 dark:hover:bg-pink-950/40 hover:text-pink-600 flex items-center justify-center text-slate-600 dark:text-slate-300 transition-colors">
                                                 <Globe className="w-4 h-4" />
                                             </a>
                                         )}
                                         {society.socials?.linkedin && (
-                                            <a href={society.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-100 hover:text-blue-600 flex items-center justify-center text-slate-600 transition-colors">
+                                            <a href={society.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 dark:bg-[#18233c] hover:bg-blue-100 dark:hover:bg-blue-950/40 hover:text-blue-600 flex items-center justify-center text-slate-600 dark:text-slate-300 transition-colors">
                                                 <Share2 className="w-4 h-4" />
                                             </a>
                                         )}
                                         {society.socials?.youtube && (
-                                            <a href={society.socials.youtube} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-red-100 hover:text-red-600 flex items-center justify-center text-slate-600 transition-colors">
+                                            <a href={society.socials.youtube} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 dark:bg-[#18233c] hover:bg-red-100 dark:hover:bg-red-950/40 hover:text-red-600 flex items-center justify-center text-slate-600 dark:text-slate-300 transition-colors">
                                                 <Presentation className="w-4 h-4" />
                                             </a>
                                         )}
                                         {society.email && (
-                                            <a href={`mailto:${society.email}`} className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-indigo-100 hover:text-indigo-600 flex items-center justify-center text-slate-600 transition-colors">
+                                            <a href={`mailto:${society.email}`} className="w-7 h-7 rounded-lg bg-slate-100 dark:bg-[#18233c] hover:bg-indigo-100 dark:hover:bg-indigo-950/40 hover:text-indigo-600 flex items-center justify-center text-slate-600 dark:text-slate-300 transition-colors">
                                                 <Mail className="w-4 h-4" />
                                             </a>
                                         )}
                                     </div>
                                 </div>
                                 <div className="mt-4">
-                                    <span className="text-xs font-bold text-slate-500">
+                                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400">
                                         Follow Us
                                     </span>
                                 </div>
@@ -1055,19 +1055,19 @@ const SocietyDetailView = ({ society }) => {
 
                         {/* EXPANDABLE FAQ ACCORDION */}
                         {society.faqs && society.faqs.length > 0 && (
-                            <section id="faq-accordion" className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                                    <HelpCircle className="w-4 h-4 text-purple-600" />
+                            <section id="faq-accordion" className="bg-white dark:bg-[#131c31] p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                                <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                    <HelpCircle className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                                     <span>Frequently Asked Questions</span>
                                 </h3>
                                 <div className="space-y-3">
                                     {society.faqs.map((faq, i) => (
-                                        <details key={i} className="group border border-slate-200 rounded-xl overflow-hidden">
-                                            <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-xs text-slate-900 bg-slate-50/50 hover:bg-slate-50">
+                                        <details key={i} className="group border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                                            <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-xs text-slate-900 dark:text-white bg-slate-50/50 dark:bg-[#0c1322] hover:bg-slate-50 dark:hover:bg-[#18233c]">
                                                 <span>{faq.q}</span>
                                                 <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform" />
                                             </summary>
-                                            <p className="p-4 pt-2 text-xs text-slate-600 leading-relaxed bg-white">
+                                            <p className="p-4 pt-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed bg-white dark:bg-[#131c31]">
                                                 {faq.a}
                                             </p>
                                         </details>
