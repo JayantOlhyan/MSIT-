@@ -121,7 +121,7 @@ const FacultyStaff = () => {
         });
 
     return (
-        <main className="min-h-screen bg-surface">
+        <main className="min-h-screen bg-surface dark:bg-[#0a0f1d] transition-colors duration-300">
             <SEO
                 title="Premium Faculty Directory"
                 description="Explore the comprehensive profiles, research strengths, and detailed metrics of the distinguished faculty at MSIT."
@@ -160,14 +160,14 @@ const FacultyStaff = () => {
             </div>
 
             {/* Advanced Search & Filtering - Sticky */}
-            <div className="sticky top-[68px] xl:top-[128px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-card transition-all duration-300">
+            <div className="sticky top-[68px] xl:top-[128px] z-30 bg-white/80 dark:bg-[#0a0f1d]/90 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 shadow-card transition-all duration-300">
                 <div className="max-w-7xl mx-auto px-6 py-3 sm:py-4 flex flex-col md:flex-row gap-4 md:items-center justify-between">
                     <div className="relative w-full md:w-96 group">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted group-focus-within:text-primary transition-colors" />
                         <input
                             type="text"
                             placeholder="Search names, skills, or roles..."
-                            className="w-full pl-12 pr-4 py-3 bg-surface border-2 border-transparent rounded-2xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-title font-medium placeholder-slate-400"
+                            className="w-full pl-12 pr-4 py-3 bg-surface dark:bg-[#131c31] border-2 border-transparent dark:border-white/10 rounded-2xl focus:bg-white dark:focus:bg-[#18233c] focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-title dark:text-white font-medium placeholder-slate-400"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
@@ -179,8 +179,8 @@ const FacultyStaff = () => {
                                 key={dept}
                                 onClick={() => setActiveDept(dept)}
                                 className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all whitespace-nowrap border-2 group ${activeDept === dept
-                                        ? 'bg-slate-900 border-slate-900 text-white shadow-md shadow-slate-900/30 focus:outline-none'
-                                        : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50 focus:outline-none'
+                                        ? 'bg-slate-900 dark:bg-blue-600 border-slate-900 dark:border-blue-600 text-white shadow-md shadow-slate-900/30 dark:shadow-blue-600/30 focus:outline-none'
+                                        : 'bg-white dark:bg-[#131c31] border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#18233c] focus:outline-none'
                                     }`}
                             >
                                 {dept}
@@ -201,13 +201,13 @@ const FacultyStaff = () => {
                             <div
                                 key={idx}
                                 onClick={() => handleOpenProfile(faculty)}
-                                className="group bg-white rounded-[2rem] p-6 shadow-card hover:shadow-card-hover border border-slate-200 hover:border-blue-200 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 relative overflow-hidden flex flex-col h-full"
+                                className="group bg-white dark:bg-[#131c31] rounded-[2rem] p-6 shadow-card hover:shadow-card-hover border border-slate-200 dark:border-white/10 hover:border-blue-200 dark:hover:border-blue-500/40 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 relative overflow-hidden flex flex-col h-full"
                             >
                                 {/* Decorative Glow */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 dark:from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                                 <div className="flex items-start gap-5 relative z-10 mb-6">
-                                    <div className="w-20 h-20 rounded-2xl overflow-hidden bg-surface shrink-0 shadow-inner p-1 border border-slate-200 group-hover:border-primary/30 transition-colors duration-500">
+                                    <div className="w-20 h-20 rounded-2xl overflow-hidden bg-surface dark:bg-[#18233c] shrink-0 shadow-inner p-1 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-colors duration-500">
                                         <img 
                                             src={faculty.img} 
                                             alt={`${faculty.name}, ${faculty.role} in the ${faculty.dept} department at MSIT`} 
@@ -218,42 +218,42 @@ const FacultyStaff = () => {
                                     <div className="group/dept">
                                         <span className={`inline-block px-2.5 py-1 text-xs uppercase tracking-bolder font-bold rounded-lg mb-2 transition-colors ${
                                             faculty.dept === 'Governing Body'
-                                                ? 'bg-purple-50 text-purple-700 border border-purple-200'
-                                                : 'bg-surface text-muted group-hover:bg-primary/10 group-hover:text-primary'
+                                                ? 'bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/40'
+                                                : 'bg-surface dark:bg-white/5 text-muted dark:text-slate-300 group-hover:bg-primary/10 group-hover:text-primary'
                                         }`}>
                                             {faculty.dept}
                                             {faculty.dept === 'Applied Sciences' && (
                                                 <span className="ml-1 font-bold text-primary/70">(1st Year)</span>
                                             )}
                                         </span>
-                                        <h3 className="text-lg font-bold text-title leading-tight mb-1 group-hover:text-primary transition-colors line-clamp-2">{faculty.name}</h3>
-                                        <p className="text-muted text-sm font-medium">{faculty.role}</p>
+                                        <h3 className="text-lg font-bold text-title dark:text-white leading-tight mb-1 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors line-clamp-2">{faculty.name}</h3>
+                                        <p className="text-muted dark:text-slate-400 text-sm font-medium">{faculty.role}</p>
                                     </div>
                                 </div>
 
                                 <div className="mt-auto relative z-10">
                                     {faculty.type !== 'staff' && (
                                         <div className="grid grid-cols-2 gap-3 mb-6">
-                                            <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 group-hover:bg-white group-hover:border-slate-200 transition-colors">
-                                                <div className="text-xs text-slate-400 font-medium mb-1">Experience</div>
-                                                <div className="font-bold text-slate-800">{faculty.experience} Yrs</div>
+                                            <div className="bg-slate-50 dark:bg-[#18233c] rounded-xl p-3 border border-slate-100 dark:border-white/10 group-hover:bg-white dark:group-hover:bg-[#202e4e] group-hover:border-slate-200 dark:group-hover:border-white/20 transition-colors">
+                                                <div className="text-xs text-slate-400 dark:text-slate-400 font-medium mb-1">Experience</div>
+                                                <div className="font-bold text-slate-800 dark:text-white">{faculty.experience} Yrs</div>
                                             </div>
-                                            <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 group-hover:bg-white group-hover:border-slate-200 transition-colors">
-                                                <div className="text-xs text-slate-400 font-medium mb-1">Publications</div>
-                                                <div className="font-bold text-slate-800">{faculty.publications}</div>
+                                            <div className="bg-slate-50 dark:bg-[#18233c] rounded-xl p-3 border border-slate-100 dark:border-white/10 group-hover:bg-white dark:group-hover:bg-[#202e4e] group-hover:border-slate-200 dark:group-hover:border-white/20 transition-colors">
+                                                <div className="text-xs text-slate-400 dark:text-slate-400 font-medium mb-1">Publications</div>
+                                                <div className="font-bold text-slate-800 dark:text-white">{faculty.publications}</div>
                                             </div>
                                         </div>
                                     )}
 
                                     {/* Brief highlight of Top Strength */}
-                                    <div className="flex items-center gap-2 text-sm text-slate-600 bg-emerald-50 text-emerald-700 px-3 py-2 rounded-xl mb-6 truncate">
+                                    <div className="flex items-center gap-2 text-sm bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800/30 px-3 py-2 rounded-xl mb-6 truncate">
                                         <Star className="w-4 h-4 shrink-0 fill-emerald-500 text-emerald-500" />
                                         <span className="truncate font-medium">{(faculty.researchInterests || faculty.goodAt || [])[0] || "Academic Instruction"}</span>
                                     </div>
 
-                                    <div className="flex items-center justify-between text-primary font-bold text-sm">
+                                    <div className="flex items-center justify-between text-primary dark:text-blue-400 font-bold text-sm">
                                         View Full Profile
-                                        <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                                        <div className="w-8 h-8 rounded-full bg-blue-50 dark:bg-blue-900/40 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
                                             <ChevronRight className="w-4 h-4" />
                                         </div>
                                     </div>
@@ -275,12 +275,12 @@ const FacultyStaff = () => {
                 <div className="fixed inset-0 z-[100] flex items-center justify-center px-3 sm:px-6 py-4 sm:py-6 animate-fade-in">
                     {/* Backdrop */}
                     <div
-                        className="absolute inset-0 bg-slate-900/50 backdrop-blur-md animate-backdrop-fade"
+                        className="absolute inset-0 bg-slate-950/70 backdrop-blur-md animate-backdrop-fade"
                         onClick={handleCloseProfile}
                     ></div>
 
                     {/* Modal Content */}
-                    <div className="relative bg-white w-full max-w-4xl max-h-[92vh] sm:max-h-[85vh] overflow-y-auto scrollbar-hide rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl animate-scale-in border border-white/20">
+                    <div className="relative bg-white dark:bg-[#131c31] w-full max-w-4xl max-h-[92vh] sm:max-h-[85vh] overflow-y-auto scrollbar-hide rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl animate-scale-in border border-white/20 dark:border-white/10">
                         {/* Close Button */}
                         <button
                             onClick={handleCloseProfile}
@@ -291,11 +291,11 @@ const FacultyStaff = () => {
                         </button>
 
                         {/* Modal Header/Hero */}
-                        <div className="bg-slate-900 pt-10 sm:pt-16 pb-8 md:pb-28 px-5 sm:px-8 md:px-16 relative overflow-hidden">
+                        <div className="bg-slate-900 dark:bg-[#070b16] pt-10 sm:pt-16 pb-8 md:pb-28 px-5 sm:px-8 md:px-16 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-[clamp(200px,30vw,400px)] h-[clamp(200px,30vw,400px)] bg-blue-500/20 rounded-full blur-[80px]"></div>
 
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-5 md:gap-8 relative z-10">
-                                <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-card shrink-0 md:-mb-36 z-10 border-2 border-white/10">
+                                <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-3xl bg-white dark:bg-[#18233c] p-1.5 shadow-card shrink-0 md:-mb-36 z-10 border-2 border-white/10">
                                     <img 
                                         src={selectedFaculty.img} 
                                         alt={`High-resolution portrait of ${selectedFaculty.name}, ${selectedFaculty.role} at MSIT`} 
@@ -321,53 +321,53 @@ const FacultyStaff = () => {
                         </div>
 
                         {/* Modal Body */}
-                        <div className="px-5 sm:px-8 md:px-16 pt-8 sm:pt-14 md:pt-20 pb-12 sm:pb-16 bg-[#f8fafc]">
+                        <div className="px-5 sm:px-8 md:px-16 pt-8 sm:pt-14 md:pt-20 pb-12 sm:pb-16 bg-[#f8fafc] dark:bg-[#0a0f1d]">
                             {/* Bio */}
-                            <p className="text-slate-600 text-lg leading-relaxed mb-12 font-light">
+                            <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-12 font-light">
                                 {selectedFaculty.bio}
                             </p>
 
                             {/* Metrics Grid */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
+                                <div className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-white/10 shadow-card flex flex-col items-center text-center">
                                     <Briefcase className="w-6 h-6 text-indigo-500 mb-3" />
-                                    <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.experience}</div>
-                                    <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Years Exp.</div>
+                                    <div className="text-2xl font-black text-slate-900 dark:text-white mb-1">{selectedFaculty.experience}</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Years Exp.</div>
                                 </div>
                                 {selectedFaculty.type !== 'staff' && (
                                     <>
-                                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
+                                        <div className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-white/10 shadow-card flex flex-col items-center text-center">
                                             <BookOpen className="w-6 h-6 text-blue-500 mb-3" />
-                                            <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.publications}</div>
-                                            <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Publications</div>
+                                            <div className="text-2xl font-black text-slate-900 dark:text-white mb-1">{selectedFaculty.publications}</div>
+                                            <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Publications</div>
                                         </div>
-                                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
+                                        <div className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-white/10 shadow-card flex flex-col items-center text-center">
                                             <Award className="w-6 h-6 text-amber-500 mb-3" />
-                                            <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.patents}</div>
-                                            <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Patents</div>
+                                            <div className="text-2xl font-black text-slate-900 dark:text-white mb-1">{selectedFaculty.patents}</div>
+                                            <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Patents</div>
                                         </div>
                                     </>
                                 )}
-                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
+                                <div className="bg-white dark:bg-[#131c31] p-5 rounded-2xl border border-slate-200 dark:border-white/10 shadow-card flex flex-col items-center text-center">
                                     <FileText className="w-6 h-6 text-emerald-500 mb-3" />
-                                    <div className="text-xs font-bold text-slate-900 mb-1 break-words w-full px-1">{selectedFaculty.qual || "Professional Staff"}</div>
-                                    <div className="text-xs text-slate-500 font-bold uppercase tracking-wider mt-auto">Qualification</div>
+                                    <div className="text-xs font-bold text-slate-900 dark:text-white mb-1 break-words w-full px-1">{selectedFaculty.qual || "Professional Staff"}</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider mt-auto">Qualification</div>
                                 </div>
                             </div>
 
                             {/* Research Interests & Courses Taught */}
                             <div className="grid md:grid-cols-2 gap-8 mb-12">
                                 {/* Research Interests & Specialization */}
-                                <div className="bg-emerald-50/50 rounded-3xl p-8 border border-emerald-100">
+                                <div className="bg-emerald-50/50 dark:bg-emerald-950/25 rounded-3xl p-8 border border-emerald-100 dark:border-emerald-800/30">
                                     <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
-                                            <Award className="w-5 h-5 text-emerald-600" />
+                                        <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
+                                            <Award className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-emerald-950">Research Interests & Specialization</h3>
+                                        <h3 className="text-xl font-bold text-emerald-950 dark:text-emerald-300">Research Interests & Specialization</h3>
                                     </div>
                                     <ul className="space-y-4">
                                         {(selectedFaculty.researchInterests || selectedFaculty.goodAt || []).map((trait, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-emerald-800">
+                                            <li key={i} className="flex items-start gap-3 text-emerald-800 dark:text-emerald-200">
                                                 <Star className="w-5 h-5 shrink-0 text-emerald-500 fill-emerald-500 mt-0.5" />
                                                 <span className="font-medium leading-relaxed">{trait}</span>
                                             </li>
@@ -376,19 +376,19 @@ const FacultyStaff = () => {
                                 </div>
 
                                 {/* Courses Taught & Academic Domains */}
-                                <div className="bg-blue-50/50 rounded-3xl p-8 border border-blue-100">
+                                <div className="bg-blue-50/50 dark:bg-blue-950/25 rounded-3xl p-8 border border-blue-100 dark:border-blue-800/30">
                                     <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
-                                            <BookOpen className="w-5 h-5 text-blue-600" />
+                                        <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+                                            <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-blue-950">Courses Taught & Academic Domains</h3>
+                                        <h3 className="text-xl font-bold text-blue-950 dark:text-blue-300">Courses Taught & Academic Domains</h3>
                                     </div>
                                     <ul className="space-y-4">
                                         {(selectedFaculty.coursesTaught || [
                                             "Advanced Engineering Foundations",
                                             "Undergraduate Laboratory & Project Mentorship"
                                         ]).map((course, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-slate-700">
+                                            <li key={i} className="flex items-start gap-3 text-slate-700 dark:text-slate-300">
                                                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0"></div>
                                                 <span className="font-medium leading-relaxed">{course}</span>
                                             </li>
@@ -398,19 +398,19 @@ const FacultyStaff = () => {
                             </div>
 
                             {/* Actions & Profiles */}
-                            <div className="flex flex-col gap-6 border-t border-slate-200 pt-8">
+                            <div className="flex flex-col gap-6 border-t border-slate-200 dark:border-white/10 pt-8">
                                 <div className="flex flex-wrap gap-4 items-center justify-between">
                                     <div className="flex flex-wrap gap-3 w-full sm:w-auto">
                                         <a
                                             href={`mailto:${selectedFaculty.email}`}
-                                            className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface text-body font-bold hover:bg-slate-200 transition-colors text-sm"
+                                            className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface dark:bg-[#18233c] text-body dark:text-slate-200 font-bold hover:bg-slate-200 dark:hover:bg-[#202e4e] transition-colors text-sm"
                                         >
-                                            <Mail className="w-4 h-4 text-slate-600" />
+                                            <Mail className="w-4 h-4 text-slate-600 dark:text-slate-400" />
                                             {selectedFaculty.email}
                                         </a>
                                         {selectedFaculty.phone && (
-                                            <span className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface text-slate-700 font-medium text-sm">
-                                                <Phone className="w-4 h-4 text-blue-600" />
+                                            <span className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface dark:bg-[#18233c] text-slate-700 dark:text-slate-200 font-medium text-sm">
+                                                <Phone className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                                                 {selectedFaculty.phone}
                                             </span>
                                         )}
@@ -429,7 +429,7 @@ const FacultyStaff = () => {
                                     ) : (
                                         <button
                                             disabled
-                                            className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-surface text-muted font-bold cursor-not-allowed w-full sm:w-auto text-sm"
+                                            className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-surface dark:bg-[#18233c] text-muted dark:text-slate-500 font-bold cursor-not-allowed w-full sm:w-auto text-sm"
                                         >
                                             <FileText className="w-4 h-4" />
                                             PDF Profile Unavailable
@@ -438,9 +438,9 @@ const FacultyStaff = () => {
                                 </div>
 
                                 {/* Online Profiles & Websites */}
-                                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                    <span className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-2">
-                                        <Globe className="w-4 h-4 text-blue-600" />
+                                <div className="bg-slate-50 dark:bg-[#131c31] rounded-2xl p-5 border border-slate-200/80 dark:border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 flex items-center gap-2">
+                                        <Globe className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                                         Profiles & Web Links
                                     </span>
                                     <div className="flex flex-wrap gap-2.5">
@@ -461,10 +461,10 @@ const FacultyStaff = () => {
                                                 href={selectedFaculty.personalWebsite}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-primary hover:text-primary transition-all shadow-xs"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white dark:bg-[#18233c] border border-slate-300 dark:border-white/15 text-slate-800 dark:text-slate-200 text-xs font-bold hover:border-primary dark:hover:border-primary hover:text-primary dark:hover:text-primary transition-all shadow-xs"
                                                 title="Personal Webpage"
                                             >
-                                                <Globe className="w-3.5 h-3.5 text-blue-600" />
+                                                <Globe className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                                                 Personal Webpage
                                             </a>
                                         )}
@@ -473,10 +473,10 @@ const FacultyStaff = () => {
                                                 href={selectedFaculty.googleScholar}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-amber-500 hover:text-amber-600 transition-all shadow-xs"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white dark:bg-[#18233c] border border-slate-300 dark:border-white/15 text-slate-800 dark:text-slate-200 text-xs font-bold hover:border-amber-500 dark:hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 transition-all shadow-xs"
                                                 title="Google Scholar Profile"
                                             >
-                                                <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+                                                <BookOpen className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                                                 Google Scholar
                                             </a>
                                         )}
@@ -485,10 +485,10 @@ const FacultyStaff = () => {
                                                 href={selectedFaculty.researchGate}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-xs"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white dark:bg-[#18233c] border border-slate-300 dark:border-white/15 text-slate-800 dark:text-slate-200 text-xs font-bold hover:border-emerald-500 dark:hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all shadow-xs"
                                                 title="ResearchGate Profile"
                                             >
-                                                <ExternalLink className="w-3.5 h-3.5 text-emerald-600" />
+                                                <ExternalLink className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                                                 ResearchGate
                                             </a>
                                         )}
