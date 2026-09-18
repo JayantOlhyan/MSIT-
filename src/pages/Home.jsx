@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
     Check, Award, ArrowRight, Play, X, Mail, Globe, ChevronDown, ChevronLeft, ChevronRight, Search, Clock,
     Users, BookOpen, GraduationCap, TrendingUp, Lightbulb, Target, ExternalLink, Building2, Camera,
-    Code2, Network, Cpu, Zap, CheckCircle2
+    Code2, Network, Cpu, Zap, CheckCircle2, Linkedin, Github, MapPin, Briefcase, MessageSquare
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -115,6 +115,8 @@ const Home = () => {
     const [showAllNews, setShowAllNews] = useState(false);
     // ... rest of state
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
+    const [selectedAlumnus, setSelectedAlumnus] = useState(null);
+    const [isAlumniPaused, setIsAlumniPaused] = useState(false);
     const [activeStatIndex, setActiveStatIndex] = useState(0);
     const statsContainerRef = useRef(null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -122,74 +124,159 @@ const Home = () => {
     const [galleryFilter, setGalleryFilter] = useState('All');
 
     const [testimonials] = useState(() => {
-        const stored = localStorage.getItem('msit_testimonials_v2');
-        if (stored) return JSON.parse(stored);
         const defaults = [
             {
                 id: 1,
                 name: "Priya Sharma",
                 year: "22",
+                batch: "2018–2022",
                 major: "Computer Science & Engineering",
-                quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google. The connections I made here will last a lifetime.",
+                role: "Software Engineer II",
                 company: "Google",
-                image: "/priya-sharma.webp"
+                location: "Bengaluru, India",
+                image: "/priya-sharma.webp",
+                quote: "MSIT has shaped me into the professional I am today. The faculty mentorship, hands-on projects, and industry exposure prepared me exceptionally well for my career at Google. The connections I made here will last a lifetime.",
+                adviceForJuniors: "Build strong problem-solving fundamentals in Data Structures & Algorithms early on. Work on at least one production-grade full stack or systems project with your peers, and never hesitate to reach out to MSIT seniors for guidance.",
+                skills: ["Distributed Systems", "C++", "Go", "System Design", "Kubernetes", "Algorithms"],
+                socials: {
+                    linkedin: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/",
+                    github: "https://github.com",
+                    email: "mailto:alumni@msit.in"
+                }
             },
             {
                 id: 2,
                 name: "Rahul Verma",
                 year: "23",
+                batch: "2019–2023",
                 major: "Information Technology",
-                quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.",
+                role: "Cloud Solutions Architect",
                 company: "Microsoft",
-                image: "/rahul-verma.webp"
+                location: "Hyderabad, India",
+                image: "/rahul-verma.webp",
+                quote: "The rigorous academic environment at MSIT pushes you to be your absolute best. I was able to participate in cutting-edge research and hackathons that gave me the edge I needed for my role at Microsoft.",
+                adviceForJuniors: "Hands-on cloud certifications (Azure/AWS) and participating in MSIT technical societies like IEEE MSIT or GeekRoom will give you practical exposure far ahead of textbook curriculum.",
+                skills: ["Cloud Architecture", "Azure", "Python", "Microservices", "Docker & Kubernetes"],
+                socials: {
+                    linkedin: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/",
+                    github: "https://github.com",
+                    email: "mailto:alumni@msit.in"
+                }
             },
             {
                 id: 3,
                 name: "Ananya Iyer",
                 year: "21",
-                major: "Electronics & Communication",
-                quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
+                batch: "2017–2021",
+                major: "Electronics & Communication Engineering",
+                role: "Silicon Design Engineer",
                 company: "Apple",
-                image: "/ananya-iyer.webp"
+                location: "Bengaluru, India / Cupertino, CA",
+                image: "/ananya-iyer.webp",
+                quote: "I never realized how much potential I had until I stepped foot on the MSIT campus. The professors saw something in me and nurtured my skills in chip design and embedded systems. I'm infinitely grateful.",
+                adviceForJuniors: "Hardware engineering is having a golden era. Focus on Verilog, FPGA prototyping, and semiconductor fundamentals in MSIT's IDEA Lab. Core engineering roles value deep fundamentals above all else.",
+                skills: ["VLSI Design", "SystemVerilog", "FPGA Prototyping", "Embedded Systems", "Semiconductor Architecture"],
+                socials: {
+                    linkedin: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/",
+                    github: "https://github.com",
+                    email: "mailto:alumni@msit.in"
+                }
             },
             {
                 id: 4,
                 name: "Prasanjeet Parasar",
                 year: "23",
+                batch: "2019–2023",
                 major: "Computer Science & Engineering",
+                role: "Financial Systems Engineer",
+                company: "ION Group",
+                location: "Noida, India",
+                image: "/prasanjeet-parasar.webp",
                 quote: "In the Stakeholder Round, candidates are assessed not just on technical skills but also on how well they understand the company and their own profiles. Resumes need to be polished and error-free, tailored to highlight experiences and skills most relevant to the role.",
-                company: "ION",
-                image: "/prasanjeet-parasar.webp"
+                adviceForJuniors: "For FinTech & high-throughput systems, master low-latency Java/C++, multithreading, and SQL query performance. During interviews, articulate your thought process clearly and speak with honesty.",
+                skills: ["High-Throughput Systems", "Core Java", "Multithreading", "SQL Optimization", "Data Structures"],
+                socials: {
+                    linkedin: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/",
+                    github: "https://github.com",
+                    email: "mailto:alumni@msit.in"
+                }
             },
             {
                 id: 5,
                 name: "Kartikay Arya",
                 year: "23",
+                batch: "2019–2023",
                 major: "Computer Science & Engineering (2nd Shift)",
-                quote: "Secured All India Rank 1 (AIR-1) in the SSC Navy examination upon graduating from MSIT. The discipline and support of the faculty helped me prepare for my career in the armed forces.",
+                role: "Sub-Lieutenant (AIR-1)",
                 company: "Indian Navy",
-                image: "/kartikay-arya.webp"
+                location: "New Delhi / Kochi, India",
+                image: "/kartikay-arya.webp",
+                quote: "Secured All India Rank 1 (AIR-1) in the SSC Navy examination upon graduating from MSIT. The discipline and support of the faculty helped me prepare for my career in the armed forces.",
+                adviceForJuniors: "A technical degree from MSIT opens doors not just in corporate tech but in national defence, research laboratories (DRDO/ISRO), and public service. Build consistency, discipline, and stamina alongside your coursework.",
+                skills: ["Naval Technology", "Defence Systems", "Leadership & Operations", "Cyber Defense", "Physical Fitness"],
+                socials: {
+                    linkedin: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/",
+                    email: "mailto:alumni@msit.in"
+                }
             },
             {
                 id: 6,
                 name: "Varun Bansal",
                 year: "19",
+                batch: "2015–2019",
                 major: "Electronics & Communication Engineering",
-                quote: "MSIT is more than a college; it is a community that shapes your future. Sponsoring NCI-TIDE 2025 is my way of giving back and maintaining the enduring bond between mentors and alumni.",
+                role: "Founder & Managing Director",
                 company: "Elegance Spark Innovation",
-                image: "/varun-bansal.webp"
+                location: "New Delhi, India",
+                image: "/varun-bansal.webp",
+                quote: "MSIT is more than a college; it is a community that shapes your future. Sponsoring NCI-TIDE 2025 is my way of giving back and maintaining the enduring bond between mentors and alumni.",
+                adviceForJuniors: "Don't be afraid to take the entrepreneurial path. Start by solving genuine problems around you. MSIT faculty and our alumni network will always stand behind you to provide initial mentorship and guidance.",
+                skills: ["Hardware Product Dev", "Startup Leadership", "IoT Solutions", "Venture Strategy", "Product Engineering"],
+                socials: {
+                    linkedin: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/",
+                    email: "mailto:alumni@msit.in"
+                }
             },
             {
                 id: 7,
                 name: "Saransh Kapoor",
                 year: "25",
+                batch: "2021–2025",
                 major: "Computer Science & Engineering",
+                role: "Associate Software Engineer",
+                company: "ION Group",
+                location: "Gurugram, India",
+                image: "/saransh-kapoor.webp",
                 quote: "Keep your answers short, crisp, and polite during interview rounds. A combination of humility, confidence, and clear communication can make a lasting impression on interviewers.",
-                company: "ION",
-                image: "/saransh-kapoor.webp"
+                adviceForJuniors: "Practice mock interviews with your friends in the library. When an interviewer asks a question, clarify the requirements first, discuss your time complexity before writing code, and show genuine enthusiasm.",
+                skills: ["Competitive Programming", "Java", "Spring Boot", "RESTful APIs", "System Architecture"],
+                socials: {
+                    linkedin: "https://www.linkedin.com/school/maharaja-surajmal-institute-of-technology-msitnewdelhi/",
+                    github: "https://github.com",
+                    email: "mailto:alumni@msit.in"
+                }
             }
         ];
-        localStorage.setItem('msit_testimonials_v2', JSON.stringify(defaults));
+
+        const stored = localStorage.getItem('msit_testimonials_v3') || localStorage.getItem('msit_testimonials_v2');
+        if (stored) {
+            try {
+                const parsed = JSON.parse(stored);
+                return defaults.map(def => {
+                    const match = parsed.find(p => p.id === def.id) || {};
+                    return {
+                        ...def,
+                        ...match,
+                        socials: { ...def.socials, ...(match.socials || {}) },
+                        skills: def.skills,
+                        adviceForJuniors: match.adviceForJuniors || def.adviceForJuniors
+                    };
+                });
+            } catch (err) {
+                // fallback
+            }
+        }
+        localStorage.setItem('msit_testimonials_v3', JSON.stringify(defaults));
         return defaults;
     });
 
@@ -286,11 +373,28 @@ const Home = () => {
 
 
     useEffect(() => {
+        if (isAlumniPaused || selectedAlumnus) return;
         const timer = setInterval(() => {
             setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
         }, 6000);
         return () => clearInterval(timer);
-    }, [testimonials.length]);
+    }, [testimonials.length, isAlumniPaused, selectedAlumnus]);
+
+    useEffect(() => {
+        if (selectedAlumnus) {
+            document.body.style.overflow = 'hidden';
+            const handleKeyDown = (e) => {
+                if (e.key === 'Escape') setSelectedAlumnus(null);
+            };
+            window.addEventListener('keydown', handleKeyDown);
+            return () => {
+                document.body.style.overflow = '';
+                window.removeEventListener('keydown', handleKeyDown);
+            };
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [selectedAlumnus]);
 
     useEffect(() => {
         setShowAllNews(false);
@@ -1344,63 +1448,162 @@ const Home = () => {
             </section>
 
             {/* TESTIMONIALS CAROUSEL */}
-            <section className="py-32 bg-white border-b border-slate-100 overflow-hidden">
+            <section className="py-24 sm:py-32 bg-white border-b border-slate-100 overflow-hidden relative">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <span className="text-blue-700 font-black tracking-[0.25em] text-xs uppercase mb-4 block">Success Stories</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-20 leading-tight">Alumni Shaping the World</h2>
+                    <span className="text-blue-700 font-extrabold tracking-[0.25em] text-xs uppercase mb-3 block">
+                        Success Stories &bull; Alumni Mentorship
+                    </span>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4 leading-tight">
+                        Alumni Shaping the World
+                    </h2>
+                    <p className="text-slate-500 text-xs sm:text-sm max-w-2xl mx-auto mb-16 font-medium">
+                        Hear from MSIT graduates working at premier tech companies, defence, and high-growth ventures. Click any profile to view their journey, career advice, and connect.
+                    </p>
 
                     <div
-                        className="relative max-w-5xl mx-auto px-4 md:px-0"
+                        className="relative max-w-5xl mx-auto px-2 sm:px-4"
                         onTouchStart={handleTouchStart}
                         onTouchMove={handleTouchMove}
                         onTouchEnd={handleTouchEnd}
+                        onMouseEnter={() => setIsAlumniPaused(true)}
+                        onMouseLeave={() => setIsAlumniPaused(false)}
                     >
+                        {/* Carousel Slides Container */}
+                        <div className="grid relative z-10 min-h-[420px] sm:min-h-[380px]">
+                            {testimonials.map((t, i) => {
+                                const isActive = i === currentTestimonial;
+                                return (
+                                    <div
+                                        key={t.id || i}
+                                        onClick={() => setSelectedAlumnus(t)}
+                                        className={`col-start-1 row-start-1 transition-all duration-500 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14 px-2 sm:px-6 py-6 cursor-pointer group select-none ${
+                                            isActive 
+                                                ? 'opacity-100 translate-x-0 z-10 visible pointer-events-auto' 
+                                                : 'opacity-0 translate-x-10 pointer-events-none -z-10 invisible'
+                                        }`}
+                                    >
+                                        {/* Alumnus Photo Card */}
+                                        <div className="w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-3xl overflow-hidden shadow-xl border-4 border-white shrink-0 relative group-hover:shadow-2xl group-hover:scale-105 transition-all duration-500 bg-slate-100">
+                                            <img 
+                                                src={t.image} 
+                                                alt={`Portrait of MSIT Alumnus ${t.name}, Class of '${t.year}`} 
+                                                className="w-full h-full object-cover grayscale opacity-95 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
+                                                loading="lazy"
+                                                decoding="async"
+                                                onError={(e) => {
+                                                    e.currentTarget.onerror = null;
+                                                    e.currentTarget.src = '/faculty/default-avatar.svg';
+                                                }}
+                                            />
+                                            {/* Hover Prompt Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                                <span className="text-white text-xs font-bold flex items-center gap-1.5 drop-shadow-md">
+                                                    <ExternalLink className="w-3.5 h-3.5" /> View Profile &amp; Socials
+                                                </span>
+                                            </div>
+                                        </div>
 
-                        <div className="grid relative z-10 min-h-[400px]">
-                            {testimonials.map((t, i) => (
-                                <div
-                                    key={i}
-                                    className={`col-start-1 row-start-1 transition-all duration-1000 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-2 sm:px-4 py-8
-                                    ${i === currentTestimonial ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-32 pointer-events-none -z-10'}`}
-                                >
-                                    <div className="w-56 h-56 md:w-80 md:h-80 rounded-[40px] overflow-hidden shadow-card border-[12px] border-white shrink-0 transform -rotate-3 group-hover:rotate-0 transition-all duration-700 hover:scale-105">
-                                        <img 
-                                            src={t.image} 
-                                            alt={`Portrait of MSIT Alumnus ${t.name}, Class of '${t.year}, currently at ${t.company}`} 
-                                            className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" 
-                                            loading="lazy"
-                                            decoding="async"
-                                            onError={(e) => {
-                                                e.currentTarget.onerror = null;
-                                                e.currentTarget.src = '/faculty/default-avatar.svg';
-                                            }}
-                                        />
-                                    </div>
+                                        {/* Testimonial Quote and Credentials */}
+                                        <div className="text-center md:text-left flex-grow max-w-xl relative">
+                                            <div className="text-hero leading-none text-blue-600/10 absolute -top-10 -left-6 md:-left-10 font-serif z-0 select-none italic pointer-events-none">
+                                                &ldquo;
+                                            </div>
+                                            <p className="text-lg sm:text-xl md:text-2xl font-serif text-slate-800 leading-relaxed mb-6 md:mb-8 italic opacity-95 relative z-10">
+                                                &ldquo;{t.quote}&rdquo;
+                                            </p>
+                                            
+                                            <div className="font-bold text-xl sm:text-2xl text-slate-900 tracking-tight">
+                                                {t.name}
+                                                <span className="font-semibold text-slate-500 text-sm sm:text-base ml-2">
+                                                    Class of '{t.year}
+                                                </span>
+                                            </div>
+                                            
+                                            <div className="text-blue-700 font-semibold text-sm sm:text-base tracking-tight mb-4">
+                                                {t.role ? `${t.role} &bull; ` : ''}{t.major}
+                                            </div>
 
-                                    <div className="text-center md:text-left flex-grow max-w-xl relative">
-                                        <div className="text-hero leading-none text-blue-600/10 absolute -top-10 -left-6 md:-left-10 font-serif z-0 select-none italic pointer-events-none">"</div>
-                                        <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed mb-6 md:mb-10 italic opacity-95">
-                                            {t.quote}
-                                        </p>
-                                        <div className="font-bold text-2xl text-slate-900 mb-1 tracking-tight">{t.name} <span className="font-medium text-slate-500 text-lg ml-2">Class of '{t.year}</span></div>
-                                        <div className="text-blue-600 font-bold text-lg tracking-tight mb-4 md:mb-6">{t.major}</div>
-                                        <div className="inline-block px-5 py-2 bg-slate-900 text-white text-xs font-black uppercase tracking-[0.2em] rounded-lg shadow-card border border-white/10">{t.company}</div>
+                                            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                                                <span className="inline-block px-4 py-1.5 bg-slate-900 text-white text-xs font-black uppercase tracking-[0.2em] rounded-lg shadow-sm">
+                                                    {t.company}
+                                                </span>
+
+                                                <button 
+                                                    onClick={(e) => { 
+                                                        e.stopPropagation(); 
+                                                        setSelectedAlumnus(t); 
+                                                    }}
+                                                    className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white rounded-lg text-xs font-extrabold uppercase tracking-wider transition-all duration-300 shadow-2xs hover:shadow-md cursor-pointer"
+                                                >
+                                                    <ExternalLink className="w-3.5 h-3.5" /> Full Profile
+                                                </button>
+
+                                                {t.socials?.linkedin && (
+                                                    <a 
+                                                        href={t.socials.linkedin} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                        className="w-8 h-8 rounded-lg bg-[#0A66C2] text-white flex items-center justify-center hover:opacity-90 shadow-2xs transition-transform active:scale-95"
+                                                        title="Connect on LinkedIn"
+                                                    >
+                                                        <Linkedin className="w-3.5 h-3.5" />
+                                                    </a>
+                                                )}
+
+                                                {t.socials?.github && (
+                                                    <a 
+                                                        href={t.socials.github} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                        className="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center hover:bg-black shadow-2xs transition-transform active:scale-95"
+                                                        title="GitHub Profile"
+                                                    >
+                                                        <Github className="w-3.5 h-3.5" />
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
 
-                        <div className="flex justify-center gap-4 mt-16">
-                            {testimonials.map((_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => setCurrentTestimonial(i)}
-                                    className={`group relative py-4 px-1 rounded-full transition-all duration-500`}
-                                    aria-label={`Go to testimonial ${i + 1}`}
-                                >
-                                    <div className={`h-2 rounded-full transition-all duration-500 ${i === currentTestimonial ? 'bg-primary w-12 shadow-card shadow-blue-200' : 'bg-slate-200 group-hover:bg-slate-300 w-2.5'}`}></div>
-                                </button>
-                            ))}
+                        {/* Carousel Navigation (Arrows + Dots) */}
+                        <div className="flex items-center justify-center gap-6 mt-12">
+                            <button
+                                onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+                                className="w-9 h-9 rounded-full bg-white hover:bg-slate-900 text-slate-600 hover:text-white border border-slate-200 shadow-xs flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+                                aria-label="Previous alumnus"
+                            >
+                                <ChevronLeft className="w-4 h-4" />
+                            </button>
+
+                            <div className="flex items-center gap-2">
+                                {testimonials.map((_, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => setCurrentTestimonial(i)}
+                                        className="group relative py-2 px-1 rounded-full transition-all duration-300"
+                                        aria-label={`Go to testimonial ${i + 1}`}
+                                    >
+                                        <div className={`h-2 rounded-full transition-all duration-500 ${
+                                            i === currentTestimonial 
+                                                ? 'bg-blue-600 w-10 shadow-xs' 
+                                                : 'bg-slate-200 group-hover:bg-slate-300 w-2.5'
+                                        }`}></div>
+                                    </button>
+                                ))}
+                            </div>
+
+                            <button
+                                onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
+                                className="w-9 h-9 rounded-full bg-white hover:bg-slate-900 text-slate-600 hover:text-white border border-slate-200 shadow-xs flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+                                aria-label="Next alumnus"
+                            >
+                                <ChevronRight className="w-4 h-4" />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1493,6 +1696,174 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* ALUMNI PROFILE MODAL */}
+            {selectedAlumnus && (
+                <div 
+                    className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto animate-fade-in"
+                    onClick={() => setSelectedAlumnus(null)}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="alumni-modal-title"
+                >
+                    <div 
+                        className="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-slate-200/90 relative my-8 animate-scale-up"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Header Gradient Banner */}
+                        <div className="h-28 bg-gradient-to-r from-blue-700 via-indigo-700 to-slate-900 relative">
+                            <button 
+                                onClick={() => setSelectedAlumnus(null)}
+                                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/30 hover:bg-black/60 text-white flex items-center justify-center transition-colors backdrop-blur-md border border-white/20 cursor-pointer"
+                                aria-label="Close profile modal"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+                        </div>
+
+                        {/* Profile Info Container */}
+                        <div className="px-6 sm:px-8 pb-8 -mt-14 relative">
+                            {/* Avatar and Badges */}
+                            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-5">
+                                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-slate-100 shrink-0">
+                                    <img 
+                                        src={selectedAlumnus.image} 
+                                        alt={selectedAlumnus.name}
+                                        className="w-full h-full object-cover"
+                                        onError={(e) => {
+                                            e.currentTarget.onerror = null;
+                                            e.currentTarget.src = '/faculty/default-avatar.svg';
+                                        }}
+                                    />
+                                </div>
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <span className="px-3 py-1 bg-slate-900 text-white text-xs font-black uppercase tracking-wider rounded-lg shadow-sm">
+                                        {selectedAlumnus.company}
+                                    </span>
+                                    <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-lg border border-blue-200/70">
+                                        Class of '{selectedAlumnus.year}
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Name & Academic Credentials */}
+                            <div className="mb-5">
+                                <h3 id="alumni-modal-title" className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
+                                    {selectedAlumnus.name}
+                                </h3>
+                                <p className="text-sm font-semibold text-blue-700 mt-0.5">
+                                    {selectedAlumnus.role ? `${selectedAlumnus.role} at ` : ''}{selectedAlumnus.company}
+                                </p>
+                                <p className="text-xs text-slate-500 font-medium flex flex-wrap items-center gap-2 mt-1.5">
+                                    <GraduationCap className="w-3.5 h-3.5 text-slate-400" />
+                                    <span>{selectedAlumnus.major}</span>
+                                    <span>&bull;</span>
+                                    <span>Batch {selectedAlumnus.batch || `Class of '20${selectedAlumnus.year}`}</span>
+                                </p>
+                                {selectedAlumnus.location && (
+                                    <p className="text-xs text-slate-400 flex items-center gap-1.5 mt-1 font-medium">
+                                        <MapPin className="w-3.5 h-3.5" />
+                                        <span>{selectedAlumnus.location}</span>
+                                    </p>
+                                )}
+                            </div>
+
+                            {/* Social Connect Buttons (Prominent) */}
+                            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80 mb-6 flex flex-wrap items-center justify-between gap-3">
+                                <div className="text-xs font-bold text-slate-700">
+                                    Connect with {selectedAlumnus.name.split(' ')[0]}:
+                                </div>
+                                <div className="flex flex-wrap items-center gap-2">
+                                    {selectedAlumnus.socials?.linkedin && (
+                                        <a 
+                                            href={selectedAlumnus.socials.linkedin} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A66C2] hover:bg-[#084e96] text-white rounded-xl text-xs font-bold shadow-xs hover:shadow-md transition-all active:scale-95"
+                                        >
+                                            <Linkedin className="w-4 h-4" />
+                                            <span>LinkedIn Profile</span>
+                                            <ExternalLink className="w-3 h-3 opacity-80" />
+                                        </a>
+                                    )}
+                                    {selectedAlumnus.socials?.github && (
+                                        <a 
+                                            href={selectedAlumnus.socials.github} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 px-3.5 py-2 bg-slate-900 hover:bg-black text-white rounded-xl text-xs font-bold shadow-xs hover:shadow-md transition-all active:scale-95"
+                                        >
+                                            <Github className="w-4 h-4" />
+                                            <span>GitHub</span>
+                                            <ExternalLink className="w-3 h-3 opacity-80" />
+                                        </a>
+                                    )}
+                                    {selectedAlumnus.socials?.email && (
+                                        <a 
+                                            href={selectedAlumnus.socials.email} 
+                                            className="inline-flex items-center gap-2 px-3.5 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl text-xs font-bold border border-slate-200 shadow-xs transition-all active:scale-95"
+                                        >
+                                            <Mail className="w-4 h-4 text-slate-500" />
+                                            <span>Email</span>
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+
+                            {/* Advice for Juniors (Highlighted Callout) */}
+                            <div className="p-5 bg-gradient-to-br from-blue-50/80 to-indigo-50/50 rounded-2xl border border-blue-200/70 mb-5">
+                                <div className="flex items-center gap-2 text-blue-800 font-extrabold text-xs uppercase tracking-wider mb-2">
+                                    <MessageSquare className="w-4 h-4 text-blue-600" />
+                                    <span>Career Advice for MSIT Juniors</span>
+                                </div>
+                                <p className="text-slate-800 text-xs sm:text-sm leading-relaxed font-medium">
+                                    &ldquo;{selectedAlumnus.adviceForJuniors || selectedAlumnus.quote}&rdquo;
+                                </p>
+                            </div>
+
+                            {/* Testimonial / Story */}
+                            <div className="mb-5">
+                                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
+                                    MSIT Journey &amp; Reflection
+                                </h4>
+                                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-normal bg-white p-4 rounded-xl border border-slate-100 shadow-2xs">
+                                    &ldquo;{selectedAlumnus.quote}&rdquo;
+                                </p>
+                            </div>
+
+                            {/* Technical Domains & Skills */}
+                            {selectedAlumnus.skills && selectedAlumnus.skills.length > 0 && (
+                                <div className="mb-6">
+                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2.5">
+                                        Core Competencies &amp; Domains
+                                    </h4>
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {selectedAlumnus.skills.map((skill, sIdx) => (
+                                            <span 
+                                                key={sIdx}
+                                                className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold border border-slate-200/60"
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Mentorship Note */}
+                            <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+                                <span>MSIT Alumni Mentorship Network</span>
+                                <button 
+                                    onClick={() => setSelectedAlumnus(null)}
+                                    className="px-4 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-bold transition-colors cursor-pointer"
+                                >
+                                    Close Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Lightbox Modal (for Tour/Images) */}
             {lightboxOpen && (
