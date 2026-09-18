@@ -37,7 +37,7 @@ const SearchPage = () => {
     const totalResultsCount = facultyResults.length + pageResults.length + qaResults.length;
 
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] transition-colors duration-300">
             <SEO 
                 title={query ? `Search Results for "${query}"` : "Search"} 
                 description="Search for courses, departments, faculty, and academic resources at Maharaja Surajmal Institute of Technology. Find the information you need quickly today." 
@@ -50,15 +50,15 @@ const SearchPage = () => {
                 breadcrumbs={[{ label: 'Search' }]}
             />
             <div className="max-w-5xl mx-auto px-4 py-12">
-                <div className="bg-white rounded-3xl shadow-card border border-slate-100 p-8 md:p-12 mb-8">
+                <div className="bg-white dark:bg-[#131c31] rounded-3xl shadow-card border border-slate-100 dark:border-white/10 p-8 md:p-12 mb-8">
 
                     {query ? (
                         <div className="space-y-8">
-                            <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-100 pb-6 gap-4">
-                                <p className="text-lg text-slate-600">
-                                    Showing results for <span className="font-semibold text-slate-900 border-b-2 border-blue-200 pb-0.5">"{query}"</span>
+                            <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-100 dark:border-white/10 pb-6 gap-4">
+                                <p className="text-lg text-slate-600 dark:text-slate-300">
+                                    Showing results for <span className="font-semibold text-slate-900 dark:text-white border-b-2 border-blue-200 dark:border-blue-500 pb-0.5">"{query}"</span>
                                 </p>
-                                <span className="text-sm font-semibold text-primary bg-blue-50 px-3 py-1.5 rounded-full border border-blue-100/50 self-start sm:self-auto">
+                                <span className="text-sm font-semibold text-primary dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40 px-3 py-1.5 rounded-full border border-blue-100/50 dark:border-blue-800/40 self-start sm:self-auto">
                                     {totalResultsCount} matching results found
                                 </span>
                             </div>
@@ -68,14 +68,14 @@ const SearchPage = () => {
                                     {/* QA Answers Category */}
                                     {qaResults.length > 0 && (
                                         <div className="space-y-4">
-                                            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-600 flex items-center gap-2">
+                                            <h2 className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 flex items-center gap-2">
                                                 <MessageSquare size={14} className="text-blue-500" /> Quick Answers
                                             </h2>
                                             <div className="space-y-4">
                                                 {qaResults.map((qa, idx) => (
-                                                    <div key={idx} className="p-6 bg-blue-50/40 rounded-2xl border border-blue-100/50 shadow-sm">
-                                                        <h3 className="text-base font-bold text-blue-950 mb-2">Q: {qa.q}</h3>
-                                                        <p className="text-sm text-slate-700 leading-relaxed font-light">{qa.a}</p>
+                                                    <div key={idx} className="p-6 bg-blue-50/40 dark:bg-blue-950/20 rounded-2xl border border-blue-100/50 dark:border-blue-800/40 shadow-sm">
+                                                        <h3 className="text-base font-bold text-blue-950 dark:text-blue-300 mb-2">Q: {qa.q}</h3>
+                                                        <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-light">{qa.a}</p>
                                                     </div>
                                                 ))}
                                             </div>
@@ -85,7 +85,7 @@ const SearchPage = () => {
                                     {/* Faculty Category */}
                                     {facultyResults.length > 0 && (
                                         <div className="space-y-4">
-                                            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 flex items-center gap-2">
+                                            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-400 flex items-center gap-2">
                                                 <User size={14} /> Faculty Members
                                             </h2>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -93,18 +93,18 @@ const SearchPage = () => {
                                                     <Link 
                                                         key={idx} 
                                                         to={f.url} 
-                                                        className="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-sm transition-all group bg-slate-50/50"
+                                                        className="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-blue-400 dark:hover:border-blue-500/40 hover:shadow-sm transition-all group bg-slate-50/50 dark:bg-[#18233c]"
                                                     >
                                                         <div className="flex items-center gap-3">
-                                                            <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-blue-100 group-hover:text-blue-600 transition-colors">
+                                                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-400 group-hover:bg-blue-100 group-hover:text-blue-600 transition-colors">
                                                                 <User size={18} />
                                                             </div>
                                                             <div>
-                                                                <div className="text-sm font-semibold text-slate-900 leading-none mb-1 group-hover:text-primary transition-colors">{f.name}</div>
-                                                                <div className="text-xs text-slate-500 font-medium">{f.role} • <span className="font-bold text-primary">{f.dept}</span></div>
+                                                                <div className="text-sm font-semibold text-slate-900 dark:text-white leading-none mb-1 group-hover:text-primary transition-colors">{f.name}</div>
+                                                                <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">{f.role} • <span className="font-bold text-primary dark:text-blue-400">{f.dept}</span></div>
                                                             </div>
                                                         </div>
-                                                        <ArrowRight size={14} className="text-slate-300 group-hover:text-slate-900 group-hover:translate-x-1 transition-all" />
+                                                        <ArrowRight size={14} className="text-slate-300 dark:text-slate-600 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition-all" />
                                                     </Link>
                                                 ))}
                                             </div>
@@ -114,7 +114,7 @@ const SearchPage = () => {
                                     {/* Navigation Pages Category */}
                                     {pageResults.length > 0 && (
                                         <div className="space-y-4">
-                                            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 flex items-center gap-2">
+                                            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-400 flex items-center gap-2">
                                                 <Hash size={14} /> Pages & Navigation
                                             </h2>
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -122,9 +122,9 @@ const SearchPage = () => {
                                                     <Link 
                                                         key={idx} 
                                                         to={p.url} 
-                                                        className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-sm text-slate-700 hover:text-primary transition-all bg-slate-50/50 group"
+                                                        className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-blue-400 dark:hover:border-blue-500/40 hover:shadow-sm text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-blue-400 transition-all bg-slate-50/50 dark:bg-[#18233c] group"
                                                     >
-                                                        <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors shrink-0">
+                                                        <div className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/10 flex items-center justify-center group-hover:bg-blue-50 dark:group-hover:bg-blue-950/40 group-hover:text-blue-600 transition-colors shrink-0">
                                                             <Hash size={14} />
                                                         </div>
                                                         <span className="text-sm font-bold">{p.title}</span>
@@ -136,21 +136,21 @@ const SearchPage = () => {
                                 </div>
                             ) : (
                                 <div className="text-center py-16">
-                                    <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <Search className="w-8 h-8 text-slate-300" />
+                                    <div className="w-16 h-16 bg-slate-100 dark:bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Search className="w-8 h-8 text-slate-300 dark:text-slate-500" />
                                     </div>
-                                    <h2 className="text-2xl font-bold text-slate-900 mb-2">No Results Found</h2>
-                                    <p className="text-slate-500 max-w-md mx-auto">We couldn't find any departments, faculty members, or quick answers matching "{query}". Please check your spelling or try another term.</p>
+                                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">No Results Found</h2>
+                                    <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto">We couldn't find any departments, faculty members, or quick answers matching "{query}". Please check your spelling or try another term.</p>
                                 </div>
                             )}
                         </div>
                     ) : (
                         <div className="text-center py-16">
-                            <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Search className="w-8 h-8 text-slate-400" />
+                            <div className="w-16 h-16 bg-slate-100 dark:bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <Search className="w-8 h-8 text-slate-400 dark:text-slate-500" />
                             </div>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-2">No Search Query</h2>
-                            <p className="text-slate-500 max-w-md mx-auto">Please enter a search term in the header search bar or use the command shortcut <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200 shadow-sm text-xs italic">Ctrl + K</kbd> to find matching college details.</p>
+                            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">No Search Query</h2>
+                            <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto">Please enter a search term in the header search bar or use the command shortcut <kbd className="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/10 shadow-sm text-xs italic">Ctrl + K</kbd> to find matching college details.</p>
                         </div>
                     )}
                 </div>
