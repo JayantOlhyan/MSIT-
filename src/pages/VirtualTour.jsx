@@ -167,7 +167,7 @@ const VirtualTour = () => {
     };
 
     return (
-        <main className="min-h-screen bg-slate-50">
+        <main className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] transition-colors duration-300">
             <SEO 
                 title="Virtual Campus Tour" 
                 description="Experience Maharaja Surajmal Institute of Technology from anywhere in the world. Take our immersive virtual tour of blocks, labs, grounds, and heritage memorials."
@@ -184,13 +184,13 @@ const VirtualTour = () => {
             />
 
             {/* Quick Stats Banner */}
-            <section className="bg-white py-10 border-b border-slate-200">
+            <section className="bg-white dark:bg-[#0c1322] py-10 border-b border-slate-200 dark:border-white/10 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {tourStats.map((stat, idx) => (
-                            <div key={idx} className="text-center md:border-r last:border-0 border-slate-200">
-                                <div className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">{stat.value}</div>
-                                <div className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-widest mt-1">{stat.label}</div>
+                            <div key={idx} className="text-center md:border-r last:border-0 border-slate-200 dark:border-white/10">
+                                <div className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">{stat.value}</div>
+                                <div className="text-xs md:text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mt-1">{stat.label}</div>
                             </div>
                         ))}
                     </div>
@@ -199,7 +199,7 @@ const VirtualTour = () => {
 
             {/* main virtual tour display */}
             <section className="py-20 max-w-7xl mx-auto px-6">
-                <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 mb-16 shadow-2xl relative overflow-hidden border border-white/5">
+                <div className="bg-slate-900 dark:bg-[#131c31] text-white rounded-3xl p-8 md:p-12 mb-16 shadow-2xl relative overflow-hidden border border-white/5 dark:border-white/10">
                     {/* Immersive Background Blur Decor */}
                     <div className="absolute top-0 right-0 w-[clamp(250px,40vw,500px)] h-[clamp(250px,40vw,500px)] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
                     
@@ -214,7 +214,7 @@ const VirtualTour = () => {
                             </p>
                             <button 
                                 onClick={() => openTour({ type: 'video', url: 'https://www.youtube.com/embed/WY6dTTsE4cY?autoplay=1', title: 'MSIT Campus Guided Walkthrough' })}
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-primary hover:bg-primary/95 text-white font-bold text-sm tracking-wider uppercase rounded-2xl transition-all shadow-lg active:scale-95 group"
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-primary hover:bg-primary/95 text-white font-bold text-sm tracking-wider uppercase rounded-2xl transition-all shadow-lg active:scale-95 group cursor-pointer"
                             >
                                 <Play className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" />
                                 Watch Tour Video
@@ -242,20 +242,20 @@ const VirtualTour = () => {
                 </div>
 
                 {/* Hotspots / Category Selector */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12 border-b border-slate-200 pb-6">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12 border-b border-slate-200 dark:border-white/10 pb-6">
                     <div>
-                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">Explore Specific Hotspots</h3>
-                        <p className="text-slate-500 text-sm mt-1">Select a category below to tour individual labs, auditoriums, and blocks.</p>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Explore Specific Hotspots</h3>
+                        <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Select a category below to tour individual labs, auditoriums, and blocks.</p>
                     </div>
                     <div className="flex gap-2 overflow-x-auto w-full md:w-auto pb-3 md:pb-0 scrollbar-none">
                         {categories.map(cat => (
                             <button
                                 key={cat.id}
                                 onClick={() => setActiveCategory(cat.id)}
-                                className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap active:scale-95 shrink-0 focus:outline-none ${
+                                className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all whitespace-nowrap active:scale-95 shrink-0 focus:outline-none cursor-pointer ${
                                     activeCategory === cat.id 
-                                        ? 'bg-slate-900 text-white shadow-md shadow-slate-900/30' 
-                                        : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-400 hover:text-slate-900'
+                                        ? 'bg-slate-900 dark:bg-blue-600 text-white shadow-md shadow-slate-900/30 dark:shadow-blue-500/20' 
+                                        : 'bg-white dark:bg-[#18233c] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/15 hover:border-slate-400 dark:hover:border-white/30 hover:text-slate-900 dark:hover:text-white'
                                 }`}
                             >
                                 {cat.label}
@@ -267,7 +267,7 @@ const VirtualTour = () => {
                 {/* Locations Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredLocations.map((loc) => (
-                        <div key={loc.id} className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+                        <div key={loc.id} className="bg-white dark:bg-[#131c31] rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-xl dark:hover:border-blue-500/30 transition-all duration-300 group flex flex-col justify-between">
                             <div>
                                 <div className="relative h-56 overflow-hidden">
                                     <img 
@@ -282,15 +282,15 @@ const VirtualTour = () => {
                                 </div>
                                 
                                 <div className="p-8">
-                                    <h4 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-primary transition-colors">{loc.title}</h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6 font-medium line-clamp-3">{loc.description}</p>
+                                    <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">{loc.title}</h4>
+                                    <p className="text-slate-500 dark:text-slate-300 text-sm leading-relaxed mb-6 font-medium line-clamp-3">{loc.description}</p>
                                     
-                                    <h5 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1">
+                                    <h5 className="text-[11px] font-black text-slate-400 dark:text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1">
                                         <Layers className="w-3.5 h-3.5 text-blue-500" /> Key Features
                                     </h5>
                                     <ul className="space-y-2">
                                         {loc.highlights.slice(0, 3).map((item, idx) => (
-                                            <li key={idx} className="flex items-center gap-2 text-xs font-semibold text-slate-600">
+                                            <li key={idx} className="flex items-center gap-2 text-xs font-semibold text-slate-600 dark:text-slate-300">
                                                 <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                                                 <span className="truncate">{item}</span>
                                             </li>
@@ -302,7 +302,7 @@ const VirtualTour = () => {
                             <div className="p-8 pt-0 mt-auto">
                                 <button
                                     onClick={() => openTour({ type: loc.type, url: loc.panoramaUrl, title: loc.title })}
-                                    className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 text-slate-700 hover:text-primary font-bold text-xs uppercase tracking-widest rounded-xl transition-all active:scale-98"
+                                    className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-slate-50 dark:bg-white/10 hover:bg-blue-50 dark:hover:bg-blue-600 border border-slate-200 dark:border-white/10 hover:border-blue-200 dark:hover:border-blue-600 text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-all active:scale-98 cursor-pointer"
                                 >
                                     <Eye className="w-4 h-4" />
                                     Explore Hotspot
