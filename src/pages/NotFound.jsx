@@ -351,7 +351,7 @@ const NotFound = () => {
     };
 
     return (
-        <div ref={containerRef} className="min-h-screen relative flex flex-col items-center justify-center px-4 py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden select-none">
+        <div ref={containerRef} className="min-h-screen relative flex flex-col items-center justify-center px-4 py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 dark:from-[#0a0f1d] dark:to-[#070b16] transition-colors duration-300 overflow-hidden select-none">
             <SEO
                 title="404 Page Not Found"
                 description="The page you are looking for at Maharaja Surajmal Institute of Technology could not be found. Utilize our active search or interactive terminal to return to campus."
@@ -369,13 +369,13 @@ const NotFound = () => {
 
             {/* Header branding */}
             <div className="anim-fade-in relative z-10 flex flex-col items-center mb-8 text-center">
-                <Link to="/" className="flex items-center gap-3 px-4 py-2 bg-white/40 backdrop-blur-md rounded-full border border-slate-200/40 hover:border-slate-300 transition-all shadow-sm">
+                <Link to="/" className="flex items-center gap-3 px-4 py-2 bg-white/40 dark:bg-white/5 backdrop-blur-md rounded-full border border-slate-200/40 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 transition-all shadow-sm">
                     <img
                         src="/msit-logo.webp"
                         alt="MSIT Logo"
                         className="w-7 h-7 object-contain rounded-md"
                     />
-                    <span className="text-xs font-black uppercase tracking-wider text-slate-800 font-inter">
+                    <span className="text-xs font-black uppercase tracking-wider text-slate-800 dark:text-white font-inter">
                         Maharaja Surajmal Institute of Technology
                     </span>
                 </Link>
@@ -462,7 +462,7 @@ const NotFound = () => {
                             e.preventDefault();
                             if (terminalInput.trim()) executeCommand(terminalInput);
                         }}
-                        className="relative z-10 flex items-center px-6 py-3.5 bg-slate-900 border-t border-slate-950/50"
+                        className="relative z-10 flex items-center px-6 py-3.5 bg-slate-900 border-t border-slate-955/50"
                     >
                         <span className="font-mono text-xs md:text-sm text-emerald-400 font-bold select-none mr-2">
                             guest@msit:~$
@@ -486,12 +486,12 @@ const NotFound = () => {
                 </div>
 
                 {/* Right side: Sleek Glassmorphic Page Content Info */}
-                <div className="anim-scale-up lg:col-span-6 flex flex-col justify-between p-6 md:p-10 rounded-[2.5rem] bg-white/70 backdrop-blur-xl border border-slate-200/50 shadow-card hover:shadow-card-hover hover:border-slate-300/40 transition-all">
+                <div className="anim-scale-up lg:col-span-6 flex flex-col justify-between p-6 md:p-10 rounded-[2.5rem] bg-white/70 dark:bg-[#131c31]/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-800/80 shadow-card hover:shadow-card-hover hover:border-slate-300/40 dark:hover:border-slate-700/60 transition-all">
 
                     {/* Error Sign & Title */}
                     <div>
                         <div className="anim-fade-in flex items-center gap-3.5 mb-6">
-                            <div className="flex items-center justify-center w-11 h-11 rounded-2xl bg-orange-50 border border-orange-100 text-orange-600">
+                            <div className="flex items-center justify-center w-11 h-11 rounded-2xl bg-orange-50 dark:bg-orange-950/40 border border-orange-100 dark:border-orange-900/40 text-orange-600 dark:text-orange-400">
                                 <AlertCircle className="w-5 h-5" />
                             </div>
                             <span className="text-xs font-black uppercase tracking-[0.25em] text-slate-400 font-mono">
@@ -499,18 +499,18 @@ const NotFound = () => {
                             </span>
                         </div>
 
-                        <h1 className="anim-fade-in text-4xl md:text-5xl lg:text-6xl font-black text-slate-955 tracking-tight leading-tight">
+                        <h1 className="anim-fade-in text-4xl md:text-5xl lg:text-6xl font-black text-slate-955 dark:text-white tracking-tight leading-tight">
                             Lost in <span className="text-primary italic font-medium">space?</span>
                         </h1>
 
-                        <p className="anim-fade-in mt-5 text-sm md:text-base text-slate-600 leading-relaxed font-normal">
+                        <p className="anim-fade-in mt-5 text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                             The academic asset, page, or document you are trying to reach seems to have relocated. Don't worry—let's navigate you back onto campus paths.
                         </p>
 
                         {/* Functional Search Bar */}
                         <form
                             onSubmit={handleSearchSubmit}
-                            className="anim-fade-in mt-8 group relative flex items-center bg-slate-50 hover:bg-slate-100/70 border border-slate-200/80 rounded-2xl p-1.5 focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all"
+                            className="anim-fade-in mt-8 group relative flex items-center bg-slate-50 dark:bg-[#0c1322] hover:bg-slate-100/70 dark:hover:bg-[#10192e] border border-slate-200/80 dark:border-slate-700/80 rounded-2xl p-1.5 focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all"
                         >
                             <div className="pl-3 text-slate-400 group-focus-within:text-primary transition-colors">
                                 <Search className="w-4 h-4" />
@@ -520,7 +520,7 @@ const NotFound = () => {
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="Search courses, departments, placements..."
-                                className="w-full bg-transparent border-none outline-none pl-3 pr-20 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 font-medium font-inter"
+                                className="w-full bg-transparent border-none outline-none pl-3 pr-20 py-2.5 text-sm text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 font-medium font-inter"
                                 aria-label="Search site resources"
                             />
                             <button
@@ -542,7 +542,7 @@ const NotFound = () => {
                                         setSearchQuery(tag);
                                         navigate(`/search?q=${encodeURIComponent(tag)}`);
                                     }}
-                                    className="px-2.5 py-1 text-2xs font-semibold text-slate-500 bg-slate-100 hover:bg-primary/10 hover:text-primary border border-slate-200/50 hover:border-primary/20 rounded-lg transition-all cursor-pointer"
+                                    className="px-2.5 py-1 text-2xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/80 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-blue-400 border border-slate-200/50 dark:border-slate-700/60 hover:border-primary/20 rounded-lg transition-all cursor-pointer"
                                 >
                                     {tag}
                                 </button>
@@ -551,7 +551,7 @@ const NotFound = () => {
                     </div>
 
                     {/* Navigation Options Section */}
-                    <div className="mt-8 border-t border-slate-150 pt-8">
+                    <div className="mt-8 border-t border-slate-150 dark:border-slate-800/80 pt-8">
                         <h3 className="anim-fade-in text-2xs uppercase tracking-widest font-extrabold text-slate-400 mb-4 font-inter">
                             Quick Directories
                         </h3>
@@ -560,69 +560,69 @@ const NotFound = () => {
                             {/* Option 1: Back to Safety Home */}
                             <Link
                                 to="/"
-                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-150 hover:border-blue-200/60 rounded-2xl group transition-all"
+                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 dark:bg-[#0c1322] hover:bg-blue-50/50 dark:hover:bg-blue-950/30 border border-slate-150 dark:border-slate-800/80 hover:border-blue-200/60 dark:hover:border-blue-700/50 rounded-2xl group transition-all"
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
                                         <Home className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xs font-extrabold text-slate-800 font-inter">Home Page</h4>
-                                        <p className="text-[10px] text-slate-400 mt-0.5">MSIT main gateway</p>
+                                        <h4 className="text-xs font-extrabold text-slate-800 dark:text-white font-inter">Home Page</h4>
+                                        <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">MSIT main gateway</p>
                                     </div>
                                 </div>
-                                <ChevronRight className="w-4 h-4 text-slate-300 group-hover:translate-x-1 transition-transform" />
+                                <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:translate-x-1 transition-transform" />
                             </Link>
 
                             {/* Option 2: Go Back in History */}
                             <button
                                 onClick={() => window.history.back()}
-                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 border border-slate-150 hover:border-slate-200 rounded-2xl group transition-all text-left cursor-pointer"
+                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 dark:bg-[#0c1322] hover:bg-slate-100 dark:hover:bg-[#131c31] border border-slate-150 dark:border-slate-800/80 hover:border-slate-200 dark:hover:border-slate-700 rounded-2xl group transition-all text-left cursor-pointer"
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-slate-200/70 text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300 group-hover:bg-slate-900 group-hover:text-white transition-colors">
                                         <ArrowLeft className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xs font-extrabold text-slate-800 font-inter">Return Back</h4>
-                                        <p className="text-[10px] text-slate-400 mt-0.5">Go back one step</p>
+                                        <h4 className="text-xs font-extrabold text-slate-800 dark:text-white font-inter">Return Back</h4>
+                                        <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">Go back one step</p>
                                     </div>
                                 </div>
-                                <ChevronRight className="w-4 h-4 text-slate-300 group-hover:translate-x-1 transition-transform" />
+                                <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:translate-x-1 transition-transform" />
                             </button>
 
                             {/* Option 3: Admissions Directory */}
                             <Link
                                 to="/faculty"
-                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 hover:bg-emerald-50/50 border border-slate-150 hover:border-emerald-200/60 rounded-2xl group transition-all"
+                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 dark:bg-[#0c1322] hover:bg-emerald-50/50 dark:hover:bg-emerald-950/30 border border-slate-150 dark:border-slate-800/80 hover:border-emerald-200/60 dark:hover:border-emerald-700/50 rounded-2xl group transition-all"
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                                         <GraduationCap className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xs font-extrabold text-slate-800 font-inter">Faculty Directory</h4>
-                                        <p className="text-[10px] text-slate-400 mt-0.5">Explore staff records</p>
+                                        <h4 className="text-xs font-extrabold text-slate-800 dark:text-white font-inter">Faculty Directory</h4>
+                                        <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">Explore staff records</p>
                                     </div>
                                 </div>
-                                <ChevronRight className="w-4 h-4 text-slate-300 group-hover:translate-x-1 transition-transform" />
+                                <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:translate-x-1 transition-transform" />
                             </Link>
 
                             {/* Option 4: Career & Placement Cell */}
                             <Link
                                 to="/placements"
-                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 hover:bg-purple-50/50 border border-slate-150 hover:border-purple-200/60 rounded-2xl group transition-all"
+                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 dark:bg-[#0c1322] hover:bg-purple-50/50 dark:hover:bg-purple-950/30 border border-slate-150 dark:border-slate-800/80 hover:border-purple-200/60 dark:hover:border-purple-700/50 rounded-2xl group transition-all"
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-colors">
                                         <Briefcase className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xs font-extrabold text-slate-800 font-inter">Placements Hub</h4>
-                                        <p className="text-[10px] text-slate-400 mt-0.5">Career opportunities</p>
+                                        <h4 className="text-xs font-extrabold text-slate-800 dark:text-white font-inter">Placements Hub</h4>
+                                        <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">Career opportunities</p>
                                     </div>
                                 </div>
-                                <ChevronRight className="w-4 h-4 text-slate-300 group-hover:translate-x-1 transition-transform" />
+                                <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:translate-x-1 transition-transform" />
                             </Link>
 
                         </div>
