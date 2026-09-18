@@ -249,52 +249,52 @@ const AdminDashboard = () => {
     if (!isLoggedIn) {
         return (
             <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
-                <div className="bg-white rounded-2xl shadow-card overflow-hidden max-w-md w-full animate-fade-in relative">
+                <div className="bg-white dark:bg-[#131c31] rounded-2xl shadow-card overflow-hidden max-w-md w-full animate-fade-in relative border border-transparent dark:border-slate-800">
                     <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
                     <div className="p-8">
                         <div className="flex justify-center mb-6">
-                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                                <Lock className="w-8 h-8 text-blue-600" />
+                            <div className="w-16 h-16 bg-blue-100 dark:bg-blue-950/60 rounded-full flex items-center justify-center">
+                                <Lock className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                             </div>
                         </div>
-                        <h1 className="text-2xl font-bold text-center text-slate-900 mb-2">Admin Access</h1>
-                        <p className="text-center text-slate-500 mb-8 text-sm">Sign in to manage MSIT website content</p>
+                        <h1 className="text-2xl font-bold text-center text-slate-900 dark:text-white mb-2">Admin Access</h1>
+                        <p className="text-center text-slate-500 dark:text-slate-400 mb-8 text-sm">Sign in to manage MSIT website content</p>
 
                         {loginError && (
-                            <div className="mb-6 p-3 bg-red-50 text-red-600 text-sm font-medium rounded-lg text-center border border-red-100">
+                            <div className="mb-6 p-3 bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400 text-sm font-medium rounded-lg text-center border border-red-100 dark:border-red-900/40">
                                 {loginError}
                             </div>
                         )}
 
                         <form onSubmit={handleLogin} className="space-y-5">
                             <div>
-                                <label className="text-sm font-semibold text-slate-700 block mb-1.5">Admin ID</label>
+                                <label className="text-sm font-semibold text-slate-700 dark:text-slate-300 block mb-1.5">Admin ID</label>
                                 <input
                                     type="text"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0c1322] text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
                                     placeholder="Enter Admin ID"
                                     value={adminId}
                                     onChange={(e) => setAdminId(e.target.value)}
                                 />
                             </div>
                             <div>
-                                <label className="text-sm font-semibold text-slate-700 block mb-1.5">Password</label>
+                                <label className="text-sm font-semibold text-slate-700 dark:text-slate-300 block mb-1.5">Password</label>
                                 <input
                                     type="password"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0c1322] text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
                                     placeholder="••••••••"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
                             </div>
-                            <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2">
+                            <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2 cursor-pointer">
                                 Login to Dashboard
                             </button>
                         </form>
                     </div>
-                    <div className="bg-slate-50 p-4 text-center text-xs text-slate-500 border-t border-slate-100">
+                    <div className="bg-slate-50 dark:bg-[#0c1322] p-4 text-center text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800">
                         Maharaja Surajmal Institute of Technology - Secure Admin Portal
                     </div>
                 </div>
@@ -306,41 +306,41 @@ const AdminDashboard = () => {
     // DASHBOARD RENDERER
     // -------------------------------------------------------------
     return (
-        <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
             <SEO title="Admin Dashboard" description="Access the MSIT secure administrative dashboard to manage website content, news, events, and campus stories for Maharaja Surajmal Institute of Technology." canonicalPath="/admin" />
             <div className="max-w-4xl mx-auto space-y-8">
 
-                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
-                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 pb-8 mb-8">
+                <div className="bg-white dark:bg-[#131c31] rounded-2xl shadow-card border border-slate-200 dark:border-slate-800/80 p-8">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 dark:border-slate-800/80 pb-8 mb-8">
                         <div>
-                            <h1 className="text-3xl font-bold text-slate-900 mb-2">Website Content Manager</h1>
-                            <p className="text-slate-500">Add or remove news, events, and stories directly from the homepage.</p>
+                            <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Website Content Manager</h1>
+                            <p className="text-slate-500 dark:text-slate-400">Add or remove news, events, and stories directly from the homepage.</p>
                         </div>
                         <button
                             onClick={handleLogout}
-                            className="mt-4 sm:mt-0 px-4 py-2 text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors flex items-center"
+                            className="mt-4 sm:mt-0 px-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors flex items-center cursor-pointer"
                         >
                             <Lock className="w-4 h-4 mr-2" /> Lock / Logout
                         </button>
                     </div>
 
                     {status && (
-                        <div className={`mb-6 p-4 rounded-lg flex items-center ${status.type === 'success' ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
+                        <div className={`mb-6 p-4 rounded-lg flex items-center ${status.type === 'success' ? 'bg-emerald-50 dark:bg-emerald-950/30 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/50' : 'bg-red-50 dark:bg-red-950/30 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800/50'}`}>
                             {status.type === 'success' ? <CheckCircle2 className="w-5 h-5 mr-3" /> : <AlertCircle className="w-5 h-5 mr-3" />}
                             <span className="font-medium">{status.message}</span>
                         </div>
                     )}
 
-                    <form onSubmit={handleAddEvent} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
-                        <h2 className="text-xl font-semibold text-slate-800 flex items-center">
+                    <form onSubmit={handleAddEvent} className="space-y-6 bg-slate-50 dark:bg-[#0c1322] p-6 rounded-xl border border-slate-100 dark:border-slate-800/80 mb-10">
+                        <h2 className="text-xl font-semibold text-slate-800 dark:text-white flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Create New Content
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Content Type</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Content Type</label>
                                 <select
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={type}
                                     onChange={(e) => setType(e.target.value)}
                                 >
@@ -351,88 +351,88 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Display Date</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Display Date</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. MAY 18, 2026"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={date}
                                     onChange={(e) => setDate(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Headline / Title</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Headline / Title</label>
                                 <input
                                     type="text"
                                     placeholder="Enter the title for the card"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Target Link URL / External Redirection (Optional)</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Target Link URL / External Redirection (Optional)</label>
                                 <input
                                     type="text"
                                     placeholder="https://..."
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={link}
                                     onChange={(e) => setLink(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Background Image URL (Optional)</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Background Image URL (Optional)</label>
                                 <input
                                     type="text"
                                     placeholder="/campus/main-academic-building.webp or leave blank for default"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={bgImage}
                                     onChange={(e) => setBgImage(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Short Summary</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Short Summary</label>
                                 <input
                                     type="text"
                                     placeholder="Brief 1-sentence summary of the news/event"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={summary}
                                     onChange={(e) => setSummary(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Full Article Content (HTML/Plain Text)</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Full Article Content (HTML/Plain Text)</label>
                                 <textarea
                                     rows="5"
                                     placeholder="Enter full paragraphs, e.g. <p class='mb-4'>Paragraph content...</p>"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none font-mono text-xs"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none font-mono text-xs"
                                     value={content}
                                     onChange={(e) => setContent(e.target.value)}
                                 />
                             </div>
 
                             {/* Dynamic PDF Attachment Manager */}
-                            <div className="p-4 bg-white rounded-xl border border-slate-200 md:col-span-2 space-y-4">
-                                <h3 className="text-sm font-bold text-slate-800">Add PDF Attachments</h3>
+                            <div className="p-4 bg-white dark:bg-[#18233c] rounded-xl border border-slate-200 dark:border-slate-700 md:col-span-2 space-y-4">
+                                <h3 className="text-sm font-bold text-slate-800 dark:text-white">Add PDF Attachments</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                     <input 
                                         type="text" 
                                         placeholder="Document Name (e.g. Schedule.pdf)" 
-                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 outline-none"
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-[#0c1322] text-slate-900 dark:text-white outline-none"
                                         value={attName} 
                                         onChange={(e) => setAttName(e.target.value)}
                                     />
                                     <input 
                                         type="text" 
                                         placeholder="Size (e.g. 1.2 MB)" 
-                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 outline-none"
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-[#0c1322] text-slate-900 dark:text-white outline-none"
                                         value={attSize} 
                                         onChange={(e) => setAttSize(e.target.value)}
                                     />
@@ -445,7 +445,7 @@ const AdminDashboard = () => {
                                                 setAttSize('');
                                             }
                                         }}
-                                        className="px-4 py-2 text-xs bg-slate-900 text-white font-bold rounded-lg hover:bg-slate-800 transition-colors"
+                                        className="px-4 py-2 text-xs bg-slate-900 dark:bg-blue-600 text-white font-bold rounded-lg hover:bg-slate-800 dark:hover:bg-blue-500 transition-colors cursor-pointer"
                                     >
                                         Add Attachment
                                     </button>
@@ -454,12 +454,12 @@ const AdminDashboard = () => {
                                 {attachmentsList.length > 0 && (
                                     <div className="pt-2 space-y-1.5">
                                         {attachmentsList.map((item, index) => (
-                                            <div key={index} className="flex justify-between items-center bg-slate-50 p-2 rounded border border-slate-100 text-xs">
-                                                <span className="font-semibold text-slate-700">{item.name} ({item.size})</span>
+                                            <div key={index} className="flex justify-between items-center bg-slate-50 dark:bg-[#0c1322] p-2 rounded border border-slate-100 dark:border-slate-800 text-xs">
+                                                <span className="font-semibold text-slate-700 dark:text-slate-300">{item.name} ({item.size})</span>
                                                 <button 
                                                     type="button" 
                                                     onClick={() => setAttachmentsList(attachmentsList.filter((_, i) => i !== index))}
-                                                    className="text-red-500 font-bold hover:underline"
+                                                    className="text-red-500 dark:text-red-400 font-bold hover:underline cursor-pointer"
                                                 >
                                                     Remove
                                                 </button>
@@ -470,20 +470,20 @@ const AdminDashboard = () => {
                             </div>
 
                             {/* Dynamic Related Links Manager */}
-                            <div className="p-4 bg-white rounded-xl border border-slate-200 md:col-span-2 space-y-4">
-                                <h3 className="text-sm font-bold text-slate-800">Add Related Links</h3>
+                            <div className="p-4 bg-white dark:bg-[#18233c] rounded-xl border border-slate-200 dark:border-slate-700 md:col-span-2 space-y-4">
+                                <h3 className="text-sm font-bold text-slate-800 dark:text-white">Add Related Links</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                     <input 
                                         type="text" 
                                         placeholder="Link Text (e.g. Registration Portal)" 
-                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 outline-none"
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-[#0c1322] text-slate-900 dark:text-white outline-none"
                                         value={rLinkName} 
                                         onChange={(e) => setRLinkName(e.target.value)}
                                     />
                                     <input 
                                         type="text" 
                                         placeholder="URL (e.g. https://...)" 
-                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 outline-none"
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-[#0c1322] text-slate-900 dark:text-white outline-none"
                                         value={rLinkUrl} 
                                         onChange={(e) => setRLinkUrl(e.target.value)}
                                     />
@@ -496,7 +496,7 @@ const AdminDashboard = () => {
                                                 setRLinkUrl('');
                                             }
                                         }}
-                                        className="px-4 py-2 text-xs bg-slate-900 text-white font-bold rounded-lg hover:bg-slate-800 transition-colors"
+                                        className="px-4 py-2 text-xs bg-slate-900 dark:bg-blue-600 text-white font-bold rounded-lg hover:bg-slate-800 dark:hover:bg-blue-500 transition-colors cursor-pointer"
                                     >
                                         Add Link
                                     </button>
@@ -505,12 +505,12 @@ const AdminDashboard = () => {
                                 {relatedLinksList.length > 0 && (
                                     <div className="pt-2 space-y-1.5">
                                         {relatedLinksList.map((item, index) => (
-                                            <div key={index} className="flex justify-between items-center bg-slate-50 p-2 rounded border border-slate-100 text-xs">
-                                                <span className="font-semibold text-slate-700">{item.name} → {item.url}</span>
+                                            <div key={index} className="flex justify-between items-center bg-slate-50 dark:bg-[#0c1322] p-2 rounded border border-slate-100 dark:border-slate-800 text-xs">
+                                                <span className="font-semibold text-slate-700 dark:text-slate-300">{item.name} → {item.url}</span>
                                                 <button 
                                                     type="button" 
                                                     onClick={() => setRelatedLinksList(relatedLinksList.filter((_, i) => i !== index))}
-                                                    className="text-red-500 font-bold hover:underline"
+                                                    className="text-red-500 dark:text-red-400 font-bold hover:underline cursor-pointer"
                                                 >
                                                     Remove
                                                 </button>
@@ -521,32 +521,32 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
+                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors cursor-pointer">
                             Publish to Homepage
                         </button>
                     </form>
 
                     <div>
-                        <h2 className="text-xl font-semibold text-slate-800 mb-6 border-b border-slate-100 pb-4">Manage Current Content</h2>
+                        <h2 className="text-xl font-semibold text-slate-800 dark:text-white mb-6 border-b border-slate-100 dark:border-slate-800/80 pb-4">Manage Current Content</h2>
 
                         <div className="space-y-4">
                             {events.length === 0 ? (
                                 <p className="text-slate-500 italic">No events found. Create one above.</p>
                             ) : (
                                 events.map(ev => (
-                                    <div key={ev.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <div key={ev.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-[#18233c] transition-colors">
                                         <div className="mb-4 sm:mb-0 pr-4">
                                             <div className="flex items-center gap-3 mb-1">
-                                                <span className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 bg-slate-200 text-slate-700 rounded">{ev.label}</span>
-                                                <span className="text-sm text-slate-500 font-medium">{ev.date}</span>
+                                                <span className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded">{ev.label}</span>
+                                                <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">{ev.date}</span>
                                             </div>
-                                            <h3 className="text-slate-900 font-semibold">{ev.title}</h3>
-                                            <a href={ev.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm hover:underline mt-1 inline-block truncate max-w-xs">{ev.link !== "#" ? ev.link : "No active link"}</a>
+                                            <h3 className="text-slate-900 dark:text-white font-semibold">{ev.title}</h3>
+                                            <a href={ev.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 text-sm hover:underline mt-1 inline-block truncate max-w-xs">{ev.link !== "#" ? ev.link : "No active link"}</a>
                                         </div>
 
                                         <button
                                             onClick={() => handleDeleteEvent(ev.id)}
-                                            className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors flex items-center shrink-0"
+                                            className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/40 rounded-lg transition-colors flex items-center shrink-0 cursor-pointer"
                                             title="Delete this item"
                                         >
                                             <Trash2 className="w-5 h-5" />
@@ -560,79 +560,79 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* TESTIMONIALS MANAGER */}
-                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
-                    <div className="border-b border-slate-100 pb-8 mb-8">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-2">Testimonials Manager</h2>
-                        <p className="text-slate-500">Manage alumni testimonials that appear in the homepage carousel.</p>
+                <div className="bg-white dark:bg-[#131c31] rounded-2xl shadow-card border border-slate-200 dark:border-slate-800/80 p-8">
+                    <div className="border-b border-slate-100 dark:border-slate-800/80 pb-8 mb-8">
+                        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Testimonials Manager</h2>
+                        <p className="text-slate-500 dark:text-slate-400">Manage alumni testimonials that appear in the homepage carousel.</p>
                     </div>
 
-                    <form onSubmit={handleAddTestimonial} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
-                        <h3 className="text-xl font-semibold text-slate-800 flex items-center">
+                    <form onSubmit={handleAddTestimonial} className="space-y-6 bg-slate-50 dark:bg-[#0c1322] p-6 rounded-xl border border-slate-100 dark:border-slate-800/80 mb-10">
+                        <h3 className="text-xl font-semibold text-slate-800 dark:text-white flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Add New Testimonial
                         </h3>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Full Name</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Full Name</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. Rahul Verma"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tName}
                                     onChange={(e) => setTName(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Batch / Graduation Year</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Batch / Graduation Year</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. 23"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tYear}
                                     onChange={(e) => setTYear(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Department / Major</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Department / Major</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. Information Technology"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tMajor}
                                     onChange={(e) => setTMajor(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Company</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Company</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. Microsoft"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tCompany}
                                     onChange={(e) => setTCompany(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Profile Photo (Local Upload)</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Profile Photo (Local Upload)</label>
                                 <div className="flex items-center gap-4">
                                     <div className="flex-grow">
                                         <input
                                             type="file"
                                             accept="image/*"
-                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 dark:file:bg-blue-950/50 file:text-blue-700 dark:file:text-blue-300 hover:file:bg-blue-100"
                                             onChange={(e) => handleImageUpload(e.target.files[0], setTImage)}
                                         />
                                     </div>
                                     {tImage && (
-                                        <div className="w-12 h-12 rounded-full overflow-hidden border border-slate-200">
+                                        <div className="w-12 h-12 rounded-full overflow-hidden border border-slate-200 dark:border-slate-700">
                                             <img src={tImage} alt="Testimonial profile photo preview" className="w-full h-full object-cover" />
                                         </div>
                                     )}
@@ -641,45 +641,45 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-sm font-medium text-slate-700">Quote</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Quote</label>
                                 <textarea
                                     placeholder="Enter the testimonial quote here..."
                                     required
                                     rows="3"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tQuote}
                                     onChange={(e) => setTQuote(e.target.value)}
                                 />
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
+                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors cursor-pointer">
                             Add Testimonial
                         </button>
                     </form>
 
                     <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-slate-800 mb-4 border-b border-slate-100 pb-2">Manage Testimonials</h3>
+                        <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-4 border-b border-slate-100 dark:border-slate-800/80 pb-2">Manage Testimonials</h3>
                         {testimonials.length === 0 ? (
                             <p className="text-slate-500 italic">No testimonials found.</p>
                         ) : (
                             testimonials.map(t => (
-                                <div key={t.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
+                                <div key={t.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-[#18233c] transition-colors">
                                     <div className="flex items-center gap-4 flex-grow mb-4 sm:mb-0">
-                                        <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
+                                        <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0 border border-slate-200 dark:border-slate-700">
                                             <img src={t.image} alt={`${t.name} profile picture`} className="w-full h-full object-cover" />
                                         </div>
                                         <div className="min-w-0">
                                             <div className="flex items-center gap-2">
-                                                <h4 className="text-slate-900 font-bold truncate">{t.name}</h4>
-                                                <span className="text-xs text-slate-500">'{t.year}</span>
+                                                <h4 className="text-slate-900 dark:text-white font-bold truncate">{t.name}</h4>
+                                                <span className="text-xs text-slate-500 dark:text-slate-400">'{t.year}</span>
                                             </div>
-                                            <p className="text-sm text-slate-600 truncate max-w-md">{t.company} • {t.major}</p>
+                                            <p className="text-sm text-slate-600 dark:text-slate-300 truncate max-w-md">{t.company} • {t.major}</p>
                                         </div>
                                     </div>
                                     <button
                                         onClick={() => handleDeleteTestimonial(t.id)}
-                                        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors flex items-center shrink-0"
+                                        className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/40 rounded-lg transition-colors flex items-center shrink-0 cursor-pointer"
                                     >
                                         <Trash2 className="w-5 h-5" />
                                     </button>
@@ -690,43 +690,43 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* HIGHLIGHTS MANAGER */}
-                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
-                    <div className="border-b border-slate-100 pb-8 mb-8">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-2">Highlights Manager</h2>
-                        <p className="text-slate-500">Manage the "MSIT Difference" carousel slides, quotes, and background images.</p>
+                <div className="bg-white dark:bg-[#131c31] rounded-2xl shadow-card border border-slate-200 dark:border-slate-800/80 p-8">
+                    <div className="border-b border-slate-100 dark:border-slate-800/80 pb-8 mb-8">
+                        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Highlights Manager</h2>
+                        <p className="text-slate-500 dark:text-slate-400">Manage the "MSIT Difference" carousel slides, quotes, and background images.</p>
                     </div>
 
-                    <form onSubmit={handleAddHighlight} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
-                        <h3 className="text-xl font-semibold text-slate-800 flex items-center">
+                    <form onSubmit={handleAddHighlight} className="space-y-6 bg-slate-50 dark:bg-[#0c1322] p-6 rounded-xl border border-slate-100 dark:border-slate-800/80 mb-10">
+                        <h3 className="text-xl font-semibold text-slate-800 dark:text-white flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Add New Slide
                         </h3>
 
                         <div className="grid grid-cols-1 gap-6">
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Source Name</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Source Name</label>
                                 <input
                                     type="text"
                                     placeholder="e.g. Times Engineering Survey / NAAC"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={hSource}
                                     onChange={(e) => setHSource(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Background Image (Local Upload)</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Background Image (Local Upload)</label>
                                 <div className="flex items-center gap-4">
                                     <div className="flex-grow">
                                         <input
                                             type="file"
                                             accept="image/*"
-                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 dark:file:bg-blue-950/50 file:text-blue-700 dark:file:text-blue-300 hover:file:bg-blue-100"
                                             onChange={(e) => handleImageUpload(e.target.files[0], setHImage)}
                                         />
                                     </div>
                                     {hImage && (
-                                        <div className="w-20 h-10 rounded-lg overflow-hidden border border-slate-200 shadow-card">
+                                        <div className="w-20 h-10 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 shadow-card">
                                             <img src={hImage} alt="Highlight background image preview" className="w-full h-full object-cover" />
                                         </div>
                                     )}
@@ -734,42 +734,42 @@ const AdminDashboard = () => {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-slate-700">Impactful Quote</label>
+                                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Impactful Quote</label>
                                 <textarea
                                     placeholder="Enter the highlight quote here..."
                                     required
                                     rows="3"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#18233c] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={hQuote}
                                     onChange={(e) => setHQuote(e.target.value)}
                                 />
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
+                        <button type="submit" className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors cursor-pointer">
                             Add Slide to Carousel
                         </button>
                     </form>
 
                     <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-slate-800 mb-4 border-b border-slate-100 pb-2">Manage Current Slides</h3>
+                        <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-4 border-b border-slate-100 dark:border-slate-800/80 pb-2">Manage Current Slides</h3>
                         {highlights.length === 0 ? (
                             <p className="text-slate-500 italic">No highlights found.</p>
                         ) : (
                             highlights.map(h => (
-                                <div key={h.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
+                                <div key={h.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-[#18233c] transition-colors">
                                     <div className="flex items-center gap-4 flex-grow mb-4 sm:mb-0">
-                                        <div className="w-20 h-12 rounded-lg overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
+                                        <div className="w-20 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0 border border-slate-200 dark:border-slate-700">
                                             <img src={h.image} alt={`Highlight image from ${h.source}`} className="w-full h-full object-cover" />
                                         </div>
                                         <div className="min-w-0">
-                                            <h4 className="text-slate-900 font-bold truncate">{h.source}</h4>
-                                            <p className="text-sm text-slate-600 truncate max-w-md italic">"{h.quote}"</p>
+                                            <h4 className="text-slate-900 dark:text-white font-bold truncate">{h.source}</h4>
+                                            <p className="text-sm text-slate-600 dark:text-slate-300 truncate max-w-md italic">"{h.quote}"</p>
                                         </div>
                                     </div>
                                     <button
                                         onClick={() => handleDeleteHighlight(h.id)}
-                                        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors flex items-center shrink-0"
+                                        className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/40 rounded-lg transition-colors flex items-center shrink-0 cursor-pointer"
                                     >
                                         <Trash2 className="w-5 h-5" />
                                     </button>
@@ -781,7 +781,7 @@ const AdminDashboard = () => {
 
 
 
-                <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-yellow-800 text-sm">
+                <div className="bg-yellow-50 dark:bg-yellow-950/30 border border-yellow-200 dark:border-yellow-900/40 rounded-xl p-6 text-yellow-800 dark:text-yellow-200 text-sm">
                     <strong>Note for Developer Environments:</strong> Since this site does not currently have a backend database connected (like Firebase, Postgres, or MongoDB), these events are saved in your browser's Local Storage. This allows you to manage the frontend dynamically. To deploy this globally so everyone can see the changes and updates without GitHub, we can connect a cloud database later.
                 </div>
             </div>
