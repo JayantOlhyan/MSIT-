@@ -95,7 +95,7 @@ const Sitemap = () => {
     }).filter(cat => cat.links.length > 0);
 
     return (
-        <main className="min-h-screen bg-slate-50 text-slate-800 flex flex-col relative overflow-hidden">
+        <main className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] text-slate-800 dark:text-slate-200 transition-colors duration-300 flex flex-col relative overflow-hidden">
             <SEO
                 title="Sitemap - Maharaja Surajmal Institute of Technology"
                 description="Explore all pages, sections, academic directories, student portals, and policy links of MSIT using our dynamic, Apple-style sitemap."
@@ -116,9 +116,9 @@ const Sitemap = () => {
             />
 
             {/* Interactive Search Filter Bar */}
-            <section className="relative z-10 py-6 px-6 border-b border-slate-200 bg-white/80 backdrop-blur-sm shadow-sm">
+            <section className="relative z-10 py-6 px-6 border-b border-slate-200 dark:border-slate-800/80 bg-white/80 dark:bg-[#070b16]/80 backdrop-blur-sm shadow-sm">
                 <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">
+                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
                         {searchQuery ? `Showing matches for "${searchQuery}"` : "Search directory index"}
                     </span>
                     <div className="relative w-full sm:max-w-xs">
@@ -130,12 +130,12 @@ const Sitemap = () => {
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             placeholder="Filter sitemap..."
-                            className="block w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-850 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-all text-xs font-semibold focus:bg-white"
+                            className="block w-full pl-10 pr-10 py-2.5 bg-slate-50 dark:bg-[#131c31] border border-slate-200 dark:border-slate-700/60 rounded-2xl text-slate-850 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-all text-xs font-semibold focus:bg-white dark:focus:bg-[#18233c]"
                         />
                         {searchQuery && (
                             <button
                                 onClick={() => setSearchQuery('')}
-                                className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600"
+                                className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
                             >
                                 <X className="w-4 h-4" />
                             </button>
@@ -147,19 +147,19 @@ const Sitemap = () => {
             {/* Apple Directory Grid Section */}
             <section className="relative z-10 max-w-7xl w-full mx-auto p-6 sm:p-12 flex-1">
                 {filteredCategories.length === 0 ? (
-                    <div className="text-center py-20 bg-white border border-slate-200 rounded-[2.5rem] shadow-sm">
-                        <Search className="w-12 h-12 text-slate-300 mx-auto mb-4" />
-                        <h3 className="text-lg font-bold text-slate-800 mb-1">No matching links found</h3>
-                        <p className="text-slate-500 text-xs font-medium">Try searching another keyword (e.g., 'ragging', 'cse', 'fee')</p>
+                    <div className="text-center py-20 bg-white dark:bg-[#131c31] border border-slate-200 dark:border-slate-800 rounded-[2.5rem] shadow-sm">
+                        <Search className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-4" />
+                        <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-1">No matching links found</h3>
+                        <p className="text-slate-500 dark:text-slate-400 text-xs font-medium">Try searching another keyword (e.g., 'ragging', 'cse', 'fee')</p>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 xl:gap-12 items-start">
                         {filteredCategories.map((category, idx) => (
                             <div key={idx} className="space-y-6">
                                 {/* Category Header */}
-                                <div className="flex items-center gap-2.5 pb-3 border-b border-slate-200">
+                                <div className="flex items-center gap-2.5 pb-3 border-b border-slate-200 dark:border-slate-800/80">
                                     {category.icon}
-                                    <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+                                    <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">
                                         {category.title}
                                     </h2>
                                 </div>
@@ -173,7 +173,7 @@ const Sitemap = () => {
                                                     href={link.path}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 hover:text-blue-600 transition-colors py-0.5"
+                                                    className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-0.5"
                                                 >
                                                     <span className="relative py-0.5">
                                                         {link.label}
@@ -184,7 +184,7 @@ const Sitemap = () => {
                                             ) : (
                                                 <Link
                                                     to={link.path}
-                                                    className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 hover:text-blue-600 transition-colors py-0.5"
+                                                    className="group flex items-center justify-between text-[13px] font-semibold text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-0.5"
                                                 >
                                                     <span className="relative py-0.5">
                                                         {link.label}
