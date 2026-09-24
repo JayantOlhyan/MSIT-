@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { Search, User, Hash, MessageSquare, ArrowRight, HelpCircle } from 'lucide-react';
+import { Search, User, Hash, MessageSquare, ArrowRight, HelpCircle, Bell } from 'lucide-react';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
 import { searchIndex } from '../data/searchIndex';
@@ -27,6 +27,16 @@ const SearchPage = () => {
           )
         : [];
 
+    const eventResults = lQuery && searchIndex.events
+        ? searchIndex.events.filter(e =>
+            e.title.toLowerCase().includes(lQuery) || 
+            e.label.toLowerCase().includes(lQuery) ||
+            (e.category && e.category.toLowerCase().includes(lQuery)) ||
+            (e.summary && e.summary.toLowerCase().includes(lQuery)) ||
+            (e.keywords && e.keywords.toLowerCase().includes(lQuery))
+          )
+        : [];
+
     const qaResults = lQuery 
         ? searchIndex.qa.filter(q => 
             q.q.toLowerCase().includes(lQuery) || 
@@ -34,7 +44,7 @@ const SearchPage = () => {
           )
         : [];
 
-    const totalResultsCount = facultyResults.length + pageResults.length + qaResults.length;
+    const totalResultsCount = facultyResults.length + pageResults.length + qaResults.length + eventResults.length;
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] transition-colors duration-300">
@@ -128,6 +138,43 @@ const SearchPage = () => {
                                                             <Hash size={14} />
                                                         </div>
                                                         <span className="text-sm font-bold">{p.title}</span>
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* News, Notices & Categorized Updates */}
+                                    {eventResults.length > 0 && (
+                                        <div className="space-y-4">
+                                            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-400 flex items-center gap-2">
+                                                <Bell size={14} className="text-amber-500" /> Official Notices, News & Updates ({eventResults.length})
+                                            </h2>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                {eventResults.map((ev, idx) => (
+                                                    <Link 
+                                                        key={idx} 
+                                                        to={ev.url} 
+                                                        className="flex flex-col justify-between p-5 rounded-xl border border-slate-200 dark:border-white/10 hover:border-blue-400 dark:hover:border-blue-500/40 hover:shadow-sm transition-all group bg-slate-50/50 dark:bg-[#18233c]"
+                                                    >
+                                                        <div>
+                                                            <div className="flex items-center justify-between gap-2 mb-2">
+                                                                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300">
+                                                                    {ev.label}
+                                                                </span>
+                                                                <span className="text-[11px] font-semibold text-slate-400">{ev.date}</span>
+                                                            </div>
+                                                            <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-blue-400 transition-colors leading-snug mb-2">
+                                                                {ev.title}
+                                                            </h3>
+                                                            <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                                                {ev.summary}
+                                                            </p>
+                                                        </div>
+                                                        <div className="pt-3 mt-3 border-t border-slate-200/60 dark:border-white/10 flex items-center justify-between text-xs font-bold text-primary dark:text-blue-400">
+                                                            <span>Read full notice</span>
+                                                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                                                        </div>
                                                     </Link>
                                                 ))}
                                             </div>
