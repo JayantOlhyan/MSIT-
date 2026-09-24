@@ -507,8 +507,9 @@ export const societiesData = {
         location: "Incubation Cell & Lab 218",
         officeRoom: "Incubation Cell & Lab 218, 2nd Floor, MSIT",
         membership: "Open to All Students",
-        website: "https://nisp.msit.in",
-        joinUrl: "https://nisp.msit.in",
+        website: "https://www.ecellmsit.in/",
+        websiteLabel: "ecellmsit.in",
+        joinUrl: "https://www.ecellmsit.in/",
         logoText: "E-CELL",
         logoSymbol: "🚀",
         socials: {
