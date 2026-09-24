@@ -240,6 +240,232 @@ const newsDb = {
         links: [
             { name: "MSIT Homepage", url: "https://msit.in/" }
         ]
+    },
+    "12": {
+        id: 12,
+        label: "ACADEMICS",
+        title: "MSIT Academic Calendar & Examination Schedule Released for 2026 Sessions",
+        date: "APR 05, 2026",
+        color: "border-indigo-600",
+        bgImage: "/campus/central-library-hall.webp",
+        summary: "Official academic calendar, mid-term datesheets, semester break timings, and university end-term examination guidelines published for B.Tech students.",
+        content: `
+            <p class="mb-6">The Office of the Dean of Academic Affairs at Maharaja Surajmal Institute of Technology has officially notified the approved <strong>Academic Calendar for the 2026 Academic Session</strong> in strict concordance with Guru Gobind Singh Indraprastha University (GGSIPU) statutory norms.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Semester Timelines & Key Deadlines</h3>
+            <p class="mb-6">The calendar schedules comprehensive instructional lecture weeks, continuous internal evaluation dates, laboratory project submissions, and preparatory study leaves leading directly into the university end-term practical and theory examinations.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Examination Ordinance & Attendance Thresholds</h3>
+            <p class="mb-6">Students are reminded that the <strong>75% minimum attendance rule</strong> under GGSIPU Ordinance 11 is mandatory for appearing in mid-term and semester end-term tests. Departmental mentors and class coordinators will review bi-weekly attendance rosters.</p>
+        `,
+        attachments: [
+            { name: "Official MSIT Academic Calendar 2026.pdf", size: "1.4 MB", url: "/academic-calendar" },
+            { name: "Internal Evaluation Guidelines & Marks Weightage.pdf", size: "850 KB", url: "/academic-calendar" }
+        ],
+        links: [
+            { name: "View Full Academic Calendar Page", url: "/academic-calendar" },
+            { name: "Syllabus Index & Course Schemes", url: "/syllabus" },
+            { name: "Time Table & Lecture Schedules", url: "/timetable" }
+        ]
+    },
+    "13": {
+        id: 13,
+        label: "ACADEMICS",
+        title: "GGSIPU Curriculum Upgrade: Advanced AI, Cloud Architecture & Autonomous Electives Adopted",
+        date: "MAR 18, 2026",
+        color: "border-indigo-600",
+        bgImage: "/campus/main-academic-building.webp",
+        summary: "Curriculum overhaul across CSE, IT, ECE, and EEE departments introduces industry-aligned electives, quantum computing fundamentals, and autonomous project credits.",
+        content: `
+            <p class="mb-6">In accordance with the National Education Policy (NEP 2020) and AICTE Model Curriculum recommendations, MSIT has integrated enhanced departmental curricula across all 4 undergraduate engineering disciplines.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">New Advanced Elective Tracks</h3>
+            <ul class="list-disc pl-6 mb-6 space-y-2">
+                <li><strong>Generative AI & LLM Systems:</strong> Deep learning architectures, transformer attention models, and scalable GPU inference.</li>
+                <li><strong>Cloud Architecture & DevSecOps:</strong> Distributed systems design, Kubernetes orchestration, and automated CI/CD pipelines.</li>
+                <li><strong>VLSI Chip Design & Semiconductor Engineering:</strong> Verilog HDL prototyping and ASIC testing in the MSIT IDEA Lab.</li>
+                <li><strong>Electric Vehicles & Clean Grid Systems:</strong> Battery management controllers and modern smart grid automation.</li>
+            </ul>
+        `,
+        attachments: [
+            { name: "Updated B.Tech Scheme & Syllabus Framework.pdf", size: "3.2 MB", url: "/syllabus" }
+        ],
+        links: [
+            { name: "Department of Computer Science (CSE)", url: "/cse" },
+            { name: "Department of Information Technology (IT)", url: "/it" },
+            { name: "Syllabus Index", url: "/syllabus" }
+        ]
+    },
+    "14": {
+        id: 14,
+        label: "ADMISSIONS",
+        title: "Admissions Open for B.Tech Batch 2026–30: Information Brochure & Counseling Schedule",
+        date: "APR 02, 2026",
+        color: "border-amber-600",
+        bgImage: "/campus/msit-main-gate.webp",
+        summary: "Complete admission guidelines, seat matrix for 1st & 2nd shift programs, GGSIPU CET / JEE Main cutoff trends, and online application portal are now active.",
+        content: `
+            <p class="mb-6">Maharaja Surajmal Institute of Technology, ranked consistently among the top tier engineering colleges affiliated with Guru Gobind Singh Indraprastha University (GGSIPU), announces admissions for the <strong>B.Tech Class of 2026–2030</strong>.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Programs Offered & Seat Matrix</h3>
+            <p class="mb-6">Admissions are conducted across two shifts: <strong>First Shift (Morning)</strong> and <strong>Second Shift (Evening)</strong> across CSE, IT, ECE, and EEE programs with a total annual sanctioned intake of 840 seats.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Counseling & Eligibility Criteria</h3>
+            <p class="mb-6">Candidates must qualify in JEE Main (Paper 1) conducted by the National Testing Agency (NTA) and register on the central GGSIPU online counseling portal. Detailed cutoff trends and seat reservation rules are provided in the official information brochure.</p>
+        `,
+        attachments: [
+            { name: "MSIT Information Bulletin 2026-27.pdf", size: "5.6 MB", url: "/brochure" },
+            { name: "Seat Matrix & Cutoff Trends (2023-2025).pdf", size: "1.2 MB", url: "/brochure" }
+        ],
+        links: [
+            { name: "Information Brochure & Seat Matrix", url: "/brochure" },
+            { name: "Online Fee Payment Portal", url: "/online-fee" },
+            { name: "GGSIPU Admissions Portal", url: "https://ipu.admissions.nic.in" }
+        ]
+    },
+    "15": {
+        id: 15,
+        label: "ADMISSIONS",
+        title: "MSIT Merit-cum-Means Scholarships & Financial Assistance Schemes Announced for 2026-27",
+        date: "MAR 12, 2026",
+        color: "border-amber-600",
+        bgImage: "/campus/foundation-stone-plaque.webp",
+        summary: "Institutional scholarships, EWS fee waivers, and Delhi Government financial assistance portals open with awards up to 100% tuition coverage for deserving scholars.",
+        content: `
+            <p class="mb-6">Surajmal Memorial Education Society (SMES) and MSIT administration reinforce our enduring mission that financial constraints should never hinder academic excellence. The scholarship application window for academic year 2026-27 is now officially open.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Available Financial Aid Categories</h3>
+            <ul class="list-disc pl-6 mb-6 space-y-2">
+                <li><strong>SMES Merit-cum-Means Scholarship:</strong> Financial assistance for academically high-achieving students with family income under ₹2.5 LPA.</li>
+                <li><strong>Delhi Govt. Merit-cum-Means Scheme:</strong> Up to 100% tuition fee waiver for EWS category students and 50% waiver for eligible income slabs.</li>
+                <li><strong>Special Branch Excellence Awards:</strong> Awarded to university rank-holders and department toppers each semester.</li>
+            </ul>
+        `,
+        attachments: [
+            { name: "Scholarship Guidelines & Application Form.pdf", size: "980 KB", url: "/scholarships" }
+        ],
+        links: [
+            { name: "Scholarships & Financial Aid Overview", url: "/scholarships" },
+            { name: "Delhi Government e-District Portal", url: "https://edistrict.delhigovt.nic.in" }
+        ]
+    },
+    "16": {
+        id: 16,
+        label: "PLACEMENTS",
+        title: "MSIT 2026 Placement Season Reaches ₹1.2 Cr International Offer & 95%+ Placement Rate",
+        date: "MAR 28, 2026",
+        color: "border-rose-600",
+        bgImage: "/campus-excellence.webp",
+        summary: "Over 250+ top global recruiters including Google, Amazon, Microsoft, Apple, and ION Trading extend 850+ job offers to graduating engineers.",
+        content: `
+            <p class="mb-6">The Training and Placement Cell (T&P) of Maharaja Surajmal Institute of Technology is delighted to report record-breaking corporate hiring statistics for the graduating engineering batch of 2026.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Key Placement Milestones</h3>
+            <p class="mb-6">This season achieved an all-time peak international package of <strong>₹1.2 Crore per annum</strong>, an average package of <strong>₹8.5 LPA</strong>, and domestic top compensation reaching ₹45+ LPA. More than 250 marquee employers participated in on-campus and hybrid hiring rounds.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Prominent Recruiters</h3>
+            <p class="mb-6">Leading software engineering, quantitative finance, semiconductor, and consulting firms including Google, Microsoft, Amazon, Adobe, ION Trading, Postman, Samsung R&D, ZS Associates, and Cisco recruited extensively from MSIT.</p>
+        `,
+        attachments: [
+            { name: "Annual Placement Report & Salary Statistics 2026.pdf", size: "2.8 MB", url: "/placements" }
+        ],
+        links: [
+            { name: "Full Placements Statistics & Records", url: "/placements" },
+            { name: "Alumni Network & Career Mentorship", url: "/alumni-network" }
+        ]
+    },
+    "17": {
+        id: 17,
+        label: "PLACEMENTS",
+        title: "Summer Internship Drive 2026: 180+ Pre-Placement Offers (PPOs) Bagged by 3rd-Year Engineers",
+        date: "FEB 20, 2026",
+        color: "border-rose-600",
+        bgImage: "/campus/student-gathering-courtyard.webp",
+        summary: "MSIT Training & Placement Cell concludes high-stipend corporate internship hiring with premier software, semiconductor, and fintech firms.",
+        content: `
+            <p class="mb-6">The MSIT Internship Cell has wrapped up its summer recruitment drive with 180+ pre-placement offers (PPOs) and high-stipend summer internships for pre-final year students.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Industry Exposure & Stipend Benchmarks</h3>
+            <p class="mb-6">Students secured monthly stipends reaching up to <strong>₹1.5 Lakh per month</strong> across top-tier multinational software development labs, quant trading firms, and AI research startups.</p>
+        `,
+        attachments: [
+            { name: "Internship Policy & Guidelines.pdf", size: "750 KB", url: "/internship-cell" }
+        ],
+        links: [
+            { name: "MSIT Internship Cell Page", url: "/internship-cell" },
+            { name: "Placements Overview", url: "/placements" }
+        ]
+    },
+    "18": {
+        id: 18,
+        label: "NOTICES",
+        title: "Urgent Examination Notice: End-Term Theory & Practical Datesheet Published",
+        date: "APR 08, 2026",
+        color: "border-sky-600",
+        bgImage: "/campus/campus-pathway-block.webp",
+        summary: "All regular and reappear candidates are instructed to review the official university datesheet, verify admit cards, and note hall ticket release dates.",
+        content: `
+            <p class="mb-6">The Office of the Controller of Examinations has officially released the detailed datesheet for the <strong>End-Term Theory & Practical Examinations (May–June 2026)</strong> for all B.Tech branches.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Examination Hall Regulations</h3>
+            <ul class="list-disc pl-6 mb-6 space-y-2">
+                <li>Candidates must carry their printed <strong>Admit Card</strong> along with their official Institute Identity Card.</li>
+                <li>Entry to examination halls closes strictly 15 minutes before exam commencement.</li>
+                <li>Electronic gadgets, smartwatches, and programmable calculators are strictly prohibited inside the hall.</li>
+            </ul>
+        `,
+        attachments: [
+            { name: "End-Term Theory & Practical Datesheet (May-June 2026).pdf", size: "1.9 MB", url: "/academic-calendar" },
+            { name: "Examination Center Guidelines & Code of Conduct.pdf", size: "640 KB", url: "/academic-calendar" }
+        ],
+        links: [
+            { name: "Academic Calendar & Examination Ordinance", url: "/academic-calendar" },
+            { name: "Student Login Portal", url: "https://examweb.ggsipu.ac.in" }
+        ]
+    },
+    "19": {
+        id: 19,
+        label: "NOTICES",
+        title: "Mandatory Notice regarding 75% Attendance Compliance for Examination Eligibility",
+        date: "MAR 15, 2026",
+        color: "border-sky-600",
+        bgImage: "/campus/main-academic-building.webp",
+        summary: "In accordance with GGSIPU Ordinance 11, students falling below statutory attendance thresholds must submit medical documentation to HOD offices immediately.",
+        content: `
+            <p class="mb-6">All students of B.Tech 1st, 2nd, 3rd, and 4th years are hereby notified that the minimum attendance requirement of <strong>75% in all registered theory and laboratory courses</strong> is statutory under GGSIPU Ordinance 11.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Medical Certificate Submission</h3>
+            <p class="mb-6">Students whose attendance has been impacted by medical illness or hospitalization must submit authenticated medical certificates counter-signed by guardians to their respective department HODs within 7 working days.</p>
+        `,
+        attachments: [
+            { name: "GGSIPU Ordinance 11 Attendance Regulations.pdf", size: "520 KB", url: "/attendance" }
+        ],
+        links: [
+            { name: "Attendance Rules & Criteria", url: "/attendance" },
+            { name: "Student Grievance Redressal Committee", url: "/student-grievance" }
+        ]
+    },
+    "20": {
+        id: 20,
+        label: "RESEARCH",
+        title: "MSIT Faculty & Scholars Publish 45+ Research Papers in IEEE, Springer & Scopus Q1 Journals",
+        date: "MAR 10, 2026",
+        color: "border-teal-600",
+        bgImage: "/campus-lab.webp",
+        summary: "Significant academic milestone in generative AI, VLSI chip architecture, biomedical robotics, and clean renewable energy systems by MSIT research teams.",
+        content: `
+            <p class="mb-6">Maharaja Surajmal Institute of Technology congratulates faculty members, doctoral scholars, and undergraduate researchers for achieving a record milestone of <strong>45+ peer-reviewed publications</strong> in top-tier IEEE, Springer, Elsevier, and Scopus Q1 indexed journals during this academic cycle.</p>
+            
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Interdisciplinary Breakthroughs</h3>
+            <p class="mb-6">Published investigations span high-impact domains including federated learning for privacy-preserving healthcare analytics, neuromorphic hardware accelerators, multi-agent reinforcement learning for UAV swarms, and high-efficiency perovskite photovoltaic materials.</p>
+        `,
+        attachments: [
+            { name: "Faculty Research Compendium & Citation Index 2026.pdf", size: "3.5 MB", url: "/research" }
+        ],
+        links: [
+            { name: "Research & Publications Hub", url: "/research" },
+            { name: "SPARK Student Think Tank", url: "/society-spark" }
+        ]
     }
 };
 
@@ -247,7 +473,7 @@ const NewsDetail = () => {
     const { id } = useParams();
     
     // Retrieve from local storage to allow admin-published news/events
-    const storedEvents = localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
+    const storedEvents = localStorage.getItem('msit_events_v3') || localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
     const localEventsList = storedEvents ? JSON.parse(storedEvents) : [];
     const localItem = localEventsList.find(e => String(e.id) === String(id));
     
