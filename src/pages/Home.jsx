@@ -652,7 +652,7 @@ const Home = () => {
                 date: "APR 10, 2026", 
                 readTime: "5 MIN READ",
                 image: "/campus/student-gathering-courtyard.webp",
-                link: "#", 
+                link: "/news-event/10", 
                 color: "border-emerald-500" 
             },
             { 
@@ -712,7 +712,7 @@ const Home = () => {
                 date: "MAR 26, 2026", 
                 readTime: "4 MIN READ",
                 image: "/campus/ecell-noticeboard-entrance.webp",
-                link: "#", 
+                link: "/news-event/9", 
                 color: "border-emerald-500" 
             },
             { 
@@ -772,7 +772,7 @@ const Home = () => {
                 date: "MAR 02, 2026", 
                 readTime: "5 MIN READ",
                 image: "/campus/main-academic-building.webp",
-                link: "#", 
+                link: "/news-event/1", 
                 color: "border-blue-600" 
             },
             { 
@@ -784,7 +784,7 @@ const Home = () => {
                 date: "FEB 28, 2026", 
                 readTime: "3 MIN READ",
                 image: "/campus/auditorium-cultural-fest.webp",
-                link: "#", 
+                link: "/news-event/2", 
                 color: "border-emerald-500" 
             },
             { 
@@ -808,7 +808,7 @@ const Home = () => {
                 date: "FEB 15, 2026", 
                 readTime: "7 MIN READ",
                 image: "/campus-excellence.webp",
-                link: "#", 
+                link: "/news-event/3", 
                 color: "border-purple-600" 
             },
             { 
@@ -820,7 +820,7 @@ const Home = () => {
                 date: "DEC 15, 2025", 
                 readTime: "4 MIN READ",
                 image: "/campus/campus-pathway-block.webp",
-                link: "#", 
+                link: "/news-event/7", 
                 color: "border-emerald-500" 
             },
             { 
@@ -832,7 +832,7 @@ const Home = () => {
                 date: "DEC 12, 2025", 
                 readTime: "4 MIN READ",
                 image: "/campus/foundation-stone-plaque.webp",
-                link: "#", 
+                link: "/news-event/4", 
                 color: "border-purple-600" 
             },
             { 
@@ -844,7 +844,7 @@ const Home = () => {
                 date: "NOV 19, 2026", 
                 readTime: "5 MIN READ",
                 image: "/campus/central-library-hall.webp",
-                link: "#", 
+                link: "/news-event/5", 
                 color: "border-emerald-500" 
             },
             { 
@@ -856,7 +856,7 @@ const Home = () => {
                 date: "AUG 15, 2025", 
                 readTime: "6 MIN READ",
                 image: "/campus-lab.webp",
-                link: "#", 
+                link: "/news-event/6", 
                 color: "border-blue-600" 
             },
             { 
@@ -868,7 +868,7 @@ const Home = () => {
                 date: "AUG 30, 2024", 
                 readTime: "3 MIN READ",
                 image: "/campus/campus-side-avenue.webp",
-                link: "#", 
+                link: "/news-event/8", 
                 color: "border-emerald-500" 
             },
             { 
@@ -880,13 +880,13 @@ const Home = () => {
                 date: "DEC 20, 2023", 
                 readTime: "6 MIN READ",
                 image: "/campus/maharaja-surajmal-statue.webp",
-                link: "#", 
+                link: "/news-event/11", 
                 color: "border-purple-600" 
             }
         ];
 
-        const STORAGE_KEY = 'msit_events_v3';
-        const storedEvents = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('msit_events_v2');
+        const STORAGE_KEY = 'msit_events_v4';
+        const storedEvents = typeof window !== 'undefined' ? (localStorage.getItem(STORAGE_KEY) || localStorage.getItem('msit_events_v3') || localStorage.getItem('msit_events_v2')) : null;
         if (storedEvents) {
             try {
                 const parsed = JSON.parse(storedEvents);
@@ -894,14 +894,17 @@ const Home = () => {
                 const merged = [
                     ...parsed.map(item => {
                         const def = defaultEvents.find(d => d.id === item.id) || {};
+                        const label = def.label || item.label || 'EVENT';
+                        const category = def.category || item.category || 'Events';
                         return {
                             ...def,
                             ...item,
+                            label,
+                            category,
                             date: item.id === 5 && (!item.date || item.date.includes('2025')) ? 'NOV 19, 2026' : (item.date || def.date),
                             image: item.image || def.image || '/campus/main-academic-building.webp',
                             summary: item.summary || def.summary || item.title,
-                            readTime: item.readTime || def.readTime || '4 MIN READ',
-                            category: item.category || def.category || def.label
+                            readTime: item.readTime || def.readTime || '4 MIN READ'
                         };
                     }),
                     ...defaultEvents.filter(d => !existingIds.has(d.id))
@@ -912,9 +915,24 @@ const Home = () => {
                 // fallback to defaultEvents if parsing fails
             }
         }
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultEvents));
+        if (typeof window !== 'undefined') {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultEvents));
+        }
         return defaultEvents;
     });
+
+    const normalizeCategory = (label, category) => {
+        const text = `${label || ''} ${category || ''}`.toLowerCase().trim();
+        if (text.includes('event')) return 'events';
+        if (text.includes('news')) return 'news';
+        if (text.includes('stor')) return 'stories';
+        if (text.includes('academic')) return 'academics';
+        if (text.includes('admission')) return 'admissions';
+        if (text.includes('placement')) return 'placements';
+        if (text.includes('notice')) return 'notices';
+        if (text.includes('research')) return 'research';
+        return (category || label || 'news').toLowerCase().trim();
+    };
 
     const sortedEvents = [...events].sort((a, b) => {
         const timeA = parseEventDate(a.date);
@@ -928,31 +946,8 @@ const Home = () => {
     });
 
     const searchedEvents = sortedEvents.filter(item => {
-        const itemLabel = (item.label || '').toLowerCase();
-        const itemCategory = (item.category || '').toLowerCase();
-        
-        let matchesTab = false;
-        if (activeNewsTab === 'all') {
-            matchesTab = true;
-        } else if (activeNewsTab === 'news') {
-            matchesTab = itemLabel === 'news' || itemCategory === 'news';
-        } else if (activeNewsTab === 'events') {
-            matchesTab = itemLabel === 'event' || itemLabel === 'events' || itemCategory === 'events' || itemCategory === 'event';
-        } else if (activeNewsTab === 'stories') {
-            matchesTab = itemLabel === 'story' || itemLabel === 'stories' || itemCategory === 'stories' || itemCategory === 'story';
-        } else if (activeNewsTab === 'academics') {
-            matchesTab = itemLabel === 'academics' || itemLabel === 'academic' || itemCategory === 'academics' || itemCategory === 'academic';
-        } else if (activeNewsTab === 'admissions') {
-            matchesTab = itemLabel === 'admissions' || itemLabel === 'admission' || itemCategory === 'admissions' || itemCategory === 'admission';
-        } else if (activeNewsTab === 'placements') {
-            matchesTab = itemLabel === 'placements' || itemLabel === 'placement' || itemCategory === 'placements' || itemCategory === 'placement';
-        } else if (activeNewsTab === 'notices') {
-            matchesTab = itemLabel === 'notices' || itemLabel === 'notice' || itemCategory === 'notices' || itemCategory === 'notice';
-        } else if (activeNewsTab === 'research') {
-            matchesTab = itemLabel === 'research' || itemCategory === 'research';
-        } else {
-            matchesTab = itemLabel === activeNewsTab || itemCategory === activeNewsTab;
-        }
+        const itemCat = normalizeCategory(item.label, item.category);
+        const matchesTab = activeNewsTab === 'all' || itemCat === activeNewsTab;
         
         const q = searchQuery.toLowerCase().trim();
         const matchesSearch = !q || (
@@ -999,24 +994,19 @@ const Home = () => {
             />
             {/* HERO SECTION */}
             <section className="relative w-full h-[100vh] min-h-[clamp(500px,80vh,700px)] flex items-center justify-center bg-slate-900 overflow-hidden">
-                {/* LCP Discovery - Hidden High Priority Image for CSS background */}
-                <img 
-                    src="/campus-hero.webp" 
-                    alt="MSIT Main 8-Storey Academic Building" 
-                    className="sr-only" 
-                    fetchpriority="high" 
-                    loading="eager" 
-                    decoding="async"
-                />
-                {/* Interactive Campus Background Image */}
+                {/* High Priority Campus Hero Image - iOS Safari & cross-platform compatible */}
                 <div className="absolute inset-0 z-0 group overflow-hidden">
-                    <div
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed transition-transform duration-[20s] ease-out group-hover:scale-105"
-                        style={{ backgroundImage: "url('/campus-hero.webp')" }}
-                    ></div>
+                    <img 
+                        src="/campus-hero.webp" 
+                        alt="MSIT Main 8-Storey Academic Building" 
+                        fetchpriority="high" 
+                        loading="eager" 
+                        decoding="async"
+                        className="w-full h-full object-cover object-center transition-transform duration-[20s] ease-out group-hover:scale-105 select-none"
+                    />
                     {/* Dark gradient overlays */}
-                    <div className="absolute inset-0 bg-slate-950/40 mix-blend-multiply"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-slate-900/60"></div>
+                    <div className="absolute inset-0 bg-slate-950/40 mix-blend-multiply pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-slate-900/60 pointer-events-none"></div>
                 </div>
 
                 {/* Giant Centered Text */}
