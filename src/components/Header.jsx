@@ -54,6 +54,24 @@ const Header = () => {
         };
     }, []);
 
+    // Prevent background scrolling when mobile menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
+
+    // Close mobile menu and search overlay when navigating
+    useEffect(() => {
+        setIsMenuOpen(false);
+        setSearchOpen(false);
+    }, [location.pathname]);
+
     const toggleSearch = () => {
         setSearchOpen(!searchOpen);
         setSearchQuery('');
@@ -376,8 +394,15 @@ const Header = () => {
             </header>
 
 
-            {/* Mobile Nav Overlay (Smooth Sliding Drawer) */}
-            <div className={`fixed inset-0 z-50 bg-white dark:bg-[#0a0f1d] text-slate-900 dark:text-slate-100 overflow-y-auto scrollbar-hide block xl:hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pt-24 pb-12 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+            {/* Mobile Nav Overlay (Smooth Sliding Drawer - iPhone & WebKit Optimized) */}
+            <div 
+                className={`fixed inset-0 z-[55] bg-white dark:bg-[#0a0f1d] text-slate-900 dark:text-slate-100 overflow-y-auto block xl:hidden transition-all duration-300 ease-out pt-24 pb-16 ${
+                    isMenuOpen 
+                        ? 'opacity-100 visible pointer-events-auto translate-y-0' 
+                        : 'opacity-0 invisible pointer-events-none -translate-y-4'
+                }`}
+                style={{ WebkitOverflowScrolling: 'touch' }}
+            >
                 <div className="p-6 sm:p-10 max-w-lg sm:max-w-4xl md:max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 sm:gap-y-8">
                         {Object.entries(megaMenuData).map(([key, items], idx) => {
