@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp, Sun, Moon } from 'lucide-react';
+import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp, Sun, Moon, Bell } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { searchIndex } from '../data/searchIndex';
 import { useAccessibility } from '../context/AccessibilityContext';
@@ -12,7 +12,7 @@ const Header = () => {
     const [openMobileSections, setOpenMobileSections] = useState({});
     const [searchOpen, setSearchOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [searchResults, setSearchResults] = useState({ faculty: [], pages: [], qa: [] });
+    const [searchResults, setSearchResults] = useState({ faculty: [], pages: [], qa: [], events: [] });
     const location = useLocation();
     const hoverTimeoutRef = React.useRef(null);
 
@@ -57,7 +57,7 @@ const Header = () => {
     const toggleSearch = () => {
         setSearchOpen(!searchOpen);
         setSearchQuery('');
-        setSearchResults({ faculty: [], pages: [], qa: [] });
+        setSearchResults({ faculty: [], pages: [], qa: [], events: [] });
     };
 
     const handleSearch = (query) => {
@@ -86,10 +86,19 @@ const Header = () => {
             q.keywords.toLowerCase().includes(lQuery)
         );
 
+        const eventMatches = searchIndex.events ? searchIndex.events.filter(e =>
+            e.title.toLowerCase().includes(lQuery) ||
+            e.label.toLowerCase().includes(lQuery) ||
+            (e.category && e.category.toLowerCase().includes(lQuery)) ||
+            (e.summary && e.summary.toLowerCase().includes(lQuery)) ||
+            (e.keywords && e.keywords.toLowerCase().includes(lQuery))
+        ) : [];
+
         setSearchResults({
             faculty: facultyMatches.slice(0, 3),
             pages: pageMatches.slice(0, 4),
-            qa: qaMatches.slice(0, 2)
+            qa: qaMatches.slice(0, 2),
+            events: eventMatches.slice(0, 3)
         });
     };
 
@@ -653,7 +662,44 @@ const Header = () => {
                                         </div>
                                     )}
 
-                                    {searchResults.faculty.length === 0 && searchResults.pages.length === 0 && searchResults.qa.length === 0 && (
+                                    {/* Categorized Events & Notices Results */}
+                                    {searchResults.events && searchResults.events.length > 0 && (
+                                        <div>
+                                            <div className="flex items-center justify-between mb-3 px-1">
+                                                <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 flex items-center gap-2">
+                                                    <Bell size={14} className="text-amber-500" /> Notices, News & Updates
+                                                </h4>
+                                                <span className="text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/30 px-2 py-0.5 rounded-md">
+                                                    {searchResults.events.length} found
+                                                </span>
+                                            </div>
+                                            <div className="space-y-2">
+                                                {searchResults.events.map((ev, i) => (
+                                                    <Link 
+                                                        key={i} 
+                                                        to={ev.url} 
+                                                        onClick={toggleSearch} 
+                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white dark:bg-[#182238] border border-slate-100 dark:border-white/10 hover:border-blue-300 dark:hover:border-blue-500/50 hover:bg-blue-50/40 dark:hover:bg-slate-800/80 hover:shadow-card transition-all duration-300 group"
+                                                    >
+                                                        <div className="min-w-0 pr-3">
+                                                            <div className="flex items-center gap-2 mb-1">
+                                                                <span className="px-2 py-0.5 rounded-full text-[9px] font-extrabold uppercase tracking-wider bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
+                                                                    {ev.label}
+                                                                </span>
+                                                                <span className="text-[11px] text-slate-400 font-medium">{ev.date}</span>
+                                                            </div>
+                                                            <div className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-primary dark:group-hover:text-blue-400 transition-colors truncate">
+                                                                {ev.title}
+                                                            </div>
+                                                        </div>
+                                                        <ChevronRight size={16} className="text-slate-300 dark:text-slate-500 group-hover:text-primary dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all shrink-0" />
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {searchResults.faculty.length === 0 && searchResults.pages.length === 0 && searchResults.qa.length === 0 && (!searchResults.events || searchResults.events.length === 0) && (
                                         <div className="text-center py-12 bg-slate-50/50 dark:bg-[#182238]/50 rounded-2xl border border-dashed border-slate-200 dark:border-white/10">
                                             <Search className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-3" />
                                             <h3 className="text-base font-bold text-slate-800 dark:text-white mb-1">No matches found</h3>
