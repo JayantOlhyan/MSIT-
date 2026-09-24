@@ -514,10 +514,26 @@ export const quickLinksData = {
             { label: "India Rank (2025)", value: "Top 11" }
         ],
         bulletPoints: [
-            "Event Registration Portal",
-            { label: "NDLI Resources", url: "https://ndl.iitkgp.ac.in/" },
-            "Participation Certificates",
-            "Skill Development Workshops"
+            { 
+                label: "Event Registration Portal", 
+                detail: "Register for upcoming National Digital Library of India (NDLI) Club reading challenges, literary quizzes, and scholarly workshops.",
+                url: "https://ndl.iitkgp.ac.in/",
+                actionText: "Open NDLI Portal"
+            },
+            { 
+                label: "NDLI Resources", 
+                detail: "Access millions of digitized academic books, research articles, thesis papers, and video lectures curated by IIT Kharagpur.",
+                url: "https://ndl.iitkgp.ac.in/",
+                actionText: "Explore Digital Archives"
+            },
+            { 
+                label: "Participation Certificates", 
+                detail: "All active participants in NDLI workshops, book reviews, and national competitions receive verified e-certificates endorsed by IIT Kharagpur and MSIT."
+            },
+            { 
+                label: "Skill Development Workshops", 
+                detail: "Hands-on training sessions covering academic research methodology, digital archive indexing, reference management, and open-access scholarly journals."
+            }
         ]
     },
     "society-geekroom": {
@@ -716,10 +732,30 @@ export const quickLinksData = {
             { label: "Network Members", value: "50,000+" }
         ],
         bulletPoints: [
-            "Founding Chapter",
-            "Hackathons & Competitions",
-            { label: "Official Website", url: "https://geekroom.co.in" },
-            { label: "Instagram", url: "https://www.instagram.com/geekroom_msit/" }
+            {
+                label: "Founding Chapter",
+                detail: "MSIT is the birthplace of Geek Room, growing from a campus coding club into an all-India developer network of 50,000+ engineers.",
+                url: "https://geekroom.co.in",
+                actionText: "Visit Geek Room Community"
+            },
+            {
+                label: "Hackathons & Competitions",
+                detail: "Organizes flagship hackathons including HackMSIT, Code-a-Thon, and algorithmic problem-solving sprint contests with cash prizes and sponsor bounties.",
+                url: "/events",
+                actionText: "View Campus Events"
+            },
+            { 
+                label: "Official Website", 
+                detail: "Explore Geek Room initiatives, upcoming national hackathons, partner sponsor networks, and student community perks.",
+                url: "https://geekroom.co.in",
+                actionText: "Open Website"
+            },
+            { 
+                label: "Instagram", 
+                detail: "Follow @geekroom_msit for live event announcements, hackathon recaps, photo galleries, and member highlights.",
+                url: "https://www.instagram.com/geekroom_msit/",
+                actionText: "Visit Instagram"
+            }
         ]
     },
     "society-ecell": {
@@ -743,10 +779,32 @@ export const quickLinksData = {
             { label: "MoU Partners", value: "20+" }
         ],
         bulletPoints: [
-            "Startup Incubation (Lab 218)",
-            "Envisage Entrepreneurship Fest",
-            "Hult Prize MSIT Chapter",
-            { label: "NISP Portal", url: "https://nisp.msit.in" }
+            {
+                label: "Startup Incubation (Lab 218)",
+                detail: "Dedicated co-working and prototyping space inside Lab 218 equipped with high-speed internet, conference facilities, and cloud credits for MSIT student founders."
+            },
+            {
+                label: "Envisage Entrepreneurship Fest",
+                detail: "Annual flagship entrepreneurship summit featuring investor pitch days, startup bootcamps, Shark Tank style simulations, and founder keynotes.",
+                url: "/events",
+                actionText: "Explore Annual Fests"
+            },
+            {
+                label: "Hult Prize MSIT Chapter",
+                detail: "On-campus edition of the prestigious global student social entrepreneurship challenge tackling UN Sustainable Development Goals."
+            },
+            { 
+                label: "Official eCell Website", 
+                detail: "Official portal of the Entrepreneurship & Incubation Cell at MSIT featuring upcoming E-Summits, startup incubations, pitch sessions, and founder network.",
+                url: "https://www.ecellmsit.in/",
+                actionText: "Visit ecellmsit.in"
+            },
+            { 
+                label: "NISP Portal", 
+                detail: "National Innovation and Startup Policy guidelines facilitating student intellectual property protection, venture incubation, and faculty mentoring.",
+                url: "https://nisp.msit.in",
+                actionText: "Open NISP Portal"
+            }
         ]
     },
     "society-uba": {
@@ -770,10 +828,24 @@ export const quickLinksData = {
             { label: "Adopted Villages", value: "5" }
         ],
         bulletPoints: [
-            "Village Baseline Surveys",
-            "Rural Technical Interventions",
-            "Gram Sabha Engagement",
-            { label: "UBA National Portal", url: "https://unnatbharatabhiyan.gov.in" }
+            {
+                label: "Village Baseline Surveys",
+                detail: "Comprehensive door-to-door socio-economic and infrastructural surveys conducted across 5 adopted rural villages around Delhi-NCR."
+            },
+            {
+                label: "Rural Technical Interventions",
+                detail: "Engineering projects deploying low-cost solar lighting, water quality monitoring, and waste management technologies in rural communities."
+            },
+            {
+                label: "Gram Sabha Engagement",
+                detail: "Regular participatory planning sessions with village panchayat councils and local leaders to co-create sustainable development solutions."
+            },
+            { 
+                label: "UBA National Portal", 
+                detail: "Flagship program under the Ministry of Education connecting higher education institutions with rural India to identify development challenges.",
+                url: "https://unnatbharatabhiyan.gov.in",
+                actionText: "Visit National Portal"
+            }
         ]
     },
     "society-spark": {
@@ -797,10 +869,24 @@ export const quickLinksData = {
             { label: "Indexed Papers", value: "30+" }
         ],
         bulletPoints: [
-            "Research Mentorship & Labs",
-            "LaTeX & Paper Writing Workshops",
-            "Scopus & IEEE Indexing",
-            "Research Travel Grants"
+            {
+                label: "Research Mentorship & Labs",
+                detail: "Faculty-guided research clusters assisting undergraduate students in formulating research problem statements and conducting lab experiments.",
+                url: "/research",
+                actionText: "Visit Research Department"
+            },
+            {
+                label: "LaTeX & Paper Writing Workshops",
+                detail: "Structured bootcamps teaching students scientific typesetting in Overleaf/LaTeX, citation management with Zotero/Mendeley, and journal formatting."
+            },
+            {
+                label: "Scopus & IEEE Indexing",
+                detail: "Targeted peer-review assistance helping students publish papers in Q1/Q2 Scopus journals and prestigious IEEE conference proceedings."
+            },
+            {
+                label: "Research Travel Grants",
+                detail: "Funding support provided by MSIT and AICTE schemes for students presenting accepted papers at national and international conferences."
+            }
         ]
     }
 };
