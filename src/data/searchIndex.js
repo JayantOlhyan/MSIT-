@@ -133,10 +133,127 @@ export const qaData = [
 ];
 
 /**
+ * Curated news, events, notices and categorized updates for site-wide discovery
+ */
+export const searchEvents = [
+    {
+        id: 12,
+        title: "MSIT Academic Calendar & Examination Schedule Released for 2026 Sessions",
+        label: "ACADEMICS",
+        category: "Academics",
+        date: "APR 05, 2026",
+        url: "/academic-calendar",
+        summary: "Official academic calendar, mid-term datesheets, semester break timings, and university end-term examination guidelines published for B.Tech students.",
+        keywords: "academics, academic calendar, datesheet, exams, evaluation, schedule, syllabus, classes"
+    },
+    {
+        id: 13,
+        title: "GGSIPU Curriculum Upgrade: Advanced AI, Cloud Architecture & Autonomous Electives Adopted",
+        label: "ACADEMICS",
+        category: "Academics",
+        date: "MAR 18, 2026",
+        url: "/syllabus",
+        summary: "Curriculum overhaul across CSE, IT, ECE, and EEE departments introduces industry-aligned electives, quantum computing fundamentals, and autonomous project credits.",
+        keywords: "academics, curriculum, syllabus, electives, ai, cloud, btech, cse, it, ece, eee"
+    },
+    {
+        id: 14,
+        title: "Admissions Open for B.Tech Batch 2026–30: Information Brochure & Counseling Schedule",
+        label: "ADMISSIONS",
+        category: "Admissions",
+        date: "APR 02, 2026",
+        url: "/brochure",
+        summary: "Complete admission guidelines, seat matrix for 1st & 2nd shift programs, GGSIPU CET / JEE Main cutoff trends, and online application portal are now active.",
+        keywords: "admissions, brochure, bulletin, jee main, cutoff, seat matrix, eligibility, counseling"
+    },
+    {
+        id: 15,
+        title: "MSIT Merit-cum-Means Scholarships & Financial Assistance Schemes Announced for 2026-27",
+        label: "ADMISSIONS",
+        category: "Admissions",
+        date: "MAR 12, 2026",
+        url: "/scholarships",
+        summary: "Institutional scholarships, EWS fee waivers, and Delhi Government financial assistance portals open with awards up to 100% tuition coverage for deserving scholars.",
+        keywords: "admissions, scholarships, fee waiver, financial aid, ews, merit, assistance"
+    },
+    {
+        id: 16,
+        title: "MSIT 2026 Placement Season Reaches ₹1.2 Cr International Offer & 95%+ Placement Rate",
+        label: "PLACEMENTS",
+        category: "Placements",
+        date: "MAR 28, 2026",
+        url: "/placements",
+        summary: "Over 250+ top global recruiters including Google, Amazon, Microsoft, Apple, and ION Trading extend 850+ job offers to graduating engineers.",
+        keywords: "placements, jobs, offers, highest package, google, microsoft, apple, salary, lpa"
+    },
+    {
+        id: 17,
+        title: "Summer Internship Drive 2026: 180+ Pre-Placement Offers (PPOs) Bagged by 3rd-Year Engineers",
+        label: "PLACEMENTS",
+        category: "Placements",
+        date: "FEB 20, 2026",
+        url: "/internship-cell",
+        summary: "MSIT Training & Placement Cell concludes high-stipend corporate internship hiring with premier software, semiconductor, and fintech firms.",
+        keywords: "placements, internship, ppo, stipend, training, cell, recruitment"
+    },
+    {
+        id: 18,
+        title: "Urgent Examination Notice: End-Term Theory & Practical Datesheet Published",
+        label: "NOTICES",
+        category: "Notices",
+        date: "APR 08, 2026",
+        url: "/news-event/18",
+        summary: "All regular and reappear candidates are instructed to review the official university datesheet, verify admit cards, and note hall ticket release dates.",
+        keywords: "notices, examination, datesheet, hall ticket, circular, exams, practical, theory"
+    },
+    {
+        id: 19,
+        title: "Mandatory Notice regarding 75% Attendance Compliance for Examination Eligibility",
+        label: "NOTICES",
+        category: "Notices",
+        date: "MAR 15, 2026",
+        url: "/attendance",
+        summary: "In accordance with GGSIPU Ordinance 11, students falling below statutory attendance thresholds must submit medical documentation to HOD offices immediately.",
+        keywords: "notices, attendance, 75%, detention, medical, ordinance 11, rules, eligibility"
+    },
+    {
+        id: 20,
+        title: "MSIT Faculty & Scholars Publish 45+ Research Papers in IEEE, Springer & Scopus Q1 Journals",
+        label: "RESEARCH",
+        category: "Research",
+        date: "MAR 10, 2026",
+        url: "/research",
+        summary: "Significant academic milestone in generative AI, VLSI chip architecture, biomedical robotics, and clean renewable energy systems by MSIT research teams.",
+        keywords: "research, papers, publications, scopus, ieee, journals, patents, citations"
+    },
+    {
+        id: 1,
+        title: "Department of CSE receives CSR Research Grant from Petronet LNG Ltd. for AI Center of Excellence",
+        label: "NEWS",
+        category: "Research",
+        date: "MAR 02, 2026",
+        url: "/news-event/1",
+        summary: "The new research grant will drive interdisciplinary AI research, high-performance computing, and industry collaboration at MSIT.",
+        keywords: "news, research, grant, petronet, cse, ai center of excellence"
+    },
+    {
+        id: 10,
+        title: "MSC MSIT Organizes HackMSIT 1.0 Hackathon",
+        label: "EVENT",
+        category: "Events",
+        date: "APR 10, 2026",
+        url: "/news-event/10",
+        summary: "36-hour non-stop student hackathon with 500+ participants building open-source projects, AI prototypes, and developer tools.",
+        keywords: "event, hackathon, hackmsit, coding, projects, competition"
+    }
+];
+
+/**
  * Exported searchIndex object automatically kept up to date
  */
 export const searchIndex = {
     faculty: generatedFaculty,
     pages: generatedPages,
-    qa: qaData
+    qa: qaData,
+    events: searchEvents
 };
