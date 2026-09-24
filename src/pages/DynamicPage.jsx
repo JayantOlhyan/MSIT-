@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, LayoutDashboard, X, Mail, Linkedin, Globe, Phone, FileText, Star } from 'lucide-react';
+import { ArrowRight, LayoutDashboard, X, Mail, Linkedin, Globe, Phone, FileText, Star, ChevronDown, ExternalLink } from 'lucide-react';
 import { pagesData } from '../data/pagesData';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
@@ -222,65 +222,150 @@ const DynamicPage = () => {
 
                                 {/* Key Highlights */}
                                 {pageData.bulletPoints && pageData.bulletPoints.length > 0 && (
-                                    <div className="bg-slate-900 dark:bg-[#131c31] p-8 rounded-2xl text-white shadow-card border border-transparent dark:border-white/10">
-                                        <h4 className="text-lg font-semibold mb-6 flex items-center">Key Highlights</h4>
-                                        <ul className="space-y-4">
+                                    <div className="bg-slate-900 dark:bg-[#131c31] p-6 sm:p-8 rounded-2xl text-white shadow-card border border-slate-800/80 dark:border-white/10">
+                                        <div className="flex items-center justify-between mb-5 pb-3 border-b border-white/10">
+                                            <h4 className="text-base sm:text-lg font-bold flex items-center gap-2.5">
+                                                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                                                Key Highlights
+                                            </h4>
+                                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-white/5 dark:bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
+                                                Interactive
+                                            </span>
+                                        </div>
+                                        <ul className="space-y-2.5">
                                             {pageData.bulletPoints.map((point, i) => {
-                                                const isLink = typeof point === 'object' && point.url;
-                                                const labelText = typeof point === 'object' ? point.label : point;
-                                                const detailText = typeof point === 'object' ? point.detail : null;
-                                                
+                                                const isObject = typeof point === 'object' && point !== null;
+                                                const labelText = isObject ? point.label : point;
+                                                const pointUrl = isObject ? point.url : null;
+                                                const detailText = isObject ? point.detail : `Key institutional guidelines and resource highlights for ${labelText}.`;
+                                                const actionText = isObject && point.actionText ? point.actionText : (pointUrl ? (pointUrl.startsWith('http') ? 'Visit Official Portal' : 'Learn More') : null);
+
                                                 const isActiveFeeTab = slug === 'online-fee' && (
                                                     (labelText.includes('Payment') && activeFeeTab === 'pay') ||
                                                     (labelText.includes('Receipt') && activeFeeTab === 'receipt') ||
                                                     (labelText.includes('Refund') && activeFeeTab === 'refund')
                                                 );
-                                                
+
                                                 const isActiveEventTab = slug === 'events' && (
                                                     (labelText.includes('Avensis') && activeEventTab === 'avensis') ||
                                                     (labelText.includes('Genesis') && activeEventTab === 'genesis') ||
                                                     (labelText.includes('Sports') && activeEventTab === 'sports')
                                                 );
 
-                                                const isActive = isActiveFeeTab || isActiveEventTab || activeHighlightIndex === i;
+                                                const isExpanded = activeHighlightIndex === i;
+                                                const isActive = isActiveFeeTab || isActiveEventTab || isExpanded;
+                                                const isDirectLink = Boolean(pointUrl && !detailText && !isActiveFeeTab && !isActiveEventTab);
+
+                                                const handleClick = () => {
+                                                    if (slug === 'online-fee') {
+                                                        if (labelText.includes('Payment')) setActiveFeeTab('pay');
+                                                        else if (labelText.includes('Receipt')) setActiveFeeTab('receipt');
+                                                        else if (labelText.includes('Refund')) setActiveFeeTab('refund');
+                                                    } else if (slug === 'events') {
+                                                        if (labelText.includes('Avensis')) setActiveEventTab('avensis');
+                                                        else if (labelText.includes('Genesis')) setActiveEventTab('genesis');
+                                                        else if (labelText.includes('Sports')) setActiveEventTab('sports');
+                                                    }
+                                                    
+                                                    setActiveHighlightIndex(isExpanded ? null : i);
+                                                };
+
+                                                if (isDirectLink) {
+                                                    const linkProps = pointUrl.startsWith('http') 
+                                                        ? { href: pointUrl, target: '_blank', rel: 'noopener noreferrer' }
+                                                        : { to: pointUrl };
+                                                    const Component = pointUrl.startsWith('http') ? 'a' : Link;
+
+                                                    return (
+                                                        <li key={i}>
+                                                            <Component
+                                                                {...linkProps}
+                                                                className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 hover:border-blue-500/40 text-slate-200 hover:text-white transition-all group cursor-pointer"
+                                                            >
+                                                                <div className="flex items-center gap-3 min-w-0 pr-2">
+                                                                    <ArrowRight className="w-4 h-4 text-blue-400 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                                                                    <span className="text-sm font-semibold truncate" dangerouslySetInnerHTML={{ __html: labelText }}></span>
+                                                                </div>
+                                                                {pointUrl.startsWith('http') ? (
+                                                                    <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-blue-400 shrink-0 transition-colors" />
+                                                                ) : (
+                                                                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-400 shrink-0 transition-colors" />
+                                                                )}
+                                                            </Component>
+                                                        </li>
+                                                    );
+                                                }
 
                                                 return (
-                                                    <li key={i} className="flex items-start text-slate-300 text-sm">
-                                                        <ArrowRight className={`w-4 h-4 mr-3 mt-0.5 shrink-0 transition-all duration-300 ${isActive ? 'text-accent' : 'text-slate-500 dark:text-slate-400'} ${activeHighlightIndex === i && detailText ? 'rotate-90' : ''}`} />
-                                                        {isLink ? (
-                                                            point.url.startsWith('http') ? (
-                                                                <a href={point.url} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                                                                    {point.label}
-                                                                </a>
-                                                            ) : (
-                                                                <Link to={point.url} className="hover:text-accent transition-colors">
-                                                                    {point.label}
-                                                                </Link>
-                                                            )
-                                                        ) : (
-                                                            <div className="flex flex-col w-full">
+                                                    <li key={i} className={`rounded-xl border transition-all ${isExpanded ? 'bg-white/[0.07] border-blue-500/40 shadow-sm' : 'bg-white/[0.03] hover:bg-white/[0.06] border-white/5'}`}>
+                                                        <div
+                                                            role="button"
+                                                            tabIndex={0}
+                                                            onClick={handleClick}
+                                                            onKeyDown={(e) => {
+                                                                if (e.key === 'Enter' || e.key === ' ') {
+                                                                    e.preventDefault();
+                                                                    handleClick();
+                                                                }
+                                                            }}
+                                                            aria-expanded={isExpanded}
+                                                            className="w-full flex items-center justify-between p-3.5 text-left transition-colors cursor-pointer group focus:outline-none"
+                                                        >
+                                                            <div className="flex items-center gap-3 min-w-0 pr-2">
+                                                                <span className={`w-2 h-2 rounded-full shrink-0 transition-all ${isActive ? 'bg-blue-400 scale-125' : 'bg-slate-500 group-hover:bg-slate-300'}`}></span>
                                                                 <span 
-                                                                    className={`transition-colors w-full ${(detailText || slug === 'online-fee' || slug === 'events') ? 'hover:text-accent cursor-pointer' : 'cursor-default'} ${isActive ? 'text-accent font-bold font-sans' : ''}`}
+                                                                    className={`text-sm font-semibold transition-colors ${isActive ? 'text-blue-300 font-bold' : 'text-slate-200 group-hover:text-white'}`}
                                                                     dangerouslySetInnerHTML={{ __html: labelText }}
-                                                                    onClick={() => {
-                                                                        if (slug === 'online-fee') {
-                                                                            if (labelText.includes('Payment')) setActiveFeeTab('pay');
-                                                                            else if (labelText.includes('Receipt')) setActiveFeeTab('receipt');
-                                                                            else if (labelText.includes('Refund')) setActiveFeeTab('refund');
-                                                                        } else if (slug === 'events') {
-                                                                            if (labelText.includes('Avensis')) setActiveEventTab('avensis');
-                                                                            else if (labelText.includes('Genesis')) setActiveEventTab('genesis');
-                                                                            else if (labelText.includes('Sports')) setActiveEventTab('sports');
-                                                                        }
-                                                                        
-                                                                        if (detailText) {
-                                                                            setActiveHighlightIndex(activeHighlightIndex === i ? null : i);
-                                                                        }
-                                                                    }}
                                                                 ></span>
-                                                                {detailText && activeHighlightIndex === i && (
-                                                                    <div className="mt-2 text-slate-400 text-xs leading-relaxed animate-fade-in">
-                                                                        {detailText}
+                                                            </div>
+                                                            <div className="flex items-center gap-2 shrink-0">
+                                                                {pointUrl && (
+                                                                    <button
+                                                                        type="button"
+                                                                        onClick={(e) => {
+                                                                            e.stopPropagation();
+                                                                            if (pointUrl.startsWith('http')) {
+                                                                                window.open(pointUrl, '_blank', 'noopener,noreferrer');
+                                                                            } else {
+                                                                                navigate(pointUrl);
+                                                                            }
+                                                                        }}
+                                                                        title="Direct link"
+                                                                        className="p-1 rounded-md text-slate-400 hover:text-blue-300 hover:bg-white/10 transition-colors cursor-pointer"
+                                                                    >
+                                                                        {pointUrl.startsWith('http') ? <ExternalLink size={13} /> : <ArrowRight size={13} />}
+                                                                    </button>
+                                                                )}
+                                                                <ChevronDown className={`w-4 h-4 text-slate-400 group-hover:text-white transition-transform duration-300 ${isExpanded ? 'rotate-180 text-blue-400' : ''}`} />
+                                                            </div>
+                                                        </div>
+
+                                                        {isExpanded && detailText && (
+                                                            <div className="px-4 pb-4 pt-1 text-xs text-slate-300 border-t border-white/5 space-y-3 animate-fade-in">
+                                                                <p className="leading-relaxed font-normal text-slate-300 dark:text-slate-300">{detailText}</p>
+                                                                {pointUrl && (
+                                                                    <div className="pt-1">
+                                                                        {pointUrl.startsWith('http') ? (
+                                                                            <a 
+                                                                                href={pointUrl}
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                                onClick={(e) => e.stopPropagation()}
+                                                                                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-sm hover:shadow transition-all group/btn"
+                                                                            >
+                                                                                <span>{actionText || 'Visit Official Portal'}</span>
+                                                                                <ExternalLink size={12} className="group-hover/btn:translate-x-0.5 transition-transform" />
+                                                                            </a>
+                                                                        ) : (
+                                                                            <Link 
+                                                                                to={pointUrl}
+                                                                                onClick={(e) => e.stopPropagation()}
+                                                                                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-sm hover:shadow transition-all group/btn"
+                                                                            >
+                                                                                <span>{actionText || 'Explore Page'}</span>
+                                                                                <ArrowRight size={12} className="group-hover/btn:translate-x-0.5 transition-transform" />
+                                                                            </Link>
+                                                                        )}
                                                                     </div>
                                                                 )}
                                                             </div>
