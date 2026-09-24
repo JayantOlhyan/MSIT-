@@ -549,12 +549,29 @@ const Home = () => {
         return isNaN(time) ? 0 : time;
     };
 
+    const CATEGORY_TABS = [
+        { id: 'all', label: 'All' },
+        { id: 'news', label: 'News' },
+        { id: 'events', label: 'Events' },
+        { id: 'stories', label: 'Stories' },
+        { id: 'academics', label: 'Academics' },
+        { id: 'admissions', label: 'Admissions' },
+        { id: 'placements', label: 'Placements' },
+        { id: 'notices', label: 'Notices' },
+        { id: 'research', label: 'Research' }
+    ];
+
     const getCategoryRank = (label) => {
         const l = (label || '').toUpperCase();
         if (l === 'NEWS') return 1;
         if (l === 'EVENT') return 2;
         if (l === 'STORY') return 3;
-        return 4;
+        if (l === 'ACADEMICS' || l === 'ACADEMIC') return 4;
+        if (l === 'ADMISSIONS' || l === 'ADMISSION') return 5;
+        if (l === 'PLACEMENTS' || l === 'PLACEMENT') return 6;
+        if (l === 'NOTICES' || l === 'NOTICE') return 7;
+        if (l === 'RESEARCH') return 8;
+        return 9;
     };
 
     const TAG_DOMAINS = {
@@ -581,6 +598,46 @@ const Home = () => {
             hoverText: 'group-hover:text-purple-600',
             hoverArrow: 'group-hover:bg-purple-600 group-hover:text-white',
             shadowGlow: 'hover:shadow-purple-500/10'
+        },
+        ACADEMICS: {
+            borderColor: 'border-indigo-600',
+            badgeClass: 'bg-indigo-50 text-indigo-700 border-indigo-200/80',
+            dotClass: 'bg-indigo-600',
+            hoverText: 'group-hover:text-indigo-600',
+            hoverArrow: 'group-hover:bg-indigo-600 group-hover:text-white',
+            shadowGlow: 'hover:shadow-indigo-500/10'
+        },
+        ADMISSIONS: {
+            borderColor: 'border-amber-600',
+            badgeClass: 'bg-amber-50 text-amber-800 border-amber-200/80',
+            dotClass: 'bg-amber-600',
+            hoverText: 'group-hover:text-amber-600',
+            hoverArrow: 'group-hover:bg-amber-600 group-hover:text-white',
+            shadowGlow: 'hover:shadow-amber-500/10'
+        },
+        PLACEMENTS: {
+            borderColor: 'border-rose-600',
+            badgeClass: 'bg-rose-50 text-rose-700 border-rose-200/80',
+            dotClass: 'bg-rose-600',
+            hoverText: 'group-hover:text-rose-600',
+            hoverArrow: 'group-hover:bg-rose-600 group-hover:text-white',
+            shadowGlow: 'hover:shadow-rose-500/10'
+        },
+        NOTICES: {
+            borderColor: 'border-sky-600',
+            badgeClass: 'bg-sky-50 text-sky-800 border-sky-200/80',
+            dotClass: 'bg-sky-600',
+            hoverText: 'group-hover:text-sky-600',
+            hoverArrow: 'group-hover:bg-sky-600 group-hover:text-white',
+            shadowGlow: 'hover:shadow-sky-500/10'
+        },
+        RESEARCH: {
+            borderColor: 'border-teal-600',
+            badgeClass: 'bg-teal-50 text-teal-800 border-teal-200/80',
+            dotClass: 'bg-teal-600',
+            hoverText: 'group-hover:text-teal-600',
+            hoverArrow: 'group-hover:bg-teal-600 group-hover:text-white',
+            shadowGlow: 'hover:shadow-teal-500/10'
         }
     };
 
@@ -589,6 +646,7 @@ const Home = () => {
             { 
                 id: 10, 
                 label: "EVENT", 
+                category: "Events",
                 title: "MSC MSIT Organizes HackMSIT 1.0 Hackathon", 
                 summary: "36-hour non-stop student hackathon with 500+ participants building open-source projects, AI prototypes, and developer tools.",
                 date: "APR 10, 2026", 
@@ -598,8 +656,57 @@ const Home = () => {
                 color: "border-emerald-500" 
             },
             { 
+                id: 18, 
+                label: "NOTICES", 
+                category: "Notices",
+                title: "Urgent Examination Notice: End-Term Theory & Practical Datesheet Published", 
+                summary: "All regular and reappear candidates are instructed to review the official university datesheet, verify admit cards, and note hall ticket release dates.",
+                date: "APR 08, 2026", 
+                readTime: "3 MIN READ",
+                image: "/campus/campus-pathway-block.webp",
+                link: "/news-event/18", 
+                color: "border-sky-600" 
+            },
+            { 
+                id: 12, 
+                label: "ACADEMICS", 
+                category: "Academics",
+                title: "MSIT Academic Calendar & Examination Schedule Released for 2026 Sessions", 
+                summary: "Official academic calendar, mid-term datesheets, semester break timings, and university end-term examination guidelines published for B.Tech students.",
+                date: "APR 05, 2026", 
+                readTime: "4 MIN READ",
+                image: "/campus/central-library-hall.webp",
+                link: "/academic-calendar", 
+                color: "border-indigo-600" 
+            },
+            { 
+                id: 14, 
+                label: "ADMISSIONS", 
+                category: "Admissions",
+                title: "Admissions Open for B.Tech Batch 2026–30: Information Brochure & Counseling Schedule", 
+                summary: "Complete admission guidelines, seat matrix for 1st & 2nd shift programs, GGSIPU CET / JEE Main cutoff trends, and online application portal are now active.",
+                date: "APR 02, 2026", 
+                readTime: "6 MIN READ",
+                image: "/campus/msit-main-gate.webp",
+                link: "/brochure", 
+                color: "border-amber-600" 
+            },
+            { 
+                id: 16, 
+                label: "PLACEMENTS", 
+                category: "Placements",
+                title: "MSIT 2026 Placement Season Reaches ₹1.2 Cr International Offer & 95%+ Placement Rate", 
+                summary: "Over 250+ top global recruiters including Google, Amazon, Microsoft, Apple, and ION Trading extend 850+ job offers to graduating engineers.",
+                date: "MAR 28, 2026", 
+                readTime: "5 MIN READ",
+                image: "/campus-excellence.webp",
+                link: "/placements", 
+                color: "border-rose-600" 
+            },
+            { 
                 id: 9, 
                 label: "EVENT", 
+                category: "Events",
                 title: "E-Cell MSIT Organizes Flagship E-Summit 2026", 
                 summary: "Annual entrepreneurship summit featuring startup pitch competitions, VC investor panels, and tech founder keynotes.",
                 date: "MAR 26, 2026", 
@@ -609,8 +716,57 @@ const Home = () => {
                 color: "border-emerald-500" 
             },
             { 
+                id: 13, 
+                label: "ACADEMICS", 
+                category: "Academics",
+                title: "GGSIPU Curriculum Upgrade: Advanced AI, Cloud Architecture & Autonomous Electives Adopted", 
+                summary: "Curriculum overhaul across CSE, IT, ECE, and EEE departments introduces industry-aligned electives, quantum computing fundamentals, and autonomous project credits.",
+                date: "MAR 18, 2026", 
+                readTime: "5 MIN READ",
+                image: "/campus/main-academic-building.webp",
+                link: "/syllabus", 
+                color: "border-indigo-600" 
+            },
+            { 
+                id: 19, 
+                label: "NOTICES", 
+                category: "Notices",
+                title: "Mandatory Notice regarding 75% Attendance Compliance for Examination Eligibility", 
+                summary: "In accordance with GGSIPU Ordinance 11, students falling below statutory attendance thresholds must submit medical documentation to HOD offices immediately.",
+                date: "MAR 15, 2026", 
+                readTime: "3 MIN READ",
+                image: "/campus/main-academic-building.webp",
+                link: "/attendance", 
+                color: "border-sky-600" 
+            },
+            { 
+                id: 15, 
+                label: "ADMISSIONS", 
+                category: "Admissions",
+                title: "MSIT Merit-cum-Means Scholarships & Financial Assistance Schemes Announced for 2026-27", 
+                summary: "Institutional scholarships, EWS fee waivers, and Delhi Government financial assistance portals open with awards up to 100% tuition coverage for deserving scholars.",
+                date: "MAR 12, 2026", 
+                readTime: "4 MIN READ",
+                image: "/campus/foundation-stone-plaque.webp",
+                link: "/scholarships", 
+                color: "border-amber-600" 
+            },
+            { 
+                id: 20, 
+                label: "RESEARCH", 
+                category: "Research",
+                title: "MSIT Faculty & Scholars Publish 45+ Research Papers in IEEE, Springer & Scopus Q1 Journals", 
+                summary: "Significant academic milestone in generative AI, VLSI chip architecture, biomedical robotics, and clean renewable energy systems by MSIT research teams.",
+                date: "MAR 10, 2026", 
+                readTime: "5 MIN READ",
+                image: "/campus-lab.webp",
+                link: "/research", 
+                color: "border-teal-600" 
+            },
+            { 
                 id: 1, 
                 label: "NEWS", 
+                category: "Research",
                 title: "Department of CSE receives CSR Research Grant from Petronet LNG Ltd. for AI Center of Excellence", 
                 summary: "The new research grant will drive interdisciplinary AI research, high-performance computing, and industry collaboration at MSIT.",
                 date: "MAR 02, 2026", 
@@ -622,6 +778,7 @@ const Home = () => {
             { 
                 id: 2, 
                 label: "EVENT", 
+                category: "Events",
                 title: "Global Web3 & Blockchain Summit to be hosted at MSIT Campus", 
                 summary: "Industry pioneers, Web3 developers, and blockchain innovators gather at MSIT for keynotes and hands-on developer workshops.",
                 date: "FEB 28, 2026", 
@@ -631,8 +788,21 @@ const Home = () => {
                 color: "border-emerald-500" 
             },
             { 
+                id: 17, 
+                label: "PLACEMENTS", 
+                category: "Placements",
+                title: "Summer Internship Drive 2026: 180+ Pre-Placement Offers (PPOs) Bagged by 3rd-Year Engineers", 
+                summary: "MSIT Training & Placement Cell concludes high-stipend corporate internship hiring with premier software, semiconductor, and fintech firms.",
+                date: "FEB 20, 2026", 
+                readTime: "4 MIN READ",
+                image: "/campus/student-gathering-courtyard.webp",
+                link: "/internship-cell", 
+                color: "border-rose-600" 
+            },
+            { 
                 id: 3, 
                 label: "STORY", 
+                category: "Placements",
                 title: "From Campus to Cupertino: How 5 MSIT grads secured roles at Apple", 
                 summary: "Inside the journey of five MSIT computer science graduates who landed software engineering roles at Apple's global headquarters.",
                 date: "FEB 15, 2026", 
@@ -644,6 +814,7 @@ const Home = () => {
             { 
                 id: 7, 
                 label: "EVENT", 
+                category: "Research",
                 title: "MSIT Conducts National Conference NCI-TIDE 2025", 
                 summary: "National conference bringing together academia and industry leaders on technological innovations in digital engineering.",
                 date: "DEC 15, 2025", 
@@ -655,6 +826,7 @@ const Home = () => {
             { 
                 id: 4, 
                 label: "STORY", 
+                category: "Stories",
                 title: "Grand Finale of SIH 2025 Concludes: MSIT Declared Winner in Ministry of AYUSH Category", 
                 summary: "MSIT student developers bag the top prize of ₹1 Lakh at the Smart India Hackathon for their AI-driven healthcare solution.",
                 date: "DEC 12, 2025", 
@@ -666,6 +838,7 @@ const Home = () => {
             { 
                 id: 5, 
                 label: "EVENT", 
+                category: "Research",
                 title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", 
                 summary: "Global researchers submit papers on deep learning, NLP, and intelligent robotics ahead of the flagship conference.",
                 date: "NOV 19, 2026", 
@@ -677,6 +850,7 @@ const Home = () => {
             { 
                 id: 6, 
                 label: "NEWS", 
+                category: "Research",
                 title: "MSIT establishes state-of-the-art AICTE IDEA Lab & Advanced Multidisciplinary Research Facilities", 
                 summary: "A national milestone for MSIT with new 3D printing, rapid prototyping, and high-performance GPU computing clusters.",
                 date: "AUG 15, 2025", 
@@ -688,6 +862,7 @@ const Home = () => {
             { 
                 id: 8, 
                 label: "EVENT", 
+                category: "Placements",
                 title: "Placement Cell Conducts Placement Preparation Session with ION Alumni and Seniors", 
                 summary: "Interactive placement guidance and mock technical interviews organized for 3rd and 4th year B.Tech students.",
                 date: "AUG 30, 2024", 
@@ -699,6 +874,7 @@ const Home = () => {
             { 
                 id: 11, 
                 label: "STORY", 
+                category: "Stories",
                 title: "Team 'Courtroom Cartel' Secures First Prize in Smart India Hackathon 2023", 
                 summary: "A look back at MSIT's victorious SIH team building legal-tech automation for government departments.",
                 date: "DEC 20, 2023", 
@@ -709,26 +885,34 @@ const Home = () => {
             }
         ];
 
-        const storedEvents = localStorage.getItem('msit_events_v2');
+        const STORAGE_KEY = 'msit_events_v3';
+        const storedEvents = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('msit_events_v2');
         if (storedEvents) {
             try {
                 const parsed = JSON.parse(storedEvents);
-                return parsed.map(item => {
-                    const def = defaultEvents.find(d => d.id === item.id) || {};
-                    return {
-                        ...def,
-                        ...item,
-                        date: item.id === 5 && (!item.date || item.date.includes('2025')) ? 'NOV 19, 2026' : (item.date || def.date),
-                        image: item.image || def.image || '/campus/main-academic-building.webp',
-                        summary: item.summary || def.summary || item.title,
-                        readTime: item.readTime || def.readTime || '4 MIN READ'
-                    };
-                });
+                const existingIds = new Set(parsed.map(item => item.id));
+                const merged = [
+                    ...parsed.map(item => {
+                        const def = defaultEvents.find(d => d.id === item.id) || {};
+                        return {
+                            ...def,
+                            ...item,
+                            date: item.id === 5 && (!item.date || item.date.includes('2025')) ? 'NOV 19, 2026' : (item.date || def.date),
+                            image: item.image || def.image || '/campus/main-academic-building.webp',
+                            summary: item.summary || def.summary || item.title,
+                            readTime: item.readTime || def.readTime || '4 MIN READ',
+                            category: item.category || def.category || def.label
+                        };
+                    }),
+                    ...defaultEvents.filter(d => !existingIds.has(d.id))
+                ];
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+                return merged;
             } catch (err) {
                 // fallback to defaultEvents if parsing fails
             }
         }
-        localStorage.setItem('msit_events_v2', JSON.stringify(defaultEvents));
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultEvents));
         return defaultEvents;
     });
 
@@ -744,15 +928,38 @@ const Home = () => {
     });
 
     const searchedEvents = sortedEvents.filter(item => {
-        const matchesTab = activeNewsTab === 'all' 
-            || item.label.toLowerCase() === activeNewsTab 
-            || (activeNewsTab === 'stories' && item.label === 'STORY');
+        const itemLabel = (item.label || '').toLowerCase();
+        const itemCategory = (item.category || '').toLowerCase();
+        
+        let matchesTab = false;
+        if (activeNewsTab === 'all') {
+            matchesTab = true;
+        } else if (activeNewsTab === 'news') {
+            matchesTab = itemLabel === 'news' || itemCategory === 'news';
+        } else if (activeNewsTab === 'events') {
+            matchesTab = itemLabel === 'event' || itemLabel === 'events' || itemCategory === 'events' || itemCategory === 'event';
+        } else if (activeNewsTab === 'stories') {
+            matchesTab = itemLabel === 'story' || itemLabel === 'stories' || itemCategory === 'stories' || itemCategory === 'story';
+        } else if (activeNewsTab === 'academics') {
+            matchesTab = itemLabel === 'academics' || itemLabel === 'academic' || itemCategory === 'academics' || itemCategory === 'academic';
+        } else if (activeNewsTab === 'admissions') {
+            matchesTab = itemLabel === 'admissions' || itemLabel === 'admission' || itemCategory === 'admissions' || itemCategory === 'admission';
+        } else if (activeNewsTab === 'placements') {
+            matchesTab = itemLabel === 'placements' || itemLabel === 'placement' || itemCategory === 'placements' || itemCategory === 'placement';
+        } else if (activeNewsTab === 'notices') {
+            matchesTab = itemLabel === 'notices' || itemLabel === 'notice' || itemCategory === 'notices' || itemCategory === 'notice';
+        } else if (activeNewsTab === 'research') {
+            matchesTab = itemLabel === 'research' || itemCategory === 'research';
+        } else {
+            matchesTab = itemLabel === activeNewsTab || itemCategory === activeNewsTab;
+        }
         
         const q = searchQuery.toLowerCase().trim();
         const matchesSearch = !q || (
             (item.title && item.title.toLowerCase().includes(q)) ||
             (item.summary && item.summary.toLowerCase().includes(q)) ||
             (item.label && item.label.toLowerCase().includes(q)) ||
+            (item.category && item.category.toLowerCase().includes(q)) ||
             (item.date && item.date.toLowerCase().includes(q))
         );
 
@@ -847,58 +1054,135 @@ const Home = () => {
             </div>
 
             {/* NEWS, EVENTS & STORIES */}
-            <section id="news" className="py-24 bg-slate-50 border-t border-slate-200/60">
+            <section id="news" className="py-24 bg-slate-50 dark:bg-[#070b16] border-t border-slate-200/60 dark:border-white/10 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6">
-                    {/* Header with Title, Subtitle, Filter Pills, and Search Bar */}
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8">
+                    {/* Header with Title, Subtitle, and Interactive Search Bar */}
+                    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 gap-6">
                         <div>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-slate-900 tracking-tight leading-tight">
-                                News, Events <span className="italic font-normal text-slate-700">and Stories</span>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-slate-900 dark:text-white tracking-tight leading-tight">
+                                News, Events <span className="italic font-normal text-slate-700 dark:text-slate-300">and Stories</span>
                             </h2>
-                            <p className="text-slate-500 text-sm md:text-base mt-2 font-medium">
-                                Updates, achievements and experiences from the MSIT community.
+                            <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base mt-2 font-medium">
+                                Updates, achievements, notices and experiences from the MSIT community.
                             </p>
                         </div>
-                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto">
-                            {/* Tab Filters */}
-                            <div className="flex items-center gap-1 bg-white p-1.5 rounded-full border border-slate-200 shadow-sm overflow-x-auto scrollbar-hide">
-                                {['all', 'news', 'events', 'stories'].map(tab => (
-                                    <button
-                                        key={tab}
-                                        onClick={() => setActiveNewsTab(tab)}
-                                        className={`px-4 sm:px-5 py-1.5 rounded-full text-xs font-bold transition-all duration-300 whitespace-nowrap active:scale-95 ${
-                                            activeNewsTab === tab
-                                                ? 'bg-slate-900 text-white shadow-md shadow-slate-900/20'
-                                                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+
+                        {/* Search Input Bar with functional Search Button */}
+                        <form 
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                            }} 
+                            className="relative shrink-0 w-full sm:w-80"
+                        >
+                            <Search className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                            <input
+                                type="text"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                placeholder="Search stories, academics, notices..."
+                                className="w-full pl-9 pr-24 py-2.5 bg-white dark:bg-[#131c31] rounded-full text-xs font-semibold text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 border border-slate-200 dark:border-white/10 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm"
+                                aria-label="Search stories and notices"
+                            />
+                            {searchQuery && (
+                                <button
+                                    type="button"
+                                    onClick={() => setSearchQuery('')}
+                                    className="absolute right-16 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors cursor-pointer"
+                                    aria-label="Clear query"
+                                >
+                                    <X className="w-3.5 h-3.5" />
+                                </button>
+                            )}
+                            <button
+                                type="submit"
+                                className="absolute right-1.5 top-1/2 -translate-y-1/2 px-3.5 py-1 bg-slate-900 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 text-white rounded-full text-[11px] font-bold transition-all shadow-xs cursor-pointer active:scale-95"
+                                aria-label="Submit search"
+                            >
+                                Search
+                            </button>
+                        </form>
+                    </div>
+
+                    {/* Category Filter Pills (Full horizontal scrollable bar) */}
+                    <div className="flex items-center gap-1.5 p-1.5 bg-white dark:bg-[#131c31] rounded-2xl border border-slate-200 dark:border-white/10 shadow-xs mb-8 overflow-x-auto scrollbar-none">
+                        {CATEGORY_TABS.map(tab => (
+                            <button
+                                key={tab.id}
+                                onClick={() => setActiveNewsTab(tab.id)}
+                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 whitespace-nowrap active:scale-95 cursor-pointer ${
+                                    activeNewsTab === tab.id
+                                        ? 'bg-slate-900 dark:bg-blue-600 text-white shadow-md shadow-slate-900/20 dark:shadow-blue-600/30'
+                                        : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80'
+                                }`}
+                            >
+                                {tab.label}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Active search filter feedback badge */}
+                    {searchQuery && (
+                        <div className="mb-8 flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 bg-blue-50 dark:bg-blue-950/40 rounded-xl border border-blue-100 dark:border-blue-900/40 text-xs">
+                            <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200 font-medium">
+                                <Search className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                                <span>Showing results for <strong className="text-slate-900 dark:text-white">"{searchQuery}"</strong> ({searchedEvents.length} found)</span>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <Link 
+                                    to={`/search?q=${encodeURIComponent(searchQuery)}`}
+                                    className="text-blue-600 dark:text-blue-400 hover:underline font-bold flex items-center gap-1"
+                                >
+                                    <span>Search all 37+ MSIT pages for "{searchQuery}"</span>
+                                    <ArrowRight className="w-3.5 h-3.5" />
+                                </Link>
+                                <button 
+                                    onClick={() => setSearchQuery('')}
+                                    className="text-slate-500 hover:text-slate-800 dark:hover:text-white font-semibold underline cursor-pointer"
+                                >
+                                    Clear
+                                </button>
+                            </div>
+                        </div>
+                    )}
+
+                    {searchedEvents.length === 0 ? (
+                        <div className="text-center py-16 px-6 bg-white dark:bg-[#131c31] rounded-3xl border border-slate-200 dark:border-white/10 shadow-sm">
+                            <Search className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-3" />
+                            <h3 className="text-slate-800 dark:text-white font-bold text-lg mb-1">
+                                No stories match your filter or search query{searchQuery ? ` for "${searchQuery}"` : ''}
+                            </h3>
+                            <p className="text-slate-500 dark:text-slate-400 text-xs max-w-md mx-auto mb-6">
+                                We couldn't find matching articles under this category. You can search the entire MSIT website across all departments, courses, faculty, and notices.
+                            </p>
+                            <div className="flex flex-wrap justify-center items-center gap-3">
+                                {searchQuery && (
+                                    <Link 
+                                        to={`/search?q=${encodeURIComponent(searchQuery)}`}
+                                        className="px-6 py-2.5 bg-blue-600 text-white rounded-full text-xs font-bold hover:bg-blue-700 transition-colors shadow-sm flex items-center gap-2 cursor-pointer"
                                     >
-                                        {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                                        <span>Search Entire Website for "{searchQuery}"</span>
+                                        <ArrowRight className="w-3.5 h-3.5" />
+                                    </Link>
+                                )}
+                                <button 
+                                    onClick={() => { setActiveNewsTab('all'); setSearchQuery(''); }}
+                                    className="px-6 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-full text-xs font-bold hover:bg-slate-800 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                                >
+                                    Reset Filters
+                                </button>
+                            </div>
+                            <div className="mt-8 pt-6 border-t border-slate-100 dark:border-white/10 flex flex-wrap items-center justify-center gap-2">
+                                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-2">Or browse:</span>
+                                {['Academics', 'Admissions', 'Placements', 'Notices', 'Research'].map(c => (
+                                    <button
+                                        key={c}
+                                        onClick={() => { setActiveNewsTab(c.toLowerCase()); setSearchQuery(''); }}
+                                        className="px-3 py-1 bg-slate-50 dark:bg-[#18233c] hover:bg-blue-50 dark:hover:bg-blue-900/30 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-full text-xs font-semibold border border-slate-200 dark:border-white/10 transition-colors cursor-pointer"
+                                    >
+                                        {c}
                                     </button>
                                 ))}
                             </div>
-                            {/* Search Input */}
-                            <div className="relative shrink-0 w-full sm:w-64">
-                                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                                <input
-                                    type="text"
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    placeholder="Search stories..."
-                                    className="w-full pl-9 pr-4 py-2 bg-white rounded-full text-xs font-semibold text-slate-800 placeholder-slate-400 border border-slate-200 focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-900/10 transition-all shadow-sm"
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    {searchedEvents.length === 0 ? (
-                        <div className="text-center py-16 bg-white rounded-3xl border border-slate-200 shadow-sm">
-                            <p className="text-slate-500 font-semibold text-base">No stories match your filter or search query.</p>
-                            <button 
-                                onClick={() => { setActiveNewsTab('all'); setSearchQuery(''); }}
-                                className="mt-4 px-6 py-2 bg-slate-900 text-white rounded-full text-xs font-bold hover:bg-slate-800 transition-colors"
-                            >
-                                Reset Filters
-                            </button>
                         </div>
                     ) : (
                         <div className="space-y-8">
@@ -906,7 +1190,7 @@ const Home = () => {
                             {heroStory && (
                                 <Link 
                                     to={heroStory.link && heroStory.link !== '#' ? heroStory.link : `/news-event/${heroStory.id}`}
-                                    className="group relative block w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer min-h-[380px] sm:min-h-[420px] border border-slate-200/50"
+                                    className="group relative block w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer min-h-[380px] sm:min-h-[420px] border border-slate-200/50 dark:border-white/10"
                                 >
                                     {/* Cover Background Image */}
                                     <div 
@@ -920,13 +1204,25 @@ const Home = () => {
                                     {/* Content Overlay */}
                                     <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between min-h-[380px] sm:min-h-[420px]">
                                         <div>
-                                            <span className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-white/95 backdrop-blur-md shadow-md ${
-                                                heroStory.label === 'NEWS' ? 'text-blue-700' :
-                                                heroStory.label === 'EVENT' ? 'text-emerald-700' : 'text-purple-700'
+                                            <span className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-white/95 dark:bg-[#131c31]/95 backdrop-blur-md shadow-md ${
+                                                heroStory.label === 'NEWS' ? 'text-blue-700 dark:text-blue-400' :
+                                                heroStory.label === 'EVENT' ? 'text-emerald-700 dark:text-emerald-400' :
+                                                heroStory.label === 'STORY' ? 'text-purple-700 dark:text-purple-400' :
+                                                heroStory.label === 'ACADEMICS' ? 'text-indigo-700 dark:text-indigo-400' :
+                                                heroStory.label === 'ADMISSIONS' ? 'text-amber-700 dark:text-amber-400' :
+                                                heroStory.label === 'PLACEMENTS' ? 'text-rose-700 dark:text-rose-400' :
+                                                heroStory.label === 'NOTICES' ? 'text-sky-700 dark:text-sky-400' :
+                                                heroStory.label === 'RESEARCH' ? 'text-teal-700 dark:text-teal-400' : 'text-slate-800 dark:text-slate-200'
                                             }`}>
                                                 <span className={`w-2 h-2 rounded-full animate-pulse ${
                                                     heroStory.label === 'NEWS' ? 'bg-blue-600' :
-                                                    heroStory.label === 'EVENT' ? 'bg-emerald-600' : 'bg-purple-600'
+                                                    heroStory.label === 'EVENT' ? 'bg-emerald-600' :
+                                                    heroStory.label === 'STORY' ? 'bg-purple-600' :
+                                                    heroStory.label === 'ACADEMICS' ? 'bg-indigo-600' :
+                                                    heroStory.label === 'ADMISSIONS' ? 'bg-amber-600' :
+                                                    heroStory.label === 'PLACEMENTS' ? 'bg-rose-600' :
+                                                    heroStory.label === 'NOTICES' ? 'bg-sky-600' :
+                                                    heroStory.label === 'RESEARCH' ? 'bg-teal-600' : 'bg-slate-600'
                                                 }`}></span>
                                                 {heroStory.label}
                                             </span>
@@ -967,10 +1263,10 @@ const Home = () => {
                                             <Link 
                                                 to={itemLink} 
                                                 key={item.id || i} 
-                                                className={`bg-white rounded-2xl shadow-sm hover:shadow-xl border-l-4 ${domain.borderColor} border-y border-r border-slate-200/80 group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between ${domain.shadowGlow}`}
+                                                className={`bg-white dark:bg-[#131c31] rounded-2xl shadow-sm hover:shadow-xl border-l-4 ${domain.borderColor} border-y border-r border-slate-200/80 dark:border-white/10 group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between ${domain.shadowGlow}`}
                                             >
                                                 {/* Image Banner */}
-                                                <div className="relative h-44 overflow-hidden bg-slate-100">
+                                                <div className="relative h-44 overflow-hidden bg-slate-100 dark:bg-slate-800">
                                                     <img 
                                                         src={item.image} 
                                                         alt={item.title} 
@@ -991,22 +1287,22 @@ const Home = () => {
                                                 {/* Text Content */}
                                                 <div className="p-6 flex-grow flex flex-col justify-between">
                                                     <div>
-                                                        <h3 className={`text-lg font-bold text-slate-900 leading-snug mb-3 ${domain.hoverText} transition-colors line-clamp-2`}>
+                                                        <h3 className={`text-lg font-bold text-slate-900 dark:text-white leading-snug mb-3 ${domain.hoverText} transition-colors line-clamp-2`}>
                                                             {item.title}
                                                         </h3>
-                                                        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6 font-medium">
+                                                        <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed mb-6 font-medium">
                                                             {item.summary}
                                                         </p>
                                                     </div>
 
-                                                    <div className="flex justify-between items-center pt-4 border-t border-slate-100 mt-auto">
-                                                        <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                                                    <div className="flex justify-between items-center pt-4 border-t border-slate-100 dark:border-white/10 mt-auto">
+                                                        <div className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider flex items-center gap-2">
                                                             <span>{item.date}</span>
                                                             <span>•</span>
-                                                            <span className="text-slate-600 font-semibold">{item.readTime}</span>
+                                                            <span className="text-slate-600 dark:text-slate-300 font-semibold">{item.readTime}</span>
                                                         </div>
-                                                        <div className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center ${domain.hoverArrow} transition-colors`}>
-                                                            <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-current transition-colors" />
+                                                        <div className={`w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center ${domain.hoverArrow} transition-colors`}>
+                                                            <ArrowRight className="w-4 h-4 text-slate-500 dark:text-slate-400 group-hover:text-current transition-colors" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1031,12 +1327,12 @@ const Home = () => {
                                                 setShowAllNews(true);
                                             }
                                         }}
-                                        className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-800 bg-white hover:bg-slate-900 hover:text-white border border-slate-200/90 hover:border-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 active:scale-95 cursor-pointer"
+                                        className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-800 dark:text-slate-100 bg-white dark:bg-[#131c31] hover:bg-slate-900 dark:hover:bg-blue-600 hover:text-white border border-slate-200/90 dark:border-white/10 hover:border-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 active:scale-95 cursor-pointer"
                                         aria-expanded={showAllNews}
                                     >
                                         <span>{showAllNews ? 'Show Less' : 'View More'}</span>
                                         <ChevronDown 
-                                            className={`w-4 h-4 text-slate-500 group-hover:text-white transition-transform duration-300 ${
+                                            className={`w-4 h-4 text-slate-500 dark:text-slate-400 group-hover:text-white transition-transform duration-300 ${
                                                 showAllNews ? 'rotate-180 text-white' : 'group-hover:translate-y-0.5'
                                             }`} 
                                         />
