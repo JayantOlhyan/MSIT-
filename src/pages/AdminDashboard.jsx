@@ -11,13 +11,14 @@ const AdminDashboard = () => {
 
     // Dashboard State
     const [events, setEvents] = useState(() => {
-        const storedEvents = localStorage.getItem('msit_events_v3') || localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
+        const storedEvents = localStorage.getItem('msit_events_v4') || localStorage.getItem('msit_events_v3') || localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
         if (storedEvents) return JSON.parse(storedEvents);
         const defaultEvents = [
-            { id: 1, label: "NEWS", title: "Department of CSE receives CSR Research Grant from Petronet LNG Ltd. for AI Center of Excellence", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
-            { id: 2, label: "EVENT", title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
-            { id: 3, label: "STORY", title: "MSIT student team wins 1st Prize in Smart India Hackathon (SIH) under Ministry of AYUSH category", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
+            { id: 1, label: "NEWS", category: "News", title: "Department of CSE receives CSR Research Grant from Petronet LNG Ltd. for AI Center of Excellence", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
+            { id: 2, label: "EVENT", category: "Events", title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
+            { id: 3, label: "STORY", category: "Stories", title: "MSIT student team wins 1st Prize in Smart India Hackathon (SIH) under Ministry of AYUSH category", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
         ];
+        localStorage.setItem('msit_events_v4', JSON.stringify(defaultEvents));
         localStorage.setItem('msit_events_v3', JSON.stringify(defaultEvents));
         localStorage.setItem('msit_events_v2', JSON.stringify(defaultEvents));
         localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
@@ -105,6 +106,7 @@ const AdminDashboard = () => {
 
     const saveEvents = (newEvents) => {
         setEvents(newEvents);
+        localStorage.setItem('msit_events_v4', JSON.stringify(newEvents));
         localStorage.setItem('msit_events_v3', JSON.stringify(newEvents));
         localStorage.setItem('msit_events_v2', JSON.stringify(newEvents));
         localStorage.setItem('msit_events', JSON.stringify(newEvents));
@@ -144,9 +146,12 @@ const AdminDashboard = () => {
         if (type === "NOTICES") color = "border-sky-600";
         if (type === "RESEARCH") color = "border-teal-600";
 
+        const category = type === "EVENT" ? "Events" : type === "STORY" ? "Stories" : type === "NEWS" ? "News" : type.charAt(0) + type.slice(1).toLowerCase();
+
         const newEvent = {
             id: Date.now(),
             label: type,
+            category,
             title,
             date,
             link: link || "#",
