@@ -210,17 +210,46 @@ const newsDb = {
         label: "EVENT",
         title: "MSC MSIT Organizes HackMSIT 1.0 Hackathon",
         date: "APR 10, 2026",
-        color: "border-blue-600",
-        bgImage: "/campus/sports-badminton-ground.webp",
-        summary: "Microsoft Student Chapter at MSIT held HackMSIT 1.0 hackathon for student software developers.",
+        color: "border-emerald-500",
+        bgImage: "/campus/student-gathering-courtyard.webp",
+        summary: "36-hour non-stop student hackathon with 500+ participants building open-source projects, AI prototypes, and developer tools.",
         content: `
-            <p class="mb-6">The Microsoft Student Chapter (MSC) at Maharaja Surajmal Institute of Technology organized "HackMSIT 1.0" on April 10–11, 2026.</p>
-            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Developer Prototyping</h3>
-            <p class="mb-6">The two-day competitive hackathon brought together multidisciplinary student developer teams to build software solutions, work on open-source frameworks, and present technical prototypes to industry judges.</p>
+            <p class="mb-6 leading-relaxed">The <strong>Microsoft Student Chapter (MSC)</strong> at Maharaja Surajmal Institute of Technology is thrilled to host the inaugural edition of its flagship national hackathon — <strong>HackMSIT 1.0</strong> — on April 10–12, 2026 at the MSIT campus grounds in New Delhi.</p>
+
+            <p class="mb-6 leading-relaxed">Gathering more than <strong>500+ top student developers, AI researchers, and engineering innovators</strong> from over 80+ universities across India, HackMSIT 1.0 is a high-energy 36-hour sprint dedicated to solving real-world challenges with bleeding-edge technology.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Hackathon Innovation Tracks</h3>
+            <p class="mb-4 leading-relaxed">Participants can build, hack, and pitch across four high-impact domains:</p>
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600 dark:text-slate-300">
+                <li><strong>Artificial Intelligence & Autonomous Agents:</strong> Generative models, autonomous workflows, computer vision, and multi-modal assistants designed to elevate daily productivity and research.</li>
+                <li><strong>Web3 & Decentralized Infrastructure:</strong> Scalable dApps, decentralized identity, zero-knowledge verification, and cross-chain financial primitives.</li>
+                <li><strong>HealthTech & Assistive Technologies:</strong> Diagnostic intelligence, IoT health monitors, accessibility tools for differently-abled citizens, and telemedicine networks.</li>
+                <li><strong>Open Innovation & Smart Campus:</strong> Next-generation campus automation, sustainable resource tracking, clean mobility, and developer infrastructure.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Mentorship & Industry Keynotes</h3>
+            <p class="mb-6 leading-relaxed">Throughout the 36-hour build window, teams will receive hands-on mentoring from senior software architects and technology leaders from Microsoft, GitHub, Devfolio, Google, and premier venture-backed startups. Interactive technical breakout sessions on prompt engineering, scalable cloud deployment, and system architecture will guide teams towards robust production prototypes.</p>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Prizes, Bounties & Fast-Track Hiring</h3>
+            <p class="mb-6 leading-relaxed">With a combined prize pool exceeding <strong>₹2,50,000 INR</strong>, winning teams take home substantial cash awards, Microsoft Azure and GitHub credits, exclusive swag kits, and interview fast-track opportunities with our corporate hiring partners:</p>
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600 dark:text-slate-300">
+                <li><strong>Overall Winner (1st Prize):</strong> ₹1,00,000 Cash Prize + ₹1.5L Cloud Credits + Winner Trophies</li>
+                <li><strong>1st Runner Up (2nd Prize):</strong> ₹60,000 Cash Prize + Cloud Credits + Certificates of Excellence</li>
+                <li><strong>2nd Runner Up (3rd Prize):</strong> ₹40,000 Cash Prize + Cloud Credits</li>
+                <li><strong>Track Champions & Special Bounties:</strong> ₹50,000 dedicated track prizes for Best All-Girls Team, Best Web3 Hack, and Most Innovative AI Prototype.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Event Schedule & Registration Details</h3>
+            <p class="mb-6 leading-relaxed">Team registrations are open on the official Devfolio portal. Shortlisted finalists will receive confirmation letters with campus access passes. Accommodation, high-speed campus Wi-Fi, 24/7 snacks, and continuous power backup are fully arranged at the MSIT campus.</p>
         `,
-        attachments: [],
+        attachments: [
+            { name: "HackMSIT 1.0 Rulebook & Problem Statements.pdf", size: "1.8 MB", url: "/events" },
+            { name: "Participant Guidelines & Code of Conduct.pdf", size: "620 KB", url: "/events" }
+        ],
         links: [
-            { name: "MSIT Events Calendar", url: "https://www.msit.in/events" }
+            { name: "Register on Devfolio Portal", url: "https://devfolio.co/" },
+            { name: "Microsoft Student Chapter MSIT", url: "/society-geekroom" },
+            { name: "View All MSIT Campus Events", url: "/events" }
         ]
     },
     "11": {
@@ -473,11 +502,20 @@ const NewsDetail = () => {
     const { id } = useParams();
     
     // Retrieve from local storage to allow admin-published news/events
-    const storedEvents = localStorage.getItem('msit_events_v3') || localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
+    const storedEvents = typeof window !== 'undefined' ? (localStorage.getItem('msit_events_v4') || localStorage.getItem('msit_events_v3') || localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events')) : null;
     const localEventsList = storedEvents ? JSON.parse(storedEvents) : [];
     const localItem = localEventsList.find(e => String(e.id) === String(id));
+    const dbItem = newsDb[id] || {};
     
-    const item = localItem || newsDb[id];
+    // Merge: if localItem exists, prioritize local properties but ensure content, attachments, links, and images fall back to dbItem
+    const item = localItem ? {
+        ...dbItem,
+        ...localItem,
+        content: (localItem.content && localItem.content.trim()) ? localItem.content : (dbItem.content || `<p class="text-slate-600 dark:text-slate-300 leading-relaxed font-medium">${localItem.summary || localItem.title}</p>`),
+        attachments: (localItem.attachments && localItem.attachments.length > 0) ? localItem.attachments : (dbItem.attachments || []),
+        links: (localItem.links && localItem.links.length > 0) ? localItem.links : (dbItem.links || []),
+        bgImage: localItem.bgImage || localItem.image || dbItem.bgImage || '/campus/main-academic-building.webp'
+    } : (newsDb[id] || null);
 
     if (!item) {
         return (
