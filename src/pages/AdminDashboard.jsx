@@ -11,13 +11,14 @@ const AdminDashboard = () => {
 
     // Dashboard State
     const [events, setEvents] = useState(() => {
-        const storedEvents = localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
+        const storedEvents = localStorage.getItem('msit_events_v3') || localStorage.getItem('msit_events_v2') || localStorage.getItem('msit_events');
         if (storedEvents) return JSON.parse(storedEvents);
         const defaultEvents = [
             { id: 1, label: "NEWS", title: "Department of CSE receives CSR Research Grant from Petronet LNG Ltd. for AI Center of Excellence", date: "MAR 02, 2026", link: "#", color: "border-blue-600" },
             { id: 2, label: "EVENT", title: "MSIT to Host 4th International Conference on Artificial Intelligence and Applications (ICAIA 2026)", date: "FEB 28, 2026", link: "#", color: "border-emerald-500" },
             { id: 3, label: "STORY", title: "MSIT student team wins 1st Prize in Smart India Hackathon (SIH) under Ministry of AYUSH category", date: "FEB 15, 2026", link: "#", color: "border-purple-500" }
         ];
+        localStorage.setItem('msit_events_v3', JSON.stringify(defaultEvents));
         localStorage.setItem('msit_events_v2', JSON.stringify(defaultEvents));
         localStorage.setItem('msit_events', JSON.stringify(defaultEvents));
         return defaultEvents;
@@ -104,6 +105,7 @@ const AdminDashboard = () => {
 
     const saveEvents = (newEvents) => {
         setEvents(newEvents);
+        localStorage.setItem('msit_events_v3', JSON.stringify(newEvents));
         localStorage.setItem('msit_events_v2', JSON.stringify(newEvents));
         localStorage.setItem('msit_events', JSON.stringify(newEvents));
     };
@@ -136,6 +138,11 @@ const AdminDashboard = () => {
         let color = "border-blue-600";
         if (type === "EVENT") color = "border-emerald-500";
         if (type === "STORY") color = "border-purple-500";
+        if (type === "ACADEMICS") color = "border-indigo-600";
+        if (type === "ADMISSIONS") color = "border-amber-600";
+        if (type === "PLACEMENTS") color = "border-rose-600";
+        if (type === "NOTICES") color = "border-sky-600";
+        if (type === "RESEARCH") color = "border-teal-600";
 
         const newEvent = {
             id: Date.now(),
@@ -347,6 +354,11 @@ const AdminDashboard = () => {
                                     <option value="NEWS">News</option>
                                     <option value="EVENT">Event</option>
                                     <option value="STORY">Story</option>
+                                    <option value="ACADEMICS">Academics</option>
+                                    <option value="ADMISSIONS">Admissions</option>
+                                    <option value="PLACEMENTS">Placements</option>
+                                    <option value="NOTICES">Notices</option>
+                                    <option value="RESEARCH">Research</option>
                                 </select>
                             </div>
 
