@@ -16,9 +16,24 @@ export const placementData = {
             { label: "Top Recruiters", value: "Google, MS, Amazon" }
         ],
         bulletPoints: [
-            { label: "Placement Statistics 2024", detail: "Click here to learn more about placement statistics 2024. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Top Recruiters", detail: "Click here to learn more about top recruiters. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Placement Policy", detail: "Click here to learn more about placement policy. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: "Placement Statistics 2024", 
+                detail: "MSIT achieved a 95%+ placement record with 850+ total job offers across premier tech corporations, with the highest international CTC reaching ₹1.2 Crore.",
+                url: "/placements",
+                actionText: "View Full Placement Stats"
+            },
+            { 
+                label: "Top Recruiters", 
+                detail: "Over 250+ top global recruiters participate in MSIT campus hiring drives, including Google, Microsoft, Amazon, Apple, Adobe, Atlassian, and ION Trading.",
+                url: "/placements",
+                actionText: "Explore Recruiters Directory"
+            },
+            { 
+                label: "Placement Policy", 
+                detail: "MSIT follows a student-first 'One Student, One Job' policy with dream tier upgrades for premium offers above 10 LPA and 20 LPA thresholds.",
+                url: "/placements",
+                actionText: "Read Policy Guidelines"
+            }
         ]
     },
     "internship-cell": {
@@ -114,10 +129,30 @@ export const placementData = {
             { label: "Avg Stipend", value: "₹40k/mo" }
         ],
         bulletPoints: [
-            "Ongoing Internship Drives", 
-            "PPO Conversion Rate", 
-            "NOC Guidelines",
-            { label: "Institution's Innovation Council", url: "https://iic.msit.in/" }
+            {
+                label: "Ongoing Internship Drives",
+                detail: "MSIT Training & Placement Cell facilitates continuous on-campus and virtual hiring drives for 3rd and 4th-year engineering students across premier tech corporations and unicorn startups with monthly stipends up to ₹1,20,000.",
+                url: "/placements",
+                actionText: "View Placement & Internship Drives"
+            },
+            {
+                label: "PPO Conversion Rate",
+                detail: "Over 68% of summer engineering internships secured by MSIT pre-final students successfully convert into full-time Pre-Placement Offers (PPOs) prior to final-year graduation, with offers from companies like Google, Microsoft, Amazon, and ION Group.",
+                url: "/placements",
+                actionText: "Explore Placement Records"
+            },
+            {
+                label: "NOC Guidelines",
+                detail: "Students pursuing 6th/8th semester internships must obtain a formal No Objection Certificate (NOC) by submitting their offer letter, maintaining 75%+ mandatory attendance, and securing approval from their Departmental HOD and TPO.",
+                url: "/attendance",
+                actionText: "Check Attendance & NOC Rules"
+            },
+            {
+                label: "Institution's Innovation Council",
+                detail: "IIC MSIT is an initiative established under MoE's Innovation Cell (Govt. of India) to systematically encourage campus startups, ideation hackathons, technology incubations, and research IPR. Awarded 4 Golden Stars by MHRD.",
+                url: "https://iic.msit.in/",
+                actionText: "Visit Official IIC Portal"
+            }
         ]
     }
 };
