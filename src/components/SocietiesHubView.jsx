@@ -238,15 +238,13 @@ const SocietiesHubView = () => {
                     </p>
                 </div>
                 <div className="text-left md:text-right">
-                    <a
-                        href="https://wds-bug-hunt.netlify.app/bug-hunt"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-purple-600 hover:bg-slate-800 dark:hover:bg-purple-500 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all"
+                    <Link
+                        to="/contact"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-purple-600 hover:bg-slate-800 dark:hover:bg-purple-500 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
                     >
                         <span>Contact Coordinator</span>
                         <ArrowRight className="w-4 h-4" />
-                    </a>
+                    </Link>
                 </div>
             </div>
 
