@@ -261,7 +261,7 @@ export const academicData = {
         `,
         stats: [
             { label: "Intake", value: "120" },
-            { label: "Faculty Strength", value: "35+" },
+            { label: "Faculty Strength", value: "30 Members" },
             { label: "HOD Experience", value: "21+ Yrs" },
             { label: "NBA Status", value: "Accredited" }
         ],
@@ -284,7 +284,7 @@ export const academicData = {
                 <section class="bg-gradient-to-br from-white via-slate-50/80 to-blue-50/40 p-8 rounded-3xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-md space-y-6">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
                         <div>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200/60 uppercase tracking-wider">36 Faculty • 7 Tech Staff</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200/60 uppercase tracking-wider">28 Faculty • 7 Tech Staff</span>
                             <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Department of Electronics & Communication Engineering</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
@@ -387,7 +387,7 @@ export const academicData = {
         `,
         stats: [
             { label: "Intake", value: "120" },
-            { label: "Faculty Strength", value: "36 Members" },
+            { label: "Faculty Strength", value: "28 Members" },
             { label: "Tech Staff", value: "7 Staff" },
             { label: "NBA Status", value: "Accredited" }
         ],
@@ -532,7 +532,7 @@ export const academicData = {
                 <section class="bg-gradient-to-br from-white via-slate-50/80 to-teal-50/40 p-8 rounded-3xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-md space-y-6">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
                         <div>
-                            <span class="px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full border border-teal-200/60 uppercase tracking-wider">32+ Faculty Members • 1st Year Focus</span>
+                            <span class="px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full border border-teal-200/60 uppercase tracking-wider">33 Faculty Members • 1st Year Focus</span>
                             <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Department of Applied Sciences</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
@@ -558,7 +558,7 @@ export const academicData = {
                             </div>
                         </div>
                         <div class="text-xs text-slate-600 pt-2 border-t border-slate-100 leading-relaxed">
-                            <strong>Research Interests:</strong> Plasma physics (dusty/strongly coupled plasma, fusion plasma), condensed matter physics. Department strength: ~32 faculty members (2 Professors, 5 Associate Professors, 23+ Assistant Professors).
+                            <strong>Research Interests:</strong> Plasma physics (dusty/strongly coupled plasma, fusion plasma), condensed matter physics. Department strength: ~33 faculty members (2 Professors, 5 Associate Professors, 26 Assistant Professors).
                         </div>
                     </div>
                 </section>
@@ -587,7 +587,7 @@ export const academicData = {
             </div>
         `,
         stats: [
-            { label: "Faculty", value: "32+" },
+            { label: "Faculty", value: "33 Members" },
             { label: "Focus", value: "First Year B.Tech" },
             { label: "HOD Exp", value: "15+ Yrs" },
             { label: "NAAC Rating", value: "'A' Grade" }
