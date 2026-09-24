@@ -560,7 +560,7 @@ const SocietyDetailView = ({ society }) => {
                                             <div className="flex justify-between py-1 border-b border-slate-50 dark:border-slate-800/60">
                                                 <span className="text-slate-400 dark:text-slate-500">Website</span>
                                                 <a href={society.website} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
-                                                    <span>geekroom.in</span>
+                                                    <span>{society.websiteLabel || society.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</span>
                                                     <ArrowUpRight className="w-3 h-3" />
                                                 </a>
                                             </div>
