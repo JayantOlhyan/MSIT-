@@ -576,7 +576,7 @@ const Header = () => {
                                                 to={item.url} 
                                                 onClick={toggleSearch} 
                                                 className="flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-[#182238] border border-slate-200/70 dark:border-white/10 hover:border-blue-300 dark:hover:border-blue-500/50 hover:shadow-card hover:bg-blue-50/30 dark:hover:bg-slate-800/80 transition-all duration-300 group cursor-pointer"
-                                            >                      >
+                                            >
                                                 <div className="flex items-center gap-3.5 min-w-0">
                                                     <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${item.bg} group-hover:scale-105 transition-transform shrink-0 shadow-2xs`}>
                                                         {item.icon}
