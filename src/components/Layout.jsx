@@ -5,9 +5,13 @@ import BackToTop from './BackToTop';
 import { Outlet, useLocation } from 'react-router-dom';
 import OpeningAnimation from './OpeningAnimation';
 import AccessibilityModal from './AccessibilityModal';
+import { useScrollToHash } from '../hooks/useScrollToHash';
 
 const Layout = () => {
-    const { pathname } = useLocation();
+    const { pathname, hash } = useLocation();
+
+    // Enable smooth deep-link scrolling to anchors
+    useScrollToHash();
 
     // Check if the intro has played or if this is the first session visit to the homepage
     const [isIntroActive, setIsIntroActive] = useState(() => {
@@ -15,10 +19,12 @@ const Layout = () => {
         return pathname === '/' && !hasPlayed;
     });
 
-    // Scroll to top on route change
+    // Scroll to top on route change only if no anchor is targeted
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
+        if (!hash) {
+            window.scrollTo(0, 0);
+        }
+    }, [pathname, hash]);
 
     // Handle subpage initial landings and class applications
     useEffect(() => {
@@ -47,7 +53,7 @@ const Layout = () => {
     };
 
     return (
-        <div className="font-sans text-slate-700 w-full min-h-screen selection:bg-slate-200 selection:text-slate-900 bg-white] flex flex-col">
+        <div className="font-sans text-slate-700 w-full min-h-screen selection:bg-slate-200 selection:text-slate-900 bg-white flex flex-col">
             {isIntroActive && (
                 <OpeningAnimation onComplete={handleIntroComplete} />
             )}

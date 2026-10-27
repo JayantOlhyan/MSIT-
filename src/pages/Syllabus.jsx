@@ -24,9 +24,9 @@ const Syllabus = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white] rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 hover:border-blue-200"
+            className="group bg-white rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex items-start gap-5 hover:border-blue-200"
         >
-            <div className="w-12 h-12 rounded-lg bg-slate-50] flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-blue-50 group-hover:border-blue-100 transition-colors">
+            <div className="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 group-hover:bg-blue-50 group-hover:border-blue-100 transition-colors">
                 <Icon className="w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-colors" />
             </div>
             <div className="flex-grow">
@@ -41,7 +41,7 @@ const Syllabus = () => {
     );
 
     return (
-        <main className="min-h-screen bg-white] transition-colors duration-300">
+        <main className="min-h-screen bg-white transition-colors duration-300">
             <SEO 
                 title="Syllabus" 
                 description="Access official B.Tech syllabi for all departments at Maharaja Surajmal Institute of Technology." 
@@ -85,7 +85,7 @@ const Syllabus = () => {
 
                     {/* Right Column: General / Schemes */}
                     <div>
-                        <div className="bg-slate-900] rounded-2xl p-8 text-white sticky top-32 shadow-card shadow-slate-900/10 border border-transparent">
+                        <div className="bg-slate-900 rounded-2xl p-8 text-white sticky top-32 shadow-card shadow-slate-900/10 border border-transparent">
                             <h3 className="text-xl font-bold mb-6 flex items-center">
                                 <FileText className="w-5 h-5 mr-3 text-blue-400" /> Comprehensive Schemes
                             </h3>
@@ -96,7 +96,7 @@ const Syllabus = () => {
                                         href={item.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="block bg-slate-800] hover:bg-slate-700/80] p-5 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all group"
+                                        className="block bg-slate-800 hover:bg-slate-700/80 p-5 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all group"
                                     >
                                         <h4 className="font-semibold text-slate-200 group-hover:text-white mb-2 pr-2 leading-tight">{item.name}</h4>
                                         <div className="text-xs font-semibold uppercase tracking-wider text-blue-400 flex items-center">

@@ -261,7 +261,7 @@ const AdminDashboard = () => {
     if (!isLoggedIn) {
         return (
             <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
-                <div className="bg-white] rounded-2xl shadow-card overflow-hidden max-w-md w-full animate-fade-in relative border border-transparent">
+                <div className="bg-white rounded-2xl shadow-card overflow-hidden max-w-md w-full animate-fade-in relative border border-transparent">
                     <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
                     <div className="p-8">
                         <div className="flex justify-center mb-6">
@@ -284,7 +284,7 @@ const AdminDashboard = () => {
                                 <input
                                     type="text"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white] text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
                                     placeholder="Enter Admin ID"
                                     value={adminId}
                                     onChange={(e) => setAdminId(e.target.value)}
@@ -295,7 +295,7 @@ const AdminDashboard = () => {
                                 <input
                                     type="password"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white] text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
                                     placeholder="••••••••"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
@@ -306,7 +306,7 @@ const AdminDashboard = () => {
                             </button>
                         </form>
                     </div>
-                    <div className="bg-slate-50] p-4 text-center text-xs text-slate-500 border-t border-slate-100">
+                    <div className="bg-slate-50 p-4 text-center text-xs text-slate-500 border-t border-slate-100">
                         Maharaja Surajmal Institute of Technology - Secure Admin Portal
                     </div>
                 </div>
@@ -318,11 +318,11 @@ const AdminDashboard = () => {
     // DASHBOARD RENDERER
     // -------------------------------------------------------------
     return (
-        <div className="min-h-screen bg-slate-50] py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+        <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
             <SEO title="Admin Dashboard" description="Access the MSIT secure administrative dashboard to manage website content, news, events, and campus stories for Maharaja Surajmal Institute of Technology." canonicalPath="/admin" />
             <div className="max-w-4xl mx-auto space-y-8">
 
-                <div className="bg-white] rounded-2xl shadow-card border border-slate-200 p-8">
+                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 pb-8 mb-8">
                         <div>
                             <h1 className="text-3xl font-bold text-slate-900 mb-2">Website Content Manager</h1>
@@ -343,7 +343,7 @@ const AdminDashboard = () => {
                         </div>
                     )}
 
-                    <form onSubmit={handleAddEvent} className="space-y-6 bg-slate-50] p-6 rounded-xl border border-slate-100 mb-10">
+                    <form onSubmit={handleAddEvent} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
                         <h2 className="text-xl font-semibold text-slate-800 flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Create New Content
                         </h2>
@@ -352,7 +352,7 @@ const AdminDashboard = () => {
                             <div className="space-y-2">
                                 <label className="text-sm font-medium text-slate-700">Content Type</label>
                                 <select
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={type}
                                     onChange={(e) => setType(e.target.value)}
                                 >
@@ -373,7 +373,7 @@ const AdminDashboard = () => {
                                     type="text"
                                     placeholder="e.g. MAY 18, 2026"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={date}
                                     onChange={(e) => setDate(e.target.value)}
                                 />
@@ -385,7 +385,7 @@ const AdminDashboard = () => {
                                     type="text"
                                     placeholder="Enter the title for the card"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
                                 />
@@ -396,7 +396,7 @@ const AdminDashboard = () => {
                                 <input
                                     type="text"
                                     placeholder="https://..."
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={link}
                                     onChange={(e) => setLink(e.target.value)}
                                 />
@@ -407,7 +407,7 @@ const AdminDashboard = () => {
                                 <input
                                     type="text"
                                     placeholder="/campus/main-academic-building.webp or leave blank for default"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={bgImage}
                                     onChange={(e) => setBgImage(e.target.value)}
                                 />
@@ -418,7 +418,7 @@ const AdminDashboard = () => {
                                 <input
                                     type="text"
                                     placeholder="Brief 1-sentence summary of the news/event"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                     value={summary}
                                     onChange={(e) => setSummary(e.target.value)}
                                 />
@@ -429,27 +429,27 @@ const AdminDashboard = () => {
                                 <textarea
                                     rows="5"
                                     placeholder="Enter full paragraphs, e.g. <p class='mb-4'>Paragraph content...</p>"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none font-mono text-xs"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none font-mono text-xs"
                                     value={content}
                                     onChange={(e) => setContent(e.target.value)}
                                 />
                             </div>
 
                             {/* Dynamic PDF Attachment Manager */}
-                            <div className="p-4 bg-white] rounded-xl border border-slate-200 md:col-span-2 space-y-4">
+                            <div className="p-4 bg-white rounded-xl border border-slate-200 md:col-span-2 space-y-4">
                                 <h3 className="text-sm font-bold text-slate-800">Add PDF Attachments</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                     <input 
                                         type="text" 
                                         placeholder="Document Name (e.g. Schedule.pdf)" 
-                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white] text-slate-900 outline-none"
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white text-slate-900 outline-none"
                                         value={attName} 
                                         onChange={(e) => setAttName(e.target.value)}
                                     />
                                     <input 
                                         type="text" 
                                         placeholder="Size (e.g. 1.2 MB)" 
-                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white] text-slate-900 outline-none"
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white text-slate-900 outline-none"
                                         value={attSize} 
                                         onChange={(e) => setAttSize(e.target.value)}
                                     />
@@ -471,7 +471,7 @@ const AdminDashboard = () => {
                                 {attachmentsList.length > 0 && (
                                     <div className="pt-2 space-y-1.5">
                                         {attachmentsList.map((item, index) => (
-                                            <div key={index} className="flex justify-between items-center bg-slate-50] p-2 rounded border border-slate-100 text-xs">
+                                            <div key={index} className="flex justify-between items-center bg-slate-50 p-2 rounded border border-slate-100 text-xs">
                                                 <span className="font-semibold text-slate-700">{item.name} ({item.size})</span>
                                                 <button 
                                                     type="button" 
@@ -487,20 +487,20 @@ const AdminDashboard = () => {
                             </div>
 
                             {/* Dynamic Related Links Manager */}
-                            <div className="p-4 bg-white] rounded-xl border border-slate-200 md:col-span-2 space-y-4">
+                            <div className="p-4 bg-white rounded-xl border border-slate-200 md:col-span-2 space-y-4">
                                 <h3 className="text-sm font-bold text-slate-800">Add Related Links</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                     <input 
                                         type="text" 
                                         placeholder="Link Text (e.g. Registration Portal)" 
-                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white] text-slate-900 outline-none"
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white text-slate-900 outline-none"
                                         value={rLinkName} 
                                         onChange={(e) => setRLinkName(e.target.value)}
                                     />
                                     <input 
                                         type="text" 
                                         placeholder="URL (e.g. https://...)" 
-                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white] text-slate-900 outline-none"
+                                        className="px-3 py-2 text-xs rounded-lg border border-slate-300 bg-white text-slate-900 outline-none"
                                         value={rLinkUrl} 
                                         onChange={(e) => setRLinkUrl(e.target.value)}
                                     />
@@ -522,7 +522,7 @@ const AdminDashboard = () => {
                                 {relatedLinksList.length > 0 && (
                                     <div className="pt-2 space-y-1.5">
                                         {relatedLinksList.map((item, index) => (
-                                            <div key={index} className="flex justify-between items-center bg-slate-50] p-2 rounded border border-slate-100 text-xs">
+                                            <div key={index} className="flex justify-between items-center bg-slate-50 p-2 rounded border border-slate-100 text-xs">
                                                 <span className="font-semibold text-slate-700">{item.name} → {item.url}</span>
                                                 <button 
                                                     type="button" 
@@ -551,7 +551,7 @@ const AdminDashboard = () => {
                                 <p className="text-slate-500 italic">No events found. Create one above.</p>
                             ) : (
                                 events.map(ev => (
-                                    <div key={ev.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50] transition-colors">
+                                    <div key={ev.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
                                         <div className="mb-4 sm:mb-0 pr-4">
                                             <div className="flex items-center gap-3 mb-1">
                                                 <span className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 bg-slate-200 text-slate-700 rounded">{ev.label}</span>
@@ -577,13 +577,13 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* TESTIMONIALS MANAGER */}
-                <div className="bg-white] rounded-2xl shadow-card border border-slate-200 p-8">
+                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
                     <div className="border-b border-slate-100 pb-8 mb-8">
                         <h2 className="text-3xl font-bold text-slate-900 mb-2">Testimonials Manager</h2>
                         <p className="text-slate-500">Manage alumni testimonials that appear in the homepage carousel.</p>
                     </div>
 
-                    <form onSubmit={handleAddTestimonial} className="space-y-6 bg-slate-50] p-6 rounded-xl border border-slate-100 mb-10">
+                    <form onSubmit={handleAddTestimonial} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
                         <h3 className="text-xl font-semibold text-slate-800 flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Add New Testimonial
                         </h3>
@@ -595,7 +595,7 @@ const AdminDashboard = () => {
                                     type="text"
                                     placeholder="e.g. Rahul Verma"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tName}
                                     onChange={(e) => setTName(e.target.value)}
                                 />
@@ -607,7 +607,7 @@ const AdminDashboard = () => {
                                     type="text"
                                     placeholder="e.g. 23"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tYear}
                                     onChange={(e) => setTYear(e.target.value)}
                                 />
@@ -619,7 +619,7 @@ const AdminDashboard = () => {
                                     type="text"
                                     placeholder="e.g. Information Technology"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tMajor}
                                     onChange={(e) => setTMajor(e.target.value)}
                                 />
@@ -631,7 +631,7 @@ const AdminDashboard = () => {
                                     type="text"
                                     placeholder="e.g. Microsoft"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tCompany}
                                     onChange={(e) => setTCompany(e.target.value)}
                                 />
@@ -644,7 +644,7 @@ const AdminDashboard = () => {
                                         <input
                                             type="file"
                                             accept="image/*"
-                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                                             onChange={(e) => handleImageUpload(e.target.files[0], setTImage)}
                                         />
                                     </div>
@@ -663,7 +663,7 @@ const AdminDashboard = () => {
                                     placeholder="Enter the testimonial quote here..."
                                     required
                                     rows="3"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={tQuote}
                                     onChange={(e) => setTQuote(e.target.value)}
                                 />
@@ -681,7 +681,7 @@ const AdminDashboard = () => {
                             <p className="text-slate-500 italic">No testimonials found.</p>
                         ) : (
                             testimonials.map(t => (
-                                <div key={t.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50] transition-colors">
+                                <div key={t.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
                                     <div className="flex items-center gap-4 flex-grow mb-4 sm:mb-0">
                                         <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
                                             <img src={t.image} alt={`${t.name} profile picture`} className="w-full h-full object-cover" />
@@ -707,13 +707,13 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* HIGHLIGHTS MANAGER */}
-                <div className="bg-white] rounded-2xl shadow-card border border-slate-200 p-8">
+                <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8">
                     <div className="border-b border-slate-100 pb-8 mb-8">
                         <h2 className="text-3xl font-bold text-slate-900 mb-2">Highlights Manager</h2>
                         <p className="text-slate-500">Manage the "MSIT Difference" carousel slides, quotes, and background images.</p>
                     </div>
 
-                    <form onSubmit={handleAddHighlight} className="space-y-6 bg-slate-50] p-6 rounded-xl border border-slate-100 mb-10">
+                    <form onSubmit={handleAddHighlight} className="space-y-6 bg-slate-50 p-6 rounded-xl border border-slate-100 mb-10">
                         <h3 className="text-xl font-semibold text-slate-800 flex items-center">
                             <Plus className="w-5 h-5 mr-2 text-blue-600" /> Add New Slide
                         </h3>
@@ -725,7 +725,7 @@ const AdminDashboard = () => {
                                     type="text"
                                     placeholder="e.g. Times Engineering Survey / NAAC"
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={hSource}
                                     onChange={(e) => setHSource(e.target.value)}
                                 />
@@ -738,7 +738,7 @@ const AdminDashboard = () => {
                                         <input
                                             type="file"
                                             accept="image/*"
-                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                                            className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                                             onChange={(e) => handleImageUpload(e.target.files[0], setHImage)}
                                         />
                                     </div>
@@ -756,7 +756,7 @@ const AdminDashboard = () => {
                                     placeholder="Enter the highlight quote here..."
                                     required
                                     rows="3"
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white] text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                                     value={hQuote}
                                     onChange={(e) => setHQuote(e.target.value)}
                                 />
@@ -774,7 +774,7 @@ const AdminDashboard = () => {
                             <p className="text-slate-500 italic">No highlights found.</p>
                         ) : (
                             highlights.map(h => (
-                                <div key={h.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50] transition-colors">
+                                <div key={h.id} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
                                     <div className="flex items-center gap-4 flex-grow mb-4 sm:mb-0">
                                         <div className="w-20 h-12 rounded-lg overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
                                             <img src={h.image} alt={`Highlight image from ${h.source}`} className="w-full h-full object-cover" />

@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero';
 
 const PrivacyPolicy = () => {
     return (
-        <main className="min-h-screen bg-white] transition-colors duration-300">
+        <main className="min-h-screen bg-white transition-colors duration-300">
             <SEO 
                 title="Privacy Policy" 
                 description="Read the official Privacy Policy of Maharaja Surajmal Institute of Technology (MSIT). Learn how we protect student data and user privacy." 
@@ -35,11 +35,11 @@ const PrivacyPolicy = () => {
                                 <Lock className="w-6 h-6 mr-3 text-blue-600" /> 2. Information We Collect
                             </h2>
                             <div className="grid md:grid-cols-2 gap-6">
-                                <div className="bg-slate-50] p-6 rounded-xl border border-slate-100">
+                                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
                                     <h3 className="font-bold text-slate-800 mb-2">Personal Data</h3>
                                     <p className="text-base text-slate-600">While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you, including names, email addresses, and phone numbers via admission forms or inquiries.</p>
                                 </div>
-                                <div className="bg-slate-50] p-6 rounded-xl border border-slate-100">
+                                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
                                     <h3 className="font-bold text-slate-800 mb-2">Usage Data</h3>
                                     <p className="text-base text-slate-600">Usage Data is collected automatically when using the Service. This may include your device's IP address, browser type, page visit duration, and other diagnostic data to improve site performance.</p>
                                 </div>

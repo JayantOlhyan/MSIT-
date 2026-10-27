@@ -96,7 +96,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Event 1: National Coding Contest */}
-                            <div className="bg-slate-50] border border-slate-200/60 p-6 rounded-2xl flex flex-col justify-between hover:bg-white] hover:shadow-md transition-all">
+                            <div className="bg-slate-50 border border-slate-200/60 p-6 rounded-2xl flex flex-col justify-between hover:bg-white hover:shadow-md transition-all">
                                 <div>
                                     <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
                                         <Globe className="w-5 h-5" />
@@ -110,7 +110,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                             </div>
 
                             {/* Event 2: HackMSIT 1.0 */}
-                            <div className="bg-slate-50] border border-slate-200/60 p-6 rounded-2xl flex flex-col justify-between hover:bg-white] hover:shadow-md transition-all">
+                            <div className="bg-slate-50 border border-slate-200/60 p-6 rounded-2xl flex flex-col justify-between hover:bg-white hover:shadow-md transition-all">
                                 <div>
                                     <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-4">
                                         <Users className="w-5 h-5" />
@@ -125,7 +125,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                         </div>
 
                         {/* ICAIA 2026 notice card */}
-                        <div className="p-6 bg-slate-50/50] rounded-2xl border border-slate-200/50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-6">
+                        <div className="p-6 bg-slate-50/50 rounded-2xl border border-slate-200/50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-6">
                             <div>
                                 <h5 className="text-sm font-bold text-slate-800 flex items-center gap-1.5">
                                     <Award className="w-4 h-4 text-yellow-500" /> ICAIA 2026 IEEE Conference
@@ -136,7 +136,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                                 href="https://icaia-msit.in/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="px-4 py-2 bg-white] hover:bg-slate-50] border border-slate-200 text-slate-700 font-bold rounded-lg text-xs transition-all shrink-0 cursor-pointer"
+                                className="px-4 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold rounded-lg text-xs transition-all shrink-0 cursor-pointer"
                             >
                                 Conference Site
                             </a>
@@ -164,17 +164,17 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-slate-50] p-5 rounded-2xl border border-slate-200/60">
+                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/60">
                             <span className="text-[10px] font-black text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Music</span>
                             <h5 className="font-bold text-slate-800 mt-2.5 mb-1.5">Battle of Bands</h5>
                             <p className="text-xs text-slate-500 font-light leading-relaxed">Rock bands from campuses across the country clash on the main stage for the top honors.</p>
                         </div>
-                        <div className="bg-slate-50] p-5 rounded-2xl border border-slate-200/60">
+                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/60">
                             <span className="text-[10px] font-black text-pink-600 bg-pink-50 px-2 py-0.5 rounded">Fashion</span>
                             <h5 className="font-bold text-slate-800 mt-2.5 mb-1.5">Glamour Walk</h5>
                             <p className="text-xs text-slate-500 font-light leading-relaxed">The flagship fashion event exhibiting curated themes, styling, and design choreographies.</p>
                         </div>
-                        <div className="bg-slate-50] p-5 rounded-2xl border border-slate-200/60">
+                        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/60">
                             <span className="text-[10px] font-black text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Theatre</span>
                             <h5 className="font-bold text-slate-800 mt-2.5 mb-1.5">Nukkad Natak</h5>
                             <p className="text-xs text-slate-500 font-light leading-relaxed">High-energy street plays conveying crucial social messages and cultural commentaries.</p>
@@ -202,7 +202,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                     </div>
 
                     {!sportsRegistered ? (
-                        <div className="bg-slate-50/50] rounded-3xl border border-slate-200/60 p-6 sm:p-8 shadow-xs">
+                        <div className="bg-slate-50/50 rounded-3xl border border-slate-200/60 p-6 sm:p-8 shadow-xs">
                             <h4 className="text-sm font-bold text-slate-900 mb-4">Sports Registration Form</h4>
                             <form onSubmit={handleSportsSubmit} className="space-y-4">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -212,7 +212,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                                         value={sportsForm.name}
                                         onChange={e => setSportsForm({...sportsForm, name: e.target.value})}
                                         placeholder="Full Name"
-                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white] text-slate-855 text-xs font-semibold"
+                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-855 text-xs font-semibold"
                                     />
                                     <input 
                                         type="text" 
@@ -220,7 +220,7 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                                         value={sportsForm.enrollmentNo}
                                         onChange={e => setSportsForm({...sportsForm, enrollmentNo: e.target.value})}
                                         placeholder="Enrollment Number (11 Digits)"
-                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white] text-slate-855 text-xs font-semibold"
+                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-855 text-xs font-semibold"
                                     />
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -230,12 +230,12 @@ const EventsPortal = ({ activeTab, setActiveTab }) => {
                                         value={sportsForm.email}
                                         onChange={e => setSportsForm({...sportsForm, email: e.target.value})}
                                         placeholder="Email Address"
-                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white] text-slate-855 text-xs font-semibold"
+                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-855 text-xs font-semibold"
                                     />
                                     <select 
                                         value={sportsForm.sport}
                                         onChange={e => setSportsForm({...sportsForm, sport: e.target.value})}
-                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white] text-slate-855 text-xs font-semibold"
+                                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none bg-white text-slate-855 text-xs font-semibold"
                                     >
                                         <option value="athletics">Track & Field (100m/200m/400m)</option>
                                         <option value="basketball">Basketball</option>

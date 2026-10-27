@@ -309,7 +309,7 @@ const NewslettersMagazines = () => {
                                         className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-lg border transition-all cursor-pointer ${
                                             selectedCategory === category
                                                 ? 'bg-slate-900 border-slate-900 text-white shadow-xs'
-                                                : 'bg-white] border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300'
+                                                : 'bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300'
                                         }`}
                                     >
                                         {category}
@@ -323,7 +323,7 @@ const NewslettersMagazines = () => {
                                 <select 
                                     value={sortBy}
                                     onChange={(e) => setSortBy(e.target.value)}
-                                    className="bg-white] border border-slate-200 rounded-lg px-3 py-2 text-xs font-bold text-slate-800 outline-none focus:border-slate-400"
+                                    className="bg-white border border-slate-200 rounded-lg px-3 py-2 text-xs font-bold text-slate-800 outline-none focus:border-slate-400"
                                 >
                                     <option value="Popular">Popular</option>
                                     <option value="A-Z">A–Z</option>
@@ -342,7 +342,7 @@ const NewslettersMagazines = () => {
                             </div>
 
                             {filteredPublications.length === 0 ? (
-                                <div className="p-12 text-center bg-slate-50] rounded-2xl border border-slate-100">
+                                <div className="p-12 text-center bg-slate-50 rounded-2xl border border-slate-100">
                                     <p className="text-sm text-slate-400 font-medium">No publications found matching this category filter.</p>
                                 </div>
                             ) : (
@@ -350,7 +350,7 @@ const NewslettersMagazines = () => {
                                     {filteredPublications.map(pub => (
                                         <div 
                                             key={pub.id} 
-                                            className="bg-white] border border-slate-200/80 rounded-2xl p-5 shadow-xs flex gap-5 hover:shadow-card transition-all duration-300 relative overflow-hidden group"
+                                            className="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-xs flex gap-5 hover:shadow-card transition-all duration-300 relative overflow-hidden group"
                                         >
                                             {/* Left column artwork cover */}
                                             <div className={`w-28 h-auto bg-gradient-to-br ${pub.gradient} rounded-xl p-4 flex flex-col justify-between text-white shrink-0 relative overflow-hidden`}>
@@ -365,7 +365,7 @@ const NewslettersMagazines = () => {
                                             <div className="flex flex-col justify-between flex-1 select-none">
                                                 <div>
                                                     <h4 className="font-extrabold text-slate-900 text-sm mb-1 leading-snug">{pub.name}</h4>
-                                                    <span className="text-[9px] font-black uppercase tracking-wider text-slate-500 bg-slate-100] border border-slate-200 px-2 py-0.5 rounded w-fit block mb-2">
+                                                    <span className="text-[9px] font-black uppercase tracking-wider text-slate-500 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded w-fit block mb-2">
                                                         {pub.publisher}
                                                     </span>
                                                     <p className="text-xs text-slate-500 font-light leading-relaxed line-clamp-3 mb-4">{pub.description}</p>
@@ -409,14 +409,14 @@ const NewslettersMagazines = () => {
                         </div>
 
                         {/* Previous Issues Panel */}
-                        <div className="bg-white] border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-card space-y-6">
+                        <div className="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 shadow-card space-y-6">
                             <div className="flex justify-between items-center border-b border-slate-100 pb-4">
                                 <h3 className="text-sm font-black uppercase tracking-widest text-slate-900">Archived Annual Issues</h3>
                             </div>
 
                             <div className="space-y-4">
                                 {PREVIOUS_ISSUES.map((issue, idx) => (
-                                    <div key={idx} className="flex gap-4 p-3 hover:bg-slate-50] rounded-xl transition-colors group border border-slate-100">
+                                    <div key={idx} className="flex gap-4 p-3 hover:bg-slate-50 rounded-xl transition-colors group border border-slate-100">
                                         {/* Cover */}
                                         <div className={`w-12 h-16 bg-gradient-to-br ${issue.coverGradient} rounded-md shadow-xs shrink-0 flex items-end p-1.5 text-white`}>
                                             <BookOpen className="w-4 h-4 opacity-80" />

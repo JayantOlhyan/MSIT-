@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, LayoutDashboard, X, Mail, Linkedin, Globe, Phone, FileText, Star, ChevronDown, ExternalLink } from 'lucide-react';
 import { pagesData } from '../data/pagesData';
@@ -12,6 +12,7 @@ import NewslettersMagazines from '../components/NewslettersMagazines';
 import SocietyDetailView from '../components/SocietyDetailView';
 import SocietiesHubView from '../components/SocietiesHubView';
 import { societiesData } from '../data/societiesData';
+import { createSlugifier } from '../utils/slugify';
 
 import DepartmentLabsSection from '../components/DepartmentLabsSection';
 
@@ -24,6 +25,21 @@ const DynamicPage = () => {
     const [activeEventTab, setActiveEventTab] = useState('avensis');
     const [activeHighlightIndex, setActiveHighlightIndex] = useState(null);
     const [prevSlug, setPrevSlug] = useState(slug);
+
+    const processedContent = useMemo(() => {
+        if (!pageData?.content) return '';
+        const getSlug = createSlugifier();
+        return pageData.content.replace(/<(h[34])(\s+[^>]*)?>([\s\S]*?)<\/\1>/gi, (match, tag, attrs = '', inner) => {
+            // Strip tags from inner content to get clean heading text
+            const plainText = inner.replace(/<[^>]*>/g, '').trim();
+            const id = getSlug(plainText);
+            // If already has an id, keep it, otherwise add id
+            if (/\bid=["'][^"']+["']/i.test(attrs)) {
+                return match;
+            }
+            return `<${tag}${attrs} id="${id}">${inner}</${tag}>`;
+        });
+    }, [pageData]);
 
     if (prevSlug !== slug) {
         setPrevSlug(slug);
@@ -79,7 +95,7 @@ const DynamicPage = () => {
     // Dedicated Redesigned View for the Student Societies Hub Directory (/society)
     if (slug === 'society') {
         return (
-            <main className="min-h-screen bg-slate-50] transition-colors duration-300">
+            <main className="min-h-screen bg-slate-50 transition-colors duration-300">
                 <SEO 
                     title="Student Societies & Chapters" 
                     description="Explore 20+ vibrant technical, cultural, and academic student societies at Maharaja Surajmal Institute of Technology." 
@@ -108,7 +124,7 @@ const DynamicPage = () => {
     if (slug === 'newsletters-magazines') {
         if (!pageData) return <NotFound />;
         return (
-            <main className="min-h-screen bg-white] transition-colors duration-300">
+            <main className="min-h-screen bg-white transition-colors duration-300">
                 <SEO 
                     title={pageData.title} 
                     description={pageData.seo_description || pageData.subtitle} 
@@ -122,7 +138,7 @@ const DynamicPage = () => {
                         { label: pageData.title }
                     ]}
                 />
-                <section className="bg-slate-50] border-b border-slate-100 transition-colors">
+                <section className="bg-slate-50 border-b border-slate-100 transition-colors">
                     <NewslettersMagazines />
                 </section>
             </main>
@@ -147,7 +163,7 @@ const DynamicPage = () => {
     } : null;
 
     return (
-        <main className="min-h-screen bg-white] transition-colors duration-300">
+        <main className="min-h-screen bg-white transition-colors duration-300">
             <SEO 
                 title={pageData.title} 
                 description={pageData.seo_description || pageData.subtitle} 
@@ -174,7 +190,7 @@ const DynamicPage = () => {
             />
 
             {/* MAIN CONTENT LAYOUT */}
-            <section className="py-24 bg-white] relative transition-colors">
+            <section className="py-24 bg-white relative transition-colors">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
 
@@ -184,7 +200,7 @@ const DynamicPage = () => {
                                 <div>
                                     <div 
                                         className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
-                                        dangerouslySetInnerHTML={{ __html: pageData.content }}
+                                        dangerouslySetInnerHTML={{ __html: processedContent }}
                                         onClick={handleContentClick}
                                     ></div>
                                     <DepartmentLabsSection deptKey={slug === 'applied-sciences' ? 'as' : slug} />
@@ -198,7 +214,7 @@ const DynamicPage = () => {
                             ) : (
                                 <div 
                                     className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
-                                    dangerouslySetInnerHTML={{ __html: pageData.content }}
+                                    dangerouslySetInnerHTML={{ __html: processedContent }}
                                     onClick={handleContentClick}
                                 ></div>
                             )}
@@ -212,7 +228,7 @@ const DynamicPage = () => {
                                 {pageData.stats && pageData.stats.length > 0 && (
                                     <div className="grid grid-cols-2 gap-4">
                                         {pageData.stats.map((stat, i) => (
-                                            <div key={i} className="bg-surface] p-6 rounded-2xl border border-slate-100 shadow-card">
+                                            <div key={i} className="bg-surface p-6 rounded-2xl border border-slate-100 shadow-card">
                                                 <div className="text-2xl font-bold text-title mb-1">{stat.value}</div>
                                                 <div className="text-xs font-bold uppercase tracking-widest text-muted">{stat.label}</div>
                                             </div>
@@ -222,7 +238,7 @@ const DynamicPage = () => {
 
                                 {/* Key Highlights */}
                                 {pageData.bulletPoints && pageData.bulletPoints.length > 0 && (
-                                    <div className="bg-slate-900] p-6 sm:p-8 rounded-2xl text-white shadow-card border border-slate-800/80">
+                                    <div className="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white shadow-card border border-slate-800/80">
                                         <div className="flex items-center justify-between mb-5 pb-3 border-b border-white/10">
                                             <h4 className="text-base sm:text-lg font-bold flex items-center gap-2.5">
                                                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
@@ -384,7 +400,7 @@ const DynamicPage = () => {
 
                                 {/* Quick CTA */}
                                 {slug !== 'contact' && (
-                                    <Link to="/contact" className="block p-8 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white] transition-colors cursor-pointer group">
+                                    <Link to="/contact" className="block p-8 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white transition-colors cursor-pointer group">
                                         <h4 className="text-lg font-semibold text-title mb-2 group-hover:text-primary transition-colors">Questions?</h4>
                                         <p className="text-sm text-muted font-light mb-4">Contact the MSIT administrative desk directly.</p>
                                         <div className="text-primary font-medium text-sm flex items-center group-hover:translate-x-2 transition-transform">
@@ -409,7 +425,7 @@ const DynamicPage = () => {
                     ></div>
 
                     {/* Modal Card */}
-                    <div className="relative bg-white] w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
+                    <div className="relative bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
                         {/* Close button */}
                         <button 
                             onClick={() => setSelectedMember(null)}
@@ -419,7 +435,7 @@ const DynamicPage = () => {
                         </button>
 
                         {/* Top banner / image */}
-                        <div className="bg-slate-900] text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
+                        <div className="bg-slate-900 text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
                             <div className="flex gap-4 sm:gap-6 items-center relative z-10">
                                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
@@ -434,7 +450,7 @@ const DynamicPage = () => {
                         </div>
 
                         {/* Details body */}
-                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]]">
+                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]">
                             {selectedMember.bio && (
                                 <div>
                                     <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
@@ -447,11 +463,11 @@ const DynamicPage = () => {
                             )}
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                                <div className="bg-white] p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
                                     <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Qualification</div>
                                     <div className="text-xs font-extrabold text-slate-800">{selectedMember.qual || selectedMember.qualifications || "N/A"}</div>
                                 </div>
-                                <div className="bg-white] p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
                                     <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Experience / Status</div>
                                     <div className="text-xs font-extrabold text-slate-800">{selectedMember.experience} Years</div>
                                 </div>
@@ -476,7 +492,7 @@ const DynamicPage = () => {
                                 <div className="flex flex-col gap-2 shrink-0">
                                     <a 
                                         href={`mailto:${selectedMember.email}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white] hover:bg-slate-100] border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
                                     >
                                         <Mail className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.email}</span>
@@ -484,7 +500,7 @@ const DynamicPage = () => {
 
                                     <a 
                                         href={`tel:${selectedMember.phone.replace(/\s+/g, '')}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white] hover:bg-slate-100] border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
                                     >
                                         <Phone className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.phone}</span>
@@ -497,7 +513,7 @@ const DynamicPage = () => {
                                             href={selectedMember.pdfLink} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="w-10 h-10 bg-slate-900] hover:bg-slate-800] text-white rounded-xl flex items-center justify-center transition-colors"
+                                            className="w-10 h-10 bg-slate-900 hover:bg-slate-800 text-white rounded-xl flex items-center justify-center transition-colors"
                                             title="View Official Profile PDF"
                                         >
                                             <FileText className="w-4 h-4" />

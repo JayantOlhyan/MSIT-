@@ -114,7 +114,7 @@ const Team = () => {
     };
 
     return (
-        <main className="min-h-screen bg-slate-50] transition-colors duration-300">
+        <main className="min-h-screen bg-slate-50 transition-colors duration-300">
             <SEO 
                 title="Meet The Team" 
                 description="Discover the core development team and faculty coordinators who built the Maharaja Surajmal Institute of Technology website."
@@ -143,7 +143,7 @@ const Team = () => {
                         <div 
                             key={member.id}
                             onClick={() => setSelectedMember(member)}
-                            className="bg-white] rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-row gap-4 sm:gap-6 items-center"
+                            className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-row gap-4 sm:gap-6 items-center"
                         >
                             <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shrink-0 ring-2 ring-slate-100">
                                 <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
@@ -174,7 +174,7 @@ const Team = () => {
                         <div 
                             key={member.id}
                             onClick={() => setSelectedMember(member)}
-                            className="bg-white] rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-col justify-between"
+                            className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-col justify-between"
                         >
                             <div>
                                 <div className="flex gap-4 items-center mb-4 sm:mb-6">
@@ -221,7 +221,7 @@ const Team = () => {
                     ></div>
 
                     {/* Modal Card */}
-                    <div className="relative bg-white] w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
+                    <div className="relative bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
                         {/* Close button */}
                         <button 
                             onClick={() => setSelectedMember(null)}
@@ -254,7 +254,7 @@ const Team = () => {
                         </div>
 
                         {/* Details body */}
-                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]]">
+                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]">
                             <div>
                                 <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
                                     <Calendar className="w-4 h-4 text-blue-500" /> Professional Bio
@@ -265,11 +265,11 @@ const Team = () => {
                             </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                                <div className="bg-white] p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
                                     <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Qualification</div>
                                     <div className="text-xs font-extrabold text-slate-800">{selectedMember.qualifications}</div>
                                 </div>
-                                <div className="bg-white] p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
                                     <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Experience / Status</div>
                                     <div className="text-xs font-extrabold text-slate-800">{selectedMember.experience}</div>
                                 </div>
@@ -292,7 +292,7 @@ const Team = () => {
                             <div className="border-t border-slate-200 pt-6 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between">
                                 <a 
                                     href={`mailto:${selectedMember.email}`}
-                                    className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white] hover:bg-slate-100] border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                    className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
                                 >
                                     <Mail className="w-4 h-4 shrink-0" />
                                     <span className="truncate">{selectedMember.email}</span>

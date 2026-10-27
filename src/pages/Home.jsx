@@ -1193,7 +1193,7 @@ const Home = () => {
             </section>
 
 {/* THE MSIT ADVANTAGE - ELEGANT CARD STACK SECTION */}
-            <section className="py-24 bg-[#FBF9F5]] text-slate-900 border-y border-stone-200/80 relative overflow-hidden">
+            <section className="py-24 bg-[#FBF9F5] text-slate-900 border-y border-stone-200/80 relative overflow-hidden">
                 {/* Decorative diagonal accent matching inspiration background */}
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F3EEE5]/60 -skew-x-12 transform translate-x-24 pointer-events-none -z-0"></div>
 

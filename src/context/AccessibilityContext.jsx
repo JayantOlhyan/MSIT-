@@ -53,6 +53,9 @@ export const AccessibilityProvider = ({ children }) => {
         
         const root = document.documentElement;
         
+        // Ensure no lingering dark mode classes exist
+        root.classList.remove('acc-dark-mode', 'dark');
+        
         // Apply classes
         if (settings.focusHighlight) root.classList.add('acc-focus-ring');
         else root.classList.remove('acc-focus-ring');

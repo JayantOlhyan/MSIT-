@@ -253,7 +253,7 @@ export const admissionData = {
                             </div>
                             <div class="flex flex-row md:flex-col gap-2 shrink-0">
                                 <a href="http://www.ipu.ac.in/dsw_policy.php" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-bold text-center text-primary bg-blue-50 hover:bg-primary hover:text-white rounded-xl transition-all border border-primary/20">View Guidelines</a>
-                                <a href="https://edistrict.delhigovt.nic.in/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-bold text-center text-white bg-primary hover:bg-primary-dark rounded-xl transition-all shadow-xs">Apply Online</a>
+                                <a href="https://edistrict.delhigovt.nic.in/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-bold text-center text-white bg-primary hover:bg-primary/90 rounded-xl transition-all shadow-xs">Apply Online</a>
                             </div>
                         </div>
                     </div>
@@ -340,7 +340,7 @@ export const admissionData = {
                                 <p class="text-sm text-slate-600 leading-relaxed font-light">A unified national portal acting as a single-window solution for central government scholarships. Enables everything from application submission, verification, processing, and direct benefit transfer (DBT) of funds to students.</p>
                             </div>
                             <div class="flex shrink-0">
-                                <a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto px-4 py-2 text-xs font-bold text-center text-white bg-primary hover:bg-primary-dark rounded-xl transition-all shadow-xs">National Portal</a>
+                                <a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto px-4 py-2 text-xs font-bold text-center text-white bg-primary hover:bg-primary/90 rounded-xl transition-all shadow-xs">National Portal</a>
                             </div>
                         </div>
                     </div>
@@ -466,7 +466,7 @@ export const admissionData = {
                         <h4 class="text-base font-bold text-slate-900 font-sans">Official Scholarship Notice</h4>
                         <p class="text-xs text-slate-500 font-light mt-1">Download the official reference PDF issued by the MSIT scholarship and aid department.</p>
                     </div>
-                    <a href="https://msit.in/media/navigations/scholarships.pdf" download target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold text-white bg-primary hover:bg-primary-dark rounded-xl transition-all shadow-xs gap-2 shrink-0">
+                    <a href="https://msit.in/media/navigations/scholarships.pdf" download target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold text-white bg-primary hover:bg-primary/90 rounded-xl transition-all shadow-xs gap-2 shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>

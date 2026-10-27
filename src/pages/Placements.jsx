@@ -120,7 +120,7 @@ const Placements = () => {
     ];
 
     return (
-        <main className="min-h-screen bg-slate-50] transition-colors duration-300">
+        <main className="min-h-screen bg-slate-50 transition-colors duration-300">
             <SEO 
                 title="Placements" 
                 description="Explore stellar placement records at Maharaja Surajmal Institute of Technology. Our graduates secure top roles at Google, Microsoft, and Amazon with 95%+ success." 
@@ -134,7 +134,7 @@ const Placements = () => {
             />
 
             {/* Quick Stats Banner */}
-            <div className="bg-white] border-b border-slate-200 transition-colors">
+            <div className="bg-white border-b border-slate-200 transition-colors">
                 <div className="max-w-7xl mx-auto px-6 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
                         <div className="flex flex-col items-center text-center p-4">
@@ -166,7 +166,7 @@ const Placements = () => {
             </div>
 
             {/* Recruiters Grid */}
-            <div className="bg-slate-50] border-b border-slate-200 py-16 transition-colors">
+            <div className="bg-slate-50 border-b border-slate-200 py-16 transition-colors">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex items-center mb-10">
                         <Building2 className="w-8 h-8 text-blue-600 mr-4" />
@@ -174,7 +174,7 @@ const Placements = () => {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
                         {topRecruiters.map((company, index) => (
-                            <div key={index} className="bg-white/90] backdrop-blur-md p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col items-center justify-between text-center group hover:border-blue-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300 min-h-[145px]">
+                            <div key={index} className="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col items-center justify-between text-center group hover:border-blue-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300 min-h-[145px]">
                                 <div className="h-14 w-full flex items-center justify-center p-2 rounded-xl bg-slate-50/80 group-hover:scale-105 transition-all duration-300 shadow-[inset_0_1px_2px_rgba(0,0,0,0.05)]">
                                     <img 
                                         src={company.logo} 
@@ -209,7 +209,7 @@ const Placements = () => {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {trainingPrograms.map((prog, index) => (
-                                <div key={index} className="bg-white] p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                                <div key={index} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
                                     <h4 className="text-lg font-bold text-slate-900 mb-2">{prog.title}</h4>
                                     <p className="text-sm text-slate-600 leading-relaxed">{prog.description}</p>
                                 </div>
@@ -223,7 +223,7 @@ const Placements = () => {
                             <Award className="w-8 h-8 text-blue-600 mr-4" />
                             <h2 className="text-3xl font-bold text-slate-900">Placement Policy & Guidelines</h2>
                         </div>
-                        <div className="bg-white] p-8 rounded-2xl border border-slate-200 space-y-6">
+                        <div className="bg-white p-8 rounded-2xl border border-slate-200 space-y-6">
                             <div className="flex gap-4">
                                 <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 font-bold flex items-center justify-center shrink-0">1</div>
                                 <div>
@@ -315,7 +315,7 @@ const Placements = () => {
                                     <div 
                                         key={i} 
                                         onClick={() => setSelectedMember(details)}
-                                        className="bg-white] rounded-3xl p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group text-center"
+                                        className="bg-white rounded-3xl p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group text-center"
                                     >
                                         <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-2 border-slate-100">
                                             <img 
@@ -337,7 +337,7 @@ const Placements = () => {
                         </div>
 
                         {/* Faculty Coordinators */}
-                        <div className="bg-white] p-6 rounded-2xl border border-slate-200">
+                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
                             <h4 className="font-bold text-slate-900 mb-6 text-center text-base">Faculty Coordinators</h4>
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                                 {coordinators.map((coord, i) => {
@@ -346,7 +346,7 @@ const Placements = () => {
                                         <div 
                                             key={i} 
                                             onClick={() => setSelectedMember(details)}
-                                            className="bg-slate-50] rounded-xl p-3 border border-slate-100 hover:border-blue-200 hover:bg-white] hover:shadow-sm transition-all cursor-pointer group text-center"
+                                            className="bg-slate-50 rounded-xl p-3 border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-sm transition-all cursor-pointer group text-center"
                                         >
                                             <h5 className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors text-xs sm:text-sm truncate">{coord.displayName || details.name}</h5>
                                             <span className="inline-block mt-1 px-1.5 py-0.5 bg-slate-200 text-slate-600 text-[8px] font-bold uppercase rounded">{coord.branch}</span>
@@ -374,7 +374,7 @@ const Placements = () => {
                                     href={record.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group bg-white] rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex items-center justify-between"
+                                    className="group bg-white rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex items-center justify-between"
                                 >
                                     <div>
                                         <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1">Batch of</div>
@@ -382,7 +382,7 @@ const Placements = () => {
                                             {record.year}
                                         </div>
                                     </div>
-                                    <div className="w-12 h-12 rounded-full bg-slate-50] flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                                    <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
                                         <Download className="w-5 h-5 text-slate-400 group-hover:text-blue-600" />
                                     </div>
                                 </a>
@@ -393,7 +393,7 @@ const Placements = () => {
 
                 {/* Sidebar */}
                 <div className="lg:w-80 shrink-0">
-                    <div className="bg-white] rounded-2xl shadow-card border border-slate-200 p-8 sticky top-32 space-y-8">
+                    <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8 sticky top-32 space-y-8">
                         <div>
                             <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
                                 <Building2 className="w-5 h-5 mr-3 text-blue-600" />
@@ -403,7 +403,7 @@ const Placements = () => {
                                 {topRecruiters.map((company, index) => (
                                     <span
                                         key={index}
-                                        className="px-3 py-1.5 bg-slate-50] border border-slate-100 rounded-md text-sm font-medium text-slate-600 hover:border-slate-300 hover:text-slate-900 transition-colors cursor-default"
+                                        className="px-3 py-1.5 bg-slate-50 border border-slate-100 rounded-md text-sm font-medium text-slate-600 hover:border-slate-300 hover:text-slate-900 transition-colors cursor-default"
                                     >
                                         {company.name}
                                     </span>
@@ -439,7 +439,7 @@ const Placements = () => {
                     ></div>
 
                     {/* Modal Card */}
-                    <div className="relative bg-white] w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
+                    <div className="relative bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-3xl sm:rounded-[2rem] shadow-2xl border border-slate-200 animate-scale-in">
                         {/* Close button */}
                         <button 
                             onClick={() => setSelectedMember(null)}
@@ -449,7 +449,7 @@ const Placements = () => {
                         </button>
 
                         {/* Top banner / image */}
-                        <div className="bg-slate-900] text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
+                        <div className="bg-slate-900 text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
                             <div className="flex gap-4 sm:gap-6 items-center relative z-10">
                                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
@@ -472,7 +472,7 @@ const Placements = () => {
                         </div>
 
                         {/* Details body */}
-                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]]">
+                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]">
                             {selectedMember.bio && (
                                 <div>
                                     <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
@@ -485,11 +485,11 @@ const Placements = () => {
                             )}
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                                <div className="bg-white] p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
                                     <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Qualification</div>
                                     <div className="text-xs font-extrabold text-slate-800">{selectedMember.qual || "N/A"}</div>
                                 </div>
-                                <div className="bg-white] p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
                                     <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Experience / Status</div>
                                     <div className="text-xs font-extrabold text-slate-800">{selectedMember.experience} Years</div>
                                 </div>
@@ -514,7 +514,7 @@ const Placements = () => {
                                 <div className="flex flex-col gap-2 shrink-0">
                                     <a 
                                         href={`mailto:${selectedMember.email}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white] hover:bg-slate-100] border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
                                     >
                                         <Mail className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.email}</span>
@@ -522,7 +522,7 @@ const Placements = () => {
 
                                     <a 
                                         href={`tel:${selectedMember.phone.replace(/\s+/g, '')}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white] hover:bg-slate-100] border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
                                     >
                                         <Phone className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.phone}</span>
@@ -535,7 +535,7 @@ const Placements = () => {
                                             href={selectedMember.pdfLink} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="w-10 h-10 bg-slate-900] hover:bg-slate-800] text-white rounded-xl flex items-center justify-center transition-colors"
+                                            className="w-10 h-10 bg-slate-900 hover:bg-slate-800 text-white rounded-xl flex items-center justify-center transition-colors"
                                             title="View Official Profile PDF"
                                         >
                                             <FileText className="w-4 h-4" />

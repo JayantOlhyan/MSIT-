@@ -35,7 +35,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
                 {visibleLabs.map((lab) => (
                     <div 
                         key={lab.id}
-                        className="bg-slate-50] rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+                        className="bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
                     >
                         <div>
                             {/* Image Header */}
@@ -80,7 +80,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
 
                                 {/* Specs */}
                                 {lab.systemConfig && lab.systemConfig.desktop && (
-                                    <div className="p-3 bg-white] rounded-xl border border-slate-200/80 text-xs text-slate-600">
+                                    <div className="p-3 bg-white rounded-xl border border-slate-200/80 text-xs text-slate-600">
                                         <strong className="text-slate-900 block mb-0.5">Desktop Hardware:</strong>
                                         {lab.systemConfig.desktop}
                                         {lab.systemConfig.server && (
@@ -97,7 +97,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
                                         <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
                                             Specialized Hardware & Kits:
                                         </div>
-                                        <ul className="text-xs text-slate-700 list-disc list-inside bg-white] p-3 rounded-xl border border-slate-200/80 space-y-0.5">
+                                        <ul className="text-xs text-slate-700 list-disc list-inside bg-white p-3 rounded-xl border border-slate-200/80 space-y-0.5">
                                             {lab.hardwareKits.map((h, idx) => (
                                                 <li key={idx}>{h}</li>
                                             ))}
@@ -162,13 +162,13 @@ const DepartmentLabsSection = ({ deptKey }) => {
 
             {/* IT MOUs Section if deptKey === 'it' */}
             {deptKey === 'it' && (
-                <div className="mt-12 bg-white] p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
+                <div className="mt-12 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
                     <h3 className="text-xl font-bold text-slate-900">IT Department MOUs & Industry Collaborations</h3>
                     <p className="text-xs text-slate-500">Official partnerships with industry leaders for internships, skill enhancement, and lab research setup.</p>
                     <div className="overflow-x-auto rounded-xl border border-slate-200">
                         <table className="w-full text-left text-xs border-collapse">
                             <thead>
-                                <tr className="bg-slate-100] text-slate-700 font-bold border-b border-slate-200">
+                                <tr className="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
                                     <th className="p-3">#</th>
                                     <th className="p-3">Partner</th>
                                     <th className="p-3">Domain</th>

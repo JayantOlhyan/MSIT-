@@ -121,7 +121,7 @@ const FacultyStaff = () => {
         });
 
     return (
-        <main className="min-h-screen bg-surface] transition-colors duration-300">
+        <main className="min-h-screen bg-surface transition-colors duration-300">
             <SEO
                 title="Premium Faculty Directory"
                 description="Explore the comprehensive profiles, research strengths, and detailed metrics of the distinguished faculty at MSIT."
@@ -160,14 +160,14 @@ const FacultyStaff = () => {
             </div>
 
             {/* Advanced Search & Filtering - Sticky */}
-            <div className="sticky top-[68px] xl:top-[128px] z-30 bg-white/80]/90 backdrop-blur-xl border-b border-slate-200 shadow-card transition-all duration-300">
+            <div className="sticky top-[68px] xl:top-[128px] z-30 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-card transition-all duration-300">
                 <div className="max-w-7xl mx-auto px-6 py-3 sm:py-4 flex flex-col md:flex-row gap-4 md:items-center justify-between">
                     <div className="relative w-full md:w-96 group">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted group-focus-within:text-primary transition-colors" />
                         <input
                             type="text"
                             placeholder="Search names, skills, or roles..."
-                            className="w-full pl-12 pr-4 py-3 bg-surface] border-2 border-transparent rounded-2xl focus:bg-white] focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-title font-medium placeholder-slate-400"
+                            className="w-full pl-12 pr-4 py-3 bg-surface border-2 border-transparent rounded-2xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-title font-medium placeholder-slate-400"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
@@ -180,7 +180,7 @@ const FacultyStaff = () => {
                                 onClick={() => setActiveDept(dept)}
                                 className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all whitespace-nowrap border-2 group ${activeDept === dept
                                         ? 'bg-slate-900 border-slate-900 text-white shadow-md shadow-slate-900/30 focus:outline-none'
-                                        : 'bg-white] border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50] focus:outline-none'
+                                        : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50 focus:outline-none'
                                     }`}
                             >
                                 {dept}
@@ -201,13 +201,13 @@ const FacultyStaff = () => {
                             <div
                                 key={idx}
                                 onClick={() => handleOpenProfile(faculty)}
-                                className="group bg-white] rounded-[2rem] p-6 shadow-card hover:shadow-card-hover border border-slate-200 hover:border-blue-200 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 relative overflow-hidden flex flex-col h-full"
+                                className="group bg-white rounded-[2rem] p-6 shadow-card hover:shadow-card-hover border border-slate-200 hover:border-blue-200 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 relative overflow-hidden flex flex-col h-full"
                             >
                                 {/* Decorative Glow */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                                 <div className="flex items-start gap-5 relative z-10 mb-6">
-                                    <div className="w-20 h-20 rounded-2xl overflow-hidden bg-surface] shrink-0 shadow-inner p-1 border border-slate-200 group-hover:border-primary/30 transition-colors duration-500">
+                                    <div className="w-20 h-20 rounded-2xl overflow-hidden bg-surface shrink-0 shadow-inner p-1 border border-slate-200 group-hover:border-primary/30 transition-colors duration-500">
                                         <img 
                                             src={faculty.img} 
                                             alt={`${faculty.name}, ${faculty.role} in the ${faculty.dept} department at MSIT`} 
@@ -234,11 +234,11 @@ const FacultyStaff = () => {
                                 <div className="mt-auto relative z-10">
                                     {faculty.type !== 'staff' && (
                                         <div className="grid grid-cols-2 gap-3 mb-6">
-                                            <div className="bg-slate-50] rounded-xl p-3 border border-slate-100 group-hover:bg-white] group-hover:border-slate-200 transition-colors">
+                                            <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 group-hover:bg-white group-hover:border-slate-200 transition-colors">
                                                 <div className="text-xs text-slate-400 font-medium mb-1">Experience</div>
                                                 <div className="font-bold text-slate-800">{faculty.experience} Yrs</div>
                                             </div>
-                                            <div className="bg-slate-50] rounded-xl p-3 border border-slate-100 group-hover:bg-white] group-hover:border-slate-200 transition-colors">
+                                            <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 group-hover:bg-white group-hover:border-slate-200 transition-colors">
                                                 <div className="text-xs text-slate-400 font-medium mb-1">Publications</div>
                                                 <div className="font-bold text-slate-800">{faculty.publications}</div>
                                             </div>
@@ -280,7 +280,7 @@ const FacultyStaff = () => {
                     ></div>
 
                     {/* Modal Content */}
-                    <div className="relative bg-white] w-full max-w-4xl max-h-[92vh] sm:max-h-[85vh] overflow-y-auto scrollbar-hide rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl animate-scale-in border border-white/20">
+                    <div className="relative bg-white w-full max-w-4xl max-h-[92vh] sm:max-h-[85vh] overflow-y-auto scrollbar-hide rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl animate-scale-in border border-white/20">
                         {/* Close Button */}
                         <button
                             onClick={handleCloseProfile}
@@ -291,11 +291,11 @@ const FacultyStaff = () => {
                         </button>
 
                         {/* Modal Header/Hero */}
-                        <div className="bg-slate-900] pt-10 sm:pt-16 pb-8 md:pb-28 px-5 sm:px-8 md:px-16 relative overflow-hidden">
+                        <div className="bg-slate-900 pt-10 sm:pt-16 pb-8 md:pb-28 px-5 sm:px-8 md:px-16 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-[clamp(200px,30vw,400px)] h-[clamp(200px,30vw,400px)] bg-blue-500/20 rounded-full blur-[80px]"></div>
 
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-5 md:gap-8 relative z-10">
-                                <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-3xl bg-white] p-1.5 shadow-card shrink-0 md:-mb-36 z-10 border-2 border-white/10">
+                                <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-3xl bg-white p-1.5 shadow-card shrink-0 md:-mb-36 z-10 border-2 border-white/10">
                                     <img 
                                         src={selectedFaculty.img} 
                                         alt={`High-resolution portrait of ${selectedFaculty.name}, ${selectedFaculty.role} at MSIT`} 
@@ -321,7 +321,7 @@ const FacultyStaff = () => {
                         </div>
 
                         {/* Modal Body */}
-                        <div className="px-5 sm:px-8 md:px-16 pt-8 sm:pt-14 md:pt-20 pb-12 sm:pb-16 bg-[#f8fafc]]">
+                        <div className="px-5 sm:px-8 md:px-16 pt-8 sm:pt-14 md:pt-20 pb-12 sm:pb-16 bg-[#f8fafc]">
                             {/* Bio */}
                             <p className="text-slate-600 text-lg leading-relaxed mb-12 font-light">
                                 {selectedFaculty.bio}
@@ -329,26 +329,26 @@ const FacultyStaff = () => {
 
                             {/* Metrics Grid */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                                <div className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
+                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
                                     <Briefcase className="w-6 h-6 text-indigo-500 mb-3" />
                                     <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.experience}</div>
                                     <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Years Exp.</div>
                                 </div>
                                 {selectedFaculty.type !== 'staff' && (
                                     <>
-                                        <div className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
+                                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
                                             <BookOpen className="w-6 h-6 text-blue-500 mb-3" />
                                             <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.publications}</div>
                                             <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Publications</div>
                                         </div>
-                                        <div className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
+                                        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
                                             <Award className="w-6 h-6 text-amber-500 mb-3" />
                                             <div className="text-2xl font-black text-slate-900 mb-1">{selectedFaculty.patents}</div>
                                             <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Patents</div>
                                         </div>
                                     </>
                                 )}
-                                <div className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
+                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-card flex flex-col items-center text-center">
                                     <FileText className="w-6 h-6 text-emerald-500 mb-3" />
                                     <div className="text-xs font-bold text-slate-900 mb-1 break-words w-full px-1">{selectedFaculty.qual || "Professional Staff"}</div>
                                     <div className="text-xs text-slate-500 font-bold uppercase tracking-wider mt-auto">Qualification</div>
@@ -403,13 +403,13 @@ const FacultyStaff = () => {
                                     <div className="flex flex-wrap gap-3 w-full sm:w-auto">
                                         <a
                                             href={`mailto:${selectedFaculty.email}`}
-                                            className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface] text-body font-bold hover:bg-slate-200] transition-colors text-sm"
+                                            className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface text-body font-bold hover:bg-slate-200 transition-colors text-sm"
                                         >
                                             <Mail className="w-4 h-4 text-slate-600" />
                                             {selectedFaculty.email}
                                         </a>
                                         {selectedFaculty.phone && (
-                                            <span className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface] text-slate-700 font-medium text-sm">
+                                            <span className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-surface text-slate-700 font-medium text-sm">
                                                 <Phone className="w-4 h-4 text-blue-600" />
                                                 {selectedFaculty.phone}
                                             </span>
@@ -429,7 +429,7 @@ const FacultyStaff = () => {
                                     ) : (
                                         <button
                                             disabled
-                                            className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-surface] text-muted font-bold cursor-not-allowed w-full sm:w-auto text-sm"
+                                            className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-surface text-muted font-bold cursor-not-allowed w-full sm:w-auto text-sm"
                                         >
                                             <FileText className="w-4 h-4" />
                                             PDF Profile Unavailable
@@ -438,7 +438,7 @@ const FacultyStaff = () => {
                                 </div>
 
                                 {/* Online Profiles & Websites */}
-                                <div className="bg-slate-50] rounded-2xl p-5 border border-slate-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
                                     <span className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-2">
                                         <Globe className="w-4 h-4 text-blue-600" />
                                         Profiles & Web Links
@@ -461,7 +461,7 @@ const FacultyStaff = () => {
                                                 href={selectedFaculty.personalWebsite}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white] border border-slate-300 text-slate-800 text-xs font-bold hover:border-primary hover:text-primary transition-all shadow-xs"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-primary hover:text-primary transition-all shadow-xs"
                                                 title="Personal Webpage"
                                             >
                                                 <Globe className="w-3.5 h-3.5 text-blue-600" />
@@ -473,7 +473,7 @@ const FacultyStaff = () => {
                                                 href={selectedFaculty.googleScholar}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white] border border-slate-300 text-slate-800 text-xs font-bold hover:border-amber-500 hover:text-amber-600 transition-all shadow-xs"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-amber-500 hover:text-amber-600 transition-all shadow-xs"
                                                 title="Google Scholar Profile"
                                             >
                                                 <BookOpen className="w-3.5 h-3.5 text-amber-600" />
@@ -485,7 +485,7 @@ const FacultyStaff = () => {
                                                 href={selectedFaculty.researchGate}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white] border border-slate-300 text-slate-800 text-xs font-bold hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-xs"
+                                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-800 text-xs font-bold hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-xs"
                                                 title="ResearchGate Profile"
                                             >
                                                 <ExternalLink className="w-3.5 h-3.5 text-emerald-600" />

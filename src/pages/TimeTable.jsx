@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero';
 
 const TimeTable = () => {
     return (
-        <main className="min-h-screen bg-white] transition-colors duration-300">
+        <main className="min-h-screen bg-white transition-colors duration-300">
             <SEO 
                 title="Time Table" 
                 description="View and download current semester class schedules and lab timetables for all departments at Maharaja Surajmal Institute of Technology. Stay organized." 
@@ -21,7 +21,7 @@ const TimeTable = () => {
             <div className="max-w-6xl mx-auto px-6 py-12">
 
                 {/* Main Content Area */}
-                <div className="bg-white] rounded-xl p-8 lg:p-12 border border-slate-200 shadow-card max-w-4xl mx-auto">
+                <div className="bg-white rounded-xl p-8 lg:p-12 border border-slate-200 shadow-card max-w-4xl mx-auto">
 
                     <h2 className="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-100 pb-4 flex items-center">
                         <Layers className="w-6 h-6 mr-3 text-blue-600" /> Current Semester Time Tables
@@ -33,10 +33,10 @@ const TimeTable = () => {
                             href="https://www.msit.in/media/timetable/1st-yr-all-branches_7qgwxMa.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-card-hover transition-all duration-300 group bg-slate-50]"
+                            className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-card-hover transition-all duration-300 group bg-slate-50"
                         >
                             <div className="flex items-center mb-4 sm:mb-0">
-                                <div className="w-12 h-12 rounded-lg bg-white] border border-slate-200 flex items-center justify-center mr-5 group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
+                                <div className="w-12 h-12 rounded-lg bg-white border border-slate-200 flex items-center justify-center mr-5 group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
                                     <BookOpen className="w-6 h-6 text-slate-500 group-hover:text-blue-600 transition-colors" />
                                 </div>
                                 <div>
@@ -54,10 +54,10 @@ const TimeTable = () => {
                             href="https://www.msit.in/media/timetable/2nd3rd4th-yr-all-branches_nZtdWCc.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-card-hover transition-all duration-300 group bg-slate-50]"
+                            className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-card-hover transition-all duration-300 group bg-slate-50"
                         >
                             <div className="flex items-center mb-4 sm:mb-0">
-                                <div className="w-12 h-12 rounded-lg bg-white] border border-slate-200 flex items-center justify-center mr-5 group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
+                                <div className="w-12 h-12 rounded-lg bg-white border border-slate-200 flex items-center justify-center mr-5 group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
                                     <Layers className="w-6 h-6 text-slate-500 group-hover:text-blue-600 transition-colors" />
                                 </div>
                                 <div>

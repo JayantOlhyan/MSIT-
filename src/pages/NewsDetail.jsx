@@ -519,7 +519,7 @@ const NewsDetail = () => {
 
     if (!item) {
         return (
-            <main className="min-h-screen bg-slate-50] flex flex-col items-center justify-center p-6 text-center">
+            <main className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6 text-center">
                 <h1 className="text-4xl font-bold text-slate-900 mb-4">Post Not Found</h1>
                 <p className="text-slate-500 mb-6">The news article or event story you are looking for does not exist.</p>
                 <Link to="/" className="px-6 py-3 bg-primary text-white font-bold rounded-xl transition-all shadow-md">
@@ -530,7 +530,7 @@ const NewsDetail = () => {
     }
 
     return (
-        <main className="min-h-screen bg-slate-50] transition-colors duration-300">
+        <main className="min-h-screen bg-slate-50 transition-colors duration-300">
             <SEO 
                 title={item.title} 
                 description={item.summary} 
@@ -554,7 +554,7 @@ const NewsDetail = () => {
                     
                     {/* Main Content Area */}
                     <div className="w-full lg:w-2/3">
-                        <div className="bg-white] rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm">
+                        <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm">
                             {/* Meta Bar */}
                             <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-500 mb-8 border-b border-slate-100 pb-6">
                                 <span className="flex items-center gap-2">
@@ -589,7 +589,7 @@ const NewsDetail = () => {
                     <div className="w-full lg:w-1/3 space-y-8">
                         {/* Attachments Section */}
                         {item.attachments && item.attachments.length > 0 && (
-                            <div className="bg-white] rounded-3xl p-8 border border-slate-200 shadow-sm">
+                            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
                                 <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
                                     <FileText className="w-5 h-5 text-primary" />
                                     Official Attachments (PDFs)
@@ -602,7 +602,7 @@ const NewsDetail = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             download
-                                            className="flex items-start gap-4 p-4 bg-slate-50] hover:bg-blue-50/50 border border-slate-200 rounded-2xl group transition-all"
+                                            className="flex items-start gap-4 p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-2xl group transition-all"
                                         >
                                             <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-red-600 shrink-0">
                                                 <Download className="w-5 h-5" />
@@ -619,7 +619,7 @@ const NewsDetail = () => {
 
                         {/* Resource Links Section */}
                         {item.links && item.links.length > 0 && (
-                            <div className="bg-white] rounded-3xl p-8 border border-slate-200 shadow-sm">
+                            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
                                 <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
                                     <Link2 className="w-5 h-5 text-primary" />
                                     Related Resources
@@ -632,7 +632,7 @@ const NewsDetail = () => {
                                                 href={link.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-3.5 bg-slate-50] hover:bg-blue-50/50 border border-slate-200 rounded-xl group transition-all text-sm font-semibold text-slate-700 hover:text-primary"
+                                                className="flex items-center justify-between p-3.5 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl group transition-all text-sm font-semibold text-slate-700 hover:text-primary"
                                             >
                                                 <span>{link.name}</span>
                                                 <Link2 className="w-4 h-4 text-slate-400 group-hover:text-primary" />
@@ -641,7 +641,7 @@ const NewsDetail = () => {
                                             <Link 
                                                 key={idx}
                                                 to={link.url}
-                                                className="flex items-center justify-between p-3.5 bg-slate-50] hover:bg-blue-50/50 border border-slate-200 rounded-xl group transition-all text-sm font-semibold text-slate-700 hover:text-primary"
+                                                className="flex items-center justify-between p-3.5 bg-slate-50 hover:bg-blue-50/50 border border-slate-200 rounded-xl group transition-all text-sm font-semibold text-slate-700 hover:text-primary"
                                             >
                                                 <span>{link.name}</span>
                                                 <Link2 className="w-4 h-4 text-slate-400 group-hover:text-primary" />
@@ -653,7 +653,7 @@ const NewsDetail = () => {
                         )}
 
                         {/* Back To Home CTA */}
-                        <div className="p-8 rounded-3xl bg-slate-900] border border-transparent text-white shadow-sm flex flex-col justify-between h-48">
+                        <div className="p-8 rounded-3xl bg-slate-900 border border-transparent text-white shadow-sm flex flex-col justify-between h-48">
                             <div>
                                 <h4 className="text-lg font-bold mb-2">Back to Newsroom</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed font-semibold">Want to read other college updates or look up active events?</p>

@@ -95,7 +95,7 @@ const Sitemap = () => {
     }).filter(cat => cat.links.length > 0);
 
     return (
-        <main className="min-h-screen bg-slate-50] text-slate-800 transition-colors duration-300 flex flex-col relative overflow-hidden">
+        <main className="min-h-screen bg-slate-50 text-slate-800 transition-colors duration-300 flex flex-col relative overflow-hidden">
             <SEO
                 title="Sitemap - Maharaja Surajmal Institute of Technology"
                 description="Explore all pages, sections, academic directories, student portals, and policy links of MSIT using our dynamic, Apple-style sitemap."
@@ -116,7 +116,7 @@ const Sitemap = () => {
             />
 
             {/* Interactive Search Filter Bar */}
-            <section className="relative z-10 py-6 px-6 border-b border-slate-200 bg-white/80]/80 backdrop-blur-sm shadow-sm">
+            <section className="relative z-10 py-6 px-6 border-b border-slate-200 bg-white/80 backdrop-blur-sm shadow-sm">
                 <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">
                         {searchQuery ? `Showing matches for "${searchQuery}"` : "Search directory index"}
@@ -130,7 +130,7 @@ const Sitemap = () => {
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             placeholder="Filter sitemap..."
-                            className="block w-full pl-10 pr-10 py-2.5 bg-slate-50] border border-slate-200 rounded-2xl text-slate-850 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-all text-xs font-semibold focus:bg-white]"
+                            className="block w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-850 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-all text-xs font-semibold focus:bg-white"
                         />
                         {searchQuery && (
                             <button
@@ -147,7 +147,7 @@ const Sitemap = () => {
             {/* Apple Directory Grid Section */}
             <section className="relative z-10 max-w-7xl w-full mx-auto p-6 sm:p-12 flex-1">
                 {filteredCategories.length === 0 ? (
-                    <div className="text-center py-20 bg-white] border border-slate-200 rounded-[2.5rem] shadow-sm">
+                    <div className="text-center py-20 bg-white border border-slate-200 rounded-[2.5rem] shadow-sm">
                         <Search className="w-12 h-12 text-slate-300 mx-auto mb-4" />
                         <h3 className="text-lg font-bold text-slate-800 mb-1">No matching links found</h3>
                         <p className="text-slate-500 text-xs font-medium">Try searching another keyword (e.g., 'ragging', 'cse', 'fee')</p>

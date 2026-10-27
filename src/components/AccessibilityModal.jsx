@@ -42,7 +42,7 @@ const AccessibilityModal = () => {
             />
 
             {/* Modal Content */}
-            <div className="relative bg-white] border border-slate-100 rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden animate-in zoom-in-95 slide-in-from-bottom-5 duration-500">
+            <div className="relative bg-white border border-slate-100 rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden animate-in zoom-in-95 slide-in-from-bottom-5 duration-500">
                 {/* Header */}
                 <div className="p-6 border-b border-slate-100 flex items-center justify-between">
                     <div>
@@ -66,7 +66,7 @@ const AccessibilityModal = () => {
                             <div 
                                 key={item.key}
                                 className={`p-4 rounded-2xl border transition-all duration-300 flex items-start justify-between gap-4 ${
-                                    settings[item.key] ? 'bg-primary/5 border-primary/30 ring-1 ring-primary/20' : 'bg-surface] border-slate-100'
+                                    settings[item.key] ? 'bg-primary/5 border-primary/30 ring-1 ring-primary/20' : 'bg-surface border-slate-100'
                                 }`}
                             >
                                 <div className="flex gap-4">
@@ -92,7 +92,7 @@ const AccessibilityModal = () => {
                     </div>
 
                     {/* Font Scaling Slider */}
-                    <div className="p-4 rounded-2xl bg-surface] border border-slate-100">
+                    <div className="p-4 rounded-2xl bg-surface border border-slate-100">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="p-2 rounded-xl bg-slate-200 text-muted">
                                 <Type className="w-5 h-5" />
@@ -117,7 +117,7 @@ const AccessibilityModal = () => {
                 </div>
 
                 {/* Footer */}
-                <div className="p-6 bg-surface] border-t border-slate-100 flex justify-end gap-3">
+                <div className="p-6 bg-surface border-t border-slate-100 flex justify-end gap-3">
                     <button 
                         onClick={() => setIsModalOpen(false)}
                         className="px-6 py-2.5 bg-title text-white text-xs font-black uppercase tracking-widest rounded-xl shadow-lg hover:bg-body transition-all active:scale-95 flex items-center gap-2 cursor-pointer"

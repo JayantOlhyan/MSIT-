@@ -81,7 +81,7 @@ const SocietiesHubView = () => {
                     {featuredSocieties.map((society) => (
                         <div 
                             key={society.id}
-                            className="bg-white] rounded-3xl p-6 sm:p-8 border border-slate-200 hover:border-purple-300 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
+                            className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 hover:border-purple-300 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
                         >
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between">
@@ -139,7 +139,7 @@ const SocietiesHubView = () => {
                             placeholder="Search societies by name, tech or skill..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-11 pr-4 py-3 bg-white] border border-slate-200 text-slate-900 rounded-2xl text-xs sm:text-sm focus:outline-none focus:border-purple-500 shadow-sm transition-all"
+                            className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 text-slate-900 rounded-2xl text-xs sm:text-sm focus:outline-none focus:border-purple-500 shadow-sm transition-all"
                         />
                     </div>
 
@@ -152,7 +152,7 @@ const SocietiesHubView = () => {
                                 className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                                     selectedCategory === cat
                                         ? 'bg-purple-600 text-white shadow-md'
-                                        : 'bg-white] text-slate-600 hover:bg-slate-100] border border-slate-200'
+                                        : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
                                 }`}
                             >
                                 {cat}
@@ -167,18 +167,18 @@ const SocietiesHubView = () => {
                     {filteredSocieties.map((item) => (
                         <div
                             key={item.id}
-                            className="bg-white] rounded-2xl p-6 border border-slate-200 hover:border-purple-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between group"
+                            className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-purple-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between group"
                         >
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between">
-                                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors overflow-hidden ${item.logo ? 'bg-white/95 p-1' : 'bg-slate-100] text-slate-800 font-mono font-black text-sm border border-slate-200 group-hover:bg-purple-600 group-hover:text-white'}`}>
+                                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors overflow-hidden ${item.logo ? 'bg-white/95 p-1' : 'bg-slate-100 text-slate-800 font-mono font-black text-sm border border-slate-200 group-hover:bg-purple-600 group-hover:text-white'}`}>
                                         {item.logo ? (
                                             <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
                                         ) : (
                                             item.logoSymbol
                                         )}
                                     </div>
-                                    <span className="px-2.5 py-0.5 bg-slate-100] text-slate-600 text-[10px] font-bold uppercase rounded-md">
+                                    <span className="px-2.5 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded-md">
                                         {item.category}
                                     </span>
                                 </div>
@@ -213,7 +213,7 @@ const SocietiesHubView = () => {
                 </div>
 
                 {filteredSocieties.length === 0 && (
-                    <div className="text-center py-16 bg-white] rounded-3xl border border-slate-200 p-8">
+                    <div className="text-center py-16 bg-white rounded-3xl border border-slate-200 p-8">
                         <p className="text-sm text-slate-500 font-light">
                             No societies found matching "{searchQuery}" in category "{selectedCategory}".
                         </p>
@@ -228,7 +228,7 @@ const SocietiesHubView = () => {
             </div>
 
             {/* HOW TO START OR JOIN A SOCIETY BANNER */}
-            <div className="p-8 rounded-3xl bg-slate-100] border border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div className="p-8 rounded-3xl bg-slate-100 border border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
                 <div className="md:col-span-2 space-y-2">
                     <h4 className="text-lg font-black text-slate-900">
                         Want to start a new student club or initiative?

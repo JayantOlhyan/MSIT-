@@ -17,7 +17,7 @@ const AcademicCalendar = () => {
     ];
 
     return (
-        <main className="min-h-screen bg-white] transition-colors duration-300">
+        <main className="min-h-screen bg-white transition-colors duration-300">
             <SEO 
                 title="Academic Calendar" 
                 description="Stay updated with the MSIT academic calendar. Find critical dates for semester starts, examinations, and holidays." 
@@ -40,10 +40,10 @@ const AcademicCalendar = () => {
                             href={cal.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white] rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:border-blue-300 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between group"
+                            className="bg-white rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:border-blue-300 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between group"
                         >
                             <div className="flex items-center mb-4 sm:mb-0">
-                                <div className="w-12 h-12 rounded-full bg-slate-50] flex items-center justify-center mr-5 group-hover:bg-blue-50 transition-colors shrink-0">
+                                <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center mr-5 group-hover:bg-blue-50 transition-colors shrink-0">
                                     <Clock className="w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-colors" />
                                 </div>
                                 <div>

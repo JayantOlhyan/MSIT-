@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero';
 
 const TermsOfUse = () => {
     return (
-        <main className="min-h-screen bg-white] transition-colors duration-300">
+        <main className="min-h-screen bg-white transition-colors duration-300">
             <SEO 
                 title="Terms of Use" 
                 description="Review the terms and conditions for using the Maharaja Surajmal Institute of Technology (MSIT) official website and digital services." 

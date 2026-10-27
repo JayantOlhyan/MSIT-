@@ -108,8 +108,7 @@ const NotFound = () => {
         const draw = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Set styles based on accessibility/theme settings
-            const isDark = typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            // Set styles based on accessibility settings
             const isHighContrast = typeof window !== 'undefined' && window.matchMedia('(prefers-contrast: more)').matches;
 
             if (isHighContrast) {
@@ -117,7 +116,7 @@ const NotFound = () => {
                 return;
             }
 
-            ctx.strokeStyle = isDark ? 'rgba(59, 130, 246, 0.08)' : 'rgba(30, 74, 155, 0.05)';
+            ctx.strokeStyle = 'rgba(30, 74, 155, 0.05)';
             ctx.lineWidth = 1;
 
             // Draw connections between nodes
@@ -137,7 +136,7 @@ const NotFound = () => {
 
             // Draw mouse connection lines
             if (mouse.x !== null) {
-                ctx.strokeStyle = isDark ? 'rgba(249, 115, 22, 0.1)' : 'rgba(240, 80, 35, 0.06)';
+                ctx.strokeStyle = 'rgba(240, 80, 35, 0.06)';
                 for (let i = 0; i < particles.length; i++) {
                     const dx = particles[i].x - mouse.x;
                     const dy = particles[i].y - mouse.y;
@@ -152,7 +151,7 @@ const NotFound = () => {
             }
 
             // Draw and update particle circles
-            ctx.fillStyle = isDark ? 'rgba(59, 130, 246, 0.25)' : 'rgba(30, 74, 155, 0.15)';
+            ctx.fillStyle = 'rgba(30, 74, 155, 0.15)';
             particles.forEach(p => {
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -351,7 +350,7 @@ const NotFound = () => {
     };
 
     return (
-        <div ref={containerRef} className="min-h-screen relative flex flex-col items-center justify-center px-4 py-16 md:py-24 bg-gradient-to-b from-white to-slate-50]] transition-colors duration-300 overflow-hidden select-none">
+        <div ref={containerRef} className="min-h-screen relative flex flex-col items-center justify-center px-4 py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 transition-colors duration-300 overflow-hidden select-none">
             <SEO
                 title="404 Page Not Found"
                 description="The page you are looking for at Maharaja Surajmal Institute of Technology could not be found. Utilize our active search or interactive terminal to return to campus."
@@ -486,7 +485,7 @@ const NotFound = () => {
                 </div>
 
                 {/* Right side: Sleek Glassmorphic Page Content Info */}
-                <div className="anim-scale-up lg:col-span-6 flex flex-col justify-between p-6 md:p-10 rounded-[2.5rem] bg-white/70]/80 backdrop-blur-xl border border-slate-200/50 shadow-card hover:shadow-card-hover hover:border-slate-300/40 transition-all">
+                <div className="anim-scale-up lg:col-span-6 flex flex-col justify-between p-6 md:p-10 rounded-[2.5rem] bg-white/70 backdrop-blur-xl border border-slate-200/50 shadow-card hover:shadow-card-hover hover:border-slate-300/40 transition-all">
 
                     {/* Error Sign & Title */}
                     <div>
@@ -510,7 +509,7 @@ const NotFound = () => {
                         {/* Functional Search Bar */}
                         <form
                             onSubmit={handleSearchSubmit}
-                            className="anim-fade-in mt-8 group relative flex items-center bg-slate-50] hover:bg-slate-100/70] border border-slate-200/80 rounded-2xl p-1.5 focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all"
+                            className="anim-fade-in mt-8 group relative flex items-center bg-slate-50 hover:bg-slate-100/70 border border-slate-200/80 rounded-2xl p-1.5 focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all"
                         >
                             <div className="pl-3 text-slate-400 group-focus-within:text-primary transition-colors">
                                 <Search className="w-4 h-4" />
@@ -560,7 +559,7 @@ const NotFound = () => {
                             {/* Option 1: Back to Safety Home */}
                             <Link
                                 to="/"
-                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50] hover:bg-blue-50/50 border border-slate-150 hover:border-blue-200/60 rounded-2xl group transition-all"
+                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 hover:bg-blue-50/50 border border-slate-150 hover:border-blue-200/60 rounded-2xl group transition-all"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-primary group-hover:text-white transition-colors">
@@ -577,7 +576,7 @@ const NotFound = () => {
                             {/* Option 2: Go Back in History */}
                             <button
                                 onClick={() => window.history.back()}
-                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50] hover:bg-slate-100] border border-slate-150 hover:border-slate-200 rounded-2xl group transition-all text-left cursor-pointer"
+                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 border border-slate-150 hover:border-slate-200 rounded-2xl group transition-all text-left cursor-pointer"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-slate-200/70 text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-colors">
@@ -594,7 +593,7 @@ const NotFound = () => {
                             {/* Option 3: Admissions Directory */}
                             <Link
                                 to="/faculty"
-                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50] hover:bg-emerald-50/50 border border-slate-150 hover:border-emerald-200/60 rounded-2xl group transition-all"
+                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 hover:bg-emerald-50/50 border border-slate-150 hover:border-emerald-200/60 rounded-2xl group transition-all"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
@@ -611,7 +610,7 @@ const NotFound = () => {
                             {/* Option 4: Career & Placement Cell */}
                             <Link
                                 to="/placements"
-                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50] hover:bg-purple-50/50 border border-slate-150 hover:border-purple-200/60 rounded-2xl group transition-all"
+                                className="anim-stagger-item flex items-center justify-between p-4 bg-slate-50 hover:bg-purple-50/50 border border-slate-150 hover:border-purple-200/60 rounded-2xl group transition-all"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
