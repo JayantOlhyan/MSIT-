@@ -6,6 +6,7 @@ import { useAccessibility } from '../context/AccessibilityContext';
 
 const Header = () => {
     const { settings } = useAccessibility();
+    const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [openMobileSections, setOpenMobileSections] = useState({});
@@ -29,6 +30,15 @@ const Header = () => {
             [key]: !prev[key]
         }));
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 40);
+        };
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -153,6 +163,13 @@ const Header = () => {
         { name: "Mandatory Disclosure", url: "https://msit.in/aicte#mandatory-disclosure" }
     ];
 
+    const isHomePage = location.pathname === '/';
+    const isTransparent = isHomePage && !isScrolled && !isMenuOpen;
+
+    const headerContainerClass = isHomePage
+        ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white/95 backdrop-blur-md shadow-card py-1'}`
+        : `sticky top-0 z-[60] w-full transition-all duration-300 bg-white/95 backdrop-blur-md shadow-card py-1`;
+
     const isPathActive = (path) => location.pathname === path;
     const isCategoryActive = (categoryKey) => {
         return megaMenuData[categoryKey]?.some(link => 
@@ -177,9 +194,13 @@ const Header = () => {
     return (
         <>
             <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
-            <header role="navigation" className="sticky top-0 z-[60] w-full bg-white shadow-card flex flex-col">
-                {/* Tier 0: Institutional links strip (Solid deep navy strip) */}
-                <div className="bg-[#223f77] text-white text-[11px] sm:text-xs font-medium tracking-wide px-4 lg:px-6 xl:px-12 relative z-30">
+            <header role="navigation" className={`${headerContainerClass} flex flex-col`}>
+                {/* Tier 0: Institutional links strip */}
+                <div className={`text-white text-[11px] sm:text-xs font-medium tracking-wide px-4 lg:px-6 xl:px-12 relative z-30 transition-colors duration-300 ${
+                    isTransparent 
+                        ? 'bg-transparent drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]' 
+                        : 'bg-[#223f77] shadow-sm'
+                }`}>
                     <div className="w-full max-w-screen-2xl mx-auto flex items-center h-7 sm:h-8 overflow-x-auto scrollbar-hide whitespace-nowrap">
                         <nav aria-label="Institutional links" className="flex items-center">
                             {topStripLinks.map((link, i) => (
@@ -195,7 +216,11 @@ const Header = () => {
                 </div>
 
                 {/* Tier 1: Persistent Branding & Utility Bar */}
-                <div className="bg-white text-title py-3 px-4 lg:px-6 xl:px-12 border-b border-slate-100/80 relative z-20">
+                <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 relative z-20 ${
+                    isTransparent
+                        ? 'bg-transparent'
+                        : 'bg-white text-title border-b border-slate-100/80'
+                }`}>
                     <div className="w-full max-w-screen-2xl mx-auto flex justify-between items-center">
                         {/* Logo Area */}
                         <Link to="/" className="flex items-center gap-3 lg:gap-4 cursor-pointer select-none">
@@ -203,7 +228,7 @@ const Header = () => {
                                 id="header-logo"
                                 src="/msit-logo.webp"
                                 alt="Maharaja Surajmal Institute of Technology (MSIT) Official Logo - Main Campus Entrance"
-                                className="h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0"
+                                className={`h-10 md:h-12 lg:h-14 w-auto object-contain shrink-0 transition-all duration-300 ${isTransparent ? 'brightness-[1.2] drop-shadow' : ''}`}
                                 loading="eager"
                                 fetchpriority="high"
                                 decoding="async"
@@ -211,35 +236,43 @@ const Header = () => {
                                 height="112"
                             />
                             <div className="flex flex-col justify-center">
-                                <span className="font-['Libre_Baskerville',serif] font-black text-sm md:text-base lg:text-xl tracking-tight leading-tight text-primary">
+                                <span className={`font-['Libre_Baskerville',serif] font-black text-sm md:text-base lg:text-xl tracking-tight leading-tight transition-colors duration-300 ${
+                                    isTransparent ? 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]' : 'text-primary'
+                                }`}>
                                     <span className="hidden sm:inline text-balance">Maharaja Surajmal Institute of Technology</span>
                                     <span className="sm:hidden text-base font-black">MSIT Delhi</span>
                                 </span>
                             </div>
                         </Link>
 
-                        <div className="hidden xl:flex items-center space-x-6 text-xs font-black uppercase tracking-[0.2em] text-muted">
+                        <div className={`hidden xl:flex items-center space-x-6 text-xs font-black uppercase tracking-[0.2em] transition-colors duration-300 ${
+                            isTransparent ? 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]' : 'text-muted'
+                        }`}>
                             <div className="flex items-center space-x-6">
-                                <Link to="/faculty" className="hover:text-primary transition-colors">Faculty Directory</Link>
-                                <Link to="/virtual-tour" className="hover:text-primary transition-colors">Campus Tour</Link>
+                                <Link to="/faculty" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Faculty Directory</Link>
+                                <Link to="/virtual-tour" className={`transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`}>Campus Tour</Link>
                                 <a
                                     href="https://ipu.admissions.nic.in/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-primary text-white hover:bg-[#153a7a] px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10"
+                                    className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap ${
+                                        isTransparent
+                                            ? 'bg-white text-primary hover:bg-blue-50 hover:scale-105 active:scale-95 shadow-md'
+                                            : 'bg-primary text-white hover:bg-[#153a7a] hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10'
+                                    }`}
                                 >
                                     Admissions
                                 </a>
                             </div>
-                            <div className="w-px h-3.5 mx-2 bg-slate-200"></div>
+                            <div className={`w-px h-3.5 mx-2 ${isTransparent ? 'bg-white/30' : 'bg-slate-200'}`}></div>
 
-                            <button onClick={toggleSearch} className="flex items-center gap-2 hover:text-primary transition-colors" aria-label="Search (Ctrl + K)">
+                            <button onClick={toggleSearch} className={`flex items-center gap-2 transition-colors ${isTransparent ? 'hover:text-white' : 'hover:text-primary'}`} aria-label="Search (Ctrl + K)">
                                 <Search className="w-4 h-4" /> <span>Search</span>
                             </button>
                         </div>
 
                         <div className="xl:hidden flex items-center gap-2 shrink-0">
-                            <button onClick={toggleSearch} className="p-2 text-slate-700 hover:text-primary transition-colors" aria-label="Open global search overlay (Ctrl + K)">
+                            <button onClick={toggleSearch} className={`p-2 transition-colors ${isTransparent ? 'text-white' : 'text-slate-700'}`} aria-label="Open global search overlay (Ctrl + K)">
                                 <Search className="w-5 h-5" />
                             </button>
                             <button
@@ -247,19 +280,27 @@ const Header = () => {
                                 className="w-10 h-10 relative focus:outline-none flex justify-center items-center group cursor-pointer"
                                 aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                             >
-                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
-                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
-                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out bg-slate-900 ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
+                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'rotate-45' : '-translate-y-2'}`}></span>
+                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}></span>
+                                <span className={`block w-6 h-0.5 rounded-full absolute transition-all duration-300 ease-in-out ${isTransparent ? 'bg-white' : 'bg-slate-900'} ${isMenuOpen ? '-rotate-45' : 'translate-y-2'}`}></span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 {/* Tier 2: Navigation Categories Bar */}
-                <div className="bg-white py-2 px-4 lg:px-6 xl:px-12 border-b border-slate-100 shadow-sm">
+                <div className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 ${
+                    isTransparent
+                        ? 'bg-transparent py-2.5'
+                        : 'bg-white py-1.5 border-b border-slate-100 shadow-sm'
+                }`}>
                     <div className="w-full max-w-screen-2xl mx-auto">
                         <nav className="hidden xl:flex justify-center items-center space-x-7 text-[13px]">
-                            <Link to="/" aria-label="Home" title="Home" className={`flex items-center transition-colors shrink-0 py-1 ${isPathActive('/') ? 'text-primary' : 'text-title hover:text-primary'}`}>
+                            <Link to="/" aria-label="Home" title="Home" className={`flex items-center transition-colors shrink-0 py-1 ${
+                                isPathActive('/')
+                                    ? (isTransparent ? 'text-white' : 'text-primary')
+                                    : (isTransparent ? 'text-white/80 hover:text-white' : 'text-title hover:text-primary')
+                            }`}>
                                 <House className="w-4 h-4" />
                             </Link>
                             {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements', 'Student Portal'].map((item, idx) => {
@@ -272,9 +313,17 @@ const Header = () => {
                                         onMouseEnter={() => handleMouseEnter(key)}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap relative py-1 ${isActive ? 'text-primary' : 'text-title hover:text-primary'}`}>
+                                        <button className={`flex items-center gap-1.5 font-bold uppercase tracking-wider transition-colors whitespace-nowrap relative py-1 ${
+                                            isActive
+                                                ? (isTransparent ? 'text-blue-300 drop-shadow' : 'text-primary')
+                                                : (isTransparent ? 'text-white hover:text-blue-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]' : 'text-title hover:text-primary')
+                                        }`}>
                                             {item}
-                                            <ChevronDown className={`w-3 h-3 transition-all duration-300 shrink-0 ${isActive ? 'text-primary' : 'text-slate-400 group-hover:text-primary'}`} />
+                                            <ChevronDown className={`w-3 h-3 transition-all duration-300 shrink-0 ${
+                                                isActive
+                                                    ? (isTransparent ? 'text-blue-300' : 'text-primary')
+                                                    : (isTransparent ? 'text-white/70 group-hover:text-white' : 'text-slate-400 group-hover:text-primary')
+                                            }`} />
                                         </button>
 
                                         <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'
@@ -326,13 +375,19 @@ const Header = () => {
                                     </div>
                                 );
                             })}
-                            <a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className="font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 text-title hover:text-primary">
+                            <a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${
+                                isTransparent ? 'text-white hover:text-blue-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]' : 'text-title hover:text-primary'
+                            }`}>
                                 Library
                             </a>
-                            <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${isPathActive('/contact') ? 'text-primary' : 'text-title hover:text-primary'}`}>
+                            <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${
+                                isPathActive('/contact')
+                                    ? (isTransparent ? 'text-blue-300' : 'text-primary')
+                                    : (isTransparent ? 'text-white hover:text-blue-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]' : 'text-title hover:text-primary')
+                            }`}>
                                 Contact
                                 {isPathActive('/contact') && (
-                                    <span className="absolute bottom-0 left-0 w-full h-0.5 rounded-full bg-primary animate-in fade-in slide-in-from-left-2 duration-500"></span>
+                                    <span className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full ${isTransparent ? 'bg-white' : 'bg-primary'} animate-in fade-in slide-in-from-left-2 duration-500`}></span>
                                 )}
                             </Link>
                         </nav>

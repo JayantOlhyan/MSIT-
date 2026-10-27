@@ -900,7 +900,7 @@ const Home = () => {
                 schema={homeSchema}
             />
             {/* HERO SECTION */}
-            <section className="relative w-full h-[calc(100vh-125px)] min-h-[clamp(500px,80vh,700px)] flex items-center justify-center bg-slate-900 overflow-hidden">
+            <section className="relative w-full h-[100vh] min-h-[clamp(500px,80vh,700px)] flex items-center justify-center bg-slate-900 overflow-hidden">
                 {/* High Priority Campus Hero Image - iOS Safari & cross-platform compatible */}
                 <div className="absolute inset-0 z-0 group overflow-hidden">
                     <img 
@@ -917,7 +917,7 @@ const Home = () => {
                 </div>
 
                 {/* Giant Centered Text */}
-                <div className="relative z-10 w-full px-6 flex flex-col items-center justify-center text-center -mt-4 pointer-events-none">
+                <div className="relative z-10 w-full px-6 flex flex-col items-center justify-center text-center -mt-[6vh] pointer-events-none">
                     <h1 
                         id="hero-title"
                         className="font-serif font-black tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white/100 to-white/20 leading-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)] transition-all duration-1000 ease-out select-none uppercase"
