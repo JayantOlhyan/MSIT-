@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import BackToTop from './BackToTop';
@@ -6,6 +6,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import OpeningAnimation from './OpeningAnimation';
 import AccessibilityModal from './AccessibilityModal';
 import { useScrollToHash } from '../hooks/useScrollToHash';
+import { SuspenseFallbackHandler } from '../context/TransitionContext';
 
 const Layout = () => {
     const { pathname, hash } = useLocation();
@@ -59,7 +60,9 @@ const Layout = () => {
             )}
             <Header />
             <main id="main-content" className="flex-grow">
-                <Outlet />
+                <Suspense fallback={<SuspenseFallbackHandler message="Loading page..." />}>
+                    <Outlet />
+                </Suspense>
             </main>
             <Footer />
             <BackToTop />

@@ -192,14 +192,14 @@ const Header = () => {
         <>
             <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
             <header role="navigation" className={`${headerContainerClass} flex flex-col`}>
-                {/* Tier 0: Institutional links strip */}
-                <div className="bg-primary-dark text-white/85 text-[11px] sm:text-xs font-semibold tracking-wide px-4 lg:px-6 xl:px-12 relative z-30">
+                {/* Tier 0: Institutional links strip (Transparent, blends into background, crisp white font) */}
+                <div className="bg-transparent text-white text-[11px] sm:text-xs font-semibold tracking-wide px-4 lg:px-6 xl:px-12 relative z-30 drop-shadow-sm">
                     <div className="w-full max-w-screen-2xl mx-auto flex items-center h-8 overflow-x-auto scrollbar-hide whitespace-nowrap">
                         <nav aria-label="Institutional links" className="flex items-center">
                             {topStripLinks.map((link, i) => (
                                 <span key={link.url} className="flex items-center">
-                                    {i > 0 && <span className="mx-3 h-3 w-px bg-white/25" aria-hidden="true"></span>}
-                                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline underline-offset-4 transition-colors">
+                                    {i > 0 && <span className="mx-3 h-3 w-px bg-white/30" aria-hidden="true"></span>}
+                                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200 hover:underline underline-offset-4 transition-colors">
                                         {link.name}
                                     </a>
                                 </span>

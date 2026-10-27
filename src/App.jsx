@@ -2,7 +2,8 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import { AccessibilityProvider } from './context/AccessibilityContext';
-import Spinner from './components/Spinner';
+import { TransitionProvider, SuspenseFallbackHandler } from './context/TransitionContext';
+import PageTransitionLoader from './components/PageTransitionLoader';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -28,33 +29,35 @@ const Team = lazy(() => import('./pages/Team'));
 const App = () => {
     return (
         <AccessibilityProvider>
-            <Router basename={import.meta.env.BASE_URL}>
-                <Suspense fallback={<Spinner />}>
-                    <Routes>
-                        <Route path="/" element={<Layout />}>
-                            <Route index element={<Home />} />
-                            <Route path="/search" element={<SearchPage />} />
-                            <Route path="/placements" element={<Placements />} />
-                            <Route path="/virtual-tour" element={<VirtualTour />} />
-                            <Route path="/news-event/:id" element={<NewsDetail />} />
-                            <Route path="/team" element={<Team />} />
-                            <Route path="/academic-calendar" element={<AcademicCalendar />} />
-                            <Route path="/syllabus" element={<Syllabus />} />
-                            <Route path="/timetable" element={<TimeTable />} />
-                            <Route path="/brochure" element={<Brochure />} />
-                            <Route path="/admin" element={<AdminDashboard />} />
-                            <Route path="/privacy" element={<PrivacyPolicy />} />
-                            <Route path="/terms" element={<TermsOfUse />} />
-                            <Route path="/facilities" element={<Facilities />} />
-                            <Route path="/faculty" element={<FacultyStaff />} />
-                            <Route path="/sitemap" element={<Sitemap />} />
-                            <Route path="/500" element={<ServerError />} />
-                            <Route path="/:slug" element={<DynamicPage />} />
-                            <Route path="*" element={<NotFound />} />
-                        </Route>
-                    </Routes>
-                </Suspense>
-            </Router>
+            <TransitionProvider>
+                <Router basename={import.meta.env.BASE_URL}>
+                    <Suspense fallback={<SuspenseFallbackHandler message="Loading MSIT..." />}>
+                        <Routes>
+                            <Route path="/" element={<Layout />}>
+                                <Route index element={<Home />} />
+                                <Route path="/search" element={<SearchPage />} />
+                                <Route path="/placements" element={<Placements />} />
+                                <Route path="/virtual-tour" element={<VirtualTour />} />
+                                <Route path="/news-event/:id" element={<NewsDetail />} />
+                                <Route path="/team" element={<Team />} />
+                                <Route path="/academic-calendar" element={<AcademicCalendar />} />
+                                <Route path="/syllabus" element={<Syllabus />} />
+                                <Route path="/timetable" element={<TimeTable />} />
+                                <Route path="/brochure" element={<Brochure />} />
+                                <Route path="/admin" element={<AdminDashboard />} />
+                                <Route path="/privacy" element={<PrivacyPolicy />} />
+                                <Route path="/terms" element={<TermsOfUse />} />
+                                <Route path="/facilities" element={<Facilities />} />
+                                <Route path="/faculty" element={<FacultyStaff />} />
+                                <Route path="/sitemap" element={<Sitemap />} />
+                                <Route path="/500" element={<ServerError />} />
+                                <Route path="/:slug" element={<DynamicPage />} />
+                                <Route path="*" element={<NotFound />} />
+                            </Route>
+                        </Routes>
+                    </Suspense>
+                </Router>
+            </TransitionProvider>
         </AccessibilityProvider>
     );
 };
