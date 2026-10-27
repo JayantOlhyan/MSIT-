@@ -8,11 +8,6 @@ import {
 import SEO from '../components/SEO';
 import Announcements from '../components/Announcements';
 
-const stats = [
-    { icon: <GraduationCap />, value: "95%+", label: "Placement rate", url: "/placements" },
-    { icon: <Building2 />, value: "250+", label: "Recruiters", url: "/placements" },
-    { icon: <Award />, value: "₹1.7Cr", label: "Highest package", url: "/placements" }
-];
 
 const CAMPUS_GALLERY = [
     {
@@ -933,26 +928,6 @@ const Home = () => {
                     <div id="hero-divider" className="h-1.5 w-24 sm:w-32 bg-white/40 mt-8 rounded-full blur-[0.5px]"></div>
                 </div>
 
-                {/* Key figures */}
-                <div id="hero-stats" className="absolute inset-x-0 bottom-24 sm:bottom-28 z-10 px-4 sm:px-6">
-                    <div className="max-w-3xl mx-auto grid grid-cols-3 gap-2 sm:gap-4">
-                        {stats.map(stat => (
-                            <Link
-                                key={stat.label}
-                                to={stat.url}
-                                className="group flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 px-2.5 py-2.5 sm:px-4 sm:py-3 text-white transition-colors"
-                            >
-                                <span className="hidden sm:flex w-9 h-9 shrink-0 rounded-lg bg-white/15 items-center justify-center">
-                                    {React.cloneElement(stat.icon, { className: 'w-[18px] h-[18px]', strokeWidth: 1.75 })}
-                                </span>
-                                <span className="min-w-0">
-                                    <span className="block text-lg sm:text-2xl font-bold tracking-tight leading-none">{stat.value}</span>
-                                    <span className="block mt-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.08em] text-white/75 leading-tight">{stat.label}</span>
-                                </span>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
 
                 {/* Explore Banner at Bottom */}
                 <div 
