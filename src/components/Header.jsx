@@ -163,12 +163,10 @@ const Header = () => {
         { name: "Mandatory Disclosure", url: "https://msit.in/aicte#mandatory-disclosure" }
     ];
 
-    const isHomePage = location.pathname === '/';
-    const isTransparent = isHomePage && !isScrolled && !isMenuOpen;
+    const hasWhitePageTop = location.pathname === '/admin' || location.pathname === '/404';
+    const isTransparent = !hasWhitePageTop && !isScrolled && !isMenuOpen;
 
-    const headerContainerClass = isHomePage
-        ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white/95 backdrop-blur-md shadow-card py-1'}`
-        : `sticky top-0 z-[60] w-full transition-all duration-300 bg-white/95 backdrop-blur-md shadow-card py-1`;
+    const headerContainerClass = `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white/95 backdrop-blur-md shadow-card py-1'}`;
 
     const isPathActive = (path) => location.pathname === path;
     const isCategoryActive = (categoryKey) => {
