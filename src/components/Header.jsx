@@ -168,13 +168,12 @@ const Header = () => {
             { name: "Placement Portal", url: "https://placement.msit.in/", external: true }
         ],
         student: [
-            { name: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
-            { name: "Moodle (LMS)", url: "http://moodle.msit.in/", external: true },
-            { name: "NISP (Startup & Innovation)", url: "http://nisp.msit.in/", external: true },
-            { name: "NPTEL Videos", url: "http://nptel.ac.in/", external: true },
-            { name: "Student Grievance Cell (SGRC)", url: "/student-grievance" },
-            { name: "Higher Studies Form", url: "https://docs.google.com/forms/d/e/1FAIpQLSfQa8YcM9Pq4kN10V8TJ_KDw8cdGphCi6b6QNw66bWfm7RkvQ/viewform?usp=sf_link", external: true },
-            { name: "Attendance Rules", url: "/attendance" }
+            { name: "Fee Payment Portal", url: "/online-fee" },
+            { name: "Result & Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
+            { name: "Library Website", url: "http://library.msit.in/", external: true },
+            { name: "Time Table", url: "/timetable" },
+            { name: "Attendance Rules", url: "/attendance" },
+            { name: "NPTEL Videos", url: "http://nptel.ac.in/", external: true }
         ]
     };
 

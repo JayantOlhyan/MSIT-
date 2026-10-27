@@ -72,7 +72,7 @@ const Sitemap = () => {
             title: "Support, Rules & Safety",
             icon: <Shield className="w-5 h-5 text-rose-600" />,
             links: [
-                { label: "Student Login Portal", path: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
+                { label: "Result & Student Login Portal", path: "https://examweb.ggsipu.ac.in/web/login.jsp", external: true },
                 { label: "Attendance Rules", path: "/attendance" },
                 { label: "Anti-Ragging Guidelines", path: "/antiragging" },
                 { label: "Disaster Management", path: "/disaster" },

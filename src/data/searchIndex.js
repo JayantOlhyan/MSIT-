@@ -25,7 +25,7 @@ const staticPages = [
     { title: "Research & Publications", url: "/research", keywords: "research, journals, papers, patents, projects, publications, scopus, ieee" },
     { title: "Events & News", url: "/events", keywords: "events, news, updates, festivals, notices, hackathons, workshops" },
     { title: "Alumni Network", url: "/alumni-network", keywords: "alumni, meet, network, seniors, graduation, passout" },
-    { title: "Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", keywords: "student, login, moodle, central, attendance, marks, portal, ggsipu" },
+    { title: "Result & Student Login Portal", url: "https://examweb.ggsipu.ac.in/web/login.jsp", keywords: "student, login, result, results, marks, grades, exam, examweb, ggsipu" },
     { title: "Attendance Rules", url: "/attendance", keywords: "attendance, rules, policy, criteria, leave, medical, detention, 75%" },
     { title: "Privacy Policy", url: "/privacy", keywords: "privacy, policy, data, security, terms" },
     { title: "Terms of Use", url: "/terms", keywords: "terms, conditions, use, legal, agreement" },
