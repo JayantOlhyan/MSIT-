@@ -117,7 +117,7 @@ const SocietyDetailView = ({ society }) => {
         : society.gallery.filter(item => item.category === galleryTab);
 
     return (
-        <div className="bg-slate-50] min-h-screen text-slate-800 font-sans">
+        <div className="bg-slate-50 min-h-screen text-slate-800 font-sans">
             <SEO 
                 title={`${society.name} | MSIT Student Societies`}
                 description={society.overview || society.tagline}
@@ -277,7 +277,7 @@ const SocietyDetailView = ({ society }) => {
             {/* =========================================================
                 QUICK STATS STRIP (Pill / Cards bar below hero)
                ========================================================= */}
-            <div className="bg-white] border-b border-slate-200 py-4 px-4 sm:px-8 shadow-sm">
+            <div className="bg-white border-b border-slate-200 py-4 px-4 sm:px-8 shadow-sm">
                 <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
                     <div className="flex items-center gap-3 px-2 py-1">
                         <Calendar className="w-5 h-5 text-indigo-600 shrink-0" />
@@ -347,7 +347,7 @@ const SocietyDetailView = ({ society }) => {
                     <aside className="lg:col-span-3 sticky top-40 z-30 lg:space-y-6">
                         
                         {/* Navigation Card */}
-                        <div className="bg-white] rounded-2xl border border-slate-200/80 shadow-sm p-3 overflow-hidden mb-6 lg:mb-0">
+                        <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-3 overflow-hidden mb-6 lg:mb-0">
                             {/* Mobile Toggle Button */}
                             <button 
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -379,7 +379,7 @@ const SocietyDetailView = ({ society }) => {
                                                         className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all text-left cursor-pointer ${
                                                             isActive 
                                                                 ? 'bg-purple-50 text-purple-700 font-bold border-l-4 border-purple-600 shadow-sm' 
-                                                                : 'text-slate-600 hover:bg-slate-100] hover:text-slate-900'
+                                                                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                                                         }`}
                                                     >
                                                         <IconComponent className={`w-4 h-4 shrink-0 ${isActive ? 'text-purple-600' : 'text-slate-400'}`} />
@@ -432,7 +432,7 @@ const SocietyDetailView = ({ society }) => {
                                 <div className="md:col-span-8 space-y-6">
                                     
                                     {/* Detailed Story Box */}
-                                    <div className="bg-white] p-6 rounded-2xl border border-slate-200 shadow-sm relative pl-8">
+                                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative pl-8">
                                         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-purple-600 to-indigo-600 rounded-l-2xl"></div>
                                         <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-700 mb-2">
                                             <Sparkles className="w-4 h-4" />
@@ -447,7 +447,7 @@ const SocietyDetailView = ({ society }) => {
                                     <div className="space-y-4">
                                         
                                         {/* Mission */}
-                                        <div id="mission" className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                                        <div id="mission" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                                             <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
                                                 <Award className="w-5 h-5" />
                                             </div>
@@ -460,7 +460,7 @@ const SocietyDetailView = ({ society }) => {
                                         </div>
 
                                         {/* Vision */}
-                                        <div id="vision" className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                                        <div id="vision" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                                             <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
                                                 <GraduationCap className="w-5 h-5" />
                                             </div>
@@ -473,7 +473,7 @@ const SocietyDetailView = ({ society }) => {
                                         </div>
 
                                         {/* Objectives */}
-                                        <div id="objectives" className="bg-white] p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                                        <div id="objectives" className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
                                             <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
                                                 <ShieldCheck className="w-5 h-5 text-emerald-600" />
                                                 <span>Objectives</span>
@@ -507,7 +507,7 @@ const SocietyDetailView = ({ society }) => {
                                     </div>
 
                                     {/* Quick Links Card */}
-                                    <div className="bg-white] p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2 text-xs">
+                                    <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2 text-xs">
                                         <div className="font-bold text-slate-900 mb-2">Quick Links</div>
                                         <button onClick={() => scrollToSection('events')} className="w-full flex items-center gap-2 text-slate-600 hover:text-purple-600 py-1 transition-colors">
                                             <Calendar className="w-3.5 h-3.5 text-slate-400" />
@@ -532,7 +532,7 @@ const SocietyDetailView = ({ society }) => {
                                     </div>
 
                                     {/* Society At A Glance Table */}
-                                    <div className="bg-white] p-4 rounded-2xl border border-slate-200 shadow-sm text-xs space-y-2.5">
+                                    <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-xs space-y-2.5">
                                         <div className="font-bold text-slate-900 border-b border-slate-100 pb-2">
                                             Society At A Glance
                                         </div>
@@ -603,9 +603,9 @@ const SocietyDetailView = ({ society }) => {
                                 {society.whatWeDo?.map((item, i) => (
                                     <div 
                                         key={i} 
-                                        className="bg-white] p-4 rounded-2xl border border-slate-200 hover:border-purple-300 hover:shadow-md transition-all text-center flex flex-col items-center justify-between group cursor-pointer"
+                                        className="bg-white p-4 rounded-2xl border border-slate-200 hover:border-purple-300 hover:shadow-md transition-all text-center flex flex-col items-center justify-between group cursor-pointer"
                                     >
-                                        <div className="w-10 h-10 rounded-xl bg-purple-50] group-hover:bg-purple-600 group-hover:text-white text-purple-600 flex items-center justify-center mb-3 transition-colors">
+                                        <div className="w-10 h-10 rounded-xl bg-purple-50 group-hover:bg-purple-600 group-hover:text-white text-purple-600 flex items-center justify-center mb-3 transition-colors">
                                             {renderIcon(item.icon, "w-5 h-5")}
                                         </div>
                                         <div className="text-xs font-bold text-slate-900 mb-1">
@@ -700,7 +700,7 @@ const SocietyDetailView = ({ society }) => {
                                     </div>
                                     <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-3">
                                         {society.events?.past?.map((evt, i) => (
-                                            <div key={i} className="bg-white] rounded-xl border border-slate-200 overflow-hidden shadow-sm group">
+                                            <div key={i} className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm group">
                                                 <img 
                                                     src={evt.image} 
                                                     alt={evt.title} 
@@ -737,7 +737,7 @@ const SocietyDetailView = ({ society }) => {
                                 </div>
                                 <div className="space-y-3">
                                     {society.achievements?.map((ach, i) => (
-                                        <div key={i} className="bg-white] p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                                        <div key={i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
                                             <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
                                                 {renderIcon(ach.icon, "w-4 h-4")}
                                             </div>
@@ -762,7 +762,7 @@ const SocietyDetailView = ({ society }) => {
                                 </div>
                                 <div className="space-y-3">
                                     {society.projects?.map((proj, i) => (
-                                        <div key={i} className="bg-white] p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                                        <div key={i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
                                             <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                                                 {renderIcon(proj.icon, "w-4 h-4")}
                                             </div>
@@ -787,7 +787,7 @@ const SocietyDetailView = ({ society }) => {
                                 </div>
                                 <div className="space-y-3">
                                     {society.resources?.map((res, i) => (
-                                        <div key={i} className="bg-white] p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                                        <div key={i} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
                                             <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
                                                 {renderIcon(res.icon, "w-4 h-4")}
                                             </div>
@@ -817,7 +817,7 @@ const SocietyDetailView = ({ society }) => {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 
                                 {/* Faculty Coordinator Card */}
-                                <div className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
                                     <img 
                                         src={society.people?.faculty?.image || "/faculty/rinky-dwivedi.webp"} 
                                         alt={society.people?.faculty?.name} 
@@ -831,7 +831,7 @@ const SocietyDetailView = ({ society }) => {
                                 </div>
 
                                 {/* Student Coordinator Card */}
-                                <div className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
                                     <img 
                                         src={society.people?.student?.image || "/ananya-iyer.webp"} 
                                         alt={society.people?.student?.name} 
@@ -845,7 +845,7 @@ const SocietyDetailView = ({ society }) => {
                                 </div>
 
                                 {/* Core Team Card */}
-                                <div className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                                     <div className="flex items-center gap-2 mb-2">
                                         <Users className="w-4 h-4 text-purple-600" />
                                         <div className="text-xs font-bold text-slate-900">Core Team</div>
@@ -860,7 +860,7 @@ const SocietyDetailView = ({ society }) => {
                                                     key={i} 
                                                     src={member.image} 
                                                     alt={member.name} 
-                                                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white] object-cover" 
+                                                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" 
                                                 />
                                             ))}
                                         </div>
@@ -893,7 +893,7 @@ const SocietyDetailView = ({ society }) => {
                                             className={`px-3 py-1 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
                                                 galleryTab === tab.id
                                                     ? 'bg-purple-600 text-white shadow-sm'
-                                                    : 'bg-white] text-slate-600 hover:bg-slate-100] border border-slate-200'
+                                                    : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
                                             }`}
                                         >
                                             {tab.label}
@@ -939,7 +939,7 @@ const SocietyDetailView = ({ society }) => {
                         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             
                             {/* Announcements */}
-                            <div id="announcements" className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div id="announcements" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div>
                                     <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
                                         <Bell className="w-5 h-5" />
@@ -960,7 +960,7 @@ const SocietyDetailView = ({ society }) => {
                             </div>
 
                             {/* Recruitment */}
-                            <div id="recruitment" className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div id="recruitment" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div>
                                     <div className="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-3">
                                         <GraduationCap className="w-5 h-5" />
@@ -986,7 +986,7 @@ const SocietyDetailView = ({ society }) => {
                             </div>
 
                             {/* FAQ */}
-                            <div id="faq" className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div id="faq" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div>
                                     <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
                                         <HelpCircle className="w-5 h-5" />
@@ -1013,7 +1013,7 @@ const SocietyDetailView = ({ society }) => {
                             </div>
 
                             {/* Connect With Us */}
-                            <div id="connect" className="bg-white] p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div id="connect" className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
                                 <div>
                                     <div className="w-9 h-9 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center mb-3">
                                         <Share2 className="w-5 h-5" />
@@ -1023,22 +1023,22 @@ const SocietyDetailView = ({ society }) => {
                                     </h4>
                                     <div className="flex gap-2.5">
                                         {society.socials?.instagram && (
-                                            <a href={society.socials.instagram} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100] hover:bg-pink-100 hover:text-pink-600 flex items-center justify-center text-slate-600 transition-colors">
+                                            <a href={society.socials.instagram} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-pink-100 hover:text-pink-600 flex items-center justify-center text-slate-600 transition-colors">
                                                 <Globe className="w-4 h-4" />
                                             </a>
                                         )}
                                         {society.socials?.linkedin && (
-                                            <a href={society.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100] hover:bg-blue-100 hover:text-blue-600 flex items-center justify-center text-slate-600 transition-colors">
+                                            <a href={society.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-blue-100 hover:text-blue-600 flex items-center justify-center text-slate-600 transition-colors">
                                                 <Share2 className="w-4 h-4" />
                                             </a>
                                         )}
                                         {society.socials?.youtube && (
-                                            <a href={society.socials.youtube} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100] hover:bg-red-100 hover:text-red-600 flex items-center justify-center text-slate-600 transition-colors">
+                                            <a href={society.socials.youtube} target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-red-100 hover:text-red-600 flex items-center justify-center text-slate-600 transition-colors">
                                                 <Presentation className="w-4 h-4" />
                                             </a>
                                         )}
                                         {society.email && (
-                                            <a href={`mailto:${society.email}`} className="w-7 h-7 rounded-lg bg-slate-100] hover:bg-indigo-100 hover:text-indigo-600 flex items-center justify-center text-slate-600 transition-colors">
+                                            <a href={`mailto:${society.email}`} className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-indigo-100 hover:text-indigo-600 flex items-center justify-center text-slate-600 transition-colors">
                                                 <Mail className="w-4 h-4" />
                                             </a>
                                         )}
@@ -1055,7 +1055,7 @@ const SocietyDetailView = ({ society }) => {
 
                         {/* EXPANDABLE FAQ ACCORDION */}
                         {society.faqs && society.faqs.length > 0 && (
-                            <section id="faq-accordion" className="bg-white] p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                            <section id="faq-accordion" className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
                                 <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                                     <HelpCircle className="w-4 h-4 text-purple-600" />
                                     <span>Frequently Asked Questions</span>
@@ -1063,11 +1063,11 @@ const SocietyDetailView = ({ society }) => {
                                 <div className="space-y-3">
                                     {society.faqs.map((faq, i) => (
                                         <details key={i} className="group border border-slate-200 rounded-xl overflow-hidden">
-                                            <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-xs text-slate-900 bg-slate-50/50] hover:bg-slate-50]">
+                                            <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-xs text-slate-900 bg-slate-50/50 hover:bg-slate-50">
                                                 <span>{faq.q}</span>
                                                 <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform" />
                                             </summary>
-                                            <p className="p-4 pt-2 text-xs text-slate-600 leading-relaxed bg-white]">
+                                            <p className="p-4 pt-2 text-xs text-slate-600 leading-relaxed bg-white">
                                                 {faq.a}
                                             </p>
                                         </details>

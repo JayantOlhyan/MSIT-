@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { 
     Beaker, Book, Home, Trophy, Activity, Server, Cpu, Database, 
@@ -9,13 +10,26 @@ import {
 import PageHero from '../components/PageHero';
 import { departments, labData, itMous, campusInfrastructure, auditNotes } from '../data/facilitiesData';
 
+const VALID_TABS = ['labs', 'library', 'mous', 'audit'];
+
 const Facilities = () => {
-    const [activeMainTab, setActiveMainTab] = useState('labs'); // 'labs' | 'library' | 'mous' | 'audit'
+    const [searchParams, setSearchParams] = useSearchParams();
+    const tabParam = searchParams.get('tab');
+    const activeMainTab = VALID_TABS.includes(tabParam) ? tabParam : 'labs';
+
     const [selectedDept, setSelectedDept] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [mouFilter, setMouFilter] = useState('all'); // 'all' | 'Active' | 'Pending Renewal'
     const [selectedLabModal, setSelectedLabModal] = useState(null);
     const [modalImageIndex, setModalImageIndex] = useState(0);
+
+    const handleTabChange = (newTab) => {
+        setSearchParams(prev => {
+            const next = new URLSearchParams(prev);
+            next.set('tab', newTab);
+            return next;
+        }, { replace: true });
+    };
 
     // Filter labs based on department and search query
     const filteredLabs = useMemo(() => {
@@ -63,7 +77,7 @@ const Facilities = () => {
     };
 
     return (
-        <main className="min-h-screen bg-slate-50/50] transition-colors duration-300">
+        <main className="min-h-screen bg-slate-50/50 transition-colors duration-300">
             <SEO 
                 title="Campus Facilities & Academic Laboratories" 
                 description="Explore MSIT's 33+ state-of-the-art academic laboratories across CSE, IT, ECE, EEE, Central Library with Koha OPAC, hostels, and industry MOUs."
@@ -80,11 +94,11 @@ const Facilities = () => {
             />
 
             {/* Primary Tab Bar */}
-            <div className="border-b border-slate-200 sticky top-[68px] xl:top-[128px] bg-white/95]/90 backdrop-blur-md z-30 shadow-xs transition-colors duration-300">
+            <div className="border-b border-slate-200 sticky top-[68px] xl:top-[128px] bg-white/95 backdrop-blur-md z-30 shadow-xs transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     <div className="flex gap-2 sm:gap-6 py-3 overflow-x-auto scrollbar-none">
                         <button
-                            onClick={() => setActiveMainTab('labs')}
+                            onClick={() => handleTabChange('labs')}
                             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${
                                 activeMainTab === 'labs' 
                                     ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20' 
@@ -96,7 +110,7 @@ const Facilities = () => {
                         </button>
 
                         <button
-                            onClick={() => setActiveMainTab('library')}
+                            onClick={() => handleTabChange('library')}
                             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${
                                 activeMainTab === 'library' 
                                     ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20' 
@@ -108,7 +122,7 @@ const Facilities = () => {
                         </button>
 
                         <button
-                            onClick={() => setActiveMainTab('mous')}
+                            onClick={() => handleTabChange('mous')}
                             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${
                                 activeMainTab === 'mous' 
                                     ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20' 
@@ -120,7 +134,7 @@ const Facilities = () => {
                         </button>
 
                         <button
-                            onClick={() => setActiveMainTab('audit')}
+                            onClick={() => handleTabChange('audit')}
                             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${
                                 activeMainTab === 'audit' 
                                     ? 'bg-amber-500 text-white shadow-md shadow-amber-500/20' 
@@ -143,7 +157,7 @@ const Facilities = () => {
                 {activeMainTab === 'labs' && (
                     <div className="space-y-8 animate-fade-in">
                         {/* Search and Department Filter Toolbar */}
-                        <div className="bg-white] p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-4">
+                        <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-4">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                 {/* Search Bar */}
                                 <div className="relative flex-1">
@@ -153,7 +167,7 @@ const Facilities = () => {
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         placeholder="Search by Lab #, Subject (CIC-355), Software (MATLAB), CPU (i7-13700)..."
-                                        className="w-full pl-11 pr-10 py-2.5 bg-slate-50] border border-slate-200 rounded-xl text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white] transition-all text-slate-800 placeholder:text-slate-400"
+                                        className="w-full pl-11 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all text-slate-800 placeholder:text-slate-400"
                                     />
                                     {searchQuery && (
                                         <button 
@@ -206,7 +220,7 @@ const Facilities = () => {
 
                         {/* Department Intro Banner (If specific department is selected) */}
                         {selectedDept !== 'all' && (
-                            <div className="p-6 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950] rounded-2xl text-white shadow-md relative overflow-hidden border border-transparent">
+                            <div className="p-6 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 rounded-2xl text-white shadow-md relative overflow-hidden border border-transparent">
                                 <div className="relative z-10">
                                     <div className="flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">
                                         <Cpu className="w-4 h-4" />
@@ -224,7 +238,7 @@ const Facilities = () => {
 
                         {/* Labs Grid */}
                         {filteredLabs.length === 0 ? (
-                            <div className="bg-white] p-12 text-center rounded-2xl border border-slate-200 shadow-xs space-y-4">
+                            <div className="bg-white p-12 text-center rounded-2xl border border-slate-200 shadow-xs space-y-4">
                                 <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400">
                                     <Search className="w-8 h-8" />
                                 </div>
@@ -244,7 +258,8 @@ const Facilities = () => {
                                 {filteredLabs.map((lab) => (
                                     <div 
                                         key={lab.id} 
-                                        className="bg-white] rounded-2xl border border-slate-200/90 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group"
+                                        id={lab.id}
+                                        className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group"
                                     >
                                         {/* Image Box */}
                                         <div className="relative h-48 bg-slate-900 overflow-hidden shrink-0">
@@ -321,7 +336,7 @@ const Facilities = () => {
                                                     {lab.software.map((sw, idx) => (
                                                         <span 
                                                             key={idx} 
-                                                            className="px-2 py-0.5 bg-slate-100] text-slate-700 text-[11px] font-medium rounded-md border border-slate-200/60"
+                                                            className="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded-md border border-slate-200/60"
                                                         >
                                                             {sw}
                                                         </span>
@@ -368,7 +383,7 @@ const Facilities = () => {
                 {activeMainTab === 'library' && (
                     <div className="space-y-12 animate-fade-in">
                         {/* Central Library Feature */}
-                        <div className="bg-white] rounded-3xl p-6 md:p-10 border border-slate-200 shadow-card grid md:grid-cols-2 gap-8 items-center">
+                        <div id="central-library" className="bg-white rounded-3xl p-6 md:p-10 border border-slate-200 shadow-card grid md:grid-cols-2 gap-8 items-center">
                             <div className="space-y-6">
                                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">
                                     <Book className="w-3.5 h-3.5" /> Academic Core
@@ -424,7 +439,7 @@ const Facilities = () => {
                                         className="w-full h-72 object-cover"
                                     />
                                 </div>
-                                <div className="p-4 bg-slate-900] text-white rounded-2xl text-xs leading-relaxed border border-transparent">
+                                <div className="p-4 bg-slate-900 text-white rounded-2xl text-xs leading-relaxed border border-transparent">
                                     <strong className="text-blue-400 block mb-1">Book Bank Scheme (Since 2006):</strong>
                                     Every enrolled MSIT student receives a complete set of textbooks for all registered courses per academic semester, free of additional loan charges.
                                 </div>
@@ -434,7 +449,7 @@ const Facilities = () => {
                         {/* Campus Living & Sports Grid */}
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Hostel */}
-                            <div className="bg-slate-950] text-white rounded-3xl p-8 border border-slate-800 shadow-card flex flex-col justify-between space-y-6">
+                            <div id="hostel" className="bg-slate-950 text-white rounded-3xl p-8 border border-slate-800 shadow-card flex flex-col justify-between space-y-6">
                                 <div>
                                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-bold mb-4">
                                         <Home className="w-3.5 h-3.5" /> Residential Life
@@ -444,10 +459,10 @@ const Facilities = () => {
                                         {campusInfrastructure.hostel.description}
                                     </p>
                                     <div className="grid grid-cols-2 gap-3 text-xs font-semibold mb-6">
-                                        <div className="p-3 bg-slate-900] rounded-xl border border-slate-800 text-blue-400">
+                                        <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 text-blue-400">
                                             Boys Hostel: {campusInfrastructure.hostel.boysCapacity} Capacity
                                         </div>
-                                        <div className="p-3 bg-slate-900] rounded-xl border border-slate-800 text-pink-400">
+                                        <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 text-pink-400">
                                             Girls Hostel: {campusInfrastructure.hostel.girlsCapacity} Capacity
                                         </div>
                                     </div>
@@ -470,7 +485,7 @@ const Facilities = () => {
                             </div>
 
                             {/* Sports */}
-                            <div className="bg-white] rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between space-y-6">
+                            <div id="sports" className="bg-white rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between space-y-6">
                                 <div>
                                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold mb-4">
                                         <Trophy className="w-3.5 h-3.5" /> Athletics & Sports
@@ -497,7 +512,7 @@ const Facilities = () => {
                             </div>
 
                             {/* Medical Room & Health Center */}
-                            <div className="bg-white] rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between space-y-6 md:col-span-2 lg:col-span-1">
+                            <div id="medical" className="bg-white rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between space-y-6 md:col-span-2 lg:col-span-1">
                                 <div>
                                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-bold mb-4">
                                         <Activity className="w-3.5 h-3.5" /> Health Care & Emergency Room
@@ -512,8 +527,8 @@ const Facilities = () => {
                                         </div>
                                         <div className="text-sm font-extrabold text-slate-900">{campusInfrastructure.medical.attendantName}</div>
                                         <div className="text-xs font-semibold text-slate-700 mt-2 flex flex-col gap-1">
-                                            <span className="flex items-center gap-1.5"><strong className="text-slate-500">Phone:</strong> <code className="bg-white] px-2 py-0.5 rounded border border-red-200 font-mono text-red-700 font-bold">{campusInfrastructure.medical.attendantPhone}</code></span>
-                                            <span className="flex items-center gap-1.5"><strong className="text-slate-500">Landline Ext:</strong> <code className="bg-white] px-2 py-0.5 rounded border border-slate-200 font-mono text-slate-800 font-bold">{campusInfrastructure.medical.landline}</code></span>
+                                            <span className="flex items-center gap-1.5"><strong className="text-slate-500">Phone:</strong> <code className="bg-white px-2 py-0.5 rounded border border-red-200 font-mono text-red-700 font-bold">{campusInfrastructure.medical.attendantPhone}</code></span>
+                                            <span className="flex items-center gap-1.5"><strong className="text-slate-500">Landline Ext:</strong> <code className="bg-white px-2 py-0.5 rounded border border-slate-200 font-mono text-slate-800 font-bold">{campusInfrastructure.medical.landline}</code></span>
                                         </div>
                                     </div>
                                     <div className="space-y-2.5">
@@ -536,7 +551,7 @@ const Facilities = () => {
                 {/* =================================================== */}
                 {activeMainTab === 'mous' && (
                     <div className="space-y-6 animate-fade-in">
-                        <div className="bg-white] p-6 rounded-3xl border border-slate-200 shadow-xs space-y-4">
+                        <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs space-y-4">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                 <div>
                                     <h3 className="text-xl font-bold text-slate-900">IT Department Industry MOUs</h3>
@@ -567,7 +582,7 @@ const Facilities = () => {
                             <div className="overflow-x-auto rounded-2xl border border-slate-200 pt-2">
                                 <table className="w-full text-left text-xs border-collapse">
                                     <thead>
-                                        <tr className="bg-slate-100] text-slate-700 font-bold border-b border-slate-200">
+                                        <tr className="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
                                             <th className="p-3.5">#</th>
                                             <th className="p-3.5">Industry Partner</th>
                                             <th className="p-3.5">Domain / Collaboration Area</th>
@@ -623,7 +638,7 @@ const Facilities = () => {
 
                             <div className="space-y-3">
                                 {auditNotes.notes.map((note, idx) => (
-                                    <div key={idx} className="p-4 bg-white/80] rounded-xl border border-amber-200 text-xs leading-relaxed text-amber-900 flex items-start gap-2.5">
+                                    <div key={idx} className="p-4 bg-white/80 rounded-xl border border-amber-200 text-xs leading-relaxed text-amber-900 flex items-start gap-2.5">
                                         <span className="w-2 h-2 bg-amber-500 rounded-full mt-1.5 shrink-0"></span>
                                         <span>{note}</span>
                                     </div>
@@ -633,16 +648,16 @@ const Facilities = () => {
                             <div className="pt-2 border-t border-amber-200/60">
                                 <h4 className="text-xs font-bold uppercase tracking-wider text-amber-900 mb-2">Labs Pending Photography:</h4>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-                                    <div className="p-2.5 bg-white] rounded-lg border border-amber-200 font-semibold text-amber-900">
+                                    <div className="p-2.5 bg-white rounded-lg border border-amber-200 font-semibold text-amber-900">
                                         All 7 EEE Department Labs
                                     </div>
-                                    <div className="p-2.5 bg-white] rounded-lg border border-amber-200 font-semibold text-amber-900">
+                                    <div className="p-2.5 bg-white rounded-lg border border-amber-200 font-semibold text-amber-900">
                                         IT Lab #504 (CoE)
                                     </div>
-                                    <div className="p-2.5 bg-white] rounded-lg border border-amber-200 font-semibold text-amber-900">
+                                    <div className="p-2.5 bg-white rounded-lg border border-amber-200 font-semibold text-amber-900">
                                         ECE Lab #210 (Analog Comm)
                                     </div>
-                                    <div className="p-2.5 bg-white] rounded-lg border border-amber-200 font-semibold text-amber-900">
+                                    <div className="p-2.5 bg-white rounded-lg border border-amber-200 font-semibold text-amber-900">
                                         ECE Lab #214 (Microprocessor)
                                     </div>
                                 </div>
@@ -658,10 +673,10 @@ const Facilities = () => {
             {/* =================================================== */}
             {selectedLabModal && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm animate-fade-in">
-                    <div className="bg-white] rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 flex flex-col">
+                    <div className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 flex flex-col">
                         
                         {/* Modal Header */}
-                        <div className="p-6 border-b border-slate-100 flex items-center justify-between sticky top-0 bg-white/95]/95 backdrop-blur-md z-10">
+                        <div className="p-6 border-b border-slate-100 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur-md z-10">
                             <div>
                                 <div className="flex items-center gap-2">
                                     <span className="px-2.5 py-0.5 bg-blue-100 text-blue-800 text-xs font-mono font-bold rounded-md">
@@ -732,7 +747,7 @@ const Facilities = () => {
                                     )}
                                 </div>
                             ) : (
-                                <div className="p-8 bg-slate-100] rounded-2xl text-center space-y-2 text-slate-500">
+                                <div className="p-8 bg-slate-100 rounded-2xl text-center space-y-2 text-slate-500">
                                     <Camera className="w-8 h-8 mx-auto text-slate-400" />
                                     <p className="text-xs font-semibold">Official photography pending for {selectedLabModal.labNo}</p>
                                 </div>
@@ -741,7 +756,7 @@ const Facilities = () => {
                             {/* Detailed Description */}
                             <div>
                                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Curriculum & Practical Scope:</h4>
-                                <p className="text-sm text-slate-700 leading-relaxed bg-slate-50] p-4 rounded-2xl border border-slate-100">
+                                <p className="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-2xl border border-slate-100">
                                     {selectedLabModal.description}
                                 </p>
                             </div>
@@ -767,7 +782,7 @@ const Facilities = () => {
                                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Specialized Hardware & Kits:</h4>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                                         {selectedLabModal.hardwareKits.map((kit, idx) => (
-                                            <div key={idx} className="p-2.5 bg-slate-50] rounded-xl border border-slate-200 text-xs font-medium text-slate-800 flex items-center gap-2">
+                                            <div key={idx} className="p-2.5 bg-slate-50 rounded-xl border border-slate-200 text-xs font-medium text-slate-800 flex items-center gap-2">
                                                 <Wrench className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                                                 <span>{kit}</span>
                                             </div>
@@ -782,7 +797,7 @@ const Facilities = () => {
                                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Installed Software:</h4>
                                     <div className="flex flex-wrap gap-1.5">
                                         {selectedLabModal.software.map((sw, idx) => (
-                                            <span key={idx} className="px-2.5 py-1 bg-slate-100] text-slate-800 text-xs font-medium rounded-lg border border-slate-200">
+                                            <span key={idx} className="px-2.5 py-1 bg-slate-100 text-slate-800 text-xs font-medium rounded-lg border border-slate-200">
                                                 {sw}
                                             </span>
                                         ))}

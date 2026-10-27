@@ -3,51 +3,22 @@ import { useLocation, Link } from 'react-router-dom';
 import { Search, User, Hash, MessageSquare, ArrowRight, HelpCircle, Bell } from 'lucide-react';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
-import { searchIndex } from '../data/searchIndex';
+import { searchSite } from '../search/searchSite';
 
 const SearchPage = () => {
     const location = useLocation();
     const query = new URLSearchParams(location.search).get('q') || '';
 
-    const lQuery = query.toLowerCase().trim();
-
-    const facultyResults = lQuery 
-        ? searchIndex.faculty.filter(f => 
-            f.name.toLowerCase().includes(lQuery) || 
-            f.dept.toLowerCase().includes(lQuery) ||
-            f.role.toLowerCase().includes(lQuery) ||
-            (f.keywords && f.keywords.includes(lQuery))
-          )
-        : [];
-
-    const pageResults = lQuery 
-        ? searchIndex.pages.filter(p => 
-            p.title.toLowerCase().includes(lQuery) || 
-            p.keywords.toLowerCase().includes(lQuery)
-          )
-        : [];
-
-    const eventResults = lQuery && searchIndex.events
-        ? searchIndex.events.filter(e =>
-            e.title.toLowerCase().includes(lQuery) || 
-            e.label.toLowerCase().includes(lQuery) ||
-            (e.category && e.category.toLowerCase().includes(lQuery)) ||
-            (e.summary && e.summary.toLowerCase().includes(lQuery)) ||
-            (e.keywords && e.keywords.toLowerCase().includes(lQuery))
-          )
-        : [];
-
-    const qaResults = lQuery 
-        ? searchIndex.qa.filter(q => 
-            q.q.toLowerCase().includes(lQuery) || 
-            q.keywords.toLowerCase().includes(lQuery)
-          )
-        : [];
+    const results = query ? searchSite(query) : { faculty: [], pages: [], qa: [], events: [] };
+    const facultyResults = results.faculty || [];
+    const pageResults = results.pages || [];
+    const eventResults = results.events || [];
+    const qaResults = results.qa || [];
 
     const totalResultsCount = facultyResults.length + pageResults.length + qaResults.length + eventResults.length;
 
     return (
-        <div className="min-h-screen bg-slate-50] transition-colors duration-300">
+        <div className="min-h-screen bg-slate-50 transition-colors duration-300">
             <SEO 
                 title={query ? `Search Results for "${query}"` : "Search"} 
                 description="Search for courses, departments, faculty, and academic resources at Maharaja Surajmal Institute of Technology. Find the information you need quickly today." 
@@ -60,7 +31,7 @@ const SearchPage = () => {
                 breadcrumbs={[{ label: 'Search' }]}
             />
             <div className="max-w-5xl mx-auto px-4 py-12">
-                <div className="bg-white] rounded-3xl shadow-card border border-slate-100 p-8 md:p-12 mb-8">
+                <div className="bg-white rounded-3xl shadow-card border border-slate-100 p-8 md:p-12 mb-8">
 
                     {query ? (
                         <div className="space-y-8">
@@ -103,7 +74,7 @@ const SearchPage = () => {
                                                     <Link 
                                                         key={idx} 
                                                         to={f.url} 
-                                                        className="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-sm transition-all group bg-slate-50/50]"
+                                                        className="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-sm transition-all group bg-slate-50/50"
                                                     >
                                                         <div className="flex items-center gap-3">
                                                             <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-blue-100 group-hover:text-blue-600 transition-colors">
@@ -132,7 +103,7 @@ const SearchPage = () => {
                                                     <Link 
                                                         key={idx} 
                                                         to={p.url} 
-                                                        className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-sm text-slate-700 hover:text-primary transition-all bg-slate-50/50] group"
+                                                        className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-sm text-slate-700 hover:text-primary transition-all bg-slate-50/50 group"
                                                     >
                                                         <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors shrink-0">
                                                             <Hash size={14} />
@@ -155,7 +126,7 @@ const SearchPage = () => {
                                                     <Link 
                                                         key={idx} 
                                                         to={ev.url} 
-                                                        className="flex flex-col justify-between p-5 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-sm transition-all group bg-slate-50/50]"
+                                                        className="flex flex-col justify-between p-5 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-sm transition-all group bg-slate-50/50"
                                                     >
                                                         <div>
                                                             <div className="flex items-center justify-between gap-2 mb-2">

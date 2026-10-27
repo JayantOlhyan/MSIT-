@@ -1,5 +1,38 @@
 import { facultyMembers } from './facultyData.js';
 import { pagesData } from './pagesData.js';
+import { labData, campusInfrastructure } from './facilitiesData.js';
+import { tourLocations } from './virtualTourData.js';
+import { societiesData } from './societiesData.js';
+import { slugify, createSlugifier } from '../utils/slugify.js';
+
+/**
+ * Strips HTML tags, decodes common entities, and normalizes whitespace.
+ */
+function stripHtml(html) {
+    if (!html || typeof html !== 'string') return '';
+    return html
+        .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+/**
+ * Helper to limit plain text to ~1,200 chars for index compactness
+ */
+function truncateText(text, limit = 1200) {
+    if (!text) return '';
+    const clean = text.replace(/\s+/g, ' ').trim();
+    if (clean.length <= limit) return clean;
+    return clean.slice(0, limit);
+}
 
 /**
  * Static core routes for primary site navigation
@@ -34,36 +67,188 @@ const staticPages = [
     { title: "Student Discipline Committee", url: "/discipline", keywords: "discipline, rules, conduct, behavior, suspension, code of conduct" },
     { title: "Student Grievance Redressal Committee (SGRC)", url: "/student-grievance", keywords: "grievance, sgrc, complaint, academic, marks, fee, harassment, ombudsman, aicte" },
     { title: "Meet the Core Team", url: "/team", keywords: "team, developers, project, creators, website, jayant, pawan, abhay" },
-    { title: "Website Sitemap", url: "/sitemap", keywords: "sitemap, directory, index, all pages, navigation" },
-    { title: "Global Search Portal", url: "/search", keywords: "search, find, query, search page, lookup, directory" }
+    { title: "Website Sitemap", url: "/sitemap", keywords: "sitemap, directory, index, all pages, navigation" }
 ];
 
 /**
- * Dynamically generated page index from pagesData
+ * Builds page and section entries from pagesData
  */
-const dynamicPages = Object.entries(pagesData).map(([slug, data]) => ({
-    title: data.title,
-    url: `/${slug}`,
-    keywords: [
-        data.title,
-        data.subtitle,
-        data.category,
-        data.seo_description,
-        ...(data.bulletPoints || []).map(b => (typeof b === 'string' ? b : `${b.label || ''} ${b.detail || ''}`))
-    ].filter(Boolean).join(", ").toLowerCase()
+const dynamicPages = [];
+const dynamicSections = [];
+
+Object.entries(pagesData).forEach(([slug, data]) => {
+    const rawContent = data.content || '';
+    const plainBody = stripHtml(rawContent);
+
+    // 1. Whole Page Entry
+    dynamicPages.push({
+        title: data.title,
+        url: `/${slug}`,
+        keywords: [
+            data.title,
+            data.subtitle,
+            data.category,
+            data.seo_description,
+            ...(data.bulletPoints || []).map(b => (typeof b === 'string' ? b : `${b.label || ''} ${b.detail || ''}`))
+        ].filter(Boolean).join(", ").toLowerCase(),
+        body: truncateText(plainBody)
+    });
+
+    // 2. Headings Entries (<h3> / <h4>)
+    if (rawContent) {
+        const getSlug = createSlugifier();
+        // Regex matches each h3 or h4 block and its content until the next heading or end
+        const headingRegex = /<(h[34])(?:\s+[^>]*)?>([\s\S]*?)<\/\1>([\s\S]*?)(?=(?:<h[34]|\s*$))/gi;
+        let match;
+        while ((match = headingRegex.exec(rawContent)) !== null) {
+            const rawHeading = match[2];
+            const sectionContent = match[3];
+            const headingText = stripHtml(rawHeading);
+            if (!headingText) continue;
+
+            const anchorId = getSlug(headingText);
+            const sectionBody = stripHtml(sectionContent);
+
+            dynamicSections.push({
+                title: `${headingText} · ${data.title}`,
+                url: `/${slug}#${anchorId}`,
+                keywords: [headingText, data.title, data.category].filter(Boolean).join(", ").toLowerCase(),
+                body: truncateText(`${headingText}. ${sectionBody}`)
+            });
+        }
+    }
+});
+
+/**
+ * Facilities & Infrastructure Entries
+ */
+const facilityEntries = [
+    // Library
+    {
+        title: "Central Library · Campus Facilities",
+        url: "/facilities?tab=library#central-library",
+        keywords: "central library, library, books, reading room, koha, opac, journals, book bank, ndli",
+        body: truncateText(`${campusInfrastructure.library.title}. ${campusInfrastructure.library.description} ${campusInfrastructure.library.features.join('. ')}`)
+    },
+    // Hostel
+    {
+        title: "Hostel Accommodation · Campus Facilities",
+        url: "/facilities?tab=library#hostel",
+        keywords: "hostel, boys hostel, girls hostel, accommodation, residential, mess, rooms",
+        body: truncateText(`${campusInfrastructure.hostel.title}. ${campusInfrastructure.hostel.description} ${campusInfrastructure.hostel.amenities.join('. ')}`)
+    },
+    // Sports Grounds
+    {
+        title: "Sports & Athletic Grounds · Campus Facilities",
+        url: "/facilities?tab=library#sports",
+        keywords: "sports, grounds, football, cricket, basketball, volleyball, badminton, athletics, sphurti, playground",
+        body: truncateText(`${campusInfrastructure.sports.title}. ${campusInfrastructure.sports.description} ${campusInfrastructure.sports.facilities.join('. ')}`)
+    },
+    // Medical Center
+    {
+        title: "Campus Medical Room & Emergency Care · Facilities",
+        url: "/facilities?tab=library#medical",
+        keywords: "medical, emergency, health care, doctor, first aid, clinic, ambulance, hospital",
+        body: truncateText(`${campusInfrastructure.medical.title}. ${campusInfrastructure.medical.description} ${campusInfrastructure.medical.facilities.join('. ')}`)
+    },
+    // Canteen
+    {
+        title: "Campus Canteen & Cafeteria",
+        url: "/virtual-tour#tree-shaded-canteen-and-food-kiosk",
+        keywords: "canteen, cafeteria, food, meals, snacks, mess, dining, kiosk, tea",
+        body: truncateText(`${campusInfrastructure.canteen.description} Capacity: ${campusInfrastructure.canteen.capacity}. Tree-shaded campus food kiosk offering wholesome meals, refreshments and snacks.`)
+    },
+    // Banking & ATM
+    {
+        title: "On-Campus Banking & ATM · Facilities",
+        url: "/facilities?tab=library",
+        keywords: "bank, banking, atm, cash, financial, transaction",
+        body: truncateText(`${campusInfrastructure.banking.name}. ${campusInfrastructure.banking.description}`)
+    }
+];
+
+/**
+ * Lab Entries from labData
+ */
+const labEntries = labData.map(lab => ({
+    title: `${lab.name} (${lab.labNo}) · Facilities`,
+    url: `/facilities?tab=labs#${lab.id}`,
+    keywords: [lab.name, lab.labNo, lab.dept, ...(lab.software || []), ...(lab.subjects || []).map(s => `${s.code} ${s.name}`)].filter(Boolean).join(", ").toLowerCase(),
+    body: truncateText(`${lab.name} ${lab.labNo} ${lab.dept}. ${lab.description} Config: ${lab.systemConfig?.desktop || ''} ${lab.systemConfig?.server || ''} Software: ${(lab.software || []).join(', ')}`)
 }));
 
-// Combine static & dynamic pages, deduplicating by URL
+/**
+ * Virtual Tour Hotspot Entries
+ */
+const tourEntries = tourLocations.map(loc => ({
+    title: `${loc.title} · Virtual Tour`,
+    url: `/virtual-tour#${slugify(loc.title)}`,
+    keywords: [loc.title, loc.category, ...(loc.highlights || [])].filter(Boolean).join(", ").toLowerCase(),
+    body: truncateText(`${loc.title} (${loc.category}). ${loc.description} ${loc.highlights.join('. ')}`)
+}));
+
+/**
+ * Society Section Entries
+ */
+const societySectionEntries = [];
+Object.entries(societiesData).forEach(([socSlug, soc]) => {
+    // About
+    if (soc.detailedAbout || soc.overview) {
+        societySectionEntries.push({
+            title: `About ${soc.name}`,
+            url: `/${socSlug}#about`,
+            keywords: `${soc.name}, ${soc.shortName}, about, overview`,
+            body: truncateText(`${soc.name}. ${soc.overview || ''} ${soc.detailedAbout || ''}`)
+        });
+    }
+    // Objectives
+    if (soc.objectives && soc.objectives.length > 0) {
+        societySectionEntries.push({
+            title: `Objectives · ${soc.name}`,
+            url: `/${socSlug}#objectives`,
+            keywords: `${soc.name}, objectives, mission, vision`,
+            body: truncateText(`${soc.name} Objectives: ${soc.objectives.join('. ')}`)
+        });
+    }
+    // Events
+    if (soc.events && soc.events.length > 0) {
+        societySectionEntries.push({
+            title: `Events · ${soc.name}`,
+            url: `/${socSlug}#events`,
+            keywords: `${soc.name}, events, hackathons, workshops`,
+            body: truncateText(`${soc.name} Events: ${soc.events.map(e => `${e.title || ''} ${e.desc || ''}`).join('. ')}`)
+        });
+    }
+    // People
+    if (soc.people) {
+        societySectionEntries.push({
+            title: `People & Team · ${soc.name}`,
+            url: `/${socSlug}#people`,
+            keywords: `${soc.name}, people, team, coordinators, president`,
+            body: truncateText(`${soc.name} Coordinators: Faculty ${soc.people.faculty?.name || ''}, Student ${soc.people.student?.name || ''}`)
+        });
+    }
+});
+
+// Combine static & dynamic pages and sections, deduplicating by URL
 const pageMap = new Map();
-[...staticPages, ...dynamicPages].forEach(page => {
+[
+    ...staticPages,
+    ...dynamicPages,
+    ...dynamicSections,
+    ...facilityEntries,
+    ...labEntries,
+    ...tourEntries,
+    ...societySectionEntries
+].forEach(page => {
     if (!pageMap.has(page.url)) {
         pageMap.set(page.url, page);
     } else {
-        // Merge keywords if already exists
         const existing = pageMap.get(page.url);
         pageMap.set(page.url, {
             ...existing,
-            keywords: `${existing.keywords}, ${page.keywords}`
+            keywords: `${existing.keywords || ''}, ${page.keywords || ''}`,
+            body: existing.body || page.body || ''
         });
     }
 });
@@ -72,6 +257,7 @@ const generatedPages = Array.from(pageMap.values());
 
 /**
  * Dynamically generated faculty index from facultyData.js
+ * REMOVED f.bio from keywords to prevent spurious substring matches (e.g., "background")
  */
 const generatedFaculty = facultyMembers.map(f => ({
     id: f.id,
@@ -86,8 +272,7 @@ const generatedFaculty = facultyMembers.map(f => ({
         f.dept,
         f.email,
         f.qual,
-        ...(f.goodAt || []),
-        f.bio
+        ...(f.goodAt || [])
     ].filter(Boolean).join(" ").toLowerCase()
 }));
 
@@ -158,43 +343,43 @@ export const searchEvents = [
     },
     {
         id: 14,
-        title: "Admissions Open for B.Tech Batch 2026–30: Information Brochure & Counseling Schedule",
-        label: "ADMISSIONS",
-        category: "Admissions",
-        date: "APR 02, 2026",
-        url: "/brochure",
-        summary: "Complete admission guidelines, seat matrix for 1st & 2nd shift programs, GGSIPU CET / JEE Main cutoff trends, and online application portal are now active.",
-        keywords: "admissions, brochure, bulletin, jee main, cutoff, seat matrix, eligibility, counseling"
+        title: "Comprehensive Student Attendance Mandate under GGSIPU Ordinance 11 Released",
+        label: "NOTICES",
+        category: "Notices",
+        date: "MAR 10, 2026",
+        url: "/attendance",
+        summary: "Statutory 75% attendance threshold notification issued. Strict advisory regarding university examination debarment, medical leave verification, and detention procedures.",
+        keywords: "attendance, 75%, detention, notices, ordinance 11, rules, eligibility, admit card"
     },
     {
         id: 15,
-        title: "MSIT Merit-cum-Means Scholarships & Financial Assistance Schemes Announced for 2026-27",
-        label: "ADMISSIONS",
-        category: "Admissions",
-        date: "MAR 12, 2026",
-        url: "/scholarships",
-        summary: "Institutional scholarships, EWS fee waivers, and Delhi Government financial assistance portals open with awards up to 100% tuition coverage for deserving scholars.",
-        keywords: "admissions, scholarships, fee waiver, financial aid, ews, merit, assistance"
+        title: "Annual Mega Placement Drive: 850+ Offers Recorded, Top CTC Reaches 52 LPA",
+        label: "CAREERS",
+        category: "Placements",
+        date: "FEB 28, 2026",
+        url: "/placements",
+        summary: "Major recruiters including Google, Amazon, Atlassian, Adobe, and Infosys visit MSIT campus for 2026 batch recruitment with record packages.",
+        keywords: "placements, jobs, offers, ctc, recruit, companies, amazon, google, highest package"
     },
     {
         id: 16,
-        title: "MSIT 2026 Placement Season Reaches ₹1.2 Cr International Offer & 95%+ Placement Rate",
-        label: "PLACEMENTS",
-        category: "Placements",
-        date: "MAR 28, 2026",
-        url: "/placements",
-        summary: "Over 250+ top global recruiters including Google, Amazon, Microsoft, Apple, and ION Trading extend 850+ job offers to graduating engineers.",
-        keywords: "placements, jobs, offers, highest package, google, microsoft, apple, salary, lpa"
+        title: "Avensis 2026: North India's Premier Technical & Robotics Symposium Kicks Off",
+        label: "EVENT",
+        category: "Events",
+        date: "APR 15, 2026",
+        url: "/events",
+        summary: "Over 5,000 engineering students from across the country compete in 30+ cutting-edge technical events, hackathons, and robo-wars at MSIT campus.",
+        keywords: "events, avensis, fest, technical, hackathon, competition, robo-wars, festival"
     },
     {
         id: 17,
-        title: "Summer Internship Drive 2026: 180+ Pre-Placement Offers (PPOs) Bagged by 3rd-Year Engineers",
-        label: "PLACEMENTS",
-        category: "Placements",
-        date: "FEB 20, 2026",
-        url: "/internship-cell",
-        summary: "MSIT Training & Placement Cell concludes high-stipend corporate internship hiring with premier software, semiconductor, and fintech firms.",
-        keywords: "placements, internship, ppo, stipend, training, cell, recruitment"
+        title: "Genesis 2026: Annual Cultural & Arts Extravaganza Scheduled for April 22-23",
+        label: "EVENT",
+        category: "Events",
+        date: "APR 22, 2026",
+        url: "/events",
+        summary: "MSIT's celebrated cultural extravaganza returns featuring star celebrity night, battle of the bands, classical dances, street theatre, and creative exhibitions.",
+        keywords: "events, genesis, cultural, fest, dance, music, celebrity, festival, battle of bands"
     },
     {
         id: 18,

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp, Bell, House } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { searchIndex } from '../data/searchIndex';
+import { searchSite } from '../search/searchSite';
 import { useAccessibility } from '../context/AccessibilityContext';
 
 const Header = () => {
@@ -81,42 +81,17 @@ const Header = () => {
     const handleSearch = (query) => {
         setSearchQuery(query);
         if (!query.trim()) {
-            setSearchResults({ faculty: [], pages: [], qa: [] });
+            setSearchResults({ faculty: [], pages: [], qa: [], events: [] });
             return;
         }
 
-        const lQuery = query.toLowerCase();
-
-        const facultyMatches = searchIndex.faculty.filter(f =>
-            f.name.toLowerCase().includes(lQuery) ||
-            f.dept.toLowerCase().includes(lQuery) ||
-            f.role.toLowerCase().includes(lQuery) ||
-            (f.keywords && f.keywords.includes(lQuery))
-        );
-
-        const pageMatches = searchIndex.pages.filter(p =>
-            p.title.toLowerCase().includes(lQuery) ||
-            p.keywords.toLowerCase().includes(lQuery)
-        );
-
-        const qaMatches = searchIndex.qa.filter(q =>
-            q.q.toLowerCase().includes(lQuery) ||
-            q.keywords.toLowerCase().includes(lQuery)
-        );
-
-        const eventMatches = searchIndex.events ? searchIndex.events.filter(e =>
-            e.title.toLowerCase().includes(lQuery) ||
-            e.label.toLowerCase().includes(lQuery) ||
-            (e.category && e.category.toLowerCase().includes(lQuery)) ||
-            (e.summary && e.summary.toLowerCase().includes(lQuery)) ||
-            (e.keywords && e.keywords.toLowerCase().includes(lQuery))
-        ) : [];
+        const siteResults = searchSite(query);
 
         setSearchResults({
-            faculty: facultyMatches.slice(0, 3),
-            pages: pageMatches.slice(0, 4),
-            qa: qaMatches.slice(0, 2),
-            events: eventMatches.slice(0, 3)
+            faculty: (siteResults.faculty || []).slice(0, 3),
+            pages: (siteResults.pages || []).slice(0, 4),
+            qa: (siteResults.qa || []).slice(0, 2),
+            events: (siteResults.events || []).slice(0, 3)
         });
     };
 
@@ -189,8 +164,8 @@ const Header = () => {
     const isTransparent = isHomePage && !isScrolled && !isMenuOpen;
 
     const headerContainerClass = isHomePage
-        ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white]/95 shadow-card py-1'}`
-        : `sticky top-0 z-[60] w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white]/95 shadow-card py-1' : 'bg-white/95]/90 backdrop-blur-md py-2'}`;
+        ? `fixed top-0 left-0 w-full z-[60] transition-colors duration-300 ${isTransparent ? 'bg-transparent' : 'bg-white/95 shadow-card py-1'}`
+        : `sticky top-0 z-[60] w-full transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/95 shadow-card py-1' : 'bg-white/95 backdrop-blur-md py-2'}`;
 
     const isPathActive = (path) => location.pathname === path;
     const isCategoryActive = (categoryKey) => {
@@ -236,7 +211,7 @@ const Header = () => {
                 {/* Tier 1: Persistent Branding & Utility Bar (Transparent on Home, White on Scroll) */}
                 <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 relative z-20 ${isTransparent
                         ? 'bg-transparent'
-                        : 'bg-white] text-title'
+                        : 'bg-white text-title'
                     }`}>
                     <div className="w-full max-w-screen-2xl mx-auto flex justify-between items-center">
                         {/* Logo Area */}
@@ -303,7 +278,7 @@ const Header = () => {
                 <div
                     className={`transition-all duration-300 px-4 lg:px-6 xl:px-12 ${isTransparent
                             ? 'bg-transparent py-3'
-                            : 'bg-white] py-1.5'
+                            : 'bg-white py-1.5'
                         }`}
                 >
                     <div className="w-full max-w-screen-2xl mx-auto">
@@ -333,7 +308,7 @@ const Header = () => {
 
                                         <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'
                                             }`}>
-                                            <div className="bg-white] shadow-card rounded-xl border border-slate-100 p-6 w-80">
+                                            <div className="bg-white shadow-card rounded-xl border border-slate-100 p-6 w-80">
                                                 <div className="flex flex-col space-y-3.5">
                                                      {megaMenuData[key]?.map((link, i) => {
                                                          if (link.subItems) {
@@ -400,7 +375,7 @@ const Header = () => {
 
             {/* Mobile Nav Overlay (Smooth Sliding Drawer - iPhone & WebKit Optimized) */}
             <div 
-                className={`fixed inset-0 z-[55] bg-white] text-slate-900 overflow-y-auto block xl:hidden transition-all duration-300 ease-out pt-32 pb-16 ${
+                className={`fixed inset-0 z-[55] bg-white text-slate-900 overflow-y-auto block xl:hidden transition-all duration-300 ease-out pt-32 pb-16 ${
                     isMenuOpen 
                         ? 'opacity-100 visible pointer-events-auto translate-y-0' 
                         : 'opacity-0 invisible pointer-events-none -translate-y-4'
@@ -506,10 +481,10 @@ const Header = () => {
             {/* Search Modal */}
             {searchOpen && (
                 <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[100] flex items-start justify-center pt-16 sm:pt-24 px-4 animate-fade-in" onClick={toggleSearch}>
-                    <div className="bg-white] rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up relative border border-slate-100" onClick={(e) => e.stopPropagation()}>
+                    <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up relative border border-slate-100" onClick={(e) => e.stopPropagation()}>
                         
                         {/* Search Input Bar */}
-                        <div className="p-5 sm:p-6 border-b border-slate-100 flex items-center gap-4 bg-white] relative z-10">
+                        <div className="p-5 sm:p-6 border-b border-slate-100 flex items-center gap-4 bg-white relative z-10">
                             <div className="w-10 h-10 rounded-xl bg-blue-50/80 flex items-center justify-center text-primary shrink-0">
                                 <Search className="w-5 h-5" />
                             </div>
@@ -540,7 +515,7 @@ const Header = () => {
                         </div>
 
                         {/* Popular Suggestion Chips */}
-                        <div className="px-6 py-3 bg-slate-50/60] border-b border-slate-100 flex items-center gap-2 overflow-x-auto scrollbar-hide text-xs font-semibold">
+                        <div className="px-6 py-3 bg-slate-50/60 border-b border-slate-100 flex items-center gap-2 overflow-x-auto scrollbar-hide text-xs font-semibold">
                             <span className="text-slate-400 font-bold uppercase tracking-wider text-[10px] shrink-0 mr-1">Try Searching:</span>
                             {[
                                 { label: '👨‍🏫 Faculty Directory', query: 'Faculty' },
@@ -553,7 +528,7 @@ const Header = () => {
                                 <button
                                     key={idx}
                                     onClick={() => handleSearch(tag.query)}
-                                    className="px-3 py-1.5 rounded-full bg-white] border border-slate-200/80 text-slate-700 hover:text-primary hover:border-blue-300 hover:bg-blue-50/50 transition-all whitespace-nowrap shadow-2xs shrink-0 cursor-pointer"
+                                    className="px-3 py-1.5 rounded-full bg-white border border-slate-200/80 text-slate-700 hover:text-primary hover:border-blue-300 hover:bg-blue-50/50 transition-all whitespace-nowrap shadow-2xs shrink-0 cursor-pointer"
                                 >
                                     {tag.label}
                                 </button>
@@ -582,7 +557,7 @@ const Header = () => {
                                                 key={item.name} 
                                                 to={item.url} 
                                                 onClick={toggleSearch} 
-                                                className="flex items-center justify-between p-4 rounded-2xl bg-white] border border-slate-200/70 hover:border-blue-300 hover:shadow-card hover:bg-blue-50/30 transition-all duration-300 group cursor-pointer"
+                                                className="flex items-center justify-between p-4 rounded-2xl bg-white border border-slate-200/70 hover:border-blue-300 hover:shadow-card hover:bg-blue-50/30 transition-all duration-300 group cursor-pointer"
                                             >
                                                 <div className="flex items-center gap-3.5 min-w-0">
                                                     <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${item.bg} group-hover:scale-105 transition-transform shrink-0 shadow-2xs`}>
@@ -637,7 +612,7 @@ const Header = () => {
                                                         key={i} 
                                                         to={f.url} 
                                                         onClick={toggleSearch} 
-                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white] border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 hover:shadow-card transition-all duration-300 group"
+                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 hover:shadow-card transition-all duration-300 group"
                                                     >
                                                         <div className="flex items-center gap-3.5">
                                                             <div className="w-11 h-11 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shrink-0 group-hover:border-primary/40 transition-colors">
@@ -679,7 +654,7 @@ const Header = () => {
                                                         key={i} 
                                                         to={p.url} 
                                                         onClick={toggleSearch} 
-                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white] border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 hover:shadow-card text-slate-700 hover:text-primary transition-all duration-300 group"
+                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 hover:shadow-card text-slate-700 hover:text-primary transition-all duration-300 group"
                                                     >
                                                         <div className="flex items-center gap-3">
                                                             <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:text-primary transition-colors shrink-0">
@@ -711,7 +686,7 @@ const Header = () => {
                                                         key={i} 
                                                         to={ev.url} 
                                                         onClick={toggleSearch} 
-                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white] border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 hover:shadow-card transition-all duration-300 group"
+                                                        className="flex items-center justify-between p-3.5 rounded-2xl bg-white border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 hover:shadow-card transition-all duration-300 group"
                                                     >
                                                         <div className="min-w-0 pr-3">
                                                             <div className="flex items-center gap-2 mb-1">
@@ -732,7 +707,7 @@ const Header = () => {
                                     )}
 
                                     {searchResults.faculty.length === 0 && searchResults.pages.length === 0 && searchResults.qa.length === 0 && (!searchResults.events || searchResults.events.length === 0) && (
-                                        <div className="text-center py-12 bg-slate-50/50]/50 rounded-2xl border border-dashed border-slate-200">
+                                        <div className="text-center py-12 bg-slate-50/50 rounded-2xl border border-dashed border-slate-200">
                                             <Search className="w-12 h-12 text-slate-300 mx-auto mb-3" />
                                             <h3 className="text-base font-bold text-slate-800 mb-1">No matches found</h3>
                                             <p className="text-slate-400 text-xs font-normal max-w-sm mx-auto">We couldn't find anything matching "{searchQuery}". Check for typos or try searching a department like 'CSE' or 'Placements'.</p>
@@ -743,7 +718,7 @@ const Header = () => {
                         </div>
 
                         {/* Footer Bar */}
-                        <div className="p-4 bg-slate-50/80] border-t border-slate-100 flex items-center justify-between px-6 text-xs text-slate-500">
+                        <div className="p-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between px-6 text-xs text-slate-500">
                             <div className="flex items-center gap-2 font-medium">
                                 <HelpCircle size={14} className="text-blue-500" />
                                 <span>Searching <strong>125+ Faculty</strong> &amp; <strong>37+ Pages</strong></span>
