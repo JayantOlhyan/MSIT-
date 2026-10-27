@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp, Bell } from 'lucide-react';
+import { Menu, X, Search, ChevronDown, ChevronRight, ArrowRight, User, Book, Hash, HelpCircle, MessageSquare, TrendingUp, Bell, House } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { searchIndex } from '../data/searchIndex';
 import { useAccessibility } from '../context/AccessibilityContext';
@@ -128,7 +128,6 @@ const Header = () => {
             { name: "Governing Body", url: "/govern" },
             { name: "From The Desk", url: "/fromdesk" },
             { name: "Campus & Facilities", url: "/facilities" },
-            { name: "Library Portal", url: "http://library.msit.in/", external: true },
             { name: "Surajmal Memorial Education Society", url: "/smes" }
         ],
         admission: [
@@ -177,6 +176,15 @@ const Header = () => {
         ]
     };
 
+    // Thin strip above the header; links open the official pages on msit.in.
+    const topStripLinks = [
+        { name: "Affiliation/Accreditation", url: "https://msit.in/affiliation" },
+        { name: "IQAC/NAAC", url: "https://msit.in/iqac" },
+        { name: "Audit Reports", url: "https://msit.in/reports" },
+        { name: "NIRF", url: "https://msit.in/nirf" },
+        { name: "Mandatory Disclosure", url: "https://msit.in/aicte#mandatory-disclosure" }
+    ];
+
     const isHomePage = location.pathname === '/';
     const isTransparent = isHomePage && !isScrolled && !isMenuOpen;
 
@@ -209,6 +217,22 @@ const Header = () => {
         <>
             <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
             <header role="navigation" className={`${headerContainerClass} flex flex-col`}>
+                {/* Tier 0: Institutional links strip */}
+                <div className="bg-primary-dark text-white/85 text-[11px] sm:text-xs font-semibold tracking-wide px-4 lg:px-6 xl:px-12 relative z-30">
+                    <div className="w-full max-w-screen-2xl mx-auto flex items-center h-8 overflow-x-auto scrollbar-hide whitespace-nowrap">
+                        <nav aria-label="Institutional links" className="flex items-center">
+                            {topStripLinks.map((link, i) => (
+                                <span key={link.url} className="flex items-center">
+                                    {i > 0 && <span className="mx-3 h-3 w-px bg-white/25" aria-hidden="true"></span>}
+                                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline underline-offset-4 transition-colors">
+                                        {link.name}
+                                    </a>
+                                </span>
+                            ))}
+                        </nav>
+                    </div>
+                </div>
+
                 {/* Tier 1: Persistent Branding & Utility Bar (Transparent on Home, White on Scroll) */}
                 <div className={`transition-all duration-300 py-3 px-4 lg:px-6 xl:px-12 relative z-20 ${isTransparent
                         ? 'bg-transparent'
@@ -249,7 +273,7 @@ const Header = () => {
                                             : 'bg-primary text-white hover:bg-[#153a7a] hover:scale-105 active:scale-95 shadow-md shadow-blue-900/10'
                                         }`}
                                 >
-                                    Apply Now
+                                    Admissions
                                 </a>
                             </div>
                             <div className={`w-px h-3 mx-2 ${isTransparent ? 'bg-white/20' : 'bg-slate-200'}`}></div>
@@ -283,7 +307,13 @@ const Header = () => {
                         }`}
                 >
                     <div className="w-full max-w-screen-2xl mx-auto">
-                        <nav className="hidden xl:flex justify-center items-center space-x-10 text-sm">
+                        <nav className="hidden xl:flex justify-center items-center space-x-7 text-[13px]">
+                            <Link to="/" aria-label="Home" title="Home" className={`flex items-center transition-colors shrink-0 py-1 ${isPathActive('/')
+                                    ? (isTransparent ? 'text-white' : 'text-primary')
+                                    : (isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary')
+                                }`}>
+                                <House className="w-4 h-4" />
+                            </Link>
                             {['About', 'Admission & Aid', 'Academics', 'Life at MSIT', 'Placements', 'Student Portal'].map((item, idx) => {
                                 const key = item.split(' ')[0].toLowerCase();
                                 return (
@@ -298,7 +328,7 @@ const Header = () => {
                                                 : (isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary')
                                             }`}>
                                             {item}
-                                            <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 shrink-0 ${isCategoryActive(key) ? (isTransparent ? 'text-white' : 'text-primary') : (isTransparent ? 'text-white/60' : 'text-slate-400')}`} />
+                                            <ChevronDown className={`w-3 h-3 transition-all duration-300 shrink-0 ${isCategoryActive(key) ? (isTransparent ? 'text-white' : 'text-primary') : (isTransparent ? 'text-white/60' : 'text-slate-400')}`} />
                                         </button>
 
                                         <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 cursor-default transition-all duration-300 origin-top pointer-events-auto ${activeDropdown === key ? 'opacity-100 scale-100 translate-y-0 visible text-left' : 'opacity-0 scale-95 -translate-y-2 invisible'
@@ -350,6 +380,9 @@ const Header = () => {
                                     </div>
                                 );
                             })}
+                            <a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary'}`}>
+                                Library
+                            </a>
                             <Link to="/contact" className={`font-bold uppercase tracking-wider transition-colors whitespace-nowrap shrink-0 relative py-1 ${isPathActive('/contact')
                                     ? (isTransparent ? 'text-white' : 'text-primary')
                                     : (isTransparent ? 'text-white hover:text-blue-200' : 'text-title hover:text-primary')
@@ -367,7 +400,7 @@ const Header = () => {
 
             {/* Mobile Nav Overlay (Smooth Sliding Drawer - iPhone & WebKit Optimized) */}
             <div 
-                className={`fixed inset-0 z-[55] bg-white] text-slate-900 overflow-y-auto block xl:hidden transition-all duration-300 ease-out pt-24 pb-16 ${
+                className={`fixed inset-0 z-[55] bg-white] text-slate-900 overflow-y-auto block xl:hidden transition-all duration-300 ease-out pt-32 pb-16 ${
                     isMenuOpen 
                         ? 'opacity-100 visible pointer-events-auto translate-y-0' 
                         : 'opacity-0 invisible pointer-events-none -translate-y-4'
@@ -442,6 +475,9 @@ const Header = () => {
                                 <Link to="/faculty" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
                                     Faculty Directory
                                 </Link>
+                                <a href="http://library.msit.in/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
+                                    Library
+                                </a>
                                 <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 px-4 text-base font-semibold text-slate-600 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors">
                                     Campus Mail
                                 </a>
@@ -459,7 +495,7 @@ const Header = () => {
                                 rel="noopener noreferrer"
                                 className="block w-full py-4 text-center rounded-2xl bg-slate-900 text-white font-bold text-base shadow-card hover:bg-slate-800 transition-all active:scale-95 cursor-pointer"
                             >
-                                Apply Now
+                                Admissions
                             </a>
                             <Link to="/virtual-tour" onClick={() => setIsMenuOpen(false)} className="w-full py-4 text-center rounded-2xl border-2 border-slate-200 text-slate-700 font-bold text-base hover:bg-slate-50 transition-all active:scale-95 cursor-pointer block">Visit Campus</Link>
                         </div>

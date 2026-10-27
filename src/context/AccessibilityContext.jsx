@@ -63,8 +63,8 @@ export const AccessibilityProvider = ({ children }) => {
         if (settings.reducedMotion) root.classList.add('acc-reduced-motion');
         else root.classList.remove('acc-reduced-motion');
         
-        // Handle text scaling
-        root.style.fontSize = settings.textScaling === 100 ? '' : `${settings.textScaling}%`;
+        // Handle text scaling (relative to the responsive base size in index.css)
+        root.style.fontSize = settings.textScaling === 100 ? '' : `calc(var(--base-font-size) * ${settings.textScaling / 100})`;
         
     }, [settings]);
 
