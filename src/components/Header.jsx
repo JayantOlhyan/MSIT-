@@ -192,14 +192,18 @@ const Header = () => {
         <>
             <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white text-blue-600 p-2 rounded z-[100]">Skip to main content</a>
             <header role="navigation" className={`${headerContainerClass} flex flex-col`}>
-                {/* Tier 0: Institutional links strip (Transparent, blends into background, crisp white font) */}
-                <div className="bg-transparent text-white text-[11px] sm:text-xs font-semibold tracking-wide px-4 lg:px-6 xl:px-12 relative z-30 drop-shadow-sm">
-                    <div className="w-full max-w-screen-2xl mx-auto flex items-center h-8 overflow-x-auto scrollbar-hide whitespace-nowrap">
+                {/* Tier 0: Institutional links strip (Transparent & seamlessly blended, stays at the top with pure white font) */}
+                <div className={`text-white text-[11px] sm:text-xs font-medium tracking-wide px-4 lg:px-6 xl:px-12 relative z-30 transition-colors duration-300 ${
+                    isTransparent 
+                        ? 'bg-transparent drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]' 
+                        : 'bg-primary-dark/95 backdrop-blur-md'
+                }`}>
+                    <div className="w-full max-w-screen-2xl mx-auto flex items-center h-7 sm:h-8 overflow-x-auto scrollbar-hide whitespace-nowrap">
                         <nav aria-label="Institutional links" className="flex items-center">
                             {topStripLinks.map((link, i) => (
                                 <span key={link.url} className="flex items-center">
-                                    {i > 0 && <span className="mx-3 h-3 w-px bg-white/30" aria-hidden="true"></span>}
-                                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200 hover:underline underline-offset-4 transition-colors">
+                                    {i > 0 && <span className="mx-3 h-3 w-px bg-white/20" aria-hidden="true"></span>}
+                                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 hover:underline underline-offset-4 transition-colors">
                                         {link.name}
                                     </a>
                                 </span>
