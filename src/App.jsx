@@ -29,8 +29,8 @@ const Team = lazy(() => import('./pages/Team'));
 const App = () => {
     return (
         <AccessibilityProvider>
-            <TransitionProvider>
-                <Router basename={import.meta.env.BASE_URL}>
+            <Router basename={import.meta.env.BASE_URL}>
+                <TransitionProvider>
                     <Suspense fallback={<SuspenseFallbackHandler message="Loading MSIT..." />}>
                         <Routes>
                             <Route path="/" element={<Layout />}>
@@ -56,8 +56,8 @@ const App = () => {
                             </Route>
                         </Routes>
                     </Suspense>
-                </Router>
-            </TransitionProvider>
+                </TransitionProvider>
+            </Router>
         </AccessibilityProvider>
     );
 };
