@@ -218,28 +218,28 @@ const newsDb = {
 
             <p class="mb-6 leading-relaxed">Gathering more than <strong>500+ top student developers, AI researchers, and engineering innovators</strong> from over 80+ universities across India, HackMSIT 1.0 is a high-energy 36-hour sprint dedicated to solving real-world challenges with bleeding-edge technology.</p>
 
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Hackathon Innovation Tracks</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Hackathon Innovation Tracks</h3>
             <p class="mb-4 leading-relaxed">Participants can build, hack, and pitch across four high-impact domains:</p>
-            <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600 dark:text-slate-300">
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600">
                 <li><strong>Artificial Intelligence & Autonomous Agents:</strong> Generative models, autonomous workflows, computer vision, and multi-modal assistants designed to elevate daily productivity and research.</li>
                 <li><strong>Web3 & Decentralized Infrastructure:</strong> Scalable dApps, decentralized identity, zero-knowledge verification, and cross-chain financial primitives.</li>
                 <li><strong>HealthTech & Assistive Technologies:</strong> Diagnostic intelligence, IoT health monitors, accessibility tools for differently-abled citizens, and telemedicine networks.</li>
                 <li><strong>Open Innovation & Smart Campus:</strong> Next-generation campus automation, sustainable resource tracking, clean mobility, and developer infrastructure.</li>
             </ul>
 
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Mentorship & Industry Keynotes</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Mentorship & Industry Keynotes</h3>
             <p class="mb-6 leading-relaxed">Throughout the 36-hour build window, teams will receive hands-on mentoring from senior software architects and technology leaders from Microsoft, GitHub, Devfolio, Google, and premier venture-backed startups. Interactive technical breakout sessions on prompt engineering, scalable cloud deployment, and system architecture will guide teams towards robust production prototypes.</p>
 
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Prizes, Bounties & Fast-Track Hiring</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Prizes, Bounties & Fast-Track Hiring</h3>
             <p class="mb-6 leading-relaxed">With a combined prize pool exceeding <strong>₹2,50,000 INR</strong>, winning teams take home substantial cash awards, Microsoft Azure and GitHub credits, exclusive swag kits, and interview fast-track opportunities with our corporate hiring partners:</p>
-            <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600 dark:text-slate-300">
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-600">
                 <li><strong>Overall Winner (1st Prize):</strong> ₹1,00,000 Cash Prize + ₹1.5L Cloud Credits + Winner Trophies</li>
                 <li><strong>1st Runner Up (2nd Prize):</strong> ₹60,000 Cash Prize + Cloud Credits + Certificates of Excellence</li>
                 <li><strong>2nd Runner Up (3rd Prize):</strong> ₹40,000 Cash Prize + Cloud Credits</li>
                 <li><strong>Track Champions & Special Bounties:</strong> ₹50,000 dedicated track prizes for Best All-Girls Team, Best Web3 Hack, and Most Innovative AI Prototype.</li>
             </ul>
 
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Event Schedule & Registration Details</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Event Schedule & Registration Details</h3>
             <p class="mb-6 leading-relaxed">Team registrations are open on the official Devfolio portal. Shortlisted finalists will receive confirmation letters with campus access passes. Accommodation, high-speed campus Wi-Fi, 24/7 snacks, and continuous power backup are fully arranged at the MSIT campus.</p>
         `,
         attachments: [
@@ -281,10 +281,10 @@ const newsDb = {
         content: `
             <p class="mb-6">The Office of the Dean of Academic Affairs at Maharaja Surajmal Institute of Technology has officially notified the approved <strong>Academic Calendar for the 2026 Academic Session</strong> in strict concordance with Guru Gobind Singh Indraprastha University (GGSIPU) statutory norms.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Semester Timelines & Key Deadlines</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Semester Timelines & Key Deadlines</h3>
             <p class="mb-6">The calendar schedules comprehensive instructional lecture weeks, continuous internal evaluation dates, laboratory project submissions, and preparatory study leaves leading directly into the university end-term practical and theory examinations.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Examination Ordinance & Attendance Thresholds</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Examination Ordinance & Attendance Thresholds</h3>
             <p class="mb-6">Students are reminded that the <strong>75% minimum attendance rule</strong> under GGSIPU Ordinance 11 is mandatory for appearing in mid-term and semester end-term tests. Departmental mentors and class coordinators will review bi-weekly attendance rosters.</p>
         `,
         attachments: [
@@ -308,7 +308,7 @@ const newsDb = {
         content: `
             <p class="mb-6">In accordance with the National Education Policy (NEP 2020) and AICTE Model Curriculum recommendations, MSIT has integrated enhanced departmental curricula across all 4 undergraduate engineering disciplines.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">New Advanced Elective Tracks</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">New Advanced Elective Tracks</h3>
             <ul class="list-disc pl-6 mb-6 space-y-2">
                 <li><strong>Generative AI & LLM Systems:</strong> Deep learning architectures, transformer attention models, and scalable GPU inference.</li>
                 <li><strong>Cloud Architecture & DevSecOps:</strong> Distributed systems design, Kubernetes orchestration, and automated CI/CD pipelines.</li>
@@ -336,10 +336,10 @@ const newsDb = {
         content: `
             <p class="mb-6">Maharaja Surajmal Institute of Technology, ranked consistently among the top tier engineering colleges affiliated with Guru Gobind Singh Indraprastha University (GGSIPU), announces admissions for the <strong>B.Tech Class of 2026–2030</strong>.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Programs Offered & Seat Matrix</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Programs Offered & Seat Matrix</h3>
             <p class="mb-6">Admissions are conducted across two shifts: <strong>First Shift (Morning)</strong> and <strong>Second Shift (Evening)</strong> across CSE, IT, ECE, and EEE programs with a total annual sanctioned intake of 840 seats.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Counseling & Eligibility Criteria</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Counseling & Eligibility Criteria</h3>
             <p class="mb-6">Candidates must qualify in JEE Main (Paper 1) conducted by the National Testing Agency (NTA) and register on the central GGSIPU online counseling portal. Detailed cutoff trends and seat reservation rules are provided in the official information brochure.</p>
         `,
         attachments: [
@@ -363,7 +363,7 @@ const newsDb = {
         content: `
             <p class="mb-6">Surajmal Memorial Education Society (SMES) and MSIT administration reinforce our enduring mission that financial constraints should never hinder academic excellence. The scholarship application window for academic year 2026-27 is now officially open.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Available Financial Aid Categories</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Available Financial Aid Categories</h3>
             <ul class="list-disc pl-6 mb-6 space-y-2">
                 <li><strong>SMES Merit-cum-Means Scholarship:</strong> Financial assistance for academically high-achieving students with family income under ₹2.5 LPA.</li>
                 <li><strong>Delhi Govt. Merit-cum-Means Scheme:</strong> Up to 100% tuition fee waiver for EWS category students and 50% waiver for eligible income slabs.</li>
@@ -389,10 +389,10 @@ const newsDb = {
         content: `
             <p class="mb-6">The Training and Placement Cell (T&P) of Maharaja Surajmal Institute of Technology is delighted to report record-breaking corporate hiring statistics for the graduating engineering batch of 2026.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Key Placement Milestones</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Key Placement Milestones</h3>
             <p class="mb-6">This season achieved an all-time peak international package of <strong>₹1.2 Crore per annum</strong>, an average package of <strong>₹8.5 LPA</strong>, and domestic top compensation reaching ₹45+ LPA. More than 250 marquee employers participated in on-campus and hybrid hiring rounds.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Prominent Recruiters</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Prominent Recruiters</h3>
             <p class="mb-6">Leading software engineering, quantitative finance, semiconductor, and consulting firms including Google, Microsoft, Amazon, Adobe, ION Trading, Postman, Samsung R&D, ZS Associates, and Cisco recruited extensively from MSIT.</p>
         `,
         attachments: [
@@ -414,7 +414,7 @@ const newsDb = {
         content: `
             <p class="mb-6">The MSIT Internship Cell has wrapped up its summer recruitment drive with 180+ pre-placement offers (PPOs) and high-stipend summer internships for pre-final year students.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Industry Exposure & Stipend Benchmarks</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Industry Exposure & Stipend Benchmarks</h3>
             <p class="mb-6">Students secured monthly stipends reaching up to <strong>₹1.5 Lakh per month</strong> across top-tier multinational software development labs, quant trading firms, and AI research startups.</p>
         `,
         attachments: [
@@ -436,7 +436,7 @@ const newsDb = {
         content: `
             <p class="mb-6">The Office of the Controller of Examinations has officially released the detailed datesheet for the <strong>End-Term Theory & Practical Examinations (May–June 2026)</strong> for all B.Tech branches.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Examination Hall Regulations</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Examination Hall Regulations</h3>
             <ul class="list-disc pl-6 mb-6 space-y-2">
                 <li>Candidates must carry their printed <strong>Admit Card</strong> along with their official Institute Identity Card.</li>
                 <li>Entry to examination halls closes strictly 15 minutes before exam commencement.</li>
@@ -463,7 +463,7 @@ const newsDb = {
         content: `
             <p class="mb-6">All students of B.Tech 1st, 2nd, 3rd, and 4th years are hereby notified that the minimum attendance requirement of <strong>75% in all registered theory and laboratory courses</strong> is statutory under GGSIPU Ordinance 11.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Medical Certificate Submission</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Medical Certificate Submission</h3>
             <p class="mb-6">Students whose attendance has been impacted by medical illness or hospitalization must submit authenticated medical certificates counter-signed by guardians to their respective department HODs within 7 working days.</p>
         `,
         attachments: [
@@ -485,7 +485,7 @@ const newsDb = {
         content: `
             <p class="mb-6">Maharaja Surajmal Institute of Technology congratulates faculty members, doctoral scholars, and undergraduate researchers for achieving a record milestone of <strong>45+ peer-reviewed publications</strong> in top-tier IEEE, Springer, Elsevier, and Scopus Q1 indexed journals during this academic cycle.</p>
             
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-10 mb-4">Interdisciplinary Breakthroughs</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Interdisciplinary Breakthroughs</h3>
             <p class="mb-6">Published investigations span high-impact domains including federated learning for privacy-preserving healthcare analytics, neuromorphic hardware accelerators, multi-agent reinforcement learning for UAV swarms, and high-efficiency perovskite photovoltaic materials.</p>
         `,
         attachments: [
@@ -511,7 +511,7 @@ const NewsDetail = () => {
     const item = localItem ? {
         ...dbItem,
         ...localItem,
-        content: (localItem.content && localItem.content.trim()) ? localItem.content : (dbItem.content || `<p class="text-slate-600 dark:text-slate-300 leading-relaxed font-medium">${localItem.summary || localItem.title}</p>`),
+        content: (localItem.content && localItem.content.trim()) ? localItem.content : (dbItem.content || `<p class="text-slate-600 leading-relaxed font-medium">${localItem.summary || localItem.title}</p>`),
         attachments: (localItem.attachments && localItem.attachments.length > 0) ? localItem.attachments : (dbItem.attachments || []),
         links: (localItem.links && localItem.links.length > 0) ? localItem.links : (dbItem.links || []),
         bgImage: localItem.bgImage || localItem.image || dbItem.bgImage || '/campus/main-academic-building.webp'
@@ -519,9 +519,9 @@ const NewsDetail = () => {
 
     if (!item) {
         return (
-            <main className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] flex flex-col items-center justify-center p-6 text-center">
-                <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Post Not Found</h1>
-                <p className="text-slate-500 dark:text-slate-400 mb-6">The news article or event story you are looking for does not exist.</p>
+            <main className="min-h-screen bg-slate-50] flex flex-col items-center justify-center p-6 text-center">
+                <h1 className="text-4xl font-bold text-slate-900 mb-4">Post Not Found</h1>
+                <p className="text-slate-500 mb-6">The news article or event story you are looking for does not exist.</p>
                 <Link to="/" className="px-6 py-3 bg-primary text-white font-bold rounded-xl transition-all shadow-md">
                     Back to Home
                 </Link>
@@ -530,7 +530,7 @@ const NewsDetail = () => {
     }
 
     return (
-        <main className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] transition-colors duration-300">
+        <main className="min-h-screen bg-slate-50] transition-colors duration-300">
             <SEO 
                 title={item.title} 
                 description={item.summary} 
@@ -554,9 +554,9 @@ const NewsDetail = () => {
                     
                     {/* Main Content Area */}
                     <div className="w-full lg:w-2/3">
-                        <div className="bg-white dark:bg-[#131c31] rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-white/10 shadow-sm">
+                        <div className="bg-white] rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm">
                             {/* Meta Bar */}
-                            <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-500 dark:text-slate-400 mb-8 border-b border-slate-100 dark:border-white/10 pb-6">
+                            <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-500 mb-8 border-b border-slate-100 pb-6">
                                 <span className="flex items-center gap-2">
                                     <Calendar className="w-4 h-4 text-primary" />
                                     {item.date}
@@ -573,13 +573,13 @@ const NewsDetail = () => {
                             </div>
 
                             {/* Heading */}
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight mb-8">
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-8">
                                 {item.title}
                             </h2>
 
                             {/* HTML Content */}
                             <article 
-                                className="prose prose-slate dark:prose-invert prose-lg max-w-none text-slate-600 dark:text-slate-300 leading-relaxed font-medium [&_h3]:dark:text-white [&_strong]:dark:text-white"
+                                className="prose prose-slate prose-lg max-w-none text-slate-600 leading-relaxed font-medium [&_h3]: [&_strong]:"
                                 dangerouslySetInnerHTML={{ __html: item.content }}
                             />
                         </div>
@@ -589,8 +589,8 @@ const NewsDetail = () => {
                     <div className="w-full lg:w-1/3 space-y-8">
                         {/* Attachments Section */}
                         {item.attachments && item.attachments.length > 0 && (
-                            <div className="bg-white dark:bg-[#131c31] rounded-3xl p-8 border border-slate-200 dark:border-white/10 shadow-sm">
-                                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2 border-b border-slate-100 dark:border-white/10 pb-4">
+                            <div className="bg-white] rounded-3xl p-8 border border-slate-200 shadow-sm">
+                                <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
                                     <FileText className="w-5 h-5 text-primary" />
                                     Official Attachments (PDFs)
                                 </h3>
@@ -602,13 +602,13 @@ const NewsDetail = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             download
-                                            className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-[#18233c] hover:bg-blue-50/50 dark:hover:bg-blue-950/40 border border-slate-200 dark:border-white/10 rounded-2xl group transition-all"
+                                            className="flex items-start gap-4 p-4 bg-slate-50] hover:bg-blue-50/50 border border-slate-200 rounded-2xl group transition-all"
                                         >
-                                            <div className="w-10 h-10 rounded-xl bg-red-100 dark:bg-red-950/50 flex items-center justify-center text-red-600 dark:text-red-400 shrink-0">
+                                            <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-red-600 shrink-0">
                                                 <Download className="w-5 h-5" />
                                             </div>
                                             <div className="flex-grow min-w-0">
-                                                <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 truncate group-hover:text-primary transition-colors">{file.name}</div>
+                                                <div className="text-sm font-semibold text-slate-800 truncate group-hover:text-primary transition-colors">{file.name}</div>
                                                 <div className="text-xs font-bold text-slate-400 mt-1 uppercase tracking-wider">{file.size}</div>
                                             </div>
                                         </a>
@@ -619,8 +619,8 @@ const NewsDetail = () => {
 
                         {/* Resource Links Section */}
                         {item.links && item.links.length > 0 && (
-                            <div className="bg-white dark:bg-[#131c31] rounded-3xl p-8 border border-slate-200 dark:border-white/10 shadow-sm">
-                                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2 border-b border-slate-100 dark:border-white/10 pb-4">
+                            <div className="bg-white] rounded-3xl p-8 border border-slate-200 shadow-sm">
+                                <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
                                     <Link2 className="w-5 h-5 text-primary" />
                                     Related Resources
                                 </h3>
@@ -632,7 +632,7 @@ const NewsDetail = () => {
                                                 href={link.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-3.5 bg-slate-50 dark:bg-[#18233c] hover:bg-blue-50/50 dark:hover:bg-blue-950/40 border border-slate-200 dark:border-white/10 rounded-xl group transition-all text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-blue-400"
+                                                className="flex items-center justify-between p-3.5 bg-slate-50] hover:bg-blue-50/50 border border-slate-200 rounded-xl group transition-all text-sm font-semibold text-slate-700 hover:text-primary"
                                             >
                                                 <span>{link.name}</span>
                                                 <Link2 className="w-4 h-4 text-slate-400 group-hover:text-primary" />
@@ -641,7 +641,7 @@ const NewsDetail = () => {
                                             <Link 
                                                 key={idx}
                                                 to={link.url}
-                                                className="flex items-center justify-between p-3.5 bg-slate-50 dark:bg-[#18233c] hover:bg-blue-50/50 dark:hover:bg-blue-950/40 border border-slate-200 dark:border-white/10 rounded-xl group transition-all text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-blue-400"
+                                                className="flex items-center justify-between p-3.5 bg-slate-50] hover:bg-blue-50/50 border border-slate-200 rounded-xl group transition-all text-sm font-semibold text-slate-700 hover:text-primary"
                                             >
                                                 <span>{link.name}</span>
                                                 <Link2 className="w-4 h-4 text-slate-400 group-hover:text-primary" />
@@ -653,7 +653,7 @@ const NewsDetail = () => {
                         )}
 
                         {/* Back To Home CTA */}
-                        <div className="p-8 rounded-3xl bg-slate-900 dark:bg-[#18233c] border border-transparent dark:border-white/10 text-white shadow-sm flex flex-col justify-between h-48">
+                        <div className="p-8 rounded-3xl bg-slate-900] border border-transparent text-white shadow-sm flex flex-col justify-between h-48">
                             <div>
                                 <h4 className="text-lg font-bold mb-2">Back to Newsroom</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed font-semibold">Want to read other college updates or look up active events?</p>

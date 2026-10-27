@@ -19,7 +19,6 @@ export const AccessibilityProvider = ({ children }) => {
                 focusHighlight: true,
                 highContrast: false,
                 reducedMotion: false,
-                darkMode: false,
                 textScaling: 100
             };
         }
@@ -29,7 +28,6 @@ export const AccessibilityProvider = ({ children }) => {
                 focusHighlight: true,
                 highContrast: false,
                 reducedMotion: false,
-                darkMode: false,
                 textScaling: 100 // Percentage
             };
         } catch {
@@ -37,7 +35,6 @@ export const AccessibilityProvider = ({ children }) => {
                 focusHighlight: true,
                 highContrast: false,
                 reducedMotion: false,
-                darkMode: false,
                 textScaling: 100
             };
         }
@@ -66,12 +63,6 @@ export const AccessibilityProvider = ({ children }) => {
         if (settings.reducedMotion) root.classList.add('acc-reduced-motion');
         else root.classList.remove('acc-reduced-motion');
         
-        if (settings.darkMode) {
-            root.classList.add('acc-dark-mode', 'dark');
-        } else {
-            root.classList.remove('acc-dark-mode', 'dark');
-        }
-        
         // Handle text scaling
         root.style.fontSize = settings.textScaling === 100 ? '' : `${settings.textScaling}%`;
         
@@ -79,10 +70,6 @@ export const AccessibilityProvider = ({ children }) => {
 
     const toggleSetting = (key) => {
         setSettings(prev => ({ ...prev, [key]: !prev[key] }));
-    };
-
-    const toggleDarkMode = () => {
-        setSettings(prev => ({ ...prev, darkMode: !prev.darkMode }));
     };
 
     const setTextScaling = (value) => {
@@ -93,7 +80,6 @@ export const AccessibilityProvider = ({ children }) => {
         <AccessibilityContext.Provider value={{ 
             settings, 
             toggleSetting, 
-            toggleDarkMode,
             setTextScaling, 
             isModalOpen, 
             setIsModalOpen 

@@ -1044,15 +1044,15 @@ const Home = () => {
             </div>
 
             {/* NEWS, EVENTS & STORIES */}
-            <section id="news" className="py-24 bg-slate-50 dark:bg-[#070b16] border-t border-slate-200/60 dark:border-white/10 transition-colors duration-300">
+            <section id="news" className="py-24 bg-slate-50] border-t border-slate-200/60 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6">
                     {/* Header with Title, Subtitle, and Interactive Search Bar */}
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 gap-6">
                         <div>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-slate-900 dark:text-white tracking-tight leading-tight">
-                                News, Events <span className="italic font-normal text-slate-700 dark:text-slate-300">and Stories</span>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-slate-900 tracking-tight leading-tight">
+                                News, Events <span className="italic font-normal text-slate-700">and Stories</span>
                             </h2>
-                            <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base mt-2 font-medium">
+                            <p className="text-slate-500 text-sm md:text-base mt-2 font-medium">
                                 Updates, achievements, notices and experiences from the MSIT community.
                             </p>
                         </div>
@@ -1064,20 +1064,20 @@ const Home = () => {
                             }} 
                             className="relative shrink-0 w-full sm:w-80"
                         >
-                            <Search className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="Search stories, academics, notices..."
-                                className="w-full pl-9 pr-24 py-2.5 bg-white dark:bg-[#131c31] rounded-full text-xs font-semibold text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 border border-slate-200 dark:border-white/10 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm"
+                                className="w-full pl-9 pr-24 py-2.5 bg-white] rounded-full text-xs font-semibold text-slate-800 placeholder-slate-400 border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm"
                                 aria-label="Search stories and notices"
                             />
                             {searchQuery && (
                                 <button
                                     type="button"
                                     onClick={() => setSearchQuery('')}
-                                    className="absolute right-16 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors cursor-pointer"
+                                    className="absolute right-16 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 transition-colors cursor-pointer"
                                     aria-label="Clear query"
                                 >
                                     <X className="w-3.5 h-3.5" />
@@ -1085,7 +1085,7 @@ const Home = () => {
                             )}
                             <button
                                 type="submit"
-                                className="absolute right-1.5 top-1/2 -translate-y-1/2 px-3.5 py-1 bg-slate-900 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 text-white rounded-full text-[11px] font-bold transition-all shadow-xs cursor-pointer active:scale-95"
+                                className="absolute right-1.5 top-1/2 -translate-y-1/2 px-3.5 py-1 bg-slate-900 hover:bg-blue-600 text-white rounded-full text-[11px] font-bold transition-all shadow-xs cursor-pointer active:scale-95"
                                 aria-label="Submit search"
                             >
                                 Search
@@ -1094,15 +1094,15 @@ const Home = () => {
                     </div>
 
                     {/* Category Filter Pills (Full horizontal scrollable bar) */}
-                    <div className="flex items-center gap-1.5 p-1.5 bg-white dark:bg-[#131c31] rounded-2xl border border-slate-200 dark:border-white/10 shadow-xs mb-8 overflow-x-auto scrollbar-none">
+                    <div className="flex items-center gap-1.5 p-1.5 bg-white] rounded-2xl border border-slate-200 shadow-xs mb-8 overflow-x-auto scrollbar-none">
                         {CATEGORY_TABS.map(tab => (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveNewsTab(tab.id)}
                                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 whitespace-nowrap active:scale-95 cursor-pointer ${
                                     activeNewsTab === tab.id
-                                        ? 'bg-slate-900 dark:bg-blue-600 text-white shadow-md shadow-slate-900/20 dark:shadow-blue-600/30'
-                                        : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80'
+                                        ? 'bg-slate-900 text-white shadow-md shadow-slate-900/20'
+                                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                                 }`}
                             >
                                 {tab.label}
@@ -1112,22 +1112,22 @@ const Home = () => {
 
                     {/* Active search filter feedback badge */}
                     {searchQuery && (
-                        <div className="mb-8 flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 bg-blue-50 dark:bg-blue-950/40 rounded-xl border border-blue-100 dark:border-blue-900/40 text-xs">
-                            <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200 font-medium">
-                                <Search className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                                <span>Showing results for <strong className="text-slate-900 dark:text-white">"{searchQuery}"</strong> ({searchedEvents.length} found)</span>
+                        <div className="mb-8 flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 bg-blue-50 rounded-xl border border-blue-100 text-xs">
+                            <div className="flex items-center gap-2 text-slate-700 font-medium">
+                                <Search className="w-3.5 h-3.5 text-blue-600" />
+                                <span>Showing results for <strong className="text-slate-900">"{searchQuery}"</strong> ({searchedEvents.length} found)</span>
                             </div>
                             <div className="flex items-center gap-4">
                                 <Link 
                                     to={`/search?q=${encodeURIComponent(searchQuery)}`}
-                                    className="text-blue-600 dark:text-blue-400 hover:underline font-bold flex items-center gap-1"
+                                    className="text-blue-600 hover:underline font-bold flex items-center gap-1"
                                 >
                                     <span>Search all 37+ MSIT pages for "{searchQuery}"</span>
                                     <ArrowRight className="w-3.5 h-3.5" />
                                 </Link>
                                 <button 
                                     onClick={() => setSearchQuery('')}
-                                    className="text-slate-500 hover:text-slate-800 dark:hover:text-white font-semibold underline cursor-pointer"
+                                    className="text-slate-500 hover:text-slate-800 font-semibold underline cursor-pointer"
                                 >
                                     Clear
                                 </button>
@@ -1136,12 +1136,12 @@ const Home = () => {
                     )}
 
                     {searchedEvents.length === 0 ? (
-                        <div className="text-center py-16 px-6 bg-white dark:bg-[#131c31] rounded-3xl border border-slate-200 dark:border-white/10 shadow-sm">
-                            <Search className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-3" />
-                            <h3 className="text-slate-800 dark:text-white font-bold text-lg mb-1">
+                        <div className="text-center py-16 px-6 bg-white] rounded-3xl border border-slate-200 shadow-sm">
+                            <Search className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                            <h3 className="text-slate-800 font-bold text-lg mb-1">
                                 No stories match your filter or search query{searchQuery ? ` for "${searchQuery}"` : ''}
                             </h3>
-                            <p className="text-slate-500 dark:text-slate-400 text-xs max-w-md mx-auto mb-6">
+                            <p className="text-slate-500 text-xs max-w-md mx-auto mb-6">
                                 We couldn't find matching articles under this category. You can search the entire MSIT website across all departments, courses, faculty, and notices.
                             </p>
                             <div className="flex flex-wrap justify-center items-center gap-3">
@@ -1156,18 +1156,18 @@ const Home = () => {
                                 )}
                                 <button 
                                     onClick={() => { setActiveNewsTab('all'); setSearchQuery(''); }}
-                                    className="px-6 py-2.5 bg-slate-900 dark:bg-slate-800 text-white rounded-full text-xs font-bold hover:bg-slate-800 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                                    className="px-6 py-2.5 bg-slate-900 text-white rounded-full text-xs font-bold hover:bg-slate-800 transition-colors cursor-pointer"
                                 >
                                     Reset Filters
                                 </button>
                             </div>
-                            <div className="mt-8 pt-6 border-t border-slate-100 dark:border-white/10 flex flex-wrap items-center justify-center gap-2">
+                            <div className="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-center gap-2">
                                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-2">Or browse:</span>
                                 {['Academics', 'Admissions', 'Placements', 'Notices', 'Research'].map(c => (
                                     <button
                                         key={c}
                                         onClick={() => { setActiveNewsTab(c.toLowerCase()); setSearchQuery(''); }}
-                                        className="px-3 py-1 bg-slate-50 dark:bg-[#18233c] hover:bg-blue-50 dark:hover:bg-blue-900/30 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-full text-xs font-semibold border border-slate-200 dark:border-white/10 transition-colors cursor-pointer"
+                                        className="px-3 py-1 bg-slate-50] hover:bg-blue-50 text-slate-600 hover:text-blue-600 rounded-full text-xs font-semibold border border-slate-200 transition-colors cursor-pointer"
                                     >
                                         {c}
                                     </button>
@@ -1180,7 +1180,7 @@ const Home = () => {
                             {heroStory && (
                                 <Link 
                                     to={heroStory.link && heroStory.link !== '#' ? heroStory.link : `/news-event/${heroStory.id}`}
-                                    className="group relative block w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer min-h-[380px] sm:min-h-[420px] border border-slate-200/50 dark:border-white/10"
+                                    className="group relative block w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer min-h-[380px] sm:min-h-[420px] border border-slate-200/50"
                                 >
                                     {/* Cover Background Image */}
                                     <div 
@@ -1194,15 +1194,15 @@ const Home = () => {
                                     {/* Content Overlay */}
                                     <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between min-h-[380px] sm:min-h-[420px]">
                                         <div>
-                                            <span className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-white/95 dark:bg-[#131c31]/95 backdrop-blur-md shadow-md ${
-                                                heroStory.label === 'NEWS' ? 'text-blue-700 dark:text-blue-400' :
-                                                heroStory.label === 'EVENT' ? 'text-emerald-700 dark:text-emerald-400' :
-                                                heroStory.label === 'STORY' ? 'text-purple-700 dark:text-purple-400' :
-                                                heroStory.label === 'ACADEMICS' ? 'text-indigo-700 dark:text-indigo-400' :
-                                                heroStory.label === 'ADMISSIONS' ? 'text-amber-700 dark:text-amber-400' :
-                                                heroStory.label === 'PLACEMENTS' ? 'text-rose-700 dark:text-rose-400' :
-                                                heroStory.label === 'NOTICES' ? 'text-sky-700 dark:text-sky-400' :
-                                                heroStory.label === 'RESEARCH' ? 'text-teal-700 dark:text-teal-400' : 'text-slate-800 dark:text-slate-200'
+                                            <span className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-white/95]/95 backdrop-blur-md shadow-md ${
+                                                heroStory.label === 'NEWS' ? 'text-blue-700' :
+                                                heroStory.label === 'EVENT' ? 'text-emerald-700' :
+                                                heroStory.label === 'STORY' ? 'text-purple-700' :
+                                                heroStory.label === 'ACADEMICS' ? 'text-indigo-700' :
+                                                heroStory.label === 'ADMISSIONS' ? 'text-amber-700' :
+                                                heroStory.label === 'PLACEMENTS' ? 'text-rose-700' :
+                                                heroStory.label === 'NOTICES' ? 'text-sky-700' :
+                                                heroStory.label === 'RESEARCH' ? 'text-teal-700' : 'text-slate-800'
                                             }`}>
                                                 <span className={`w-2 h-2 rounded-full animate-pulse ${
                                                     heroStory.label === 'NEWS' ? 'bg-blue-600' :
@@ -1253,10 +1253,10 @@ const Home = () => {
                                             <Link 
                                                 to={itemLink} 
                                                 key={item.id || i} 
-                                                className={`bg-white dark:bg-[#131c31] rounded-2xl shadow-sm hover:shadow-xl border-l-4 ${domain.borderColor} border-y border-r border-slate-200/80 dark:border-white/10 group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between ${domain.shadowGlow}`}
+                                                className={`bg-white] rounded-2xl shadow-sm hover:shadow-xl border-l-4 ${domain.borderColor} border-y border-r border-slate-200/80 group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between ${domain.shadowGlow}`}
                                             >
                                                 {/* Image Banner */}
-                                                <div className="relative h-44 overflow-hidden bg-slate-100 dark:bg-slate-800">
+                                                <div className="relative h-44 overflow-hidden bg-slate-100">
                                                     <img 
                                                         src={item.image} 
                                                         alt={item.title} 
@@ -1277,22 +1277,22 @@ const Home = () => {
                                                 {/* Text Content */}
                                                 <div className="p-6 flex-grow flex flex-col justify-between">
                                                     <div>
-                                                        <h3 className={`text-lg font-bold text-slate-900 dark:text-white leading-snug mb-3 ${domain.hoverText} transition-colors line-clamp-2`}>
+                                                        <h3 className={`text-lg font-bold text-slate-900 leading-snug mb-3 ${domain.hoverText} transition-colors line-clamp-2`}>
                                                             {item.title}
                                                         </h3>
-                                                        <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed mb-6 font-medium">
+                                                        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6 font-medium">
                                                             {item.summary}
                                                         </p>
                                                     </div>
 
-                                                    <div className="flex justify-between items-center pt-4 border-t border-slate-100 dark:border-white/10 mt-auto">
-                                                        <div className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider flex items-center gap-2">
+                                                    <div className="flex justify-between items-center pt-4 border-t border-slate-100 mt-auto">
+                                                        <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
                                                             <span>{item.date}</span>
                                                             <span>•</span>
-                                                            <span className="text-slate-600 dark:text-slate-300 font-semibold">{item.readTime}</span>
+                                                            <span className="text-slate-600 font-semibold">{item.readTime}</span>
                                                         </div>
-                                                        <div className={`w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center ${domain.hoverArrow} transition-colors`}>
-                                                            <ArrowRight className="w-4 h-4 text-slate-500 dark:text-slate-400 group-hover:text-current transition-colors" />
+                                                        <div className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center ${domain.hoverArrow} transition-colors`}>
+                                                            <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-current transition-colors" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1317,12 +1317,12 @@ const Home = () => {
                                                 setShowAllNews(true);
                                             }
                                         }}
-                                        className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-800 dark:text-slate-100 bg-white dark:bg-[#131c31] hover:bg-slate-900 dark:hover:bg-blue-600 hover:text-white border border-slate-200/90 dark:border-white/10 hover:border-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 active:scale-95 cursor-pointer"
+                                        className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-800 bg-white] hover:bg-slate-900 hover:text-white border border-slate-200/90 hover:border-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 active:scale-95 cursor-pointer"
                                         aria-expanded={showAllNews}
                                     >
                                         <span>{showAllNews ? 'Show Less' : 'View More'}</span>
                                         <ChevronDown 
-                                            className={`w-4 h-4 text-slate-500 dark:text-slate-400 group-hover:text-white transition-transform duration-300 ${
+                                            className={`w-4 h-4 text-slate-500 group-hover:text-white transition-transform duration-300 ${
                                                 showAllNews ? 'rotate-180 text-white' : 'group-hover:translate-y-0.5'
                                             }`} 
                                         />
@@ -1335,8 +1335,8 @@ const Home = () => {
             </section>
 
             {/* STATS SHOWCASE */}
-            <section className="py-20 bg-white dark:bg-[#0a0f1d] relative">
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent"></div>
+            <section className="py-20 bg-white] relative">
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="relative group/stats">
                         <div 
@@ -1350,16 +1350,16 @@ const Home = () => {
                                     className="flex flex-col items-center text-center group min-w-[clamp(260px,80vw,340px)] snap-center shrink-0"
                                 >
                                     <div className="transform group-hover:-translate-y-3 transition-transform duration-500 mb-8 flex items-center justify-center">
-                                        <div className="p-4 rounded-2xl bg-slate-50/50 dark:bg-[#131c31] group-hover:bg-blue-50 dark:group-hover:bg-blue-950/40 transition-colors duration-500 shadow-sm border border-slate-100/50 dark:border-slate-800">
+                                        <div className="p-4 rounded-2xl bg-slate-50/50] group-hover:bg-blue-50 transition-colors duration-500 shadow-sm border border-slate-100/50">
                                             {React.cloneElement(stat.icon, { 
                                                 size: 42, 
                                                 strokeWidth: 1.5,
-                                                className: "text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors duration-500" 
+                                                className: "text-slate-800 group-hover:text-primary transition-colors duration-500" 
                                             })}
                                         </div>
                                     </div>
-                                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title dark:text-white mb-4 leading-none">{stat.value}</div>
-                                    <div className="text-xs font-black uppercase tracking-[0.25em] text-muted dark:text-slate-400 mb-8 min-h-[2.5rem] flex items-center justify-center">{stat.label}</div>
+                                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-4 leading-none">{stat.value}</div>
+                                    <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-8 min-h-[2.5rem] flex items-center justify-center">{stat.label}</div>
                                     <div className="mt-auto w-full flex justify-center">
                                         {stat.label === "STUDENTS ENROLLED" && (
                                             <Link to="/about" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
@@ -1403,23 +1403,23 @@ const Home = () => {
                                             target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                                         }
                                     }}
-                                    className={`h-1.5 rounded-full transition-all duration-500 ${i === activeStatIndex ? 'bg-primary w-8 shadow-sm' : 'bg-slate-200 dark:bg-slate-700 w-2.5'}`}
+                                    className={`h-1.5 rounded-full transition-all duration-500 ${i === activeStatIndex ? 'bg-primary w-8 shadow-sm' : 'bg-slate-200 w-2.5'}`}
                                     aria-label={`Go to stat ${i + 1}`}
                                 />
                             ))}
                         </div>
                     </div>
                 </div>
-                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
             </section>
 
               {/* THE MSIT ADVANTAGE - ELEGANT CARD STACK SECTION */}
-            <section className="py-24 bg-[#FBF9F5] dark:bg-[#0c1322] text-slate-900 dark:text-white border-y border-stone-200/80 dark:border-white/10 relative overflow-hidden">
+            <section className="py-24 bg-[#FBF9F5]] text-slate-900 border-y border-stone-200/80 relative overflow-hidden">
                 {/* Decorative diagonal accent matching inspiration background */}
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F3EEE5]/60 dark:bg-blue-950/20 -skew-x-12 transform translate-x-24 pointer-events-none -z-0"></div>
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F3EEE5]/60 -skew-x-12 transform translate-x-24 pointer-events-none -z-0"></div>
 
                 {/* Upper right tracked cap watermark */}
-                <div className="absolute top-12 right-12 text-[11px] font-black uppercase tracking-[0.3em] text-stone-400 dark:text-slate-600 hidden xl:block pointer-events-none select-none">
+                <div className="absolute top-12 right-12 text-[11px] font-black uppercase tracking-[0.3em] text-stone-400 hidden xl:block pointer-events-none select-none">
                     PEOPLE &bull; IDEAS &bull; IMPACT
                 </div>
 
@@ -1429,45 +1429,45 @@ const Home = () => {
                         {/* Left Column: Heading & Key Feature List */}
                         <div className="lg:col-span-5 space-y-8">
                             <div>
-                                <span className="text-[#8C6B45] dark:text-amber-400 font-black tracking-[0.25em] text-xs uppercase mb-3 block">
+                                <span className="text-[#8C6B45] font-black tracking-[0.25em] text-xs uppercase mb-3 block">
                                     THE MSIT ADVANTAGE
                                 </span>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.15]">
                                     Education that <br />
-                                    <span className="font-serif italic font-normal text-[#9E7B56] dark:text-amber-400">Transcends</span> <br />
+                                    <span className="font-serif italic font-normal text-[#9E7B56]">Transcends</span> <br />
                                     Boundaries.
                                 </h2>
                             </div>
 
-                            <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed font-medium">
+                            <p className="text-slate-600 text-base leading-relaxed font-medium">
                                 MSIT stands at the intersection of rigorous academic theory and practical, industry-driven application. We don't just teach engineering; we cultivate the mindset required to solve the complex challenges of tomorrow.
                             </p>
 
                             <div className="space-y-6 pt-2">
                                 {[
                                     {
-                                        icon: <Target className="w-5 h-5 text-[#8C6B45] dark:text-amber-400" />,
+                                        icon: <Target className="w-5 h-5 text-[#8C6B45]" />,
                                         title: "Industry-Aligned Curriculum",
                                         desc: "Syllabus constantly updated in collaboration with tech giants."
                                     },
                                     {
-                                        icon: <Lightbulb className="w-5 h-5 text-[#8C6B45] dark:text-amber-400" />,
+                                        icon: <Lightbulb className="w-5 h-5 text-[#8C6B45]" />,
                                         title: "Innovation Ecosystem",
                                         desc: "Access to incubation centers, maker spaces, and heavy research funding."
                                     },
                                     {
-                                        icon: <Globe className="w-5 h-5 text-[#8C6B45] dark:text-amber-400" />,
+                                        icon: <Globe className="w-5 h-5 text-[#8C6B45]" />,
                                         title: "Global Perspective",
                                         desc: "Exchange programs and international hackathon participation."
                                     }
                                 ].map((feature, i) => (
                                     <div key={i} className="flex items-start gap-4">
-                                        <div className="mt-1 w-11 h-11 rounded-2xl bg-[#F2ECE1] dark:bg-amber-500/10 border border-[#E4D9C8] dark:border-amber-500/20 flex items-center justify-center shrink-0 shadow-sm">
+                                        <div className="mt-1 w-11 h-11 rounded-2xl bg-[#F2ECE1] border border-[#E4D9C8] flex items-center justify-center shrink-0 shadow-sm">
                                             {feature.icon}
                                         </div>
                                         <div>
-                                            <h3 className="text-lg font-bold text-slate-900 dark:text-white tracking-tight">{feature.title}</h3>
-                                            <p className="text-slate-500 dark:text-slate-400 font-medium text-xs md:text-sm leading-relaxed mt-0.5">{feature.desc}</p>
+                                            <h3 className="text-lg font-bold text-slate-900 tracking-tight">{feature.title}</h3>
+                                            <p className="text-slate-500 font-medium text-xs md:text-sm leading-relaxed mt-0.5">{feature.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -1518,7 +1518,7 @@ const Home = () => {
                                                 zIndex,
                                                 opacity
                                             }}
-                                            className={`absolute left-0 top-0 w-[280px] sm:w-[340px] md:w-[370px] h-[440px] sm:h-[480px] rounded-[2.2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-out border border-stone-200/60 dark:border-white/10 bg-stone-950 ${
+                                            className={`absolute left-0 top-0 w-[280px] sm:w-[340px] md:w-[370px] h-[440px] sm:h-[480px] rounded-[2.2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-out border border-stone-200/60 bg-stone-950 ${
                                                 !isFront ? 'cursor-pointer hover:brightness-110' : ''
                                             }`}
                                         >
@@ -1569,7 +1569,7 @@ const Home = () => {
                                 <div className="flex items-center gap-4">
                                     <button
                                         onClick={() => setCurrentHighlight((prev) => (prev - 1 + highlights.length) % highlights.length)}
-                                        className="w-10 h-10 rounded-full bg-white dark:bg-[#18233c] border border-stone-200 dark:border-white/10 shadow-sm flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-stone-50 dark:hover:bg-slate-700 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                                        className="w-10 h-10 rounded-full bg-white] border border-stone-200 shadow-sm flex items-center justify-center text-slate-700 hover:bg-stone-50 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                                         aria-label="Previous card"
                                     >
                                         <ChevronLeft className="w-5 h-5" />
@@ -1582,7 +1582,7 @@ const Home = () => {
                                                 key={i}
                                                 onClick={() => setCurrentHighlight(i)}
                                                 className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
-                                                    i === currentHighlight ? 'bg-slate-900 dark:bg-amber-400 w-6' : 'bg-stone-300 dark:bg-slate-700 hover:bg-stone-400 dark:hover:bg-slate-600 w-2'
+                                                    i === currentHighlight ? 'bg-slate-900 w-6' : 'bg-stone-300 hover:bg-stone-400 w-2'
                                                 }`}
                                                 aria-label={`Go to slide ${i + 1}`}
                                             />
@@ -1591,7 +1591,7 @@ const Home = () => {
 
                                     <button
                                         onClick={() => setCurrentHighlight((prev) => (prev + 1) % highlights.length)}
-                                        className="w-10 h-10 rounded-full bg-white dark:bg-[#18233c] border border-stone-200 dark:border-white/10 shadow-sm flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-stone-50 dark:hover:bg-slate-700 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                                        className="w-10 h-10 rounded-full bg-white] border border-stone-200 shadow-sm flex items-center justify-center text-slate-700 hover:bg-stone-50 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                                         aria-label="Next card"
                                     >
                                         <ChevronRight className="w-5 h-5" />
@@ -1599,9 +1599,9 @@ const Home = () => {
                                 </div>
 
                                 {/* Handwritten Style Annotation */}
-                                <div className="hidden sm:flex items-center gap-2 text-stone-500 dark:text-slate-400 font-serif italic text-sm">
+                                <div className="hidden sm:flex items-center gap-2 text-stone-500 font-serif italic text-sm">
                                     <span>More Than Engineering</span>
-                                    <svg className="w-8 h-4 text-stone-400 dark:text-slate-500 transform rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-8 h-4 text-stone-400 transform rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </div>
