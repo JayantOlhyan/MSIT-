@@ -6,13 +6,12 @@ import {
     Code2, Network, Cpu, Zap, CheckCircle2, Linkedin, Github, MapPin, Briefcase, MessageSquare
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import Announcements from '../components/Announcements';
 
 const stats = [
-    { icon: <GraduationCap />, value: "95%+", label: "PLACEMENT RATE" },
-    { icon: <Building2 />, value: "250+", label: "RECRUITING COMPANIES" },
-    { icon: <Award />, value: "₹1.2Cr", label: "HIGHEST PACKAGE OFFERED" },
-    { icon: <Users />, value: "4500+", label: "STUDENTS ENROLLED" },
-    { icon: <TrendingUp />, value: "150+", label: "EXPERT FACULTY" }
+    { icon: <GraduationCap />, value: "95%+", label: "Placement rate", url: "/placements" },
+    { icon: <Building2 />, value: "250+", label: "Recruiters", url: "/placements" },
+    { icon: <Award />, value: "₹1.7Cr", label: "Highest package", url: "/placements" }
 ];
 
 const CAMPUS_GALLERY = [
@@ -117,8 +116,6 @@ const Home = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
     const [selectedAlumnus, setSelectedAlumnus] = useState(null);
     const [isAlumniPaused, setIsAlumniPaused] = useState(false);
-    const [activeStatIndex, setActiveStatIndex] = useState(0);
-    const statsContainerRef = useRef(null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxImage, setLightboxImage] = useState(null);
     const [galleryFilter, setGalleryFilter] = useState('All');
@@ -400,31 +397,6 @@ const Home = () => {
         setShowAllNews(false);
     }, [activeNewsTab, searchQuery]);
 
-    useEffect(() => {
-        const container = statsContainerRef.current;
-        if (!container) return;
-
-        const options = {
-            root: container,
-            threshold: 0.5,
-            rootMargin: '0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const index = parseInt(entry.target.getAttribute('data-index'));
-                    setActiveStatIndex(index);
-                }
-            });
-        }, options);
-
-        const children = Array.from(container.children);
-        children.forEach(child => observer.observe(child));
-
-        return () => observer.disconnect();
-    }, []);
-
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
@@ -572,73 +544,6 @@ const Home = () => {
         if (l === 'NOTICES' || l === 'NOTICE') return 7;
         if (l === 'RESEARCH') return 8;
         return 9;
-    };
-
-    const TAG_DOMAINS = {
-        NEWS: {
-            borderColor: 'border-blue-600',
-            badgeClass: 'bg-blue-50 text-blue-700 border-blue-200/80',
-            dotClass: 'bg-blue-600',
-            hoverText: 'group-hover:text-blue-600',
-            hoverArrow: 'group-hover:bg-blue-600 group-hover:text-white',
-            shadowGlow: 'hover:shadow-blue-500/10'
-        },
-        EVENT: {
-            borderColor: 'border-emerald-500',
-            badgeClass: 'bg-emerald-50 text-emerald-700 border-emerald-200/80',
-            dotClass: 'bg-emerald-500',
-            hoverText: 'group-hover:text-emerald-600',
-            hoverArrow: 'group-hover:bg-emerald-600 group-hover:text-white',
-            shadowGlow: 'hover:shadow-emerald-500/10'
-        },
-        STORY: {
-            borderColor: 'border-purple-600',
-            badgeClass: 'bg-purple-50 text-purple-700 border-purple-200/80',
-            dotClass: 'bg-purple-600',
-            hoverText: 'group-hover:text-purple-600',
-            hoverArrow: 'group-hover:bg-purple-600 group-hover:text-white',
-            shadowGlow: 'hover:shadow-purple-500/10'
-        },
-        ACADEMICS: {
-            borderColor: 'border-indigo-600',
-            badgeClass: 'bg-indigo-50 text-indigo-700 border-indigo-200/80',
-            dotClass: 'bg-indigo-600',
-            hoverText: 'group-hover:text-indigo-600',
-            hoverArrow: 'group-hover:bg-indigo-600 group-hover:text-white',
-            shadowGlow: 'hover:shadow-indigo-500/10'
-        },
-        ADMISSIONS: {
-            borderColor: 'border-amber-600',
-            badgeClass: 'bg-amber-50 text-amber-800 border-amber-200/80',
-            dotClass: 'bg-amber-600',
-            hoverText: 'group-hover:text-amber-600',
-            hoverArrow: 'group-hover:bg-amber-600 group-hover:text-white',
-            shadowGlow: 'hover:shadow-amber-500/10'
-        },
-        PLACEMENTS: {
-            borderColor: 'border-rose-600',
-            badgeClass: 'bg-rose-50 text-rose-700 border-rose-200/80',
-            dotClass: 'bg-rose-600',
-            hoverText: 'group-hover:text-rose-600',
-            hoverArrow: 'group-hover:bg-rose-600 group-hover:text-white',
-            shadowGlow: 'hover:shadow-rose-500/10'
-        },
-        NOTICES: {
-            borderColor: 'border-sky-600',
-            badgeClass: 'bg-sky-50 text-sky-800 border-sky-200/80',
-            dotClass: 'bg-sky-600',
-            hoverText: 'group-hover:text-sky-600',
-            hoverArrow: 'group-hover:bg-sky-600 group-hover:text-white',
-            shadowGlow: 'hover:shadow-sky-500/10'
-        },
-        RESEARCH: {
-            borderColor: 'border-teal-600',
-            badgeClass: 'bg-teal-50 text-teal-800 border-teal-200/80',
-            dotClass: 'bg-teal-600',
-            hoverText: 'group-hover:text-teal-600',
-            hoverArrow: 'group-hover:bg-teal-600 group-hover:text-white',
-            shadowGlow: 'hover:shadow-teal-500/10'
-        }
     };
 
     const [events] = useState(() => {
@@ -961,9 +866,16 @@ const Home = () => {
         return matchesTab && matchesSearch;
     });
 
-    const heroStory = searchedEvents.length > 0 ? searchedEvents[0] : null;
-    const gridStories = searchedEvents.length > 1 ? searchedEvents.slice(1) : [];
-    const displayedGridStories = showAllNews ? gridStories : gridStories.slice(0, 3);
+    const nowTime = Date.now();
+    const pastStories = searchedEvents.filter(item => parseEventDate(item.date) <= nowTime);
+    const upcomingStories = searchedEvents
+        .filter(item => parseEventDate(item.date) > nowTime)
+        .sort((a, b) => parseEventDate(a.date) - parseEventDate(b.date));
+    const heroStory = pastStories[0] || upcomingStories[0] || null;
+    const gridStories = [...upcomingStories, ...pastStories].filter(item => item !== heroStory);
+    const displayedGridStories = showAllNews ? gridStories : gridStories.slice(0, 4);
+    const storyLink = (item) => (item.link && item.link !== '#' ? item.link : `/news-event/${item.id}`);
+    const isUpcoming = (item) => parseEventDate(item.date) > nowTime;
 
     const homeSchema = {
         "@context": "https://schema.org",
@@ -1014,11 +926,32 @@ const Home = () => {
                     <h1 
                         id="hero-title"
                         className="font-serif font-black tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white/100 to-white/20 leading-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)] transition-all duration-1000 ease-out select-none uppercase"
-                        style={{ fontSize: 'clamp(5rem, 24vw, 32vh)' }}
+                        style={{ fontSize: 'clamp(4.25rem, 20vw, 26vh)' }}
                     >
                         MSIT
                     </h1>
                     <div id="hero-divider" className="h-1.5 w-24 sm:w-32 bg-white/40 mt-8 rounded-full blur-[0.5px]"></div>
+                </div>
+
+                {/* Key figures */}
+                <div id="hero-stats" className="absolute inset-x-0 bottom-24 sm:bottom-28 z-10 px-4 sm:px-6">
+                    <div className="max-w-3xl mx-auto grid grid-cols-3 gap-2 sm:gap-4">
+                        {stats.map(stat => (
+                            <Link
+                                key={stat.label}
+                                to={stat.url}
+                                className="group flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 px-2.5 py-2.5 sm:px-4 sm:py-3 text-white transition-colors"
+                            >
+                                <span className="hidden sm:flex w-9 h-9 shrink-0 rounded-lg bg-white/15 items-center justify-center">
+                                    {React.cloneElement(stat.icon, { className: 'w-[18px] h-[18px]', strokeWidth: 1.75 })}
+                                </span>
+                                <span className="min-w-0">
+                                    <span className="block text-lg sm:text-2xl font-bold tracking-tight leading-none">{stat.value}</span>
+                                    <span className="block mt-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.08em] text-white/75 leading-tight">{stat.label}</span>
+                                </span>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Explore Banner at Bottom */}
@@ -1036,7 +969,7 @@ const Home = () => {
             {/* ANNOUNCEMENT TICKER */}
             <div className="bg-surface border-b border-slate-200 py-4 relative z-20 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 flex items-center">
-                    <div className="bg-primary text-white text-xs font-black uppercase tracking-widest px-2.5 py-1 rounded-sm mr-6 shrink-0 shadow-card">Alert</div>
+                    <div className="bg-alert text-white text-xs font-black uppercase tracking-widest px-2.5 py-1 rounded-sm mr-6 shrink-0 shadow-card">Alert</div>
                     <div className="text-sm font-semibold text-title truncate flex-grow tracking-tight">
                         Admissions Open for Batch 2026-30. Last date to apply for B.Tech programs is April 30th.
                     </div>
@@ -1045,7 +978,8 @@ const Home = () => {
 
             {/* NEWS, EVENTS & STORIES */}
             <section id="news" className="py-24 bg-slate-50] border-t border-slate-200/60 transition-colors duration-300">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+                <div className="lg:col-span-2 min-w-0">
                     {/* Header with Title, Subtitle, and Interactive Search Bar */}
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 gap-6">
                         <div>
@@ -1175,245 +1109,90 @@ const Home = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className="space-y-8">
-                            {/* TOP HERO FEATURED COVER CARD */}
+                        <div>
+                            {/* FEATURED STORY */}
                             {heroStory && (
-                                <Link 
-                                    to={heroStory.link && heroStory.link !== '#' ? heroStory.link : `/news-event/${heroStory.id}`}
-                                    className="group relative block w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer min-h-[380px] sm:min-h-[420px] border border-slate-200/50"
+                                <Link
+                                    to={storyLink(heroStory)}
+                                    className="group grid grid-cols-1 md:grid-cols-2 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-lg overflow-hidden transition-shadow"
                                 >
-                                    {/* Cover Background Image */}
-                                    <div 
-                                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
-                                        style={{ backgroundImage: `url('${heroStory.image}')` }}
-                                    ></div>
-
-                                    {/* Dark Gradient Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30"></div>
-
-                                    {/* Content Overlay */}
-                                    <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between min-h-[380px] sm:min-h-[420px]">
-                                        <div>
-                                            <span className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-white/95]/95 backdrop-blur-md shadow-md ${
-                                                heroStory.label === 'NEWS' ? 'text-blue-700' :
-                                                heroStory.label === 'EVENT' ? 'text-emerald-700' :
-                                                heroStory.label === 'STORY' ? 'text-purple-700' :
-                                                heroStory.label === 'ACADEMICS' ? 'text-indigo-700' :
-                                                heroStory.label === 'ADMISSIONS' ? 'text-amber-700' :
-                                                heroStory.label === 'PLACEMENTS' ? 'text-rose-700' :
-                                                heroStory.label === 'NOTICES' ? 'text-sky-700' :
-                                                heroStory.label === 'RESEARCH' ? 'text-teal-700' : 'text-slate-800'
-                                            }`}>
-                                                <span className={`w-2 h-2 rounded-full animate-pulse ${
-                                                    heroStory.label === 'NEWS' ? 'bg-blue-600' :
-                                                    heroStory.label === 'EVENT' ? 'bg-emerald-600' :
-                                                    heroStory.label === 'STORY' ? 'bg-purple-600' :
-                                                    heroStory.label === 'ACADEMICS' ? 'bg-indigo-600' :
-                                                    heroStory.label === 'ADMISSIONS' ? 'bg-amber-600' :
-                                                    heroStory.label === 'PLACEMENTS' ? 'bg-rose-600' :
-                                                    heroStory.label === 'NOTICES' ? 'bg-sky-600' :
-                                                    heroStory.label === 'RESEARCH' ? 'bg-teal-600' : 'bg-slate-600'
-                                                }`}></span>
-                                                {heroStory.label}
-                                            </span>
+                                    <div className="relative h-56 md:h-full md:min-h-[17rem] bg-slate-100 overflow-hidden">
+                                        <img
+                                            src={heroStory.image}
+                                            alt={heroStory.title}
+                                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                            onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/campus/main-academic-building.webp'; }}
+                                        />
+                                    </div>
+                                    <div className="p-6 sm:p-7 flex flex-col gap-3">
+                                        <div className="flex items-center gap-2">
+                                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider border bg-primary/5 text-primary border-primary/20">{heroStory.label}</span>
+                                            {isUpcoming(heroStory) && <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Upcoming</span>}
                                         </div>
-
-                                        <div className="max-w-3xl mt-auto">
-                                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4 tracking-tight group-hover:text-blue-200 transition-colors drop-shadow-md">
-                                                {heroStory.title}
-                                            </h3>
-                                            <p className="text-slate-200 text-sm sm:text-base line-clamp-2 md:line-clamp-3 leading-relaxed mb-8 opacity-90 font-medium">
-                                                {heroStory.summary}
-                                            </p>
-
-                                            <div className="flex justify-between items-center pt-6 border-t border-white/20">
-                                                <div className="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-300 tracking-wider uppercase">
-                                                    <span>{heroStory.date}</span>
-                                                    <span className="w-1 h-1 rounded-full bg-slate-400"></span>
-                                                    <span className="text-blue-300 font-semibold">{heroStory.readTime}</span>
-                                                </div>
-                                                <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-slate-900 transition-all shadow-lg">
-                                                    <ArrowRight className="w-5 h-5 text-white group-hover:text-slate-900 transition-colors" />
-                                                </div>
-                                            </div>
+                                        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 leading-snug tracking-tight group-hover:text-primary transition-colors">{heroStory.title}</h3>
+                                        <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">{heroStory.summary}</p>
+                                        <div className="mt-auto pt-3 flex items-center justify-between text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            <span>{heroStory.date} · {heroStory.readTime}</span>
+                                            <span className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-primary group-hover:text-white text-slate-500 flex items-center justify-center transition-colors">
+                                                <ArrowRight className="w-4 h-4" />
+                                            </span>
                                         </div>
                                     </div>
                                 </Link>
                             )}
 
-                            {/* GRID OF CARDS BELOW */}
+                            {/* DATED LIST */}
                             {displayedGridStories.length > 0 && (
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {displayedGridStories.map((item, i) => {
-                                        const itemLink = item.link && item.link !== '#' ? item.link : `/news-event/${item.id}`;
-                                        const domainKey = (item.label || 'NEWS').toUpperCase();
-                                        const domain = TAG_DOMAINS[domainKey] || TAG_DOMAINS.NEWS;
-
+                                <ul className="mt-4 bg-white rounded-2xl border border-slate-200/80 shadow-sm divide-y divide-slate-100 px-4 sm:px-5">
+                                    {displayedGridStories.map(item => {
+                                        const [month, day] = (item.date || '').replace(',', '').split(' ');
+                                        const upcoming = isUpcoming(item);
                                         return (
-                                            <Link 
-                                                to={itemLink} 
-                                                key={item.id || i} 
-                                                className={`bg-white] rounded-2xl shadow-sm hover:shadow-xl border-l-4 ${domain.borderColor} border-y border-r border-slate-200/80 group transform hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between ${domain.shadowGlow}`}
-                                            >
-                                                {/* Image Banner */}
-                                                <div className="relative h-44 overflow-hidden bg-slate-100">
-                                                    <img 
-                                                        src={item.image} 
-                                                        alt={item.title} 
-                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                                                        onError={(e) => {
-                                                            e.currentTarget.onerror = null;
-                                                            e.currentTarget.src = '/campus/main-academic-building.webp';
-                                                        }}
-                                                    />
-                                                    <div className="absolute top-4 left-4 z-10">
-                                                        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider border shadow-sm ${domain.badgeClass}`}>
-                                                            <span className={`w-1.5 h-1.5 rounded-full ${domain.dotClass}`}></span>
-                                                            {item.label}
+                                            <li key={item.id}>
+                                                <Link to={storyLink(item)} className="group grid grid-cols-[3.5rem_minmax(0,1fr)_auto] items-center gap-4 py-4">
+                                                    <span className={`rounded-xl border text-center py-1.5 leading-tight ${upcoming ? 'border-primary bg-primary text-white' : 'border-slate-200 text-slate-900'}`}>
+                                                        <span className="block text-lg font-bold">{day}</span>
+                                                        <span className="block text-[10px] font-bold uppercase tracking-wider opacity-70">{month}</span>
+                                                    </span>
+                                                    <span className="min-w-0">
+                                                        <span className="flex items-center gap-2 mb-1">
+                                                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider border bg-primary/5 text-primary border-primary/20">{item.label}</span>
+                                                            {upcoming && <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Upcoming</span>}
                                                         </span>
-                                                    </div>
-                                                </div>
-
-                                                {/* Text Content */}
-                                                <div className="p-6 flex-grow flex flex-col justify-between">
-                                                    <div>
-                                                        <h3 className={`text-lg font-bold text-slate-900 leading-snug mb-3 ${domain.hoverText} transition-colors line-clamp-2`}>
-                                                            {item.title}
-                                                        </h3>
-                                                        <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-6 font-medium">
-                                                            {item.summary}
-                                                        </p>
-                                                    </div>
-
-                                                    <div className="flex justify-between items-center pt-4 border-t border-slate-100 mt-auto">
-                                                        <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                                                            <span>{item.date}</span>
-                                                            <span>•</span>
-                                                            <span className="text-slate-600 font-semibold">{item.readTime}</span>
-                                                        </div>
-                                                        <div className={`w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center ${domain.hoverArrow} transition-colors`}>
-                                                            <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-current transition-colors" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </Link>
+                                                        <span className="block text-sm sm:text-[15px] font-semibold text-slate-900 leading-snug line-clamp-2 group-hover:text-primary transition-colors">{item.title}</span>
+                                                        <span className="block mt-1 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">{(item.date || '').split(', ')[1]} · {item.readTime}</span>
+                                                    </span>
+                                                    <ArrowRight className="hidden sm:block w-4 h-4 text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                                                </Link>
+                                            </li>
                                         );
                                     })}
-                                </div>
+                                </ul>
                             )}
 
-                            {/* VIEW MORE / SHOW LESS BUTTON */}
-                            {gridStories.length > 3 && (
-                                <div className="mt-10 flex justify-center">
+                            {/* SHOW MORE / SHOW LESS */}
+                            {gridStories.length > 4 && (
+                                <div className="mt-5 flex justify-center">
                                     <button
-                                        onClick={() => {
-                                            if (showAllNews) {
-                                                setShowAllNews(false);
-                                                const newsSection = document.getElementById('news');
-                                                if (newsSection) {
-                                                    newsSection.scrollIntoView({ behavior: 'smooth' });
-                                                }
-                                            } else {
-                                                setShowAllNews(true);
-                                            }
-                                        }}
-                                        className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-800 bg-white] hover:bg-slate-900 hover:text-white border border-slate-200/90 hover:border-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 active:scale-95 cursor-pointer"
+                                        type="button"
+                                        onClick={() => setShowAllNews(v => !v)}
                                         aria-expanded={showAllNews}
+                                        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-slate-700 bg-white border border-slate-200 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors cursor-pointer"
                                     >
-                                        <span>{showAllNews ? 'Show Less' : 'View More'}</span>
-                                        <ChevronDown 
-                                            className={`w-4 h-4 text-slate-500 group-hover:text-white transition-transform duration-300 ${
-                                                showAllNews ? 'rotate-180 text-white' : 'group-hover:translate-y-0.5'
-                                            }`} 
-                                        />
+                                        {showAllNews ? 'Show less' : `Show ${gridStories.length - 4} more`}
+                                        <ChevronDown className={`w-4 h-4 transition-transform ${showAllNews ? 'rotate-180' : ''}`} />
                                     </button>
                                 </div>
                             )}
                         </div>
                     )}
                 </div>
-            </section>
 
-            {/* STATS SHOWCASE */}
-            <section className="py-20 bg-white] relative">
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="relative group/stats">
-                        <div 
-                            ref={statsContainerRef}
-                            className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-12 md:gap-16 pb-12"
-                        >
-                            {stats.map((stat, i) => (
-                                <div 
-                                    key={i} 
-                                    data-index={i}
-                                    className="flex flex-col items-center text-center group min-w-[clamp(260px,80vw,340px)] snap-center shrink-0"
-                                >
-                                    <div className="transform group-hover:-translate-y-3 transition-transform duration-500 mb-8 flex items-center justify-center">
-                                        <div className="p-4 rounded-2xl bg-slate-50/50] group-hover:bg-blue-50 transition-colors duration-500 shadow-sm border border-slate-100/50">
-                                            {React.cloneElement(stat.icon, { 
-                                                size: 42, 
-                                                strokeWidth: 1.5,
-                                                className: "text-slate-800 group-hover:text-primary transition-colors duration-500" 
-                                            })}
-                                        </div>
-                                    </div>
-                                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-title mb-4 leading-none">{stat.value}</div>
-                                    <div className="text-xs font-black uppercase tracking-[0.25em] text-muted mb-8 min-h-[2.5rem] flex items-center justify-center">{stat.label}</div>
-                                    <div className="mt-auto w-full flex justify-center">
-                                        {stat.label === "STUDENTS ENROLLED" && (
-                                            <Link to="/about" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                                Overview <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                            </Link>
-                                        )}
-                                        {stat.label === "PLACEMENT RATE" && (
-                                            <Link to="/placements" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                                Placements <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                            </Link>
-                                        )}
-                                        {stat.label === "RECRUITING COMPANIES" && (
-                                            <Link to="/placements" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                                Companies <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                            </Link>
-                                        )}
-                                        {stat.label === "HIGHEST PACKAGE OFFERED" && (
-                                            <Link to="/placements" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                                Honors <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                            </Link>
-                                        )}
-                                        {stat.label === "EXPERT FACULTY" && (
-                                            <Link to="/faculty" className="flex items-center justify-center text-xs font-black uppercase tracking-widest text-primary border-2 border-primary/20 px-4 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all whitespace-nowrap shadow-card">
-                                                Faculty <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                            </Link>
-                                        )}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Scroll Indicators (Dots) */}
-                        <div className="flex justify-center gap-3 mt-4">
-                            {stats.map((_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => {
-                                        const container = statsContainerRef.current;
-                                        if (container) {
-                                            const target = container.children[i];
-                                            target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                                        }
-                                    }}
-                                    className={`h-1.5 rounded-full transition-all duration-500 ${i === activeStatIndex ? 'bg-primary w-8 shadow-sm' : 'bg-slate-200 w-2.5'}`}
-                                    aria-label={`Go to stat ${i + 1}`}
-                                />
-                            ))}
-                        </div>
-                    </div>
+                <Announcements />
                 </div>
-                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
             </section>
 
-              {/* THE MSIT ADVANTAGE - ELEGANT CARD STACK SECTION */}
+{/* THE MSIT ADVANTAGE - ELEGANT CARD STACK SECTION */}
             <section className="py-24 bg-[#FBF9F5]] text-slate-900 border-y border-stone-200/80 relative overflow-hidden">
                 {/* Decorative diagonal accent matching inspiration background */}
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F3EEE5]/60 -skew-x-12 transform translate-x-24 pointer-events-none -z-0"></div>
@@ -1635,13 +1414,13 @@ const Home = () => {
                                 <Link 
                                     to={`/${dept.code.toLowerCase()}`} 
                                     key={i} 
-                                    className={`bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 ${dept.theme.accentBorder} transition-all duration-300 group cursor-pointer flex flex-col justify-between relative overflow-hidden`}
+                                    className={`bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-primary/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between relative overflow-hidden`}
                                 >
                                     {/* Top Metadata Row */}
                                     <div>
                                         <div className="flex items-center justify-between gap-4 mb-5">
                                             <div className="flex items-center gap-3">
-                                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 shadow-2xs border ${dept.theme.iconBg}`}>
+                                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 shadow-2xs border bg-primary/5 text-primary border-primary/20 group-hover:bg-primary group-hover:text-white`}>
                                                     <IconComponent className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
                                                 </div>
                                                 <div>
@@ -1655,8 +1434,8 @@ const Home = () => {
                                             </div>
 
                                             {dept.accredited && (
-                                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/70 shadow-2xs">
-                                                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold text-primary bg-primary/5 border border-primary/20 shadow-2xs">
+                                                    <CheckCircle2 className="w-3.5 h-3.5" />
                                                     NBA Accredited
                                                 </span>
                                             )}
@@ -1664,7 +1443,7 @@ const Home = () => {
 
                                         {/* Program Name & Tagline */}
                                         <div className="mb-3">
-                                            <h3 className={`text-xl sm:text-2xl font-bold text-slate-900 tracking-tight ${dept.theme.hoverText} transition-colors`}>
+                                            <h3 className={`text-xl sm:text-2xl font-bold text-slate-900 tracking-tight group-hover:text-primary transition-colors`}>
                                                 {dept.name}
                                             </h3>
                                             <p className="text-xs font-semibold text-slate-500 mt-1">
@@ -1716,7 +1495,7 @@ const Home = () => {
                     {/* Institution Summary & Foundation Department Banner */}
                     <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <div className="flex items-start sm:items-center gap-3 text-xs sm:text-sm text-slate-600 font-medium">
-                            <div className="w-2 h-2 rounded-full bg-emerald-500 shrink-0 mt-1 sm:mt-0 animate-pulse"></div>
+                            <div className="w-2 h-2 rounded-full bg-primary shrink-0 mt-1 sm:mt-0 animate-pulse"></div>
                             <span>
                                 <strong className="text-slate-900 font-bold">Total Approved B.Tech Intake: 660 Seats</strong> across 1st & 2nd Shifts. Admissions governed by GGSIPU via JEE Main.
                             </span>
@@ -1996,7 +1775,7 @@ const Home = () => {
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Header Gradient Banner */}
-                        <div className="h-28 bg-gradient-to-r from-blue-700 via-indigo-700 to-slate-900 relative">
+                        <div className="h-28 bg-gradient-to-r from-primary to-primary-dark relative">
                             <button 
                                 onClick={() => setSelectedAlumnus(null)}
                                 className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/30 hover:bg-black/60 text-white flex items-center justify-center transition-colors backdrop-blur-md border border-white/20 cursor-pointer"
@@ -2096,7 +1875,7 @@ const Home = () => {
                             </div>
 
                             {/* Advice for Juniors (Highlighted Callout) */}
-                            <div className="p-5 bg-gradient-to-br from-blue-50/80 to-indigo-50/50 rounded-2xl border border-blue-200/70 mb-5">
+                            <div className="p-5 bg-primary/5 rounded-2xl border border-primary/20 mb-5">
                                 <div className="flex items-center gap-2 text-blue-800 font-extrabold text-xs uppercase tracking-wider mb-2">
                                     <MessageSquare className="w-4 h-4 text-blue-600" />
                                     <span>Career Advice for MSIT Juniors</span>
