@@ -977,7 +977,7 @@ const Home = () => {
             </div>
 
             {/* NEWS, EVENTS & STORIES */}
-            <section id="news" className="py-24 bg-slate-50] border-t border-slate-200/60 transition-colors duration-300">
+            <section id="news" className="py-24 bg-slate-50 border-t border-slate-200/60 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
                 <div className="lg:col-span-2 min-w-0">
                     {/* Header with Title, Subtitle, and Interactive Search Bar */}
@@ -1004,7 +1004,7 @@ const Home = () => {
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="Search stories, academics, notices..."
-                                className="w-full pl-9 pr-24 py-2.5 bg-white] rounded-full text-xs font-semibold text-slate-800 placeholder-slate-400 border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm"
+                                className="w-full pl-9 pr-24 py-2.5 bg-white rounded-full text-xs font-semibold text-slate-800 placeholder-slate-400 border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm"
                                 aria-label="Search stories and notices"
                             />
                             {searchQuery && (
@@ -1028,7 +1028,7 @@ const Home = () => {
                     </div>
 
                     {/* Category Filter Pills (Full horizontal scrollable bar) */}
-                    <div className="flex items-center gap-1.5 p-1.5 bg-white] rounded-2xl border border-slate-200 shadow-xs mb-8 overflow-x-auto scrollbar-none">
+                    <div className="flex items-center gap-1.5 p-1.5 bg-white rounded-2xl border border-slate-200 shadow-xs mb-8 overflow-x-auto scrollbar-none">
                         {CATEGORY_TABS.map(tab => (
                             <button
                                 key={tab.id}
@@ -1070,7 +1070,7 @@ const Home = () => {
                     )}
 
                     {searchedEvents.length === 0 ? (
-                        <div className="text-center py-16 px-6 bg-white] rounded-3xl border border-slate-200 shadow-sm">
+                        <div className="text-center py-16 px-6 bg-white rounded-3xl border border-slate-200 shadow-sm">
                             <Search className="w-12 h-12 text-slate-300 mx-auto mb-3" />
                             <h3 className="text-slate-800 font-bold text-lg mb-1">
                                 No stories match your filter or search query{searchQuery ? ` for "${searchQuery}"` : ''}
@@ -1101,7 +1101,7 @@ const Home = () => {
                                     <button
                                         key={c}
                                         onClick={() => { setActiveNewsTab(c.toLowerCase()); setSearchQuery(''); }}
-                                        className="px-3 py-1 bg-slate-50] hover:bg-blue-50 text-slate-600 hover:text-blue-600 rounded-full text-xs font-semibold border border-slate-200 transition-colors cursor-pointer"
+                                        className="px-3 py-1 bg-slate-50 hover:bg-blue-50 text-slate-600 hover:text-blue-600 rounded-full text-xs font-semibold border border-slate-200 transition-colors cursor-pointer"
                                     >
                                         {c}
                                     </button>
@@ -1348,7 +1348,7 @@ const Home = () => {
                                 <div className="flex items-center gap-4">
                                     <button
                                         onClick={() => setCurrentHighlight((prev) => (prev - 1 + highlights.length) % highlights.length)}
-                                        className="w-10 h-10 rounded-full bg-white] border border-stone-200 shadow-sm flex items-center justify-center text-slate-700 hover:bg-stone-50 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                                        className="w-10 h-10 rounded-full bg-white border border-stone-200 shadow-sm flex items-center justify-center text-slate-700 hover:bg-stone-50 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                                         aria-label="Previous card"
                                     >
                                         <ChevronLeft className="w-5 h-5" />
@@ -1370,7 +1370,7 @@ const Home = () => {
 
                                     <button
                                         onClick={() => setCurrentHighlight((prev) => (prev + 1) % highlights.length)}
-                                        className="w-10 h-10 rounded-full bg-white] border border-stone-200 shadow-sm flex items-center justify-center text-slate-700 hover:bg-stone-50 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                                        className="w-10 h-10 rounded-full bg-white border border-stone-200 shadow-sm flex items-center justify-center text-slate-700 hover:bg-stone-50 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                                         aria-label="Next card"
                                     >
                                         <ChevronRight className="w-5 h-5" />
