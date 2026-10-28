@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
 
 const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle, heroImage, heroImageAlt }) => {
     return (
@@ -27,21 +25,6 @@ const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle, hero
             </div>
             
             <div className="max-w-7xl mx-auto relative z-20">
-                {/* Breadcrumbs */}
-                <div className="flex items-center text-blue-200 gap-2 mb-6 font-medium tracking-wide text-xs sm:text-sm drop-shadow-sm">
-                    <Link to="/" className="hover:text-white transition-colors shrink-0">Home</Link>
-                    {breadcrumbs && breadcrumbs.map((crumb, index) => (
-                        <React.Fragment key={index}>
-                            <span className="text-white/30 shrink-0 mx-1">/</span>
-                            {crumb.url ? (
-                                <Link to={crumb.url} className="hover:text-white transition-colors shrink-0">{crumb.label}</Link>
-                            ) : (
-                                <span className="text-white/60 truncate">{crumb.label}</span>
-                            )}
-                        </React.Fragment>
-                    ))}
-                </div>
-
                 {/* Main Heading */}
                 <div className="mb-8 drop-shadow-xl">
                     <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tight leading-[1] mb-4">
