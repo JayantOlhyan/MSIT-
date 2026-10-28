@@ -124,23 +124,10 @@ const SocietyDetailView = ({ society }) => {
                 canonicalPath={`/${society.slug}`}
             />
 
-            {/* BREADCRUMB STRIP (Matches reference top bar) */}
-            <div className="bg-slate-950 text-slate-400 text-xs border-b border-slate-800/80 pt-28 sm:pt-36 pb-3 px-4 sm:px-8">
-                <div className="max-w-7xl mx-auto flex items-center gap-2 flex-wrap">
-                    <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                    <span>›</span>
-                    <Link to="/society" className="hover:text-white transition-colors">Student Societies</Link>
-                    <span>›</span>
-                    <span className="text-slate-300">{society.category}</span>
-                    <span>›</span>
-                    <span className="text-blue-400 font-medium">{society.name}</span>
-                </div>
-            </div>
-
             {/* =========================================================
                 TOP HERO BANNER (Dark sleek theme with Society identity)
                ========================================================= */}
-            <section className="bg-slate-950 text-white pt-8 pb-16 px-4 sm:px-8 border-b border-slate-900 relative overflow-hidden">
+            <section className="bg-slate-950 text-white pt-28 sm:pt-40 pb-16 px-4 sm:px-8 border-b border-slate-900 relative overflow-hidden">
                 {/* Subtle background glow */}
                 <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
                 <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
