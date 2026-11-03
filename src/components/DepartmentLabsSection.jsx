@@ -9,8 +9,10 @@ const DepartmentLabsSection = ({ deptKey }) => {
 
     if (!labs || labs.length === 0) return null;
 
-    const visibleLabs = isExpanded ? labs : labs.slice(0, 2);
-    const hiddenCount = labs.length - 2;
+    // One full row on wide screens before "View More".
+    const INITIAL_LABS = 4;
+    const visibleLabs = isExpanded ? labs : labs.slice(0, INITIAL_LABS);
+    const hiddenCount = labs.length - INITIAL_LABS;
 
     return (
         <div className="space-y-6 my-8">
@@ -31,7 +33,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
             </div>
 
             {/* Labs Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {visibleLabs.map((lab) => (
                     <div 
                         key={lab.id}
@@ -143,7 +145,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
             </div>
 
             {/* View More / View Less Toggle Button */}
-            {labs.length > 2 && (
+            {labs.length > INITIAL_LABS && (
                 <div className="pt-4 text-center">
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
@@ -189,7 +191,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
                                         <td className="p-3 font-semibold text-blue-600">{mou.beneficiaries}</td>
                                         <td className="p-3">
                                             <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${
-                                                mou.status === 'Active' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-900'
+                                                mou.status === 'Active' ? 'bg-primary/10 text-primary' : 'bg-slate-100 text-slate-700'
                                             }`}>
                                                 {mou.status}
                                             </span>

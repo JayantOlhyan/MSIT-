@@ -41,6 +41,50 @@ const DynamicPage = () => {
         });
     }, [pageData]);
 
+    const isDeptPage = ['cse', 'it', 'ece', 'eee', 'applied-sciences'].includes(slug);
+
+    // "On this page" links: the h3 headings in the page content, plus the labs section on department pages.
+    const tocItems = useMemo(() => {
+        const items = [...processedContent.matchAll(/<h3[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h3>/gi)]
+            .map((m, i) => ({ id: m[1], label: i === 0 && isDeptPage ? 'Overview' : m[2].replace(/<[^>]*>/g, '').trim() }));
+        if (isDeptPage) items.push({ id: 'department-labs', label: 'Labs & Facilities' });
+        return items;
+    }, [processedContent, isDeptPage]);
+    const [activeTocId, setActiveTocId] = useState(null);
+
+    // Highlight the section being read: the last heading that has scrolled up past the fixed header.
+    useEffect(() => {
+        if (tocItems.length < 3) return;
+        const update = () => {
+            let current = tocItems[0].id;
+            for (const item of tocItems) {
+                const el = document.getElementById(item.id);
+                if (el && el.getBoundingClientRect().top <= 180) current = item.id;
+            }
+            // At the very bottom of the page the last section is the one being read.
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+                current = tocItems[tocItems.length - 1].id;
+            }
+            setActiveTocId(current);
+        };
+        // Only a handful of headings are checked, so running on every scroll event is cheap.
+        update();
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        return () => {
+            window.removeEventListener('scroll', update);
+            window.removeEventListener('resize', update);
+        };
+    }, [tocItems]);
+
+    const scrollToSection = (e, id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        e.preventDefault();
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 150, behavior: 'smooth' });
+        setActiveTocId(id);
+    };
+
     if (prevSlug !== slug) {
         setPrevSlug(slug);
         setActiveHighlightIndex(null);
@@ -189,10 +233,31 @@ const DynamicPage = () => {
                 heroImageAlt={pageData.heroImageAlt}
             />
 
+            {/* KEY FIGURES (department pages) */}
+            {isDepartment && pageData.stats && pageData.stats.length > 0 && (
+                <section aria-label="Key figures" className="bg-white border-b border-slate-200">
+                    <div className="max-w-[92rem] mx-auto px-6">
+                        <div className="grid grid-cols-2 lg:grid-cols-4">
+                            {pageData.stats.map((stat, i) => {
+                                // First column lines up with the content edge; dividers between cells.
+                                const pad = i === 0 ? 'pl-0' : i === 2 ? 'pl-0 lg:pl-8' : 'pl-5 lg:pl-8';
+                                const lines = `${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`;
+                                return (
+                                    <div key={i} className={`py-4 lg:py-5 pr-5 ${pad} ${lines} border-slate-200`}>
+                                        <div className="text-2xl font-bold text-title tabular-nums leading-tight">{stat.value}</div>
+                                        <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted">{stat.label}</div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* MAIN CONTENT LAYOUT */}
-            <section className="py-24 bg-white relative transition-colors">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+            <section className={`${isDepartment ? 'py-16' : 'py-24'} bg-white relative transition-colors`}>
+                <div className="max-w-[92rem] mx-auto px-6">
+                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
 
                         {/* Main Typography Area */}
                         <div className="w-full lg:w-2/3 order-2 lg:order-1">
@@ -203,7 +268,6 @@ const DynamicPage = () => {
                                         dangerouslySetInnerHTML={{ __html: processedContent }}
                                         onClick={handleContentClick}
                                     ></div>
-                                    <DepartmentLabsSection deptKey={slug === 'applied-sciences' ? 'as' : slug} />
                                 </div>
                             ) : slug === 'online-fee' ? (
                                 <FeePaymentPortal activeTab={activeFeeTab} setActiveTab={setActiveFeeTab} />
@@ -222,10 +286,10 @@ const DynamicPage = () => {
 
                         {/* Interactive Sidebar */}
                         <div className="w-full lg:w-1/3 order-1 lg:order-2">
-                            <div className="sticky top-32 space-y-8">
+                            <div className="sticky top-32 space-y-6 lg:max-h-[calc(100vh-9rem)] lg:overflow-y-auto scrollbar-hide">
 
                                 {/* Stats Cards */}
-                                {pageData.stats && pageData.stats.length > 0 && (
+                                {!isDepartment && pageData.stats && pageData.stats.length > 0 && (
                                     <div className="grid grid-cols-2 gap-4">
                                         {pageData.stats.map((stat, i) => (
                                             <div key={i} className="bg-surface p-6 rounded-2xl border border-slate-100 shadow-card">
@@ -233,6 +297,48 @@ const DynamicPage = () => {
                                                 <div className="text-xs font-bold uppercase tracking-widest text-muted">{stat.label}</div>
                                             </div>
                                         ))}
+                                    </div>
+                                )}
+
+                                {/* On this page */}
+                                {tocItems.length >= 3 && (
+                                    <nav aria-label="On this page" className="hidden lg:block bg-white p-5 rounded-2xl border border-slate-200 shadow-card">
+                                        <h4 className="px-3 mb-2 text-xs font-bold uppercase tracking-widest text-muted">On this page</h4>
+                                        <ul className="space-y-0.5">
+                                            {tocItems.map(item => {
+                                                const active = activeTocId === item.id;
+                                                return (
+                                                    <li key={item.id}>
+                                                        <a
+                                                            href={`/${slug}#${item.id}`}
+                                                            onClick={(e) => scrollToSection(e, item.id)}
+                                                            aria-current={active ? 'location' : undefined}
+                                                            className={`block px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${active ? 'bg-primary/5 text-primary' : 'text-slate-600 hover:text-primary hover:bg-slate-50'}`}
+                                                        >
+                                                            {item.label}
+                                                        </a>
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+                                    </nav>
+                                )}
+
+                                {/* FAQs */}
+                                {pageData.faqs && pageData.faqs.length > 0 && (
+                                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-card">
+                                        <h4 className="text-lg font-bold text-title mb-4">Frequently asked questions</h4>
+                                        <div className="divide-y divide-slate-200">
+                                            {pageData.faqs.map((faq, i) => (
+                                                <details key={i} className="group py-3 first:pt-0 last:pb-0">
+                                                    <summary className="flex items-start justify-between gap-3 cursor-pointer list-none text-sm font-semibold text-slate-900 hover:text-primary transition-colors [&::-webkit-details-marker]:hidden">
+                                                        <span>{faq.q}</span>
+                                                        <ChevronDown className="w-4 h-4 mt-0.5 shrink-0 text-slate-400 group-open:rotate-180 group-open:text-primary transition-transform" />
+                                                    </summary>
+                                                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+                                                </details>
+                                            ))}
+                                        </div>
                                     </div>
                                 )}
 
@@ -400,7 +506,7 @@ const DynamicPage = () => {
 
                                 {/* Quick CTA */}
                                 {slug !== 'contact' && (
-                                    <Link to="/contact" className="block p-8 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white transition-colors cursor-pointer group">
+                                    <Link to="/contact" className="block p-6 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white transition-colors cursor-pointer group">
                                         <h4 className="text-lg font-semibold text-title mb-2 group-hover:text-primary transition-colors">Questions?</h4>
                                         <p className="text-sm text-muted font-light mb-4">Contact the MSIT administrative desk directly.</p>
                                         <div className="text-primary font-medium text-sm flex items-center group-hover:translate-x-2 transition-transform">
@@ -412,6 +518,11 @@ const DynamicPage = () => {
                         </div>
 
                     </div>
+                    {isDepartment && (
+                        <div id="department-labs" className="mt-16">
+                            <DepartmentLabsSection deptKey={slug === 'applied-sciences' ? 'as' : slug} />
+                        </div>
+                    )}
                 </div>
             </section>
 
