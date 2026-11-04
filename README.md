@@ -28,6 +28,8 @@ Legacy institutional websites often suffer from slow page loads, poor accessibil
 
 ### Completed
 - **Dynamic Content Engine**: Decoupled routing system rendering pages from static JSON schemas (`src/data/`).
+- **Redesigned Academic Suite**: Revamped, interactive UI for Department pages, Academic Calendar, Timetables, and Research initiatives.
+- **Refined Navigation & Header**: Responsive transparent header adaptivity across hero sections with polished navigation styling.
 - **Client-Side Search**: Instant, millisecond search indexing without external APIs.
 - **Accessibility Layer**: Global state context allowing text resizing, high-contrast, and color filters.
 - **SEO Pre-rendering**: Build-step script that injects accurate meta tags into static HTML output for crawlers.
