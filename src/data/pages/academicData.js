@@ -7,118 +7,106 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Students collaborating in the MSIT Computer Science and Engineering laboratory",
         content: `
-            <div class="space-y-10">
-                <!-- Department Overview & HOD Profile (Glassmorphism) -->
-                <section class="bg-gradient-to-br from-white via-slate-50/80 to-blue-50/40 p-8 rounded-3xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-md space-y-6">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
+            <div class="space-y-12">
+                <!-- Department Overview & HOD -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
                         <div>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200/60 uppercase tracking-wider">Established 2001</span>
+                            <span class="inline-block px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-full border border-primary/20 uppercase tracking-wider">Established 2001</span>
                             <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Department of Computer Science & Engineering</h3>
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-xl border border-emerald-200/60 shadow-2xs">NBA Accredited</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-xl border border-blue-200/60 shadow-2xs">NAAC 'A' Grade</span>
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NBA Accredited</span>
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NAAC 'A' Grade</span>
                         </div>
                     </div>
 
                     <p class="text-slate-700 text-base leading-relaxed font-normal">
-                        "The Computer Science and Engineering Department was established in the year 2001 with the vision to offer Bachelor of Engineering degree in Computer Science & Engineering and impart world class education to the students."
+                        The Computer Science and Engineering Department was established in the year 2001 with the vision to offer Bachelor of Engineering degree in Computer Science & Engineering and impart world class education to the students.
                     </p>
 
-                    <!-- HOD Glass Badge -->
-                    <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-xs flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-extrabold text-base flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20">
+                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-primary text-white font-extrabold text-base flex items-center justify-center shrink-0">
                             NK
                         </div>
                         <div>
-                            <div class="text-[11px] text-blue-600 font-bold uppercase tracking-wider">Head of Department (HOD)</div>
+                            <div class="text-[11px] text-primary font-bold uppercase tracking-wider">Head of Department (HOD)</div>
                             <h4 class="text-lg font-bold text-slate-900">Dr. Naresh Kumar</h4>
                             <p class="text-xs text-slate-500">Professor & HOD • 17+ Years Academic & Administrative Experience</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Vision & Mission -->
+                <!-- Vision & Mission (official wording from msit.in/cse) -->
                 <section>
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-4 mb-6">Vision & Mission</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-8 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between">
-                            <div>
-                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Institutional Direction</span>
-                                <h4 class="text-xl font-bold text-slate-900 mb-4">Our Vision</h4>
-                                <p class="text-slate-700 text-sm leading-relaxed italic bg-blue-50/50 backdrop-blur-xs p-5 rounded-2xl border border-blue-100/80 font-medium">
-                                    "To maintain academic excellence aiming to produce competent technocrats imbibed with ethical values to serve the national emerging technological needs."
-                                </p>
-                            </div>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Vision & Mission</h3>
+                    <div class="rounded-3xl border border-slate-200 overflow-hidden bg-white shadow-sm">
+                        <div class="p-6 sm:p-8 bg-primary text-white">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-white/80 mb-3">Vision</h4>
+                            <p class="text-lg sm:text-xl leading-relaxed font-medium text-white">
+                                To maintain academic excellence aiming to produce competent technocrats imbibed with ethical values to serve the national emerging technological needs.
+                            </p>
                         </div>
-
-                        <div class="p-8 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] space-y-4">
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Action Mandates</span>
-                            <h4 class="text-xl font-bold text-slate-900 mb-2">Our Mission</h4>
-                            <div class="space-y-3">
-                                <div class="p-4 bg-slate-50/80 rounded-2xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed shadow-2xs">
-                                    <strong class="text-blue-900 block mb-1">M1 (Quality Education & Research):</strong>
-                                    "To impart quality engineering education to the students by providing effective teaching learning, research and application based innovative environment."
-                                </div>
-                                <div class="p-4 bg-slate-50/80 rounded-2xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed shadow-2xs">
-                                    <strong class="text-blue-900 block mb-1">M2 (Creativity & Leadership):</strong>
-                                    "To inculcate creativity team-spirit, leadership and ethical competence through continuous collective curricular, co-curricular and extracurricular activities."
-                                </div>
-                            </div>
+                        <div class="p-6 sm:p-8">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-4">Mission</h4>
+                            <ol class="space-y-4 list-none p-0 m-0">
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M1</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To impart quality engineering education to the students by providing effective teaching learning, research and application based innovative environment.</span>
+                                </li>
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M2</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To inculcate creativity team-spirit, leadership and ethical competence through continuous collective curricular, co-curricular and extracurricular activities.</span>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Educational Objectives (PEOs) -->
                 <section>
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-6">Program Educational Objectives (PEOs)</h3>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Program Educational Objectives (PEOs)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
-                            <div>
-                                <span class="px-2.5 py-1 bg-blue-50 text-blue-700 font-mono font-bold text-xs rounded-lg border border-blue-100">PEO1</span>
-                                <h4 class="font-bold text-base text-slate-900 mt-3 mb-2">Analytical & Lifelong Learning</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed">
-                                    "To acquire a deep insight in mathematical, scientific & analytical skills and adopt self-motivating lifelong learning to explore cutting edge technologies."
-                                </p>
-                            </div>
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO1</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Analytical & Lifelong Learning</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To acquire a deep insight in mathematical, scientific & analytical skills and adopt self-motivating lifelong learning to explore cutting edge technologies.
+                            </p>
                         </div>
 
-                        <div class="p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
-                            <div>
-                                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 font-mono font-bold text-xs rounded-lg border border-emerald-100">PEO2</span>
-                                <h4 class="font-bold text-base text-slate-900 mt-3 mb-2">Ethical Innovation & Societal Need</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed">
-                                    "To prepare graduate to meet the evolving technological needs of the country by promoting innovation, ethical practice and a commitment to serving society."
-                                </p>
-                            </div>
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO2</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Ethical Innovation & Societal Need</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To prepare graduate to meet the evolving technological needs of the country by promoting innovation, ethical practice and a commitment to serving society.
+                            </p>
                         </div>
 
-                        <div class="p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-3">
-                            <div>
-                                <span class="px-2.5 py-1 bg-purple-50 text-purple-700 font-mono font-bold text-xs rounded-lg border border-purple-100">PEO3</span>
-                                <h4 class="font-bold text-base text-slate-900 mt-3 mb-2">Leadership & Teamwork</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed">
-                                    "To acquire necessary technical knowledge to pursue successful professional career posing leadership and team spirit."
-                                </p>
-                            </div>
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO3</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Leadership & Teamwork</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To acquire necessary technical knowledge to pursue successful professional career posing leadership and team spirit.
+                            </p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Specific Outcomes (PSOs) -->
-                <section class="p-6 bg-slate-50/80 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-2xs space-y-3">
+                <section class="p-6 bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
                     <h3 class="text-xl font-bold text-slate-900 mb-2">Program Specific Outcomes (PSOs)</h3>
-                    <div class="space-y-3 text-xs text-slate-700">
-                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200/80 flex items-start gap-3 shadow-2xs">
-                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 font-bold rounded-md border border-blue-100 shrink-0">PSO1</span>
+                    <div class="space-y-3 text-sm text-slate-700 font-normal">
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO1</span>
                             <span>Demonstrate fundamentals to resolve mathematical and computational problems in computer science.</span>
                         </div>
-                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200/80 flex items-start gap-3 shadow-2xs">
-                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 font-bold rounded-md border border-blue-100 shrink-0">PSO2</span>
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO2</span>
                             <span>Explore evolutionary computing changes through innovative software engineering solutions.</span>
                         </div>
-                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200/80 flex items-start gap-3 shadow-2xs">
-                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 font-bold rounded-md border border-blue-100 shrink-0">PSO3</span>
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO3</span>
                             <span>Gain modern computer environment knowledge for career advancement and research.</span>
                         </div>
                     </div>
@@ -131,11 +119,13 @@ export const academicData = {
             { label: "Faculty Strength", value: "35+" },
             { label: "NBA Status", value: "Accredited" }
         ],
-        bulletPoints: [
-            { label: "Analytical Excellence", detail: "Deep insight into mathematical, scientific, and analytical skills required for lifelong learning and problem-solving." },
-            { label: "Ethical Innovation", detail: "Promoting technological innovation coupled with ethical practices and a strong commitment to society." },
-            { label: "Professional Leadership", detail: "Equipping students with technical knowledge and team spirit to pursue successful professional careers." },
-            { label: "State-of-the-Art Labs", detail: "10 computing hubs equipped with high-performance systems and environments for AI, OS, Networking, and Data Analytics." }
+        // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
+        faqs: [
+            { q: "How many seats does B.Tech CSE have?", a: "240 sanctioned seats: 180 in the morning shift and 60 in the evening shift." },
+            { q: "How do I get admission to B.Tech CSE?", a: "Admission is through GGSIPU counselling, based on your JEE Main rank." },
+            { q: "Is the CSE programme accredited?", a: "Yes. The programme is accredited by the National Board of Accreditation (NBA). MSIT is affiliated to GGSIPU and approved by AICTE." },
+            { q: "Who is the Head of Department?", a: "Dr. Naresh Kumar, Professor & HOD, with 17+ years of academic and administrative experience." },
+            { q: "What labs does the department have?", a: "10 computing labs with high-performance systems for AI, operating systems, networking and data analytics." }
         ]
     },
     "it": {
@@ -146,115 +136,122 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Advanced networking and server infrastructure at the MSIT Information Technology department",
         content: `
-            <div class="space-y-10">
-                <!-- Department Overview & HOD Profile (Glassmorphism) -->
-                <section class="bg-gradient-to-br from-white via-slate-50/80 to-indigo-50/40 p-8 rounded-3xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-md space-y-6">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
+            <div class="space-y-12">
+                <!-- Department Overview & HOD -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
                         <div>
-                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-200/60 uppercase tracking-wider">Faculty Strength ~35+</span>
+                            <span class="inline-block px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-full border border-primary/20 uppercase tracking-wider">Faculty Strength ~35+</span>
                             <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Department of Information Technology</h3>
                         </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-xl border border-emerald-200/60 shadow-2xs">NBA Accredited</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-xl border border-blue-200/60 shadow-2xs">NAAC 'A' Grade</span>
-                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-xl border border-purple-200/60 shadow-2xs">ISO 9001:2015</span>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NBA Accredited</span>
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NAAC 'A' Grade</span>
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">ISO 9001:2015</span>
                         </div>
                     </div>
 
                     <p class="text-slate-700 text-base leading-relaxed font-normal">
-                        "Information Technology is the most prominent and rapidly developing field in today's world." The department features air-conditioned laboratories equipped with high-speed internet, modern compute nodes, and 10 active industry MOUs.
+                        Information Technology is the most prominent and rapidly developing field in today's world. The department features air-conditioned laboratories equipped with high-speed internet, modern compute nodes, and 10 active industry MOUs.
                     </p>
 
-                    <!-- HOD Profile Glass Card -->
-                    <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-xs space-y-3">
+                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white font-extrabold text-base flex items-center justify-center shrink-0 shadow-md shadow-indigo-500/20">
+                            <div class="w-12 h-12 rounded-2xl bg-primary text-white font-extrabold text-base flex items-center justify-center shrink-0">
                                 TS
                             </div>
                             <div>
-                                <div class="text-[11px] text-indigo-600 font-bold uppercase tracking-wider">Head of Department (HOD)</div>
+                                <div class="text-[11px] text-primary font-bold uppercase tracking-wider">Head of Department (HOD)</div>
                                 <h4 class="text-lg font-bold text-slate-900">Prof. Tripti Sharma</h4>
                                 <p class="text-xs text-slate-500">Professor & HOD • Ph.D., M.Tech (CSE), M.Phil (CS), B.E. (CSE), GATE Qualified</p>
                             </div>
                         </div>
-                        <div class="text-xs text-slate-600 pt-2 border-t border-slate-100 leading-relaxed">
-                            <strong>Academic Record:</strong> 21+ years teaching experience; research focus in Wireless Sensor Networks, AI, and Machine Learning; recipient of multiple national/international academic awards. Host department for ICAIA 2026 conference.
+                        <div class="text-sm text-slate-600 font-normal pt-3 border-t border-slate-200 leading-relaxed">
+                            <strong class="text-slate-900">Academic Record:</strong> 21+ years teaching experience; research focus in Wireless Sensor Networks, AI, and Machine Learning; recipient of multiple national/international academic awards. Host department for ICAIA 2026 conference.
                         </div>
                     </div>
                 </section>
 
                 <!-- Vision & Mission -->
                 <section>
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-6">Vision & Mission</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-8 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between">
-                            <div>
-                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest block mb-2">Departmental Vision</span>
-                                <h4 class="text-xl font-bold text-slate-900 mb-4">Our Vision</h4>
-                                <p class="text-slate-700 text-sm leading-relaxed italic bg-indigo-50/50 backdrop-blur-xs p-5 rounded-2xl border border-indigo-100/80 font-medium">
-                                    "To build a culture of innovation and research in students and make them capable to solve upcoming challenges of human life using computing."
-                                </p>
-                            </div>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Vision & Mission</h3>
+                    <div class="rounded-3xl border border-slate-200 overflow-hidden bg-white shadow-sm">
+                        <div class="p-6 sm:p-8 bg-primary text-white">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-white/80 mb-3">Vision</h4>
+                            <p class="text-lg sm:text-xl leading-relaxed font-medium text-white">
+                                To build a culture of innovation and research in students and make them capable to solve upcoming challenges of human life using computing.
+                            </p>
                         </div>
-
-                        <div class="p-8 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] space-y-3">
-                            <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest block">Action Mandates</span>
-                            <h4 class="text-xl font-bold text-slate-900 mb-2">Our Mission</h4>
-                            <div class="space-y-2.5">
-                                <div class="p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed shadow-2xs">
-                                    <strong class="text-indigo-900 block mb-0.5">M1 (Educational Pathways):</strong>
-                                    "To develop 'educational pathways' so that students can take their career towards success."
-                                </div>
-                                <div class="p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed shadow-2xs">
-                                    <strong class="text-indigo-900 block mb-0.5">M2 (Curiosity & Innovation):</strong>
-                                    "To imbibe curiosity and support innovativeness by providing guidance to use the technology effectively."
-                                </div>
-                                <div class="p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed shadow-2xs">
-                                    <strong class="text-indigo-900 block mb-0.5">M3 (Management & Integrity):</strong>
-                                    "To inculcate management skills, integrity and honesty through curricular, co-curricular and extra-curricular activities."
-                                </div>
-                            </div>
+                        <div class="p-6 sm:p-8">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-4">Mission</h4>
+                            <ol class="space-y-4 list-none p-0 m-0">
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M1</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To develop 'educational pathways' so that students can take their career towards success.</span>
+                                </li>
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M2</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To imbibe curiosity and support innovativeness by providing guidance to use the technology effectively.</span>
+                                </li>
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M3</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To inculcate management skills, integrity and honesty through curricular, co-curricular and extra-curricular activities.</span>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Educational Objectives (PEOs) -->
                 <section>
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-4 mb-6">Program Educational Objectives (PEOs)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2 text-xs">
-                            <span class="px-2 py-0.5 bg-blue-50 text-blue-700 font-mono font-bold rounded border border-blue-100">PEO1</span>
-                            <h4 class="font-bold text-sm text-slate-900">Industry Practice & Lifelong Learning</h4>
-                            <p class="text-slate-600 leading-relaxed">Graduates prepared for IT industries, engaged in learning and applying new ideas effectively in software engineering environments.</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Program Educational Objectives (PEOs)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO1</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Industry Practice & Lifelong Learning</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Graduates prepared for IT industries, engaged in learning and applying new ideas effectively in software engineering environments.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2 text-xs">
-                            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 font-mono font-bold rounded border border-emerald-100">PEO2</span>
-                            <h4 class="font-bold text-sm text-slate-900">Technical & Management Roles</h4>
-                            <p class="text-slate-600 leading-relaxed">Graduates perform effectively as individual contributors and team members, advancing into technical and leadership roles.</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO2</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Technical & Management Roles</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Graduates perform effectively as individual contributors and team members, advancing into technical and leadership roles.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2 text-xs">
-                            <span class="px-2 py-0.5 bg-purple-50 text-purple-700 font-mono font-bold rounded border border-purple-100">PEO3</span>
-                            <h4 class="font-bold text-sm text-slate-900">Mathematical & Computing Foundation</h4>
-                            <p class="text-slate-600 leading-relaxed">Graduates apply computing principles grounded in mathematics and science for complex enterprise software projects.</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO3</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Mathematical & Computing Foundation</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Graduates apply computing principles grounded in mathematics and science for complex enterprise software projects.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2 text-xs">
-                            <span class="px-2 py-0.5 bg-amber-50 text-amber-700 font-mono font-bold rounded border border-amber-100">PEO4</span>
-                            <h4 class="font-bold text-sm text-slate-900">Higher Studies & Research</h4>
-                            <p class="text-slate-600 leading-relaxed">Graduates prepared to pursue higher studies in teaching, academic research, and specialized IT domains.</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO4</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Higher Studies & Research</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Graduates prepared to pursue higher studies in teaching, academic research, and specialized IT domains.
+                            </p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Specific Outcomes (PSOs) -->
-                <section class="p-6 bg-slate-50/80 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-2xs space-y-3 text-xs">
-                    <h3 class="text-xl font-bold text-slate-900 mb-1">Program Specific Outcomes (PSOs)</h3>
-                    <div class="p-4 bg-white rounded-2xl border border-slate-200/80 text-slate-700 leading-relaxed shadow-2xs">
-                        <strong class="text-indigo-900 block mb-0.5">PSO-1 (Hardware & Software Principles):</strong>
-                        "Ability to understand the principles and working of hardware and software aspects in information technology."
-                    </div>
-                    <div class="p-4 bg-white rounded-2xl border border-slate-200/80 text-slate-700 leading-relaxed shadow-2xs">
-                        <strong class="text-indigo-900 block mb-0.5">PSO-2 (Real-World Problem Solving):</strong>
-                        "Ability to explore and develop innovative ideas to solve real world problem using IT skills."
+                <section class="p-6 bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Program Specific Outcomes (PSOs)</h3>
+                    <div class="space-y-3 text-sm text-slate-700 font-normal">
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO1</span>
+                            <span>Ability to understand the principles and working of hardware and software aspects in information technology.</span>
+                        </div>
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO2</span>
+                            <span>Ability to explore and develop innovative ideas to solve real world problem using IT skills.</span>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -265,10 +262,13 @@ export const academicData = {
             { label: "HOD Experience", value: "21+ Yrs" },
             { label: "NBA Status", value: "Accredited" }
         ],
-        bulletPoints: [
-            { label: "Cloud & DevOps Labs", detail: "State-of-the-art labs equipped with modern DevOps pipelines and cloud infrastructure for hands-on learning." },
-            { label: "IoT Center of Excellence", detail: "Advanced research facility featuring Raspberry Pi 5, ESP32, and IoT sensors for real-world prototyping." },
-            { label: "Full-Stack Development", detail: "Comprehensive training in modern web technologies including scalable database architectures and UI/UX." }
+        // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
+        faqs: [
+            { q: "How many seats does B.Tech IT have?", a: "The sanctioned intake for B.Tech IT is 120 seats." },
+            { q: "How do I get admission to B.Tech IT?", a: "Admission is through GGSIPU counselling, based on your JEE Main rank." },
+            { q: "Is the IT programme accredited?", a: "Yes. The programme is accredited by the National Board of Accreditation (NBA). MSIT is affiliated to GGSIPU and approved by AICTE." },
+            { q: "Who is the Head of Department?", a: "Prof. Tripti Sharma, Professor & HOD, with 21+ years of teaching experience." },
+            { q: "Does the department have industry tie-ups?", a: "Yes. The department has 10 active industry MOUs, alongside air-conditioned labs with high-speed internet." }
         ]
     },
     "ece": {
@@ -279,108 +279,121 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Modern VLSI design and signal processing equipment in the MSIT ECE lab",
         content: `
-            <div class="space-y-10">
-                <!-- Department Overview & HOD Profile (Glassmorphism) -->
-                <section class="bg-gradient-to-br from-white via-slate-50/80 to-blue-50/40 p-8 rounded-3xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-md space-y-6">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
+            <div class="space-y-12">
+                <!-- Department Overview & HOD -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
                         <div>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200/60 uppercase tracking-wider">28 Faculty • 7 Tech Staff</span>
+                            <span class="inline-block px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-full border border-primary/20 uppercase tracking-wider">28 Faculty • 7 Tech Staff</span>
                             <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Department of Electronics & Communication Engineering</h3>
                         </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-xl border border-emerald-200/60 shadow-2xs">NBA Accredited</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-xl border border-blue-200/60 shadow-2xs">NAAC 'A' Grade</span>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NBA Accredited</span>
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NAAC 'A' Grade</span>
                         </div>
                     </div>
 
                     <p class="text-slate-700 text-base leading-relaxed font-normal">
-                        "The Department of Electronics & Communication Engineering which has a fine blend of experienced as well as young and dynamic personalities as faculty, is involved in providing quality education at Undergraduate (UG) level."
+                        The Department of Electronics & Communication Engineering which has a fine blend of experienced as well as young and dynamic personalities as faculty, is involved in providing quality education at Undergraduate (UG) level.
                     </p>
 
-                    <!-- HOD Card -->
-                    <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-xs space-y-3">
+                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-extrabold text-base flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20">
+                            <div class="w-12 h-12 rounded-2xl bg-primary text-white font-extrabold text-base flex items-center justify-center shrink-0">
                                 SP
                             </div>
                             <div>
-                                <div class="text-[11px] text-blue-600 font-bold uppercase tracking-wider">Head of Department (HOD)</div>
+                                <div class="text-[11px] text-primary font-bold uppercase tracking-wider">Head of Department (HOD)</div>
                                 <h4 class="text-lg font-bold text-slate-900">Dr. Sudesh Pahal</h4>
                                 <p class="text-xs text-slate-500">Associate Professor & HOD • Ph.D., M.E., B.E. • Vidwan ID: 243358</p>
                             </div>
                         </div>
-                        <div class="text-xs text-slate-600 pt-2 border-t border-slate-100 leading-relaxed">
-                            <strong>Research Specialization:</strong> Wireless sensor networks, vehicular ad-hoc networks (VANETs), AI in communications, and microelectronics design.
+                        <div class="text-sm text-slate-600 font-normal pt-3 border-t border-slate-200 leading-relaxed">
+                            <strong class="text-slate-900">Research Specialization:</strong> Wireless sensor networks, vehicular ad-hoc networks (VANETs), AI in communications, and microelectronics design.
                         </div>
                     </div>
                 </section>
 
                 <!-- Vision & Mission -->
                 <section>
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-4 mb-6">Vision & Mission</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-8 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between">
-                            <div>
-                                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Departmental Vision</span>
-                                <h4 class="text-xl font-bold text-slate-900 mb-4">Our Vision</h4>
-                                <p class="text-slate-700 text-sm leading-relaxed italic bg-blue-50/50 backdrop-blur-xs p-5 rounded-2xl border border-blue-100/80 font-medium">
-                                    "ECE department strives to become a centre of quality education to meet the global technological needs for the benefit of mankind."
-                                </p>
-                            </div>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Vision & Mission</h3>
+                    <div class="rounded-3xl border border-slate-200 overflow-hidden bg-white shadow-sm">
+                        <div class="p-6 sm:p-8 bg-primary text-white">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-white/80 mb-3">Vision</h4>
+                            <p class="text-lg sm:text-xl leading-relaxed font-medium text-white">
+                                ECE department strives to become a centre of quality education to meet the global technological needs for the benefit of mankind.
+                            </p>
                         </div>
-
-                        <div class="p-8 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] space-y-3">
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block">Action Mandates</span>
-                            <h4 class="text-xl font-bold text-slate-900 mb-2">Our Mission</h4>
-                            <div class="space-y-2 text-xs">
-                                <div class="p-3 bg-slate-50/80 rounded-xl border border-slate-200/80 text-slate-700">
-                                    <strong class="text-blue-900">M1:</strong> "To impart high quality education in the field of electronics & communication engineering to meet the national and global challenges."
-                                </div>
-                                <div class="p-3 bg-slate-50/80 rounded-xl border border-slate-200/80 text-slate-700">
-                                    <strong class="text-blue-900">M2:</strong> "To provide adequate facilities, infrastructure and environment to the students as well as faculty members thereby creating an ambience conducive for teaching-learning process."
-                                </div>
-                                <div class="p-3 bg-slate-50/80 rounded-xl border border-slate-200/80 text-slate-700">
-                                    <strong class="text-blue-900">M3:</strong> "To empower the students by enhancing their soft skills and ethics to create social awareness and imbibe national values so as to become good citizen."
-                                </div>
-                                <div class="p-3 bg-slate-50/80 rounded-xl border border-slate-200/80 text-slate-700">
-                                    <strong class="text-blue-900">M4:</strong> "Creating a thrust for life-long learning through interaction with outside world on contemporary issues and technological trends."
-                                </div>
-                            </div>
+                        <div class="p-6 sm:p-8">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-4">Mission</h4>
+                            <ol class="space-y-4 list-none p-0 m-0">
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M1</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To impart high quality education in the field of electronics & communication engineering to meet the national and global challenges.</span>
+                                </li>
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M2</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To provide adequate facilities, infrastructure and environment to the students as well as faculty members thereby creating an ambience conducive for teaching-learning process.</span>
+                                </li>
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M3</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To empower the students by enhancing their soft skills and ethics to create social awareness and imbibe national values so as to become good citizen.</span>
+                                </li>
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M4</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">Creating a thrust for life-long learning through interaction with outside world on contemporary issues and technological trends.</span>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Educational Objectives (PEOs) -->
                 <section>
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-6">Program Educational Objectives (PEOs)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2">
-                            <span class="px-2 py-0.5 bg-blue-50 text-blue-700 font-mono font-bold rounded border border-blue-100">PEO1</span>
-                            <p class="text-slate-600 leading-relaxed">"To prepare ECE graduates with strong foundation in engineering and technology for personal and professional growth."</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Program Educational Objectives (PEOs)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO1</span>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To prepare ECE graduates with strong foundation in engineering and technology for personal and professional growth.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2">
-                            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 font-mono font-bold rounded border border-emerald-100">PEO2</span>
-                            <p class="text-slate-600 leading-relaxed">"To prepare ECE graduates with capability of serving and leading various organizations with acquired technical skills and knowledge."</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO2</span>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To prepare ECE graduates with capability of serving and leading various organizations with acquired technical skills and knowledge.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2">
-                            <span class="px-2 py-0.5 bg-purple-50 text-purple-700 font-mono font-bold rounded border border-purple-100">PEO3</span>
-                            <p class="text-slate-600 leading-relaxed">"To prepare ECE graduates with professional competence to successfully attempt various competitive exams, pursue higher studies, research and other professional activities."</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO3</span>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To prepare ECE graduates with professional competence to successfully attempt various competitive exams, pursue higher studies, research and other professional activities.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2">
-                            <span class="px-2 py-0.5 bg-amber-50 text-amber-700 font-mono font-bold rounded border border-amber-100">PEO4</span>
-                            <p class="text-slate-600 leading-relaxed">"To prepare ECE graduates with ability to address the challenging needs of society with ethics and integrity in global context."</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO4</span>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To prepare ECE graduates with ability to address the challenging needs of society with ethics and integrity in global context.
+                            </p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Specific Outcomes (PSOs) -->
-                <section class="p-6 bg-slate-50/80 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-2xs space-y-3 text-xs">
+                <section class="p-6 bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
                     <h3 class="text-xl font-bold text-slate-900 mb-2">Program Specific Outcomes (PSOs)</h3>
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200/80 text-slate-700">
-                        <strong class="text-blue-900">PSO1:</strong> Apply foundational sciences and ECE knowledge for core and multidisciplinary technology development.
-                    </div>
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200/80 text-slate-700">
-                        <strong class="text-blue-900">PSO2:</strong> Apply technical knowledge for professional careers and competitive examination success (GATE/IES/PSUs).
+                    <div class="space-y-3 text-sm text-slate-700 font-normal">
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO1</span>
+                            <span>Apply foundational sciences and ECE knowledge for core and multidisciplinary technology development.</span>
+                        </div>
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO2</span>
+                            <span>Apply technical knowledge for professional careers and competitive examination success (GATE/IES/PSUs).</span>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -391,10 +404,13 @@ export const academicData = {
             { label: "Tech Staff", value: "7 Staff" },
             { label: "NBA Status", value: "Accredited" }
         ],
-        bulletPoints: [
-            { label: "VLSI & Microelectronics Lab", detail: "Hands-on Tanner Tools circuit design, microprocessor architecture, and CMOS layout simulation." },
-            { label: "CST Studio Antenna Lab", detail: "3D electromagnetic field analysis, patch antenna synthesis, and microwave waveguide mode analysis." },
-            { label: "Digital Signal Processing", detail: "Advanced central MATLAB server and hardware tools for communication systems and signal processing." }
+        // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
+        faqs: [
+            { q: "How many seats does B.Tech ECE have?", a: "The sanctioned intake for B.Tech ECE is 120 seats." },
+            { q: "How do I get admission to B.Tech ECE?", a: "Admission is through GGSIPU counselling, based on your JEE Main rank." },
+            { q: "Is the ECE programme accredited?", a: "Yes. The programme is accredited by the National Board of Accreditation (NBA). MSIT is affiliated to GGSIPU and approved by AICTE." },
+            { q: "Who is the Head of Department?", a: "Dr. Sudesh Pahal, Associate Professor & HOD, specialising in wireless sensor networks, VANETs and microelectronics design." },
+            { q: "What labs does the department have?", a: "Labs for VLSI and microelectronics (Tanner Tools), antenna design (CST Studio) and digital signal processing (MATLAB), among others." }
         ]
     },
     "eee": {
@@ -405,104 +421,113 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Sustainable power systems and industrial control units in the MSIT Electrical laboratory",
         content: `
-            <div class="space-y-10">
-                <!-- Department Overview & HOD Profile (Glassmorphism) -->
-                <section class="bg-gradient-to-br from-white via-slate-50/80 to-amber-50/40 p-8 rounded-3xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-md space-y-6">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
+            <div class="space-y-12">
+                <!-- Department Overview & HOD -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
                         <div>
-                            <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-full border border-amber-200/60 uppercase tracking-wider">12 Faculty • 5 Tech Staff</span>
+                            <span class="inline-block px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-full border border-primary/20 uppercase tracking-wider">12 Faculty • 5 Tech Staff</span>
                             <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Department of Electrical & Electronics Engineering</h3>
                         </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-xl border border-emerald-200/60 shadow-2xs">NBA Accredited</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-xl border border-blue-200/60 shadow-2xs">NAAC 'A' Grade</span>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NBA Accredited</span>
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NAAC 'A' Grade</span>
                         </div>
                     </div>
 
                     <p class="text-slate-700 text-base leading-relaxed font-normal">
-                        "The Department of Electrical & Electronics Engineering has a fine blend of experienced as well as young and dynamic personalities as faculty."
+                        The Department of Electrical & Electronics Engineering has a fine blend of experienced as well as young and dynamic personalities as faculty.
                     </p>
 
-                    <!-- HOD Card -->
-                    <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-xs space-y-3">
+                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-600 text-white font-extrabold text-base flex items-center justify-center shrink-0 shadow-md shadow-amber-500/20">
+                            <div class="w-12 h-12 rounded-2xl bg-primary text-white font-extrabold text-base flex items-center justify-center shrink-0">
                                 SG
                             </div>
                             <div>
-                                <div class="text-[11px] text-amber-600 font-bold uppercase tracking-wider">Head of Department (HOD)</div>
+                                <div class="text-[11px] text-primary font-bold uppercase tracking-wider">Head of Department (HOD)</div>
                                 <h4 class="text-lg font-bold text-slate-900">Dr. Sunil Gupta</h4>
                                 <p class="text-xs text-slate-500">Associate Professor & HOD • Ph.D., M.E., B.Tech. • 19+ Years Exp (with MSIT since 2006)</p>
                             </div>
                         </div>
-                        <div class="text-xs text-slate-600 pt-2 border-t border-slate-100 leading-relaxed">
-                            <strong>Department Strength:</strong> 1 Professor, 2 Associate Professors, 9 Assistant Professors, supported by 5 technical and laboratory staff.
+                        <div class="text-sm text-slate-600 font-normal pt-3 border-t border-slate-200 leading-relaxed">
+                            <strong class="text-slate-900">Department Strength:</strong> 1 Professor, 2 Associate Professors, 9 Assistant Professors, supported by 5 technical and laboratory staff.
                         </div>
                     </div>
                 </section>
 
                 <!-- Vision & Mission -->
                 <section>
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-amber-600 pl-4 mb-6">Vision & Mission</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-8 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex flex-col justify-between">
-                            <div>
-                                <span class="text-xs font-bold text-amber-600 uppercase tracking-widest block mb-2">Departmental Vision</span>
-                                <h4 class="text-xl font-bold text-slate-900 mb-4">Our Vision</h4>
-                                <p class="text-slate-700 text-sm leading-relaxed italic bg-amber-50/50 backdrop-blur-xs p-5 rounded-2xl border border-amber-100/80 font-medium">
-                                    "To achieve global standards in the field of Electrical and Electronics Engineering to minimize skill gap between academia and industry."
-                                </p>
-                            </div>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Vision & Mission</h3>
+                    <div class="rounded-3xl border border-slate-200 overflow-hidden bg-white shadow-sm">
+                        <div class="p-6 sm:p-8 bg-primary text-white">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-white/80 mb-3">Vision</h4>
+                            <p class="text-lg sm:text-xl leading-relaxed font-medium text-white">
+                                To achieve global standards in the field of Electrical and Electronics Engineering to minimize skill gap between academia and industry.
+                            </p>
                         </div>
-
-                        <div class="p-8 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_rgb(0,0,0,0.03)] space-y-4">
-                            <span class="text-xs font-bold text-amber-600 uppercase tracking-widest block">Action Mandates</span>
-                            <h4 class="text-xl font-bold text-slate-900 mb-2">Our Mission</h4>
-                            <div class="space-y-3">
-                                <div class="p-4 bg-slate-50/80 rounded-2xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed shadow-2xs">
-                                    <strong class="text-amber-900 block mb-1">M1 (Quality Education & Competitive Readiness):</strong>
-                                    "Imparting quality technical education to the students of Electrical and Electronics Engineering with the supportive environment, preparing them for competitive exams."
-                                </div>
-                                <div class="p-4 bg-slate-50/80 rounded-2xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed shadow-2xs">
-                                    <strong class="text-amber-900 block mb-1">M2 (Professional Attitude & Sensitivity):</strong>
-                                    "To confer the students with professional attitude, research aptitude, technical and communication skills with sensitivity towards the environment."
-                                </div>
-                            </div>
+                        <div class="p-6 sm:p-8">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-4">Mission</h4>
+                            <ol class="space-y-4 list-none p-0 m-0">
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M1</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">Imparting quality technical education to the students of Electrical and Electronics Engineering with the supportive environment, preparing them for competitive exams.</span>
+                                </li>
+                                <li class="grid grid-cols-[2.5rem_1fr] gap-3 items-start m-0 p-0">
+                                    <span class="w-10 h-10 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-sm flex items-center justify-center">M2</span>
+                                    <span class="text-base text-slate-700 font-normal leading-relaxed pt-1.5">To confer the students with professional attitude, research aptitude, technical and communication skills with sensitivity towards the environment.</span>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Educational Objectives (PEOs) -->
                 <section>
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-4 mb-6">Program Educational Objectives (PEOs)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2">
-                            <span class="px-2 py-0.5 bg-blue-50 text-blue-700 font-mono font-bold rounded border border-blue-100">PEO1</span>
-                            <p class="text-slate-600 leading-relaxed">"To equip the students with fundamental knowledge of science and technology to excel in their career or pursue higher studies."</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Program Educational Objectives (PEOs)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO1</span>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To equip the students with fundamental knowledge of science and technology to excel in their career or pursue higher studies.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2">
-                            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 font-mono font-bold rounded border border-emerald-100">PEO2</span>
-                            <p class="text-slate-600 leading-relaxed">"To inculcate creative, analytical and critical reasoning skills for real world challenges."</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO2</span>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To inculcate creative, analytical and critical reasoning skills for real world challenges.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2">
-                            <span class="px-2 py-0.5 bg-purple-50 text-purple-700 font-mono font-bold rounded border border-purple-100">PEO3</span>
-                            <p class="text-slate-600 leading-relaxed">"To contribute to society with professional and social ethics."</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO3</span>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To contribute to society with professional and social ethics.
+                            </p>
                         </div>
-                        <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-2">
-                            <span class="px-2 py-0.5 bg-amber-50 text-amber-700 font-mono font-bold rounded border border-amber-100">PEO4</span>
-                            <p class="text-slate-600 leading-relaxed">"To instill the students with soft skills, team work skills, leadership qualities."</p>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">PEO4</span>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                To instill the students with soft skills, team work skills, leadership qualities.
+                            </p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Specific Outcomes (PSOs) -->
-                <section class="p-6 bg-slate-50/80 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-2xs space-y-3 text-xs">
+                <section class="p-6 bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
                     <h3 class="text-xl font-bold text-slate-900 mb-2">Program Specific Outcomes (PSOs)</h3>
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200/80 text-slate-700">
-                        <strong class="text-amber-900">PSO1:</strong> "Apply the principles of basic sciences and Electrical and Electronics Engineering to design, analyze and solve problems."
-                    </div>
-                    <div class="p-3.5 bg-white rounded-xl border border-slate-200/80 text-slate-700">
-                        <strong class="text-amber-900">PSO2:</strong> "Apply the acquired technical knowledge for pursuing higher studies and successful professional career."
+                    <div class="space-y-3 text-sm text-slate-700 font-normal">
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO1</span>
+                            <span>Apply the principles of basic sciences and Electrical and Electronics Engineering to design, analyze and solve problems.</span>
+                        </div>
+                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 flex items-start gap-3">
+                            <span class="px-2.5 py-0.5 bg-primary/5 text-primary font-bold rounded-md border border-primary/20 shrink-0">PSO2</span>
+                            <span>Apply the acquired technical knowledge for pursuing higher studies and successful professional career.</span>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -513,10 +538,13 @@ export const academicData = {
             { label: "Tech Staff", value: "5 Staff" },
             { label: "NBA Status", value: "Accredited" }
         ],
-        bulletPoints: [
-            { label: "Electrical Machines Labs", detail: "Hands-on DC/AC motor characteristics, alternator synchronization, and transformer regulation." },
-            { label: "Power Systems & Relays", detail: "Transmission line analyzers and protective relay testing setups under artificial fault conditions." },
-            { label: "Electric Drives & Automation", detail: "Speed control methods for AC/DC motors via SCR/IGBT converters and MATLAB Simulink." }
+        // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
+        faqs: [
+            { q: "How many seats does B.Tech EEE have?", a: "The sanctioned intake for B.Tech EEE is 60 seats." },
+            { q: "How do I get admission to B.Tech EEE?", a: "Admission is through GGSIPU counselling, based on your JEE Main rank." },
+            { q: "Is the EEE programme accredited?", a: "Yes. The programme is accredited by the National Board of Accreditation (NBA). MSIT is affiliated to GGSIPU and approved by AICTE." },
+            { q: "Who is the Head of Department?", a: "Dr. Sunil Gupta, Associate Professor & HOD, with 19+ years of experience and at MSIT since 2006." },
+            { q: "What labs does the department have?", a: "Labs for electrical machines, power systems and protective relays, and electric drives and automation, among others." }
         ]
     },
     "applied-sciences": {
@@ -527,59 +555,86 @@ export const academicData = {
         heroImage: "/campus-hero.webp",
         heroImageAlt: "Applied Sciences lab at MSIT where first-year students perform physics experiments",
         content: `
-            <div class="space-y-10">
-                <!-- Department Overview & HOD Profile (Glassmorphism) -->
-                <section class="bg-gradient-to-br from-white via-slate-50/80 to-teal-50/40 p-8 rounded-3xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-md space-y-6">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80 pb-6">
+            <div class="space-y-12">
+                <!-- Department Overview & HOD -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
                         <div>
-                            <span class="px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full border border-teal-200/60 uppercase tracking-wider">33 Faculty Members • 1st Year Focus</span>
+                            <span class="inline-block px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-full border border-primary/20 uppercase tracking-wider">33 Faculty Members • 1st Year Focus</span>
                             <h3 class="text-2xl font-extrabold text-slate-900 mt-2">Department of Applied Sciences</h3>
                         </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-xl border border-blue-200/60 shadow-2xs">NAAC 'A' Grade</span>
-                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-xl border border-purple-200/60 shadow-2xs">ISO 9001:2015</span>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">NAAC 'A' Grade</span>
+                            <span class="px-3 py-1 bg-primary/5 text-primary text-xs font-bold rounded-xl border border-primary/20">ISO 9001:2015</span>
                         </div>
                     </div>
 
                     <p class="text-slate-700 text-base leading-relaxed font-normal">
-                        "The Department of Applied Sciences in Maharaja Surajmal Institute of Technology comprises of Physics, Chemistry, Workshop and Mathematics departments." It provides core scientific, mathematical, and mechanical foundations for all incoming engineering undergraduates.
+                        The Department of Applied Sciences in Maharaja Surajmal Institute of Technology comprises of Physics, Chemistry, Workshop and Mathematics departments. It provides core scientific, mathematical, and mechanical foundations for all incoming engineering undergraduates.
                     </p>
 
-                    <!-- HOD Card -->
-                    <div class="p-5 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-xs space-y-3">
+                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-600 to-emerald-600 text-white font-extrabold text-base flex items-center justify-center shrink-0 shadow-md shadow-teal-500/20">
+                            <div class="w-12 h-12 rounded-2xl bg-primary text-white font-extrabold text-base flex items-center justify-center shrink-0">
                                 AG
                             </div>
                             <div>
-                                <div class="text-[11px] text-teal-600 font-bold uppercase tracking-wider">Head of Department (HOD)</div>
+                                <div class="text-[11px] text-primary font-bold uppercase tracking-wider">Head of Department (HOD)</div>
                                 <h4 class="text-lg font-bold text-slate-900">Dr. Ajay Gahlot</h4>
                                 <p class="text-xs text-slate-500">Associate Professor & HOD • Ph.D. in Physics, M.Tech. • 15+ Years Exp • Vidwan ID: 243475</p>
                             </div>
                         </div>
-                        <div class="text-xs text-slate-600 pt-2 border-t border-slate-100 leading-relaxed">
-                            <strong>Research Interests:</strong> Plasma physics (dusty/strongly coupled plasma, fusion plasma), condensed matter physics. Department strength: ~33 faculty members (2 Professors, 5 Associate Professors, 26 Assistant Professors).
+                        <div class="text-sm text-slate-600 font-normal pt-3 border-t border-slate-200 leading-relaxed">
+                            <strong class="text-slate-900">Research Interests:</strong> Plasma physics (dusty/strongly coupled plasma, fusion plasma), condensed matter physics. Department strength: ~33 faculty members (2 Professors, 5 Associate Professors, 26 Assistant Professors).
                         </div>
                     </div>
                 </section>
 
-                <!-- Key Sections & Language Lab -->
-                <section class="space-y-6">
-                    <h3 class="text-2xl font-extrabold text-slate-900 border-l-4 border-teal-600 pl-4">Foundational Disciplines & Facilities</h3>
+                <!-- Core Subject Areas -->
+                <section>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Core Subject Areas</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
-                            <h4 class="font-bold text-slate-900">Core Subject Areas</h4>
-                            <ul class="text-xs text-slate-700 space-y-2 list-disc list-inside">
-                                <li><strong>Engineering Mathematics:</strong> Calculus, differential equations, linear algebra, vector analysis.</li>
-                                <li><strong>Applied Physics:</strong> Optics, laser physics, quantum mechanics, electromagnetic theory.</li>
-                                <li><strong>Applied Chemistry:</strong> Water technology, polymer chemistry, fuels, lubricant analysis.</li>
-                                <li><strong>Engineering Graphics & Workshop:</strong> Technical drawing, CAD modeling, fitting, sheet metal, carpentry.</li>
-                            </ul>
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">01</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Engineering Mathematics</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Calculus, differential equations, linear algebra, vector analysis.
+                            </p>
                         </div>
-                        <div class="p-6 bg-teal-50/50 backdrop-blur-md rounded-2xl border border-teal-100/80 shadow-xs space-y-3">
-                            <h4 class="font-bold text-teal-950">Digital Language Laboratory</h4>
-                            <p class="text-xs text-teal-900 leading-relaxed">
-                                Equipped with <strong>30 multimedia computer workstations</strong> running <strong>Orell Digital Language Lab software</strong> to enhance soft skills, phonetics, professional communication, and group discussion capabilities.
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">02</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Applied Physics</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Optics, laser physics, quantum mechanics, electromagnetic theory.
+                            </p>
+                        </div>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">03</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Applied Chemistry</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Water technology, polymer chemistry, fuels, lubricant analysis.
+                            </p>
+                        </div>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">04</span>
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Engineering Graphics & Workshop</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Technical drawing, CAD modeling, fitting, sheet metal, carpentry.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Digital Language Laboratory -->
+                <section>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Digital Language Laboratory</h3>
+                    <div class="rounded-3xl border border-slate-200 overflow-hidden bg-white shadow-sm">
+                        <div class="p-6 sm:p-8 bg-primary text-white">
+                            <p class="text-lg sm:text-xl leading-relaxed font-medium text-white">
+                                Equipped with 30 multimedia computer workstations running Orell Digital Language Lab software to enhance soft skills, phonetics, professional communication, and group discussion capabilities.
                             </p>
                         </div>
                     </div>
@@ -592,10 +647,13 @@ export const academicData = {
             { label: "HOD Exp", value: "15+ Yrs" },
             { label: "NAAC Rating", value: "'A' Grade" }
         ],
-        bulletPoints: [
-            { label: "Engineering Mathematics", detail: "Rigorous training in foundational mathematics to build strong analytical thinking muscles." },
-            { label: "Applied Physics & Chemistry Labs", detail: "Deep scientific comprehension through hands-on optics, laser diffraction, and chemistry titration." },
-            { label: "Digital Language Lab", detail: "30 multimedia computers running Orell software for professional communication and phonetics training." }
+        // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
+        faqs: [
+            { q: "What does the Applied Sciences department teach?", a: "First-year B.Tech foundations: Engineering Mathematics, Applied Physics, Applied Chemistry, and Engineering Graphics & Workshop." },
+            { q: "Which students does the department teach?", a: "All incoming B.Tech students, in their first year, across every branch." },
+            { q: "Who is the Head of Department?", a: "Dr. Ajay Gahlot, Associate Professor & HOD, with 15+ years of experience and a Ph.D. in Physics." },
+            { q: "How many faculty members are there?", a: "About 33: 2 Professors, 5 Associate Professors and 26 Assistant Professors." },
+            { q: "What is the Digital Language Lab?", a: "A lab with 30 multimedia computers running Orell software for soft skills, phonetics and professional communication." }
         ]
     },
     "academic-calendar": {
@@ -715,33 +773,34 @@ export const academicData = {
         heroImageAlt: "MSIT Advanced Computing Research Laboratories",
         content: `
             <div class="space-y-12">
-                <section>
-                    <p class="text-lg text-slate-700 leading-relaxed">
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-normal m-0">
                         Maharaja Surajmal Institute of Technology fosters an intensive research and development ecosystem under the mentorship of Director Prof. (Dr.) Avanish Kumar Srivastava (former Director CSIR-AMPRI and Stanford-ranked top 2% global scientist), driving industrial innovation and multidisciplinary patents.
                     </p>
                 </section>
 
                 <!-- Sponsored Research Projects -->
                 <section>
-                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-blue-600 pl-4 mb-6">Sponsored Research Grants & Centers of Excellence</h3>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Sponsored Research Grants & Centers of Excellence</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded-lg">Corporate CSR Grant</span>
-                                <span class="text-sm font-extrabold text-purple-700">₹30,00,000/-</span>
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">Corporate CSR Grant</span>
+                                <span class="text-base font-extrabold text-slate-900 tabular-nums">₹30,00,000/-</span>
                             </div>
-                            <h4 class="font-bold text-slate-900 text-base mb-2">Center of Excellence in Computational Intelligence</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Funded by <strong>Petronet LNG Ltd.</strong>, this CoE in the Department of CSE is equipped with state-of-the-art multi-GPU deep learning servers, high-performance compute clusters, and cloud-assisted AI prototyping environments.
+                            <h4 class="font-bold text-base text-slate-900 mb-2">Center of Excellence in Computational Intelligence</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Funded by <strong class="text-slate-900">Petronet LNG Ltd.</strong>, this CoE in the Department of CSE is equipped with state-of-the-art multi-GPU deep learning servers, high-performance compute clusters, and cloud-assisted AI prototyping environments.
                             </p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-lg">AICTE National Scheme</span>
-                                <span class="text-sm font-extrabold text-blue-700">₹1,10,00,000/-</span>
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="inline-block px-2.5 py-1 bg-primary/5 text-primary font-bold text-xs rounded-lg border border-primary/20">AICTE National Scheme</span>
+                                <span class="text-base font-extrabold text-slate-900 tabular-nums">₹1,10,00,000/-</span>
                             </div>
-                            <h4 class="font-bold text-slate-900 text-base mb-2">AICTE IDEA Lab Prototyping Infrastructure</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed">
+                            <h4 class="font-bold text-base text-slate-900 mb-2">AICTE IDEA Lab Prototyping Infrastructure</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
                                 The Idea Development, Evaluation & Application (IDEA) Lab provides 3D printers, laser cutters, embedded hardware workstations, and FPGA development kits to nurture hands-on product creation across all undergraduate departments.
                             </p>
                         </div>
@@ -750,56 +809,57 @@ export const academicData = {
 
                 <!-- Patents Table -->
                 <section>
-                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-4 mb-6">Published & Granted Patents (Selected Portfolio)</h3>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Published & Granted Patents (Selected Portfolio)</h3>
                     <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm bg-white">
-                        <table class="w-full text-left text-sm text-slate-700">
-                            <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-700 border-b border-slate-200">
+                        <table class="w-full text-left text-sm text-slate-700 m-0">
+                            <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-600 border-b border-slate-200">
                                 <tr>
                                     <th class="px-5 py-3 font-bold">Patent Title</th>
                                     <th class="px-5 py-3 font-bold">Filing / Grant Authority</th>
                                     <th class="px-5 py-3 font-bold">Status</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-slate-100 text-xs">
+                            <tbody class="divide-y divide-slate-200">
                                 <tr>
-                                    <td class="px-5 py-3 font-semibold text-slate-900">IoT-Enabled Real-Time Soil Nitrogen & Moisture Telemetry Probe</td>
-                                    <td class="px-5 py-3 text-slate-600">Indian Patent Office (Govt. of India)</td>
-                                    <td class="px-5 py-3 font-bold text-emerald-700">Granted</td>
+                                    <td class="px-5 py-4 font-semibold text-slate-900">IoT-Enabled Real-Time Soil Nitrogen & Moisture Telemetry Probe</td>
+                                    <td class="px-5 py-4 text-slate-600">Indian Patent Office (Govt. of India)</td>
+                                    <td class="px-5 py-4"><span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-md border bg-primary text-white border-primary">Granted</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="px-5 py-3 font-semibold text-slate-900">Low-Power Embedded Hardware Loop for Indic Speech Synthesis</td>
-                                    <td class="px-5 py-3 text-slate-600">Indian Patent Office (Govt. of India)</td>
-                                    <td class="px-5 py-3 font-bold text-blue-700">Published</td>
+                                    <td class="px-5 py-4 font-semibold text-slate-900">Low-Power Embedded Hardware Loop for Indic Speech Synthesis</td>
+                                    <td class="px-5 py-4 text-slate-600">Indian Patent Office (Govt. of India)</td>
+                                    <td class="px-5 py-4"><span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-md border bg-primary/5 text-primary border-primary/20">Published</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="px-5 py-3 font-semibold text-slate-900">Autonomous Swarm Drone Navigation Protocol for Precision Agriculture</td>
-                                    <td class="px-5 py-3 text-slate-600">Indian Patent Office (Govt. of India)</td>
-                                    <td class="px-5 py-3 font-bold text-blue-700">Published</td>
+                                    <td class="px-5 py-4 font-semibold text-slate-900">Autonomous Swarm Drone Navigation Protocol for Precision Agriculture</td>
+                                    <td class="px-5 py-4 text-slate-600">Indian Patent Office (Govt. of India)</td>
+                                    <td class="px-5 py-4"><span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-md border bg-primary/5 text-primary border-primary/20">Published</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="px-5 py-3 font-semibold text-slate-900">Nanocomposite Photocatalyst Device for Industrial Effluent Purification</td>
-                                    <td class="px-5 py-3 text-slate-600">Indian Patent Office (Govt. of India)</td>
-                                    <td class="px-5 py-3 font-bold text-emerald-700">Granted</td>
+                                    <td class="px-5 py-4 font-semibold text-slate-900">Nanocomposite Photocatalyst Device for Industrial Effluent Purification</td>
+                                    <td class="px-5 py-4 text-slate-600">Indian Patent Office (Govt. of India)</td>
+                                    <td class="px-5 py-4"><span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-md border bg-primary text-white border-primary">Granted</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </section>
 
-                <!-- Conferences & IIC Rating -->
+                <!-- Conferences & IIC -->
                 <section>
-                    <h3 class="text-2xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-4 mb-6">Conferences, IEEE Proceedings & Innovation Council</h3>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Conferences, IEEE Proceedings & Innovation Council</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-2">IEEE Technically-Approved Conferences</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                                MSIT convenes the biennial <strong>International Conference on Artificial Intelligence and Applications (ICAIA)</strong>, approved by IEEE Delhi Section, alongside national conference <strong>NCI-TIDE</strong>, with peer-reviewed proceedings indexed in Scopus and IEEE Xplore.
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <h4 class="font-bold text-base text-slate-900 mb-2">IEEE Technically-Approved Conferences</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                MSIT convenes the biennial <strong class="text-slate-900">International Conference on Artificial Intelligence and Applications (ICAIA)</strong>, approved by IEEE Delhi Section, alongside national conference <strong class="text-slate-900">NCI-TIDE</strong>, with peer-reviewed proceedings indexed in Scopus and IEEE Xplore.
                             </p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-2">MoE Institutional Innovation Council (IIC)</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                                Awarded high star ratings by the Ministry of Education (MoE) Innovation Cell. MSIT implements the <strong>National Innovation and Startup Policy (NISP)</strong>, providing patent filing incentives, pre-incubation grants, and student IP ownership.
+
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                            <h4 class="font-bold text-base text-slate-900 mb-2">MoE Institutional Innovation Council (IIC)</h4>
+                            <p class="text-sm text-slate-600 font-normal leading-relaxed">
+                                Awarded high star ratings by the Ministry of Education (MoE) Innovation Cell. MSIT implements the <strong class="text-slate-900">National Innovation and Startup Policy (NISP)</strong>, providing patent filing incentives, pre-incubation grants, and student IP ownership.
                             </p>
                         </div>
                     </div>
@@ -810,10 +870,13 @@ export const academicData = {
             { label: "Publications", value: "500+" },
             { label: "Patents Filed", value: "25+" }
         ],
-        bulletPoints: [
-            { label: "Conference Proceedings", detail: "Click here to learn more about conference proceedings. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Funded Projects", detail: "Click here to learn more about funded projects. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Undergraduate Research", detail: "Click here to learn more about undergraduate research. This section provides comprehensive information and resources tailored to this topic." }
+        // Shown in the sidebar instead of the placeholder links. Answers use facts already on this page.
+        faqs: [
+            { q: "Who leads research at MSIT?", a: "Research runs under the mentorship of Director Prof. (Dr.) Avanish Kumar Srivastava, former Director of CSIR-AMPRI." },
+            { q: "What funded research centres does MSIT have?", a: "A Centre of Excellence in Computational Intelligence (CSE, funded by Petronet LNG) and the AICTE IDEA Lab for prototyping." },
+            { q: "Can undergraduate students use the IDEA Lab?", a: "Yes. The IDEA Lab is open to students across all undergraduate departments for hands-on product building." },
+            { q: "Which conferences does MSIT organise?", a: "The international conference ICAIA, approved by IEEE Delhi Section, and the national conference NCI-TIDE." },
+            { q: "Does MSIT support student patents and startups?", a: "Yes. Under the National Innovation and Startup Policy, MSIT offers patent filing incentives, pre-incubation grants and student IP ownership." }
         ]
     }
 };
