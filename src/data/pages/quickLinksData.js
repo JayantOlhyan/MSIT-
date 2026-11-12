@@ -888,5 +888,105 @@ export const quickLinksData = {
                 detail: "Funding support provided by MSIT and AICTE schemes for students presenting accepted papers at national and international conferences."
             }
         ]
+    },
+    "iic": {
+        title: "Institution's Innovation Council (IIC MSIT)",
+        subtitle: "Promoting innovation, ideation, and student entrepreneurship under MoE Innovation Cell guidelines at MSIT.",
+        seo_description: "Explore the Institution's Innovation Council (IIC) at Maharaja Surajmal Institute of Technology. Discover 4-star MHRD recognition, hackathons, ideation challenges, and startup mentorship.",
+        category: "Student Societies",
+        heroImage: "/campus-hero.webp",
+        heroImageAlt: "MSIT students working on innovation projects and hackathons under Institution's Innovation Council",
+        content: `
+            <div class="not-prose my-2">
+                <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/50 relative overflow-hidden group">
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-6 border border-blue-100">
+                            Ministry of Education (MoE) Innovation Cell
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">IIC MSIT</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Institution Innovation Council of MSIT is established under the directions of the Ministry of Education (MoE), Govt. of India, to promote innovation and entrepreneurship in the institution through multitudinous modes leading to an innovation promotion ecosystem across the campus.
+                        </p>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-xl font-bold text-slate-800 mb-3">Mission & Activities</h4>
+                            <p class="text-slate-600 leading-relaxed">
+                                We conduct various innovation and entrepreneurship-related activities to identify and reward innovations while sharing success stories. We organize periodic workshops, seminars, and interactions with entrepreneurs, investors, and professionals, creating a robust mentor pool for student innovators. 
+                            </p>
+                            <p class="text-slate-600 leading-relaxed mt-3">
+                                Through active networking with national entrepreneurship development bodies, IIC organizes Hackathons, idea competitions, and mini-challenges with active involvement from student chapters including IEEE, E-Cell, Arambh, TechSoc, Octave, and Prakriti.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
+                                <div class="mb-4 text-amber-500">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                </div>
+                                <h4 class="text-slate-900 font-bold mb-2">MHRD Recognition</h4>
+                                <p class="text-sm text-slate-500">Awarded 4 Golden Stars by the Ministry of Education's Innovation Cell (MIC).</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
+                                <div class="mb-4 text-blue-500">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <h4 class="text-slate-900 font-bold mb-2">Global Achievements</h4>
+                                <p class="text-sm text-slate-500">1st Prize at UNESCO India-Africa Hackathon 2022 (Monalika Kapoor).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `,
+        sidebarHtml: `
+            <div class="flex flex-col gap-4">
+                <a href="https://iic.msit.in/" target="_blank" rel="noopener noreferrer" class="block w-full bg-white border-2 border-blue-600 hover:bg-blue-600 hover:text-white text-blue-600 text-center font-bold py-4 rounded-xl transition-all shadow-sm">
+                    Visit Official IIC Portal &rarr;
+                </a>
+                
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                    <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-5">Core Activities</h4>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 text-sm text-slate-700"><span class="text-blue-500 font-bold">✓</span> Hackathons & Idea Competitions</li>
+                        <li class="flex gap-3 text-sm text-slate-700"><span class="text-blue-500 font-bold">✓</span> Innovation Workshops</li>
+                        <li class="flex gap-3 text-sm text-slate-700"><span class="text-blue-500 font-bold">✓</span> Investor Seminars</li>
+                        <li class="flex gap-3 text-sm text-slate-700"><span class="text-blue-500 font-bold">✓</span> Mentorship Pool</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                    <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Leadership</h4>
+                    <p class="text-xs text-slate-500">Convener</p>
+                    <p class="text-sm font-bold text-slate-900">Dr. Sudesh Pahal</p>
+                    <p class="text-xs text-slate-600 mt-1">HOD & Associate Professor (ECE)</p>
+                    <a href="/faculty?search=Sudesh+Pahal" class="inline-block mt-2 text-xs font-bold text-blue-600 hover:underline">View Faculty Profile &rarr;</a>
+                </div>
+            </div>
+        `,
+        stats: [
+            { label: "Star Rating", value: "4-Star (MHRD)" },
+            { label: "Annual Hackathons", value: "15+" }
+        ],
+        bulletPoints: [
+            {
+                label: "Ministry of Education Mandate",
+                detail: "IIC MSIT is an initiative established under MoE's Innovation Cell (Govt. of India) to systematically encourage campus startups, ideation hackathons, technology incubations, and research IPR.",
+                url: "https://iic.msit.in/",
+                actionText: "Visit Official IIC Portal"
+            },
+            {
+                label: "UNESCO India-Africa Hackathon",
+                detail: "MSIT student Monalika Kapoor secured 1st prize at the prestigious international UNESCO India-Africa Hackathon 2022 under the mentorship of IIC faculty."
+            },
+            {
+                label: "Student Chapters Alignment",
+                detail: "IIC partners closely with IEEE, E-Cell, GeekRoom, and TechSoc to organize cross-disciplinary innovation challenges and prototype incubations.",
+                url: "/society-ecell",
+                actionText: "Explore E-Cell Incubation"
+            }
+        ]
     }
 };
+
+// Aliases
+quickLinksData["society-iic"] = quickLinksData["iic"];

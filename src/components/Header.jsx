@@ -141,7 +141,7 @@ const Header = () => {
         ],
         placements: [
             { name: "Careers & Placements", url: "/placements" },
-            { name: "Internship Cell", url: "/internship-cell" },
+            { name: "Internship & IIIC Cell", url: "/internship-cell" },
             { name: "Placement Portal", url: "https://placement.msit.in/", external: true }
         ],
         student: [

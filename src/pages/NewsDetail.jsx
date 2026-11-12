@@ -412,7 +412,7 @@ const newsDb = {
         bgImage: "/campus/student-gathering-courtyard.webp",
         summary: "MSIT Training & Placement Cell concludes high-stipend corporate internship hiring with premier software, semiconductor, and fintech firms.",
         content: `
-            <p class="mb-6">The MSIT Internship Cell has wrapped up its summer recruitment drive with 180+ pre-placement offers (PPOs) and high-stipend summer internships for pre-final year students.</p>
+            <p class="mb-6">The MSIT Industry-Institute Interaction & Internship Cell (IIIC) has wrapped up its summer recruitment drive with 180+ pre-placement offers (PPOs) and high-stipend summer internships for pre-final year students.</p>
             
             <h3 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Industry Exposure & Stipend Benchmarks</h3>
             <p class="mb-6">Students secured monthly stipends reaching up to <strong>₹1.5 Lakh per month</strong> across top-tier multinational software development labs, quant trading firms, and AI research startups.</p>
@@ -421,7 +421,7 @@ const newsDb = {
             { name: "Internship Policy & Guidelines.pdf", size: "750 KB", url: "/internship-cell" }
         ],
         links: [
-            { name: "MSIT Internship Cell Page", url: "/internship-cell" },
+            { name: "MSIT IIIC & Internship Cell Portal", url: "/internship-cell" },
             { name: "Placements Overview", url: "/placements" }
         ]
     },

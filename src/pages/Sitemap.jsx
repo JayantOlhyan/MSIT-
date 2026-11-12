@@ -47,7 +47,7 @@ const Sitemap = () => {
                 { label: "Online Fee Payment", path: "/online-fee" },
                 { label: "Scholarships & Financial Aid", path: "/scholarships" },
                 { label: "Placements Overview", path: "/placements" },
-                { label: "Internship Cell", path: "/internship-cell" },
+                { label: "Industry-Institute Interaction Cell (IIIC) & Internships", path: "/internship-cell" },
                 { label: "Mandatory Disclosures", path: "/mandatory-disclosures" },
             ]
         },
@@ -56,6 +56,7 @@ const Sitemap = () => {
             icon: <Users className="w-5 h-5 text-purple-600" />,
             links: [
                 { label: "Student Societies & Clubs", path: "/society" },
+                { label: "Institution's Innovation Council (IIC MSIT)", path: "/iic" },
                 { label: "GeekRoom MSIT", path: "/society-geekroom" },
                 { label: "IEEE Student Branch", path: "/society-ieee" },
                 { label: "MSIT NDLI Club", path: "/society-ndli" },
