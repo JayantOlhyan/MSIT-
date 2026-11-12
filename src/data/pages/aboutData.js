@@ -4,7 +4,7 @@ export const aboutData = {
         subtitle: "Shaping the future of technology and society at Maharaja Surajmal Institute of Technology.",
         seo_description: "Discover the vision and mission of Maharaja Surajmal Institute of Technology. Learn how we shape the future of engineering with excellence and ethical values.",
         category: "About MSIT",
-        heroImage: "/campus/maharaja-surajmal-statue.webp",
+        heroImage: "/photos/01_campus-exterior/founder-bust-maharaja-surajmal-01.jpg",
         heroImageAlt: "Maharaja Surajmal memorial bronze bust at MSIT campus, New Delhi",
         content: `
             <div class="space-y-8">
@@ -48,13 +48,25 @@ export const aboutData = {
             </div>
         `,
         stats: [
-            { label: "Global Alumni", value: "15,000+" },
-            { label: "Research Centers", value: "4" }
+            { label: "Global Alumni", value: "15,000+", link: "/alumni-network", desc: "Connect with 15k+ alumni across global tech leaders" },
+            { label: "Research Centers", value: "4", link: "/facilities?tab=labs#research-centers", desc: "Explore AI, IoT, VLSI & Robotics Centers of Excellence" }
         ],
         bulletPoints: [
-            { label: "Technical Excellence", detail: "Click here to learn more about technical excellence. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "National & Global Readiness", detail: "Click here to learn more about national & global readiness. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Values-Driven Education", detail: "Click here to learn more about values-driven education. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: "Technical Excellence", 
+                detail: "Fostering state-of-the-art engineering pedagogy with NBA-accredited curricula, high-performance computing clusters, advanced IoT and VLSI design laboratories, rigorous industry projects, and consistently winning national hackathons.",
+                url: "/academics"
+            },
+            { 
+                label: "National & Global Readiness", 
+                detail: "Empowering students with industry-leading placement offers at premier product MNCs (Google, Microsoft, Amazon, Adobe) and admissions into elite global universities with high GATE, GRE, and CAT percentiles.",
+                url: "/placements"
+            },
+            { 
+                label: "Values-Driven Education", 
+                detail: "Upholding the timeless humanitarian ideals of Maharaja Surajmal — instilling self-discipline, selfless social service, environmental consciousness, ethical professionalism, and rural youth empowerment.",
+                url: "/history"
+            }
         ]
     },
     "history": {
@@ -62,13 +74,13 @@ export const aboutData = {
         subtitle: "Over two decades of academic excellence at Maharaja Surajmal Institute of Technology.",
         seo_description: "Explore the legacy of Maharaja Surajmal Institute of Technology since 2001. Learn about our foundation under the Surajmal Memorial Education Society in Delhi.",
         category: "About MSIT",
-        heroImage: "/campus/foundation-stone-plaque.webp",
+        heroImage: "/photos/10_plaques-notice-boards-achievements/foundation-stone-plaque-01.jpg",
         heroImageAlt: "Foundation Stone of Maharaja Surajmal Institute laid by President Neelam Sanjiva Reddy, 12 December 1978",
         content: `
             <div class="space-y-8">
                 <div class="grid md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-200/70">
                     <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
-                        <img src="/campus/foundation-stone-plaque.webp" alt="Foundation Stone laid by President Neelam Sanjiva Reddy, 12 December 1978" class="w-full h-auto object-cover" />
+                        <img src="/photos/10_plaques-notice-boards-achievements/foundation-stone-plaque-01.jpg" alt="Foundation Stone laid by President Neelam Sanjiva Reddy, 12 December 1978" class="w-full h-auto object-cover" />
                     </div>
                     <div>
                         <span class="text-amber-700 text-xs font-bold uppercase tracking-widest block mb-2">Historic Milestone</span>
@@ -86,7 +98,7 @@ export const aboutData = {
                         <p class="text-slate-500 text-xs">The bronze memorial bust located in the campus courtyard serves as an enduring source of inspiration for generations of engineers.</p>
                     </div>
                     <div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-sm border border-slate-200">
-                        <img src="/campus/maharaja-surajmal-statue.webp" alt="Memorial Bronze Bust of Maharaja Surajmal (1707-1763)" class="w-full h-auto object-cover" />
+                        <img src="/photos/01_campus-exterior/founder-bust-maharaja-surajmal-01.jpg" alt="Memorial Bronze Bust of Maharaja Surajmal (1707-1763)" class="w-full h-auto object-cover" />
                     </div>
                 </div>
 
@@ -103,9 +115,21 @@ export const aboutData = {
             { label: "Campus Area", value: "8 Acres" }
         ],
         bulletPoints: [
-            { label: "Foundation Stone Dec 12, 1978", detail: "Click here to learn more about foundation stone dec 12, 1978. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Affiliated to GGSIPU", detail: "Click here to learn more about affiliated to ggsipu. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "AICTE Approved Grade A", detail: "Click here to learn more about aicte approved grade a. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: "Foundation Stone Dec 12, 1978", 
+                detail: "The historic foundation stone of the institute was ceremoniously laid by Shri Neelam Sanjiva Reddy, President of India, on December 12, 1978, in an auspicious ceremony presided over by Chaudhary Charan Singh, marking the birth of a premier educational landmark in New Delhi.",
+                url: "/virtual-tour#foundation-stone-plaque"
+            },
+            { 
+                label: "Affiliated to GGSIPU", 
+                detail: "MSIT has been permanently affiliated to Guru Gobind Singh Indraprastha University (GGSIPU), Delhi since its inception in 2001, consistently securing top academic ranks, Chancellor Gold Medals, and university merit positions.",
+                url: "/mandatory-disclosures"
+            },
+            { 
+                label: "AICTE Approved Grade A", 
+                detail: "Approved by the All India Council for Technical Education (AICTE), Ministry of Education, Govt. of India, with NAAC Grade 'A' and NBA accreditations across all its core engineering departments.",
+                url: "/mandatory-disclosures#nba-accreditation-status"
+            }
         ]
     },
     "about": {
@@ -215,10 +239,26 @@ export const aboutData = {
             { label: "Built-up Area", value: "17,837 sqm" }
         ],
         bulletPoints: [
-            { label: "NBA Accredited", detail: "Click here to learn more about nba accredited. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "AICTE Approved", detail: "Click here to learn more about aicte approved. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "8-Acre Green Campus", detail: "Click here to learn more about 8-acre green campus. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "University Toppers", detail: "Click here to learn more about university toppers. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: "NBA Accredited", 
+                detail: "All four core undergraduate engineering branches (CSE, IT, ECE, EEE) are accredited by the National Board of Accreditation (NBA), verifying world-class outcome-based education and international standard pedagogy.",
+                url: "/mandatory-disclosures#nba-accreditation-status"
+            },
+            { 
+                label: "AICTE Approved", 
+                detail: "Officially approved by the All India Council for Technical Education (AICTE), Ministry of Education, Govt. of India, ensuring premier standards of technical infrastructure and faculty competence.",
+                url: "/mandatory-disclosures"
+            },
+            { 
+                label: "8-Acre Green Campus", 
+                detail: "A serene, eco-friendly 8-acre campus in Janakpuri, New Delhi featuring seven-storeyed modern academic complexes, extensive athletic stadium grounds, championship courts, and green lawns.",
+                url: "/facilities"
+            },
+            { 
+                label: "University Toppers", 
+                detail: "MSIT students consistently secure exemplary academic results under GGSIPU, earning University Gold Medals, academic merit honours, and elite product-company placements.",
+                url: "/placements"
+            }
         ]
     },
     "administration": {
@@ -232,15 +272,37 @@ export const aboutData = {
             <p class="mb-6">The leadership at MSIT is helmed by distinguished academicians and administrative experts dedicated to maintaining the highest standards of institutional governance. Under the leadership of our Director, Prof. (Dr.) Avanish Kumar Srivastava, the institute continuously strives for excellence.</p>
             <h3 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Director's Office</h3>
             <p class="mb-6">Prof. (Dr.) Avanish Kumar Srivastava leads MSIT with a focus on robust academic standards and dynamic professional development. Together with the administrative staff, they ensure a transparent, progressive, and student-centric campus environment.</p>
+            <div class="grid md:grid-cols-2 gap-6 my-8">
+                <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="/photos/08_admin-offices-conference/conference-room-portraits-01.jpg" alt="Executive Conference Hall with Founding Visionaries Portraits" class="w-full h-56 object-cover" />
+                    <div class="p-3 bg-slate-50 text-slate-700 text-xs font-semibold">Executive Conference Room & Governing Council Board</div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="/photos/08_admin-offices-conference/admin-office-interior-01.jpg" alt="MSIT Administrative Offices" class="w-full h-56 object-cover" />
+                    <div class="p-3 bg-slate-50 text-slate-700 text-xs font-semibold">Central Administrative Services & Registrar Office</div>
+                </div>
+            </div>
         `,
         stats: [
             { label: "Leadership", value: "Director & Staff" },
             { label: "Focus", value: "Student-Centric" }
         ],
         bulletPoints: [
-            { label: "Director: Prof. Dr. A. K. Srivastava", detail: "Click here to learn more about director: prof. dr. a. k. srivastava. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Administrative Stability", detail: "Click here to learn more about administrative stability. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Academic Excellence", detail: "Click here to learn more about academic excellence. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: "Director: Prof. (Dr.) Avanish Kumar Srivastava", 
+                detail: "Internationally acclaimed scientist, FNAE Fellow, and former CSIR Director leading MSIT's research ecosystem, global academic partnerships, and innovation-driven pedagogy.",
+                url: "/faculty?id=dir-1"
+            },
+            { 
+                label: "Administrative Stability", 
+                detail: "Robust, transparent institutional governance supported by Surajmal Memorial Education Society, ensuring disciplined administration, student welfare focus, and zero-profit operations.",
+                url: "/fromdesk"
+            },
+            { 
+                label: "Academic Excellence", 
+                detail: "State-of-the-art laboratory facilities, seasoned faculty mentorship, continuous faculty development programs, and outstanding academic outcomes across all departments.",
+                url: "/academics"
+            }
         ]
     },
     "govern": {
@@ -668,9 +730,21 @@ export const aboutData = {
             { label: "Secretary", value: "Sh. Ajit Singh" }
         ],
         bulletPoints: [
-            { label: "15 Governing Members", detail: "Click here to learn more about 15 governing members. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "6 Advisory Members", detail: "Click here to learn more about 6 advisory members. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "IIT & JMI Affiliates", detail: "Click here to learn more about iit & jmi affiliates. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: "15 Governing Members", 
+                detail: "Distinguished council of senior educationists, society trustees, university nominees, and industry leaders steering institutional policy and infrastructure development.",
+                url: "/faculty"
+            },
+            { 
+                label: "6 Advisory Members", 
+                detail: "Renowned senior professors and former directors from IIT Delhi, Jamia Millia Islamia, and National Physical Laboratory advising on curriculum and research benchmarks.",
+                url: "/faculty"
+            },
+            { 
+                label: "IIT & JMI Affiliates", 
+                detail: "Strategic advisory inputs from national academic luminaries ensuring high-impact research, PhD mentorship, and outcome-based engineering education.",
+                url: "/facilities?tab=labs#research-centers"
+            }
         ]
     },
     "fromdesk": {
@@ -743,7 +817,7 @@ export const aboutData = {
                             </ol>
                             <p class="mt-4">This work culture has its own reward. Today, our 100% graduating students are getting placement in reputed companies of the country and they are earning name and fame by their competence and hard work. MSIT is now recognized as an important centre of technical education and is marching ahead to become one of the premier technical institutes of the country.</p>
                             <div class="pt-6 border-t border-slate-100">
-                                <h4 class="text-lg font-bold text-slate-900">Kaptan Singh</h4>
+                                <h4 class="text-lg font-bold text-slate-900">Sh. Kaptan Singh</h4>
                                 <p class="text-sm font-semibold text-primary">President,</p>
                                 <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
                             </div>
@@ -765,7 +839,7 @@ export const aboutData = {
                             <p>We are proud to have well equipped Labs and seminar halls, a rich library, well built hostels, a sizable auditorium, to cater to the various pedagogical and accommodative requirements of our students. Our keenness on multifarious development of our faculty and students can be seen in our extensive organization of various academic and technical programs for them. Every year a number of faculty development programs are organized across departments for the professional growth of our teaching community. Besides, many expert lectures by distinguished academicians from IIT Delhi and other reputed technical organizations, are routinely arranged. A fundamental requirement of any good institute is a well developed Information System to ensure monitoring and evaluation of key indicators, and to provide information critical to all concerned.</p>
                             <p>Our institute website aims at an easy access to all relevant information about the institute and I hope that the masses find the information included in the website useful.</p>
                             <div class="pt-6 border-t border-slate-100">
-                                <h4 class="text-lg font-bold text-slate-900">Ajit Singh</h4>
+                                <h4 class="text-lg font-bold text-slate-900">Sh. Ajit Singh Chaudhary</h4>
                                 <p class="text-sm font-semibold text-primary">Secretary,</p>
                                 <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
                             </div>
@@ -786,7 +860,7 @@ export const aboutData = {
                             <p>Maharaja Surajmal Institute of Technology has acquired and earned a coveted name and fame over a period of time and has become one of the most admired and preferred centre of academic excellence in the field of engineering and technology for all round integrated professional growth to match and meet the technological needs of the country. We aim to provide our students a composite and comprehensive technical education for a satisfying and professional career in life. To achieve this, we take care from the very beginning quality class room, teaching by trend, competent and qualified faculty members with exposure to the application of concepts through lab experiments, industrial visits and expert lectures of eminent personalities and experts in their field of specialization. Besides, we provide congenial atmosphere to the students for their all round enhancement of inter-personal communication skills.</p>
                             <p>I am sure that the website will enable a better transmission of relevant information to the various stakeholders of the institute which will help in building up and strengthening the relationship among them and ensure success of our institute.</p>
                             <div class="pt-6 border-t border-slate-100">
-                                <h4 class="text-lg font-bold text-slate-900">Rajpal Singh Solanki</h4>
+                                <h4 class="text-lg font-bold text-slate-900">Sh. Rajpal Singh Solanki</h4>
                                 <p class="text-sm font-semibold text-primary">Treasurer,</p>
                                 <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
                             </div>
@@ -831,10 +905,22 @@ export const aboutData = {
             { label: "Governing Society", value: "SMES" }
         ],
         bulletPoints: [
-            { label: '<label for="tab-pres" class="cursor-pointer block w-full">President: Sh. Kaptan Singh</label>', detail: "Click here to learn more about president: sh. kaptan singh. This section provides comprehensive information and resources tailored to this topic." },
-            { label: '<label for="tab-sec" class="cursor-pointer block w-full">Secretary: Sh. Ajit Singh</label>', detail: "Click here to learn more about secretary: sh. ajit singh. This section provides comprehensive information and resources tailored to this topic." },
-            { label: '<label for="tab-treas" class="cursor-pointer block w-full">Treasurer: Sh. Rajpal Singh Solanki</label>', detail: "Click here to learn more about treasurer: sh. rajpal singh solanki. This section provides comprehensive information and resources tailored to this topic." },
-            { label: '<label for="tab-dir" class="cursor-pointer block w-full">Director: Prof. Dr. A. K. Srivastava</label>', detail: "Click here to learn more about director: prof. dr. a. k. srivastava. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: '<label for="tab-pres" class="cursor-pointer block w-full">President: Sh. Kaptan Singh</label>', 
+                detail: "Perspective on non-profit socio-economic upliftment, adherence to stringent AICTE norms, transparent work culture, and imparting world-class technical education to Indian youth." 
+            },
+            { 
+                label: '<label for="tab-sec" class="cursor-pointer block w-full">Secretary: Sh. Ajit Singh Chaudhary</label>', 
+                detail: "Commitment to state-of-the-art laboratory infrastructure, continuous faculty development programs, modern computing facilities, and holistic personality growth for students." 
+            },
+            { 
+                label: '<label for="tab-treas" class="cursor-pointer block w-full">Treasurer: Sh. Rajpal Singh Solanki</label>', 
+                detail: "Strategic financial governance, transparent resource allocation, and providing world-class campus facilities, laboratories, and student support systems." 
+            },
+            { 
+                label: '<label for="tab-dir" class="cursor-pointer block w-full">Director: Prof. (Dr.) Avanish Kumar Srivastava</label>', 
+                detail: "Strategic roadmap for research innovation, industry linkages, hands-on problem solving, and shaping skilled, ethical, and compassionate engineers." 
+            }
         ]
     },
     "facilities": {
@@ -856,10 +942,26 @@ export const aboutData = {
             { label: "Campus Size", value: "8 Acres" }
         ],
         bulletPoints: [
-            { label: "Central Library", detail: "Click here to learn more about central library. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Maharaja Mahendra Pratap Hostel", detail: "Click here to learn more about maharaja mahendra pratap hostel. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Advanced Computing Hubs", detail: "Click here to learn more about advanced computing hubs. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Sports & Medical", detail: "Click here to learn more about sports & medical. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: "Central Library", 
+                detail: "Multi-tiered air-conditioned learning hub with over 60,000+ volumes, IEEE/Scopus digital access, DELNET network, and quiet research carrels for scholars.",
+                url: "/facilities?tab=library"
+            },
+            { 
+                label: "Maharaja Mahendra Pratap Hostel", 
+                detail: "Modern on-campus residential accommodation for 200+ boys and 100+ girls featuring nutritious dining, high-speed Wi-Fi, and 24x7 security surveillance.",
+                url: "/facilities#hostel-and-living"
+            },
+            { 
+                label: "Advanced Computing Hubs", 
+                detail: "Networked high-performance computing centers equipped with core i7 systems, high-bandwidth leased lines, and specialized AI/IoT research setups.",
+                url: "/facilities?tab=labs"
+            },
+            { 
+                label: "Sports & Medical Care", 
+                detail: "Extensive football stadium field, championship basketball courts, indoor sports arena, and an on-campus Medical Room with resident Medical Assistant.",
+                url: "/facilities?tab=library#sports"
+            }
         ]
     },
     "smes": {
@@ -867,7 +969,7 @@ export const aboutData = {
         subtitle: "The foundation of Maharaja Surajmal Institute of Technology.",
         seo_description: "Learn about the Surajmal Memorial Education Society (SMES), the philanthropic force behind Maharaja Surajmal Institute of Technology and its quality mission.",
         category: "About MSIT",
-        heroImage: "/campus/maharaja-surajmal-statue.webp",
+        heroImage: "/photos/01_campus-exterior/founder-bust-maharaja-surajmal-01.jpg",
         heroImageAlt: "Surajmal Memorial Education Society flagship banner on campus",
         content: `
             <p class="mb-6">The Surajmal Memorial Education Society (SMES) was established with a singular objective: to disseminate quality education and foster intellectual growth across the nation. MSIT is the flagship engineering institute of the SMES family.</p>
@@ -879,9 +981,21 @@ export const aboutData = {
             { label: "Total Students", value: "8,000+" }
         ],
         bulletPoints: [
-            { label: "Educational Trust", detail: "Click here to learn more about educational trust. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Philanthropic Initiatives", detail: "Click here to learn more about philanthropic initiatives. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Community Outreach", detail: "Click here to learn more about community outreach. This section provides comprehensive information and resources tailored to this topic." }
+            { 
+                label: "Educational Trust", 
+                detail: "Founded in 1972, Surajmal Memorial Education Society (SMES) is a premier non-profit educational body dedicated to rural and urban youth empowerment through excellence in engineering and management education.",
+                url: "/smes"
+            },
+            { 
+                label: "Philanthropic Initiatives", 
+                detail: "Institutional scholarship endowments, student fee concessions, and merit-cum-means awards ensuring that financial limitations never hinder talented scholars.",
+                url: "/scholarships"
+            },
+            { 
+                label: "Community Outreach", 
+                detail: "Rural talent upliftment camps, environmental conservation drives, blood donation drives, and active community initiatives inspired by Maharaja Surajmal.",
+                url: "/society-uba"
+            }
         ]
     },
     "contact": {

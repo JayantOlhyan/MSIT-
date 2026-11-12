@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, LayoutDashboard, X, Mail, Linkedin, Globe, Phone, FileText, Star, ChevronDown, ExternalLink } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, LayoutDashboard, X, Mail, Linkedin, Globe, Phone, FileText, Star, ChevronDown, ExternalLink } from 'lucide-react';
 import { pagesData } from '../data/pagesData';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
@@ -291,12 +291,54 @@ const DynamicPage = () => {
                                 {/* Stats Cards */}
                                 {!isDepartment && pageData.stats && pageData.stats.length > 0 && (
                                     <div className="grid grid-cols-2 gap-4">
-                                        {pageData.stats.map((stat, i) => (
-                                            <div key={i} className="bg-surface p-6 rounded-2xl border border-slate-100 shadow-card">
-                                                <div className="text-2xl font-bold text-title mb-1">{stat.value}</div>
-                                                <div className="text-xs font-bold uppercase tracking-widest text-muted">{stat.label}</div>
-                                            </div>
-                                        ))}
+                                        {pageData.stats.map((stat, i) => {
+                                            const hasLink = Boolean(stat.link || stat.url);
+                                            const targetUrl = stat.link || stat.url;
+                                            const isExternal = targetUrl && (targetUrl.startsWith('http://') || targetUrl.startsWith('https://'));
+
+                                            const cardInner = (
+                                                <div className={`p-6 rounded-2xl border transition-all h-full flex flex-col justify-between ${
+                                                    hasLink 
+                                                        ? 'bg-surface hover:bg-white border-slate-200/90 hover:border-primary/40 hover:shadow-md cursor-pointer group' 
+                                                        : 'bg-surface border-slate-100 shadow-card'
+                                                }`}>
+                                                    <div>
+                                                        <div className="flex items-center justify-between mb-1">
+                                                            <div className={`text-2xl font-bold transition-colors ${hasLink ? 'text-title group-hover:text-primary' : 'text-title'}`}>
+                                                                {stat.value}
+                                                            </div>
+                                                            {hasLink && (
+                                                                <div className="w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
+                                                                    <ArrowUpRight className="w-3.5 h-3.5" />
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                        <div className="text-xs font-bold uppercase tracking-widest text-muted">{stat.label}</div>
+                                                    </div>
+                                                    {stat.desc && (
+                                                        <p className="text-[11px] text-slate-500 mt-2 leading-snug font-normal">{stat.desc}</p>
+                                                    )}
+                                                </div>
+                                            );
+
+                                            if (!hasLink) {
+                                                return <div key={i}>{cardInner}</div>;
+                                            }
+
+                                            if (isExternal) {
+                                                return (
+                                                    <a key={i} href={targetUrl} target="_blank" rel="noopener noreferrer" className="block text-inherit no-underline">
+                                                        {cardInner}
+                                                    </a>
+                                                );
+                                            }
+
+                                            return (
+                                                <Link key={i} to={targetUrl} className="block text-inherit no-underline">
+                                                    {cardInner}
+                                                </Link>
+                                            );
+                                        })}
                                     </div>
                                 )}
 

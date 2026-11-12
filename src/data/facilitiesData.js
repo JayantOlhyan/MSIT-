@@ -376,7 +376,13 @@ export const labData = [
         name: 'Centre of Excellence (CoE) Lab',
         dept: 'Information Technology',
         deptKey: 'it',
-        hasPhoto: false,
+        hasPhoto: true,
+        images: [
+            '/photos/12_labs-computing-ml-research/research-coe-lab-ongc-01.jpg',
+            '/photos/12_labs-computing-ml-research/research-coe-lab-ongc-02.jpg',
+            '/photos/12_labs-computing-ml-research/research-coe-lab-ongc-03.jpg',
+            '/photos/12_labs-computing-ml-research/coe-ml-lab-petronet-01.jpg'
+        ],
         totalSystems: 10,
         hardwareKits: [
             'HPE ProLiant ML30 Gen10 Server (Intel Xeon 2314)',
@@ -446,7 +452,11 @@ export const labData = [
         name: 'Analog & Digital Communication / Control Systems Lab',
         dept: 'Electronics & Communication Engineering',
         deptKey: 'ece',
-        hasPhoto: false,
+        hasPhoto: true,
+        images: [
+            '/photos/13_labs-electrical/electrical-lab-signage-01.jpg',
+            '/photos/13_labs-electrical/power-system-lab-04.jpg'
+        ],
         totalSystems: 10,
         hardwareKits: [
             '100MHz 2GS/s & 40MHz 500GS/s DSOs',
@@ -502,7 +512,12 @@ export const labData = [
         name: 'Microprocessor & Microcontroller / ML / NIBOT Lab',
         dept: 'Electronics & Communication Engineering',
         deptKey: 'ece',
-        hasPhoto: false,
+        hasPhoto: true,
+        images: [
+            '/photos/12_labs-computing-ml-research/ml-microprocessor-lab-01.jpg',
+            '/photos/12_labs-computing-ml-research/ml-microprocessor-lab-02.jpg',
+            '/photos/12_labs-computing-ml-research/ml-microprocessor-lab-03.jpg'
+        ],
         totalSystems: 15,
         hardwareKits: [
             '20x Digital Trainer Kits (DLCD)',
@@ -587,14 +602,18 @@ export const labData = [
         name: 'Utilization of Electrical Energy / Electrical Machines-I Lab',
         dept: 'Department of Electrical & Electronics Engineering',
         deptKey: 'eee',
-        hasPhoto: false,
+        hasPhoto: true,
         hardwareKits: [
             'Photometric & Illumination Measurement Setups',
             'Cut-Section DC Machine & Motor Models',
             '1-Phase & 3-Phase Transformers',
             'DC Motor-Generator Loading Test Benches'
         ],
-        images: [],
+        images: [
+            '/photos/13_labs-electrical/electrical-machines-lab-01.jpg',
+            '/photos/13_labs-electrical/electrical-machines-lab-02.jpg',
+            '/photos/13_labs-electrical/electrical-machines-lab-03.jpg'
+        ],
         systemConfig: {
             desktop: 'Electrical Test Benches with Analog/Digital Voltmeter, Ammeter & Power Supplies'
         },
@@ -611,13 +630,17 @@ export const labData = [
         name: 'Electrical Machines-II Lab',
         dept: 'Department of Electrical & Electronics Engineering',
         deptKey: 'eee',
-        hasPhoto: false,
+        hasPhoto: true,
         hardwareKits: [
             '3-Phase & 1-Phase Induction Motors',
             'Synchronous Motor & Alternator Test Panels',
             'Cut-Section AC Machine Demonstrators'
         ],
-        images: [],
+        images: [
+            '/photos/13_labs-electrical/electrical-machines-lab-04.jpg',
+            '/photos/13_labs-electrical/electrical-machines-lab-05.jpg',
+            '/photos/13_labs-electrical/electrical-machines-lab-06.jpg'
+        ],
         systemConfig: {
             desktop: 'AC Motor Test Benches with Torque Indicators & Variable Frequency Drives'
         },
@@ -633,14 +656,18 @@ export const labData = [
         name: 'Power Systems I & II / Network Analysis & Synthesis Lab',
         dept: 'Department of Electrical & Electronics Engineering',
         deptKey: 'eee',
-        hasPhoto: false,
+        hasPhoto: true,
         hardwareKits: [
             'Transmission Line Simulation Model',
             'CT/PT & Cable Testing Panels',
             'Protective Relays (IDMT, Buchholz, Thermal, Differential)',
             'Two-Port RLC Network Trainer Kits'
         ],
-        images: [],
+        images: [
+            '/photos/13_labs-electrical/power-system-lab-01.jpg',
+            '/photos/13_labs-electrical/power-system-lab-02.jpg',
+            '/photos/13_labs-electrical/power-system-lab-03.jpg'
+        ],
         systemConfig: {
             desktop: 'Relay Testing Panels & Transmission Line Analyzer Setups'
         },
@@ -658,13 +685,16 @@ export const labData = [
         name: 'Electrical Science Lab',
         dept: 'Department of Electrical & Electronics Engineering',
         deptKey: 'eee',
-        hasPhoto: false,
+        hasPhoto: true,
         hardwareKits: [
             'Variable AC/DC Power Supplies with Circuit Breakers',
             'Energy Meters, Power Factor Meters, Wattmeters',
             'Single-Phase Transformers & Motor Modules'
         ],
-        images: [],
+        images: [
+            '/photos/13_labs-electrical/electrical-lab-signage-02.jpg',
+            '/photos/13_labs-electrical/electrical-machines-lab-07.jpg'
+        ],
         systemConfig: {
             desktop: 'Multi-bench Electrical Science Workstations'
         },
@@ -680,9 +710,12 @@ export const labData = [
         name: 'SMDA / Computational Methods / ML & PPI Lab',
         dept: 'Department of Electrical & Electronics Engineering',
         deptKey: 'eee',
-        hasPhoto: false,
+        hasPhoto: true,
         totalSystems: 14,
-        images: [],
+        images: [
+            '/photos/12_labs-computing-ml-research/coe-ml-lab-petronet-02.jpg',
+            '/photos/12_labs-computing-ml-research/coe-ml-lab-petronet-03.jpg'
+        ],
         systemConfig: {
             desktop: '14x Systems (P-V Core i5 with 4GB RAM & HP Core 2 Duo, Windows 10 Licensed)'
         },
@@ -702,14 +735,17 @@ export const labData = [
         name: 'Electric Drives / Power Electronics Lab',
         dept: 'Department of Electrical & Electronics Engineering',
         deptKey: 'eee',
-        hasPhoto: false,
+        hasPhoto: true,
         hardwareKits: [
             'Thyristor, SCR, MOSFET & IGBT Characterization Kits',
             'AC/DC Motor Speed Control Experimental Setups',
             'Digital Storage Oscilloscopes (DSOs)',
             'Closed-loop Hardware Control Modules'
         ],
-        images: [],
+        images: [
+            '/photos/13_labs-electrical/electrical-machines-lab-08.jpg',
+            '/photos/13_labs-electrical/power-system-lab-02.jpg'
+        ],
         systemConfig: {
             desktop: 'Dedicated Hardware-in-the-Loop Motor Control Desks & MATLAB Interfaced Workstations'
         },
@@ -726,14 +762,17 @@ export const labData = [
         name: 'Electrical Measurements & Instrumentation / Workshop Lab',
         dept: 'Department of Electrical & Electronics Engineering',
         deptKey: 'eee',
-        hasPhoto: false,
+        hasPhoto: true,
         hardwareKits: [
             'Potentiometers, Wheatstone & Kelvin Bridges',
             'Transducer Kits (LVDT, Thermocouple, Strain Gauge)',
             'House Wiring Boards (Tube Light, Fan Control, Relays)',
             'Illumination Device Demonstrators (CFL, LED, Halogen)'
         ],
-        images: [],
+        images: [
+            '/photos/13_labs-electrical/electrical-lab-signage-03.jpg',
+            '/photos/13_labs-electrical/power-system-lab-01.jpg'
+        ],
         systemConfig: {
             desktop: 'Instrument Calibration Workbenches & Electrical Wiring Boards'
         },
@@ -752,13 +791,16 @@ export const labData = [
         name: 'Applied Physics & Chemistry Labs (Foundational)',
         dept: 'Department of Applied Sciences',
         deptKey: 'as',
-        hasPhoto: false,
+        hasPhoto: true,
         hardwareKits: [
             'Spectrometers, Lasers, Newton Ring Apparatus',
             'Digital Viscometers, pH Meters, Conductometers',
             'Fitting, Carpentry, & Sheet Metal Workshop Machinery'
         ],
-        images: [],
+        images: [
+            '/photos/14_classrooms-seminar-hall/lecture-room-01.jpg',
+            '/photos/14_classrooms-seminar-hall/seminar-hall-ece-01.jpg'
+        ],
         systemConfig: {
             desktop: 'Physics & Chemistry Measurement Instruments & Mechanical Workshop Benches'
         },
@@ -872,6 +914,15 @@ export const campusInfrastructure = {
         journals: '100+',
         software: 'Koha Online OPAC Catalog',
         opacUrl: 'http://library.msit.in/',
+        image: '/photos/11_central-library/library-interior-01.jpg',
+        images: [
+            '/photos/11_central-library/library-interior-01.jpg',
+            '/photos/11_central-library/library-interior-02.jpg',
+            '/photos/11_central-library/library-interior-03.jpg',
+            '/photos/11_central-library/library-interior-04.jpg',
+            '/photos/11_central-library/library-entrance.jpg',
+            '/photos/11_central-library/library-signage.jpg'
+        ],
         description: 'The Central Library serves both MSIT and MSI. Fully computerized using the Koha OPAC system, it houses over 50,000 volumes, subscribes to 100+ national and international print journals, and provides digital access to IEEE Xplore, SpringerNature, Sage, DELNET, and SCC Online.',
         features: [
             'Book Bank Facility: Complete set of syllabus textbooks issued to every student for the entire semester',
@@ -881,20 +932,77 @@ export const campusInfrastructure = {
         ]
     },
     hostel: {
-        title: 'Maharaja Mahendra Pratap Hostel',
+        title: 'Raja Mahendra Pratap Hostel',
         boysCapacity: 200,
         girlsCapacity: 100,
-        description: 'On-campus residential facilities accommodating ~200 male students and ~100 female students in a four-storey complex with 24/7 security, high-speed Wi-Fi, power backup, and hygienic dining mess.',
+        image: '/photos/06_hostels/boys-hostel-exterior.jpg',
+        images: [
+            '/photos/06_hostels/boys-hostel-exterior.jpg',
+            '/photos/06_hostels/boys-hostel-foundation-plaque.jpg',
+            '/photos/06_hostels/boys-hostel-interior-01.jpg',
+            '/photos/06_hostels/boys-hostel-interior-02.jpg',
+            '/photos/06_hostels/boys-hostel-interior-03.jpg',
+            '/photos/06_hostels/boys-hostel-interior-04.jpg'
+        ],
+        description: 'On-campus residential facilities accommodating ~200 male students and ~100 female students in a multi-storey complex with 24/7 security, high-speed Wi-Fi, power backup, hygienic dining mess, and dedicated common rooms.',
         amenities: ['24/7 Power Backup', 'RO Purified Water', 'Sports & Games Room', 'Hygienic Mess Hall']
     },
     sports: {
-        title: 'Sports & Athletic Grounds',
-        facilities: ['Football Pitch', 'Cricket Nets', 'Volleyball Court', 'Outdoor Badminton Courts', 'Table Tennis & Chess'],
-        description: 'Expansive outdoor sports grounds and indoor gaming areas. Host of the annual SPHURTI inter-college sports festival and contingent training for GGSIPU meets.'
+        title: 'Sports Complex & Athletic Grounds',
+        image: '/photos/03_sports-basketball/basketball-court-01.jpg',
+        images: [
+            '/photos/03_sports-basketball/basketball-court-01.jpg',
+            '/photos/03_sports-basketball/basketball-team-photo-hires-01.jpg',
+            '/photos/04_sports-football/football-team-photo-hires-01.jpg',
+            '/photos/04_sports-football/football-team-lineup-01.jpg',
+            '/photos/05_indoor-games-common-room/table-tennis-room-hires-01.jpg',
+            '/photos/05_indoor-games-common-room/table-tennis-room-hires-02.jpg'
+        ],
+        facilities: ['Full Basketball Arena', 'Football Pitch', 'Table Tennis Arena', 'Cricket Nets', 'Volleyball Court', 'Badminton Courts', 'Indoor Chess & Carrom'],
+        description: 'Expansive outdoor sports grounds and indoor gaming rooms. Host of the annual SPHURTI inter-college sports festival and contingent training for GGSIPU meets.'
     },
     canteen: {
-        capacity: '60–70 Seating',
-        description: 'Campus cafeteria serving hygienic meals, quick snacks, hot beverages, and fresh juices for students and faculty.'
+        title: 'Rivanto Campus Canteen & Cafeteria',
+        capacity: '100+ Seating',
+        image: '/photos/07_canteen/canteen-01.jpg',
+        images: [
+            '/photos/07_canteen/canteen-01.jpg',
+            '/photos/07_canteen/canteen-02.jpg',
+            '/photos/07_canteen/canteen-03.jpg'
+        ],
+        description: 'The Rivanto campus cafeteria provides wholesome meals, breakfast, quick snacks, hot beverages, and fresh refreshments in a clean, hygienic indoor and outdoor seating environment.'
+    },
+    admin: {
+        title: 'Executive Administration & Conference Hall',
+        image: '/photos/08_admin-offices-conference/conference-room-portraits-01.jpg',
+        images: [
+            '/photos/08_admin-offices-conference/conference-room-portraits-01.jpg',
+            '/photos/08_admin-offices-conference/admin-office-interior-01.jpg',
+            '/photos/08_admin-offices-conference/admin-office-entrance-01.jpg'
+        ],
+        description: 'Administrative offices, Registrar suites, and executive conference rooms equipped with multimedia conferencing facilities, framed by portraits of founding visionaries.'
+    },
+    lawBlock: {
+        title: 'Law Block & Modern Academic Wing',
+        image: '/photos/15_law-block/law-block-exterior.jpg',
+        images: [
+            '/photos/15_law-block/law-block-exterior.jpg',
+            '/photos/15_law-block/law-lecture-room-01.jpg',
+            '/photos/15_law-block/law-lecture-room-02.jpg',
+            '/photos/15_law-block/law-faculty-offices-01.jpg'
+        ],
+        description: 'The contemporary multi-storey Law Block featuring tiered multimedia lecture halls, faculty suites, moot court simulation rooms, and high-speed campus networking.'
+    },
+    ncc: {
+        title: '7 Delhi Girls Battalion (7 DGBN) NCC Unit',
+        image: '/photos/02_ncc/ncc-cadets-parade-01.jpg',
+        images: [
+            '/photos/02_ncc/ncc-cadets-parade-01.jpg',
+            '/photos/02_ncc/ncc-cadets-parade-02.jpg',
+            '/photos/02_ncc/ncc-office-01.jpg',
+            '/photos/02_ncc/ncc-rifle-rack-01.jpg'
+        ],
+        description: 'Active National Cadet Corps (NCC) 7 DGBN battalion imparting leadership, ceremonial parade drills, disaster response drills, and national defense training.'
     },
     banking: {
         name: 'On-Campus Banking & ATM',
@@ -902,7 +1010,7 @@ export const campusInfrastructure = {
     },
     medical: {
         title: 'Campus Medical Room & Emergency Care',
-        attendantName: 'Medical Room Attendant / Healthcare Staff Officer',
+        attendantName: 'Medical Assistant',
         attendantPhone: '+91 98XXX XXXXX (Attendant Contact - Placeholder)',
         landline: '011-25552026 (Ext. Medical Room)',
         email: 'medical@msit.in',

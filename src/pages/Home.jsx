@@ -19,87 +19,115 @@ const CAMPUS_GALLERY = [
     },
     {
         id: 'main-gate',
-        title: 'Institute Main Entrance Gate',
-        category: 'Campus',
-        image: '/campus/msit-main-gate.webp',
+        title: 'Institute Main Entrance Gate & Boulevard',
+        category: 'Campus Life',
+        image: '/photos/01_campus-exterior/main-gate-01.jpg',
         desc: 'Security-guarded grand entrance on C-4 Janakpuri with palm-lined boulevard.'
     },
     {
         id: 'central-library',
-        title: 'Central Library Reading Hall',
+        title: 'Central Library Reading Hall & Reference Stacks',
         category: 'Academics',
-        image: '/campus/central-library-hall.webp',
-        desc: 'Spacious reading hall with over 65,000+ volumes, IEEE digital access, and quiet study carrels.'
+        image: '/photos/11_central-library/library-interior-01.jpg',
+        desc: 'Spacious reading hall with over 50,000+ volumes, IEEE digital access, and quiet study carrels.'
     },
     {
-        id: 'auditorium',
-        title: 'Auditorium & Cultural Stage',
-        category: 'Campus Life',
-        image: '/campus/auditorium-cultural-fest.webp',
-        desc: 'MSIT Auditorium during Genesis & Avensis fests, decorated with dancer silhouettes and banners.'
+        id: 'ongc-lab',
+        title: 'ONGC Advanced Computing & CoE Lab',
+        category: 'Academics',
+        image: '/photos/12_labs-computing-ml-research/research-coe-lab-ongc-01.jpg',
+        desc: 'High-performance computing cluster and research workstations supported by ONGC.'
     },
     {
-        id: 'sports-ground',
-        title: 'Outdoor Sports & Badminton Arena',
+        id: 'electrical-lab',
+        title: 'Electrical Machines & Motor-Generator Lab',
+        category: 'Academics',
+        image: '/photos/13_labs-electrical/electrical-machines-lab-01.jpg',
+        desc: 'Hands-on practical workstations for DC machines, induction motors, and transformers.'
+    },
+    {
+        id: 'seminar-hall',
+        title: 'ECE Department Tiered Seminar Hall',
+        category: 'Academics',
+        image: '/photos/14_classrooms-seminar-hall/seminar-hall-ece-01.jpg',
+        desc: 'Acoustic seminar auditorium equipped with multimedia projection for colloquiums and symposiums.'
+    },
+    {
+        id: 'law-block',
+        title: 'Law Block & Modern Academic Wing',
+        category: 'Academics',
+        image: '/photos/15_law-block/law-block-exterior.jpg',
+        desc: 'Contemporary multi-storey campus complex housing modern lecture theatres and moot courts.'
+    },
+    {
+        id: 'basketball-arena',
+        title: 'Championship Basketball Arena',
         category: 'Sports',
-        image: '/campus/sports-badminton-ground.webp',
-        desc: 'Outdoor courts with badminton nets and athletic facilities overlooking the campus block.'
+        image: '/photos/03_sports-basketball/basketball-court-01.jpg',
+        desc: 'Outdoor basketball courts hosting university tournaments and annual sports meet (SPHURTI).'
     },
     {
-        id: 'student-courtyard',
-        title: 'Student Plaza & Courtyard Gathering',
+        id: 'football-ground',
+        title: 'Football & Athletics Stadium Field',
+        category: 'Sports',
+        image: '/photos/04_sports-football/football-team-photo-hires-01.jpg',
+        desc: 'Lush grass football ground framed by the 8-storey academic block and athletic track.'
+    },
+    {
+        id: 'table-tennis',
+        title: 'Indoor Sports & Table Tennis Room',
+        category: 'Sports',
+        image: '/photos/05_indoor-games-common-room/table-tennis-room-hires-01.jpg',
+        desc: 'Dedicated indoor recreation arena with tournament-grade table tennis tables and chess.'
+    },
+    {
+        id: 'boys-hostel',
+        title: 'Raja Mahendra Pratap Boys Hostel',
         category: 'Campus Life',
-        image: '/campus/student-gathering-courtyard.webp',
-        desc: 'Vibrant outdoor student gathering in the courtyard with classic red brick balustrades.'
+        image: '/photos/06_hostels/boys-hostel-exterior.jpg',
+        desc: 'Four-storey on-campus residence with 24/7 security, Wi-Fi, dining mess, and recreation rooms.'
+    },
+    {
+        id: 'canteen',
+        title: 'Rivanto Campus Canteen & Cafeteria',
+        category: 'Campus Life',
+        image: '/photos/07_canteen/canteen-01.jpg',
+        desc: 'Lively student food court serving wholesome meals, snacks, and espresso under shaded pergolas.'
+    },
+    {
+        id: 'ncc-unit',
+        title: '7 DGBN NCC Battalion Cadets Parade',
+        category: 'Campus Life',
+        image: '/photos/02_ncc/ncc-cadets-parade-01.jpg',
+        desc: 'National Cadet Corps (NCC) 7 Delhi Girls Battalion ceremonial parade drill and defense training.'
     },
     {
         id: 'surajmal-statue',
         title: 'Maharaja Surajmal Memorial Statue',
         category: 'Heritage',
-        image: '/campus/maharaja-surajmal-statue.webp',
-        desc: 'Commemorative bronze bust of Bharatpur ruler Maharaja Surajmal (1707–1763).'
+        image: '/photos/01_campus-exterior/founder-bust-maharaja-surajmal-01.jpg',
+        desc: 'Commemorative bronze bust of Bharatpur ruler Maharaja Surajmal (1707–1763) in central garden.'
     },
     {
         id: 'foundation-stone',
         title: 'Historic Foundation Stone (1978)',
         category: 'Heritage',
-        image: '/campus/foundation-stone-plaque.webp',
-        desc: 'Plaque commemorating the stone laid by President Neelam Sanjiva Reddy & Chaudhary Charan Singh.'
+        image: '/photos/10_plaques-notice-boards-achievements/foundation-stone-plaque-01.jpg',
+        desc: 'Plaque commemorating stone laid on 12 Dec 1978 by President of India Neelam Sanjiva Reddy.'
     },
     {
-        id: 'pathway-block',
-        title: 'Academic Block Walkway & Arches',
-        category: 'Academics',
-        image: '/campus/campus-pathway-block.webp',
-        desc: 'Interlocking brick walkways connecting department wings under tree shade.'
+        id: 'gold-medalists',
+        title: 'GGSIPU Gold Medalists Honor Roll',
+        category: 'Heritage',
+        image: '/photos/10_plaques-notice-boards-achievements/gold-medal-winners-board.jpg',
+        desc: 'Roll of honor recognizing MSIT academic achievers awarded University Gold Medals.'
     },
     {
-        id: 'canteen-kiosk',
-        title: 'Tree-Shaded Canteen & Food Kiosk',
-        category: 'Campus Life',
-        image: '/campus/campus-canteen-kiosk.webp',
-        desc: 'Outdoor student cafeteria and refreshment kiosk shaded by lush green trees.'
-    },
-    {
-        id: 'ecell-foyer',
-        title: 'Student Innovation & E-Cell Foyer',
-        category: 'Campus Life',
-        image: '/campus/ecell-noticeboard-entrance.webp',
-        desc: 'Academic entrance steps featuring E-Cell E-Summit notice board and student activity bulletins.'
-    },
-    {
-        id: 'panoramic-field',
-        title: 'Panoramic Sports Field & Dual Blocks',
-        category: 'Campus',
-        image: '/campus/campus-panoramic-field.webp',
-        desc: 'Wide panoramic perspective across the sports grounds capturing both institute buildings.'
-    },
-    {
-        id: 'side-avenue',
-        title: 'Landscaped Avenue & Greenery',
-        category: 'Campus',
-        image: '/campus/campus-side-avenue.webp',
-        desc: 'Clean concrete avenue lined with manicured hedges and flowering shrubs.'
+        id: 'conference-hall',
+        title: 'Executive Conference Hall & Board Room',
+        category: 'Heritage',
+        image: '/photos/08_admin-offices-conference/conference-room-portraits-01.jpg',
+        desc: 'Executive board room lined with historical portraits of founding educational leaders.'
     }
 ];
 
@@ -1726,12 +1754,19 @@ const Home = () => {
                     {/* Integrated Campus Tour CTA */}
                     <div className="mt-16 flex flex-col items-center justify-center text-center p-8 md:p-12 bg-slate-50 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full blur-[80px] opacity-60 pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
-                        <h3 className="text-2xl font-bold text-slate-900 mb-3 relative z-10">Want to explore every corner?</h3>
-                        <p className="text-slate-600 mb-8 max-w-lg relative z-10">Take a fully immersive virtual tour of our 8-storey academic block, reading halls, and recreational grounds.</p>
-                        <Link to="/virtual-tour" className="relative z-10 inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold text-sm tracking-wider uppercase rounded-xl shadow-md hover:bg-blue-700 hover:shadow-lg transition-all active:scale-95">
-                            <Play className="w-4 h-4" />
-                            Start Virtual Tour
-                        </Link>
+                        <span className="text-primary font-bold text-xs uppercase tracking-widest block mb-2 relative z-10">250+ Verified Campus Photographs</span>
+                        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3 relative z-10">Want to explore every corner?</h3>
+                        <p className="text-slate-600 mb-8 max-w-lg relative z-10">Take a structured virtual tour or browse the complete directory of 250+ verified photographs across all 17 campus zones.</p>
+                        <div className="relative z-10 flex flex-wrap items-center justify-center gap-4">
+                            <Link to="/virtual-tour" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold text-xs tracking-wider uppercase rounded-xl shadow-md hover:bg-blue-700 hover:shadow-lg transition-all active:scale-95">
+                                <Play className="w-4 h-4" />
+                                Start Virtual Tour
+                            </Link>
+                            <Link to="/virtual-tour?tab=archive" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold text-xs tracking-wider uppercase rounded-xl shadow-md hover:bg-slate-800 hover:shadow-lg transition-all active:scale-95">
+                                <Camera className="w-4 h-4" />
+                                Browse 250+ Photo Archive
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

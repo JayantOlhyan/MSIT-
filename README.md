@@ -27,6 +27,10 @@ Legacy institutional websites often suffer from slow page loads, poor accessibil
 ## Features
 
 ### Completed
+- **Authentic Campus Photo Directory & Archive (250+ Photos)**: Fully ingested, web-optimized, and indexed comprehensive photographic coverage across 17 campus zones (Academics, NCC, Basketball, Football, Indoor Games, Hostels, Canteen, Admin & Conference, Faculty Cabins, Heritage Plaques, Central Library, Computing & AI Labs, Electrical Labs, Seminar Halls, Law Block, Community, Shrines). Featuring instant search, category filtering, and a full-screen keyboard-navigable Lightbox viewer.
+- **100% Verified Lab Photography**: Replaced placeholder and missing images across all 33 department engineering laboratories (CSE, IT, ECE, EEE, Applied Sciences) with verified institutional photography.
+- **Enhanced Facilities & Tour Portals**: Interactive photo gallery integration into Central Library, Raja Mahendra Pratap Hostel, Sports Arenas, Rivanto Cafeteria, Law Block, NCC Headquarters, and Administration suites.
+- **Preserved Landing Hero Identity**: Maintained the iconic homepage/landing page red-brick hero photograph (`/campus-hero.webp`) untouched while elevating surrounding imagery with authentic college assets.
 - **Dynamic Content Engine**: Decoupled routing system rendering pages from static JSON schemas (`src/data/`).
 - **Redesigned Academic Suite**: Revamped, interactive UI for Department pages, Academic Calendar, Timetables, and Research initiatives.
 - **Refined Navigation & Header**: Responsive transparent header adaptivity across hero sections with polished navigation styling.

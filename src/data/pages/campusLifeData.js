@@ -140,6 +140,17 @@ export const campusLifeData = {
                         <img src="/campus/student-gathering-courtyard.webp" alt="Students gathering in courtyard during fest at MSIT" class="w-full h-auto object-cover" />
                     </div>
                 </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-200/70">
+                    <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                        <img src="/photos/04_sports-football/football-team-photo-hires-01.jpg" alt="MSIT Football Tournament Team on Campus Ground" class="w-full h-auto object-cover" />
+                    </div>
+                    <div>
+                        <span class="text-emerald-600 text-xs font-bold uppercase tracking-widest block mb-2">Sports Excellence</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">SPHURTI Annual Sports Meet</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3">The institute's flagship sports festival <strong>SPHURTI</strong> brings together competitive teams across football, basketball, cricket, badminton, and indoor table tennis, creating unforgettable athletic rivalries and sportsmanship.</p>
+                    </div>
+                </div>
             </div>
         `,
         stats: [

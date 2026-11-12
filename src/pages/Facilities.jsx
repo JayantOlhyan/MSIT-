@@ -5,8 +5,9 @@ import {
     Beaker, Book, Home, Trophy, Activity, Server, Cpu, Database, 
     BookOpen, ArrowRight, Search, Camera, CheckCircle2, AlertTriangle, 
     ExternalLink, X, ChevronLeft, ChevronRight, Sparkles, Filter, 
-    Wrench, ShieldCheck, Layers, FileText, Check, Phone
+    Wrench, ShieldCheck, Layers, FileText, Check, Phone, Coffee, Landmark, Briefcase
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { departments, labData, itMous, campusInfrastructure, auditNotes } from '../data/facilitiesData';
 
@@ -432,12 +433,26 @@ const Facilities = () => {
                             </div>
 
                             <div className="space-y-4">
-                                <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                                <div 
+                                    onClick={() => openLabModal({ 
+                                        name: campusInfrastructure.library.title, 
+                                        labNo: 'Central Facility', 
+                                        dept: 'Academic Knowledge Hub', 
+                                        hasPhoto: true, 
+                                        images: campusInfrastructure.library.images || [campusInfrastructure.library.image],
+                                        description: campusInfrastructure.library.description 
+                                    })}
+                                    className="rounded-2xl overflow-hidden border border-slate-200 shadow-md relative group cursor-pointer"
+                                >
                                     <img 
-                                        src="/campus/central-library-hall.webp" 
+                                        src={campusInfrastructure.library.image} 
                                         alt="MSIT Central Library Reading Hall" 
-                                        className="w-full h-72 object-cover"
+                                        className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
+                                    <div className="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold">
+                                        <Camera className="w-3.5 h-3.5" />
+                                        <span>View {campusInfrastructure.library.images?.length || 6} Photos</span>
+                                    </div>
                                 </div>
                                 <div className="p-4 bg-slate-900 text-white rounded-2xl text-xs leading-relaxed border border-transparent">
                                     <strong className="text-blue-400 block mb-1">Book Bank Scheme (Since 2006):</strong>
@@ -475,12 +490,26 @@ const Facilities = () => {
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="rounded-xl overflow-hidden border border-slate-800 h-44">
+                                <div 
+                                    onClick={() => openLabModal({ 
+                                        name: campusInfrastructure.hostel.title, 
+                                        labNo: 'Boys Hostel', 
+                                        dept: 'Residential Campus', 
+                                        hasPhoto: true, 
+                                        images: campusInfrastructure.hostel.images || [campusInfrastructure.hostel.image],
+                                        description: campusInfrastructure.hostel.description 
+                                    })}
+                                    className="rounded-xl overflow-hidden border border-slate-800 h-48 relative group cursor-pointer"
+                                >
                                     <img 
-                                        src="/campus/campus-pathway-block.webp" 
-                                        alt="Hostel block pathways" 
-                                        className="w-full h-full object-cover"
+                                        src={campusInfrastructure.hostel.image} 
+                                        alt="Hostel block" 
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
+                                    <div className="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold">
+                                        <Camera className="w-3.5 h-3.5" />
+                                        <span>View {campusInfrastructure.hostel.images?.length || 6} Photos</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -502,12 +531,26 @@ const Facilities = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="rounded-2xl overflow-hidden border border-slate-200 h-44">
+                                <div 
+                                    onClick={() => openLabModal({ 
+                                        name: campusInfrastructure.sports.title, 
+                                        labNo: 'Sports Arena', 
+                                        dept: 'Physical Education & Athletics', 
+                                        hasPhoto: true, 
+                                        images: campusInfrastructure.sports.images || [campusInfrastructure.sports.image],
+                                        description: campusInfrastructure.sports.description 
+                                    })}
+                                    className="rounded-2xl overflow-hidden border border-slate-200 h-48 relative group cursor-pointer"
+                                >
                                     <img 
-                                        src="/campus/sports-badminton-ground.webp" 
+                                        src={campusInfrastructure.sports.image} 
                                         alt="MSIT Sports Ground" 
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
+                                    <div className="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold">
+                                        <Camera className="w-3.5 h-3.5" />
+                                        <span>View {campusInfrastructure.sports.images?.length || 6} Photos</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -541,6 +584,170 @@ const Facilities = () => {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Canteen & Cafeteria */}
+                            <div id="canteen" className="bg-white rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between space-y-6">
+                                <div>
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold mb-4">
+                                        <Coffee className="w-3.5 h-3.5" /> Dining & Cafeteria
+                                    </div>
+                                    <h4 className="text-2xl font-bold text-slate-900 mb-3">{campusInfrastructure.canteen.title}</h4>
+                                    <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                                        {campusInfrastructure.canteen.description}
+                                    </p>
+                                    <div className="p-3 bg-amber-50/80 rounded-xl border border-amber-200/60 text-xs font-semibold text-amber-900 mb-4">
+                                        Capacity: {campusInfrastructure.canteen.capacity} (Indoor & Outdoor Pergolas)
+                                    </div>
+                                </div>
+                                <div 
+                                    onClick={() => openLabModal({ 
+                                        name: campusInfrastructure.canteen.title, 
+                                        labNo: 'Rivanto Cafeteria', 
+                                        dept: 'Student Amenities', 
+                                        hasPhoto: true, 
+                                        images: campusInfrastructure.canteen.images || [campusInfrastructure.canteen.image],
+                                        description: campusInfrastructure.canteen.description 
+                                    })}
+                                    className="rounded-2xl overflow-hidden border border-slate-200 h-48 relative group cursor-pointer"
+                                >
+                                    <img 
+                                        src={campusInfrastructure.canteen.image} 
+                                        alt="Rivanto Canteen" 
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                    <div className="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold">
+                                        <Camera className="w-3.5 h-3.5" />
+                                        <span>View {campusInfrastructure.canteen.images?.length || 3} Photos</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Law Block */}
+                            {campusInfrastructure.lawBlock && (
+                                <div id="law-block" className="bg-white rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between space-y-6">
+                                    <div>
+                                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs font-bold mb-4">
+                                            <Landmark className="w-3.5 h-3.5" /> Academic Wings
+                                        </div>
+                                        <h4 className="text-2xl font-bold text-slate-900 mb-3">{campusInfrastructure.lawBlock.title}</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                                            {campusInfrastructure.lawBlock.description}
+                                        </p>
+                                    </div>
+                                    <div 
+                                        onClick={() => openLabModal({ 
+                                            name: campusInfrastructure.lawBlock.title, 
+                                            labNo: 'Law Block', 
+                                            dept: 'Academic Facilities', 
+                                            hasPhoto: true, 
+                                            images: campusInfrastructure.lawBlock.images || [campusInfrastructure.lawBlock.image],
+                                            description: campusInfrastructure.lawBlock.description 
+                                        })}
+                                        className="rounded-2xl overflow-hidden border border-slate-200 h-48 relative group cursor-pointer"
+                                    >
+                                        <img 
+                                            src={campusInfrastructure.lawBlock.image} 
+                                            alt="Law Block Architecture" 
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                        <div className="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold">
+                                            <Camera className="w-3.5 h-3.5" />
+                                            <span>View {campusInfrastructure.lawBlock.images?.length || 4} Photos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* NCC Unit */}
+                            {campusInfrastructure.ncc && (
+                                <div id="ncc" className="bg-white rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between space-y-6">
+                                    <div>
+                                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold mb-4">
+                                            <ShieldCheck className="w-3.5 h-3.5" /> Defense Training & NCC
+                                        </div>
+                                        <h4 className="text-2xl font-bold text-slate-900 mb-3">{campusInfrastructure.ncc.title}</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                                            {campusInfrastructure.ncc.description}
+                                        </p>
+                                    </div>
+                                    <div 
+                                        onClick={() => openLabModal({ 
+                                            name: campusInfrastructure.ncc.title, 
+                                            labNo: '7 DGBN Unit', 
+                                            dept: 'National Cadet Corps', 
+                                            hasPhoto: true, 
+                                            images: campusInfrastructure.ncc.images || [campusInfrastructure.ncc.image],
+                                            description: campusInfrastructure.ncc.description 
+                                        })}
+                                        className="rounded-2xl overflow-hidden border border-slate-200 h-48 relative group cursor-pointer"
+                                    >
+                                        <img 
+                                            src={campusInfrastructure.ncc.image} 
+                                            alt="7 DGBN NCC Cadets Parade" 
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                        <div className="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold">
+                                            <Camera className="w-3.5 h-3.5" />
+                                            <span>View {campusInfrastructure.ncc.images?.length || 4} Photos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Administration & Conference */}
+                            {campusInfrastructure.admin && (
+                                <div id="admin-offices" className="bg-white rounded-3xl p-8 border border-slate-200 shadow-card flex flex-col justify-between space-y-6">
+                                    <div>
+                                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 text-slate-800 rounded-full text-xs font-bold mb-4">
+                                            <Briefcase className="w-3.5 h-3.5" /> Executive Governance
+                                        </div>
+                                        <h4 className="text-2xl font-bold text-slate-900 mb-3">{campusInfrastructure.admin.title}</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                                            {campusInfrastructure.admin.description}
+                                        </p>
+                                    </div>
+                                    <div 
+                                        onClick={() => openLabModal({ 
+                                            name: campusInfrastructure.admin.title, 
+                                            labNo: 'Conference Hall', 
+                                            dept: 'Executive Governance', 
+                                            hasPhoto: true, 
+                                            images: campusInfrastructure.admin.images || [campusInfrastructure.admin.image],
+                                            description: campusInfrastructure.admin.description 
+                                        })}
+                                        className="rounded-2xl overflow-hidden border border-slate-200 h-48 relative group cursor-pointer"
+                                    >
+                                        <img 
+                                            src={campusInfrastructure.admin.image} 
+                                            alt="Conference Room with Portraits" 
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                        <div className="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold">
+                                            <Camera className="w-3.5 h-3.5" />
+                                            <span>View {campusInfrastructure.admin.images?.length || 3} Photos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Banner link to full photo archive */}
+                        <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-8 md:p-10 border border-white/10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div className="space-y-2 text-center md:text-left">
+                                <span className="text-blue-400 text-xs font-extrabold uppercase tracking-widest block">250+ Verified Photographs Available</span>
+                                <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">Looking for the Complete Campus Photo Directory?</h3>
+                                <p className="text-slate-300 text-xs md:text-sm max-w-xl">
+                                    Explore all 17 categories including high-resolution sports action, computing research labs, residential blocks, and historic archives.
+                                </p>
+                            </div>
+                            <Link
+                                to="/virtual-tour?tab=archive"
+                                className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary hover:bg-primary/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all active:scale-95 whitespace-nowrap"
+                            >
+                                <Camera className="w-4 h-4" />
+                                <span>Open Full Photo Archive</span>
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
                     </div>
                 )}
