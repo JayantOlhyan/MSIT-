@@ -137,10 +137,10 @@ export const quickLinksData = {
             { label: "Top Tech Hires", value: "2,000+" }
         ],
         bulletPoints: [
-            { label: "Mentorship Program", detail: "Click here to learn more about mentorship program. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Annual Homecoming", detail: "Click here to learn more about annual homecoming. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Digital Directory", detail: "Click here to learn more about digital directory. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Job Referral Hub", detail: "Click here to learn more about job referral hub. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "Mentorship Program", detail: "Connect 1-on-1 with distinguished MSIT alumni working at Google, Microsoft, Amazon, and leading global investment banks for resume reviews and interview preparation.", url: "/alumni-network" },
+            { label: "Annual Homecoming", detail: "Yearly reunion celebrating silver jubilee batches, alumni achievement awards, and networking sessions bridging past and present students.", url: "/alumni-network" },
+            { label: "Digital Directory", detail: "Searchable verified alumni database allowing graduates worldwide to connect by graduation year, engineering discipline, and current company.", url: "/alumni-network" },
+            { label: "Job Referral Hub", detail: "Internal career referral portal where senior alumni directly share open vacancies, internship tracks, and fast-track hiring referrals.", url: "/alumni-network" }
         ]
     },
     "society-ieee": {
@@ -368,10 +368,10 @@ export const quickLinksData = {
             { label: "Update Frequency", value: "Monthly" }
         ],
         bulletPoints: [
-            { label: "IP University Ordinance 11", detail: "Click here to learn more about ip university ordinance 11. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Medical Certificate Policy", detail: "Click here to learn more about medical certificate policy. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Official Duty Leaves (OD)", detail: "Click here to learn more about official duty leaves (od). This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Detained List Penalties", detail: "Click here to learn more about detained list penalties. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "IP University Ordinance 11", detail: "Mandates minimum 75% aggregate classroom and lab attendance to be eligible to appear in the end-term semester examinations.", url: "/attendance" },
+            { label: "Medical Certificate Policy", detail: "Submission of government-hospital medical fitness certificates within 3 working days to claim condonation of absence up to 5%.", url: "/attendance" },
+            { label: "Official Duty Leaves (OD)", detail: "Attendance consideration for students officially representing MSIT at university tournaments, national hackathons, and paper presentations.", url: "/attendance" },
+            { label: "Detained List Penalties", detail: "Consequences of attendance falling below 70% leading to debarment from end-term examinations and mandatory semester repetition.", url: "/attendance" }
         ]
     },
     "society-ndli": {

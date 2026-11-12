@@ -200,9 +200,9 @@ export const admissionData = {
             { label: "Accreditation", value: "NAAC 'A'" }
         ],
         bulletPoints: [
-            { label: "Download PDF Brochure", detail: "Click here to learn more about download pdf brochure. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Admission Requirements", detail: "Click here to learn more about admission requirements. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Counseling Walkthrough", detail: "Click here to learn more about counseling walkthrough. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "Download PDF Brochure", detail: "Official MSIT Information Brochure containing intake capacity, seat reservation policies, faculty profiles, and fee structures.", url: "/brochure" },
+            { label: "Admission Requirements", detail: "Eligibility criteria: Pass 10+2 with minimum 55% in PCM and English, with valid JEE Main rank through centralized GGSIPU online counseling.", url: "/brochure" },
+            { label: "Counseling Walkthrough", detail: "Step-by-step guidance on GGSIPU online registration, choice filling, document verification, seat allotment, and reporting at MSIT campus.", url: "/brochure" }
         ]
     },
     "online-fee": {

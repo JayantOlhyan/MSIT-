@@ -737,9 +737,9 @@ export const academicData = {
             { label: "Working Days", value: "90+" }
         ],
         bulletPoints: [
-            { label: "Download PDF Calendar", detail: "Click here to learn more about download pdf calendar. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Exam Schedules", detail: "Click here to learn more about exam schedules. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "List of Holidays", detail: "Click here to learn more about list of holidays. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "Download PDF Calendar", detail: "Access the verified official academic calendar approved by GGSIPU with dates for semester commencement, practicals, mid-terms, and final university examinations.", url: "/academic-calendar" },
+            { label: "Exam Schedules", detail: "Complete date-sheet timelines and seating plan guidelines for GGSIPU End-Term Theory and Practical Examinations across all engineering branches.", url: "/academic-calendar#examination-scheme-and-weightage-rules" },
+            { label: "List of Holidays", detail: "Official gazetted, restricted, and institutional holiday notifications notified by the university and MSIT administration.", url: "/academic-calendar" }
         ]
     },
     "timetable": {
@@ -759,9 +759,9 @@ export const academicData = {
             { label: "Format", value: "GGSIPU Pattern" }
         ],
         bulletPoints: [
-            { label: "B.Tech Syllabus (All Branches)", detail: "Click here to learn more about b.tech syllabus (all branches). This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Section-wise Timetables", detail: "Click here to learn more about section-wise timetables. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Lab Batches", detail: "Click here to learn more about lab batches. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "B.Tech Syllabus (All Branches)", detail: "Detailed credit structure, scheme of examinations, and course syllabus for CSE, IT, ECE, and EEE under GGSIPU scheme.", url: "/syllabus" },
+            { label: "Section-wise Timetables", detail: "Weekly lecture schedules, tutorial slots, and classroom allotments organized section-wise for morning and evening shifts.", url: "/timetable" },
+            { label: "Lab Batches", detail: "Sub-group batch divisions for hands-on programming, electronics, networking, and engineering physics/chemistry lab experiments.", url: "/timetable" }
         ]
     },
     "research": {

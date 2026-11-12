@@ -104,10 +104,10 @@ export const campusLifeData = {
             { label: "Flagship Events", value: "10+" }
         ],
         bulletPoints: [
-            { label: "Technical Hubs (IEEE, GDSC)", detail: "Click here to learn more about technical hubs (IEEE, GDSC). This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Cultural Sub-wings", detail: "Click here to learn more about cultural sub-wings. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Innovation & Startup Cell", detail: "Click here to learn more about innovation & startup cell. This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Environmental Initiatives", detail: "Click here to learn more about environmental initiatives. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "Technical Hubs (IEEE, GDSC)", detail: "Vibrant technical chapters including IEEE MSIT, Google Developer Student Clubs, Geek Room, and E-Cell fostering coding, hackathons, and research.", url: "/society-ieee" },
+            { label: "Cultural Sub-wings", detail: "Dynamic cultural societies in dramatics, western and Indian music, fashion, choreography, and fine arts competing at inter-college fests.", url: "/society" },
+            { label: "Innovation & Startup Cell", detail: "E-Cell MSIT nurtures student startup founders with seed grants, patent filing support, and investor pitch sessions.", url: "/society-ecell" },
+            { label: "Environmental Initiatives", detail: "Prakriti eco-club and Unnat Bharat Abhiyan leading tree plantation drives, campus solar energy audits, and e-waste management.", url: "/society-uba" }
         ]
     },
     "events": {
@@ -158,9 +158,9 @@ export const campusLifeData = {
             { label: "Footfall", value: "10,000+" }
         ],
         bulletPoints: [
-            { label: "Avensis (Tech Fest)", detail: "Click here to learn more about avensis (tech fest). This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Genesis (Cultural Fest)", detail: "Click here to learn more about genesis (cultural fest). This section provides comprehensive information and resources tailored to this topic." },
-            { label: "Sports Meet", detail: "Click here to learn more about sports meet. This section provides comprehensive information and resources tailored to this topic." }
+            { label: "Avensis (Tech Fest)", detail: "Annual national technical festival featuring 48-hour hackathons, robotics challenges, coding marathons, and industry keynote speakers.", url: "/events" },
+            { label: "Genesis (Cultural Fest)", detail: "Mega inter-college cultural festival with star celebrity night performances, battle of bands, dance face-offs, and street theatre.", url: "/events" },
+            { label: "Sports Meet", detail: "Sphurti Annual Sports Meet with track & field events, inter-departmental football, cricket, basketball, volleyball, and table tennis championships.", url: "/events" }
         ]
     },
     "antiragging": {
