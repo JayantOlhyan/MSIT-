@@ -27,6 +27,11 @@ Legacy institutional websites often suffer from slow page loads, poor accessibil
 ## Features
 
 ### Completed
+- **Electrical & Electronics Engineering (EEE) Full Title Standardization**: Standardized all navigation mega-menu entries, sitemap indices, admission tables, and department listings to the official AICTE/GGSIPU approved designation "Electrical & Electronics Engineering (EEE)".
+- **Department Intake Accuracy & CRL Cut-Off Linking**: Updated sanctioned intake figures across all engineering departments to reflect total institutional capacities (including 1st Shift and 2nd Shift capacities, such as IT 180 (120+60) and CSE 240 (180+60)), and enabled interactive link navigation directly to the Information Brochure cut-off rank matrix.
+- **Deep-Linked Department Faculty Directory Navigation**: Implemented URL query parameter routing (`?dept=` and `?search=`) on the Faculty Directory (`/faculty`), enabling department overview key figure cards to seamlessly navigate and auto-filter to the corresponding faculty team.
+- **Research Directorate & Governance Section**: Updated institutional research figures to 1,200+ publications and 35+ patents, and introduced the Research Governance & Leadership Directorate on the Research & Innovation portal featuring Dean (Academics & Research) Prof. (Dr.) Naveen Dahiya alongside Patron Director Prof. (Dr.) Avanish Kumar Srivastava.
+- **Placement Directorate Leadership Avatars & Profiles**: Replaced generic placeholder silhouette icons with executive monogram identity crests and enriched career profiles for Training & Placement Director Mr. Mandeep Singh and T&P committee leadership.
 - **Computer Science & Engineering (CSE) Terminology Standardization**: Standardized all references across the navigation header mega menu, sitemap index, news details, and search engines to "Computer Science & Engineering (CSE)".
 - **Central Library Portal Direct URL & Access**: Directly exposed the explicit online portal URL (`http://library.msit.in/`) on the Central Library facility view alongside a direct one-click launcher.
 - **Industry MOUs & Institutional Collaborations Realignment**: Renamed all departmental MOU designations to "Industry MOUs & Institutional Collaborations", enriched all beneficiary metrics with descriptive impact details, and updated renewal terminology from "Pending Renewal" to "In Process".

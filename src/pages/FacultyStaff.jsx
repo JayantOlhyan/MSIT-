@@ -10,8 +10,21 @@ import PageHero from '../components/PageHero';
 import { facultyMembers } from '../data/facultyData';
 
 const FacultyStaff = () => {
-    const [searchQuery, setSearchQuery] = useState('');
-    const [activeDept, setActiveDept] = useState('All');
+    const [searchQuery, setSearchQuery] = useState(() => {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('search') || '';
+    });
+    const [activeDept, setActiveDept] = useState(() => {
+        const params = new URLSearchParams(window.location.search);
+        const deptParam = params.get('dept');
+        if (deptParam) {
+            const match = ['All', 'Governing Body', 'Administration', 'CSE', 'IT', 'ECE', 'EEE', 'Applied Sciences'].find(
+                d => d.toLowerCase() === deptParam.toLowerCase() || (d === 'Applied Sciences' && deptParam.toLowerCase().includes('applied'))
+            );
+            return match || 'All';
+        }
+        return 'All';
+    });
     const [activeStatModal, setActiveStatModal] = useState(null);
     const location = useLocation();
     const navigate = useNavigate();
@@ -46,6 +59,17 @@ const FacultyStaff = () => {
                     setActiveDept(found.dept);
                 }
             }
+        }
+        const deptParam = params.get('dept');
+        if (deptParam) {
+            const match = ['All', 'Governing Body', 'Administration', 'CSE', 'IT', 'ECE', 'EEE', 'Applied Sciences'].find(
+                d => d.toLowerCase() === deptParam.toLowerCase() || (d === 'Applied Sciences' && deptParam.toLowerCase().includes('applied'))
+            );
+            if (match) setActiveDept(match);
+        }
+        const searchParam = params.get('search');
+        if (searchParam !== null) {
+            setSearchQuery(searchParam);
         }
     }
 

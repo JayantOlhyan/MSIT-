@@ -285,10 +285,37 @@ const DynamicPage = () => {
                                 // First column lines up with the content edge; dividers between cells.
                                 const pad = i === 0 ? 'pl-0' : i === 2 ? 'pl-0 lg:pl-8' : 'pl-5 lg:pl-8';
                                 const lines = `${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`;
-                                return (
-                                    <div key={i} className={`py-4 lg:py-5 pr-5 ${pad} ${lines} border-slate-200`}>
-                                        <div className="text-2xl font-bold text-title tabular-nums leading-tight">{stat.value}</div>
-                                        <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted">{stat.label}</div>
+                                const targetUrl = stat.url || stat.link;
+                                const hasLink = Boolean(targetUrl);
+
+                                const content = (
+                                    <div className={`py-4 lg:py-5 pr-5 ${pad} ${lines} border-slate-200 h-full flex flex-col justify-between transition-colors ${
+                                        hasLink ? 'hover:bg-blue-50/50 cursor-pointer group' : ''
+                                    }`}>
+                                        <div className="flex items-center justify-between gap-2">
+                                            <div className={`text-2xl font-bold tabular-nums leading-tight transition-colors ${
+                                                hasLink ? 'text-title group-hover:text-primary' : 'text-title'
+                                            }`}>
+                                                {stat.value}
+                                            </div>
+                                            {hasLink && (
+                                                <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
+                                            )}
+                                        </div>
+                                        <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted flex items-center gap-1">
+                                            <span className={hasLink ? 'group-hover:text-slate-900 transition-colors' : ''}>{stat.label}</span>
+                                            {hasLink && <span className="text-primary text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">&rarr;</span>}
+                                        </div>
+                                    </div>
+                                );
+
+                                return hasLink ? (
+                                    <Link key={i} to={targetUrl} className="block h-full focus:outline-hidden focus:ring-2 focus:ring-primary/20">
+                                        {content}
+                                    </Link>
+                                ) : (
+                                    <div key={i} className="h-full">
+                                        {content}
                                     </div>
                                 );
                             })}

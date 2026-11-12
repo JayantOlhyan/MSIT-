@@ -39,6 +39,37 @@ const Placements = () => {
         };
     };
 
+    const renderMemberAvatar = (details, isDark = false, size = "large") => {
+        const hasCustomImage = details.img && details.img !== '/faculty/default-avatar.webp' && !details.img.includes('default-avatar');
+        if (hasCustomImage) {
+            return (
+                <img 
+                    src={details.img} 
+                    alt={details.name} 
+                    className="w-full h-full object-cover" 
+                    onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.style.display = 'none';
+                        if (e.currentTarget.nextSibling) {
+                            e.currentTarget.nextSibling.style.display = 'flex';
+                        }
+                    }}
+                />
+            );
+        }
+        const cleanName = details.name.replace(/Prof\.|Dr\.|Sh\.|Mr\.|Ms\.|\(Dr\.\)/gi, '').trim();
+        const initials = cleanName.split(/\s+/).map(w => w[0]).filter(Boolean).slice(0, 2).join('').toUpperCase() || 'TP';
+        return (
+            <div className={`w-full h-full flex items-center justify-center font-extrabold tracking-wider ${
+                isDark 
+                    ? 'bg-gradient-to-br from-blue-600 via-indigo-600 to-slate-900 text-white shadow-inner' 
+                    : 'bg-gradient-to-br from-blue-600 to-indigo-800 text-white shadow-inner'
+            } ${size === 'large' ? 'text-2xl' : 'text-base'}`}>
+                {initials}
+            </div>
+        );
+    };
+
     const placementDirectors = [
         { nameQuery: "Harish Singh Rawat", committeeRole: "Director – Training & Placement (T&P)", branch: "Overall Head - T&P Department" },
         { nameQuery: "Mandeep Singh", committeeRole: "Director (Placements)", branch: "Corporate Relations & Placement Director" }
@@ -280,16 +311,8 @@ const Placements = () => {
                                         >
                                             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
                                             <div className="flex items-center gap-5 relative z-10">
-                                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-md shrink-0">
-                                                    <img 
-                                                        src={details.img} 
-                                                        alt={details.name} 
-                                                        className="w-full h-full object-cover" 
-                                                        onError={(e) => {
-                                                            e.currentTarget.onerror = null;
-                                                            e.currentTarget.src = '/faculty/default-avatar.svg';
-                                                        }}
-                                                    />
+                                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-md shrink-0 bg-slate-800">
+                                                    {renderMemberAvatar(details, true, "large")}
                                                 </div>
                                                 <div className="flex-1 min-w-0">
                                                     <span className="inline-block px-2.5 py-0.5 bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-wider rounded border border-blue-400/30 mb-1.5">{director.branch}</span>
@@ -317,16 +340,8 @@ const Placements = () => {
                                         onClick={() => setSelectedMember(details)}
                                         className="bg-white rounded-3xl p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group text-center"
                                     >
-                                        <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-2 border-slate-100">
-                                            <img 
-                                                src={details.img} 
-                                                alt={details.name} 
-                                                className="w-full h-full object-cover" 
-                                                onError={(e) => {
-                                                    e.currentTarget.onerror = null;
-                                                    e.currentTarget.src = '/faculty/default-avatar.svg';
-                                                }}
-                                            />
+                                        <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-2 border-slate-100 bg-slate-50">
+                                            {renderMemberAvatar(details, false, "large")}
                                         </div>
                                         <span className="inline-block px-2.5 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-black uppercase tracking-wider rounded mb-1">{details.dept || member.branch}</span>
                                         <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate">{details.name}</h3>
@@ -452,16 +467,8 @@ const Placements = () => {
                         <div className="bg-slate-900 text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
                             <div className="flex gap-4 sm:gap-6 items-center relative z-10">
-                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
-                                    <img 
-                                        src={selectedMember.img} 
-                                        alt={selectedMember.name} 
-                                        className="w-full h-full object-cover" 
-                                        onError={(e) => {
-                                            e.currentTarget.onerror = null;
-                                            e.currentTarget.src = '/faculty/default-avatar.svg';
-                                        }}
-                                    />
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0 bg-slate-800">
+                                    {renderMemberAvatar(selectedMember, true, "large")}
                                 </div>
                                 <div className="flex-1 min-w-0">
                                     <span className="inline-block px-2.5 py-1 bg-white/10 text-white text-[10px] font-black uppercase tracking-widest rounded mb-1.5 sm:mb-2 border border-white/5">{selectedMember.dept}</span>

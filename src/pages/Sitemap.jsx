@@ -30,7 +30,7 @@ const Sitemap = () => {
                 { label: "Computer Science & Engineering (CSE)", path: "/cse" },
                 { label: "Information Technology (IT)", path: "/it" },
                 { label: "Electronics & Comm. (ECE)", path: "/ece" },
-                { label: "Electrical Engineering (EEE)", path: "/eee" },
+                { label: "Electrical & Electronics Engineering (EEE)", path: "/eee" },
                 { label: "Applied Sciences (1st Year)", path: "/applied-sciences" },
                 { label: "Academic Calendar", path: "/academic-calendar" },
                 { label: "Syllabus Index", path: "/syllabus" },

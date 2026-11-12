@@ -122,7 +122,7 @@ const Header = () => {
                     { name: "Computer Science & Engineering (CSE)", url: "/cse" },
                     { name: "Information Technology (IT)", url: "/it" },
                     { name: "Electronics & Comm. (ECE)", url: "/ece" },
-                    { name: "Electrical Engineering (EEE)", url: "/eee" }
+                    { name: "Electrical & Electronics Engineering (EEE)", url: "/eee" }
                 ]
             },
             { name: "Applied Sciences", url: "/applied-sciences" },

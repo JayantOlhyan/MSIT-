@@ -114,10 +114,10 @@ export const academicData = {
             </div>
         `,
         stats: [
-            { label: "Intake", value: "240" },
+            { label: "Intake", value: "240 (180+60)", url: "/brochure#cutoff-ranks" },
             { label: "Established", value: "2001" },
-            { label: "Faculty Strength", value: "35+" },
-            { label: "NBA Status", value: "Accredited" }
+            { label: "Faculty Strength", value: "35+ Members", url: "/faculty?dept=cse" },
+            { label: "NBA Status", value: "Accredited", url: "/mandatory-disclosures#nba-accreditation-status" }
         ],
         // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
         faqs: [
@@ -257,14 +257,14 @@ export const academicData = {
             </div>
         `,
         stats: [
-            { label: "Intake", value: "120" },
-            { label: "Faculty Strength", value: "30 Members" },
-            { label: "HOD Experience", value: "21+ Yrs" },
-            { label: "NBA Status", value: "Accredited" }
+            { label: "Intake", value: "180 (120+60)", url: "/brochure#cutoff-ranks" },
+            { label: "Faculty Strength", value: "30 Members", url: "/faculty?dept=it" },
+            { label: "HOD Experience", value: "21+ Yrs", url: "/faculty?search=Sunesh+Malik" },
+            { label: "NBA Status", value: "Accredited", url: "/mandatory-disclosures#nba-accreditation-status" }
         ],
         // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
         faqs: [
-            { q: "How many seats does B.Tech IT have?", a: "The sanctioned intake for B.Tech IT is 120 seats." },
+            { q: "How many seats does B.Tech IT have?", a: "180 sanctioned seats: 120 in the morning shift (1st Shift) and 60 in the evening shift (2nd Shift)." },
             { q: "How do I get admission to B.Tech IT?", a: "Admission is through GGSIPU counselling, based on your JEE Main rank." },
             { q: "Is the IT programme accredited?", a: "Yes. The programme is accredited by the National Board of Accreditation (NBA). MSIT is affiliated to GGSIPU and approved by AICTE." },
             { q: "Who is the Head of Department?", a: "Prof. Tripti Sharma, Professor & HOD, with 21+ years of teaching experience." },
@@ -399,14 +399,14 @@ export const academicData = {
             </div>
         `,
         stats: [
-            { label: "Intake", value: "120" },
-            { label: "Faculty Strength", value: "28 Members" },
+            { label: "Intake", value: "180 (120+60)", url: "/brochure#cutoff-ranks" },
+            { label: "Faculty Strength", value: "28 Members", url: "/faculty?dept=ece" },
             { label: "Tech Staff", value: "7 Staff" },
-            { label: "NBA Status", value: "Accredited" }
+            { label: "NBA Status", value: "Accredited", url: "/mandatory-disclosures#nba-accreditation-status" }
         ],
         // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
         faqs: [
-            { q: "How many seats does B.Tech ECE have?", a: "The sanctioned intake for B.Tech ECE is 120 seats." },
+            { q: "How many seats does B.Tech ECE have?", a: "180 sanctioned seats: 120 in the morning shift (1st Shift) and 60 in the evening shift (2nd Shift)." },
             { q: "How do I get admission to B.Tech ECE?", a: "Admission is through GGSIPU counselling, based on your JEE Main rank." },
             { q: "Is the ECE programme accredited?", a: "Yes. The programme is accredited by the National Board of Accreditation (NBA). MSIT is affiliated to GGSIPU and approved by AICTE." },
             { q: "Who is the Head of Department?", a: "Dr. Sudesh Pahal, Associate Professor & HOD, specialising in wireless sensor networks, VANETs and microelectronics design." },
@@ -533,10 +533,10 @@ export const academicData = {
             </div>
         `,
         stats: [
-            { label: "Intake", value: "60" },
-            { label: "Faculty Strength", value: "12 Members" },
+            { label: "Intake", value: "60 Seats", url: "/brochure#cutoff-ranks" },
+            { label: "Faculty Strength", value: "12 Members", url: "/faculty?dept=eee" },
             { label: "Tech Staff", value: "5 Staff" },
-            { label: "NBA Status", value: "Accredited" }
+            { label: "NBA Status", value: "Accredited", url: "/mandatory-disclosures#nba-accreditation-status" }
         ],
         // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
         faqs: [
@@ -642,10 +642,10 @@ export const academicData = {
             </div>
         `,
         stats: [
-            { label: "Faculty", value: "33 Members" },
+            { label: "Faculty", value: "33 Members", url: "/faculty?dept=applied+sciences" },
             { label: "Focus", value: "First Year B.Tech" },
             { label: "HOD Exp", value: "15+ Yrs" },
-            { label: "NAAC Rating", value: "'A' Grade" }
+            { label: "NAAC Rating", value: "'A' Grade", url: "/mandatory-disclosures#naac-accreditation-status" }
         ],
         // Shown in the sidebar instead of Key Highlights. Answers use facts already published on this site.
         faqs: [
@@ -864,15 +864,77 @@ export const academicData = {
                         </div>
                     </div>
                 </section>
+
+                <!-- Research Leadership & Governance Directorate -->
+                <section>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-6">Research Governance & Leadership Directorate</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Dean Academics & Research -->
+                        <div class="p-6 bg-linear-to-br from-slate-50 via-white to-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-blue-200 shrink-0 bg-slate-100">
+                                        <img src="/faculty/naveen-dahiya.webp" alt="Prof. (Dr.) Naveen Dahiya" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <span class="inline-block px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider bg-blue-100 text-blue-800 rounded-md">
+                                            Institutional Dean
+                                        </span>
+                                        <h4 class="text-lg font-bold text-slate-900 mt-1">Prof. (Dr.) Naveen Dahiya</h4>
+                                        <p class="text-xs font-semibold text-blue-600">Dean (Academics & Research Leadership) & Professor, CSE</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                                    Heads institutional academic and research governance, doctoral scholar admissions under GGSIPU Ph.D. Research Centre (CSE & ECE), Scopus/WoS publication incentives, and editor-in-chief coordination for <em>Satyam: MSIT Journal of Research</em>.
+                                </p>
+                            </div>
+                            <div class="pt-4 mt-2 border-t border-slate-100">
+                                <a href="/faculty?search=Naveen+Dahiya" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                                    <span>View Dean Profile & Scholarly Output</span>
+                                    <span>&rarr;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Research Mentor & Director -->
+                        <div class="p-6 bg-linear-to-br from-indigo-50/40 via-white to-white rounded-3xl border border-indigo-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-indigo-200 shrink-0 bg-slate-100">
+                                        <img src="/faculty/avanish-kumar.webp" alt="Prof. (Dr.) Avanish Kumar Srivastava" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <span class="inline-block px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider bg-indigo-100 text-indigo-900 rounded-md">
+                                            Research Mentor & Patron
+                                        </span>
+                                        <h4 class="text-lg font-bold text-slate-900 mt-1">Prof. (Dr.) Avanish Kumar Srivastava</h4>
+                                        <p class="text-xs font-semibold text-indigo-700">Director, MSIT | Stanford Top 2% Global Scientist</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                                    Mentors frontier scientific initiatives, sponsored research grants (AICTE, DST, CSIR), high-resolution microscopy facilities, and institutional intellectual property commercialization. Holds 12 patents and 460+ SCI publications.
+                                </p>
+                            </div>
+                            <div class="pt-4 mt-2 border-t border-slate-100">
+                                <a href="/faculty?search=Avanish+Kumar+Srivastava" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 hover:text-indigo-900 transition-colors">
+                                    <span>View Director Research Profile & Patents</span>
+                                    <span>&rarr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         `,
         stats: [
-            { label: "Publications", value: "500+" },
-            { label: "Patents Filed", value: "25+" }
+            { label: "Publications", value: "1,200+", url: "/faculty" },
+            { label: "Patents Filed", value: "35+", url: "#published-granted-patents-selected-portfolio" },
+            { label: "Patents Granted", value: "12+", url: "#published-granted-patents-selected-portfolio" },
+            { label: "Dean (Academics & Research)", value: "Prof. (Dr.) Naveen Dahiya", url: "/faculty?search=Naveen+Dahiya" }
         ],
         // Shown in the sidebar instead of the placeholder links. Answers use facts already on this page.
         faqs: [
-            { q: "Who leads research at MSIT?", a: "Research runs under the mentorship of Director Prof. (Dr.) Avanish Kumar Srivastava, former Director of CSIR-AMPRI." },
+            { q: "Who leads research at MSIT?", a: "Research is directed under Dean (Academics & Research) Prof. (Dr.) Naveen Dahiya and mentored by Director Prof. (Dr.) Avanish Kumar Srivastava, former Director of CSIR-AMPRI and Stanford Top 2% scientist." },
             { q: "What funded research centres does MSIT have?", a: "A Centre of Excellence in Computational Intelligence (CSE, funded by Petronet LNG) and the AICTE IDEA Lab for prototyping." },
             { q: "Can undergraduate students use the IDEA Lab?", a: "Yes. The IDEA Lab is open to students across all undergraduate departments for hands-on product building." },
             { q: "Which conferences does MSIT organise?", a: "The international conference ICAIA, approved by IEEE Delhi Section, and the national conference NCI-TIDE." },
