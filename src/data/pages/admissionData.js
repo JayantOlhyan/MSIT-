@@ -361,15 +361,15 @@ export const admissionData = {
                     <!-- Head & Convener -->
                     <div class="p-6 bg-slate-50/80 rounded-3xl border border-slate-200 hover:border-blue-300 hover:bg-white hover:shadow-md transition-all">
                         <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-2xl bg-blue-100 border border-blue-200 flex items-center justify-center shrink-0 text-blue-700 font-extrabold text-lg">
-                                PA
+                            <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-blue-200 shadow-xs shrink-0 bg-slate-100">
+                                <img src="/faculty/puneet-azad.webp" alt="Prof. (Dr.) Puneet Azad" class="w-full h-full object-cover" />
                             </div>
                             <div class="space-y-1">
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-blue-100 text-blue-800">
                                     Convener & Academic Head
                                 </span>
-                                <h4 class="text-lg font-bold text-slate-900">Dr. Puneet Azad</h4>
-                                <p class="text-xs font-semibold text-blue-600">Dean Academics & Associate Professor (ECE Dept)</p>
+                                <h4 class="text-lg font-bold text-slate-900">Prof. (Dr.) Puneet Azad</h4>
+                                <p class="text-xs font-semibold text-blue-600">Professor (ECE Dept) & Dean Academics</p>
                                 <p class="text-xs text-slate-600 leading-relaxed font-light pt-1">
                                     Heads institutional scholarship verification, Merit-cum-Means (MCM) approval, NSP & Delhi Govt portal Nodal Desk, and overall student financial assistance schemes.
                                 </p>
@@ -377,7 +377,7 @@ export const admissionData = {
                                     <a href="mailto:puneet.azad@msit.in" class="inline-flex items-center gap-1 px-3 py-1 bg-white border border-slate-200 rounded-lg hover:text-blue-600 hover:border-blue-300 transition-colors">
                                         ✉️ puneet.azad@msit.in
                                     </a>
-                                    <a href="/faculty?id=ece-4" class="inline-flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+                                    <a href="/faculty?search=Puneet+Azad" class="inline-flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
                                         👤 View Faculty Profile
                                     </a>
                                 </div>
@@ -388,21 +388,24 @@ export const admissionData = {
                     <!-- Co-Coordinator / Industry Scholarships -->
                     <div class="p-6 bg-slate-50/80 rounded-3xl border border-slate-200 hover:border-emerald-300 hover:bg-white hover:shadow-md transition-all">
                         <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-2xl bg-emerald-100 border border-emerald-200 flex items-center justify-center shrink-0 text-emerald-700 font-extrabold text-lg">
-                                SM
+                            <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-emerald-200 shadow-xs shrink-0 bg-slate-100">
+                                <img src="/faculty/sunesh-malik.webp" alt="Dr. Sunesh Malik" class="w-full h-full object-cover" />
                             </div>
                             <div class="space-y-1">
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-emerald-100 text-emerald-800">
                                     Industry & Corporate Scholarship Incharge
                                 </span>
                                 <h4 class="text-lg font-bold text-slate-900">Dr. Sunesh Malik</h4>
-                                <p class="text-xs font-semibold text-emerald-600">Associate Professor & HOD (IT Department)</p>
+                                <p class="text-xs font-semibold text-emerald-600">Associate Professor (IT Department)</p>
                                 <p class="text-xs text-slate-600 leading-relaxed font-light pt-1">
                                     Coordinates corporate and industry-sponsored scholarships (such as Optum Scholarship) and departmental scholarship allocations for IT & CS students.
                                 </p>
                                 <div class="pt-2 flex flex-wrap gap-2 text-xs font-medium text-slate-700">
                                     <a href="mailto:suneshmalik@msit.in" class="inline-flex items-center gap-1 px-3 py-1 bg-white border border-slate-200 rounded-lg hover:text-emerald-600 hover:border-emerald-300 transition-colors">
                                         ✉️ suneshmalik@msit.in
+                                    </a>
+                                    <a href="/faculty?search=Sunesh+Malik" class="inline-flex items-center gap-1 px-3 py-1 bg-emerald-50 text-emerald-800 border border-emerald-100 rounded-lg hover:bg-emerald-600 hover:text-white transition-colors">
+                                        👤 View Faculty Profile
                                     </a>
                                 </div>
                             </div>
@@ -412,21 +415,24 @@ export const admissionData = {
                     <!-- SC/ST & Social Welfare Cell Convener -->
                     <div class="p-6 bg-slate-50/80 rounded-3xl border border-slate-200 hover:border-purple-300 hover:bg-white hover:shadow-md transition-all">
                         <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-2xl bg-purple-100 border border-purple-200 flex items-center justify-center shrink-0 text-purple-700 font-extrabold text-lg">
-                                NK
+                            <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-purple-200 shadow-xs shrink-0 bg-slate-100">
+                                <img src="/faculty/naresh-kumar.webp" alt="Prof. (Dr.) Naresh Kumar" class="w-full h-full object-cover" />
                             </div>
                             <div class="space-y-1">
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-purple-100 text-purple-800">
                                     SC/ST Welfare Cell Convener
                                 </span>
-                                <h4 class="text-lg font-bold text-slate-900">Prof. Naresh Kumar</h4>
-                                <p class="text-xs font-semibold text-purple-600">Professor & Social Welfare Convener</p>
+                                <h4 class="text-lg font-bold text-slate-900">Prof. (Dr.) Naresh Kumar</h4>
+                                <p class="text-xs font-semibold text-purple-600">Professor (CSE Dept) & SC/ST Welfare Convener</p>
                                 <p class="text-xs text-slate-600 leading-relaxed font-light pt-1">
                                     Handles Post-Matric SC/ST/OBC category scholarship verification, social welfare grants, and state welfare portal approvals.
                                 </p>
                                 <div class="pt-2 flex flex-wrap gap-2 text-xs font-medium text-slate-700">
                                     <a href="mailto:nareshkumar@msit.in" class="inline-flex items-center gap-1 px-3 py-1 bg-white border border-slate-200 rounded-lg hover:text-purple-600 hover:border-purple-300 transition-colors">
                                         ✉️ nareshkumar@msit.in
+                                    </a>
+                                    <a href="/faculty?search=Naresh+Kumar" class="inline-flex items-center gap-1 px-3 py-1 bg-purple-50 text-purple-800 border border-purple-100 rounded-lg hover:bg-purple-600 hover:text-white transition-colors">
+                                        👤 View Faculty Profile
                                     </a>
                                 </div>
                             </div>
@@ -480,7 +486,7 @@ export const admissionData = {
             { label: "Beneficiaries", value: "400+" }
         ],
         bulletPoints: [
-            { label: "Convener: Dr. Puneet Azad", detail: "Dr. Puneet Azad (Dean Academics & Associate Professor, ECE) heads the MSIT Scholarship & Financial Aid Committee." },
+            { label: "Convener: Prof. (Dr.) Puneet Azad", detail: "Prof. (Dr.) Puneet Azad (Professor, ECE & Dean Academics) heads the MSIT Scholarship & Financial Aid Committee." },
             { label: "Merit Scholarships & MCM", detail: "Delhi State Government MCM Linked Financial Assistance Scheme." },
             { label: "EWS Financial Aid & DSW", detail: "GGSIPU Economically Weaker Section Financial Assistance Scheme." },
             { label: "AICTE Pragati & Saksham", detail: "AICTE National Portal Scholarships for Girls and Specially-Abled Students." }
@@ -559,20 +565,61 @@ export const admissionData = {
                 </div>
 
                 <!-- NIRF RANKING CARD -->
-                <div class="p-6 md:p-8 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs">
-                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-650"></span>
-                        NIRF Ranking Status
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="p-6 md:p-8 rounded-3xl border border-slate-200/80 bg-linear-to-br from-indigo-50/30 via-white to-white shadow-xs space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-indigo-650"></span>
+                            <h3 class="text-lg font-bold text-slate-900">National Institutional Ranking Framework (NIRF)</h3>
+                        </div>
+                        <span class="inline-flex items-center px-3 py-1 bg-indigo-100 text-indigo-900 text-xs font-bold rounded-full border border-indigo-200">
+                            NIRF 2024 & NIRF 2023 (Govt. of India)
+                        </span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
                         <div class="space-y-1">
-                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Engineering Category Rank Band</span>
-                            <p class="text-slate-800 font-extrabold text-base">Rank Band 201–300 (Official NIRF Filing)</p>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Evaluation Year & Body</span>
+                            <p class="text-slate-900 font-extrabold text-base">NIRF 2024</p>
+                            <p class="text-xs text-slate-500 font-medium">Ministry of Education (MoE), Govt. of India</p>
                         </div>
                         <div class="space-y-1">
-                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Classification Detail</span>
-                            <p class="text-slate-500 font-light leading-relaxed">MSIT Janakpuri participates strictly under the NIRF Engineering category. Commercial rankings stating Rank Band 101–150 or 151–200 misclassify engineering statistics with our non-engineering sister institution, Maharaja Surajmal Institute (MSI).</p>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Engineering Category Band</span>
+                            <p class="text-indigo-700 font-black text-base">Rank Band 201–300</p>
+                            <p class="text-xs text-slate-500 font-medium">Verified under Engineering Discipline</p>
                         </div>
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">NIRF Institutional ID</span>
+                            <p class="text-slate-800 font-mono font-bold text-sm">IR-E-C-32863</p>
+                            <p class="text-xs text-slate-500 font-medium">MSIT C-4 Janakpuri, New Delhi</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200/80 space-y-2">
+                        <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">Official Verification & Classification:</span>
+                        <p class="text-xs text-slate-600 font-light leading-relaxed">
+                            MSIT participates strictly under the NIRF Engineering category with institutional code IR-E-C-32863. Commercial listing portals claiming Rank Band 101–150 or 151–200 conflate engineering data with our non-engineering sister institution, Maharaja Surajmal Institute (MSI). All official NIRF scores and parameter metrics can be verified directly on the Ministry of Education's official portal.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <a 
+                            href="https://www.nirfindia.org/Rankings/2024/EngineeringRanking.html" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-650 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-xs transition-all"
+                        >
+                            <span>Official NIRF India 2024 Portal Proof</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                        <a 
+                            href="https://www.msit.in/media/uploads/2024/02/15/nirf_data_2024.pdf" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-xl border border-slate-300 shadow-xs transition-all"
+                        >
+                            <span>MSIT NIRF Data Filing (PDF)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </a>
                     </div>
                 </div>
 

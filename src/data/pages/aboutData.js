@@ -984,7 +984,7 @@ export const aboutData = {
             { 
                 label: "Educational Trust", 
                 detail: "Founded in 1972, Surajmal Memorial Education Society (SMES) is a premier non-profit educational body dedicated to rural and urban youth empowerment through excellence in engineering and management education.",
-                url: "/smes"
+                url: "https://surajmalmemorialeducationsociety.org/"
             },
             { 
                 label: "Philanthropic Initiatives", 

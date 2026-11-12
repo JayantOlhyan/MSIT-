@@ -137,6 +137,49 @@ const DynamicPage = () => {
     }
 
     // Dedicated Redesigned View for the Student Societies Hub Directory (/society)
+    useEffect(() => {
+        if (slug === 'smes') {
+            window.location.replace('https://surajmalmemorialeducationsociety.org/');
+        }
+    }, [slug]);
+
+    if (slug === 'smes') {
+        return (
+            <main className="min-h-screen bg-slate-50 flex items-center justify-center p-6 text-center">
+                <SEO 
+                    title="Surajmal Memorial Education Society" 
+                    description="Redirecting to the official Surajmal Memorial Education Society (SMES) website." 
+                    canonicalPath="/smes" 
+                />
+                <div className="max-w-md w-full bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6 animate-fade-in">
+                    <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto">
+                        <ExternalLink className="w-8 h-8" />
+                    </div>
+                    <div className="space-y-2">
+                        <h2 className="text-2xl font-bold text-slate-900">Surajmal Memorial Education Society</h2>
+                        <p className="text-slate-600 text-sm leading-relaxed">
+                            Redirecting you to the official SMES society portal (<code className="text-blue-600 font-mono text-xs">surajmalmemorialeducationsociety.org</code>)...
+                        </p>
+                    </div>
+                    <div className="pt-2">
+                        <a
+                            href="https://surajmalmemorialeducationsociety.org/"
+                            className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg text-sm"
+                        >
+                            <span>Open SMES Portal Now</span>
+                            <ArrowUpRight className="w-4 h-4" />
+                        </a>
+                    </div>
+                    <div>
+                        <Link to="/" className="text-xs text-slate-500 hover:text-slate-700 font-semibold underline">
+                            &larr; Return to MSIT Homepage
+                        </Link>
+                    </div>
+                </div>
+            </main>
+        );
+    }
+
     if (slug === 'society') {
         return (
             <main className="min-h-screen bg-slate-50 transition-colors duration-300">

@@ -27,7 +27,7 @@ const Sitemap = () => {
             title: "Academics & Research",
             icon: <BookOpen className="w-5 h-5 text-indigo-650" />,
             links: [
-                { label: "Computer Science (CSE)", path: "/cse" },
+                { label: "Computer Science & Engineering (CSE)", path: "/cse" },
                 { label: "Information Technology (IT)", path: "/it" },
                 { label: "Electronics & Comm. (ECE)", path: "/ece" },
                 { label: "Electrical Engineering (EEE)", path: "/eee" },

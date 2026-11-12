@@ -820,7 +820,7 @@ export const itMous = [
         partner: 'AI-SHALA Pvt. Ltd.',
         mouDate: '2025-11-10',
         expiryDate: '2027-11-10',
-        beneficiaries: 7,
+        beneficiaries: '7 Faculty & Scholars (Advanced AI/ML Training)',
         status: 'Active',
         domain: 'Artificial Intelligence & Machine Learning Training'
     },
@@ -829,8 +829,8 @@ export const itMous = [
         partner: 'Internshala Pvt. Ltd.',
         mouDate: '2023-11-23',
         expiryDate: '2024-11-23',
-        beneficiaries: 55,
-        status: 'Pending Renewal',
+        beneficiaries: '55 B.Tech Students / Year (Internship Placements)',
+        status: 'In Process',
         domain: 'Student Internship Placement Support'
     },
     {
@@ -838,7 +838,7 @@ export const itMous = [
         partner: 'The IoT Academy',
         mouDate: '2023-12-20',
         expiryDate: 'Perpetual',
-        beneficiaries: 127,
+        beneficiaries: '127 Students (IoT & Embedded Systems Workshops)',
         status: 'Active',
         domain: 'Internet of Things & Embedded Systems'
     },
@@ -847,7 +847,7 @@ export const itMous = [
         partner: 'Brain Mentors Pvt. Ltd.',
         mouDate: '2024-02-27',
         expiryDate: '2026-02-27',
-        beneficiaries: 17,
+        beneficiaries: '17 Final-Year Students (Full-Stack Live Projects)',
         status: 'Active',
         domain: 'Full Stack Development & Data Structures'
     },
@@ -856,7 +856,7 @@ export const itMous = [
         partner: 'PanTech e-learning',
         mouDate: '2024-01-06',
         expiryDate: '2026-01-06',
-        beneficiaries: 34,
+        beneficiaries: '34 Students (Virtual Skill Tracks & Certifications)',
         status: 'Active',
         domain: 'E-Learning & Virtual Skill Development'
     },
@@ -865,8 +865,8 @@ export const itMous = [
         partner: 'ONGC Ltd. (Lab Setup)',
         mouDate: '2024-03-22',
         expiryDate: '2025-06-22',
-        beneficiaries: 'Department-wide',
-        status: 'Pending Renewal',
+        beneficiaries: 'Institute-wide (All Engineering Depts & Research)',
+        status: 'In Process',
         domain: 'State-of-the-Art Research Infrastructure Setup'
     },
     {
@@ -874,7 +874,7 @@ export const itMous = [
         partner: 'Airports Authority of India (AAI)',
         mouDate: '2024-05-04',
         expiryDate: '2029-05-04',
-        beneficiaries: 20,
+        beneficiaries: '20 Scholars (Aviation IT & Radar System Tech)',
         status: 'Active',
         domain: 'Aviation IT Infrastructure & Industrial Exposure'
     },
@@ -883,7 +883,7 @@ export const itMous = [
         partner: 'DUCAT, India, UP',
         mouDate: '2024-12-26',
         expiryDate: 'Perpetual',
-        beneficiaries: 123,
+        beneficiaries: '123 Students (Enterprise Software Bootcamps)',
         status: 'Active',
         domain: 'Industrial Software Skill Enhancement'
     },
@@ -892,7 +892,7 @@ export const itMous = [
         partner: 'NIELIT (National Inst. of Electronics & IT)',
         mouDate: '2024-12-05',
         expiryDate: '2027-12-05',
-        beneficiaries: 27,
+        beneficiaries: '27 Students & Faculty (Govt. Computing Certifications)',
         status: 'Active',
         domain: 'Government IT Certification & Advanced Computing'
     },
@@ -901,7 +901,7 @@ export const itMous = [
         partner: 'JKSD Infotech Pvt. Ltd.',
         mouDate: '2024-08-21',
         expiryDate: 'Perpetual',
-        beneficiaries: 148,
+        beneficiaries: '148 Students (QA/Testing & Consultancy Projects)',
         status: 'Active',
         domain: 'Software Testing & IT Consultancy Projects'
     }

@@ -320,7 +320,7 @@ const newsDb = {
             { name: "Updated B.Tech Scheme & Syllabus Framework.pdf", size: "3.2 MB", url: "/syllabus" }
         ],
         links: [
-            { name: "Department of Computer Science (CSE)", url: "/cse" },
+            { name: "Department of Computer Science & Engineering (CSE)", url: "/cse" },
             { name: "Department of Information Technology (IT)", url: "/it" },
             { name: "Syllabus Index", url: "/syllabus" }
         ]

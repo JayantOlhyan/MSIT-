@@ -106,7 +106,7 @@ const Header = () => {
             { name: "Governing Body", url: "/govern" },
             { name: "From The Desk", url: "/fromdesk" },
             { name: "Campus & Facilities", url: "/facilities" },
-            { name: "Surajmal Memorial Education Society", url: "/smes" }
+            { name: "Surajmal Memorial Education Society", url: "https://surajmalmemorialeducationsociety.org/", external: true }
         ],
         admission: [
             { name: "Info Brochure", url: "/brochure" },
@@ -119,7 +119,7 @@ const Header = () => {
                 name: "B.Tech Programmes", 
                 url: "#",
                 subItems: [
-                    { name: "Computer Science (CSE)", url: "/cse" },
+                    { name: "Computer Science & Engineering (CSE)", url: "/cse" },
                     { name: "Information Technology (IT)", url: "/it" },
                     { name: "Electronics & Comm. (ECE)", url: "/ece" },
                     { name: "Electrical Engineering (EEE)", url: "/eee" }
