@@ -285,7 +285,7 @@ const NotFound = () => {
                 newLogs.push(
                     { type: 'success', text: 'Available B.Tech branches:' },
                     { type: 'success', text: '  • Computer Science & Engineering (CSE)' },
-                    { type: 'success', text: '  • Information Technology (IT)' },
+                    { type: 'success', text: '  • Information Technology Engineering (IT)' },
                     { type: 'success', text: '  • Electronics & Communication Engineering (ECE)' },
                     { type: 'success', text: '  • Electrical & Electronics Engineering (EEE)' }
                 );

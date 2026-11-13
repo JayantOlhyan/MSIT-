@@ -293,7 +293,7 @@ export const qaData = [
     },
     {
         q: "What are the B.Tech programs offered?",
-        a: "MSIT offers B.Tech in Computer Science & Engineering (CSE), Information Technology (IT), Electronics & Communication (ECE), and Electrical & Electronics (EEE).",
+        a: "MSIT offers B.Tech in Computer Science & Engineering (CSE), Information Technology Engineering (IT), Electronics & Communication Engineering (ECE), and Electrical & Electronics Engineering (EEE).",
         keywords: "courses, branches, majors, btech, stream, degree, cse, it, ece, eee, admissions"
     },
     {

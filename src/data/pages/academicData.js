@@ -129,7 +129,7 @@ export const academicData = {
         ]
     },
     "it": {
-        title: "Information Technology (IT)",
+        title: "Information Technology Engineering (IT)",
         subtitle: "Information Technology is the most prominent and rapidly developing field in today's world, engineering the digital backbone of tomorrow.",
         seo_description: "Discover the Information Technology (IT) department at Maharaja Surajmal Institute of Technology. Learn about our focus on cloud computing, IoT R&D, and data analytics.",
         category: "Academics",
@@ -272,7 +272,7 @@ export const academicData = {
         ]
     },
     "ece": {
-        title: "Electronics & Communication (ECE)",
+        title: "Electronics & Communication Engineering (ECE)",
         subtitle: "The Department of Electronics & Communication Engineering has a fine blend of experienced as well as young and dynamic personalities as faculty, involved in providing quality education.",
         seo_description: "Join the B.Tech ECE program at Maharaja Surajmal Institute of Technology. Explore our advanced labs for VLSI design, IoT, and satellite communication systems.",
         category: "Academics",

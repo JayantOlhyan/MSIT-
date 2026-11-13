@@ -28,8 +28,8 @@ const Sitemap = () => {
             icon: <BookOpen className="w-5 h-5 text-indigo-650" />,
             links: [
                 { label: "Computer Science & Engineering (CSE)", path: "/cse" },
-                { label: "Information Technology (IT)", path: "/it" },
-                { label: "Electronics & Comm. (ECE)", path: "/ece" },
+                { label: "Information Technology Engineering (IT)", path: "/it" },
+                { label: "Electronics & Communication Engineering (ECE)", path: "/ece" },
                 { label: "Electrical & Electronics Engineering (EEE)", path: "/eee" },
                 { label: "Applied Sciences (1st Year)", path: "/applied-sciences" },
                 { label: "Academic Calendar", path: "/academic-calendar" },

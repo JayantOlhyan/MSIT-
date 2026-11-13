@@ -120,8 +120,8 @@ const Header = () => {
                 url: "#",
                 subItems: [
                     { name: "Computer Science & Engineering (CSE)", url: "/cse" },
-                    { name: "Information Technology (IT)", url: "/it" },
-                    { name: "Electronics & Comm. (ECE)", url: "/ece" },
+                    { name: "Information Technology Engineering (IT)", url: "/it" },
+                    { name: "Electronics & Communication Engineering (ECE)", url: "/ece" },
                     { name: "Electrical & Electronics Engineering (EEE)", url: "/eee" }
                 ]
             },
