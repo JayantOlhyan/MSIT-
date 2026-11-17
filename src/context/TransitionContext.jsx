@@ -19,6 +19,10 @@ export const TransitionProvider = ({ children }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const isMobileViewport = () =>
+        typeof window !== 'undefined' &&
+        window.matchMedia('(max-width: 767px), (max-aspect-ratio: 3/4)').matches;
+
     // Curtain & Loader state
     const curtainRef = useRef(null);
     const isTransitioningRef = useRef(false);
@@ -33,6 +37,8 @@ export const TransitionProvider = ({ children }) => {
 
     // 1. Manual / Cold Suspense Fallback Loader
     const showLoader = useCallback((customMessage = 'Loading Experience...') => {
+        if (isMobileViewport()) return;
+
         // If the curtain transition is currently running, it already covers the screen
         if (isTransitioningRef.current) return;
 
@@ -81,6 +87,14 @@ export const TransitionProvider = ({ children }) => {
     // 2. Smooth Intercepted Route Transitions (The Awwwards Shutter Wipe)
     const transitionTo = useCallback((toPath) => {
         if (isTransitioningRef.current) return;
+
+        if (isMobileViewport()) {
+            navigate(toPath);
+            if (!toPath.includes('#')) {
+                window.scrollTo(0, 0);
+            }
+            return;
+        }
 
         // If the full startup opening animation is running on homepage, navigate directly
         if (typeof window !== 'undefined') {
@@ -207,7 +221,7 @@ export const TransitionProvider = ({ children }) => {
     // Smooth entrance on back/forward browser button navigation
     useEffect(() => {
         // If navigation happened via browser back/forward buttons (not intercepted)
-        if (!isTransitioningRef.current) {
+        if (!isTransitioningRef.current && !isMobileViewport()) {
             gsap.fromTo('#main-content',
                 { opacity: 0.88, y: 10 },
                 { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out', clearProps: 'all' }
