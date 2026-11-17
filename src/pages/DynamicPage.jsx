@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, LayoutDashboard, X, Mail, Linkedin, Globe, Phone, FileText, Star, ChevronDown, ExternalLink } from 'lucide-react';
 import { pagesData } from '../data/pagesData';
@@ -51,6 +51,36 @@ const DynamicPage = () => {
         return items;
     }, [processedContent, isDeptPage]);
     const [activeTocId, setActiveTocId] = useState(null);
+
+    // Sidebar scrolls with the page. A short sidebar stays pinned under the header; a tall one keeps moving
+    // until its last card is in view, then stays there, so the right column never sits empty.
+    const sidebarRef = useRef(null);
+    const [sidebarTop, setSidebarTop] = useState(160);
+    useEffect(() => {
+        const el = sidebarRef.current;
+        if (!el) return;
+        let frame = 0;
+        // Pin just below the fixed header, whose height changes as it collapses on scroll.
+        const update = () => {
+            frame = 0;
+            const header = document.querySelector('header');
+            const headerBottom = header ? Math.max(0, header.getBoundingClientRect().bottom) : 128;
+            const pinned = Math.round(headerBottom + 16);
+            setSidebarTop(Math.min(pinned, window.innerHeight - el.offsetHeight - 24));
+        };
+        const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+        update();
+        const ro = new ResizeObserver(schedule);
+        ro.observe(el);
+        window.addEventListener('resize', schedule);
+        window.addEventListener('scroll', schedule, { passive: true });
+        return () => {
+            ro.disconnect();
+            window.removeEventListener('resize', schedule);
+            window.removeEventListener('scroll', schedule);
+            if (frame) cancelAnimationFrame(frame);
+        };
+    }, [slug]);
 
     // Highlight the section being read: the last heading that has scrolled up past the fixed header.
     useEffect(() => {
@@ -336,6 +366,25 @@ const DynamicPage = () => {
                         {/* Main Typography Area */}
                         {/* On phones the content comes first, except on the fee page (see sidebarFirstOnMobile). */}
                         <div className={`w-full ${fullWidth ? '' : 'lg:w-2/3'} ${sidebarFirstOnMobile ? 'order-2' : 'order-1'} lg:order-1`}>
+                            {/* Phones and tablets: the sidebar's key figures as a small strip at the top, not big cards at the bottom. */}
+                            {!isDepartment && !fullWidth && pageData.stats && pageData.stats.length > 0 && (
+                                <div className="lg:hidden grid grid-cols-2 gap-2 mb-6">
+                                    {pageData.stats.map((stat, i) => {
+                                        const target = stat.link || stat.url;
+                                        const body = (
+                                            <>
+                                                <span className="block text-base font-bold text-title tabular-nums leading-tight">{stat.value}</span>
+                                                <span className="block mt-0.5 text-[10px] font-bold uppercase tracking-wider text-muted leading-snug">{stat.label}</span>
+                                            </>
+                                        );
+                                        const box = 'block px-3 py-2.5 rounded-xl bg-surface ring-1 ring-slate-200/80';
+                                        if (!target) return <div key={i} className={box}>{body}</div>;
+                                        return target.startsWith('http')
+                                            ? <a key={i} href={target} target="_blank" rel="noopener noreferrer" className={`${box} no-underline`}>{body}</a>
+                                            : <Link key={i} to={target} className={`${box} no-underline`}>{body}</Link>;
+                                    })}
+                                </div>
+                            )}
                             {isDepartment ? (
                                 <div>
                                     <div 
@@ -361,11 +410,11 @@ const DynamicPage = () => {
 
                         {/* Interactive Sidebar */}
                         <div className={`${fullWidth ? 'hidden' : 'w-full lg:w-1/3'} ${sidebarFirstOnMobile ? 'order-1' : 'order-2'} lg:order-2`}>
-                            <div className="sticky top-32 space-y-6 lg:max-h-[calc(100vh-9rem)] lg:overflow-y-auto scrollbar-hide">
+                            <div ref={sidebarRef} className="lg:sticky space-y-6" style={{ top: sidebarTop }}>
 
                                 {/* Stats Cards */}
                                 {!isDepartment && pageData.stats && pageData.stats.length > 0 && (
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="hidden lg:grid grid-cols-2 gap-4">
                                         {pageData.stats.map((stat, i) => {
                                             const hasLink = Boolean(stat.link || stat.url);
                                             const targetUrl = stat.link || stat.url;

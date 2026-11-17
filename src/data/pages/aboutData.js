@@ -7,66 +7,21 @@ export const aboutData = {
         heroImage: "/photos/01_campus-exterior/founder-bust-maharaja-surajmal-01.jpg",
         heroImageAlt: "Maharaja Surajmal memorial bronze bust at MSIT campus, New Delhi",
         content: `
-            <div class="space-y-8">
-                <!-- VISION CARD -->
-                <div class="relative overflow-hidden p-8 md:p-10 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs hover:shadow-md transition-all group">
-                    <div class="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl group-hover:bg-amber-500/10 transition-colors"></div>
-                    <div class="flex flex-col md:flex-row md:items-start gap-6">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-100/60">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="9" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.242 7.758a1 1 0 010 1.414l-5.657 5.657a1 1 0 01-1.414 0l-1.414-1.414a1 1 0 010-1.414l5.657-5.657a1 1 0 011.414 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2M12 20v2M2 12h2M20 12h2" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xs font-black uppercase tracking-widest text-amber-700 mb-3 mt-0">Vision</h3>
-                            <p class="text-base font-light leading-relaxed text-slate-700">
-                                To become one of the most admired centers of academic excellence in the field of Engineering & Technology for all-round professional development of students to enable them to meet the growing technological needs of the country.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="space-y-4 sm:space-y-6">
+                <section class="not-prose rounded-2xl sm:rounded-3xl bg-surface ring-1 ring-slate-200/80 p-5 sm:p-10">
+                    <h3 class="font-[Libre_Baskerville,serif] text-base sm:text-xl font-bold text-primary m-0 mb-2 sm:mb-4">Vision</h3>
+                    <p class="font-[Libre_Baskerville,serif] text-base sm:text-[1.375rem] leading-relaxed sm:leading-[1.6] text-slate-900 m-0">To become one of the most admired centers of academic excellence in the field of Engineering &amp; Technology for all-round professional development of students to enable them to meet the growing technological needs of the country.</p>
+                </section>
 
-                <!-- MISSION CARD -->
-                <div class="relative overflow-hidden p-8 md:p-10 rounded-3xl border border-slate-200/60 bg-linear-to-br from-slate-50/50 via-white to-white shadow-xs hover:shadow-md transition-all group">
-                    <div class="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-colors"></div>
-                    <div class="flex flex-col md:flex-row md:items-start gap-6">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100/60">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xs font-black uppercase tracking-widest text-blue-700 mb-3 mt-0">Mission</h3>
-                            <p class="text-base font-light leading-relaxed text-slate-700">
-                                Developing new paradigm in imparting education in the fields of Engineering and Technology and to imbibe national values leading to student's empowerment, with a view to prepare them to meet the national and global challenges.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <section class="not-prose rounded-2xl sm:rounded-3xl bg-surface ring-1 ring-slate-200/80 p-5 sm:p-10">
+                    <h3 class="font-[Libre_Baskerville,serif] text-base sm:text-xl font-bold text-primary m-0 mb-2 sm:mb-4">Mission</h3>
+                    <p class="font-[Libre_Baskerville,serif] text-base sm:text-[1.375rem] leading-relaxed sm:leading-[1.6] text-slate-900 m-0">Developing new paradigm in imparting education in the fields of Engineering and Technology and to imbibe national values leading to student's empowerment, with a view to prepare them to meet the national and global challenges.</p>
+                </section>
             </div>
         `,
         stats: [
             { label: "Global Alumni", value: "15,000+", link: "/alumni-network", desc: "Connect with 15k+ alumni across global tech leaders" },
             { label: "Research Centers", value: "4", link: "/facilities?tab=labs#research-centers", desc: "Explore AI, IoT, VLSI & Robotics Centers of Excellence" }
-        ],
-        bulletPoints: [
-            { 
-                label: "Technical Excellence", 
-                detail: "Fostering state-of-the-art engineering pedagogy with NBA-accredited curricula, high-performance computing clusters, advanced IoT and VLSI design laboratories, rigorous industry projects, and consistently winning national hackathons.",
-                url: "/academics"
-            },
-            { 
-                label: "National & Global Readiness", 
-                detail: "Empowering students with industry-leading placement offers at premier product MNCs (Google, Microsoft, Amazon, Adobe) and admissions into elite global universities with high GATE, GRE, and CAT percentiles.",
-                url: "/placements"
-            },
-            { 
-                label: "Values-Driven Education", 
-                detail: "Upholding the timeless humanitarian ideals of Maharaja Surajmal — instilling self-discipline, selfless social service, environmental consciousness, ethical professionalism, and rural youth empowerment.",
-                url: "/history"
-            }
         ]
     },
     "history": {
@@ -140,95 +95,111 @@ export const aboutData = {
         heroImage: "/campus/main-academic-building.webp",
         heroImageAlt: "Maharaja Surajmal Institute of Technology campus overview, New Delhi",
         content: `
-            <div class="space-y-12">
-                <section>
-                    <p class="text-xl leading-relaxed text-slate-700 mb-8">
+            <div class="space-y-10 sm:space-y-14">
+                <section class="not-prose">
+                    <p class="font-[Libre_Baskerville,serif] text-lg sm:text-[1.6rem] leading-relaxed sm:leading-[1.5] text-slate-900 m-0">
                         Maharaja Surajmal Institute of Technology (MSIT) is an institution that stands for excellence, innovation, and integrity. Since its inception in 2001, MSIT has been dedicated to providing high-quality technical education and fostering an environment where students can realize their full potential.
                     </p>
-                    <p class="text-lg text-slate-600 font-light leading-relaxed">
-                        The institute has over a short span of time acquired and developed impressive infrastructure, expertise and resources for imparting high-quality engineering education. Operating from a spacious seven-storeyed building with a built-up area of 17,837 sq.m, MSIT provides a serene and intellectually stimulating environment.
-                    </p>
+                    <div class="mt-6 sm:mt-10 pt-5 sm:pt-8 border-t border-slate-200 grid sm:grid-cols-[minmax(0,1fr)_11rem] gap-5 sm:gap-10">
+                        <p class="text-sm sm:text-base text-slate-700 leading-relaxed m-0">
+                            The institute has over a short span of time acquired and developed impressive infrastructure, expertise and resources for imparting high-quality engineering education. Operating from a spacious seven-storeyed building with a built-up area of 17,837 sq.m, MSIT provides a serene and intellectually stimulating environment.
+                        </p>
+                        <dl class="m-0 grid grid-cols-3 sm:grid-cols-1 gap-3 sm:gap-5">
+                            <div class="min-w-0">
+                                <dt class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500">Established</dt>
+                                <dd class="m-0 mt-0.5 font-[Libre_Baskerville,serif] text-base sm:text-lg font-bold text-primary leading-tight">2001</dd>
+                            </div>
+                            <div class="min-w-0">
+                                <dt class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500">Campus</dt>
+                                <dd class="m-0 mt-0.5 font-[Libre_Baskerville,serif] text-base sm:text-lg font-bold text-primary leading-tight">Seven storeys</dd>
+                            </div>
+                            <div class="min-w-0">
+                                <dt class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500">Affiliated to</dt>
+                                <dd class="m-0 mt-0.5 font-[Libre_Baskerville,serif] text-base sm:text-lg font-bold text-primary leading-tight">GGSIPU</dd>
+                            </div>
+                        </dl>
+                    </div>
                 </section>
 
-                <section class="border-t border-slate-100 pt-10">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center sm:text-left">Accreditations & Affiliations</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <section class="border-t border-slate-100 pt-10 max-sm:pt-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center sm:text-left max-sm:text-xl max-sm:mb-4">Accreditations & Affiliations</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-sm:grid-cols-2 max-sm:gap-3">
                         
-                        <a href="https://msit.in/media/uploads/2026/04/07/aicte-eoa-merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-orange-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
-                            <img src="/aicte-logo.png" alt="AICTE Approved Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
-                            <h4 class="font-bold text-slate-900 mb-1">Approved by AICTE</h4>
-                            <p class="text-xs font-black uppercase tracking-widest text-orange-700 mb-2">Extension of Approval (2026)</p>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Official Extension of Approval for Maharaja Surajmal Institute of Technology.</p>
-                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View EOA Proof &rarr;</span>
+                        <a href="https://msit.in/media/uploads/2026/04/07/aicte-eoa-merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 max-sm:p-3 bg-slate-50/50 rounded-3xl max-sm:rounded-2xl border border-slate-100 hover:border-orange-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/aicte-logo.png" alt="AICTE Approved Badge" class="h-24 w-24 object-contain mb-4 max-sm:h-14 max-sm:w-14 max-sm:my-1 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1 max-sm:text-sm max-sm:leading-snug">Approved by AICTE</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-orange-700 mb-2 max-sm:text-[9px] max-sm:tracking-wider max-sm:mb-0 max-sm:leading-snug">Extension of Approval (2026)</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2 max-sm:hidden">Official Extension of Approval for Maharaja Surajmal Institute of Technology.</p>
+                            <span class="mt-auto pt-4 max-sm:pt-2 text-xs max-sm:text-[11px] font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View EOA Proof &rarr;</span>
                         </a>
 
-                        <a href="https://msit.in/media/uploads/2025/09/09/merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
-                            <img src="/ggsipu-logo.png" alt="GGSIPU Affiliation Seal" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
-                            <h4 class="font-bold text-slate-900 mb-1">GGSIPU Affiliated</h4>
-                            <p class="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">Primary Affiliating University</p>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Official affiliation letters and consolidated archives from GGSIPU.</p>
-                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View Affiliation Proof &rarr;</span>
+                        <a href="https://msit.in/media/uploads/2025/09/09/merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 max-sm:p-3 bg-slate-50/50 rounded-3xl max-sm:rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/ggsipu-logo.png" alt="GGSIPU Affiliation Seal" class="h-24 w-24 object-contain mb-4 max-sm:h-14 max-sm:w-14 max-sm:my-1 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1 max-sm:text-sm max-sm:leading-snug">GGSIPU Affiliated</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-blue-700 mb-2 max-sm:text-[9px] max-sm:tracking-wider max-sm:mb-0 max-sm:leading-snug">Primary Affiliating University</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2 max-sm:hidden">Official affiliation letters and consolidated archives from GGSIPU.</p>
+                            <span class="mt-auto pt-4 max-sm:pt-2 text-xs max-sm:text-[11px] font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View Affiliation Proof &rarr;</span>
                         </a>
 
-                        <a href="https://msit.in/media/2022/12/23/naac.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-emerald-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
-                            <img src="/naac-logo.png" alt="NAAC Accredited Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
-                            <h4 class="font-bold text-slate-900 mb-1">NAAC Accredited</h4>
-                            <p class="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2">'A' Grade Status</p>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Accredited by the National Assessment and Accreditation Council.</p>
-                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View NAAC Proof &rarr;</span>
+                        <a href="https://msit.in/media/2022/12/23/naac.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 max-sm:p-3 bg-slate-50/50 rounded-3xl max-sm:rounded-2xl border border-slate-100 hover:border-emerald-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/naac-logo.png" alt="NAAC Accredited Badge" class="h-24 w-24 object-contain mb-4 max-sm:h-14 max-sm:w-14 max-sm:my-1 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1 max-sm:text-sm max-sm:leading-snug">NAAC Accredited</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-emerald-700 mb-2 max-sm:text-[9px] max-sm:tracking-wider max-sm:mb-0 max-sm:leading-snug">'A' Grade Status</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2 max-sm:hidden">Accredited by the National Assessment and Accreditation Council.</p>
+                            <span class="mt-auto pt-4 max-sm:pt-2 text-xs max-sm:text-[11px] font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View NAAC Proof &rarr;</span>
                         </a>
 
-                        <a href="https://msit.in/media/uploads/2025/08/27/nba_2023_all_depts_merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
-                            <img src="/nba-logo.png" alt="NBA Accredited Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
-                            <h4 class="font-bold text-slate-900 mb-1">NBA Accredited</h4>
-                            <p class="text-xs font-black uppercase tracking-widest text-blue-700 mb-2">CSE, IT, ECE, EEE</p>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Specifically accredited B.Tech engineering departments.</p>
-                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View NBA Proof &rarr;</span>
+                        <a href="https://msit.in/media/uploads/2025/08/27/nba_2023_all_depts_merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 max-sm:p-3 bg-slate-50/50 rounded-3xl max-sm:rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/nba-logo.png" alt="NBA Accredited Badge" class="h-24 w-24 object-contain mb-4 max-sm:h-14 max-sm:w-14 max-sm:my-1 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1 max-sm:text-sm max-sm:leading-snug">NBA Accredited</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-blue-700 mb-2 max-sm:text-[9px] max-sm:tracking-wider max-sm:mb-0 max-sm:leading-snug">CSE, IT, ECE, EEE</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2 max-sm:hidden">Specifically accredited B.Tech engineering departments.</p>
+                            <span class="mt-auto pt-4 max-sm:pt-2 text-xs max-sm:text-[11px] font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View NBA Proof &rarr;</span>
                         </a>
 
-                        <a href="https://msit.in/media/2024/07/04/doc-20240704-wa0028.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
-                            <img src="/iso-logo.png" alt="ISO Certification Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
-                            <h4 class="font-bold text-slate-900 mb-1">ISO Certified</h4>
-                            <p class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">ISO 9001:2015</p>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Certified for international quality standards in higher education services.</p>
-                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View Certificate &rarr;</span>
+                        <a href="https://msit.in/media/2024/07/04/doc-20240704-wa0028.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 max-sm:p-3 bg-slate-50/50 rounded-3xl max-sm:rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/iso-logo.png" alt="ISO Certification Badge" class="h-24 w-24 object-contain mb-4 max-sm:h-14 max-sm:w-14 max-sm:my-1 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1 max-sm:text-sm max-sm:leading-snug">ISO Certified</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2 max-sm:text-[9px] max-sm:tracking-wider max-sm:mb-0 max-sm:leading-snug">ISO 9001:2015</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2 max-sm:hidden">Certified for international quality standards in higher education services.</p>
+                            <span class="mt-auto pt-4 max-sm:pt-2 text-xs max-sm:text-[11px] font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View Certificate &rarr;</span>
                         </a>
 
-                        <a href="https://msit.in/media/2024/09/25/aishe-2024-merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-slate-50/50 rounded-3xl border border-slate-100 hover:border-purple-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
-                            <img src="/aishe-logo.png" alt="AISHE Listed Badge" class="h-24 w-24 object-contain mb-4 group-hover:scale-105 transition-transform" />
-                            <h4 class="font-bold text-slate-900 mb-1">AISHE Listed</h4>
-                            <p class="text-xs font-black uppercase tracking-widest text-purple-700 mb-2">MHRD Registered</p>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-2">Listed under the All India Survey on Higher Education registry.</p>
-                            <span class="mt-auto pt-4 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View AISHE Proof &rarr;</span>
+                        <a href="https://msit.in/media/2024/09/25/aishe-2024-merged.pdf" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 max-sm:p-3 bg-slate-50/50 rounded-3xl max-sm:rounded-2xl border border-slate-100 hover:border-purple-200 hover:bg-white hover:shadow-card hover:scale-[1.02] transition-all group cursor-pointer text-center no-underline">
+                            <img src="/aishe-logo.png" alt="AISHE Listed Badge" class="h-24 w-24 object-contain mb-4 max-sm:h-14 max-sm:w-14 max-sm:my-1 group-hover:scale-105 transition-transform" />
+                            <h4 class="font-bold text-slate-900 mb-1 max-sm:text-sm max-sm:leading-snug">AISHE Listed</h4>
+                            <p class="text-xs font-black uppercase tracking-widest text-purple-700 mb-2 max-sm:text-[9px] max-sm:tracking-wider max-sm:mb-0 max-sm:leading-snug">MHRD Registered</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-2 max-sm:hidden">Listed under the All India Survey on Higher Education registry.</p>
+                            <span class="mt-auto pt-4 max-sm:pt-2 text-xs max-sm:text-[11px] font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">View AISHE Proof &rarr;</span>
                         </a>
 
                     </div>
                 </section>
 
                 <section>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Teaching Methodology</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                            <h4 class="font-bold text-slate-900 mb-3">Comprehensive Learning</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">Traditional classroom teaching is supplemented by regular tests, tutorials, group discussions, and industrial exposure by way of visits and summer training.</p>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-0 mb-4 sm:mb-6">Teaching Methodology</h3>
+                    <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+                        <div class="border-t border-slate-200 pt-4">
+                            <h4 class="text-base font-bold text-slate-900 mb-1.5">Comprehensive Learning</h4>
+                            <p class="text-sm text-slate-700 leading-relaxed">Traditional classroom teaching is supplemented by regular tests, tutorials, group discussions, and industrial exposure by way of visits and summer training.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                            <h4 class="font-bold text-slate-900 mb-3">Interactive Sessions</h4>
-                            <p class="text-sm text-slate-600 leading-relaxed">The atmosphere is synergetic with participative sessions, instilling a sense of team spirit, responsibility, and professional integrity.</p>
+                        <div class="border-t border-slate-200 pt-4">
+                            <h4 class="text-base font-bold text-slate-900 mb-1.5">Interactive Sessions</h4>
+                            <p class="text-sm text-slate-700 leading-relaxed">The atmosphere is synergetic with participative sessions, instilling a sense of team spirit, responsibility, and professional integrity.</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Infrastructure & Facilities</h3>
-                    <div class="space-y-4">
-                        <div class="p-6 bg-blue-50/50 rounded-2xl border border-blue-100">
-                            <h4 class="font-bold text-blue-900 mb-2">Computing Laboratories</h4>
-                            <p class="text-sm text-blue-800 leading-relaxed">Six modern air-conditioned labs covering Software Engg, AI & Robotics, DBMS, and more with industry-standard software.</p>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-0 mb-4 sm:mb-6">Infrastructure & Facilities</h3>
+                    <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+                        <div class="border-t border-slate-200 pt-4">
+                            <h4 class="text-base font-bold text-slate-900 mb-1.5">Computing Laboratories</h4>
+                            <p class="text-sm text-slate-700 leading-relaxed">Six modern air-conditioned labs covering Software Engg, AI & Robotics, DBMS, and more with industry-standard software.</p>
                         </div>
-                        <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
-                            <h4 class="font-bold text-purple-900 mb-2">Technical Hubs</h4>
-                            <p class="text-sm text-purple-800 leading-relaxed">Well-equipped labs for Applied Sciences, Electrical Engg, VLSI Design, and Satellite Communication.</p>
+                        <div class="border-t border-slate-200 pt-4">
+                            <h4 class="text-base font-bold text-slate-900 mb-1.5">Technical Hubs</h4>
+                            <p class="text-sm text-slate-700 leading-relaxed">Well-equipped labs for Applied Sciences, Electrical Engg, VLSI Design, and Satellite Communication.</p>
                         </div>
                     </div>
                 </section>
@@ -237,28 +208,6 @@ export const aboutData = {
         stats: [
             { label: "University Rank", value: "#1" },
             { label: "Built-up Area", value: "17,837 sqm" }
-        ],
-        bulletPoints: [
-            { 
-                label: "NBA Accredited", 
-                detail: "All four core undergraduate engineering branches (CSE, IT, ECE, EEE) are accredited by the National Board of Accreditation (NBA), verifying world-class outcome-based education and international standard pedagogy.",
-                url: "/mandatory-disclosures#nba-accreditation-status"
-            },
-            { 
-                label: "AICTE Approved", 
-                detail: "Officially approved by the All India Council for Technical Education (AICTE), Ministry of Education, Govt. of India, ensuring premier standards of technical infrastructure and faculty competence.",
-                url: "/mandatory-disclosures"
-            },
-            { 
-                label: "8-Acre Green Campus", 
-                detail: "A serene, eco-friendly 8-acre campus in Janakpuri, New Delhi featuring seven-storeyed modern academic complexes, extensive athletic stadium grounds, championship courts, and green lawns.",
-                url: "/facilities"
-            },
-            { 
-                label: "University Toppers", 
-                detail: "MSIT students consistently secure exemplary academic results under GGSIPU, earning University Gold Medals, academic merit honours, and elite product-company placements.",
-                url: "/placements"
-            }
         ]
     },
     "administration": {
@@ -766,9 +715,9 @@ export const aboutData = {
                 #tab-sec:checked ~ .tab-headers label[for="tab-sec"],
                 #tab-treas:checked ~ .tab-headers label[for="tab-treas"],
                 #tab-dir:checked ~ .tab-headers label[for="tab-dir"] {
-                    border-color: #1d4ed8;
-                    color: #1d4ed8;
-                    background-color: #eff6ff;
+                    border-color: #1e4a9b;
+                    color: #1e4a9b;
+                    background-color: rgba(30, 74, 155, 0.06);
                 }
 
                 @keyframes fadeIn {
@@ -785,25 +734,25 @@ export const aboutData = {
                 <input type="radio" name="desk-tabs" id="tab-dir" class="hidden" />
 
                 <!-- Tab Headers -->
-                <div class="tab-headers flex border-b border-slate-200 mb-10 overflow-x-auto gap-2 pb-px scrollbar-none">
-                    <label for="tab-pres" class="cursor-pointer px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
+                <div class="tab-headers grid grid-cols-4 sm:flex border-b border-slate-200 mb-6 sm:mb-10 gap-0 sm:gap-2 pb-px">
+                    <label for="tab-pres" class="cursor-pointer text-center px-1 sm:px-6 py-2.5 sm:py-3 font-semibold text-xs sm:text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
                         President
                     </label>
-                    <label for="tab-sec" class="cursor-pointer px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
+                    <label for="tab-sec" class="cursor-pointer text-center px-1 sm:px-6 py-2.5 sm:py-3 font-semibold text-xs sm:text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
                         Secretary
                     </label>
-                    <label for="tab-treas" class="cursor-pointer px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
+                    <label for="tab-treas" class="cursor-pointer text-center px-1 sm:px-6 py-2.5 sm:py-3 font-semibold text-xs sm:text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
                         Treasurer
                     </label>
-                    <label for="tab-dir" class="cursor-pointer px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
+                    <label for="tab-dir" class="cursor-pointer text-center px-1 sm:px-6 py-2.5 sm:py-3 font-semibold text-xs sm:text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition-all select-none rounded-t-xl hover:bg-slate-50">
                         Director
                     </label>
                 </div>
 
                 <!-- Tab Content: President -->
                 <div class="tab-content content-pres">
-                    <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
-                        <div class="flex-1 text-slate-700 leading-relaxed text-base space-y-4 font-light">
+                    <div class="flex flex-col-reverse md:flex-row gap-6 md:gap-10 items-start">
+                        <div class="flex-1 text-slate-700 leading-relaxed text-sm sm:text-base space-y-4">
                             <p>The foundation of socio-economic development of a country is the education of its youth in general and technical education in particular. Technical education is an instrument which uses the tools of science and makes the natural resources available for the people at large. Therefore the institutes which are providing technical education to the Indian youth are playing important role in the development of this country.</p>
                             <p>The history of development of technical education in India dates back to 1847 when the first engineering college, Thomson College of Engineering (which later became IIT Roorkee), was established by the British at Roorkee in Uttar Pradesh. The growth of technical institutes during British India was slow, but after independence socio-economic development became the priority program of our planners and leaders. Consequently, a large number of technical institutes have been started by the Central and State Govts including Indian Institutes of Technology, Indian Institutes of Information Technology and National Institutes of Technology. Besides this, a large number of Private Technical Institutes have been set up across the country.</p>
                             <p>Unfortunately, profit motives of a number of private operators have adversely affected the quality of technical education rendering large number of graduating students from such institutions unemployable. Ours is also a non-government institute established and run by Surajmal Memorial Education Society which aims to create centers of excellence to educate and produce technically competent graduates to meet emerging requirements of the dynamics of the development market, government or private. The strategy of the Society to achieve this goal is reflected in the following aspects of its work culture:</p>
@@ -822,18 +771,22 @@ export const aboutData = {
                                 <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
                             </div>
                         </div>
-                        <div class="w-full md:w-64 shrink-0 mx-auto md:mx-0">
-                            <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200/60 shadow-xs">
+                        <figure class="w-44 sm:w-56 md:w-64 shrink-0 mx-auto md:mx-0 m-0 md:sticky md:top-36 self-start">
+                            <div class="bg-slate-50 p-2.5 sm:p-3 rounded-3xl border border-slate-200/60 shadow-xs">
                                 <img src="/kaptan-singh.jpg" alt="Sh. Kaptan Singh, President SMES" class="w-full h-auto aspect-square object-cover rounded-2xl grayscale-30" />
                             </div>
-                        </div>
+                            <figcaption class="mt-3 text-center">
+                                <span class="block text-sm sm:text-base font-bold text-slate-900 leading-snug">Sh. Kaptan Singh</span>
+                                <span class="block mt-0.5 text-xs text-slate-600 leading-snug">President, Surajmal Memorial Education Society</span>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
 
                 <!-- Tab Content: Secretary -->
                 <div class="tab-content content-sec">
-                    <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
-                        <div class="flex-1 text-slate-700 leading-relaxed text-base space-y-4 font-light">
+                    <div class="flex flex-col-reverse md:flex-row gap-6 md:gap-10 items-start">
+                        <div class="flex-1 text-slate-700 leading-relaxed text-sm sm:text-base space-y-4">
                             <p>It makes me very happy to get in touch with you through the website.</p>
                             <p>In the times of arduous competition, we are moving forward with a vision of holistic development of our students as technical professionals who will not only contribute with their knowledge and skills to the field engineering but also add value to the social life at large with their educated and sensitive thoughts and action. We believe that proper education is related to the exposure to new techniques and methods and a conducive atmosphere, therefore we have made continuous effort towards upgrading our infrastructure and quality of education.</p>
                             <p>We are proud to have well equipped Labs and seminar halls, a rich library, well built hostels, a sizable auditorium, to cater to the various pedagogical and accommodative requirements of our students. Our keenness on multifarious development of our faculty and students can be seen in our extensive organization of various academic and technical programs for them. Every year a number of faculty development programs are organized across departments for the professional growth of our teaching community. Besides, many expert lectures by distinguished academicians from IIT Delhi and other reputed technical organizations, are routinely arranged. A fundamental requirement of any good institute is a well developed Information System to ensure monitoring and evaluation of key indicators, and to provide information critical to all concerned.</p>
@@ -844,18 +797,22 @@ export const aboutData = {
                                 <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
                             </div>
                         </div>
-                        <div class="w-full md:w-64 shrink-0 mx-auto md:mx-0">
-                            <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200/60 shadow-xs">
+                        <figure class="w-44 sm:w-56 md:w-64 shrink-0 mx-auto md:mx-0 m-0 md:sticky md:top-36 self-start">
+                            <div class="bg-slate-50 p-2.5 sm:p-3 rounded-3xl border border-slate-200/60 shadow-xs">
                                 <img src="/ajit-singh.png" alt="Sh. Ajit Singh, Secretary SMES" class="w-full h-auto aspect-square object-cover rounded-2xl grayscale-30" />
                             </div>
-                        </div>
+                            <figcaption class="mt-3 text-center">
+                                <span class="block text-sm sm:text-base font-bold text-slate-900 leading-snug">Sh. Ajit Singh Chaudhary</span>
+                                <span class="block mt-0.5 text-xs text-slate-600 leading-snug">Secretary, Surajmal Memorial Education Society</span>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
 
                 <!-- Tab Content: Treasurer -->
                 <div class="tab-content content-treas">
-                    <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
-                        <div class="flex-1 text-slate-700 leading-relaxed text-base space-y-4 font-light">
+                    <div class="flex flex-col-reverse md:flex-row gap-6 md:gap-10 items-start">
+                        <div class="flex-1 text-slate-700 leading-relaxed text-sm sm:text-base space-y-4">
                             <p>The new website is only a feather in the cap of the robust technical and communicative infrastructure of Maharaja Surajmal Institute of Technology. This website will serve as a strong medium to show case our attributes and achievements by virtue of which we enjoy a great reputation amongst the leading colleges and institutes affiliated to Guru Gobind Singh Indraprastha University.</p>
                             <p>Maharaja Surajmal Institute of Technology has acquired and earned a coveted name and fame over a period of time and has become one of the most admired and preferred centre of academic excellence in the field of engineering and technology for all round integrated professional growth to match and meet the technological needs of the country. We aim to provide our students a composite and comprehensive technical education for a satisfying and professional career in life. To achieve this, we take care from the very beginning quality class room, teaching by trend, competent and qualified faculty members with exposure to the application of concepts through lab experiments, industrial visits and expert lectures of eminent personalities and experts in their field of specialization. Besides, we provide congenial atmosphere to the students for their all round enhancement of inter-personal communication skills.</p>
                             <p>I am sure that the website will enable a better transmission of relevant information to the various stakeholders of the institute which will help in building up and strengthening the relationship among them and ensure success of our institute.</p>
@@ -865,18 +822,22 @@ export const aboutData = {
                                 <p class="text-xs text-slate-500 font-medium">Surajmal Memorial Education Society</p>
                             </div>
                         </div>
-                        <div class="w-full md:w-64 shrink-0 mx-auto md:mx-0">
-                            <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200/60 shadow-xs">
+                        <figure class="w-44 sm:w-56 md:w-64 shrink-0 mx-auto md:mx-0 m-0 md:sticky md:top-36 self-start">
+                            <div class="bg-slate-50 p-2.5 sm:p-3 rounded-3xl border border-slate-200/60 shadow-xs">
                                 <img src="/rajpal-singh.png" alt="Sh. Rajpal Singh Solanki, Treasurer SMES" class="w-full h-auto aspect-square object-cover rounded-2xl grayscale-30" />
                             </div>
-                        </div>
+                            <figcaption class="mt-3 text-center">
+                                <span class="block text-sm sm:text-base font-bold text-slate-900 leading-snug">Sh. Rajpal Singh Solanki</span>
+                                <span class="block mt-0.5 text-xs text-slate-600 leading-snug">Treasurer, Surajmal Memorial Education Society</span>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
 
                 <!-- Tab Content: Director -->
                 <div class="tab-content content-dir">
-                    <div class="flex flex-col-reverse md:flex-row gap-8 items-start">
-                        <div class="flex-1 text-slate-700 leading-relaxed text-base space-y-4 font-light">
+                    <div class="flex flex-col-reverse md:flex-row gap-6 md:gap-10 items-start">
+                        <div class="flex-1 text-slate-700 leading-relaxed text-sm sm:text-base space-y-4">
                             <p>Dear Students, Faculty Members, Alumni and Visitors,</p>
                             <p>It gives me immense pleasure to welcome you to Maharaja Surajmal Institute of Technology (MSIT) — an institution that blends academic excellence with a culture of innovation, curiosity, and values.</p>
                             <p>At MSIT, we believe that engineering education is not just about mastering concepts and technologies, but about shaping individuals who can think critically, solve real-world problems, and contribute meaningfully to society. Our commitment is to create an environment where every student feels encouraged to explore, question, experiment, and grow.</p>
@@ -891,11 +852,15 @@ export const aboutData = {
                                 <p class="text-xs text-slate-500 font-medium">Maharaja Surajmal Institute of Technology</p>
                             </div>
                         </div>
-                        <div class="w-full md:w-64 shrink-0 mx-auto md:mx-0">
-                            <div class="bg-slate-50 p-3 rounded-3xl border border-slate-200/60 shadow-xs">
+                        <figure class="w-44 sm:w-56 md:w-64 shrink-0 mx-auto md:mx-0 m-0 md:sticky md:top-36 self-start">
+                            <div class="bg-slate-50 p-2.5 sm:p-3 rounded-3xl border border-slate-200/60 shadow-xs">
                                 <img src="/avanish-kumar-desk.png" alt="Prof. (Dr.) Avanish Kumar Srivastava, Director MSIT" class="w-full h-auto aspect-square object-cover rounded-2xl grayscale-30" />
                             </div>
-                        </div>
+                            <figcaption class="mt-3 text-center">
+                                <span class="block text-sm sm:text-base font-bold text-slate-900 leading-snug">Prof. (Dr.) Avanish Kumar Srivastava</span>
+                                <span class="block mt-0.5 text-xs text-slate-600 leading-snug">Director, Maharaja Surajmal Institute of Technology</span>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -903,24 +868,6 @@ export const aboutData = {
         stats: [
             { label: "Leadership Messages", value: "4" },
             { label: "Governing Society", value: "SMES" }
-        ],
-        bulletPoints: [
-            { 
-                label: '<label for="tab-pres" class="cursor-pointer block w-full">President: Sh. Kaptan Singh</label>', 
-                detail: "Perspective on non-profit socio-economic upliftment, adherence to stringent AICTE norms, transparent work culture, and imparting world-class technical education to Indian youth." 
-            },
-            { 
-                label: '<label for="tab-sec" class="cursor-pointer block w-full">Secretary: Sh. Ajit Singh Chaudhary</label>', 
-                detail: "Commitment to state-of-the-art laboratory infrastructure, continuous faculty development programs, modern computing facilities, and holistic personality growth for students." 
-            },
-            { 
-                label: '<label for="tab-treas" class="cursor-pointer block w-full">Treasurer: Sh. Rajpal Singh Solanki</label>', 
-                detail: "Strategic financial governance, transparent resource allocation, and providing world-class campus facilities, laboratories, and student support systems." 
-            },
-            { 
-                label: '<label for="tab-dir" class="cursor-pointer block w-full">Director: Prof. (Dr.) Avanish Kumar Srivastava</label>', 
-                detail: "Strategic roadmap for research innovation, industry linkages, hands-on problem solving, and shaping skilled, ethical, and compassionate engineers." 
-            }
         ]
     },
     "facilities": {
