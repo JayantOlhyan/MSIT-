@@ -447,7 +447,7 @@ const Header = () => {
                                                      <div key={i} className="w-full">
                                                          <button
                                                              onClick={() => toggleMobileSub(link.name)}
-                                                             className={`w-full flex items-center justify-between py-2 px-4 text-base font-semibold rounded-xl transition-colors cursor-pointer text-left ${isAnySubActive ? 'bg-blue-50/40 text-primary font-bold' : 'text-slate-600 hover:text-primary hover:bg-slate-50'}`}
+                                                             className={`w-full flex items-center justify-between py-2 px-4 text-base font-semibold rounded-xl transition-colors cursor-pointer text-left ${isAnySubActive ? 'text-slate-900 font-bold' : 'text-slate-600 hover:text-primary hover:bg-slate-50'}`}
                                                          >
                                                              <span>{link.name}</span>
                                                              <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${openMobileSubs[link.name] ? 'rotate-180 text-primary' : ''}`} />
@@ -458,7 +458,7 @@ const Header = () => {
                                                                      key={j}
                                                                      to={sub.url}
                                                                      onClick={() => setIsMenuOpen(false)}
-                                                                     className={`block w-full text-left py-2 px-4 text-sm transition-colors rounded-xl ${isPathActive(sub.url) ? 'bg-blue-50/80 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-500 hover:text-primary hover:bg-slate-50'}`}
+                                                                     className={`block w-full text-left py-2 px-4 text-sm transition-colors rounded-xl ${isPathActive(sub.url) ? 'font-bold text-slate-900' : 'font-semibold text-slate-500 hover:text-primary hover:bg-slate-50'}`}
                                                                  >
                                                                      {sub.name}
                                                                  </Link>
@@ -472,7 +472,7 @@ const Header = () => {
                                                      {link.name}
                                                  </a>
                                              ) : (
-                                                 <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${isPathActive(link.url) ? 'bg-blue-50 text-primary font-bold border-l-4 border-primary' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
+                                                 <Link key={i} to={link.url} onClick={() => setIsMenuOpen(false)} className={`block w-full text-left py-2 px-4 text-base transition-colors rounded-xl ${isPathActive(link.url) ? 'font-bold text-slate-900' : 'font-semibold text-slate-600 hover:text-primary hover:bg-slate-50'
                                                      }`}>
                                                      {link.name}
                                                  </Link>

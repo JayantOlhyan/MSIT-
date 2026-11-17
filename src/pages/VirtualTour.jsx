@@ -165,13 +165,13 @@ const VirtualTour = () => {
             />
 
             {/* Quick Stats Banner */}
-            <section className="bg-white py-10 border-b border-slate-200 transition-colors duration-300">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <section className="bg-white py-4 sm:py-7 border-b border-slate-200 transition-colors duration-300">
+                <div className="max-w-7xl mx-auto px-3 sm:px-6">
+                    <div className="grid grid-cols-4 gap-1 sm:gap-6">
                         {tourStats.map((stat, idx) => (
-                            <div key={idx} className="text-center md:border-r last:border-0 border-slate-200">
-                                <div className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">{stat.value}</div>
-                                <div className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-widest mt-1">{stat.label}</div>
+                            <div key={idx} className="text-center border-r last:border-0 border-slate-200 px-1">
+                                <div className="font-[Libre_Baskerville,serif] text-base sm:text-2xl md:text-3xl font-bold text-primary tabular-nums leading-tight">{stat.value}</div>
+                                <div className="text-[9px] sm:text-xs font-semibold text-slate-600 uppercase tracking-wide sm:tracking-wider mt-1 leading-snug">{stat.label}</div>
                             </div>
                         ))}
                     </div>
@@ -207,8 +207,9 @@ const VirtualTour = () => {
                                 className="relative rounded-2xl overflow-hidden aspect-video border border-white/10 group cursor-pointer shadow-2xl"
                             >
                                 <img 
-                                    src="https://img.youtube.com/vi/WY6dTTsE4cY/maxresdefault.jpg" 
-                                    alt="Virtual tour video preview"
+                                    src="https://img.youtube.com/vi/WY6dTTsE4cY/sddefault.jpg"
+                                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://img.youtube.com/vi/WY6dTTsE4cY/hqdefault.jpg'; }}
+                                    alt="Preview of the official MSIT campus tour video"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                                 />
                                 <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors flex items-center justify-center">
