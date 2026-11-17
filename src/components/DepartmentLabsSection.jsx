@@ -15,11 +15,11 @@ const DepartmentLabsSection = ({ deptKey }) => {
     const hiddenCount = labs.length - INITIAL_LABS;
 
     return (
-        <div className="space-y-6 my-8">
+        <div className="space-y-4 sm:space-y-6 my-6 sm:my-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
                 <div>
-                    <h3 className="text-2xl font-bold text-slate-900">Laboratories & Computing Hub</h3>
-                    <p className="text-sm text-slate-500 mt-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900">Laboratories & Computing Hub</h3>
+                    <p className="text-xs sm:text-sm text-slate-500 mt-1">
                         Showing {visibleLabs.length} of {labs.length} specialized department laboratories
                     </p>
                 </div>
@@ -33,15 +33,15 @@ const DepartmentLabsSection = ({ deptKey }) => {
             </div>
 
             {/* Labs Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
                 {visibleLabs.map((lab) => (
                     <div 
                         key={lab.id}
-                        className="bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+                        className="bg-slate-50 rounded-xl sm:rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
                     >
                         <div>
                             {/* Image Header */}
-                            <div className="relative h-48 bg-slate-900 overflow-hidden">
+                            <div className="relative h-24 sm:h-48 bg-slate-900 overflow-hidden">
                                 {lab.hasPhoto && lab.images && lab.images.length > 0 ? (
                                     <img 
                                         src={lab.images[0]} 
@@ -57,12 +57,12 @@ const DepartmentLabsSection = ({ deptKey }) => {
                                     </div>
                                 )}
 
-                                <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
-                                    <span className="px-2.5 py-1 bg-slate-900/90 backdrop-blur-md text-white font-mono text-xs font-bold rounded-lg border border-white/10">
+                                <div className="absolute top-2 left-2 sm:top-3 sm:left-3 flex flex-wrap gap-1.5 z-10">
+                                    <span className="px-1.5 sm:px-2.5 py-0.5 sm:py-1 bg-slate-900/90 backdrop-blur-md text-white font-mono text-[10px] sm:text-xs font-bold rounded-md sm:rounded-lg border border-white/10">
                                         {lab.labNo}
                                     </span>
                                     {lab.totalSystems && (
-                                        <span className="px-2.5 py-1 bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold rounded-lg">
+                                        <span className="hidden sm:inline px-2.5 py-1 bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold rounded-lg">
                                             {lab.totalSystems} PCs
                                         </span>
                                     )}
@@ -70,19 +70,19 @@ const DepartmentLabsSection = ({ deptKey }) => {
                             </div>
 
                             {/* Body Content */}
-                            <div className="p-5 space-y-4">
+                            <div className="p-3 sm:p-5 space-y-3 sm:space-y-4">
                                 <div>
-                                    <h4 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                                    <h4 className="text-sm sm:text-lg leading-snug font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                                         {lab.name}
                                     </h4>
-                                    <p className="text-xs text-slate-600 leading-relaxed mt-2">
+                                    <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed mt-1 sm:mt-2 line-clamp-4 sm:line-clamp-none">
                                         {lab.description}
                                     </p>
                                 </div>
 
                                 {/* Specs */}
                                 {lab.systemConfig && lab.systemConfig.desktop && (
-                                    <div className="p-3 bg-white rounded-xl border border-slate-200/80 text-xs text-slate-600">
+                                    <div className="hidden sm:block p-3 bg-white rounded-xl border border-slate-200/80 text-xs text-slate-600">
                                         <strong className="text-slate-900 block mb-0.5">Desktop Hardware:</strong>
                                         {lab.systemConfig.desktop}
                                         {lab.systemConfig.server && (
@@ -95,7 +95,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
 
                                 {/* Hardware Kits */}
                                 {lab.hardwareKits && lab.hardwareKits.length > 0 && (
-                                    <div>
+                                    <div className="hidden sm:block">
                                         <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
                                             Specialized Hardware & Kits:
                                         </div>
@@ -109,7 +109,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
 
                                 {/* Software */}
                                 {lab.software && lab.software.length > 0 && (
-                                    <div>
+                                    <div className="hidden sm:block">
                                         <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
                                             Installed Software:
                                         </div>
@@ -125,7 +125,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
 
                                 {/* Subjects */}
                                 {lab.subjects && lab.subjects.length > 0 && (
-                                    <div>
+                                    <div className="hidden sm:block">
                                         <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
                                             Subjects Taught:
                                         </div>
@@ -149,7 +149,7 @@ const DepartmentLabsSection = ({ deptKey }) => {
                 <div className="pt-4 text-center">
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="inline-flex items-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                        className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
                     >
                         <span>
                             {isExpanded 

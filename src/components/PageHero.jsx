@@ -2,7 +2,7 @@ import React from 'react';
 
 const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle, heroImage, heroImageAlt }) => {
     return (
-        <div className="bg-slate-950 text-white pt-20 sm:pt-28 lg:pt-28 pb-12 sm:pb-14 px-6 relative overflow-hidden group/hero">
+        <div className="bg-slate-950 text-white pt-16 sm:pt-28 lg:pt-28 pb-8 sm:pb-14 px-4 sm:px-6 relative overflow-hidden group/hero">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0 overflow-hidden">
                 {heroImage ? (
@@ -25,8 +25,8 @@ const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle, hero
             
             <div className="max-w-7xl mx-auto relative z-20">
                 {/* Main Heading */}
-                <div className="mb-8 drop-shadow-xl">
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-4">
+                <div className="mb-4 sm:mb-8 drop-shadow-xl">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-4">
                         {title}{' '}
                         {/* Accent word in the site's primary blue, lifted slightly so it stays readable on the dark photo. */}
                         <span className="text-[#5585e0]">{accentTitle}</span>
@@ -40,7 +40,7 @@ const PageHero = ({ title, accentTitle, description, breadcrumbs, subtitle, hero
 
                 {/* Description */}
                 {description && (
-                    <p className="text-slate-200 text-lg md:text-xl max-w-3xl leading-relaxed font-medium opacity-90 drop-shadow-md">
+                    <p className="text-slate-200 text-sm sm:text-lg md:text-xl line-clamp-3 sm:line-clamp-none max-w-3xl leading-relaxed font-medium opacity-90 drop-shadow-md">
                         {description}
                     </p>
                 )}

@@ -78,15 +78,15 @@
 
 /*
  * Base type scale. Tailwind sizes and spacing are in rem, so this one value scales the
- * whole layout. Laptops and desktops get a slightly smaller base so pages don't look
- * zoomed in; phones keep the browser default.
+ * whole layout. Phones, laptops and desktops get a slightly smaller base so pages don't
+ * look zoomed in; tablets keep the browser default.
  */
 :root {
-  --base-font-size: 100%;
+  --base-font-size: 87.5%;
 }
-@media (min-width: 64rem) {
+@media (min-width: 40rem) and (max-width: 63.99rem) {
   :root {
-    --base-font-size: 87.5%;
+    --base-font-size: 100%;
   }
 }
 
@@ -185,4 +185,33 @@ h3, h4 { letter-spacing: -0.015em; }
 #header-logo {
   /* Prevent opacity from transitioning, avoiding a flash/pop during the logo handoff */
   transition: transform 300ms ease, height 300ms ease, filter 300ms ease, brightness 300ms ease !important;
+}
+
+/* Life at MSIT policy pages (full-width layout): compact phone typography and spacing.
+   Desktop keeps the classes written in the page content. Pixel sizes so the result is the same on every phone. */
+@media (max-width: 639px) {
+  /* Overrides the space-y-8 utility on the content wrapper: 20px between sections. */
+  .policy-page > div > * { margin-block: 0 20px !important; }
+  .policy-page > div > :last-child { margin-block-end: 0 !important; }
+  .policy-page :where(p, li) { margin-top: 0; margin-bottom: 0; font-size: 12px; line-height: 1.5; }
+  .policy-page :where(h3) { font-size: 16px; line-height: 1.3; margin-top: 0; margin-bottom: 6px; }
+  .policy-page :where(h4) { font-size: 13.5px; line-height: 1.3; margin-top: 0; margin-bottom: 2px; }
+  .policy-page :where(section > p, section > div > p) { margin-bottom: 8px; }
+  .policy-page > div > section { padding: 12px; border-radius: 16px; }
+  .policy-page :where(.grid) { gap: 6px; }
+  .policy-page :where(.grid > div, ul > li) { padding: 10px; border-radius: 12px; }
+  .policy-page :where(ul) { padding-left: 0; }
+  /* Card headers (name + role badge): badge drops under the name instead of squeezing it. */
+  .policy-page .grid > div > .flex.items-center.justify-between { flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+  .policy-page .grid span[class*='rounded'] { font-size: 10px; padding: 1px 6px; }
+  .policy-page span[class*='rounded-full'][class*='w-8'] { width: 22px; height: 22px; margin-bottom: 6px; }
+  /* Section header rows (heading + note badge) stack tightly. */
+  .policy-page section > .flex { gap: 6px; }
+  /* Side notes like "24/7 On-Call Campus Patrol": a small one-line tag, not a full-width bar. */
+  .policy-page section > .flex > span { align-self: flex-start; width: auto; white-space: nowrap; font-size: 10px; line-height: 1.2; padding: 3px 8px; border-radius: 999px; }
+  /* Emergency numbers and steps: two per row. */
+  .policy-page section.bg-slate-900 .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .policy-page section.bg-slate-900 .grid h4 { font-size: 14px; }
+  .policy-page section.bg-slate-900 .grid p { font-size: 11.5px; }
+  .policy-page section.bg-slate-900 .grid span { font-size: 10px; }
 }
