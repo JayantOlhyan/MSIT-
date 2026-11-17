@@ -3,6 +3,7 @@ import { Download, FileText, TrendingUp, Building2, Users, ArrowRight, Award, X,
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import KeyFiguresStrip from '../components/KeyFiguresStrip';
 import { facultyMembers } from '../data/facultyData';
 
 const Placements = () => {
@@ -62,8 +63,8 @@ const Placements = () => {
         return (
             <div className={`w-full h-full flex items-center justify-center font-extrabold tracking-wider ${
                 isDark 
-                    ? 'bg-gradient-to-br from-blue-600 via-indigo-600 to-slate-900 text-white shadow-inner' 
-                    : 'bg-gradient-to-br from-blue-600 to-indigo-800 text-white shadow-inner'
+                    ? 'bg-gradient-to-br from-primary to-slate-900 text-white shadow-inner' 
+                    : 'bg-primary text-white shadow-inner'
             } ${size === 'large' ? 'text-2xl' : 'text-base'}`}>
                 {initials}
             </div>
@@ -120,15 +121,22 @@ const Placements = () => {
         { name: "Adobe", category: "Product", logo: "/logos/recruiters/adobe.svg" },
         { name: "Samsung R&D", category: "Product", logo: "/logos/recruiters/samsung.svg" },
         { name: "Postman", category: "Product", logo: "/logos/recruiters/postman.svg" },
-        { name: "ZS Associates", category: "Consulting", logo: "/logos/recruiters/zs.png" },
+        { name: "ZS Associates", category: "Consulting", logo: "/logos/recruiters/zs.svg" },
         { name: "ION Trading", category: "Fintech", logo: "/logos/recruiters/ion.png" },
-        { name: "Josh Technologies", category: "Product", logo: "/logos/recruiters/josh.png" },
+        { name: "Josh Technologies", category: "Product", logo: "/logos/recruiters/josh-technology-group.png" },
         { name: "TCS", category: "Services", logo: "/logos/recruiters/tcs.svg" },
         { name: "Infosys", category: "Services", logo: "/logos/recruiters/infosys.svg" },
         { name: "Wipro", category: "Services", logo: "/logos/recruiters/wipro.svg" },
         { name: "Accenture", category: "Services", logo: "/logos/recruiters/accenture.svg" },
         { name: "Cognizant", category: "Services", logo: "/logos/recruiters/cognizant.svg" },
         { name: "IBM", category: "Services", logo: "/logos/recruiters/ibm.svg" }
+    ];
+
+    const keyFigures = [
+        { value: "95%+", label: "Placement Rate", note: "For eligible stream students" },
+        { value: "250+", label: "Recruiters", note: "Product & services companies" },
+        { value: "₹1.2 Cr", label: "Highest Package", note: "National and global placements" },
+        { value: "₹7–8.5 LPA", label: "Average Package", note: "Consistent upward salary trends" }
     ];
 
     const trainingPrograms = [
@@ -162,61 +170,34 @@ const Placements = () => {
                 accentTitle="Records & Success" 
                 description="Maharaja Surajmal Institute of Technology (MSIT) has a legacy of producing industry-ready engineers. Explore our decade-long track record of stellar placements."
                 breadcrumbs={[{ label: 'Placements' }]}
+                heroImage="/campus/main-academic-building.webp"
+                heroImageAlt="MSIT academic blocks across the main sports field, New Delhi"
             />
 
-            {/* Quick Stats Banner */}
-            <div className="bg-white border-b border-slate-200 transition-colors">
-                <div className="max-w-7xl mx-auto px-6 py-12">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
-                        <div className="flex flex-col items-center text-center p-4">
-                            <TrendingUp className="w-10 h-10 text-blue-600 mb-4" />
-                            <div className="text-4xl font-bold text-slate-900 mb-2">95%+</div>
-                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-2">Placement Rate</div>
-                            <span className="text-xs text-slate-400">For eligible stream students</span>
-                        </div>
-                        <div className="flex flex-col items-center text-center p-4">
-                            <Building2 className="w-10 h-10 text-blue-600 mb-4" />
-                            <div className="text-4xl font-bold text-slate-900 mb-2">250+</div>
-                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-2">Recruiting Partners</div>
-                            <span className="text-xs text-slate-400">Top-tier product & services MNCs</span>
-                        </div>
-                        <div className="flex flex-col items-center text-center p-4">
-                            <Award className="w-10 h-10 text-blue-600 mb-4" />
-                            <div className="text-4xl font-bold text-slate-900 mb-2">₹1.2Cr</div>
-                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-2">Highest Package</div>
-                            <span className="text-xs text-slate-400">National and global placements</span>
-                        </div>
-                        <div className="flex flex-col items-center text-center p-4">
-                            <Users className="w-10 h-10 text-blue-600 mb-4" />
-                            <div className="text-4xl font-bold text-slate-900 mb-2">₹7 - 8.5 LPA</div>
-                            <div className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-2">Average Package</div>
-                            <span className="text-xs text-slate-400">Consistent upward salary trends</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {/* Key figures: a slim strip over the hero */}
+            <KeyFiguresStrip items={keyFigures} />
 
             {/* Recruiters Grid */}
-            <div className="bg-slate-50 border-b border-slate-200 py-16 transition-colors">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex items-center mb-10">
-                        <Building2 className="w-8 h-8 text-blue-600 mr-4" />
-                        <h2 className="text-3xl font-bold text-slate-900">Industry Giants Scouting at MSIT</h2>
+            <div className="bg-slate-50 border-b border-slate-200 py-10 sm:py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                    <div className="flex items-center mb-5 sm:mb-10">
+                        <Building2 className="w-6 h-6 sm:w-8 sm:h-8 text-primary mr-3 sm:mr-4 shrink-0" aria-hidden="true" />
+                        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Industry Giants Scouting at MSIT</h2>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
+                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-5">
                         {topRecruiters.map((company, index) => (
-                            <div key={index} className="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col items-center justify-between text-center group hover:border-blue-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300 min-h-[145px]">
-                                <div className="h-14 w-full flex items-center justify-center p-2 rounded-xl bg-slate-50/80 group-hover:scale-105 transition-all duration-300 shadow-[inset_0_1px_2px_rgba(0,0,0,0.05)]">
+                            <div key={index} className="bg-white p-2 sm:p-5 rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-sm flex flex-col items-center justify-between text-center group hover:border-primary/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 min-h-[96px] sm:min-h-[145px]">
+                                <div className="h-10 sm:h-14 w-full flex items-center justify-center p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-slate-50/80 group-hover:scale-105 transition-all duration-300 shadow-[inset_0_1px_2px_rgba(0,0,0,0.05)]">
                                     <img 
                                         src={company.logo} 
                                         alt={`${company.name} logo`} 
-                                        className="max-h-10 max-w-[120px] object-contain filter drop-shadow-sm" 
+                                        className="max-h-7 sm:max-h-10 max-w-[85%] sm:max-w-[120px] object-contain" 
                                         onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                     />
                                 </div>
                                 <div className="w-full pt-2">
-                                    <span className="text-xs font-extrabold text-slate-800 group-hover:text-blue-600 transition-colors uppercase tracking-wider block">{company.name}</span>
-                                    <div className="mt-1 text-[10px] text-slate-400 font-bold tracking-widest uppercase">{company.category}</div>
+                                    <span className="text-[9px] sm:text-xs font-extrabold text-slate-800 group-hover:text-primary transition-colors uppercase tracking-wide sm:tracking-wider leading-tight block">{company.name}</span>
+                                    <div className="mt-0.5 sm:mt-1 text-[8px] sm:text-[10px] text-slate-500 font-bold tracking-wider sm:tracking-widest uppercase">{company.category}</div>
                                 </div>
                             </div>
                         ))}
@@ -224,24 +205,24 @@ const Placements = () => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-20 flex flex-col lg:flex-row gap-10 lg:gap-16">
 
                 {/* Main Content Area */}
-                <div className="flex-grow space-y-16">
+                <div className="flex-grow min-w-0 space-y-12 sm:space-y-16">
                     
                     {/* Training & Preparation Section */}
                     <div>
-                        <div className="flex items-center mb-8 pb-4 border-b border-slate-200">
-                            <TrendingUp className="w-8 h-8 text-blue-600 mr-4" />
-                            <h2 className="text-3xl font-bold text-slate-900">Training & Grooming Programs</h2>
+                        <div className="flex items-center mb-5 sm:mb-8 pb-3 sm:pb-4 border-b border-slate-200">
+                            <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-primary mr-3 sm:mr-4 shrink-0" aria-hidden="true" />
+                            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Training & Grooming Programs</h2>
                         </div>
-                        <p className="text-slate-600 mb-8 font-light text-lg">
+                        <p className="text-slate-600 mb-5 sm:mb-8 text-base sm:text-lg leading-relaxed">
                             The Training & Placement cell structures intensive bootcamps and assessment modules to transform students into corporate-ready professionals:
                         </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
                             {trainingPrograms.map((prog, index) => (
-                                <div key={index} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
-                                    <h4 className="text-lg font-bold text-slate-900 mb-2">{prog.title}</h4>
+                                <div key={index} className="bg-white p-4 sm:p-6 rounded-xl border border-slate-200/80 shadow-sm">
+                                    <h4 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5 sm:mb-2">{prog.title}</h4>
                                     <p className="text-sm text-slate-600 leading-relaxed">{prog.description}</p>
                                 </div>
                             ))}
@@ -250,13 +231,13 @@ const Placements = () => {
 
                     {/* Placement Policy Section */}
                     <div>
-                        <div className="flex items-center mb-8 pb-4 border-b border-slate-200">
-                            <Award className="w-8 h-8 text-blue-600 mr-4" />
-                            <h2 className="text-3xl font-bold text-slate-900">Placement Policy & Guidelines</h2>
+                        <div className="flex items-center mb-5 sm:mb-8 pb-3 sm:pb-4 border-b border-slate-200">
+                            <Award className="w-6 h-6 sm:w-8 sm:h-8 text-primary mr-3 sm:mr-4 shrink-0" aria-hidden="true" />
+                            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Placement Policy & Guidelines</h2>
                         </div>
-                        <div className="bg-white p-8 rounded-2xl border border-slate-200 space-y-6">
+                        <div className="bg-white p-5 sm:p-8 rounded-2xl border border-slate-200 space-y-5 sm:space-y-6">
                             <div className="flex gap-4">
-                                <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 font-bold flex items-center justify-center shrink-0">1</div>
+                                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center shrink-0">1</div>
                                 <div>
                                     <h4 className="font-bold text-slate-900 mb-1">Academic Bottomline</h4>
                                     <p className="text-sm text-slate-600 leading-relaxed">
@@ -265,7 +246,7 @@ const Placements = () => {
                                 </div>
                             </div>
                             <div className="flex gap-4">
-                                <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 font-bold flex items-center justify-center shrink-0">2</div>
+                                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center shrink-0">2</div>
                                 <div>
                                     <h4 className="font-bold text-slate-900 mb-1">Support for Unplaced Students</h4>
                                     <p className="text-sm text-slate-600 leading-relaxed">
@@ -274,7 +255,7 @@ const Placements = () => {
                                 </div>
                             </div>
                             <div className="flex gap-4">
-                                <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 font-bold flex items-center justify-center shrink-0">3</div>
+                                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center shrink-0">3</div>
                                 <div>
                                     <h4 className="font-bold text-slate-900 mb-1">Industry Institution Interaction</h4>
                                     <p className="text-sm text-slate-600 leading-relaxed">
@@ -287,38 +268,37 @@ const Placements = () => {
 
                     {/* Placement Committee Section */}
                     <div>
-                        <div className="flex items-center mb-8 pb-4 border-b border-slate-200">
-                            <Users className="w-8 h-8 text-blue-600 mr-4" />
-                            <h2 className="text-3xl font-bold text-slate-900">Placement Committee</h2>
+                        <div className="flex items-center mb-5 sm:mb-8 pb-3 sm:pb-4 border-b border-slate-200">
+                            <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary mr-3 sm:mr-4 shrink-0" aria-hidden="true" />
+                            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Placement Committee</h2>
                         </div>
-                        <p className="text-slate-600 mb-8 font-light text-lg">
+                        <p className="text-slate-600 mb-5 sm:mb-8 text-base sm:text-lg leading-relaxed">
                             Placement Committee MSIT has been formed with a strong emphasis and aim to achieve the target of 100% placements of all the interested and eligible students. The Committee facilitates the students and coordinates during campus drives.
                         </p>
 
                         {/* Directorate Leadership */}
                         <div className="mb-10">
-                            <h3 className="text-xs font-black uppercase tracking-widest text-blue-600 mb-4 flex items-center gap-2">
-                                <Star className="w-4 h-4 fill-blue-600 text-blue-600" /> Training & Placement Directorate Leadership
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
+                                <Star className="w-4 h-4 fill-primary text-primary" aria-hidden="true" /> Training & Placement Directorate Leadership
                             </h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6">
                                 {placementDirectors.map((director, i) => {
                                     const details = getFacultyDetails(director.nameQuery);
                                     return (
                                         <div 
                                             key={i} 
                                             onClick={() => setSelectedMember(details)}
-                                            className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-6 border border-slate-700 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+                                            className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
                                         >
-                                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
-                                            <div className="flex items-center gap-5 relative z-10">
-                                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-md shrink-0 bg-slate-800">
-                                                    {renderMemberAvatar(details, true, "large")}
+                                                                                        <div className="flex items-center gap-4 sm:gap-5">
+                                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-slate-100 shrink-0 bg-slate-50">
+                                                    {renderMemberAvatar(details, false, "large")}
                                                 </div>
                                                 <div className="flex-1 min-w-0">
-                                                    <span className="inline-block px-2.5 py-0.5 bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-wider rounded border border-blue-400/30 mb-1.5">{director.branch}</span>
-                                                    <h3 className="text-lg font-extrabold text-white group-hover:text-blue-300 transition-colors truncate">{details.name}</h3>
-                                                    <p className="text-slate-300 text-xs font-medium mt-0.5">{director.committeeRole}</p>
-                                                    <div className="mt-3 flex items-center text-xs text-blue-400 font-semibold group-hover:translate-x-1 transition-transform">
+                                                    <span className="inline-block px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold uppercase tracking-wider rounded mb-1.5">{director.branch}</span>
+                                                    <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug">{details.name}</h3>
+                                                    <p className="text-slate-600 text-xs sm:text-sm mt-0.5">{director.committeeRole}</p>
+                                                    <div className="mt-2 sm:mt-3 flex items-center text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform">
                                                         View Profile & Details &rarr;
                                                     </div>
                                                 </div>
@@ -331,39 +311,39 @@ const Placements = () => {
 
                         {/* Committee Conveners */}
                         <h3 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-4">Committee Conveners</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div className="grid grid-cols-3 gap-2 sm:gap-6 mb-6 sm:mb-8">
                             {committeeMembers.map((member, i) => {
                                 const details = getFacultyDetails(member.nameQuery);
                                 return (
                                     <div 
                                         key={i} 
                                         onClick={() => setSelectedMember(details)}
-                                        className="bg-white rounded-3xl p-5 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group text-center"
+                                        className="bg-white rounded-2xl sm:rounded-3xl p-2.5 sm:p-5 border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group text-center"
                                     >
-                                        <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-2 border-slate-100 bg-slate-50">
+                                        <div className="w-14 h-14 sm:w-20 sm:h-20 mx-auto rounded-full overflow-hidden mb-2 sm:mb-4 border-2 border-slate-100 bg-slate-50">
                                             {renderMemberAvatar(details, false, "large")}
                                         </div>
-                                        <span className="inline-block px-2.5 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-black uppercase tracking-wider rounded mb-1">{details.dept || member.branch}</span>
-                                        <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate">{details.name}</h3>
-                                        <p className="text-slate-500 text-xs mt-0.5">{member.committeeRole}</p>
+                                        <span className="inline-block px-1.5 sm:px-2.5 py-0.5 bg-primary/10 text-primary text-[8px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-wider rounded mb-1">{details.dept || member.branch}</span>
+                                        <h3 className="text-[11px] sm:text-base font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug line-clamp-2">{details.name}</h3>
+                                        <p className="text-slate-500 text-[10px] sm:text-xs mt-0.5">{member.committeeRole}</p>
                                     </div>
                                 );
                             })}
                         </div>
 
                         {/* Faculty Coordinators */}
-                        <div className="bg-white p-6 rounded-2xl border border-slate-200">
-                            <h4 className="font-bold text-slate-900 mb-6 text-center text-base">Faculty Coordinators</h4>
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div className="bg-white p-3 sm:p-6 rounded-2xl border border-slate-200">
+                            <h4 className="font-bold text-slate-900 mb-3 sm:mb-6 text-center text-sm sm:text-base">Faculty Coordinators</h4>
+                            <div className="grid grid-cols-3 gap-1.5 sm:gap-3">
                                 {coordinators.map((coord, i) => {
                                     const details = getFacultyDetails(coord.nameQuery);
                                     return (
                                         <div 
                                             key={i} 
                                             onClick={() => setSelectedMember(details)}
-                                            className="bg-slate-50 rounded-xl p-3 border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-sm transition-all cursor-pointer group text-center"
+                                            className="bg-slate-50 rounded-lg sm:rounded-xl p-2 sm:p-3 border border-slate-100 hover:border-primary/30 hover:bg-white hover:shadow-sm transition-all cursor-pointer group text-center min-w-0"
                                         >
-                                            <h5 className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors text-xs sm:text-sm truncate">{coord.displayName || details.name}</h5>
+                                            <h5 className="font-bold text-slate-800 group-hover:text-primary transition-colors text-[10px] sm:text-sm truncate">{coord.displayName || details.name}</h5>
                                             <span className="inline-block mt-1 px-1.5 py-0.5 bg-slate-200 text-slate-600 text-[8px] font-bold uppercase rounded">{coord.branch}</span>
                                         </div>
                                     );
@@ -374,31 +354,31 @@ const Placements = () => {
 
                     {/* PDF Records Section */}
                     <div>
-                        <div className="flex items-center mb-8 pb-4 border-b border-slate-200">
-                            <FileText className="w-8 h-8 text-blue-600 mr-4" />
-                            <h2 className="text-3xl font-bold text-slate-900">Official Placement Records</h2>
+                        <div className="flex items-center mb-5 sm:mb-8 pb-3 sm:pb-4 border-b border-slate-200">
+                            <FileText className="w-6 h-6 sm:w-8 sm:h-8 text-primary mr-3 sm:mr-4 shrink-0" aria-hidden="true" />
+                            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Official Placement Records</h2>
                         </div>
-                        <p className="text-slate-600 mb-8 font-light text-lg">
+                        <p className="text-slate-600 mb-5 sm:mb-8 text-base sm:text-lg leading-relaxed">
                             Transparency is our core value. View our detailed, year-wise historical placement data containing company lists, packages, and student achievements.
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-3 gap-2 sm:gap-6">
                             {placementRecords.map((record, index) => (
                                 <a
                                     key={index}
                                     href={record.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group bg-white rounded-xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex items-center justify-between"
+                                    className="group bg-white rounded-xl p-3 sm:p-6 border border-slate-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex items-center justify-between gap-2"
                                 >
                                     <div>
-                                        <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-1">Batch of</div>
-                                        <div className="text-2xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                                        <div className="text-[9px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest text-slate-500 mb-0.5 sm:mb-1">Batch of</div>
+                                        <div className="text-lg sm:text-2xl font-bold text-slate-800 group-hover:text-primary transition-colors tabular-nums">
                                             {record.year}
                                         </div>
                                     </div>
-                                    <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                                        <Download className="w-5 h-5 text-slate-400 group-hover:text-blue-600" />
+                                    <div className="w-7 h-7 sm:w-12 sm:h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors shrink-0">
+                                        <Download className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-slate-500 group-hover:text-primary" aria-label={`Download ${record.year} placement record`} />
                                     </div>
                                 </a>
                             ))}
@@ -408,10 +388,10 @@ const Placements = () => {
 
                 {/* Sidebar */}
                 <div className="lg:w-80 shrink-0">
-                    <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-8 sticky top-32 space-y-8">
-                        <div>
+                    <div className="bg-white rounded-2xl shadow-card border border-slate-200 p-5 sm:p-8 lg:sticky lg:top-40 space-y-8">
+                        <div className="hidden lg:block">
                             <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
-                                <Building2 className="w-5 h-5 mr-3 text-blue-600" />
+                                <Building2 className="w-5 h-5 mr-3 text-primary" aria-hidden="true" />
                                 Top Recruiters
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -426,17 +406,17 @@ const Placements = () => {
                             </div>
                         </div>
 
-                        <div className="pt-8 border-t border-slate-100">
+                        <div className="lg:pt-8 lg:border-t border-slate-100">
                             <h4 className="font-bold text-slate-900 mb-2">Training & Placement Cell</h4>
                             <p className="text-sm text-slate-500 mb-4">
                                 The T&P cell actively bridges the gap between academia and industry.
                             </p>
                             <div className="flex flex-col space-y-2 px-1">
-                                <a href="tel:+911165215944" className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-2">
-                                    <span>📞 Call: 011-65215944</span>
+                                <a href="tel:+911165215944" className="text-sm font-semibold text-primary hover:underline underline-offset-4 flex items-center gap-2">
+                                    <Phone className="w-4 h-4 shrink-0" aria-hidden="true" /> 011-65215944
                                 </a>
-                                <a href="mailto:placements@msit.in" className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-2">
-                                    <span>✉️ Email: placements@msit.in</span>
+                                <a href="mailto:placements@msit.in" className="text-sm font-semibold text-primary hover:underline underline-offset-4 flex items-center gap-2">
+                                    <Mail className="w-4 h-4 shrink-0" aria-hidden="true" /> placements@msit.in
                                 </a>
                             </div>
                         </div>
@@ -464,52 +444,51 @@ const Placements = () => {
                         </button>
 
                         {/* Top banner / image */}
-                        <div className="bg-slate-900 text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
-                            <div className="flex gap-4 sm:gap-6 items-center relative z-10">
-                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0 bg-slate-800">
-                                    {renderMemberAvatar(selectedMember, true, "large")}
+                        <div className="bg-white border-b border-slate-200 p-5 sm:p-8 pt-10 sm:pt-12 relative">
+                                                        <div className="flex gap-4 sm:gap-6 items-center relative z-10">
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-slate-100 shadow-sm shrink-0 bg-slate-50">
+                                    {renderMemberAvatar(selectedMember, false, "large")}
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <span className="inline-block px-2.5 py-1 bg-white/10 text-white text-[10px] font-black uppercase tracking-widest rounded mb-1.5 sm:mb-2 border border-white/5">{selectedMember.dept}</span>
-                                    <h3 className="text-xl sm:text-2xl font-black truncate">{selectedMember.name}</h3>
-                                    <p className="text-blue-300 text-xs sm:text-sm font-semibold line-clamp-2 mt-0.5">{selectedMember.role}</p>
+                                    <span className="inline-block px-2.5 py-1 bg-primary/10 text-primary text-[10px] font-semibold uppercase tracking-wider rounded mb-1.5 sm:mb-2">{selectedMember.dept}</span>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 leading-snug pr-10">{selectedMember.name}</h3>
+                                    <p className="text-primary text-xs sm:text-sm font-medium line-clamp-2 mt-1">{selectedMember.role}</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Details body */}
-                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]">
+                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-slate-50">
                             {selectedMember.bio && (
                                 <div>
-                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
-                                        <FileText className="w-4 h-4 text-blue-500" /> Professional Bio
+                                    <h4 className="font-sans! text-xs font-semibold text-slate-500 uppercase tracking-wider! mb-3 flex items-center gap-1.5">
+                                        <FileText className="w-4 h-4 text-primary" aria-hidden="true" /> Professional Bio
                                     </h4>
-                                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-semibold">
+                                    <p className="text-slate-700 text-sm leading-relaxed">
                                         {selectedMember.bio}
                                     </p>
                                 </div>
                             )}
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
-                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Qualification</div>
-                                    <div className="text-xs font-extrabold text-slate-800">{selectedMember.qual || "N/A"}</div>
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200">
+                                    <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Qualification</div>
+                                    <div className="text-sm font-medium text-slate-900 leading-snug">{selectedMember.qual || "N/A"}</div>
                                 </div>
-                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
-                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Experience / Status</div>
-                                    <div className="text-xs font-extrabold text-slate-800">{selectedMember.experience} Years</div>
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200">
+                                    <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Experience / Status</div>
+                                    <div className="text-sm font-medium text-slate-900 leading-snug">{selectedMember.experience} Years</div>
                                 </div>
                             </div>
 
                             {selectedMember.goodAt && selectedMember.goodAt.length > 0 && (
                                 <div>
-                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-1.5 border-b border-slate-200 pb-2">
-                                        <Star className="w-4 h-4 text-emerald-500 fill-emerald-500" /> Key Focus Areas
+                                    <h4 className="font-sans! text-xs font-semibold text-slate-500 uppercase tracking-wider! mb-3 flex items-center gap-1.5">
+                                        <Star className="w-4 h-4 text-primary fill-primary" aria-hidden="true" /> Key Focus Areas
                                     </h4>
                                     <div className="flex flex-wrap gap-2">
                                         {selectedMember.goodAt.map((item, idx) => (
-                                            <span key={idx} className="px-2.5 py-1 bg-emerald-50 border border-emerald-100 rounded text-xs font-bold text-emerald-700">
+                                            <span key={idx} className="px-2.5 py-1 bg-primary/5 border border-primary/20 rounded-md text-xs font-medium text-primary">
                                                 {item}
                                             </span>
                                         ))}
@@ -521,7 +500,7 @@ const Placements = () => {
                                 <div className="flex flex-col gap-2 shrink-0">
                                     <a 
                                         href={`mailto:${selectedMember.email}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-medium text-slate-700 transition-colors truncate"
                                     >
                                         <Mail className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.email}</span>
@@ -529,7 +508,7 @@ const Placements = () => {
 
                                     <a 
                                         href={`tel:${selectedMember.phone.replace(/\s+/g, '')}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-medium text-slate-700 transition-colors truncate"
                                     >
                                         <Phone className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.phone}</span>
@@ -542,7 +521,7 @@ const Placements = () => {
                                             href={selectedMember.pdfLink} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="w-10 h-10 bg-slate-900 hover:bg-slate-800 text-white rounded-xl flex items-center justify-center transition-colors"
+                                            className="w-10 h-10 bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 rounded-xl flex items-center justify-center transition-colors"
                                             title="View Official Profile PDF"
                                         >
                                             <FileText className="w-4 h-4" />
@@ -553,7 +532,7 @@ const Placements = () => {
                                             href={selectedMember.linkedin} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="w-10 h-10 bg-[#0077B5] hover:bg-[#005a8a] text-white rounded-xl flex items-center justify-center transition-colors"
+                                            className="w-10 h-10 bg-primary hover:bg-primary-dark text-white rounded-xl flex items-center justify-center transition-colors"
                                             title="LinkedIn Profile"
                                         >
                                             <Linkedin className="w-4 h-4" />

@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, LayoutDashboard, X, Mail, Linkedin, Globe, Ph
 import { pagesData } from '../data/pagesData';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
+import KeyFiguresStrip from '../components/KeyFiguresStrip';
 import NotFound from './NotFound';
 import { facultyMembers } from '../data/facultyData';
 import FeePaymentPortal from '../components/FeePaymentPortal';
@@ -182,19 +183,19 @@ const DynamicPage = () => {
                     canonicalPath="/smes" 
                 />
                 <div className="max-w-md w-full bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6 animate-fade-in">
-                    <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <div className="w-16 h-16 bg-primary/5 text-primary rounded-2xl flex items-center justify-center mx-auto">
                         <ExternalLink className="w-8 h-8" />
                     </div>
                     <div className="space-y-2">
                         <h2 className="text-2xl font-bold text-slate-900">Surajmal Memorial Education Society</h2>
                         <p className="text-slate-600 text-sm leading-relaxed">
-                            Redirecting you to the official SMES society portal (<code className="text-blue-600 font-mono text-xs">surajmalmemorialeducationsociety.org</code>)...
+                            Redirecting you to the official SMES society portal (<code className="text-primary font-mono text-xs">surajmalmemorialeducationsociety.org</code>)...
                         </p>
                     </div>
                     <div className="pt-2">
                         <a
                             href="https://surajmalmemorialeducationsociety.org/"
-                            className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg text-sm"
+                            className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg text-sm"
                         >
                             <span>Open SMES Portal Now</span>
                             <ArrowUpRight className="w-4 h-4" />
@@ -271,6 +272,8 @@ const DynamicPage = () => {
     const sidebarFirstOnMobile = slug === 'online-fee';
     // Pages whose content stands on its own (events, policy pages) drop the sidebar and use the full width.
     const fullWidth = pageData.layout === 'full';
+    // Pages that show their key figures as the slim strip over the hero (like Placements) instead of sidebar cards.
+    const heroStrip = Boolean(pageData.statsStrip && pageData.stats && pageData.stats.length > 0);
     const courseSchema = isDepartment ? {
         "@context": "https://schema.org",
         "@type": "Course",
@@ -310,6 +313,8 @@ const DynamicPage = () => {
                 heroImageAlt={pageData.heroImageAlt}
             />
 
+            {heroStrip && <KeyFiguresStrip items={pageData.stats} className="max-w-[92rem]" />}
+
             {/* KEY FIGURES (department pages, and full-width pages whose sidebar is hidden) */}
             {(isDepartment || fullWidth) && pageData.stats && pageData.stats.length > 0 && (
                 <section aria-label="Key figures" className="bg-white border-b border-slate-200">
@@ -324,7 +329,7 @@ const DynamicPage = () => {
 
                                 const content = (
                                     <div className={`py-3 lg:py-5 pr-4 ${pad} ${lines} border-slate-200 h-full flex flex-col justify-between transition-colors ${
-                                        hasLink ? 'hover:bg-blue-50/50 cursor-pointer group' : ''
+                                        hasLink ? 'hover:bg-primary/5 cursor-pointer group' : ''
                                     }`}>
                                         <div className="flex items-center justify-between gap-2">
                                             <div className={`text-xl sm:text-2xl font-bold tabular-nums leading-tight transition-colors ${
@@ -367,7 +372,7 @@ const DynamicPage = () => {
                         {/* On phones the content comes first, except on the fee page (see sidebarFirstOnMobile). */}
                         <div className={`w-full ${fullWidth ? '' : 'lg:w-2/3'} ${sidebarFirstOnMobile ? 'order-2' : 'order-1'} lg:order-1`}>
                             {/* Phones and tablets: the sidebar's key figures as a small strip at the top, not big cards at the bottom. */}
-                            {!isDepartment && !fullWidth && pageData.stats && pageData.stats.length > 0 && (
+                            {!isDepartment && !fullWidth && !heroStrip && pageData.stats && pageData.stats.length > 0 && (
                                 <div className="lg:hidden grid grid-cols-2 gap-2 mb-6">
                                     {pageData.stats.map((stat, i) => {
                                         const target = stat.link || stat.url;
@@ -413,7 +418,7 @@ const DynamicPage = () => {
                             <div ref={sidebarRef} className="lg:sticky space-y-6" style={{ top: sidebarTop }}>
 
                                 {/* Stats Cards */}
-                                {!isDepartment && pageData.stats && pageData.stats.length > 0 && (
+                                {!isDepartment && !heroStrip && pageData.stats && pageData.stats.length > 0 && (
                                     <div className="hidden lg:grid grid-cols-2 gap-4">
                                         {pageData.stats.map((stat, i) => {
                                             const hasLink = Boolean(stat.link || stat.url);
@@ -432,7 +437,7 @@ const DynamicPage = () => {
                                                                 {stat.value}
                                                             </div>
                                                             {hasLink && (
-                                                                <div className="w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
+                                                                <div className="w-6 h-6 rounded-full bg-primary/5 text-primary flex items-center justify-center opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
                                                                     <ArrowUpRight className="w-3.5 h-3.5" />
                                                                 </div>
                                                             )}
@@ -513,7 +518,7 @@ const DynamicPage = () => {
                                     <div className="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white shadow-card border border-slate-800/80">
                                         <div className="flex items-center justify-between mb-5 pb-3 border-b border-white/10">
                                             <h4 className="text-base sm:text-lg font-bold flex items-center gap-2.5">
-                                                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                                                <span className="w-2 h-2 rounded-full bg-primary"></span>
                                                 Key Highlights
                                             </h4>
                                             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
@@ -568,16 +573,16 @@ const DynamicPage = () => {
                                                         <li key={i}>
                                                             <Component
                                                                 {...linkProps}
-                                                                className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 hover:border-blue-500/40 text-slate-200 hover:text-white transition-all group cursor-pointer"
+                                                                className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 hover:border-[#8fb0ee]/40 text-slate-200 hover:text-white transition-all group cursor-pointer"
                                                             >
                                                                 <div className="flex items-center gap-3 min-w-0 pr-2">
-                                                                    <ArrowRight className="w-4 h-4 text-blue-400 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                                                                    <ArrowRight className="w-4 h-4 text-[#8fb0ee] shrink-0 group-hover:translate-x-0.5 transition-transform" />
                                                                     <span className="text-sm font-semibold truncate" dangerouslySetInnerHTML={{ __html: labelText }}></span>
                                                                 </div>
                                                                 {pointUrl.startsWith('http') ? (
-                                                                    <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-blue-400 shrink-0 transition-colors" />
+                                                                    <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#8fb0ee] shrink-0 transition-colors" />
                                                                 ) : (
-                                                                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-400 shrink-0 transition-colors" />
+                                                                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#8fb0ee] shrink-0 transition-colors" />
                                                                 )}
                                                             </Component>
                                                         </li>
@@ -585,7 +590,7 @@ const DynamicPage = () => {
                                                 }
 
                                                 return (
-                                                    <li key={i} className={`rounded-xl border transition-all ${isExpanded ? 'bg-white/[0.07] border-blue-500/40 shadow-sm' : 'bg-white/[0.03] hover:bg-white/[0.06] border-white/5'}`}>
+                                                    <li key={i} className={`rounded-xl border transition-all ${isExpanded ? 'bg-white/[0.07] border-[#8fb0ee]/40 shadow-sm' : 'bg-white/[0.03] hover:bg-white/[0.06] border-white/5'}`}>
                                                         <div
                                                             role="button"
                                                             tabIndex={0}
@@ -600,9 +605,9 @@ const DynamicPage = () => {
                                                             className="w-full flex items-center justify-between p-3.5 text-left transition-colors cursor-pointer group focus:outline-none"
                                                         >
                                                             <div className="flex items-center gap-3 min-w-0 pr-2">
-                                                                <span className={`w-2 h-2 rounded-full shrink-0 transition-all ${isActive ? 'bg-blue-400 scale-125' : 'bg-slate-500 group-hover:bg-slate-300'}`}></span>
+                                                                <span className={`w-2 h-2 rounded-full shrink-0 transition-all ${isActive ? 'bg-[#8fb0ee] scale-125' : 'bg-slate-500 group-hover:bg-slate-300'}`}></span>
                                                                 <span 
-                                                                    className={`text-sm font-semibold transition-colors ${isActive ? 'text-blue-300 font-bold' : 'text-slate-200 group-hover:text-white'}`}
+                                                                    className={`text-sm font-semibold transition-colors ${isActive ? 'text-[#8fb0ee] font-bold' : 'text-slate-200 group-hover:text-white'}`}
                                                                     dangerouslySetInnerHTML={{ __html: labelText }}
                                                                 ></span>
                                                             </div>
@@ -619,12 +624,12 @@ const DynamicPage = () => {
                                                                             }
                                                                         }}
                                                                         title="Direct link"
-                                                                        className="p-1 rounded-md text-slate-400 hover:text-blue-300 hover:bg-white/10 transition-colors cursor-pointer"
+                                                                        className="p-1 rounded-md text-slate-400 hover:text-[#8fb0ee] hover:bg-white/10 transition-colors cursor-pointer"
                                                                     >
                                                                         {pointUrl.startsWith('http') ? <ExternalLink size={13} /> : <ArrowRight size={13} />}
                                                                     </button>
                                                                 )}
-                                                                <ChevronDown className={`w-4 h-4 text-slate-400 group-hover:text-white transition-transform duration-300 ${isExpanded ? 'rotate-180 text-blue-400' : ''}`} />
+                                                                <ChevronDown className={`w-4 h-4 text-slate-400 group-hover:text-white transition-transform duration-300 ${isExpanded ? 'rotate-180 text-[#8fb0ee]' : ''}`} />
                                                             </div>
                                                         </div>
 
@@ -639,7 +644,7 @@ const DynamicPage = () => {
                                                                                 target="_blank"
                                                                                 rel="noopener noreferrer"
                                                                                 onClick={(e) => e.stopPropagation()}
-                                                                                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-sm hover:shadow transition-all group/btn"
+                                                                                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold text-xs shadow-sm hover:shadow transition-all group/btn"
                                                                             >
                                                                                 <span>{actionText || 'Visit Official Portal'}</span>
                                                                                 <ExternalLink size={12} className="group-hover/btn:translate-x-0.5 transition-transform" />
@@ -648,7 +653,7 @@ const DynamicPage = () => {
                                                                             <Link 
                                                                                 to={pointUrl}
                                                                                 onClick={(e) => e.stopPropagation()}
-                                                                                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-sm hover:shadow transition-all group/btn"
+                                                                                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold text-xs shadow-sm hover:shadow transition-all group/btn"
                                                                             >
                                                                                 <span>{actionText || 'Explore Page'}</span>
                                                                                 <ArrowRight size={12} className="group-hover/btn:translate-x-0.5 transition-transform" />
@@ -672,7 +677,7 @@ const DynamicPage = () => {
 
                                 {/* Quick CTA */}
                                 {slug !== 'contact' && (
-                                    <Link to="/contact" className="block p-6 rounded-2xl border-2 border-slate-100 hover:border-blue-100 bg-white transition-colors cursor-pointer group">
+                                    <Link to="/contact" className="block p-6 rounded-2xl border-2 border-slate-100 hover:border-primary/20 bg-white transition-colors cursor-pointer group">
                                         <h4 className="text-lg font-semibold text-title mb-2 group-hover:text-primary transition-colors">Questions?</h4>
                                         <p className="text-sm text-muted font-light mb-4">Contact the MSIT administrative desk directly.</p>
                                         <div className="text-primary font-medium text-sm flex items-center group-hover:translate-x-2 transition-transform">
@@ -712,52 +717,51 @@ const DynamicPage = () => {
                         </button>
 
                         {/* Top banner / image */}
-                        <div className="bg-slate-900 text-white p-5 sm:p-8 pt-10 sm:pt-12 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px]"></div>
-                            <div className="flex gap-4 sm:gap-6 items-center relative z-10">
-                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 shadow-lg shrink-0">
+                        <div className="bg-white border-b border-slate-200 p-5 sm:p-8 pt-10 sm:pt-12 relative">
+                                                        <div className="flex gap-4 sm:gap-6 items-center relative z-10">
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-slate-100 shadow-sm shrink-0 bg-slate-50">
                                     <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <span className="inline-block px-2.5 py-1 bg-white/10 text-white text-[10px] font-black uppercase tracking-widest rounded mb-1.5 sm:mb-2 border border-white/5">{selectedMember.dept}</span>
-                                    <h3 className="text-xl sm:text-2xl font-black truncate">{selectedMember.name}</h3>
-                                    <p className="text-blue-300 text-xs sm:text-sm font-semibold line-clamp-2 mt-0.5">{selectedMember.role}</p>
+                                    <span className="inline-block px-2.5 py-1 bg-primary/10 text-primary text-[10px] font-semibold uppercase tracking-wider rounded mb-1.5 sm:mb-2">{selectedMember.dept}</span>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 leading-snug pr-10">{selectedMember.name}</h3>
+                                    <p className="text-primary text-xs sm:text-sm font-medium line-clamp-2 mt-1">{selectedMember.role}</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Details body */}
-                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-[#f8fafc]">
+                        <div className="p-5 sm:p-8 space-y-6 sm:space-y-8 bg-slate-50">
                             {selectedMember.bio && (
                                 <div>
-                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
-                                        <FileText className="w-4 h-4 text-blue-500" /> Professional Bio
+                                    <h4 className="font-sans! text-xs font-semibold text-slate-500 uppercase tracking-wider! mb-3 flex items-center gap-1.5">
+                                        <FileText className="w-4 h-4 text-primary" /> Professional Bio
                                     </h4>
-                                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-semibold">
+                                    <p className="text-slate-700 text-sm leading-relaxed">
                                         {selectedMember.bio}
                                     </p>
                                 </div>
                             )}
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
-                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Qualification</div>
-                                    <div className="text-xs font-extrabold text-slate-800">{selectedMember.qual || selectedMember.qualifications || "N/A"}</div>
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200">
+                                    <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Qualification</div>
+                                    <div className="text-sm font-medium text-slate-900 leading-snug">{selectedMember.qual || selectedMember.qualifications || "N/A"}</div>
                                 </div>
-                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-sm">
-                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Experience / Status</div>
-                                    <div className="text-xs font-extrabold text-slate-800">{selectedMember.experience} Years</div>
+                                <div className="bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200">
+                                    <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Experience / Status</div>
+                                    <div className="text-sm font-medium text-slate-900 leading-snug">{selectedMember.experience} Years</div>
                                 </div>
                             </div>
 
                             {selectedMember.goodAt && selectedMember.goodAt.length > 0 && (
                                 <div>
-                                    <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-1.5 border-b border-slate-200 pb-2">
-                                        <Star className="w-4 h-4 text-emerald-500 fill-emerald-500" /> Key Focus Areas
+                                    <h4 className="font-sans! text-xs font-semibold text-slate-500 uppercase tracking-wider! mb-3 flex items-center gap-1.5">
+                                        <Star className="w-4 h-4 text-primary fill-primary" /> Key Focus Areas
                                     </h4>
                                     <div className="flex flex-wrap gap-2">
                                         {selectedMember.goodAt.map((item, idx) => (
-                                            <span key={idx} className="px-2.5 py-1 bg-emerald-50 border border-emerald-100 rounded text-xs font-bold text-emerald-700">
+                                            <span key={idx} className="px-2.5 py-1 bg-primary/5 border border-primary/20 rounded-md text-xs font-medium text-primary">
                                                 {item}
                                             </span>
                                         ))}
@@ -769,7 +773,7 @@ const DynamicPage = () => {
                                 <div className="flex flex-col gap-2 shrink-0">
                                     <a 
                                         href={`mailto:${selectedMember.email}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-medium text-slate-700 transition-colors truncate"
                                     >
                                         <Mail className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.email}</span>
@@ -777,7 +781,7 @@ const DynamicPage = () => {
 
                                     <a 
                                         href={`tel:${selectedMember.phone.replace(/\s+/g, '')}`}
-                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-colors truncate"
+                                        className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-sm font-medium text-slate-700 transition-colors truncate"
                                     >
                                         <Phone className="w-4 h-4 shrink-0" />
                                         <span className="truncate text-left">{selectedMember.phone}</span>
@@ -790,7 +794,7 @@ const DynamicPage = () => {
                                             href={selectedMember.pdfLink} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="w-10 h-10 bg-slate-900 hover:bg-slate-800 text-white rounded-xl flex items-center justify-center transition-colors"
+                                            className="w-10 h-10 bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 rounded-xl flex items-center justify-center transition-colors"
                                             title="View Official Profile PDF"
                                         >
                                             <FileText className="w-4 h-4" />

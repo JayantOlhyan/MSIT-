@@ -128,7 +128,7 @@ const Footer = () => {
                             ))}
                         </div>
                         <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-900">
-                            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-blue-400 mb-3">Newsletter</h4>
+                            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#8fb0ee] mb-3">Newsletter</h4>
                             <Link 
                                 to="/newsletters-magazines" 
                                 className="flex items-center justify-between w-full bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-primary/50 text-slate-300 hover:text-white rounded-lg px-4 py-2.5 text-xs font-bold uppercase tracking-widest transition-all group"
