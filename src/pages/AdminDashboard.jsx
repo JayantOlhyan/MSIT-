@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trash2, Plus, AlertCircle, CheckCircle2, Lock } from 'lucide-react';
+import { Trash2, Plus, AlertCircle, CheckCircle2, Lock, User, Eye, EyeOff, ArrowRight, ShieldCheck } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const AdminDashboard = () => {
@@ -7,6 +7,7 @@ const AdminDashboard = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(() => sessionStorage.getItem('msit_admin_auth') === 'true');
     const [adminId, setAdminId] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const [loginError, setLoginError] = useState('');
 
     // Dashboard State
@@ -260,54 +261,170 @@ const AdminDashboard = () => {
     // -------------------------------------------------------------
     if (!isLoggedIn) {
         return (
-            <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
-                <div className="bg-white rounded-2xl shadow-card overflow-hidden max-w-md w-full animate-fade-in relative border border-transparent">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
-                    <div className="p-8">
-                        <div className="flex justify-center mb-6">
-                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                                <Lock className="w-8 h-8 text-blue-600" />
-                            </div>
+            <div className="relative min-h-screen flex items-center justify-center p-4 sm:p-6 overflow-hidden bg-[#040d1e]">
+                <SEO title="MSIT Admin Access" description="Sign in to manage the Maharaja Surajmal Institute of Technology (MSIT) website content." canonicalPath="/admin" />
+
+                {/* Night-tinted Campus Backdrop */}
+                <img
+                    src="/campus/campus-side-avenue.webp"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover object-center scale-[1.02] select-none pointer-events-none brightness-[0.36] contrast-[1.12] saturate-[0.3]"
+                />
+                <div
+                    aria-hidden="true"
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                        background:
+                            'radial-gradient(circle at 28% 18%, rgba(29, 78, 216, 0.36) 0%, rgba(7, 19, 44, 0.84) 55%, rgba(3, 9, 23, 0.94) 100%)',
+                    }}
+                />
+
+                {/* Subtle Bottom-Right Architectural Ribbon Accent */}
+                <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 rounded-tl-[100%] border-t border-l border-blue-400/25 bg-gradient-to-tl from-[#0c2d6b]/65 via-[#0a214e]/35 to-transparent"
+                />
+
+                {/* Frosted Glassmorphism Card */}
+                <div
+                    className="relative z-10 w-full max-w-[440px] rounded-[28px] overflow-hidden border border-white/20 shadow-[0_32px_80px_rgba(2,6,23,0.78),inset_0_1px_1px_rgba(255,255,255,0.28)] backdrop-blur-2xl"
+                    style={{
+                        background:
+                            'linear-gradient(155deg, rgba(26, 68, 148, 0.56) 0%, rgba(12, 29, 64, 0.72) 48%, rgba(8, 19, 42, 0.84) 100%)',
+                    }}
+                >
+                    {/* Top-Left Specular Glass Highlight */}
+                    <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full opacity-55"
+                        style={{
+                            background: 'radial-gradient(circle, rgba(96, 165, 250, 0.35) 0%, transparent 70%)',
+                        }}
+                    />
+
+                    <div className="relative px-7 pt-9 pb-7 sm:px-10 sm:pt-10 sm:pb-8">
+                        {/* Monochrome White Crest Emblem */}
+                        <div className="flex justify-center mb-5">
+                            <img
+                                src="/msit-logo.webp"
+                                alt="Maharaja Surajmal Institute of Technology Crest"
+                                className="w-24 h-24 object-contain select-none brightness-0 invert opacity-95 drop-shadow-[0_4px_16px_rgba(255,255,255,0.14)]"
+                            />
                         </div>
-                        <h1 className="text-2xl font-bold text-center text-slate-900 mb-2">Admin Access</h1>
-                        <p className="text-center text-slate-500 mb-8 text-sm">Sign in to manage MSIT website content</p>
+
+                        {/* Heading & Subtitle */}
+                        <h1 className="font-sans text-[28px] sm:text-[31px] tracking-tight text-center text-white leading-tight mb-2">
+                            <span className="font-extrabold">MSIT</span>{' '}
+                            <span className="font-normal text-white/95">Admin Access</span>
+                        </h1>
+                        <p className="text-center text-slate-300/85 text-sm font-normal mb-7">
+                            Sign in to manage the MSIT website content
+                        </p>
 
                         {loginError && (
-                            <div className="mb-6 p-3 bg-red-50 text-red-600 text-sm font-medium rounded-lg text-center border border-red-100">
-                                {loginError}
+                            <div
+                                role="alert"
+                                aria-live="polite"
+                                className="mb-5 px-4 py-3 rounded-xl bg-red-500/15 border border-red-400/35 text-red-100 text-xs sm:text-sm font-medium flex items-center justify-center gap-2 text-center"
+                            >
+                                <AlertCircle className="w-4 h-4 text-red-300 shrink-0" />
+                                <span>{loginError}</span>
                             </div>
                         )}
 
-                        <form onSubmit={handleLogin} className="space-y-5">
+                        <form onSubmit={handleLogin} className="space-y-5" noValidate={false}>
                             <div>
-                                <label className="text-sm font-semibold text-slate-700 block mb-1.5">Admin ID</label>
+                                <label
+                                    htmlFor="admin-id"
+                                    className="flex items-center gap-2 text-sm font-medium text-white/90 mb-2 cursor-pointer"
+                                >
+                                    <User className="w-4 h-4 text-slate-200/85" strokeWidth={1.8} />
+                                    <span>Admin ID</span>
+                                </label>
                                 <input
+                                    id="admin-id"
+                                    name="username"
                                     type="text"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+                                    autoComplete="username"
+                                    autoCorrect="off"
+                                    autoCapitalize="none"
+                                    spellCheck={false}
+                                    enterKeyHint="next"
+                                    className="w-full min-h-[48px] px-4 py-3 rounded-xl border border-white/20 bg-slate-900/45 text-white text-base placeholder:text-slate-300/55 shadow-[inset_0_1px_2px_rgba(0,0,0,0.35)] focus:border-blue-400/80 focus:bg-slate-900/65 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 transition-colors"
                                     placeholder="Enter Admin ID"
                                     value={adminId}
-                                    onChange={(e) => setAdminId(e.target.value)}
+                                    onChange={(e) => {
+                                        setAdminId(e.target.value);
+                                        if (loginError) setLoginError('');
+                                    }}
                                 />
                             </div>
+
                             <div>
-                                <label className="text-sm font-semibold text-slate-700 block mb-1.5">Password</label>
-                                <input
-                                    type="password"
-                                    required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
-                                    placeholder="••••••••"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                />
+                                <label
+                                    htmlFor="admin-password"
+                                    className="flex items-center gap-2 text-sm font-medium text-white/90 mb-2 cursor-pointer"
+                                >
+                                    <Lock className="w-4 h-4 text-slate-200/85" strokeWidth={1.8} />
+                                    <span>Password</span>
+                                </label>
+                                <div className="relative">
+                                    <input
+                                        id="admin-password"
+                                        name="password"
+                                        type={showPassword ? 'text' : 'password'}
+                                        required
+                                        autoComplete="current-password"
+                                        enterKeyHint="done"
+                                        className="w-full min-h-[48px] pl-4 pr-12 py-3 rounded-xl border border-white/20 bg-slate-900/45 text-white text-base placeholder:text-slate-300/60 shadow-[inset_0_1px_2px_rgba(0,0,0,0.35)] focus:border-blue-400/80 focus:bg-slate-900/65 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 transition-colors"
+                                        placeholder="•••••••"
+                                        value={password}
+                                        onChange={(e) => {
+                                            setPassword(e.target.value);
+                                            if (loginError) setLoginError('');
+                                        }}
+                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowPassword((prev) => !prev)}
+                                        aria-label={showPassword ? 'Hide password' : 'Show password'}
+                                        aria-pressed={showPassword}
+                                        className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-lg flex items-center justify-center text-slate-300/75 hover:text-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-blue-400 transition-colors cursor-pointer"
+                                    >
+                                        {showPassword ? (
+                                            <Eye className="w-4 h-4" strokeWidth={1.8} />
+                                        ) : (
+                                            <EyeOff className="w-4 h-4" strokeWidth={1.8} />
+                                        )}
+                                    </button>
+                                </div>
                             </div>
-                            <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2 cursor-pointer">
-                                Login to Dashboard
+
+                            <button
+                                type="submit"
+                                className="w-full min-h-[50px] mt-2 py-3.5 px-5 rounded-xl bg-gradient-to-r from-[#1d63ff] via-[#1354e8] to-[#0c43c4] hover:from-[#296eff] hover:to-[#1249ce] text-white font-semibold text-base shadow-[0_10px_28px_rgba(19,84,232,0.45),inset_0_1px_0_rgba(255,255,255,0.28)] flex items-center justify-center gap-2.5 transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300"
+                            >
+                                <span>Login to Dashboard</span>
+                                <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
                             </button>
                         </form>
+
+                        {/* Secure Admin Portal Divider */}
+                        <div className="mt-7 flex items-center gap-3">
+                            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/20 to-white/25" />
+                            <div className="flex items-center gap-1.5 text-xs text-slate-300/80 font-normal">
+                                <ShieldCheck className="w-4 h-4 text-slate-300/85" strokeWidth={1.75} />
+                                <span>Secure Admin Portal</span>
+                            </div>
+                            <div className="h-px flex-1 bg-gradient-to-l from-transparent via-white/20 to-white/25" />
+                        </div>
                     </div>
-                    <div className="bg-slate-50 p-4 text-center text-xs text-slate-500 border-t border-slate-100">
-                        Maharaja Surajmal Institute of Technology - Secure Admin Portal
+
+                    {/* Translucent Frosted Footer Bar */}
+                    <div className="bg-white/[0.06] border-t border-white/15 py-3.5 px-6 text-center text-xs text-slate-200/80 font-normal">
+                        Maharaja Surajmal Institute of Technology (MSIT)
                     </div>
                 </div>
             </div>
