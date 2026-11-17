@@ -260,6 +260,7 @@ export const societiesData = {
         joinUrl: "https://ieee.org/membership",
         logoText: "IEEE",
         logoSymbol: "⚡",
+        logo: "/societies/ieee.png",
         socials: {
             instagram: "https://instagram.com/ieeemsit",
             linkedin: "https://linkedin.com/company/ieee-msit",
@@ -388,6 +389,7 @@ export const societiesData = {
         joinUrl: "https://club.ndl.iitkgp.ac.in/",
         logoText: "NDLI",
         logoSymbol: "📚",
+        logo: "/societies/ndli.png",
         socials: {
             instagram: "https://instagram.com/msit_ndliclub",
             linkedin: "https://linkedin.com/company/msit-ndli",
@@ -512,6 +514,7 @@ export const societiesData = {
         joinUrl: "https://www.ecellmsit.in/",
         logoText: "E-CELL",
         logoSymbol: "🚀",
+        logo: "/societies/ecell.png",
         socials: {
             instagram: "https://instagram.com/ecell_msit",
             linkedin: "https://linkedin.com/company/ecell-msit",
@@ -647,6 +650,7 @@ export const societiesData = {
         joinUrl: "mailto:sudeshpahal@msit.in?subject=Join%20UBA%20MSIT%20Volunteer%20Team",
         logoText: "UBA",
         logoSymbol: "🌾",
+        logo: "/societies/uba.png",
         socials: {
             instagram: "https://instagram.com/msit_official",
             linkedin: "https://linkedin.com/school/msit-delhi",
@@ -784,6 +788,7 @@ export const societiesData = {
         joinUrl: "mailto:deepshikha@msit.in?subject=Inquiry%20SPARK%20MSIT%20Research",
         logoText: "SPARK",
         logoSymbol: "💡",
+        logo: "/societies/spark.png",
         socials: {
             instagram: "https://instagram.com/msit_official",
             linkedin: "https://linkedin.com/school/msit-delhi",
@@ -932,6 +937,7 @@ export const allSocietiesList = [
         link: "/society-ieee",
         badgeColor: "blue",
         logoSymbol: "⚡",
+        logo: "/societies/ieee.png",
         featured: true
     },
     {
@@ -946,6 +952,7 @@ export const allSocietiesList = [
         link: "/society-ndli",
         badgeColor: "emerald",
         logoSymbol: "📚",
+        logo: "/societies/ndli.png",
         featured: false
     },
     {
@@ -974,6 +981,7 @@ export const allSocietiesList = [
         link: "/society-ieee",
         badgeColor: "orange",
         logoSymbol: "🤖",
+        logo: "/societies/eyantra.png",
         featured: false
     },
     {
@@ -988,6 +996,7 @@ export const allSocietiesList = [
         link: "/society-ecell",
         badgeColor: "amber",
         logoSymbol: "🚀",
+        logo: "/societies/ecell.png",
         featured: true
     },
     {
@@ -1016,6 +1025,7 @@ export const allSocietiesList = [
         link: "/events",
         badgeColor: "indigo",
         logoSymbol: "🎙️",
+        logo: "/societies/cerebrate.png",
         featured: false
     },
     {
@@ -1030,6 +1040,7 @@ export const allSocietiesList = [
         link: "/society-ndli",
         badgeColor: "green",
         logoSymbol: "🌱",
+        logo: "/societies/prakriti.png",
         featured: false
     },
     {
@@ -1044,6 +1055,7 @@ export const allSocietiesList = [
         link: "/society-uba",
         badgeColor: "emerald",
         logoSymbol: "🌾",
+        logo: "/societies/uba.png",
         featured: false
     },
     {
@@ -1058,6 +1070,7 @@ export const allSocietiesList = [
         link: "/society-spark",
         badgeColor: "indigo",
         logoSymbol: "💡",
+        logo: "/societies/spark.png",
         featured: false
     }
 ];
