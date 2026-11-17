@@ -202,10 +202,9 @@ const Header = () => {
                         : 'text-black border-b border-slate-100/80'
                 }`}>
                     <div className="w-full max-w-screen-2xl mx-auto flex items-center min-h-7 sm:min-h-8 py-1.5 sm:py-1">
-                        <nav aria-label="Institutional links" className="flex flex-wrap [flex-wrap:balance] items-center gap-x-3 gap-y-1 sm:gap-x-0">
+                        <nav aria-label="Institutional links" className="flex flex-wrap items-center gap-y-1">
                             {topStripLinks.map((link, i) => (
-                                <span key={link.url} className="flex items-center">
-                                    {i > 0 && <span className={`hidden sm:inline mx-2.5 sm:mx-3 text-[10px] select-none ${isTransparent ? 'text-white/40' : 'text-black/30'}`} aria-hidden="true">|</span>}
+                                <span key={link.url} className="inline-flex items-center">
                                     <a 
                                         href={link.url} 
                                         target="_blank" 
@@ -218,6 +217,18 @@ const Header = () => {
                                     >
                                         {link.name}
                                     </a>
+                                    {i < topStripLinks.length - 1 && (
+                                        <span 
+                                            className={`mx-2 sm:mx-2.5 text-[10px] sm:text-[11px] select-none font-normal ${
+                                                i === 2 ? 'hidden sm:inline' : ''
+                                            } ${
+                                                isTransparent ? 'text-white/50' : 'text-black/35'
+                                            }`} 
+                                            aria-hidden="true"
+                                        >
+                                            |
+                                        </span>
+                                    )}
                                 </span>
                             ))}
                         </nav>

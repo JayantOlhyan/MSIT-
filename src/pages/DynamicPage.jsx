@@ -199,7 +199,7 @@ const DynamicPage = () => {
                     heroImage="/campus-hero.webp"
                     heroImageAlt="Vibrant MSIT student societies and tech community"
                 />
-                <section className="py-16 sm:py-24 px-4 sm:px-8">
+                <section className="py-8 sm:py-16 px-4 sm:px-6">
                     <div className="max-w-7xl mx-auto">
                         <SocietiesHubView />
                     </div>
@@ -237,6 +237,10 @@ const DynamicPage = () => {
     }
 
     const isDepartment = ['cse', 'it', 'ece', 'eee', 'applied-sciences'].includes(slug);
+    // Only the fee page uses its sidebar as tabs, so it alone keeps the sidebar above the content on phones.
+    const sidebarFirstOnMobile = slug === 'online-fee';
+    // Pages whose content stands on its own (events, policy pages) drop the sidebar and use the full width.
+    const fullWidth = pageData.layout === 'full';
     const courseSchema = isDepartment ? {
         "@context": "https://schema.org",
         "@type": "Course",
@@ -276,11 +280,11 @@ const DynamicPage = () => {
                 heroImageAlt={pageData.heroImageAlt}
             />
 
-            {/* KEY FIGURES (department pages) */}
-            {isDepartment && pageData.stats && pageData.stats.length > 0 && (
+            {/* KEY FIGURES (department pages, and full-width pages whose sidebar is hidden) */}
+            {(isDepartment || fullWidth) && pageData.stats && pageData.stats.length > 0 && (
                 <section aria-label="Key figures" className="bg-white border-b border-slate-200">
-                    <div className="max-w-[92rem] mx-auto px-6">
-                        <div className="grid grid-cols-2 lg:grid-cols-4">
+                    <div className="max-w-[92rem] mx-auto px-4 sm:px-6">
+                        <div className={`grid grid-cols-2 ${pageData.stats.length >= 4 ? 'lg:grid-cols-4' : ''}`}>
                             {pageData.stats.map((stat, i) => {
                                 // First column lines up with the content edge; dividers between cells.
                                 const pad = i === 0 ? 'pl-0' : i === 2 ? 'pl-0 lg:pl-8' : 'pl-5 lg:pl-8';
@@ -289,11 +293,11 @@ const DynamicPage = () => {
                                 const hasLink = Boolean(targetUrl);
 
                                 const content = (
-                                    <div className={`py-4 lg:py-5 pr-5 ${pad} ${lines} border-slate-200 h-full flex flex-col justify-between transition-colors ${
+                                    <div className={`py-3 lg:py-5 pr-4 ${pad} ${lines} border-slate-200 h-full flex flex-col justify-between transition-colors ${
                                         hasLink ? 'hover:bg-blue-50/50 cursor-pointer group' : ''
                                     }`}>
                                         <div className="flex items-center justify-between gap-2">
-                                            <div className={`text-2xl font-bold tabular-nums leading-tight transition-colors ${
+                                            <div className={`text-xl sm:text-2xl font-bold tabular-nums leading-tight transition-colors ${
                                                 hasLink ? 'text-title group-hover:text-primary' : 'text-title'
                                             }`}>
                                                 {stat.value}
@@ -325,16 +329,17 @@ const DynamicPage = () => {
             )}
 
             {/* MAIN CONTENT LAYOUT */}
-            <section className={`${isDepartment ? 'py-16' : 'py-24'} bg-white relative transition-colors`}>
-                <div className="max-w-[92rem] mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
+            <section className={`${isDepartment || fullWidth ? 'py-8 sm:py-16' : 'py-12 sm:py-24'} bg-white relative transition-colors`}>
+                <div className="max-w-[92rem] mx-auto px-4 sm:px-6">
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
 
                         {/* Main Typography Area */}
-                        <div className="w-full lg:w-2/3 order-2 lg:order-1">
+                        {/* On phones the content comes first, except on the fee page (see sidebarFirstOnMobile). */}
+                        <div className={`w-full ${fullWidth ? '' : 'lg:w-2/3'} ${sidebarFirstOnMobile ? 'order-2' : 'order-1'} lg:order-1`}>
                             {isDepartment ? (
                                 <div>
                                     <div 
-                                        className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
+                                        className="prose prose-sm sm:prose-lg prose-slate max-w-none font-light leading-loose text-body" 
                                         dangerouslySetInnerHTML={{ __html: processedContent }}
                                         onClick={handleContentClick}
                                     ></div>
@@ -347,7 +352,7 @@ const DynamicPage = () => {
                                 <pageData.component />
                             ) : (
                                 <div 
-                                    className="prose prose-lg prose-slate max-w-none font-light leading-loose text-body" 
+                                    className={`prose prose-sm sm:prose-lg prose-slate max-w-none font-normal leading-loose text-body ${fullWidth ? 'policy-page' : ''}`} 
                                     dangerouslySetInnerHTML={{ __html: processedContent }}
                                     onClick={handleContentClick}
                                 ></div>
@@ -355,7 +360,7 @@ const DynamicPage = () => {
                         </div>
 
                         {/* Interactive Sidebar */}
-                        <div className="w-full lg:w-1/3 order-1 lg:order-2">
+                        <div className={`${fullWidth ? 'hidden' : 'w-full lg:w-1/3'} ${sidebarFirstOnMobile ? 'order-1' : 'order-2'} lg:order-2`}>
                             <div className="sticky top-32 space-y-6 lg:max-h-[calc(100vh-9rem)] lg:overflow-y-auto scrollbar-hide">
 
                                 {/* Stats Cards */}
@@ -631,7 +636,7 @@ const DynamicPage = () => {
 
                     </div>
                     {isDepartment && (
-                        <div id="department-labs" className="mt-16">
+                        <div id="department-labs" className="mt-10 sm:mt-16">
                             <DepartmentLabsSection deptKey={slug === 'applied-sciences' ? 'as' : slug} />
                         </div>
                     )}

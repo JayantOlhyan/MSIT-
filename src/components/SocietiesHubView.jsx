@@ -1,11 +1,26 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-    Search, Sparkles, ArrowRight, ArrowUpRight, Filter, 
-    Layers, Users, Trophy, Code2, Globe, GraduationCap, 
-    Calendar, CheckCircle2, ChevronRight 
-} from 'lucide-react';
+import { Search, ArrowRight } from 'lucide-react';
 import { allSocietiesList } from '../data/societiesData';
+
+// Counts from 0 to `to` once when the page opens, at a steady pace so every counter lands at the same moment. Shows the final number straight away for reduced motion.
+const CountUp = ({ to, duration = 1400 }) => {
+    const reduce = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const [n, setN] = useState(reduce ? to : 0);
+    useEffect(() => {
+        if (reduce) return;
+        let frame;
+        const start = performance.now();
+        const tick = (now) => {
+            const p = Math.min(1, (now - start) / duration);
+            setN(Math.floor(to * p));
+            if (p < 1) frame = requestAnimationFrame(tick);
+        };
+        frame = requestAnimationFrame(tick);
+        return () => cancelAnimationFrame(frame);
+    }, [to, duration, reduce]);
+    return <span aria-label={to.toLocaleString('en-IN')}>{n.toLocaleString('en-IN')}</span>;
+};
 
 const SocietiesHubView = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -20,236 +35,153 @@ const SocietiesHubView = () => {
         'Social Responsibility'
     ];
 
+    // One directory: flagship societies first, then the rest in their listed order.
     const filteredSocieties = useMemo(() => {
-        return allSocietiesList.filter(society => {
-            const matchesCat = selectedCategory === 'All' || society.category === selectedCategory;
-            const matchesSearch = 
-                society.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                society.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                society.description.toLowerCase().includes(searchQuery.toLowerCase());
-            return matchesCat && matchesSearch;
-        });
+        const q = searchQuery.toLowerCase();
+        return allSocietiesList
+            .filter(society => {
+                const matchesCat = selectedCategory === 'All' || society.category === selectedCategory;
+                const matchesSearch =
+                    society.name.toLowerCase().includes(q) ||
+                    society.tagline.toLowerCase().includes(q) ||
+                    society.description.toLowerCase().includes(q);
+                return matchesCat && matchesSearch;
+            })
+            .sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)));
     }, [selectedCategory, searchQuery]);
 
-    const featuredSocieties = allSocietiesList.filter(s => s.featured);
-
     return (
-        <div className="space-y-16">
-            
-            {/* HERO INTRODUCTION BANNER */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 text-white relative overflow-hidden shadow-xl border border-slate-800">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                
-                <div className="relative z-10 max-w-3xl space-y-4">
-                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-                        Campus Life & Innovation
-                    </span>
-                    <h2 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight">
-                        Where Students Build, Lead, and Belong.
-                    </h2>
-                    <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed">
-                        Education at MSIT extends far beyond lecture halls. Our 20+ student-led societies provide a dynamic platform for innovation, hackathons, robotics, performing arts, and national research.
-                    </p>
-                    <div className="flex flex-wrap gap-4 pt-2">
-                        <div className="flex items-center gap-2 text-xs font-bold text-slate-200">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-                            <span>22+ Active Societies</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs font-bold text-slate-200">
-                            <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-                            <span>50,000+ Community Reach</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs font-bold text-slate-200">
-                            <span className="w-2 h-2 rounded-full bg-purple-400"></span>
-                            <span>100+ Annual Events</span>
-                        </div>
+        <div className="space-y-12 sm:space-y-16">
+
+            {/* Key figures: one thin strip, numbers count up on arrival */}
+            <dl className="bg-white rounded-2xl px-4 py-4 sm:px-10 sm:py-5 grid grid-cols-3 gap-3 sm:gap-8 ring-1 ring-slate-200/70">
+                {[[22, '+', 'Active societies'], [50000, '+', 'Community reach'], [100, '+', 'Events a year']].map(([value, suffix, label]) => (
+                    <div key={label} className="flex flex-col-reverse md:flex-row-reverse items-center md:items-baseline justify-center gap-0.5 md:gap-2.5 text-center">
+                        <dt className="text-[11px] sm:text-sm text-slate-600 whitespace-nowrap">{label}</dt>
+                        <dd className="font-[Libre_Baskerville,serif] text-lg sm:text-3xl font-bold text-primary tabular-nums leading-none whitespace-nowrap">
+                            <CountUp to={value} duration={2000} />{suffix}
+                        </dd>
                     </div>
-                </div>
-            </div>
+                ))}
+            </dl>
 
-            {/* FEATURED SPOTLIGHT SECTION */}
-            <div className="space-y-6">
-                <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                    <h3 className="text-base font-black uppercase tracking-wider text-slate-900 flex items-center gap-2">
-                        <Trophy className="w-4 h-4 text-purple-600" />
-                        <span>Flagship Chapters & Spotlight</span>
-                    </h3>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {featuredSocieties.map((society) => (
-                        <div 
-                            key={society.id}
-                            className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 hover:border-purple-300 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
-                        >
-                            <div className="space-y-4">
-                                <div className="flex items-center justify-between">
-                                    <div className={`w-14 h-14 rounded-2xl text-xl flex items-center justify-center overflow-hidden ${society.logo ? 'bg-white/95 p-1 shadow-sm' : 'bg-slate-900 text-white font-mono font-bold border border-slate-800 shadow-md'}`}>
-                                        {society.logo ? (
-                                            <img src={society.logo} alt={`${society.name} Logo`} className="w-full h-full object-contain" />
-                                        ) : (
-                                            society.logoSymbol
-                                        )}
-                                    </div>
-                                    <span className="px-3 py-1 bg-purple-50 text-purple-700 font-bold rounded-full text-xs border border-purple-100 uppercase tracking-wider">
-                                        {society.category}
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <h4 className="text-xl font-black text-slate-900 group-hover:text-purple-600 transition-colors">
-                                        {society.name}
-                                    </h4>
-                                    <p className="text-xs font-semibold text-purple-600 mb-2">
-                                        {society.tagline}
-                                    </p>
-                                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
-                                        {society.description}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
-                                <div className="text-xs text-slate-500 font-medium">
-                                    Est. <strong className="text-slate-800 font-bold">{society.established}</strong> · {society.members}
-                                </div>
-                                <Link 
-                                    to={society.link}
-                                    className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 group-hover:bg-purple-600 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
-                                >
-                                    <span>Explore Chapter</span>
-                                    <ArrowRight className="w-3.5 h-3.5" />
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* SEARCH & FILTER CONTROLS */}
-            <div className="space-y-6 pt-4">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                    
-                    {/* Search Input */}
-                    <div className="relative w-full md:w-96">
-                        <Search className="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
+            {/* Directory */}
+            <section className="space-y-5 sm:space-y-6">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-3 sm:gap-4">
+                    <div>
+                        <h3 className="text-xl sm:text-3xl font-extrabold text-slate-900">All societies</h3>
+                        <p className="mt-1 text-sm text-slate-600">{filteredSocieties.length} {filteredSocieties.length === 1 ? 'society' : 'societies'}{selectedCategory !== 'All' ? ` in ${selectedCategory}` : ''}</p>
+                    </div>
+                    <label className="relative w-full lg:w-80">
+                        <span className="sr-only">Search societies</span>
+                        <Search className="w-4 h-4 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2" aria-hidden="true" />
                         <input
-                            type="text"
-                            placeholder="Search societies by name, tech or skill..."
+                            type="search"
+                            placeholder="Search by name or skill"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 text-slate-900 rounded-2xl text-xs sm:text-sm focus:outline-none focus:border-purple-500 shadow-sm transition-all"
+                            className="w-full pl-11 pr-4 py-2.5 sm:py-3 bg-white text-slate-900 placeholder:text-slate-500 rounded-xl text-sm outline-none ring-1 ring-slate-200 focus:ring-2 focus:ring-primary transition-shadow"
                         />
-                    </div>
-
-                    {/* Category Filter Pills */}
-                    <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
-                        {categories.map((cat) => (
-                            <button
-                                key={cat}
-                                onClick={() => setSelectedCategory(cat)}
-                                className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
-                                    selectedCategory === cat
-                                        ? 'bg-purple-600 text-white shadow-md'
-                                        : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-                                }`}
-                            >
-                                {cat}
-                            </button>
-                        ))}
-                    </div>
-
+                    </label>
                 </div>
 
-                {/* SOCIETIES DIRECTORY CARDS */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filteredSocieties.map((item) => (
-                        <div
-                            key={item.id}
-                            className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-purple-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between group"
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {categories.map((cat) => (
+                        <button
+                            key={cat}
+                            type="button"
+                            aria-pressed={selectedCategory === cat}
+                            onClick={() => setSelectedCategory(cat)}
+                            className={`px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full text-[11px] sm:text-sm font-semibold whitespace-nowrap ring-1 transition-colors cursor-pointer ${
+                                selectedCategory === cat
+                                    ? 'bg-primary text-white ring-primary'
+                                    : 'bg-white text-slate-700 ring-slate-200 hover:text-primary'
+                            }`}
                         >
-                            <div className="space-y-4">
-                                <div className="flex items-center justify-between">
-                                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors overflow-hidden ${item.logo ? 'bg-white/95 p-1' : 'bg-slate-100 text-slate-800 font-mono font-black text-sm border border-slate-200 group-hover:bg-purple-600 group-hover:text-white'}`}>
-                                        {item.logo ? (
-                                            <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
-                                        ) : (
-                                            item.logoSymbol
-                                        )}
-                                    </div>
-                                    <span className="px-2.5 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded-md">
-                                        {item.category}
-                                    </span>
-                                </div>
+                            {cat}
+                        </button>
+                    ))}
+                </div>
 
-                                <div>
-                                    <h4 className="text-base font-black text-slate-900 group-hover:text-purple-600 transition-colors">
-                                        {item.name}
-                                    </h4>
-                                    <div className="text-xs text-purple-600 font-medium mb-2">
-                                        {item.tagline}
-                                    </div>
-                                    <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed font-light">
-                                        {item.description}
-                                    </p>
+                <div className="grid grid-cols-3 gap-x-2.5 gap-y-3 sm:gap-5">
+                    {filteredSocieties.map((item) => (
+                        <Link
+                            key={item.id}
+                            to={item.link}
+                            className="group bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 flex flex-col ring-1 ring-slate-200/70 hover:ring-primary/40 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-14px_rgba(15,23,42,0.35)] focus-visible:ring-2 focus-visible:ring-primary outline-none transition duration-200 ease-out"
+                        >
+                            <div className="flex items-start justify-between gap-2">
+                                <div className={`w-7 h-7 sm:w-12 sm:h-12 rounded-md sm:rounded-xl flex items-center justify-center overflow-hidden shrink-0 ${item.logo ? 'bg-white ring-1 ring-slate-200 p-0.5 sm:p-1' : 'bg-slate-100 text-primary font-[Libre_Baskerville,serif] font-bold text-[10px] sm:text-base'}`}>
+                                    {item.logo ? (
+                                        <img src={item.logo} alt="" className="w-full h-full object-contain" />
+                                    ) : (
+                                        monogram(item.name)
+                                    )}
                                 </div>
+                                {item.featured && (
+                                    <span className="text-[9px] sm:text-xs font-semibold text-primary leading-none mt-0.5 sm:mt-0">Flagship</span>
+                                )}
                             </div>
 
-                            <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span className="text-[11px] text-slate-400 font-medium">
-                                    Est. {item.established}
+                            <h4 className="mt-3 sm:mt-5 text-[12.5px] sm:text-lg font-bold text-slate-900 leading-snug line-clamp-2 sm:line-clamp-none group-hover:text-primary transition-colors">
+                                {item.name}
+                            </h4>
+                            <p className="hidden sm:block mt-0.5 text-sm font-medium text-primary line-clamp-2">{item.tagline}</p>
+                            <p className="hidden sm:block mt-3 text-sm text-slate-700 leading-relaxed line-clamp-3">{item.description}</p>
+
+                            <div className="mt-auto pt-3 sm:pt-5 flex items-center justify-between gap-1 text-[10px] sm:text-xs text-slate-600">
+                                <span className="truncate">
+                                    <span className="hidden sm:inline">{item.category} · </span>Est. {item.established}
                                 </span>
-                                <Link
-                                    to={item.link}
-                                    className="text-xs font-bold text-purple-600 hover:text-purple-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform"
-                                >
-                                    <span>Learn More</span>
-                                    <ArrowRight className="w-3.5 h-3.5" />
-                                </Link>
+                                <ArrowRight className="hidden sm:block w-4 h-4 text-primary shrink-0 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
                 {filteredSocieties.length === 0 && (
-                    <div className="text-center py-16 bg-white rounded-3xl border border-slate-200 p-8">
-                        <p className="text-sm text-slate-500 font-light">
-                            No societies found matching "{searchQuery}" in category "{selectedCategory}".
+                    <div className="text-center py-10 sm:py-16 bg-white rounded-2xl px-4">
+                        <p className="text-sm text-slate-700">
+                            No societies match "{searchQuery}" in {selectedCategory}.
                         </p>
                         <button
+                            type="button"
                             onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
-                            className="mt-4 px-4 py-2 bg-purple-600 text-white rounded-xl text-xs font-bold cursor-pointer hover:bg-purple-500 transition-colors"
+                            className="mt-4 px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold cursor-pointer hover:bg-primary/90 transition-colors"
                         >
-                            Reset Filters
+                            Clear search and filters
                         </button>
                     </div>
                 )}
-            </div>
+            </section>
 
-            {/* HOW TO START OR JOIN A SOCIETY BANNER */}
-            <div className="p-8 rounded-3xl bg-slate-100 border border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-                <div className="md:col-span-2 space-y-2">
-                    <h4 className="text-lg font-black text-slate-900">
-                        Want to start a new student club or initiative?
-                    </h4>
-                    <p className="text-xs text-slate-600 leading-relaxed font-light">
+            {/* Start a society */}
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
+                <div className="space-y-1.5 sm:space-y-2 max-w-2xl">
+                    <h4 className="text-base sm:text-xl font-bold text-slate-900">Want to start a new student club or initiative?</h4>
+                    <p className="text-sm text-slate-700 leading-relaxed">
                         Students with unique technical ideas or community initiatives can submit proposals to the MSIT Student Welfare Committee and Faculty Board.
                     </p>
                 </div>
-                <div className="text-left md:text-right">
-                    <Link
-                        to="/contact"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
-                    >
-                        <span>Contact Coordinator</span>
-                        <ArrowRight className="w-4 h-4" />
-                    </Link>
-                </div>
+                <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 bg-primary hover:bg-primary/90 text-white rounded-full text-sm font-semibold transition-colors shrink-0 self-start md:self-auto"
+                >
+                    Contact coordinator
+                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
             </div>
 
         </div>
     );
 };
+
+// Two-letter mark from the society's name, used where there is no real logo (e.g. "IEEE MSIT" -> "IE", "NSS & Prakriti" -> "NP").
+function monogram(name) {
+    const words = name.replace(/[()&,]/g, ' ').split(/\s+/).filter(w => w && !['MSIT', 'of', 'the', 'and', 'for'].includes(w));
+    if (words.length === 0) return name.slice(0, 2).toUpperCase();
+    if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+    return (words[0][0] + words[1][0]).toUpperCase();
+}
 
 export default SocietiesHubView;
