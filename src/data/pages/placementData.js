@@ -45,25 +45,15 @@ export const placementData = {
         heroImageAlt: "Engineering interns from MSIT collaborating on industrial software and engineering projects in a corporate setting",
         content: `
             <div class="not-prose my-2">
-                <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/50 relative overflow-hidden group">
-                    <!-- Subtle background accent -->
-                    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-50 opacity-50 blur-3xl group-hover:bg-blue-100 transition-colors duration-700"></div>
-                    
-                    <div class="relative z-10">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-6 border border-blue-100">
-                            <span class="relative flex h-2 w-2">
-                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                            </span>
-                            Industry-Institution-Interaction Cell (IIIC)
-                        </div>
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">IIIC MSIT</h3>
-                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 border border-slate-200 shadow-sm">
+                    <div>
+                        <h3 class="font-[Libre_Baskerville,serif] text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4 tracking-tight">IIIC MSIT</h3>
+                        <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
                             The <strong>Industry-Institution-Interaction Cell (IIIC) & Internship Cell</strong> at Maharaja Surajmal Institute of Technology is established under the statutory guidelines of the <strong>All India Council for Technical Education (AICTE)</strong>. It serves as the institutional gateway synchronizing academic curricula with corporate engineering practices, cultivating high-value industrial linkages, structured internships, and pre-placement opportunities for undergraduate engineers.
                         </p>
                         
                         <div class="mb-8">
-                            <h4 class="text-xl font-bold text-slate-800 mb-3">Core Mandate & Strategic Objectives</h4>
+                            <h4 class="text-lg sm:text-xl font-bold text-slate-800 mb-3">Core Mandate & Strategic Objectives</h4>
                             <p class="text-slate-600 leading-relaxed">
                                 The primary mission of IIIC is to systematically eliminate the gap between collegiate theoretical instruction and modern enterprise engineering workflows. Through active coordination with corporate leadership, public sector undertakings (PSUs), and tech conglomerates, the cell spearheads comprehensive summer internships, live industrial research projects, sponsored curriculum enrichment, and on-site factory and lab visits.
                             </p>
@@ -73,63 +63,63 @@ export const placementData = {
                         </div>
 
                         <!-- 4 Pillars Grid -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
-                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
-                                <div class="mb-4 text-blue-600 transform group-hover/card:scale-110 transition-transform">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        <div class="grid grid-cols-2 gap-2.5 sm:gap-4 my-6 sm:my-8">
+                            <div class="bg-slate-50 p-3.5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
+                                <div class="mb-2 sm:mb-4 text-primary">
+                                    <svg class="w-6 h-6 sm:w-8 sm:h-8" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                                 </div>
-                                <h4 class="text-slate-900 font-bold mb-2">AICTE Guidelines & Mandate</h4>
-                                <p class="text-sm text-slate-500">Formally aligned with AICTE internship policies, integrating national credits and digital certifications.</p>
+                                <h4 class="text-slate-900 text-sm sm:text-base font-bold leading-snug mb-1 sm:mb-2">AICTE Guidelines & Mandate</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Formally aligned with AICTE internship policies, integrating national credits and digital certifications.</p>
                             </div>
-                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
-                                <div class="mb-4 text-emerald-600 transform group-hover/card:scale-110 transition-transform">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            <div class="bg-slate-50 p-3.5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
+                                <div class="mb-2 sm:mb-4 text-primary">
+                                    <svg class="w-6 h-6 sm:w-8 sm:h-8" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                                 </div>
-                                <h4 class="text-slate-900 font-bold mb-2">10+ Active Corporate MoUs</h4>
-                                <p class="text-sm text-slate-500">Collaborations with AAI, TPDDL, NIELIT, ONGC, Brain Mentors, AI-SHALA, and IoT Academy.</p>
+                                <h4 class="text-slate-900 text-sm sm:text-base font-bold leading-snug mb-1 sm:mb-2">10+ Active Corporate MoUs</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Collaborations with AAI, TPDDL, NIELIT, ONGC, Brain Mentors, AI-SHALA, and IoT Academy.</p>
                             </div>
-                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
-                                <div class="mb-4 text-purple-600 transform group-hover/card:scale-110 transition-transform">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <div class="bg-slate-50 p-3.5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
+                                <div class="mb-2 sm:mb-4 text-primary">
+                                    <svg class="w-6 h-6 sm:w-8 sm:h-8" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                                 </div>
-                                <h4 class="text-slate-900 font-bold mb-2">68%+ PPO Conversion</h4>
-                                <p class="text-sm text-slate-500">Summer engineering internships actively convert into full-time offers with top multinationals.</p>
+                                <h4 class="text-slate-900 text-sm sm:text-base font-bold leading-snug mb-1 sm:mb-2">68%+ PPO Conversion</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Summer engineering internships actively convert into full-time offers with top multinationals.</p>
                             </div>
-                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
-                                <div class="mb-4 text-amber-500 transform group-hover/card:scale-110 transition-transform">
-                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <div class="bg-slate-50 p-3.5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-white hover:shadow-md transition-all group/card cursor-default">
+                                <div class="mb-2 sm:mb-4 text-primary">
+                                    <svg class="w-6 h-6 sm:w-8 sm:h-8" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                                 </div>
-                                <h4 class="text-slate-900 font-bold mb-2">Digital NOC Verification</h4>
-                                <p class="text-sm text-slate-500">Standardized approval protocol ensuring academic credits, attendance, and corporate mentoring.</p>
+                                <h4 class="text-slate-900 text-sm sm:text-base font-bold leading-snug mb-1 sm:mb-2">Digital NOC Verification</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Standardized approval protocol ensuring academic credits, attendance, and corporate mentoring.</p>
                             </div>
                         </div>
 
-                        <div class="space-y-6 pt-4 border-t border-slate-100">
-                            <h4 class="text-xl font-bold text-slate-800">Key Functions & Student Services</h4>
+                        <div class="space-y-4 sm:space-y-6 pt-4 border-t border-slate-100">
+                            <h4 class="text-lg sm:text-xl font-bold text-slate-800">Key Functions & Student Services</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="flex gap-3">
-                                    <span class="text-blue-600 font-bold text-lg">•</span>
+                                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true"></span>
                                     <div>
                                         <h5 class="font-bold text-slate-900 text-sm">AICTE Internship Coordination</h5>
                                         <p class="text-xs text-slate-600 mt-0.5">Assisting students in registering, verifying profiles, and securing roles via the National AICTE Internship Portal.</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <span class="text-blue-600 font-bold text-lg">•</span>
+                                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true"></span>
                                     <div>
                                         <h5 class="font-bold text-slate-900 text-sm">Industrial Field Tours & Visits</h5>
                                         <p class="text-xs text-slate-600 mt-0.5">Organizing periodic industrial excursions to power grids, automation lines, and cloud data centers.</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <span class="text-blue-600 font-bold text-lg">•</span>
+                                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true"></span>
                                     <div>
                                         <h5 class="font-bold text-slate-900 text-sm">Executive Technical Masterclasses</h5>
                                         <p class="text-xs text-slate-600 mt-0.5">Conducting seminars and interactive masterclasses led by distinguished chief technology officers and industry veterans.</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <span class="text-blue-600 font-bold text-lg">•</span>
+                                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true"></span>
                                     <div>
                                         <h5 class="font-bold text-slate-900 text-sm">Faculty Industry Upskilling (FDPs)</h5>
                                         <p class="text-xs text-slate-600 mt-0.5">Conducting joint faculty training programs with industry specialists on state-of-the-art developer tooling.</p>
@@ -143,11 +133,11 @@ export const placementData = {
         `,
         sidebarHtml: `
             <div class="flex flex-col gap-4">
-                <a href="https://internship.aicte-india.org/" target="_blank" rel="noopener noreferrer" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-4 rounded-xl transition-all shadow-md">
+                <a href="https://internship.aicte-india.org/" target="_blank" rel="noopener noreferrer" class="block w-full bg-primary hover:bg-primary-dark text-white text-center font-bold py-3.5 sm:py-4 rounded-xl transition-colors shadow-sm">
                     AICTE Internship Portal &rarr;
                 </a>
                 
-                <a href="/placements" class="block w-full bg-white border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 text-slate-700 text-center font-bold py-3.5 rounded-xl transition-all shadow-sm">
+                <a href="/placements" class="block w-full bg-white border-2 border-slate-300 hover:border-primary hover:text-primary text-slate-700 text-center font-bold py-3.5 rounded-xl transition-all shadow-sm">
                     Placement & T&P Overview &rarr;
                 </a>
 
@@ -173,17 +163,18 @@ export const placementData = {
                 <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
                     <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Core Focus Areas</h4>
                     <ul class="space-y-3">
-                        <li class="flex gap-2.5 text-xs text-slate-700"><span class="text-blue-500 font-bold">✓</span> AICTE National Internship Portal</li>
-                        <li class="flex gap-2.5 text-xs text-slate-700"><span class="text-blue-500 font-bold">✓</span> Enterprise Industry MoUs</li>
-                        <li class="flex gap-2.5 text-xs text-slate-700"><span class="text-blue-500 font-bold">✓</span> Summer & Winter Internships</li>
-                        <li class="flex gap-2.5 text-xs text-slate-700"><span class="text-blue-500 font-bold">✓</span> Industrial Visits & Technology Tours</li>
-                        <li class="flex gap-2.5 text-xs text-slate-700"><span class="text-blue-500 font-bold">✓</span> Standardized NOC Protocol & PPOs</li>
+                        <li class="flex gap-2.5 text-xs text-slate-700"><svg class="w-3.5 h-3.5 mt-px text-primary shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> AICTE National Internship Portal</li>
+                        <li class="flex gap-2.5 text-xs text-slate-700"><svg class="w-3.5 h-3.5 mt-px text-primary shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Enterprise Industry MoUs</li>
+                        <li class="flex gap-2.5 text-xs text-slate-700"><svg class="w-3.5 h-3.5 mt-px text-primary shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Summer & Winter Internships</li>
+                        <li class="flex gap-2.5 text-xs text-slate-700"><svg class="w-3.5 h-3.5 mt-px text-primary shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Industrial Visits & Technology Tours</li>
+                        <li class="flex gap-2.5 text-xs text-slate-700"><svg class="w-3.5 h-3.5 mt-px text-primary shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Standardized NOC Protocol & PPOs</li>
                     </ul>
                 </div>
             </div>
         `,
+        statsStrip: true,
         stats: [
-            { label: "Internships Facilitated", value: "500+", url: "/placements" },
+            { label: "Internships", value: "500+", url: "/placements" },
             { label: "Avg Stipend", value: "₹40k/mo" },
             { label: "Highest Stipend", value: "₹1.2L/mo" },
             { label: "PPO Conversion", value: "68%+" }
