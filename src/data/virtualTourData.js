@@ -1,5 +1,4 @@
 export const tourStats = [
-    { value: "250+", label: "Authentic Photos" },
     { value: "17", label: "Campus Zones" },
     { value: "45+", label: "Smart Laboratories" },
     { value: "50,000+", label: "Library Volumes" },

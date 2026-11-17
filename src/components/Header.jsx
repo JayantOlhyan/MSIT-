@@ -201,16 +201,16 @@ const Header = () => {
                         ? 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]' 
                         : 'text-black border-b border-slate-100/80'
                 }`}>
-                    <div className="w-full max-w-screen-2xl mx-auto flex items-center h-7 sm:h-8 overflow-x-auto scrollbar-hide whitespace-nowrap">
-                        <nav aria-label="Institutional links" className="flex items-center">
+                    <div className="w-full max-w-screen-2xl mx-auto flex items-center min-h-7 sm:min-h-8 py-1.5 sm:py-1">
+                        <nav aria-label="Institutional links" className="flex flex-wrap [flex-wrap:balance] items-center gap-x-3 gap-y-1 sm:gap-x-0">
                             {topStripLinks.map((link, i) => (
                                 <span key={link.url} className="flex items-center">
-                                    {i > 0 && <span className={`mx-2.5 sm:mx-3 text-[10px] select-none ${isTransparent ? 'text-white/40' : 'text-black/30'}`} aria-hidden="true">|</span>}
+                                    {i > 0 && <span className={`hidden sm:inline mx-2.5 sm:mx-3 text-[10px] select-none ${isTransparent ? 'text-white/40' : 'text-black/30'}`} aria-hidden="true">|</span>}
                                     <a 
                                         href={link.url} 
                                         target="_blank" 
                                         rel="noopener noreferrer" 
-                                        className={`transition-colors underline-offset-4 ${
+                                        className={`leading-snug transition-colors underline-offset-4 ${
                                             isTransparent 
                                                 ? 'text-white hover:text-white/80 hover:underline' 
                                                 : 'text-black hover:text-primary hover:underline'
